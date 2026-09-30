@@ -4,7 +4,7 @@
 
 ## Git 仓库管理
 
-GitHub 私有仓库：[cdxDNRF/GeoNav-Agent](https://github.com/cdxDNRF/GeoNav-Agent)，默认分支为 `main`。
+GitHub 公开仓库：[cdxDNRF/GeoNav-Agent](https://github.com/cdxDNRF/GeoNav-Agent)，默认分支为 `main`。协作修改可通过 Fork 和 Pull Request 提交；需要直接推送的成员须由仓库所有者添加为 Collaborator。
 
 本目录在课程总目录中原地作为独立 Git 仓库维护；父仓库通过 `/大四/大数据工程/` 忽略本项目。请在本目录执行 Git 提交与推送。
 
