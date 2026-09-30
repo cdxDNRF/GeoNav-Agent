@@ -1,0 +1,14 @@
+{
+  "changed_results": false,
+  "changed_training_or_evaluation": false,
+  "correction": "Replay rule out-of-bounds as stay-in-place; verify wall/revisit counts. Neural zero-wall and checkpoint checks unchanged.",
+  "issue": "Original audit asserted zero boundary moves for the FixedRegion rule; protocol permits stay-in-place wall moves costing one step.",
+  "original_auditor_sha256": "cbcc8d18b4dff493e1cd994fab4cc53740a76c0eceb6465a84c14cc2ab077de4",
+  "original_failure_stage": "All 12 neural models, 3360 neural episodes and training transitions passed; FixedRegion rule audit then failed.",
+  "repair_regression_tests": 3,
+  "repair_source_sha256": {
+    "eval/audit_navigation_spatial_repair.py": "0797e9f133fe6f69c0d5c29722f7e1150b89bac03dc27afcafb2c27c96f76db2",
+    "tests/test_navigation_rule_audit.py": "d1bd2424e18822f921e790a30287e8d879318e110fc7948f190e4f8b77eac17a"
+  },
+  "rerun_training": false
+}

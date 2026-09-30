@@ -1,0 +1,147 @@
+{
+  "averages": {
+    "fit": {
+      "Full": {
+        "action_change_rate": 0.856651376146789,
+        "both_correct_rate": 0.7706422018348623,
+        "cross_entropy": 0.6413301672219881,
+        "direction_accuracy": 0.8766246177370031
+      },
+      "MeanCue": {
+        "action_change_rate": 0.0,
+        "both_correct_rate": 0.0,
+        "cross_entropy": 2.3318690755820284,
+        "direction_accuracy": 0.43577981651376146
+      },
+      "NoTarget": {
+        "action_change_rate": 0.0,
+        "both_correct_rate": 0.0,
+        "cross_entropy": 1.1974310467065246,
+        "direction_accuracy": 0.4251720183486239
+      },
+      "StateOnly": {
+        "action_change_rate": 0.0,
+        "both_correct_rate": 0.0,
+        "cross_entropy": 1.1206426365580124,
+        "direction_accuracy": 0.45145259938837917
+      },
+      "SwapCue": {
+        "action_change_rate": 0.856651376146789,
+        "both_correct_rate": 0.0036314984709480123,
+        "cross_entropy": 4.476933873855116,
+        "direction_accuracy": 0.079032874617737
+      }
+    },
+    "held": {
+      "Full": {
+        "action_change_rate": 0.5478050595238094,
+        "both_correct_rate": 0.171875,
+        "cross_entropy": 2.205598336693518,
+        "direction_accuracy": 0.447265625
+      },
+      "MeanCue": {
+        "action_change_rate": 0.0,
+        "both_correct_rate": 0.0,
+        "cross_entropy": 2.3083515679085114,
+        "direction_accuracy": 0.43061755952380953
+      },
+      "NoTarget": {
+        "action_change_rate": 0.0,
+        "both_correct_rate": 0.0,
+        "cross_entropy": 1.1829156762632054,
+        "direction_accuracy": 0.42978050595238093
+      },
+      "StateOnly": {
+        "action_change_rate": 0.0,
+        "both_correct_rate": 0.0,
+        "cross_entropy": 1.1338174440898001,
+        "direction_accuracy": 0.44345238095238093
+      },
+      "SwapCue": {
+        "action_change_rate": 0.5478050595238094,
+        "both_correct_rate": 0.13541666666666666,
+        "cross_entropy": 2.3584564835479345,
+        "direction_accuracy": 0.4077380952380952
+      }
+    }
+  },
+  "comparisons": {
+    "MeanCue": {
+      "accuracy_difference": 0.016648065476190483,
+      "cross_entropy_difference": -0.10275323121499295,
+      "passed": false,
+      "positive_seeds": 3
+    },
+    "NoTarget": {
+      "accuracy_difference": 0.01748511904761905,
+      "cross_entropy_difference": 1.022682660430313,
+      "passed": false,
+      "positive_seeds": 3
+    },
+    "StateOnly": {
+      "accuracy_difference": 0.0038132440476190688,
+      "cross_entropy_difference": 1.0717808926037182,
+      "passed": false,
+      "positive_seeds": 3
+    },
+    "SwapCue": {
+      "accuracy_difference": 0.03952752976190479,
+      "cross_entropy_difference": -0.1528581468544159,
+      "passed": false,
+      "positive_seeds": 3
+    }
+  },
+  "elapsed_seconds": 307.0663141999976,
+  "formal_S2_passed": false,
+  "gate_passed": false,
+  "held_by_seed": {
+    "Full": [
+      0.44893973214285715,
+      0.44642857142857145,
+      0.44642857142857145
+    ],
+    "MeanCue": [
+      0.42996651785714285,
+      0.42885044642857145,
+      0.4330357142857143
+    ],
+    "NoTarget": [
+      0.4349888392857143,
+      0.42550223214285715,
+      0.42885044642857145
+    ],
+    "StateOnly": [
+      0.4400111607142857,
+      0.4458705357142857,
+      0.44447544642857145
+    ],
+    "SwapCue": [
+      0.40708705357142855,
+      0.4037388392857143,
+      0.41238839285714285
+    ]
+  },
+  "joint_random_gate": false,
+  "models": 9,
+  "original_val_test_used": false,
+  "prediction_replay_verified": true,
+  "prior_policy_loaded": false,
+  "source_data_verified": true,
+  "source_interval": {
+    "accuracy_difference": 0.017485119047619048,
+    "interval95": [
+      -0.010142299107142854,
+      0.04613095238095239
+    ],
+    "limitation": "Source identity grouping only, no verified geographic independence; conditional on this source split and fixed models.",
+    "resamples": 2000,
+    "source_count": 28
+  },
+  "total_optimizer_steps": 15696,
+  "total_prediction_pairs": 53040,
+  "uniform_held": {
+    "both_correct_rate": 0.1585208953373016,
+    "direction_accuracy": 0.39585658482142855,
+    "note": "Exact expectation of independent uniform legal action choices; not navigation SR."
+  }
+}

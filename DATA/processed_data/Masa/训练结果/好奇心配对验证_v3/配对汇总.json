@@ -1,0 +1,56 @@
+{
+  "S2_passed": false,
+  "arms": {
+    "Curiosity": {
+      "q": 1.0,
+      "repeat_micro_mean": 0.2687406778419941,
+      "sg_mean": 1.8133333333333332,
+      "sr_by_seed": [
+        0.43,
+        0.25,
+        0.41
+      ],
+      "sr_mean": 0.3633333333333333
+    },
+    "GatedCuriosity": {
+      "q": 1.0,
+      "repeat_micro_mean": 0.20813045105260097,
+      "sg_mean": 1.5233333333333334,
+      "sr_by_seed": [
+        0.45,
+        0.46,
+        0.41
+      ],
+      "sr_mean": 0.44
+    },
+    "PBRS": {
+      "q": 1.0,
+      "repeat_micro_mean": 0.2209567301361819,
+      "sg_mean": 1.5066666666666668,
+      "sr_by_seed": [
+        0.33,
+        0.5,
+        0.5
+      ],
+      "sr_mean": 0.44333333333333336
+    }
+  },
+  "dynamics_frozen_verified": true,
+  "elapsed_seconds": 149.03884390000894,
+  "note": "Local 4-source validation, three continuation seeds from one historical checkpoint; not a formal S2 replacement or independent pretraining repeats.",
+  "paired_comparisons": {
+    "Curiosity_minus_PBRS": {
+      "candidate_signal": false,
+      "positive_seeds": 1,
+      "sg_difference": 0.3066666666666664,
+      "sr_difference": -0.08000000000000007
+    },
+    "GatedCuriosity_minus_Curiosity": {
+      "candidate_signal": true,
+      "positive_seeds": 2,
+      "sg_difference": -0.2899999999999998,
+      "sr_difference": 0.07666666666666672
+    }
+  },
+  "source_verified": true
+}

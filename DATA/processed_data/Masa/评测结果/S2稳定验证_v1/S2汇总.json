@@ -1,0 +1,3194 @@
+{
+  "complete_jobs": 17,
+  "gate": {
+    "G_mean_SG": 7.633333333333334,
+    "G_mean_SR": 0.023333333333333334,
+    "checks": {
+      "G_C4_minimum_SR": false,
+      "G_C5_minimum_SR": false,
+      "G_C6_minimum_SR": false,
+      "G_C7_minimum_SR": false,
+      "G_C8_minimum_SR": false,
+      "G_SG_not_worse_than_rule": false,
+      "G_SR_range_le_10pp": true,
+      "G_beats_rule_in_two_rounds": false,
+      "G_each_R_le_10pct": false,
+      "G_mean_SG_le_1_8": false,
+      "G_mean_SR_ge_60pct": false,
+      "G_rule_gain_ge_5pp": false,
+      "G_vs_G_gray_target_SG_not_worse": true,
+      "G_vs_G_gray_target_gain_ge_5pp": false,
+      "G_vs_G_gray_target_two_positive_rounds": false,
+      "G_vs_G_no_region_SG_not_worse": true,
+      "G_vs_G_no_region_gain_ge_5pp": false,
+      "G_vs_G_no_region_two_positive_rounds": false,
+      "all_distance_tiers_present": true,
+      "all_jobs_q_ge_99pct": false
+    },
+    "next_stage": "stay in development; no expansion",
+    "passed": false,
+    "status": "failed",
+    "strongest_rule": "Frontier"
+  },
+  "in_progress": {},
+  "jobs": {
+    "E_r0": {
+      "api": {
+        "attempts": 202,
+        "errors": 8,
+        "latency_p50": 3.822692299996561,
+        "latency_p95": 10.08403987501078,
+        "responses": 202,
+        "usage": {
+          "completion_tokens": 4417,
+          "prompt_tokens": 148850,
+          "total_tokens": 153267
+        },
+        "usage_missing": 8
+      },
+      "arm": "E",
+      "audit_passed": true,
+      "episode_latency_p50": 0.0178678999945987,
+      "episode_latency_p95": 46.422768154998614,
+      "job_id": "E_r0",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 20,
+            "executed_actions": 194,
+            "planned": 25,
+            "q": 0.8,
+            "recorded": 25,
+            "repeat_rate": 0.0,
+            "sg_gate": 3.12,
+            "sg_nav": 1.9,
+            "sr_gate": 0.28,
+            "sr_nav": 0.35,
+            "successes": 7,
+            "terminal_states": {
+              "api_error": 4,
+              "completed": 20,
+              "not_run": 1
+            }
+          },
+          "img_1": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_2": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_3": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 5,
+            "executed_actions": 44,
+            "planned": 20,
+            "q": 0.25,
+            "recorded": 20,
+            "repeat_rate": 0.0,
+            "sg_gate": 6.6,
+            "sg_nav": 2.4,
+            "sr_gate": 0.05,
+            "sr_nav": 0.2,
+            "successes": 1,
+            "terminal_states": {
+              "completed": 5,
+              "not_run": 15
+            }
+          },
+          "5": {
+            "completed": 5,
+            "executed_actions": 41,
+            "planned": 20,
+            "q": 0.25,
+            "recorded": 20,
+            "repeat_rate": 0.0,
+            "sg_gate": 6.3,
+            "sg_nav": 1.2,
+            "sr_gate": 0.15,
+            "sr_nav": 0.6,
+            "successes": 3,
+            "terminal_states": {
+              "completed": 5,
+              "not_run": 15
+            }
+          },
+          "6": {
+            "completed": 4,
+            "executed_actions": 41,
+            "planned": 20,
+            "q": 0.2,
+            "recorded": 20,
+            "repeat_rate": 0.0,
+            "sg_gate": 6.6,
+            "sg_nav": 1.0,
+            "sr_gate": 0.1,
+            "sr_nav": 0.5,
+            "successes": 2,
+            "terminal_states": {
+              "api_error": 1,
+              "completed": 4,
+              "not_run": 15
+            }
+          },
+          "7": {
+            "completed": 5,
+            "executed_actions": 49,
+            "planned": 20,
+            "q": 0.25,
+            "recorded": 20,
+            "repeat_rate": 0.0,
+            "sg_gate": 6.7,
+            "sg_nav": 2.8,
+            "sr_gate": 0.05,
+            "sr_nav": 0.2,
+            "successes": 1,
+            "terminal_states": {
+              "completed": 5,
+              "not_run": 15
+            }
+          },
+          "8": {
+            "completed": 1,
+            "executed_actions": 19,
+            "planned": 20,
+            "q": 0.05,
+            "recorded": 20,
+            "repeat_rate": 0.0,
+            "sg_gate": 7.7,
+            "sg_nav": 2.0,
+            "sr_gate": 0.0,
+            "sr_nav": 0.0,
+            "successes": 0,
+            "terminal_states": {
+              "api_error": 3,
+              "completed": 1,
+              "not_run": 16
+            }
+          }
+        },
+        "completed": 20,
+        "distance_complete": true,
+        "executed_actions": 194,
+        "planned": 100,
+        "q": 0.2,
+        "recorded": 100,
+        "repeat_rate": 0.0,
+        "sg_gate": 6.78,
+        "sg_macro": 6.78,
+        "sg_nav": 1.9,
+        "sr_gate": 0.07,
+        "sr_macro": 0.07,
+        "sr_nav": 0.35,
+        "successes": 7,
+        "terminal_states": {
+          "api_error": 4,
+          "completed": 20,
+          "not_run": 76
+        }
+      },
+      "round": 0
+    },
+    "E_r1": {
+      "api": {
+        "attempts": 0,
+        "errors": 0,
+        "latency_p50": null,
+        "latency_p95": null,
+        "responses": 0,
+        "usage": null,
+        "usage_missing": 0
+      },
+      "arm": "E",
+      "audit_passed": true,
+      "episode_latency_p50": 0.016914199994062074,
+      "episode_latency_p95": 0.027005124996503583,
+      "job_id": "E_r1",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_1": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_2": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_3": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "5": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "6": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "7": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "8": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          }
+        },
+        "completed": 0,
+        "distance_complete": true,
+        "executed_actions": 0,
+        "planned": 100,
+        "q": 0.0,
+        "recorded": 100,
+        "repeat_rate": null,
+        "sg_gate": 8.0,
+        "sg_macro": 8.0,
+        "sg_nav": null,
+        "sr_gate": 0.0,
+        "sr_macro": 0.0,
+        "sr_nav": null,
+        "successes": 0,
+        "terminal_states": {
+          "not_run": 100
+        }
+      },
+      "round": 1
+    },
+    "E_r2": {
+      "api": {
+        "attempts": 0,
+        "errors": 0,
+        "latency_p50": null,
+        "latency_p95": null,
+        "responses": 0,
+        "usage": null,
+        "usage_missing": 0
+      },
+      "arm": "E",
+      "audit_passed": true,
+      "episode_latency_p50": 0.017208800003572833,
+      "episode_latency_p95": 0.027840330001345136,
+      "job_id": "E_r2",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_1": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_2": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_3": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "5": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "6": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "7": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "8": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          }
+        },
+        "completed": 0,
+        "distance_complete": true,
+        "executed_actions": 0,
+        "planned": 100,
+        "q": 0.0,
+        "recorded": 100,
+        "repeat_rate": null,
+        "sg_gate": 8.0,
+        "sg_macro": 8.0,
+        "sg_nav": null,
+        "sr_gate": 0.0,
+        "sr_macro": 0.0,
+        "sr_nav": null,
+        "successes": 0,
+        "terminal_states": {
+          "not_run": 100
+        }
+      },
+      "round": 2
+    },
+    "FixedRegion_r0": {
+      "api": {
+        "attempts": 0,
+        "errors": 0,
+        "latency_p50": null,
+        "latency_p95": null,
+        "responses": 0,
+        "usage": null,
+        "usage_missing": 0
+      },
+      "arm": "FixedRegion",
+      "audit_passed": true,
+      "episode_latency_p50": 0.016836549999425188,
+      "episode_latency_p95": 0.06123210000587276,
+      "job_id": "FixedRegion_r0",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 25,
+            "executed_actions": 238,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.04201680672268908,
+            "sg_gate": 2.0,
+            "sg_nav": 2.0,
+            "sr_gate": 0.32,
+            "sr_nav": 0.32,
+            "successes": 8,
+            "terminal_states": {
+              "completed": 25
+            }
+          },
+          "img_1": {
+            "completed": 25,
+            "executed_actions": 247,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.05668016194331984,
+            "sg_gate": 2.88,
+            "sg_nav": 2.88,
+            "sr_gate": 0.12,
+            "sr_nav": 0.12,
+            "successes": 3,
+            "terminal_states": {
+              "completed": 25
+            }
+          },
+          "img_2": {
+            "completed": 25,
+            "executed_actions": 225,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.035555555555555556,
+            "sg_gate": 2.16,
+            "sg_nav": 2.16,
+            "sr_gate": 0.36,
+            "sr_nav": 0.36,
+            "successes": 9,
+            "terminal_states": {
+              "completed": 25
+            }
+          },
+          "img_3": {
+            "completed": 25,
+            "executed_actions": 232,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.05172413793103448,
+            "sg_gate": 2.28,
+            "sg_nav": 2.28,
+            "sr_gate": 0.36,
+            "sr_nav": 0.36,
+            "successes": 9,
+            "terminal_states": {
+              "completed": 25
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 20,
+            "executed_actions": 182,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.054945054945054944,
+            "sg_gate": 3.25,
+            "sg_nav": 3.25,
+            "sr_gate": 0.2,
+            "sr_nav": 0.2,
+            "successes": 4,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "5": {
+            "completed": 20,
+            "executed_actions": 176,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.0625,
+            "sg_gate": 2.5,
+            "sg_nav": 2.5,
+            "sr_gate": 0.4,
+            "sr_nav": 0.4,
+            "successes": 8,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "6": {
+            "completed": 20,
+            "executed_actions": 194,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.06701030927835051,
+            "sg_gate": 2.55,
+            "sg_nav": 2.55,
+            "sr_gate": 0.3,
+            "sr_nav": 0.3,
+            "successes": 6,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "7": {
+            "completed": 20,
+            "executed_actions": 190,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.05263157894736842,
+            "sg_gate": 1.65,
+            "sg_nav": 1.65,
+            "sr_gate": 0.4,
+            "sr_nav": 0.4,
+            "successes": 8,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "8": {
+            "completed": 20,
+            "executed_actions": 200,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.0,
+            "sg_gate": 1.7,
+            "sg_nav": 1.7,
+            "sr_gate": 0.15,
+            "sr_nav": 0.15,
+            "successes": 3,
+            "terminal_states": {
+              "completed": 20
+            }
+          }
+        },
+        "completed": 100,
+        "distance_complete": true,
+        "executed_actions": 942,
+        "planned": 100,
+        "q": 1.0,
+        "recorded": 100,
+        "repeat_rate": 0.04670912951167728,
+        "sg_gate": 2.33,
+        "sg_macro": 2.33,
+        "sg_nav": 2.33,
+        "sr_gate": 0.29,
+        "sr_macro": 0.29000000000000004,
+        "sr_nav": 0.29,
+        "successes": 29,
+        "terminal_states": {
+          "completed": 100
+        }
+      },
+      "round": 0
+    },
+    "Frontier_r0": {
+      "api": {
+        "attempts": 0,
+        "errors": 0,
+        "latency_p50": null,
+        "latency_p95": null,
+        "responses": 0,
+        "usage": null,
+        "usage_missing": 0
+      },
+      "arm": "Frontier",
+      "audit_passed": true,
+      "episode_latency_p50": 0.015735350003524218,
+      "episode_latency_p95": 0.05797059500255271,
+      "job_id": "Frontier_r0",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 25,
+            "executed_actions": 217,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.009216589861751152,
+            "sg_gate": 1.56,
+            "sg_nav": 1.56,
+            "sr_gate": 0.6,
+            "sr_nav": 0.6,
+            "successes": 15,
+            "terminal_states": {
+              "completed": 25
+            }
+          },
+          "img_1": {
+            "completed": 25,
+            "executed_actions": 218,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.009174311926605505,
+            "sg_gate": 1.92,
+            "sg_nav": 1.92,
+            "sr_gate": 0.52,
+            "sr_nav": 0.52,
+            "successes": 13,
+            "terminal_states": {
+              "completed": 25
+            }
+          },
+          "img_2": {
+            "completed": 25,
+            "executed_actions": 219,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.0045662100456621,
+            "sg_gate": 2.76,
+            "sg_nav": 2.76,
+            "sr_gate": 0.44,
+            "sr_nav": 0.44,
+            "successes": 11,
+            "terminal_states": {
+              "completed": 25
+            }
+          },
+          "img_3": {
+            "completed": 25,
+            "executed_actions": 207,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.00966183574879227,
+            "sg_gate": 2.2,
+            "sg_nav": 2.2,
+            "sr_gate": 0.56,
+            "sr_nav": 0.56,
+            "successes": 14,
+            "terminal_states": {
+              "completed": 25
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 20,
+            "executed_actions": 166,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.018072289156626505,
+            "sg_gate": 1.3,
+            "sg_nav": 1.3,
+            "sr_gate": 0.55,
+            "sr_nav": 0.55,
+            "successes": 11,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "5": {
+            "completed": 20,
+            "executed_actions": 155,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.0,
+            "sg_gate": 1.65,
+            "sg_nav": 1.65,
+            "sr_gate": 0.55,
+            "sr_nav": 0.55,
+            "successes": 11,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "6": {
+            "completed": 20,
+            "executed_actions": 178,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.0,
+            "sg_gate": 1.6,
+            "sg_nav": 1.6,
+            "sr_gate": 0.6,
+            "sr_nav": 0.6,
+            "successes": 12,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "7": {
+            "completed": 20,
+            "executed_actions": 180,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.022222222222222223,
+            "sg_gate": 2.7,
+            "sg_nav": 2.7,
+            "sr_gate": 0.5,
+            "sr_nav": 0.5,
+            "successes": 10,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "8": {
+            "completed": 20,
+            "executed_actions": 182,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.0,
+            "sg_gate": 3.3,
+            "sg_nav": 3.3,
+            "sr_gate": 0.45,
+            "sr_nav": 0.45,
+            "successes": 9,
+            "terminal_states": {
+              "completed": 20
+            }
+          }
+        },
+        "completed": 100,
+        "distance_complete": true,
+        "executed_actions": 861,
+        "planned": 100,
+        "q": 1.0,
+        "recorded": 100,
+        "repeat_rate": 0.008130081300813009,
+        "sg_gate": 2.11,
+        "sg_macro": 2.11,
+        "sg_nav": 2.11,
+        "sr_gate": 0.53,
+        "sr_macro": 0.53,
+        "sr_nav": 0.53,
+        "successes": 53,
+        "terminal_states": {
+          "completed": 100
+        }
+      },
+      "round": 0
+    },
+    "G_gray_target_r0": {
+      "api": {
+        "attempts": 0,
+        "errors": 0,
+        "latency_p50": null,
+        "latency_p95": null,
+        "responses": 0,
+        "usage": null,
+        "usage_missing": 0
+      },
+      "arm": "G_gray_target",
+      "audit_passed": true,
+      "episode_latency_p50": 0.01671570000326028,
+      "episode_latency_p95": 0.02722507999278605,
+      "job_id": "G_gray_target_r0",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_1": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_2": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_3": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "5": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "6": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "7": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "8": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          }
+        },
+        "completed": 0,
+        "distance_complete": true,
+        "executed_actions": 0,
+        "planned": 100,
+        "q": 0.0,
+        "recorded": 100,
+        "repeat_rate": null,
+        "sg_gate": 8.0,
+        "sg_macro": 8.0,
+        "sg_nav": null,
+        "sr_gate": 0.0,
+        "sr_macro": 0.0,
+        "sr_nav": null,
+        "successes": 0,
+        "terminal_states": {
+          "not_run": 100
+        }
+      },
+      "round": 0
+    },
+    "G_gray_target_r1": {
+      "api": {
+        "attempts": 0,
+        "errors": 0,
+        "latency_p50": null,
+        "latency_p95": null,
+        "responses": 0,
+        "usage": null,
+        "usage_missing": 0
+      },
+      "arm": "G_gray_target",
+      "audit_passed": true,
+      "episode_latency_p50": 0.01694504999613855,
+      "episode_latency_p95": 0.02763859500628314,
+      "job_id": "G_gray_target_r1",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_1": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_2": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_3": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "5": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "6": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "7": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "8": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          }
+        },
+        "completed": 0,
+        "distance_complete": true,
+        "executed_actions": 0,
+        "planned": 100,
+        "q": 0.0,
+        "recorded": 100,
+        "repeat_rate": null,
+        "sg_gate": 8.0,
+        "sg_macro": 8.0,
+        "sg_nav": null,
+        "sr_gate": 0.0,
+        "sr_macro": 0.0,
+        "sr_nav": null,
+        "successes": 0,
+        "terminal_states": {
+          "not_run": 100
+        }
+      },
+      "round": 1
+    },
+    "G_gray_target_r2": {
+      "api": {
+        "attempts": 0,
+        "errors": 0,
+        "latency_p50": null,
+        "latency_p95": null,
+        "responses": 0,
+        "usage": null,
+        "usage_missing": 0
+      },
+      "arm": "G_gray_target",
+      "audit_passed": true,
+      "episode_latency_p50": 0.016916649998165667,
+      "episode_latency_p95": 0.029594574996008302,
+      "job_id": "G_gray_target_r2",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_1": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_2": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_3": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "5": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "6": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "7": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "8": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          }
+        },
+        "completed": 0,
+        "distance_complete": true,
+        "executed_actions": 0,
+        "planned": 100,
+        "q": 0.0,
+        "recorded": 100,
+        "repeat_rate": null,
+        "sg_gate": 8.0,
+        "sg_macro": 8.0,
+        "sg_nav": null,
+        "sr_gate": 0.0,
+        "sr_macro": 0.0,
+        "sr_nav": null,
+        "successes": 0,
+        "terminal_states": {
+          "not_run": 100
+        }
+      },
+      "round": 2
+    },
+    "G_no_region_r0": {
+      "api": {
+        "attempts": 0,
+        "errors": 0,
+        "latency_p50": null,
+        "latency_p95": null,
+        "responses": 0,
+        "usage": null,
+        "usage_missing": 0
+      },
+      "arm": "G_no_region",
+      "audit_passed": true,
+      "episode_latency_p50": 0.016332149993104395,
+      "episode_latency_p95": 0.027527130002272315,
+      "job_id": "G_no_region_r0",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_1": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_2": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_3": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "5": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "6": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "7": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "8": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          }
+        },
+        "completed": 0,
+        "distance_complete": true,
+        "executed_actions": 0,
+        "planned": 100,
+        "q": 0.0,
+        "recorded": 100,
+        "repeat_rate": null,
+        "sg_gate": 8.0,
+        "sg_macro": 8.0,
+        "sg_nav": null,
+        "sr_gate": 0.0,
+        "sr_macro": 0.0,
+        "sr_nav": null,
+        "successes": 0,
+        "terminal_states": {
+          "not_run": 100
+        }
+      },
+      "round": 0
+    },
+    "G_no_region_r1": {
+      "api": {
+        "attempts": 0,
+        "errors": 0,
+        "latency_p50": null,
+        "latency_p95": null,
+        "responses": 0,
+        "usage": null,
+        "usage_missing": 0
+      },
+      "arm": "G_no_region",
+      "audit_passed": true,
+      "episode_latency_p50": 0.016431600000942126,
+      "episode_latency_p95": 0.026720659993588924,
+      "job_id": "G_no_region_r1",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_1": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_2": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_3": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "5": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "6": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "7": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "8": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          }
+        },
+        "completed": 0,
+        "distance_complete": true,
+        "executed_actions": 0,
+        "planned": 100,
+        "q": 0.0,
+        "recorded": 100,
+        "repeat_rate": null,
+        "sg_gate": 8.0,
+        "sg_macro": 8.0,
+        "sg_nav": null,
+        "sr_gate": 0.0,
+        "sr_macro": 0.0,
+        "sr_nav": null,
+        "successes": 0,
+        "terminal_states": {
+          "not_run": 100
+        }
+      },
+      "round": 1
+    },
+    "G_no_region_r2": {
+      "api": {
+        "attempts": 0,
+        "errors": 0,
+        "latency_p50": null,
+        "latency_p95": null,
+        "responses": 0,
+        "usage": null,
+        "usage_missing": 0
+      },
+      "arm": "G_no_region",
+      "audit_passed": true,
+      "episode_latency_p50": 0.016488550005306024,
+      "episode_latency_p95": 0.02610874999663792,
+      "job_id": "G_no_region_r2",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_1": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_2": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_3": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "5": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "6": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "7": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "8": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          }
+        },
+        "completed": 0,
+        "distance_complete": true,
+        "executed_actions": 0,
+        "planned": 100,
+        "q": 0.0,
+        "recorded": 100,
+        "repeat_rate": null,
+        "sg_gate": 8.0,
+        "sg_macro": 8.0,
+        "sg_nav": null,
+        "sr_gate": 0.0,
+        "sr_macro": 0.0,
+        "sr_nav": null,
+        "successes": 0,
+        "terminal_states": {
+          "not_run": 100
+        }
+      },
+      "round": 2
+    },
+    "G_r0": {
+      "api": {
+        "attempts": 191,
+        "errors": 6,
+        "latency_p50": 4.077089899990824,
+        "latency_p95": 10.445843949994014,
+        "responses": 191,
+        "usage": {
+          "completion_tokens": 16266,
+          "prompt_tokens": 157421,
+          "total_tokens": 173687
+        },
+        "usage_missing": 6
+      },
+      "arm": "G",
+      "audit_passed": true,
+      "episode_latency_p50": 0.018144499998015817,
+      "episode_latency_p95": 46.42117330500985,
+      "job_id": "G_r0",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 20,
+            "executed_actions": 185,
+            "planned": 25,
+            "q": 0.8,
+            "recorded": 25,
+            "repeat_rate": 0.010810810810810811,
+            "sg_gate": 3.6,
+            "sg_nav": 2.5,
+            "sr_gate": 0.28,
+            "sr_nav": 0.35,
+            "successes": 7,
+            "terminal_states": {
+              "api_error": 3,
+              "completed": 20,
+              "not_run": 2
+            }
+          },
+          "img_1": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_2": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_3": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 5,
+            "executed_actions": 42,
+            "planned": 20,
+            "q": 0.25,
+            "recorded": 20,
+            "repeat_rate": 0.047619047619047616,
+            "sg_gate": 6.5,
+            "sg_nav": 2.0,
+            "sr_gate": 0.1,
+            "sr_nav": 0.4,
+            "successes": 2,
+            "terminal_states": {
+              "completed": 5,
+              "not_run": 15
+            }
+          },
+          "5": {
+            "completed": 5,
+            "executed_actions": 46,
+            "planned": 20,
+            "q": 0.25,
+            "recorded": 20,
+            "repeat_rate": 0.0,
+            "sg_gate": 6.65,
+            "sg_nav": 2.6,
+            "sr_gate": 0.1,
+            "sr_nav": 0.4,
+            "successes": 2,
+            "terminal_states": {
+              "completed": 5,
+              "not_run": 15
+            }
+          },
+          "6": {
+            "completed": 5,
+            "executed_actions": 46,
+            "planned": 20,
+            "q": 0.25,
+            "recorded": 20,
+            "repeat_rate": 0.0,
+            "sg_gate": 6.7,
+            "sg_nav": 2.8,
+            "sr_gate": 0.05,
+            "sr_nav": 0.2,
+            "successes": 1,
+            "terminal_states": {
+              "completed": 5,
+              "not_run": 15
+            }
+          },
+          "7": {
+            "completed": 5,
+            "executed_actions": 48,
+            "planned": 20,
+            "q": 0.25,
+            "recorded": 20,
+            "repeat_rate": 0.0,
+            "sg_gate": 6.65,
+            "sg_nav": 2.6,
+            "sr_gate": 0.1,
+            "sr_nav": 0.4,
+            "successes": 2,
+            "terminal_states": {
+              "completed": 5,
+              "not_run": 15
+            }
+          },
+          "8": {
+            "completed": 0,
+            "executed_actions": 3,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": 0.0,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "api_error": 3,
+              "not_run": 17
+            }
+          }
+        },
+        "completed": 20,
+        "distance_complete": true,
+        "executed_actions": 185,
+        "planned": 100,
+        "q": 0.2,
+        "recorded": 100,
+        "repeat_rate": 0.010810810810810811,
+        "sg_gate": 6.9,
+        "sg_macro": 6.9,
+        "sg_nav": 2.5,
+        "sr_gate": 0.07,
+        "sr_macro": 0.07,
+        "sr_nav": 0.35,
+        "successes": 7,
+        "terminal_states": {
+          "api_error": 3,
+          "completed": 20,
+          "not_run": 77
+        }
+      },
+      "round": 0
+    },
+    "G_r1": {
+      "api": {
+        "attempts": 0,
+        "errors": 0,
+        "latency_p50": null,
+        "latency_p95": null,
+        "responses": 0,
+        "usage": null,
+        "usage_missing": 0
+      },
+      "arm": "G",
+      "audit_passed": true,
+      "episode_latency_p50": 0.0171368499941309,
+      "episode_latency_p95": 0.027181515003030652,
+      "job_id": "G_r1",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_1": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_2": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_3": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "5": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "6": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "7": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "8": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          }
+        },
+        "completed": 0,
+        "distance_complete": true,
+        "executed_actions": 0,
+        "planned": 100,
+        "q": 0.0,
+        "recorded": 100,
+        "repeat_rate": null,
+        "sg_gate": 8.0,
+        "sg_macro": 8.0,
+        "sg_nav": null,
+        "sr_gate": 0.0,
+        "sr_macro": 0.0,
+        "sr_nav": null,
+        "successes": 0,
+        "terminal_states": {
+          "not_run": 100
+        }
+      },
+      "round": 1
+    },
+    "G_r2": {
+      "api": {
+        "attempts": 0,
+        "errors": 0,
+        "latency_p50": null,
+        "latency_p95": null,
+        "responses": 0,
+        "usage": null,
+        "usage_missing": 0
+      },
+      "arm": "G",
+      "audit_passed": true,
+      "episode_latency_p50": 0.01701830000092741,
+      "episode_latency_p95": 0.02703938000340713,
+      "job_id": "G_r2",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_1": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_2": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          },
+          "img_3": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 25,
+            "q": 0.0,
+            "recorded": 25,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 25
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "5": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "6": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "7": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          },
+          "8": {
+            "completed": 0,
+            "executed_actions": 0,
+            "planned": 20,
+            "q": 0.0,
+            "recorded": 20,
+            "repeat_rate": null,
+            "sg_gate": 8.0,
+            "sg_nav": null,
+            "sr_gate": 0.0,
+            "sr_nav": null,
+            "successes": 0,
+            "terminal_states": {
+              "not_run": 20
+            }
+          }
+        },
+        "completed": 0,
+        "distance_complete": true,
+        "executed_actions": 0,
+        "planned": 100,
+        "q": 0.0,
+        "recorded": 100,
+        "repeat_rate": null,
+        "sg_gate": 8.0,
+        "sg_macro": 8.0,
+        "sg_nav": null,
+        "sr_gate": 0.0,
+        "sr_macro": 0.0,
+        "sr_nav": null,
+        "successes": 0,
+        "terminal_states": {
+          "not_run": 100
+        }
+      },
+      "round": 2
+    },
+    "Random_r0": {
+      "api": {
+        "attempts": 0,
+        "errors": 0,
+        "latency_p50": null,
+        "latency_p95": null,
+        "responses": 0,
+        "usage": null,
+        "usage_missing": 0
+      },
+      "arm": "Random",
+      "audit_passed": true,
+      "episode_latency_p50": 0.0158746999950381,
+      "episode_latency_p95": 0.05994614999290202,
+      "job_id": "Random_r0",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 25,
+            "executed_actions": 249,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.5301204819277109,
+            "sg_gate": 4.08,
+            "sg_nav": 4.08,
+            "sr_gate": 0.04,
+            "sr_nav": 0.04,
+            "successes": 1,
+            "terminal_states": {
+              "completed": 25
+            }
+          },
+          "img_1": {
+            "completed": 25,
+            "executed_actions": 245,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.5428571428571428,
+            "sg_gate": 4.08,
+            "sg_nav": 4.08,
+            "sr_gate": 0.08,
+            "sr_nav": 0.08,
+            "successes": 2,
+            "terminal_states": {
+              "completed": 25
+            }
+          },
+          "img_2": {
+            "completed": 25,
+            "executed_actions": 244,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.4918032786885246,
+            "sg_gate": 4.16,
+            "sg_nav": 4.16,
+            "sr_gate": 0.08,
+            "sr_nav": 0.08,
+            "successes": 2,
+            "terminal_states": {
+              "completed": 25
+            }
+          },
+          "img_3": {
+            "completed": 25,
+            "executed_actions": 250,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.488,
+            "sg_gate": 3.8,
+            "sg_nav": 3.8,
+            "sr_gate": 0.04,
+            "sr_nav": 0.04,
+            "successes": 1,
+            "terminal_states": {
+              "completed": 25
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 20,
+            "executed_actions": 193,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.5077720207253886,
+            "sg_gate": 2.95,
+            "sg_nav": 2.95,
+            "sr_gate": 0.15,
+            "sr_nav": 0.15,
+            "successes": 3,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "5": {
+            "completed": 20,
+            "executed_actions": 195,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.4564102564102564,
+            "sg_gate": 3.45,
+            "sg_nav": 3.45,
+            "sr_gate": 0.1,
+            "sr_nav": 0.1,
+            "successes": 2,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "6": {
+            "completed": 20,
+            "executed_actions": 200,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.53,
+            "sg_gate": 3.85,
+            "sg_nav": 3.85,
+            "sr_gate": 0.05,
+            "sr_nav": 0.05,
+            "successes": 1,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "7": {
+            "completed": 20,
+            "executed_actions": 200,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.54,
+            "sg_gate": 5.05,
+            "sg_nav": 5.05,
+            "sr_gate": 0.0,
+            "sr_nav": 0.0,
+            "successes": 0,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "8": {
+            "completed": 20,
+            "executed_actions": 200,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.53,
+            "sg_gate": 4.85,
+            "sg_nav": 4.85,
+            "sr_gate": 0.0,
+            "sr_nav": 0.0,
+            "successes": 0,
+            "terminal_states": {
+              "completed": 20
+            }
+          }
+        },
+        "completed": 100,
+        "distance_complete": true,
+        "executed_actions": 988,
+        "planned": 100,
+        "q": 1.0,
+        "recorded": 100,
+        "repeat_rate": 0.5131578947368421,
+        "sg_gate": 4.03,
+        "sg_macro": 4.03,
+        "sg_nav": 4.03,
+        "sr_gate": 0.06,
+        "sr_macro": 0.06,
+        "sr_nav": 0.06,
+        "successes": 6,
+        "terminal_states": {
+          "completed": 100
+        }
+      },
+      "round": 0
+    },
+    "Random_r1": {
+      "api": {
+        "attempts": 0,
+        "errors": 0,
+        "latency_p50": null,
+        "latency_p95": null,
+        "responses": 0,
+        "usage": null,
+        "usage_missing": 0
+      },
+      "arm": "Random",
+      "audit_passed": true,
+      "episode_latency_p50": 0.01598155000101542,
+      "episode_latency_p95": 0.05597618500105449,
+      "job_id": "Random_r1",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 25,
+            "executed_actions": 248,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.4596774193548387,
+            "sg_gate": 4.4,
+            "sg_nav": 4.4,
+            "sr_gate": 0.12,
+            "sr_nav": 0.12,
+            "successes": 3,
+            "terminal_states": {
+              "completed": 25
+            }
+          },
+          "img_1": {
+            "completed": 25,
+            "executed_actions": 246,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.5528455284552846,
+            "sg_gate": 3.96,
+            "sg_nav": 3.96,
+            "sr_gate": 0.08,
+            "sr_nav": 0.08,
+            "successes": 2,
+            "terminal_states": {
+              "completed": 25
+            }
+          },
+          "img_2": {
+            "completed": 25,
+            "executed_actions": 250,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.512,
+            "sg_gate": 4.36,
+            "sg_nav": 4.36,
+            "sr_gate": 0.0,
+            "sr_nav": 0.0,
+            "successes": 0,
+            "terminal_states": {
+              "completed": 25
+            }
+          },
+          "img_3": {
+            "completed": 25,
+            "executed_actions": 246,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.46747967479674796,
+            "sg_gate": 4.32,
+            "sg_nav": 4.32,
+            "sr_gate": 0.08,
+            "sr_nav": 0.08,
+            "successes": 2,
+            "terminal_states": {
+              "completed": 25
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 20,
+            "executed_actions": 196,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.40816326530612246,
+            "sg_gate": 3.7,
+            "sg_nav": 3.7,
+            "sr_gate": 0.15,
+            "sr_nav": 0.15,
+            "successes": 3,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "5": {
+            "completed": 20,
+            "executed_actions": 196,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.4336734693877551,
+            "sg_gate": 3.15,
+            "sg_nav": 3.15,
+            "sr_gate": 0.15,
+            "sr_nav": 0.15,
+            "successes": 3,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "6": {
+            "completed": 20,
+            "executed_actions": 198,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.5252525252525253,
+            "sg_gate": 3.85,
+            "sg_nav": 3.85,
+            "sr_gate": 0.05,
+            "sr_nav": 0.05,
+            "successes": 1,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "7": {
+            "completed": 20,
+            "executed_actions": 200,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.535,
+            "sg_gate": 5.3,
+            "sg_nav": 5.3,
+            "sr_gate": 0.0,
+            "sr_nav": 0.0,
+            "successes": 0,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "8": {
+            "completed": 20,
+            "executed_actions": 200,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.585,
+            "sg_gate": 5.3,
+            "sg_nav": 5.3,
+            "sr_gate": 0.0,
+            "sr_nav": 0.0,
+            "successes": 0,
+            "terminal_states": {
+              "completed": 20
+            }
+          }
+        },
+        "completed": 100,
+        "distance_complete": true,
+        "executed_actions": 990,
+        "planned": 100,
+        "q": 1.0,
+        "recorded": 100,
+        "repeat_rate": 0.49797979797979797,
+        "sg_gate": 4.26,
+        "sg_macro": 4.26,
+        "sg_nav": 4.26,
+        "sr_gate": 0.07,
+        "sr_macro": 0.06999999999999999,
+        "sr_nav": 0.07,
+        "successes": 7,
+        "terminal_states": {
+          "completed": 100
+        }
+      },
+      "round": 1
+    },
+    "Random_r2": {
+      "api": {
+        "attempts": 0,
+        "errors": 0,
+        "latency_p50": null,
+        "latency_p95": null,
+        "responses": 0,
+        "usage": null,
+        "usage_missing": 0
+      },
+      "arm": "Random",
+      "audit_passed": true,
+      "episode_latency_p50": 0.016172449999430683,
+      "episode_latency_p95": 0.06551596499994047,
+      "job_id": "Random_r2",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 25,
+            "executed_actions": 250,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.548,
+            "sg_gate": 4.4,
+            "sg_nav": 4.4,
+            "sr_gate": 0.0,
+            "sr_nav": 0.0,
+            "successes": 0,
+            "terminal_states": {
+              "completed": 25
+            }
+          },
+          "img_1": {
+            "completed": 25,
+            "executed_actions": 250,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.592,
+            "sg_gate": 4.52,
+            "sg_nav": 4.52,
+            "sr_gate": 0.0,
+            "sr_nav": 0.0,
+            "successes": 0,
+            "terminal_states": {
+              "completed": 25
+            }
+          },
+          "img_2": {
+            "completed": 25,
+            "executed_actions": 247,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.5222672064777328,
+            "sg_gate": 4.28,
+            "sg_nav": 4.28,
+            "sr_gate": 0.12,
+            "sr_nav": 0.12,
+            "successes": 3,
+            "terminal_states": {
+              "completed": 25
+            }
+          },
+          "img_3": {
+            "completed": 25,
+            "executed_actions": 250,
+            "planned": 25,
+            "q": 1.0,
+            "recorded": 25,
+            "repeat_rate": 0.516,
+            "sg_gate": 4.36,
+            "sg_nav": 4.36,
+            "sr_gate": 0.0,
+            "sr_nav": 0.0,
+            "successes": 0,
+            "terminal_states": {
+              "completed": 25
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 20,
+            "executed_actions": 200,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.53,
+            "sg_gate": 3.35,
+            "sg_nav": 3.35,
+            "sr_gate": 0.05,
+            "sr_nav": 0.05,
+            "successes": 1,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "5": {
+            "completed": 20,
+            "executed_actions": 197,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.45685279187817257,
+            "sg_gate": 3.35,
+            "sg_nav": 3.35,
+            "sr_gate": 0.1,
+            "sr_nav": 0.1,
+            "successes": 2,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "6": {
+            "completed": 20,
+            "executed_actions": 200,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.6,
+            "sg_gate": 4.35,
+            "sg_nav": 4.35,
+            "sr_gate": 0.0,
+            "sr_nav": 0.0,
+            "successes": 0,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "7": {
+            "completed": 20,
+            "executed_actions": 200,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.555,
+            "sg_gate": 5.25,
+            "sg_nav": 5.25,
+            "sr_gate": 0.0,
+            "sr_nav": 0.0,
+            "successes": 0,
+            "terminal_states": {
+              "completed": 20
+            }
+          },
+          "8": {
+            "completed": 20,
+            "executed_actions": 200,
+            "planned": 20,
+            "q": 1.0,
+            "recorded": 20,
+            "repeat_rate": 0.58,
+            "sg_gate": 5.65,
+            "sg_nav": 5.65,
+            "sr_gate": 0.0,
+            "sr_nav": 0.0,
+            "successes": 0,
+            "terminal_states": {
+              "completed": 20
+            }
+          }
+        },
+        "completed": 100,
+        "distance_complete": true,
+        "executed_actions": 997,
+        "planned": 100,
+        "q": 1.0,
+        "recorded": 100,
+        "repeat_rate": 0.5446339017051154,
+        "sg_gate": 4.39,
+        "sg_macro": 4.39,
+        "sg_nav": 4.39,
+        "sr_gate": 0.03,
+        "sr_macro": 0.030000000000000002,
+        "sr_nav": 0.03,
+        "successes": 3,
+        "terminal_states": {
+          "completed": 100
+        }
+      },
+      "round": 2
+    }
+  },
+  "planned_jobs": 17,
+  "updated_utc": "2026-09-29T09:55:25.111047+00:00"
+}

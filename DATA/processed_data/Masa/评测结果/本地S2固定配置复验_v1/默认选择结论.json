@@ -1,0 +1,64 @@
+{
+  "audit_sha256": "d36fecf6ff011a165e33a33f26de2d30e35d80287f5041d02acb0b4abe32335b",
+  "changed": true,
+  "chosen_by_preregistered_order": true,
+  "default_arm": "Small256_NoTarget",
+  "default_config_path": "project/local_policy_default.json",
+  "default_config_sha256": "1158008e2896b6e1eadfcbb43f8bb1f0813f0fa379aa7b81f46f0ce0d9b24b52",
+  "formal_S2_passed": false,
+  "independent_map_confirmation_completed": false,
+  "no_best_seed_or_ablation_selection": true,
+  "reference_seed": 0,
+  "selection": {
+    "candidate_vs_incumbent": {
+      "gain": 0.07000000000000002,
+      "lower_metric_change": -0.22,
+      "observational_candidate": true,
+      "positive_seeds": 3,
+      "source_interval": {
+        "interval95": [
+          -0.02333333333333331,
+          0.19333333333333336
+        ],
+        "mean": 0.07000000000000002,
+        "resamples": 2000,
+        "scope": "known development source split; not independent confirmation",
+        "source_count": 4
+      }
+    },
+    "changed": true,
+    "engineering_candidate": "Small256_NoTarget",
+    "engineering_candidate_checks": {
+      "C7_C8_SR_40pct": true,
+      "SG_no_worse_than_rule": true,
+      "all_100_tasks_completed": true,
+      "each_distance_SR_30pct": true,
+      "mean_SG_1p8": true,
+      "mean_SR_60pct": true,
+      "rule_SR_gain_5pp": true,
+      "two_seeds_above_rule": true
+    },
+    "full_winner": "Spatial256_Full",
+    "no_target_vs_full": {
+      "gain": 0.043333333333333335,
+      "lower_metric_change": -0.11666666666666665,
+      "observational_candidate": true,
+      "positive_seeds": 2,
+      "source_interval": {
+        "interval95": [
+          -0.023333333333333334,
+          0.09333333333333335
+        ],
+        "mean": 0.043333333333333335,
+        "resamples": 2000,
+        "scope": "known development source split; not independent confirmation",
+        "source_count": 4
+      }
+    },
+    "no_target_winner": "Small256_NoTarget",
+    "proposed_default": "Small256_NoTarget",
+    "reference_seed": 0,
+    "scope": "Known development validation only; independent audit required before configuration is written."
+  },
+  "status": "completed_and_audited"
+}

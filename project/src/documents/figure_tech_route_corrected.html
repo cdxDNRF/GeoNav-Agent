@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <title>技术路线图——基于主动探索的视觉地理定位</title>
+    <style>
+      :root {
+        --c-bg: #ffffff;
+        --c-canvas: #ffffff;
+        --c-border: #b8b8b8;
+        --c-text-main: #000000;
+        --c-text-sub: #000000;
+        --font-ui: system-ui, -apple-system, 'Segoe UI', sans-serif;
+        --font-mono: 'SF Mono', Monaco, Consolas, monospace;
+      }
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      body {
+        background: var(--c-bg);
+        font-family: var(--font-ui);
+        color: var(--c-text-main);
+        padding: 24px;
+      }
+      .diagram-canvas {
+        background: var(--c-canvas);
+        border: 2px solid var(--c-border);
+        padding: 28px 32px 24px 32px;
+        width: 1160px;
+        margin: 0 auto;
+      }
+      .diagram-header {
+        border-bottom: 1px solid var(--c-border);
+        padding-bottom: 12px;
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-end;
+      }
+      .diagram-title { font-size: 22px; font-weight: 700; }
+      .diagram-subtitle {
+        font-size: 18px; font-weight: 500; color: var(--c-text-sub);
+        text-transform: uppercase; letter-spacing: 0.5px; margin-top: 4px;
+      }
+      .legend { font-size: 19px; color: var(--c-text-sub); }
+      .legend b { color: var(--c-text-main); }
+
+      .stage { position: relative; width: 1096px; height: 672px; }
+
+      .box {
+        position: absolute; background: var(--c-canvas);
+        border: 1.5px solid var(--c-text-main);
+      }
+      .box-title {
+        font-size: 21px; font-weight: 700; padding: 7px 12px;
+        border-bottom: 1px solid var(--c-border);
+      }
+      .row-line {
+        font-size: 20px; padding: 2px 12px; color: var(--c-text-main);
+      }
+      .row-line .k { font-weight: 600; }
+      .mono { font-family: var(--font-mono); }
+
+      /* 输入条 */
+      .input-bar { display: flex; align-items: stretch; }
+      .input-bar .tag {
+        width: 130px; display: flex; align-items: center; justify-content: center;
+        font-weight: 700; font-size: 21px; border-right: 1px solid var(--c-border);
+      }
+      .input-bar .cell {
+        flex: 1; display: flex; align-items: center; justify-content: center;
+        font-size: 20px; border-right: 1px solid var(--c-border);
+      }
+      .input-bar .cell:last-child { border-right: none; }
+
+      /* 智能体小盒 */
+      .agent {
+        position: absolute; background: var(--c-canvas);
+        border: 1.5px solid var(--c-text-main); padding: 8px 10px;
+      }
+      .agent .a-name { font-size: 20px; font-weight: 700; margin-bottom: 5px; }
+      .agent .a-desc { font-size: 19px; color: var(--c-text-main); line-height: 1.4; }
+      .badge {
+        display: inline-block; font-size: 16px; font-family: var(--font-mono);
+        padding: 1px 5px; background: var(--c-text-main); color: #fff;
+        vertical-align: 1px; margin-left: 4px;
+      }
+
+      .arrow-label {
+        position: absolute; font-size: 18px; color: var(--c-text-sub);
+        font-family: var(--font-mono); white-space: nowrap;
+      }
+      svg.wires { position: absolute; top: 0; left: 0; pointer-events: none; }
+    .diagram-header { height: 59px; } .diagram-subtitle { display: none; }</style>
+  </head>
+  <body>
+    <div class="diagram-canvas">
+      <div class="diagram-header">
+        <div>
+          <div class="diagram-title">基于主动探索的视觉地理定位系统技术路线</div>
+          <div class="diagram-subtitle">Technical Route · Agent-based Active Geo-localization</div>
+        </div>
+        <div class="legend"><b>1/2</b> = 拟议创新（效果待验证）</div>
+      </div>
+
+      <div class="stage">
+        <!-- 连接线层 -->
+        <svg class="wires" width="1096" height="672" viewBox="0 0 1096 672">
+          <defs>
+            <marker id="ah" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+              <path d="M0,0 L10,5 L0,10 z" fill="#000000"/>
+            </marker>
+          </defs>
+          <!-- 输入 -> 平台 -->
+          <line x1="548" y1="52" x2="548" y2="88" stroke="#000000" stroke-width="1.5" marker-end="url(#ah)"/>
+          <!-- 平台 -> 决策系统（观测，左侧向下） -->
+          <line x1="300" y1="208" x2="300" y2="256" stroke="#000000" stroke-width="1.5" marker-end="url(#ah)"/>
+          <!-- 决策系统 -> 平台（动作，右侧向上） -->
+          <line x1="860" y1="256" x2="860" y2="212" stroke="#000000" stroke-width="1.5" marker-end="url(#ah)"/>
+          <!-- 决策系统 -> 评测 -->
+          <line x1="548" y1="512" x2="548" y2="548" stroke="#000000" stroke-width="1.5" marker-end="url(#ah)"/>
+          <!-- 智能体间双向箭头（盒子间隙中点，y=364） -->
+          <line x1="390" y1="364" x2="421" y2="364" stroke="#000000" stroke-width="1.5" marker-start="url(#ah)" marker-end="url(#ah)"/>
+          <line x1="675" y1="364" x2="706" y2="364" stroke="#000000" stroke-width="1.5" marker-start="url(#ah)" marker-end="url(#ah)"/>
+        </svg>
+
+        <!-- 输入条 -->
+        <div class="box input-bar" style="left:130px; top:0px; width:836px; height:52px;">
+          <div class="tag">目标线索</div>
+          <div class="cell">航拍图像</div>
+          <div class="cell">地面照片</div>
+          <div class="cell">文本描述</div>
+        </div>
+
+        <!-- 实验平台 -->
+        <div class="box" style="left:130px; top:92px; width:836px; height:116px;">
+          <div class="box-title">网格化交互实验平台（环境）</div>
+          <div class="row-line"><span class="k">数据集：</span>MASA为主；MM-GAG / SwissView / xBD按条件扩展 <span class="mono" style="color:var(--c-text-sub); font-size:18px;">（须核对split）</span></div>
+          <div class="row-line"><span class="k">接口：</span><span class="mono">局部观测 · 四方向动作 · 环境终止；真值仅评测</span></div>
+        </div>
+
+        <!-- 多智能体决策系统 -->
+        <div class="box" style="left:130px; top:262px; width:836px; height:250px;">
+          <div class="box-title">本课题拟议多智能体系统（冻结VLM/LLM）</div>
+
+          <div class="agent" style="left:20px; top:46px; width:246px; height:126px;">
+            <div class="a-name">感知定位智能体</div>
+            <div class="a-desc">VLM线索匹配<br/>候选方向与置信度</div>
+          </div>
+          <div class="agent" style="left:295px; top:46px; width:246px; height:126px;">
+            <div class="a-name">记忆管理智能体<span class="badge">1</span></div>
+            <div class="a-desc">episode内证据记忆<br/>独立测试重置；持续另测</div>
+          </div>
+          <div class="agent" style="left:570px; top:46px; width:246px; height:126px;">
+            <div class="a-name">决策协调智能体<span class="badge">2</span></div>
+            <div class="a-desc">区域规划→逐格移动<br/>可见证据确认目标</div>
+          </div>
+
+          <div class="row-line mono" style="position:absolute; left:0; right:0; top:188px; text-align:center; font-size:18px; border-top:1px dashed var(--c-border); padding-top:9px;">
+            四动作无stop；扩展另测；禁用目标坐标、距离与全图
+          </div>
+        </div>
+
+        <!-- 评测输出 -->
+        <div class="box" style="left:130px; top:552px; width:836px; height:106px;">
+          <div class="box-title">评测与输出</div>
+          <div class="row-line"><span class="k">指标：</span><span class="mono">SR（成功率） · SG（终止网格距离） · 重复访问率 · 轨迹可视化</span></div>
+          <div class="row-line"><span class="k">基线：</span><span class="mono">Random / 受限贪心 / 单Agent / 同协议训练式基线</span></div>
+        </div>
+
+        <!-- 箭头标签 -->
+        <div class="arrow-label" style="left:566px; top:62px;">任务初始化 episode</div>
+        <div class="arrow-label" style="left:150px; top:226px;">局部航拍观测 ↓</div>
+        <div class="arrow-label" style="left:878px; top:226px;">↑ 四方向动作</div>
+        <div class="arrow-label" style="left:566px; top:524px;">环境终止：首次到达 / 预算耗尽</div>
+      </div>
+    </div>
+  </body>
+</html>

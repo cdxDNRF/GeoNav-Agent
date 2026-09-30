@@ -1,0 +1,23 @@
+{
+  "kind": "two_image_01",
+  "method": "POST",
+  "path": "/chat/completions",
+  "http_status": 200,
+  "returned_model": "deepseek-flash",
+  "usage": {
+    "prompt_tokens": 476,
+    "completion_tokens": 170,
+    "total_tokens": 646,
+    "prompt_tokens_details": {
+      "cached_tokens": 256
+    },
+    "completion_tokens_details": {
+      "reasoning_tokens": 141
+    },
+    "prompt_cache_hit_tokens": 256,
+    "prompt_cache_miss_tokens": 220
+  },
+  "finish_reason": "stop",
+  "content": "{\"first_color\": \"green\", \"first_shape\": \"square\", \"second_color\": \"blue\", \"second_shape\": \"triangle\"}",
+  "seconds": 1.0791087000106927
+}

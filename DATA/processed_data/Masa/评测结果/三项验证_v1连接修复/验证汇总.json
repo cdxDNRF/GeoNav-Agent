@@ -1,0 +1,1330 @@
+{
+  "api": {
+    "cost": null,
+    "cost_note": "未配置或核验价格，不估算费用；以供应商账单为准",
+    "latency_mean_seconds": 3.882699018999738,
+    "latency_p50_seconds": 3.585901449998346,
+    "latency_p95_seconds": 5.541797819994454,
+    "reported_token_totals": {
+      "completion_tokens": 1540,
+      "prompt_tokens": 150296,
+      "total_tokens": 151836
+    },
+    "requests": 200,
+    "stream": false,
+    "time_to_first_token": null,
+    "usage_note": "仅供应商实际返回值；不把缺失用量当0，不推断图像/推理token明细",
+    "usage_reported_requests": 200,
+    "valid_actions": 200
+  },
+  "api_error_attempts": 0,
+  "configuration_sha256": "8c52e42733db2138c194e405fab3924c31ac7154667b8518daffd3279815ba5b",
+  "format_normalized_responses": 28,
+  "limitations": [
+    "20任务仅4个区域，不是20个独立地理样本",
+    "VLM单次运行；无模型随机重复，不给显著性结论",
+    "规则策略不看图；对照检验覆盖管理而非视觉上界",
+    "无图/错图消融未做，不能证明视觉贡献",
+    "数据与原论文split/episode未对齐，不比较论文数值"
+  ],
+  "log_sha256": {
+    "API调用.jsonl": "f5dbff7b59d64b2956e15f592f520a54fc69e780f36e3df06190eee9722204d8",
+    "任务结果.jsonl": "b869b4fa3e559c2e1fd32750ee986c5e951ef738d46898d5d965d8262ded9ac3",
+    "动作事件.jsonl": "128b57d677aa373b8c1d06f616b98a7cc67a766621c180fce65daca5d9fe4994"
+  },
+  "paired_results": [
+    {
+      "area": "img_0",
+      "distance": 4,
+      "episode_id": "val_img_0_d4_000",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 0,
+        "success": true,
+        "unique_cells": 11
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 3,
+        "success": false,
+        "unique_cells": 4
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 4,
+        "success": false,
+        "unique_cells": 6
+      }
+    },
+    {
+      "area": "img_1",
+      "distance": 4,
+      "episode_id": "val_img_1_d4_000",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 4,
+        "success": false,
+        "unique_cells": 11
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 0,
+        "success": true,
+        "unique_cells": 7
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 4,
+        "success": false,
+        "unique_cells": 6
+      }
+    },
+    {
+      "area": "img_2",
+      "distance": 4,
+      "episode_id": "val_img_2_d4_003",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 0,
+        "success": true,
+        "unique_cells": 11
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 3,
+        "success": false,
+        "unique_cells": 8
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 4,
+        "success": false,
+        "unique_cells": 5
+      }
+    },
+    {
+      "area": "img_3",
+      "distance": 4,
+      "episode_id": "val_img_3_d4_003",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 4,
+        "success": false,
+        "unique_cells": 11
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 3,
+        "success": false,
+        "unique_cells": 6
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 2,
+        "success": false,
+        "unique_cells": 4
+      }
+    },
+    {
+      "area": "img_0",
+      "distance": 5,
+      "episode_id": "val_img_0_d5_004",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 0,
+        "success": true,
+        "unique_cells": 8
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 3,
+        "success": false,
+        "unique_cells": 7
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 3,
+        "success": false,
+        "unique_cells": 3
+      }
+    },
+    {
+      "area": "img_1",
+      "distance": 5,
+      "episode_id": "val_img_1_d5_004",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 3,
+        "success": false,
+        "unique_cells": 11
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 4,
+        "success": false,
+        "unique_cells": 6
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 5,
+        "success": false,
+        "unique_cells": 3
+      }
+    },
+    {
+      "area": "img_2",
+      "distance": 5,
+      "episode_id": "val_img_2_d5_004",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 0,
+        "success": true,
+        "unique_cells": 6
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 3,
+        "success": false,
+        "unique_cells": 9
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 5,
+        "success": false,
+        "unique_cells": 3
+      }
+    },
+    {
+      "area": "img_3",
+      "distance": 5,
+      "episode_id": "val_img_3_d5_002",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 0,
+        "success": true,
+        "unique_cells": 10
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 5,
+        "success": false,
+        "unique_cells": 6
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 5,
+        "success": false,
+        "unique_cells": 4
+      }
+    },
+    {
+      "area": "img_0",
+      "distance": 6,
+      "episode_id": "val_img_0_d6_000",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 4,
+        "success": false,
+        "unique_cells": 11
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 3,
+        "success": false,
+        "unique_cells": 6
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 2,
+        "success": false,
+        "unique_cells": 6
+      }
+    },
+    {
+      "area": "img_1",
+      "distance": 6,
+      "episode_id": "val_img_1_d6_002",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 0,
+        "success": true,
+        "unique_cells": 9
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 3,
+        "success": false,
+        "unique_cells": 7
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 2,
+        "success": false,
+        "unique_cells": 5
+      }
+    },
+    {
+      "area": "img_2",
+      "distance": 6,
+      "episode_id": "val_img_2_d6_001",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 4,
+        "success": false,
+        "unique_cells": 11
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 3,
+        "success": false,
+        "unique_cells": 5
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 2,
+        "success": false,
+        "unique_cells": 6
+      }
+    },
+    {
+      "area": "img_3",
+      "distance": 6,
+      "episode_id": "val_img_3_d6_002",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 0,
+        "success": true,
+        "unique_cells": 9
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 2,
+        "success": false,
+        "unique_cells": 10
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 4,
+        "success": false,
+        "unique_cells": 5
+      }
+    },
+    {
+      "area": "img_0",
+      "distance": 7,
+      "episode_id": "val_img_0_d7_004",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 3,
+        "success": false,
+        "unique_cells": 11
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 6,
+        "success": false,
+        "unique_cells": 5
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 5,
+        "success": false,
+        "unique_cells": 4
+      }
+    },
+    {
+      "area": "img_1",
+      "distance": 7,
+      "episode_id": "val_img_1_d7_001",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 0,
+        "success": true,
+        "unique_cells": 10
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 4,
+        "success": false,
+        "unique_cells": 6
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 5,
+        "success": false,
+        "unique_cells": 5
+      }
+    },
+    {
+      "area": "img_2",
+      "distance": 7,
+      "episode_id": "val_img_2_d7_004",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 0,
+        "success": true,
+        "unique_cells": 8
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 2,
+        "success": false,
+        "unique_cells": 8
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 3,
+        "success": false,
+        "unique_cells": 5
+      }
+    },
+    {
+      "area": "img_3",
+      "distance": 7,
+      "episode_id": "val_img_3_d7_000",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 5,
+        "success": false,
+        "unique_cells": 11
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 4,
+        "success": false,
+        "unique_cells": 6
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 3,
+        "success": false,
+        "unique_cells": 5
+      }
+    },
+    {
+      "area": "img_0",
+      "distance": 8,
+      "episode_id": "val_img_0_d8_003",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 0,
+        "success": true,
+        "unique_cells": 9
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 4,
+        "success": false,
+        "unique_cells": 7
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 4,
+        "success": false,
+        "unique_cells": 6
+      }
+    },
+    {
+      "area": "img_1",
+      "distance": 8,
+      "episode_id": "val_img_1_d8_003",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 6,
+        "success": false,
+        "unique_cells": 11
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 4,
+        "success": false,
+        "unique_cells": 8
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 4,
+        "success": false,
+        "unique_cells": 6
+      }
+    },
+    {
+      "area": "img_2",
+      "distance": 8,
+      "episode_id": "val_img_2_d8_001",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 6,
+        "success": false,
+        "unique_cells": 11
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 3,
+        "success": false,
+        "unique_cells": 6
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 2,
+        "success": false,
+        "unique_cells": 8
+      }
+    },
+    {
+      "area": "img_3",
+      "distance": 8,
+      "episode_id": "val_img_3_d8_001",
+      "frontier": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 6,
+        "success": false,
+        "unique_cells": 11
+      },
+      "random": {
+        "completion": "completed",
+        "cycle": false,
+        "sg": 7,
+        "success": false,
+        "unique_cells": 6
+      },
+      "vlm": {
+        "completion": "completed",
+        "cycle": true,
+        "sg": 4,
+        "success": false,
+        "unique_cells": 6
+      }
+    }
+  ],
+  "policies": {
+    "frontier": {
+      "all": {
+        "completed": 20,
+        "completed_diagnostics": {
+          "adjacent_but_not_reached_episodes": 2,
+          "cycle_episode_rate": 0,
+          "departures_from_adjacent": 2,
+          "episodes_with_two_cell_cycles": 0,
+          "mean_coverage_ratio": 0.402,
+          "mean_minimum_distance": 1.2,
+          "mean_unique_cells": 10.05
+        },
+        "errors": 0,
+        "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+        "metrics_completed_only": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 2.25,
+          "mean_steps": 9.05,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.0,
+          "repeat_visit_rate_micro": 0.0,
+          "sr": 0.5,
+          "successes": 10
+        },
+        "scheduled": 20
+      },
+      "by_area": {
+        "img_0": {
+          "completed": 5,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 0,
+            "departures_from_adjacent": 0,
+            "episodes_with_two_cell_cycles": 0,
+            "mean_coverage_ratio": 0.4,
+            "mean_minimum_distance": 1,
+            "mean_unique_cells": 10
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 5,
+            "mean_sg_all_episodes": 1.4,
+            "mean_steps": 9,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.0,
+            "repeat_visit_rate_micro": 0.0,
+            "sr": 0.6,
+            "successes": 3
+          },
+          "scheduled": 5
+        },
+        "img_1": {
+          "completed": 5,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 0,
+            "departures_from_adjacent": 0,
+            "episodes_with_two_cell_cycles": 0,
+            "mean_coverage_ratio": 0.416,
+            "mean_minimum_distance": 1.8,
+            "mean_unique_cells": 10.4
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 5,
+            "mean_sg_all_episodes": 2.6,
+            "mean_steps": 9.4,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.0,
+            "repeat_visit_rate_micro": 0.0,
+            "sr": 0.4,
+            "successes": 2
+          },
+          "scheduled": 5
+        },
+        "img_2": {
+          "completed": 5,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 1,
+            "cycle_episode_rate": 0,
+            "departures_from_adjacent": 1,
+            "episodes_with_two_cell_cycles": 0,
+            "mean_coverage_ratio": 0.376,
+            "mean_minimum_distance": 0.8,
+            "mean_unique_cells": 9.4
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 5,
+            "mean_sg_all_episodes": 2,
+            "mean_steps": 8.4,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.0,
+            "repeat_visit_rate_micro": 0.0,
+            "sr": 0.6,
+            "successes": 3
+          },
+          "scheduled": 5
+        },
+        "img_3": {
+          "completed": 5,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 1,
+            "cycle_episode_rate": 0,
+            "departures_from_adjacent": 1,
+            "episodes_with_two_cell_cycles": 0,
+            "mean_coverage_ratio": 0.416,
+            "mean_minimum_distance": 1.2,
+            "mean_unique_cells": 10.4
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 5,
+            "mean_sg_all_episodes": 3,
+            "mean_steps": 9.4,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.0,
+            "repeat_visit_rate_micro": 0.0,
+            "sr": 0.4,
+            "successes": 2
+          },
+          "scheduled": 5
+        }
+      },
+      "by_distance": {
+        "4": {
+          "completed": 4,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 1,
+            "cycle_episode_rate": 0,
+            "departures_from_adjacent": 1,
+            "episodes_with_two_cell_cycles": 0,
+            "mean_coverage_ratio": 0.44,
+            "mean_minimum_distance": 1,
+            "mean_unique_cells": 11
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 4,
+            "mean_sg_all_episodes": 2,
+            "mean_steps": 10,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.0,
+            "repeat_visit_rate_micro": 0.0,
+            "sr": 0.5,
+            "successes": 2
+          },
+          "scheduled": 4
+        },
+        "5": {
+          "completed": 4,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 0,
+            "departures_from_adjacent": 0,
+            "episodes_with_two_cell_cycles": 0,
+            "mean_coverage_ratio": 0.35,
+            "mean_minimum_distance": 0.75,
+            "mean_unique_cells": 8.75
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 4,
+            "mean_sg_all_episodes": 0.75,
+            "mean_steps": 7.75,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.0,
+            "repeat_visit_rate_micro": 0.0,
+            "sr": 0.75,
+            "successes": 3
+          },
+          "scheduled": 4
+        },
+        "6": {
+          "completed": 4,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 1,
+            "cycle_episode_rate": 0,
+            "departures_from_adjacent": 1,
+            "episodes_with_two_cell_cycles": 0,
+            "mean_coverage_ratio": 0.4,
+            "mean_minimum_distance": 0.75,
+            "mean_unique_cells": 10
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 4,
+            "mean_sg_all_episodes": 2,
+            "mean_steps": 9,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.0,
+            "repeat_visit_rate_micro": 0.0,
+            "sr": 0.5,
+            "successes": 2
+          },
+          "scheduled": 4
+        },
+        "7": {
+          "completed": 4,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 0,
+            "departures_from_adjacent": 0,
+            "episodes_with_two_cell_cycles": 0,
+            "mean_coverage_ratio": 0.4,
+            "mean_minimum_distance": 1.25,
+            "mean_unique_cells": 10
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 4,
+            "mean_sg_all_episodes": 2,
+            "mean_steps": 9,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.0,
+            "repeat_visit_rate_micro": 0.0,
+            "sr": 0.5,
+            "successes": 2
+          },
+          "scheduled": 4
+        },
+        "8": {
+          "completed": 4,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 0,
+            "departures_from_adjacent": 0,
+            "episodes_with_two_cell_cycles": 0,
+            "mean_coverage_ratio": 0.42,
+            "mean_minimum_distance": 2.25,
+            "mean_unique_cells": 10.5
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 4,
+            "mean_sg_all_episodes": 4.5,
+            "mean_steps": 9.5,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.0,
+            "repeat_visit_rate_micro": 0.0,
+            "sr": 0.25,
+            "successes": 1
+          },
+          "scheduled": 4
+        }
+      }
+    },
+    "random": {
+      "all": {
+        "completed": 20,
+        "completed_diagnostics": {
+          "adjacent_but_not_reached_episodes": 1,
+          "cycle_episode_rate": 0.3,
+          "departures_from_adjacent": 2,
+          "episodes_with_two_cell_cycles": 6,
+          "mean_coverage_ratio": 0.266,
+          "mean_minimum_distance": 2.8,
+          "mean_unique_cells": 6.65
+        },
+        "errors": 0,
+        "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+        "metrics_completed_only": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 3.45,
+          "mean_steps": 9.95,
+          "out_of_bounds_rate": 0.16080402010050251,
+          "repeat_visit_rate_macro": 0.43166666666666664,
+          "repeat_visit_rate_micro": 0.4321608040201005,
+          "sr": 0.05,
+          "successes": 1
+        },
+        "scheduled": 20
+      },
+      "by_area": {
+        "img_0": {
+          "completed": 5,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 0.4,
+            "departures_from_adjacent": 0,
+            "episodes_with_two_cell_cycles": 2,
+            "mean_coverage_ratio": 0.232,
+            "mean_minimum_distance": 3.6,
+            "mean_unique_cells": 5.8
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 5,
+            "mean_sg_all_episodes": 3.8,
+            "mean_steps": 10,
+            "out_of_bounds_rate": 0.22,
+            "repeat_visit_rate_macro": 0.52,
+            "repeat_visit_rate_micro": 0.52,
+            "sr": 0.0,
+            "successes": 0
+          },
+          "scheduled": 5
+        },
+        "img_1": {
+          "completed": 5,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 0.2,
+            "departures_from_adjacent": 1,
+            "episodes_with_two_cell_cycles": 1,
+            "mean_coverage_ratio": 0.272,
+            "mean_minimum_distance": 2.2,
+            "mean_unique_cells": 6.8
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 5,
+            "mean_sg_all_episodes": 3,
+            "mean_steps": 9.8,
+            "out_of_bounds_rate": 0.12244897959183673,
+            "repeat_visit_rate_macro": 0.4066666666666667,
+            "repeat_visit_rate_micro": 0.40816326530612246,
+            "sr": 0.2,
+            "successes": 1
+          },
+          "scheduled": 5
+        },
+        "img_2": {
+          "completed": 5,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 1,
+            "cycle_episode_rate": 0.2,
+            "departures_from_adjacent": 1,
+            "episodes_with_two_cell_cycles": 1,
+            "mean_coverage_ratio": 0.288,
+            "mean_minimum_distance": 2.2,
+            "mean_unique_cells": 7.2
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 5,
+            "mean_sg_all_episodes": 2.8,
+            "mean_steps": 10,
+            "out_of_bounds_rate": 0.24,
+            "repeat_visit_rate_macro": 0.38,
+            "repeat_visit_rate_micro": 0.38,
+            "sr": 0.0,
+            "successes": 0
+          },
+          "scheduled": 5
+        },
+        "img_3": {
+          "completed": 5,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 0.4,
+            "departures_from_adjacent": 0,
+            "episodes_with_two_cell_cycles": 2,
+            "mean_coverage_ratio": 0.272,
+            "mean_minimum_distance": 3.2,
+            "mean_unique_cells": 6.8
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 5,
+            "mean_sg_all_episodes": 4.2,
+            "mean_steps": 10,
+            "out_of_bounds_rate": 0.06,
+            "repeat_visit_rate_macro": 0.42,
+            "repeat_visit_rate_micro": 0.42,
+            "sr": 0.0,
+            "successes": 0
+          },
+          "scheduled": 5
+        }
+      },
+      "by_distance": {
+        "4": {
+          "completed": 4,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 1,
+            "cycle_episode_rate": 0.75,
+            "departures_from_adjacent": 2,
+            "episodes_with_two_cell_cycles": 3,
+            "mean_coverage_ratio": 0.25,
+            "mean_minimum_distance": 1.75,
+            "mean_unique_cells": 6.25
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 4,
+            "mean_sg_all_episodes": 2.25,
+            "mean_steps": 9.75,
+            "out_of_bounds_rate": 0.15384615384615385,
+            "repeat_visit_rate_macro": 0.4583333333333333,
+            "repeat_visit_rate_micro": 0.46153846153846156,
+            "sr": 0.25,
+            "successes": 1
+          },
+          "scheduled": 4
+        },
+        "5": {
+          "completed": 4,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 0.25,
+            "departures_from_adjacent": 0,
+            "episodes_with_two_cell_cycles": 1,
+            "mean_coverage_ratio": 0.28,
+            "mean_minimum_distance": 2.5,
+            "mean_unique_cells": 7
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 4,
+            "mean_sg_all_episodes": 3.75,
+            "mean_steps": 10,
+            "out_of_bounds_rate": 0.075,
+            "repeat_visit_rate_macro": 0.4,
+            "repeat_visit_rate_micro": 0.4,
+            "sr": 0.0,
+            "successes": 0
+          },
+          "scheduled": 4
+        },
+        "6": {
+          "completed": 4,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 0,
+            "departures_from_adjacent": 0,
+            "episodes_with_two_cell_cycles": 0,
+            "mean_coverage_ratio": 0.28,
+            "mean_minimum_distance": 2.5,
+            "mean_unique_cells": 7
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 4,
+            "mean_sg_all_episodes": 2.75,
+            "mean_steps": 10,
+            "out_of_bounds_rate": 0.225,
+            "repeat_visit_rate_macro": 0.4,
+            "repeat_visit_rate_micro": 0.4,
+            "sr": 0.0,
+            "successes": 0
+          },
+          "scheduled": 4
+        },
+        "7": {
+          "completed": 4,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 0.5,
+            "departures_from_adjacent": 0,
+            "episodes_with_two_cell_cycles": 2,
+            "mean_coverage_ratio": 0.25,
+            "mean_minimum_distance": 3.75,
+            "mean_unique_cells": 6.25
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 4,
+            "mean_sg_all_episodes": 4,
+            "mean_steps": 10,
+            "out_of_bounds_rate": 0.1,
+            "repeat_visit_rate_macro": 0.475,
+            "repeat_visit_rate_micro": 0.475,
+            "sr": 0.0,
+            "successes": 0
+          },
+          "scheduled": 4
+        },
+        "8": {
+          "completed": 4,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 0,
+            "departures_from_adjacent": 0,
+            "episodes_with_two_cell_cycles": 0,
+            "mean_coverage_ratio": 0.27,
+            "mean_minimum_distance": 3.5,
+            "mean_unique_cells": 6.75
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 4,
+            "mean_sg_all_episodes": 4.5,
+            "mean_steps": 10,
+            "out_of_bounds_rate": 0.25,
+            "repeat_visit_rate_macro": 0.425,
+            "repeat_visit_rate_micro": 0.425,
+            "sr": 0.0,
+            "successes": 0
+          },
+          "scheduled": 4
+        }
+      }
+    },
+    "vlm": {
+      "all": {
+        "completed": 20,
+        "completed_diagnostics": {
+          "adjacent_but_not_reached_episodes": 1,
+          "cycle_episode_rate": 0.95,
+          "departures_from_adjacent": 2,
+          "episodes_with_two_cell_cycles": 19,
+          "mean_coverage_ratio": 0.202,
+          "mean_minimum_distance": 2.95,
+          "mean_unique_cells": 5.05
+        },
+        "errors": 0,
+        "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+        "metrics_completed_only": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 3.6,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.595,
+          "repeat_visit_rate_micro": 0.595,
+          "sr": 0.0,
+          "successes": 0
+        },
+        "scheduled": 20
+      },
+      "by_area": {
+        "img_0": {
+          "completed": 5,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 1,
+            "departures_from_adjacent": 0,
+            "episodes_with_two_cell_cycles": 5,
+            "mean_coverage_ratio": 0.19999999999999998,
+            "mean_minimum_distance": 3,
+            "mean_unique_cells": 5
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 5,
+            "mean_sg_all_episodes": 3.6,
+            "mean_steps": 10,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.6,
+            "repeat_visit_rate_micro": 0.6,
+            "sr": 0.0,
+            "successes": 0
+          },
+          "scheduled": 5
+        },
+        "img_1": {
+          "completed": 5,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 1,
+            "departures_from_adjacent": 0,
+            "episodes_with_two_cell_cycles": 5,
+            "mean_coverage_ratio": 0.2,
+            "mean_minimum_distance": 3.4,
+            "mean_unique_cells": 5
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 5,
+            "mean_sg_all_episodes": 4,
+            "mean_steps": 10,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.6,
+            "repeat_visit_rate_micro": 0.6,
+            "sr": 0.0,
+            "successes": 0
+          },
+          "scheduled": 5
+        },
+        "img_2": {
+          "completed": 5,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 0.8,
+            "departures_from_adjacent": 0,
+            "episodes_with_two_cell_cycles": 4,
+            "mean_coverage_ratio": 0.216,
+            "mean_minimum_distance": 2.4,
+            "mean_unique_cells": 5.4
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 5,
+            "mean_sg_all_episodes": 3.2,
+            "mean_steps": 10,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.56,
+            "repeat_visit_rate_micro": 0.56,
+            "sr": 0.0,
+            "successes": 0
+          },
+          "scheduled": 5
+        },
+        "img_3": {
+          "completed": 5,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 1,
+            "cycle_episode_rate": 1,
+            "departures_from_adjacent": 2,
+            "episodes_with_two_cell_cycles": 5,
+            "mean_coverage_ratio": 0.192,
+            "mean_minimum_distance": 3,
+            "mean_unique_cells": 4.8
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 5,
+            "mean_sg_all_episodes": 3.6,
+            "mean_steps": 10,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.62,
+            "repeat_visit_rate_micro": 0.62,
+            "sr": 0.0,
+            "successes": 0
+          },
+          "scheduled": 5
+        }
+      },
+      "by_distance": {
+        "4": {
+          "completed": 4,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 1,
+            "cycle_episode_rate": 1,
+            "departures_from_adjacent": 2,
+            "episodes_with_two_cell_cycles": 4,
+            "mean_coverage_ratio": 0.21,
+            "mean_minimum_distance": 2,
+            "mean_unique_cells": 5.25
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 4,
+            "mean_sg_all_episodes": 3.5,
+            "mean_steps": 10,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.575,
+            "repeat_visit_rate_micro": 0.575,
+            "sr": 0.0,
+            "successes": 0
+          },
+          "scheduled": 4
+        },
+        "5": {
+          "completed": 4,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 1,
+            "departures_from_adjacent": 0,
+            "episodes_with_two_cell_cycles": 4,
+            "mean_coverage_ratio": 0.13,
+            "mean_minimum_distance": 3.5,
+            "mean_unique_cells": 3.25
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 4,
+            "mean_sg_all_episodes": 4.5,
+            "mean_steps": 10,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.775,
+            "repeat_visit_rate_micro": 0.775,
+            "sr": 0.0,
+            "successes": 0
+          },
+          "scheduled": 4
+        },
+        "6": {
+          "completed": 4,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 1,
+            "departures_from_adjacent": 0,
+            "episodes_with_two_cell_cycles": 4,
+            "mean_coverage_ratio": 0.22,
+            "mean_minimum_distance": 2.25,
+            "mean_unique_cells": 5.5
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 4,
+            "mean_sg_all_episodes": 2.5,
+            "mean_steps": 10,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.55,
+            "repeat_visit_rate_micro": 0.55,
+            "sr": 0.0,
+            "successes": 0
+          },
+          "scheduled": 4
+        },
+        "7": {
+          "completed": 4,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 1,
+            "departures_from_adjacent": 0,
+            "episodes_with_two_cell_cycles": 4,
+            "mean_coverage_ratio": 0.19,
+            "mean_minimum_distance": 3.5,
+            "mean_unique_cells": 4.75
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 4,
+            "mean_sg_all_episodes": 4,
+            "mean_steps": 10,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.625,
+            "repeat_visit_rate_micro": 0.625,
+            "sr": 0.0,
+            "successes": 0
+          },
+          "scheduled": 4
+        },
+        "8": {
+          "completed": 4,
+          "completed_diagnostics": {
+            "adjacent_but_not_reached_episodes": 0,
+            "cycle_episode_rate": 0.75,
+            "departures_from_adjacent": 0,
+            "episodes_with_two_cell_cycles": 3,
+            "mean_coverage_ratio": 0.26,
+            "mean_minimum_distance": 3.5,
+            "mean_unique_cells": 6.5
+          },
+          "errors": 0,
+          "failure_note": "API错误题单列，不计入正常完成分母；错误题轨迹诊断仍留逐题日志",
+          "metrics_completed_only": {
+            "episodes": 4,
+            "mean_sg_all_episodes": 3.5,
+            "mean_steps": 10,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.45,
+            "repeat_visit_rate_micro": 0.45,
+            "sr": 0.0,
+            "successes": 0
+          },
+          "scheduled": 4
+        }
+      }
+    }
+  },
+  "protocol": "masa-local-grid5-v2",
+  "scope": "20 fixed validation tasks, development diagnosis, not held-out test",
+  "total_wall_seconds": 779.6783071999962
+}

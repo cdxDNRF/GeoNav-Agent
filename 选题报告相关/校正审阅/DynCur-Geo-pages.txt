@@ -1,0 +1,2306 @@
+=== PDF PAGE 1 ===
+DynCur-Geo: Dynamic Curiosity Reward Shaping for Multimodal Active
+Geo-Localization
+Yiming Sun1, Yang Zhang1, Pengfei Zhu1
+1School of Automation, Southeast University, Nanjing 210096, China
+Abstract
+Active geo-localization enables low-altitude UAVs to search
+for specified targets from limited local aerial observations,
+supporting time-sensitive applications such as search and res-
+cue and emergency inspection. However, multimodal target
+cues, restricted views, and sparse feedback make it diffi-
+cult to balance exploration with target convergence. Exist-
+ing curiosity-driven methods assign a fixed intrinsic-reward
+weight throughout search, which can continue rewarding nov-
+elty after the agent nears the target and induce detours. We
+propose DynCur-Geo, a dynamic curiosity framework that
+adjusts prediction-error intrinsic reward according to remain-
+ing target distance. A distance-aware gate encourages early
+exploration and shifts the policy toward goal-directed be-
+havior near the target, while potential-based reward shaping
+supplies dense progress guidance. Experiments across multi-
+modal, cross-scene, disaster-affected, and long-range settings
+show consistent gains over active geo-localization baselines.
+Introduction
+Low-altitude UAVs can search large areas when direct ac-
+cess is difficult or rapid response is required. In search and
+rescue or emergency inspection, however, the target may
+be absent from the initial view, so the UAV must gather
+evidence, choose movements, and localize the target be-
+fore the search budget is exhausted. This distinguishes ac-
+tive geo-localization (AGL) from conventional visual geo-
+localization, where a query is matched against a geotagged
+reference set or mapped to coordinates [3, 5, 11, 12, 34, 35,
+36]. AGL instead poses localization as sequential decisions
+over local aerial observations, making an efficient learned
+policy essential [16, 20, 22].
+Targets may be specified by a previous aerial crop,
+a ground-view photograph, or a short text description.
+GOMAA-Geo [22] extends AGL to this goal-modality-
+agnostic setting, where the policy must align these cues with
+local aerial observations. The cue and local views may dif-
+fer strongly in appearance and viewpoint, directional evi-
+dence can remain ambiguous for several steps, and every
+exploratory action consumes budget.
+Curiosity-driven exploration helps under sparse feedback.
+GeoExplorer [16] uses action-state prediction error as an in-
+trinsic reward and combines it with the external reward using
+a fixed curiosity weight throughout search. Although this en-
+courages informative transitions, prediction error measures
+Figure 1: Motivation for distance-gated curiosity. GeoEx-
+plorer uses a fixed curiosity weight that can weaken late-
+stage convergence by rewarding novelty throughout search
+(orange). Our dynamic gate weights intrinsic reward more
+strongly far from the target and less near it, promoting explo-
+ration followed by goal-directed convergence (blue–green).
+novelty rather than goal relevance, so it can preserve ex-
+ploratory pressure after the policy enters the target neighbor-
+hood, where convergence is more valuable than unfamiliar
+states.
+To address this limitation, we propose DynCur-Geo, a
+dynamic curiosity framework for multimodal AGL. Fig. 1
+contrasts the fixed curiosity weight of GeoExplorer [16]
+with our trajectory-dependent design. Broad exploration is
+useful early, whereas later decisions should prioritize sta-
+ble progress. We implement this transition with distance-
+gated curiosity reward shaping: intrinsic reward is weighted
+more far from the target and downweighted as the policy
+approaches it. We also add potential-based reward shaping
+(PBRS) [1, 18] to provide dense target-progress feedback
+and reinforce goal-directed convergence.
+Our main contributions are summarized as follows:
+• We introduce DynCur-Geo, a dynamic-curiosity frame-
+work for multimodal active geo-localization that uses
+multimodal target cues and observation features within
+one sequential search policy.
+• We develop a distance-aware curiosity gate that adapts
+arXiv:2608.18673v1  [cs.CV]  19 Aug 2026
+
+
+=== PDF PAGE 2 ===
+prediction-error intrinsic reward along the trajectory, sup-
+porting broad exploration far from the target and precise
+convergence near it.
+• We integrate potential-based target-progress shaping
+with dynamic curiosity and demonstrate consistent gains
+over existing methods across multimodal, cross-scene,
+disaster-affected, and long-range search settings.
+Related Work
+Visual and Multimodal Geo-Localization.
+Visual geo-
+localization emphasizes representation learning for retrieval
+or coordinate estimation. Place-recognition models learn de-
+scriptors for large reference databases [3, 5], while cross-
+view methods match images from ground cameras, drones,
+and satellites [11, 14, 27, 29, 30, 31, 35, 36]. Recent work
+considers limited fields of view, orientation uncertainty,
+drone-view queries, object-level targets, broader geographic
+coverage, and multimodal queries [8, 12, 13, 21, 32, 33, 34].
+Contrastive and vision-language models further connect vi-
+sual observations with geographic or textual representations
+[8, 21], and multimodal UAV localization extends queries
+with text, prompts, depth, point clouds, or multiple image
+views [13, 32].
+These works motivate multimodal localization represen-
+tations, but their protocols differ from AGL. Retrieval meth-
+ods compare a query against a reference database or map;
+AGL observes only the current aerial patch, chooses the next
+move before seeing future patches, and is judged by whether
+it reaches the target cell within budget. Thus, the direct base-
+lines are active-search policies under the same movement
+protocol.
+Active Geo-Localization and Aerial Navigation.
+AiR-
+Loc [20] abstracts search-and-rescue-style aerial search as
+a reinforcement learning problem in which a policy local-
+izes an aerial-view target from partial glimpses. GOMAA-
+Geo [22] extends the formulation to multimodal goal cues
+and combines cross-modal alignment, supervised pretrain-
+ing, and actor-critic policy learning for aerial, ground-view,
+and text goals. GeoExplorer [16] adds action-state dynam-
+ics modeling and next-state prediction error as intrinsic re-
+ward. These closest AGL baselines use the same controlled
+grid-based setting; our work studies how prediction-error cu-
+riosity should be weighted as the policy moves from broad
+exploration to target convergence.
+Related aerial and embodied navigation tasks study lan-
+guage instruction following, continuous motion, or reaching
+visible goals [2, 15, 37]. In contrast, AGL uses grid-based
+target localization, with performance measured by success
+rate and final grid distance under a fixed movement budget.
+Curiosity and Reward Shaping.
+Intrinsic motivation
+methods use prediction error, novelty, reachability, or un-
+certainty to encourage exploration when external rewards
+are sparse or delayed [4, 6, 7, 19, 23, 24, 26, 28]. In visual re-
+inforcement learning, prediction-error curiosity learns a dy-
+namics model and rewards hard-to-predict transitions. This
+fits AGL’s repetitive local aerial patches and late target visi-
+bility, where sparse success reward gives little early feedback.
+However, curiosity is not inherently task-aligned: explo-
+ration should increase the chance of reaching the target,
+not merely visit surprising states. PBRS [1, 18] adds dense
+progress feedback through a potential function while pre-
+serving policy invariance under standard assumptions. Our
+method uses prediction-error curiosity for exploration and
+combines a distance gate with PBRS to tie it to target con-
+vergence.
+Method
+Problem Setup.
+We formulate multimodal active geo-
+localization as a goal-conditioned sequential decision prob-
+lem on a discretized aerial region. The region is divided into
+K × K cells, and each cell p corresponds to an aerial image
+patch Ip. For each search episode, the policy first receives a
+target cue g, which may be an aerial image, a ground-view
+image, or a text description. The cue is associated with a
+target cell pg, but the target location is hidden during in-
+ference. Starting from cell p0, the policy observes only the
+aerial patch at its current cell pt, selects an action at from
+A = {up, right, down, left}, and moves to the next cell if
+the action is legal. A search episode is successful if the policy
+reaches pg within the budget B.
+At each episode start, the policy receives only the target
+cue and the observation at p0; after each action, it receives
+the resulting local observation. The target cell is used only
+during training to construct dynamics targets and rewards.
+During inference, the policy does not evaluate target distance,
+reward terms, or an oracle planner; it acts from the learned
+representation, history, and legal-action mask. The resulting
+training pipeline and reward construction are summarized in
+Fig. 2.
+Multimodal Feature Representation.
+Let m denote the
+modality of the target cue g. Following the feature represen-
+tation used in multimodal AGL [16, 22], Sat2Cap [9] encodes
+aerial images for both aerial target cues and search observa-
+tions, while the CLIP ViT-B/32 [21] image and text encoders
+represent ground-view and text targets. We denote the corre-
+sponding frozen modality encoder by Em, which maps the
+target cue to a shared 512-dimensional target embedding:
+q = Em(g),
+m ∈{aerial, ground, text}.
+(1)
+For search observations, the same aerial encoder Ea maps
+the current patch Ipt to an observation feature vt = Ea(Ipt).
+We augment this feature with a lightweight sinusoidal grid-
+position encoding and denote the resulting location-aware
+feature as ˜vt. Given a learned action embedding e(ai), the
+target, observation, and action features up to step t form the
+causal input sequence
+Zt = [q, ˜v0, e(a0), ˜v1, . . . , e(at−1), ˜vt].
+(2)
+We reuse the pretrained causal Transformer Fθ from Geo-
+Explorer [16] as the sequence model. With input projections
+from the 512-dimensional feature space and learned action
+tokens, it maps the causal sequence to a state representation
+ht = Fθ(Zt),
+(3)
+where θ denotes the model parameters. The policy therefore
+combines multimodal target and observation features with
+
+
+=== PDF PAGE 3 ===
+Figure 2: Training pipeline and reward construction. Target cues and local aerial observations form a trajectory history processed
+by a frozen GeoExplorer dynamics model. Prediction error provides intrinsic reward, whose weight is reduced near the target
+and combined with external progress and PBRS rewards for PPO training.
+the action sequence instead of relying on the current patch
+alone.
+Action-State Dynamics Modeling.
+The adopted GeoEx-
+plorer [16] action-state model was pretrained on generated
+trajectories. At each step, it predicts two targets: a multi-
+label action vector yt, where each entry indicates whether
+the corresponding movement reduces the grid distance to the
+goal, and the next-state feature after the action-conditioned
+transition. The dynamics-modeling loss is
+LDM = Lact + αLstate,
+(4)
+where Lact is the action prediction loss, Lstate is the state-
+feature prediction loss, and α balances the two terms. We
+use binary cross-entropy for Lact and mean-squared error for
+Lstate. This objective trains the sequence model to encode
+both goal-directed action preferences and action-conditioned
+changes in aerial observations.
+During PPO [25] training, the pretrained sequence model
+is frozen and used as a stable history encoder and dynamics
+model. Let ˆvt+1 denote the predicted next-state feature and
+˜vt+1 denote the observed next-state feature after executing
+at. The prediction error is
+et = ∥ˆvt+1 −˜vt+1∥2
+2 .
+(5)
+This error is the transition novelty signal used for intrinsic
+reward.
+Distance-Gated External and Intrinsic Rewards.
+The
+reinforcement-learning stage follows the distance-based ex-
+ternal reward commonly used in AGL, which gives dense
+feedback according to whether an action moves the policy
+toward the target. We use this reward as the task-progress
+signal and write it as
+rex,t =
+
+
+
+rg
+pt+1 = pg
+rp
+∆(pt+1, pg) < bt
+rn
+otherwise
+,
+(6)
+where pt+1 is the cell after action at, rg is the goal-reaching
+reward, rp is the progress reward, and rn < 0 penalizes non-
+progress moves. The function ∆(p, pg) measures distance-
+based progress between cell p and target cell pg, while bt
+records the best accepted progress score along the current
+trajectory. This term follows the prior dense AGL reward de-
+sign and uses the known target location only during training.
+The intrinsic reward is derived from the frozen dynamics
+model:
+rin,t = ψ(et),
+(7)
+where ψ(·) normalizes prediction errors to a scale compa-
+rable with the external reward. The resulting signal gives
+dense feedback when target progress is hard to infer from
+local observations, but it is goal-agnostic and therefore does
+not distinguish target-helpful novelty from target-irrelevant
+novelty. We therefore gate curiosity by the remaining target
+distance. Let d1(p, pg) be the Manhattan distance between
+cell p and the target cell. We first define a normalized distance
+ratio
+ρt = clip
+
+d1(pt, pg)
+max(d1(p0, pg), 1), 0, 1
+
+,
+(8)
+where pt is the current cell, p0 is the start cell, and the
+denominator is lower bounded by one for numerical stability.
+The distance ratio then defines a family of curiosity gates,
+λt = λmin + (1 −λmin)f(ρt),
+(9)
+
+
+=== PDF PAGE 4 ===
+where λmin is the lower bound of the curiosity weight and
+f(ρt) controls the distance schedule. Eq. (9) assigns a larger
+curiosity weight far from the target and reduces that weight
+near the target. The final model uses a linear gate, f(ρt) = ρt.
+The ablation study also compares a constant gate f(ρt) = 0, a
+sine gate f(ρt) = sin(πρt/2), and a power gate f(ρt) = ρ2
+t.
+The special case λt = 1 denotes ungated curiosity.
+Potential-Based Reward Shaping.
+The second reward
+component is potential-based reward shaping (PBRS), which
+supplies smooth distance feedback without changing the
+inference-time inputs. For a K ×K grid, the maximum Man-
+hattan distance is dmax = 2(K −1). We define the potential
+function
+Φ(p) = −d1(p, pg)
+dmax
+,
+(10)
+and the shaping reward
+rΦ,t = β (γΦ(pt+1) −Φ(pt)) ,
+(11)
+where β controls the strength of shaping and γ is the discount
+factor. The final training reward is
+rt = rex,t + λtrin,t + rΦ,t.
+(12)
+This wraps the reward design into three training-only sig-
+nals: the prior distance-based external reward supplies task
+feedback, the gated intrinsic reward encourages exploration
+when target evidence is still sparse, and PBRS supplies dense
+target-progress shaping. At inference time, none of these re-
+ward terms or target-distance quantities is evaluated.
+Policy Learning and Inference.
+With the frozen history
+encoder Fθ, we train an actor-critic policy using PPO. The
+actor outputs a distribution π(a|ht) over actions a ∈A, and
+the critic estimates the value of ht. Let Mt(a) ∈{0, 1} be the
+legal-action mask at step t, where invalid boundary actions
+have value zero. The masked policy is
+¯π(a|ht) =
+Mt(a)π(a|ht)
+P
+a′∈A Mt(a′)π(a′|ht).
+(13)
+During inference, model parameters are fixed and the reward
+terms are not evaluated. The policy updates its history after
+each observation and selects the highest-probability legal
+action,
+at = arg
+max
+a∈A,Mt(a)=1 ¯π(a|ht),
+(14)
+until it reaches the target cell or exhausts the search budget.
+Thus, the reported gains come from the policy learned under
+the training reward rather than from test-time access to target
+distance.
+Experiments
+Experimental Setup.
+The main evaluation follows the pro-
+tocol established by prior AGL benchmarks [16, 20, 22]. The
+search region is discretized into a 5×5 grid with initial Man-
+hattan distances C = {4, 5, 6, 7, 8}. We report success rate
+(SR) and final grid distance (SG), using greedy action selec-
+tion with a legal-action mask. For N tasks, terminal cells pT
+i ,
+and goals pg
+i ,
+SR = 1
+N
+N
+X
+i=1
+1[pT
+i = pg
+i ],
+SG = 1
+N
+N
+X
+i=1
+d1(pT
+i , pg
+i ),
+(15)
+where 1[·] is the indicator function and d1 is Manhattan
+distance. Thus SR is the fraction of searches that reach the
+goal within budget and SG is the mean terminal distance
+(lower is better). Tables 1 and 2 follow the MM-GAG setting;
+the additional studies use a unified B = 12, C = 4, . . . , 8
+protocol with five trials per distance. The four-scenario B =
+12 result is the unweighted macro-average over MASA [17],
+MM-GAG, xBD-pre, and xBD-disaster [10].
+Our final training pool combines 137 MASA images and
+47 MM-GAG images. The model is trained for 480k PPO
+environment steps, dynamically sampling a start cell, goal
+cell, and initial distance C ∈{1, . . . , 8} on each image rather
+than using fixed routes.
+Evaluation uses the same source families as the AGL base-
+lines: MASA for aerial-goal search, MM-GAG for aerial,
+ground-view, and text goals, GeoExplorer’s SwissView100
+and SwissViewMonuments splits [16] for geographic-
+domain and unseen-target transfer, and xBD for disas-
+ter transfer. SwissView100 contains 100 Swiss aerial re-
+gions, while SwissViewMonuments contains 15 landmark
+or atypical-scene regions with aerial and ground-view cues.
+For xBD, we use an 800-pair test subset: xBD-pre uses
+pre-disaster targets and observations, whereas xBD-disaster
+keeps the pre-disaster target cue and searches post-disaster
+observations.
+We compare with Random, PPO [25] and DiT reim-
+plementations, AiRLoc [20] where applicable, GOMAA-
+Geo [22], and GeoExplorer [16]. Random samples legal ac-
+tions uniformly; PPO uses the current observation without a
+history encoder; DiT follows offline optimal start–goal trajec-
+tories with a goal prefix and four actions [16, 22]. GOMAA-
+Geo supports all modalities, and GeoExplorer is the closest
+curiosity-driven baseline. In compact tables, GOMAA de-
+notes GOMAA-Geo. Retrieval approaches [3, 5, 11, 35, 36]
+are omitted because they retrieve from a reference collection
+rather than act under the sequential protocol.
+MM-GAG Multimodal Results.
+Tables 1 and 2 report
+MM-GAG results for aerial-image, ground-view-image, and
+text cues; PPO, DiT, and AiRLoc apply only to aerial-target
+comparison. Our method achieves the highest average SR and
+lowest average SG in all three modalities, raising average SR
+over the strongest baseline from 0.5336 to 0.6170 for aerial
+targets, from 0.5523 to 0.6391 for ground-view targets, and
+from 0.5472 to 0.6247 for text targets.
+The advantage is most pronounced at medium and long
+initial distances: several baselines remain stronger at C = 4,
+whereas our method leads clearly from C = 6 to C = 8. This
+pattern shows that the distance gate and PBRS are particularly
+effective when search requires broad exploration followed by
+accurate convergence; the lower SG further indicates closer
+endpoints on unsuccessful long-horizon episodes.
+
+
+=== PDF PAGE 5 ===
+Method
+C = 4 C = 5 C = 6 C = 7 C = 8
+Avg.
+A
+Random
+0.1447 0.0936 0.0553 0.0170 0.0298 0.0681
+PPO
+0.1745 0.1447 0.1574 0.2468 0.2723 0.1991
+DiT
+0.1660 0.2255 0.2766 0.2681 0.1915 0.2255
+AiRLoc
+0.5660 0.4894 0.4894 0.4383 0.3191 0.4604
+GOMAA-Geo 0.3574 0.3872 0.5532 0.6298 0.7404 0.5336
+GeoExplorer
+0.3489 0.3745 0.5574 0.6851 0.6766 0.5285
+DynCur-Geo 0.2681 0.3702 0.6809 0.8426 0.9234 0.6170
+G
+GOMAA-Geo 0.3489 0.3745 0.5617 0.7064 0.7702 0.5523
+GeoExplorer
+0.4043 0.3745 0.5319 0.6681 0.7149 0.5387
+DynCur-Geo 0.2766 0.4468 0.6511 0.9106 0.9106 0.6391
+T
+GOMAA-Geo 0.3447 0.4213 0.5745 0.6596 0.7362 0.5472
+GeoExplorer
+0.3957 0.3660 0.4553 0.5660 0.6085 0.4783
+DynCur-Geo 0.2681 0.4298 0.6596 0.8511 0.9149 0.6247
+Table 1: Success rate (SR) on MM-GAG [22] under 5 × 5,
+B = 10, and C = 4, . . . , 8. A/G/T denote aerial-image,
+ground-view, and text targets. PPO, DiT, and AiRLoc are
+evaluated only for aerial-image targets.
+Method
+C = 4 C = 5 C = 6 C = 7 C = 8
+Avg.
+A
+Random
+3.1404 3.5617 3.8468 4.3362 4.9021 3.9574
+PPO
+3.5331 3.5684 3.8095 3.9232 4.5119 3.6545
+DiT
+3.2596 3.3021 3.0468 3.3915 4.4766 3.4953
+AiRLoc
+1.0979 1.2979 1.3064 1.5362 2.0723 1.4621
+GOMAA-Geo 2.4340 1.9574 1.3106 0.9660 0.6553 1.4647
+GeoExplorer
+2.2213 1.9702 1.3277 0.9021 0.8681 1.4579
+DynCur-Geo 2.5447 1.8553 0.8426 0.3532 0.2383 1.1668
+G
+GOMAA-Geo 2.3830 1.8340 1.2170 0.6596 0.6213 1.3430
+GeoExplorer
+2.0170 1.9106 1.3277 0.8596 0.8936 1.4017
+DynCur-Geo 2.4766 1.7447 0.8681 0.2000 0.2383 1.1055
+T
+GOMAA-Geo 2.3064 1.8298 1.3021 0.7915 0.7404 1.3940
+GeoExplorer
+2.1191 2.0383 1.5915 1.2596 1.2851 1.6587
+DynCur-Geo 2.5106 1.6085 0.9191 0.3447 0.2043 1.1174
+Table 2: Final grid distance (SG) on MM-GAG under 5 × 5,
+B = 10, and C = 4, . . . , 8. A/G/T denote aerial-image,
+ground-view, and text targets. PPO, DiT, and AiRLoc are
+evaluated only for aerial-image targets.
+Figure 3: Qualitative visualization of multimodal active geo-localization and test-time policy trajectories. In (a), blue, orange,
+and green target borders and their corresponding paths denote aerial-image, ground-view-image, and text cues, respectively. In
+(b), path colors identify DynCur-Geo (blue), GOMAA-Geo (orange), and GeoExplorer (green). Blue squares and yellow circles
+mark the start and goal cells.
+Because start–goal pairs are dynamically resampled dur-
+ing training, MM-GAG also tests unseen routes across all cue
+types; MASA, SwissView, and xBD further cover held-out
+scenes and appearance shifts.
+Parameter Sensitivity.
+We vary the distance-gate lower
+bound λmin and PBRS coefficient β on nine evaluation set-
+tings. Table 4 shows that λmin = 0.405 and β = 0.10 achieve
+the best joint SR/SG result. Both sweeps peak at interior set-
+tings: weaker or stronger gating, and removing or increasing
+PBRS, worsen at least one metric. This supports balanced
+distance-gated exploration and progress shaping.
+Qualitative Path Visualization.
+Fig. 3 illustrates both
+multimodal cue generality and trajectory quality. Our method
+makes broader early progress and becomes goal-directed near
+the target, whereas competing policies often revisit nearby
+cells or drift after plausible local moves. The comparison
+is consistent with the quantitative distance-wise pattern: the
+benefit of the proposed policy is most visible when early
+exploratory moves must be followed by a decisive final ap-
+proach.
+Cross-Scene and Disaster Transfer.
+Table 3(a) shows the
+best SR/SG pair for our method across MASA, SwissView,
+and xBD. The xBD-disaster setting uses a pre-disaster tar-
+get cue with post-disaster search observations (Fig. 4),
+while SwissViewMonuments tests landmark-centered held-
+out scenes. Our method improves both metrics on the two
+xBD splits, rather than trading more successes for worse
+failed trajectories, and the SwissView results extend the gain
+to held-out landmark cues.
+
+
+=== PDF PAGE 6 ===
+(a) Cross-scene, landmark, and disaster transfer
+Task
+SR↑/ SG↓
+GOMAA
+GeoExplorer
+DynCur-Geo
+MASA/A
+0.5640/1.3600
+0.5600/1.2560
+0.5880/1.1440
+xBD-pre/A
+0.5427/1.4132
+0.5080/1.5555
+0.5852/1.2922
+xBD-dis./A
+0.5345/1.4194
+0.5129/1.5452
+0.5856/1.2839
+Swiss100/A
+0.5044/1.5692
+0.4700/1.5568
+0.5772/1.3444
+SwissMon./A
+0.4596/1.6878
+0.4604/1.7598
+0.5208/1.5139
+SwissMon./G
+0.4464/1.8333
+0.4593/1.7311
+0.5084/1.5098
+(b) 10 × 10 long-range extension
+Method
+SR by initial distance C
+14
+15
+16
+17
+18
+GOMAA
+0.5350
+0.4750
+0.6250
+0.7500
+0.7600
+GeoExplorer
+0.3350
+0.3850
+0.3350
+0.2200
+0.2250
+DynCur-Geo
+0.5400
+0.6750
+0.7550
+0.8850
+0.8850
+(c) Enlarged-grid summary
+Setting
+Method
+SR↑
+SG↓
+8 × 8, B = 24
+C = 10–14
+GOMAA
+0.6790
+1.3450
+GeoExplorer
+0.3680
+3.0460
+DynCur-Geo
+0.7460
+0.8590
+10 × 10, B = 32
+C = 14–18
+GOMAA
+0.6290
+1.8010
+GeoExplorer
+0.3000
+4.6770
+DynCur-Geo
+0.7480
+0.7360
+25 × 25, B = 60
+C = 12–48
+GOMAA
+0.1800
+13.5080
+GeoExplorer
+0.0820
+15.5840
+DynCur-Geo
+0.2040
+12.3120
+Table 3: Transfer and long-range results. Panel (a) reports
+SR/SG under 5 × 5, B = 12; GOMAA denotes GOMAA-
+Geo. Panel (b) reports SR and panel (c) reports SR/SG on
+the MASA aerial test split. The 25 × 25 distances in panel
+(c) use a step size of four.
+(a) Distance-gate lower bound λmin
+λmin
+0.100
+0.250
+0.405
+0.650
+0.900
+Avg. SR↑
+0.4813
+0.5009
+0.5765
+0.5089
+0.4582
+Avg. SG↓
+1.9150
+1.7052
+1.2885
+1.6526
+1.9135
+(b) PBRS coefficient β
+β
+0.00
+0.05
+0.10
+0.15
+0.20
+Avg. SR↑
+0.5535
+0.5134
+0.5765
+0.4933
+0.5307
+Avg. SG↓
+1.3290
+1.5409
+1.2885
+1.7120
+1.4880
+Table 4: Sensitivity to reward-shaping parameters under 5 ×
+5, B = 10, and C = 4, . . . , 8, macro-averaged over nine
+MASA, MM-GAG, SwissView, and xBD evaluation settings.
+Long-Range Extension.
+Table 3(b,c) further evaluates en-
+larged MASA aerial grids. On 10 × 10 with B = 32 and
+C = {14, 15, 16, 17, 18}, our method obtains 0.7480 SR and
+0.7360 SG, compared with 0.6290 and 1.8010 for GOMAA-
+Geo, and leads every distance bin. Our method also retains
+the highest SR on 8 × 8 and 25 × 25, although all methods
+decline in the most demanding setting. Its consistently lower
+SG shows that failed episodes end closer to the target across
+Figure 4: Qualitative xBD cross-disaster visualization. Yel-
+low boxes indicate pre-disaster target regions and red boxes
+indicate the corresponding post-disaster regions. The lower
+panels show the pre-disaster target cue and the post-disaster
+search scene with a test-time policy trajectory; blue squares
+and yellow circles mark the start and goal cells.
+grid scales.
+Unified B = 12 Main Comparison.
+Table 5 compares
+MASA, MM-GAG, xBD-pre, and xBD-disaster under B =
+12. Our method achieves the highest mean SR (0.6129) and
+leads all four settings. This comparison separates the gain
+from any single benchmark: the improvement appears on the
+standard aerial setting, multimodal aerial-target evaluation,
+and both disaster-related conditions under one common bud-
+get. The consistent ranking across aerial, multimodal, and
+disaster-transfer settings suggests that the reward design im-
+proves the search policy itself, rather than only exploiting a
+particular target modality or scene split. Notably, the gains
+on xBD-pre and xBD-disaster are close, indicating that the
+learned policy does not depend on unchanged visual appear-
+ance between the target cue and search scene.
+Budget Sensitivity.
+Table 6 sweeps the search budget from
+B = 4 to B = 12. With C = 4, . . . , 8, the smallest budgets
+leave some distance groups geometrically unreachable.
+From B = 8 onward, our method consistently attains
+the highest SR and lowest SG. In particular, SR rises from
+0.5326 at B = 8 to 0.6129 at B = 12, while SG decreases
+from 1.2760 to 1.2128, which confirms that more available
+
+
+=== PDF PAGE 7 ===
+Method
+MASA
+MM-
+GAG
+xBD-pre xBD-dis.
+Avg.
+Random
+0.1000
+0.0868
+0.0925
+0.0925
+0.0929
+PPO
+0.2280
+0.1991
+0.1712
+0.1676
+0.1915
+DiT
+0.2280
+0.2255
+0.2409
+0.2365
+0.2327
+GOMAA-Geo
+0.5800
+0.5464
+0.5612
+0.5534
+0.5602
+GeoExplorer
+0.5640
+0.5421
+0.5233
+0.5372
+0.5417
+DynCur-Geo
+0.6200
+0.6357
+0.5973
+0.5984
+0.6129
+Table 5: Unified B = 12 SR on MASA/A, MM-GAG/A,
+xBD-pre/A, and xBD-disaster/A; Avg. denotes their macro-
+average.
+(a) Success rate (SR)
+Method
+B = 4
+B = 6
+B = 8
+B = 10
+B = 12
+GOMAA
+0.0440
+0.1791
+0.4891
+0.5424
+0.5602
+GeoExplorer
+0.0459
+0.1842
+0.4805
+0.5281
+0.5417
+DynCur-Geo
+0.0366
+0.1790
+0.5326
+0.5917
+0.6129
+(b) Final grid distance (SG)
+Method
+B = 4
+B = 6
+B = 8
+B = 10
+B = 12
+GOMAA
+3.2143
+1.9513
+1.4263
+1.4138
+1.4324
+GeoExplorer
+3.2261
+1.9501
+1.4453
+1.4550
+1.4984
+DynCur-Geo
+2.8507
+1.8584
+1.2760
+1.2304
+1.2128
+Table 6: Budget sensitivity (SR/SG), macro-averaged over
+MASA/A, MM-GAG/A, xBD-pre/A, and xBD-disaster/A.
+Ext. Int.
+Gate
+PBRS C = 4 C = 5 C = 6 C = 7 C = 8
+√
+0.3617 0.4326 0.5801 0.7305 0.7773
+√
+√
+0.3248 0.3546 0.6085 0.8014 0.8823
+√
+1
+0.1518 0.1064 0.0794 0.0752 0.0468
+√
+√
+1
+0.2525 0.3418 0.5816 0.8184 0.8369
+√
+√
+Const
+0.3787 0.3972 0.5220 0.5929 0.5787
+√
+√
+Const
+√
+0.3050 0.4099 0.5986 0.7816 0.8426
+√
+√
+Sin
+0.3489 0.4241 0.4780 0.4028 0.2780
+√
+√
+Sin
+√
+0.3177 0.3702 0.4879 0.4766 0.4596
+√
+√
+Power
+0.2879 0.3475 0.4496 0.5986 0.6468
+√
+√
+Power
+√
+0.2525 0.3291 0.5191 0.6809 0.7660
+√
+√
+Line
+0.2695 0.3716 0.5787 0.8482 0.8426
+√
+√
+Line
+√
+0.2709 0.4156 0.6638 0.8681 0.9163
+Table 7: Reward ablation on MM-GAG/A/G/T (5 × 5, B =
+10); each C column averages A/G/T.
+actions improve both successful localization and the qual-
+ity of failed episodes. At B = 12, this corresponds to a
+0.0527 SR gain and a 0.2196 SG reduction relative to the
+strongest competing entry for each metric. This budget trend
+is important because smaller budgets mainly test whether the
+policy avoids wasteful wandering, whereas larger budgets
+test whether early exploration can be converted into final
+convergence. The simultaneous SR and SG improvements
+therefore indicate that dynamic weighting does not merely
+produce more isolated successes; it also leaves unsuccessful
+trajectories closer to the target.
+Reward and Gate Ablation.
+Table 7 evaluates reward
+combinations on MM-GAG over aerial-image, ground-view,
+and text cues. Each C column averages SR over the three
+target forms under 5 × 5, B = 10. External reward is essen-
+tial, while the complete linear-gate and PBRS formulation
+is strongest at C = 6 to C = 8, improving from 0.2709 at
+C = 4 to 0.9163 at C = 8; intrinsic reward alone falls to
+0.0468 at C = 8. PBRS raises the mean SR for every gated
+schedule, but the linear gate remains best after shaping and
+leads at C = 6 to C = 8. This pattern indicates that PBRS
+supplies broadly useful progress feedback, whereas the gate
+determines how effectively curiosity is allocated over the
+search horizon. In other words, curiosity is beneficial when
+it is treated as a progress-aware training signal, not as a static
+exploration bonus.
+Conclusion
+This paper studied how curiosity should be allocated in mul-
+timodal active geo-localization, where sparse feedback, lim-
+ited local observations, and heterogeneous target cues make
+search inefficient. We introduced distance-gated curiosity
+reward shaping, which modulates prediction-error intrinsic
+reward by remaining target distance and combines it with
+potential-based progress shaping. This design preserves ex-
+ploratory behavior when the target is far away while reducing
+novelty-seeking pressure near the goal. Across multimodal,
+cross-scene, disaster-affected, and enlarged-grid settings, the
+resulting policy improves both success rate and final grid
+distance over the evaluated active geo-localization baselines.
+These results suggest that curiosity is most useful for AGL
+when conditioned on task progress, and they motivate future
+extensions to continuous UAV dynamics, richer map scales,
+and real deployment constraints.
+References
+[1] Adamczyk, J.; Makarenko, V.; Tiomkin, S.; and Kulka-
+rni, R. V. 2025. Bootstrapped Reward Shaping. Pro-
+ceedings of the AAAI Conference on Artificial Intelli-
+gence, 39(15): 15302–15310.
+[2] Anderson, P.; Wu, Q.; Teney, D.; Bruce, J.; Johnson, M.;
+Sünderhauf, N.; Reid, I.; Gould, S.; and van den Hengel,
+A. 2018. Vision-and-Language Navigation: Interpret-
+ing Visually-Grounded Navigation Instructions in Real
+Environments. In Proceedings of the IEEE Conference
+on Computer Vision and Pattern Recognition, 3674–
+3683.
+[3] Arandjelović, R.; Gronat, P.; Torii, A.; Pajdla, T.; and
+Sivic, J. 2016.
+NetVLAD: CNN Architecture for
+Weakly Supervised Place Recognition.
+In Proceed-
+ings of the IEEE Conference on Computer Vision and
+Pattern Recognition, 5297–5307.
+[4] Bellemare, M. G.; Srinivasan, S.; Ostrovski, G.; Schaul,
+T.; Saxton, D.; and Munos, R. 2016. Unifying Count-
+Based Exploration and Intrinsic Motivation. In Ad-
+vances in Neural Information Processing Systems,
+1471–1479.
+[5] Berton, G.; Mereu, R.; Trivigno, G.; Masone, C.;
+Csurka, G.; Sattler, T.; and Caputo, B. 2022. Deep
+
+
+=== PDF PAGE 8 ===
+Visual Geo-Localization Benchmark. In Proceedings
+of the IEEE/CVF Conference on Computer Vision and
+Pattern Recognition, 5396–5407.
+[6] Burda, Y.; Edwards, H.; Pathak, D.; Storkey, A.; Dar-
+rell, T.; and Efros, A. A. 2019. Large-Scale Study of
+Curiosity-Driven Learning. In Proceedings of the In-
+ternational Conference on Learning Representations.
+[7] Burda, Y.; Edwards, H.; Storkey, A.; and Klimov, O.
+2019. Exploration by Random Network Distillation. In
+Proceedings of the International Conference on Learn-
+ing Representations.
+[8] Cepeda, V. V.; Nayak, G. K.; and Shah, M. 2023. Geo-
+CLIP: CLIP-Inspired Alignment between Locations
+and Images for Effective Worldwide Geo-localization.
+In Advances in Neural Information Processing Systems,
+8690–8701.
+[9] Dhakal, A.; Ahmad, A.; Khanal, S.; Sastry, S.; Kerner,
+H.; and Jacobs, N. 2024.
+Sat2Cap: Mapping Fine-
+Grained Textual Descriptions from Satellite Images. In
+Proceedings of the IEEE/CVF Conference on Computer
+Vision and Pattern Recognition Workshops, 533–542.
+[10] Gupta, R.; Goodman, B.; Patel, N.; Hosfelt, R.; Sajeev,
+S.; Heim, E.; Doshi, J.; Lucas, K.; Choset, H.; and Gas-
+ton, M. 2019. Creating xBD: A Dataset for Assessing
+Building Damage from Satellite Imagery. In Proceed-
+ings of the IEEE/CVF Conference on Computer Vision
+and Pattern Recognition Workshops, 10–17.
+[11] Hu, S.; Feng, M.; Nguyen, R. M. H.; and Lee, G. H.
+2018. CVM-Net: Cross-View Matching Network for
+Image-Based Ground-to-Aerial Geo-Localization. In
+Proceedings of the IEEE Conference on Computer Vi-
+sion and Pattern Recognition, 7258–7267.
+[12] Ji, Y.; He, B.; Tan, Z.; and Wu, L. 2025. Game4Loc: A
+UAV Geo-Localization Benchmark from Game Data.
+Proceedings of the AAAI Conference on Artificial In-
+telligence, 39(4): 3913–3921.
+[13] Ji, Y.; He, B.; Tan, Z.; and Wu, L. 2025. MMGeo: Mul-
+timodal Compositional Geo-Localization for UAVs. In
+Proceedings of the IEEE/CVF International Confer-
+ence on Computer Vision, 25165–25175.
+[14] Liu, L.; and Li, H. 2019. Lending Orientation to Neural
+Networks for Cross-View Geo-Localization. In Pro-
+ceedings of the IEEE/CVF Conference on Computer
+Vision and Pattern Recognition, 5624–5633.
+[15] Liu, S.; Zhang, H.; Qi, Y.; Wang, P.; Zhang, Y.; and
+Wu, Q. 2023. AerialVLN: Vision-and-Language Nav-
+igation for UAVs. In Proceedings of the IEEE/CVF
+International Conference on Computer Vision, 15338–
+15348.
+[16] Mi, L.; Béchaz, M.; Chen, Z.; Bosselut, A.; and Tuia,
+D. 2025. GeoExplorer: Active Geo-localization with
+Curiosity-Driven Exploration. In Proceedings of the
+IEEE/CVF International Conference on Computer Vi-
+sion, 6122–6131.
+[17] Mnih, V. 2013. Machine Learning for Aerial Image
+Labeling. Ph.D. thesis, University of Toronto (Canada).
+[18] Ng, A. Y.; Harada, D.; and Russell, S. 1999. Policy
+Invariance under Reward Transformations: Theory and
+Application to Reward Shaping. In Proceedings of the
+16th International Conference on Machine Learning,
+278–287.
+[19] Pathak, D.; Agrawal, P.; Efros, A. A.; and Dar-
+rell, T. 2017. Curiosity-Driven Exploration by Self-
+Supervised Prediction. In Proceedings of the 34th In-
+ternational Conference on Machine Learning, 2778–
+2787.
+[20] Pirinen, A.; Samuelsson, A.; Backsund, J.; and Åström,
+K. 2023.
+Aerial View Localization with Rein-
+forcement Learning: Towards Emulating Search-and-
+Rescue. arXiv:2209.03694.
+[21] Radford, A.; Kim, J. W.; Hallacy, C.; Ramesh, A.; Goh,
+G.; Agarwal, S.; Sastry, G.; Askell, A.; Mishkin, P.;
+Clark, J.; Krueger, G.; and Sutskever, I. 2021. Learn-
+ing Transferable Visual Models from Natural Language
+Supervision. In Proceedings of the 38th International
+Conference on Machine Learning, 8748–8763.
+[22] Sarkar, A.; Sastry, S.; Pirinen, A.; Zhang, C.; Ja-
+cobs, N.; and Vorobeychik, Y. 2024. GOMAA-Geo:
+GOal Modality Agnostic Active Geo-localization. In
+Advances in Neural Information Processing Systems,
+104934–104964.
+[23] Savinov, N.; Raichuk, A.; Marinier, R.; Vincent, D.;
+Pollefeys, M.; Lillicrap, T.; and Gelly, S. 2019. Episodic
+Curiosity through Reachability. In Proceedings of the
+International Conference on Learning Representations.
+[24] Schmidhuber, J. 1991. A Possibility for Implementing
+Curiosity and Boredom in Model-Building Neural Con-
+trollers. In Proceedings of the International Conference
+on Simulation of Adaptive Behavior: From Animals to
+Animats, 222–227. MIT Press/Bradford Books.
+[25] Schulman, J.; Wolski, F.; Dhariwal, P.; Radford, A.;
+and Klimov, O. 2017. Proximal Policy Optimization
+Algorithms. arXiv:1707.06347.
+[26] Sekar, R.; Rybkin, O.; Daniilidis, K.; Abbeel, P.;
+Hafner, D.; and Pathak, D. 2020. Planning to Explore
+via Self-Supervised World Models. In Proceedings of
+the 37th International Conference on Machine Learn-
+ing, 8583–8592.
+[27] Shi, Y.; Liu, L.; Yu, X.; and Li, H. 2019. Spatial-Aware
+Feature Aggregation for Image-Based Cross-View Geo-
+Localization. In Advances in Neural Information Pro-
+cessing Systems, 10090–10100.
+[28] Stadie, B. C.; Levine, S.; and Abbeel, P. 2015. Incen-
+tivizing Exploration in Reinforcement Learning with
+Deep Predictive Models. arXiv:1507.00814.
+[29] Vo, N. N.; and Hays, J. 2016. Localizing and Orienting
+Street Views Using Overhead Imagery. In European
+Conference on Computer Vision, 494–509.
+[30] Workman, S.; Souvenir, R.; and Jacobs, N. 2015. Wide-
+Area Image Geolocalization with Aerial Reference Im-
+agery. In Proceedings of the IEEE International Con-
+ference on Computer Vision, 3961–3969.
+
+
+=== PDF PAGE 9 ===
+[31] Yan, Q.; Zheng, J.; Reding, S.; Li, S.; and Doytchinov, I.
+2022. CrossLoc: Scalable Aerial Localization Assisted
+by Multimodal Synthetic Data. In Proceedings of the
+IEEE/CVF Conference on Computer Vision and Pattern
+Recognition, 17358–17368.
+[32] Zhang, X.; Shen, Z.; Cao, S.-Y.; Bai, X.; Li, Y.; Han, Z.;
+Wu, Z.; Ming, Q.; and Shen, H.-L. 2026. Learning Bet-
+ter UAV-Based Cross-View Object Geo-Localization
+from Multi-Modal Prompts: MoP-UAV Benchmark and
+MoPT Framework. In Proceedings of the AAAI Con-
+ference on Artificial Intelligence, volume 40, 12843–
+12851.
+[33] Zheng, Y.; Ying, J.; Duan, H.; Li, C.; Zhang, Z.; Liu, J.;
+Liu, X.; and Zhai, G. 2026. GeoX-Bench: Benchmark-
+ing Cross-View Geo-Localization and Pose Estimation
+Capabilities of Large Multimodal Models. Proceed-
+ings of the AAAI Conference on Artificial Intelligence,
+40(16): 13485–13493.
+[34] Zheng, Z.; Wei, Y.; and Yang, Y. 2020. University-
+1652: A Multi-View Multi-Source Benchmark for
+Drone-Based Geo-Localization. In Proceedings of the
+28th ACM International Conference on Multimedia,
+1395–1403.
+[35] Zhu, S.; Shah, M.; and Chen, C. 2022.
+TransGeo:
+Transformer Is All You Need for Cross-View Image
+Geo-Localization. In Proceedings of the IEEE/CVF
+Conference on Computer Vision and Pattern Recogni-
+tion, 1162–1171.
+[36] Zhu, S.; Yang, T.; and Chen, C. 2021. VIGOR: Cross-
+View Image Geo-Localization beyond One-to-One Re-
+trieval. In Proceedings of the IEEE/CVF Conference on
+Computer Vision and Pattern Recognition, 3640–3649.
+[37] Zhu, Y.; Mottaghi, R.; Kolve, E.; Lim, J. J.; Gupta,
+A.; Fei-Fei, L.; and Farhadi, A. 2017. Target-Driven
+Visual Navigation in Indoor Scenes Using Deep Re-
+inforcement Learning.
+In Proceedings of the IEEE
+International Conference on Robotics and Automation,
+3357–3364.
+
+
+=== PDF PAGE 10 ===
+Supplementary Materials
+Scope and Diagnostic Protocol
+The supplementary material reports additional trajectory-
+level results for the fixed evaluation protocols used in the
+main paper. It includes route visualizations, route-dynamics
+summaries, cross-target evaluations, enlarged-grid stress
+tests, and implementation details for evaluation-time roll-
+out. Aggregate values are reported when they identify the
+scope of a route set or connect a qualitative pattern to the
+corresponding evaluator. The analyses use the same data fam-
+ilies as the main paper: MASA, MM-GAG, GeoExplorer’s
+SwissView100 and SwissViewMonuments splits, and xBD.
+The material is organized to separate aggregate evidence
+from route-level interpretation. Table S1 and Tables S4–
+S8 provide the main quantitative additions: shared-route
+descriptors, training-pool selection, distance-stratified re-
+sults, development hyperparameter checks, and enlarged-
+grid stress tests. Figures S1–S10 then explain how these
+scores arise from successful routes, persistent failure modes,
+matched same-task contrasts, realized reward traces, and
+step-level reward distributions. Figures S11–S14 extend the
+same analysis to multimodal targets, xBD pre/post search,
+Swiss ground-view targets, and larger search regions.
+Recorded Route Bank
+The principal trajectory bank contains 2,205 SwissView-
+Monuments aerial-goal trajectories. It consists of 735 shared
+task keys evaluated by DynCur-Geo, GOMAA-Geo, and
+GeoExplorer. A key fixes the aerial scene, start cell, target
+cell, initial Manhattan distance, and repeat index, so all three
+trajectories within a key solve the same navigation problem
+with the same target cue. The bank uses a 5 × 5 grid, action
+budget B = 10, initial distances C ∈{4, 6, 8}, a fixed task-
+bank seed, greedy action selection, and legal-action masking.
+It contains 375 tasks at C = 4, 300 at C = 6, and 60 at C = 8
+for each policy. Successful episodes terminate on reaching
+the target; unsuccessful episodes exhaust the ten-action bud-
+get. This supplement-only diagnostic bank is distinct from
+the B = 12 SwissViewMonuments transfer evaluation re-
+ported in the main paper.
+The route bank is used for controlled path inspection.
+When methods are compared, the image, start cell, target cell,
+initial distance, repeat index, and action budget are identical.
+Unless another evaluator is specified, success rates, paired
+counts, and case frequencies in this supplement refer to these
+735 shared tasks. Route galleries are grouped by behavior and
+matched outcome.
+Route Descriptors
+For a route τ = (p0, . . . , pT ), path efficiency is C/T, capped
+naturally at one because C is the shortest grid distance. A
+revisited step enters a cell seen earlier in the same route.
+An immediate backtrack satisfies pt = pt−2. Progress and
+regress steps respectively reduce and increase d1(pt, pg). The
+target neighborhood is the set of cells with distance at most
+one. Post-entry drift counts distance-increasing actions after
+first entering this neighborhood.
+(a) Outcome and path-efficiency descriptors
+Method
+C
+Tasks
+SR
+SG
+Eff.
+DynCur-Geo
+4
+375
+0.2507
+2.5867
+0.5279
+6
+300
+0.6067
+1.0867
+0.7927
+8
+60
+0.8500
+0.4000
+0.9600
+GOMAA-Geo
+4
+375
+0.2507
+2.5653
+0.5179
+6
+300
+0.5900
+1.0800
+0.7782
+8
+60
+0.6833
+0.8667
+0.9333
+GeoExplorer
+4
+375
+0.3333
+2.2453
+0.5464
+6
+300
+0.4733
+1.5400
+0.7587
+8
+60
+0.6000
+1.1333
+0.9200
+(b) Route-dynamics descriptors
+Method
+C
+Revisit
+Prog.
+Reg.
+DynCur-Geo
+4
+0.1903
+0.6346
+0.3654
+6
+0.0915
+0.8420
+0.1580
+8
+0.0500
+0.9600
+0.0400
+GOMAA-Geo
+4
+0.1912
+0.6307
+0.3693
+6
+0.1216
+0.8351
+0.1649
+8
+0.0967
+0.9233
+0.0767
+GeoExplorer
+4
+0.1648
+0.6609
+0.3391
+6
+0.1337
+0.8023
+0.1977
+8
+0.1283
+0.9033
+0.0967
+Table S1: Distance-stratified descriptors on the 735 shared
+diagnostic tasks. SR is exact-hit success rate and SG is ter-
+minal grid distance. Eff. abbreviates path efficiency; revisit,
+progress, and regress are route-level means. These values
+characterize the route bank used for the following visual
+analysis.
+Successful routes are grouped as efficient success (T =
+C), detour success, or late convergence. Failed routes are
+grouped as post-entry drift, revisit/ping-pong, approach-
+then-regress, non-convergent, or partial progress. These
+deterministic descriptors support consistent visualization
+across figures. Blue squares denote starts, yellow circles
+targets, and yellow crosses failed terminal cells. Route col-
+ors are fixed throughout: blue for DynCur-Geo, orange for
+GOMAA-Geo, and green for GeoExplorer.
+Each single-policy route panel places the target photo-
+graph in a compact side cue rail; failed panels also include
+the final-cell photograph. Each matched three-policy task
+uses one shared target photograph beside the route set. The
+photographs are grid-cell crops aligned with the aerial scene,
+while the full 5 × 5 route image remains uncropped and un-
+obstructed. Failures are interpreted relative to the requested
+target cell rather than as generic spatial coverage.
+Table S1 summarizes the distance-conditioned route statis-
+tics used by the galleries. At C = 4, the main differences
+occur near the target. At C = 6, our method has similar SG
+to GOMAA-Geo with higher efficiency and fewer revisits.
+At C = 8, our method reaches 0.8500 SR with 0.9600 path
+efficiency, compared with 0.6833 and 0.6000 SR for the two
+baselines. The three distance groups have different sample
+counts, so comparisons are made within each stratum.
+
+
+=== PDF PAGE 11 ===
+Figure S1: Distance-stratified route gallery for DynCur-Geo. Each row contains two successes followed by two failures at the
+same initial distance. Every side cue rail shows the target photograph; failed panels also show the final-cell photograph. S/F
+denotes success/failure, T is path length for a success, and the pair on a failure is minimum/final distance.
+Successful Route Mechanisms
+Fig. S2 contains 12 recorded successes from three behavior
+groups. The gallery separates three ways in which a suc-
+cessful policy can use its action budget. Efficient successes
+follow a shortest path and provide the cleanest visible expres-
+sion of target-directed search. Detour successes temporarily
+preserve or increase target distance but recover within the
+action budget. Late-convergence successes spend most of
+the route outside the target neighborhood and enter it near
+termination.
+Across all 327 successful routes of our method in the
+shared bank, mean path efficiency is 0.9265, the mean revisit
+ratio is 0.0086, and immediate backtracks average 0.0795 per
+route. The corresponding successful-route efficiencies are
+0.9046 for GOMAA-Geo and 0.9033 for GeoExplorer. The
+qualitative panels show the same pattern: most routes of our
+method make monotonic progress, with only a small number
+of corrective moves in the detour and late-convergence rows.
+The efficient row shows target-directed motion with lit-
+tle route correction. The detour row contains temporary
+regress actions followed by recovery and termination. The
+late-convergence row shows broader motion while the target
+remains distant, followed by contraction near the end of the
+route. These patterns are consistent with the reward design,
+but a successful path alone does not isolate individual re-
+ward terms; the stepwise reward diagnostics below report
+the corresponding traces.
+Of the 254 efficient successes in the recorded bank, 75
+occur at C = 4, 131 at C = 6, and 48 at C = 8. Detour and
+late-convergence successes appear at all recorded distances.
+The resulting behavior is not a fixed explore-then-exploit
+schedule. Because the distance weight is state dependent,
+a regress action can raise the intrinsic weight again, and
+convergence can occur at different points in the route.
+Failure Taxonomy and Mechanism Boundaries
+Fig. S4 contains 20 failures across five route categories. The
+examples include short-, medium-, and long-distance routes;
+urban, mountain, forest, shoreline, and water-dominated
+scenes; and both near-target and globally divergent endings.
+Target and terminal cues are shown together so that each
+failure can be interpreted as an endpoint error, a loop, or a
+global search error.
+The full recorded bank contains 408 failures of our
+method. Post-entry drift accounts for 220 routes (53.9% of
+failures), and revisit/ping-pong accounts for 133 (32.6%). To-
+gether they cover 86.5% of failures. The remaining failures
+comprise 36 approach-then-regress, 12 non-convergent, and
+7 partial-progress routes. Many failed routes reduce distance
+substantially before losing the correct endpoint.
+Post-entry drift.
+These routes reach distance one and sub-
+sequently move away. In the top row of Fig. S4, the trajectory
+enters the goal neighborhood, but the policy selects an adja-
+cent visually plausible cell or leaves the neighborhood after
+a local ambiguity. Distance gating reduces intrinsic weight
+
+
+=== PDF PAGE 12 ===
+Figure S2: Successful-route atlas for DynCur-Geo: four efficient successes, four detour successes, and four late-convergence
+successes. C is initial distance, S marks success, and T is path length. Each panel pairs the route image with its target-cell
+photograph in a compact side cue rail.
+Figure S3: Aggregate route-shape descriptors on all 735 shared diagnostic tasks per policy. DynCur-Geo denotes the proposed
+method, matching the main-paper terminology. The method has slightly higher path efficiency and progress-step ratio, and
+slightly lower revisit and regress ratios, than the two baselines.
+near the target while preserving a small residual exploration
+weight. Final-cell confirmation is handled by the next policy
+action under the fixed action budget.
+Revisit and ping-pong.
+These failures repeatedly enter
+previously visited cells or reverse the immediately preced-
+ing action. Prediction-error curiosity is model-relative rather
+than a direct count of spatial coverage, and repeated observa-
+tions can still have nonzero prediction error. Recurrent his-
+tory reduces, but does not eliminate, repeated-cell behavior.
+The distance weight changes the magnitude of the intrinsic
+term but does not prohibit return transitions.
+Approach then regress.
+These routes reduce distance to
+at most half of the initial value and later give back at least
+two cells of progress. When a route moves away from the
+target, the remaining-distance ratio and intrinsic weight rise
+again. This behavior supports recovery from an incorrect
+local hypothesis, but it also makes endpoint retention depend
+on the learned visual state.
+
+
+=== PDF PAGE 13 ===
+Figure S4: Failure atlas for DynCur-Geo. Rows show four examples each of post-entry drift, revisit/ping-pong, approach-then-
+regress, non-convergence, and partial progress. Each compact side cue rail compares target and final-cell photographs, while a
+yellow cross marks the final cell in the full route view. F marks failure; the numeric pair is minimum/final target distance.
+Non-convergence and partial progress.
+Non-convergent
+routes finish at least as far away as they started; partial-
+progress routes improve SG without entering the target
+neighborhood. All 19 such failures in the recorded bank oc-
+cur at C = 4. This concentration matches the short-range
+weakness in Table S1: when the target is initially close, a
+single wrong endpoint decision consumes a large fraction of
+the budget.
+The paired target cues expose several plausible ambigu-
+ities, including repeated road blocks, homogeneous forest,
+water boundaries, and snow-covered terrain. These observa-
+tions are used as qualitative context for route-level errors;
+quantitative claims are made from route descriptors and ag-
+gregate evaluator outputs.
+Matched Same-Task Contrasts
+The paired bank permits controlled qualitative comparison
+with scene, target cue, start cell, target cell, distance, repeat,
+and action budget fixed. Table S2 reports every success com-
+bination across the 735 shared keys. The proposed policy
+succeeds alone on 89 tasks, while at least one baseline suc-
+ceeds on 224 tasks where it fails. The two directions are both
+visualized.
+Fig. S5 displays representative proposed-only successes
+with matched task columns. The visible advantage follows
+two recurring geometries: avoiding a repeated local loop
+and retaining a promising target-neighborhood approach.
+Because every column fixes the task and target cue across
+policies, path differences reflect policy behavior under the
+
+
+=== PDF PAGE 14 ===
+Figure S5: Four same-task cases in which DynCur-Geo succeeds and both baselines fail, shown as matched task columns and
+method rows. The columns cover C = 4, 6, 8 while giving each route panel sufficient space. Start, target, and budget are identical
+within a column; the route panels omit target-photo insets so that the paths remain unobstructed. S/T gives success and path
+length; F/SG gives failure and terminal distance.
+Successful methods
+C = 4
+C = 6
+C = 8
+Total
+None
+155
+29
+0
+184
+GeoExplorer only
+57
+15
+1
+73
+GOMAA-Geo only
+44
+41
+2
+87
+GOMAA-Geo +
+GeoExplorer
+25
+33
+6
+64
+DynCur-Geo only
+40
+39
+10
+89
+DynCur-Geo +
+GeoExplorer
+29
+40
+8
+77
+DynCur-Geo +
+GOMAA-Geo
+11
+49
+12
+72
+All three
+14
+54
+21
+89
+Table S2: Success-combination counts on shared diagnostic
+tasks. Each row lists the methods that hit the target within
+B = 10; omitted methods failed on the same task.
+same start–goal pair.
+At C = 8, the routes of our method show the clearest long-
+range pattern: exploration remains active while the target
+is distant, and the distance weight decreases near the final
+cells. The corresponding traces appear in the stepwise reward
+diagnostics below.
+Fig. S6 shows the complementary cases. Stronger long-
+distance averages can coexist with individual scenes in which
+a baseline retains the correct local hypothesis while our
+method loops, overshoots, or exits the target neighborhood.
+These contrasts separate global progress from local target
+confirmation. A baseline may approach the correct neighbor-
+hood while matching a visually plausible distractor, whereas
+a successful route must preserve the target-conditioned hy-
+pothesis through the final transition.
+The paired pattern frequencies show the same distance
+dependence. Complete three-policy failure falls from 41.3%
+at C = 4 to 9.7% at C = 6 and zero at C = 8, while all-
+three success rises from 3.7% to 18.0% and 35.0%. Longer
+routes provide more visible progress transitions, whereas
+short routes concentrate the decision around target-cell con-
+firmation.
+
+
+=== PDF PAGE 15 ===
+Figure S6: Four matched cases in which DynCur-Geo fails and at least one baseline succeeds, again shown as matched task
+columns and method rows without target-photo insets. The layout and annotations match Fig. S5.
+Stepwise Reward Diagnostics
+The training reward is
+rt = rex,t + λtrin,t + rΦ,t,
+(S1)
+where the linear distance-adjustment function is
+ρt = clip
+
+d1(pt, pg)
+max(d1(p0, pg), 1), 0, 1
+
+(S2)
+λt = λmin + (1 −λmin)ρt
+λmin = 0.405.
+(S3)
+The extrinsic term gives the terminal hit a positive
+reward, gives an accepted progress transition a smaller
+positive reward, and penalizes invalid stays, revisits, and
+non-progress moves. In the recorded implementation, this
+accepted-progress branch uses the configured progress com-
+parator, with the final checkpoint using the squared Euclidean
+cell comparator for that branch; Manhattan grid distance is
+still used for the displayed distance traces, for λt, and for the
+PBRS potential. The running best-progress state is initialized
+from the start–goal distance and, in the reported configura-
+tion, is committed after a reward-positive transition rather
+than after every displayed Manhattan decrease.
+The
+intrinsic
+term
+is
+computed
+from
+the
+frozen
+environment-modeling transformer’s next-state prediction
+error,
+rin,t = 0.25
+"
+2MSE(ˆht+1, ht+1) −0.8
+0.1
+−1
+#
+,
+(S4)
+where ˆht+1 and ht+1 are predicted and target hidden rep-
+resentations. The shaping term uses the following potential-
+based form.
+rΦ,t = β(γΦ(st+1) −Φ(st))
+Φ(st) = −d1(pt, pg)
+2K −2 ,
+(S5)
+with β = 0.10, γ = 0.93, and grid width K = 5 for the
+standard setting. Target distance and reward terms are used
+for training and for the diagnostic plots. At test time, action
+selection uses the policy state and the legal-action mask.
+Recorded trajectories are replayed with their task targets to
+recover the reward decomposition along each sequence.
+Fig. S7 compares successes and failures at matched initial
+distances. In the three shortest-path successes, target distance
+decreases monotonically and the distance weight contracts
+
+
+=== PDF PAGE 16 ===
+Figure S7: Matched-distance stepwise diagnostics. Each row compares a success (left) with a failure (right) at the same C.
+Route panels include the exact target cue. Curves show remaining distance, the distance gate, and realized reward components.
+Successful routes contract the gate toward 0.405; failures show that regress actions reactivate the gate.
+on every transition. For C = 8, it falls from 0.9256 after
+the first action to 0.405 at the target. The mean absolute raw
+intrinsic reward is 0.4323, while the mean absolute gated
+contribution is 0.3038. Across seven full-reward cases (six
+displayed traces plus the complete-reward control in Fig. S9),
+the realized gated-to-raw magnitude ratio ranges from 0.405
+to 1.0 and averages 0.7645.
+The three reward terms have different roles. External re-
+ward gives the dominant sign for target progress and the
+terminal hit. The intrinsic term is scene- and transition-
+dependent: it can be positive or negative after normalization
+and is not itself a target-direction signal. Potential shap-
+ing is small but directionally consistent. Over the same
+seven recorded full-reward cases, it averages (+0.0154) on
+40 progress transitions and (-0.0076) on 18 regress transi-
+tions.
+Fig. S8 shows the same decomposition after pooling tran-
+sitions by realized movement type. Progress and terminal
+steps keep positive mean total reward, whereas regress steps
+remain negative despite a larger average distance weight.
+The mean distance weight is 0.7369 on progress transitions,
+0.8995 on regress transitions, and 0.4050 at terminal hits.
+Thus, moving away from the target can reopen exploration
+pressure, but the total reward sign still favors target-directed
+motion.
+The failures show where the same mechanism can lose
+the endpoint. In the C = 6 failure, distance first falls from
+six to three, then oscillates and rises to eight; the distance
+weight falls to 0.7025 and returns to one as the route diverges.
+The C = 4 failure makes one useful first move and then
+spends most of the budget increasing distance despite the
+fixed target cue. The C = 8 failure preserves several correct
+transitions before entering a local oscillation. These rows
+separate early target-hypothesis selection at short range from
+target-hypothesis retention after a longer approach.
+When a route moves away from the target, the distance
+weight increases again. This can help escape an incorrect
+local hypothesis, but it can also sustain motion toward a vi-
+sually salient alternative. Mean total reward remains positive
+on progress transitions and negative on regress transitions, so
+the target-progress sign is preserved even when the trajectory
+later diverges. At the same action index, success and failure
+can carry different distance weights because their remaining
+distances differ.
+
+
+=== PDF PAGE 17 ===
+Figure S8: Step-level reward distribution on the seven recorded full-reward diagnostic routes used for the mechanism plots. The
+summary covers 58 transitions and groups them by whether the executed action reduces target distance, increases target distance,
+or reaches the terminal target cell. The plot decomposes each transition into external reward, gated intrinsic contribution, PBRS
+shaping, and total reward; it is a diagnostic decomposition rather than a full-route-bank estimate.
+The six traces quantify this split. The successful C =
+4, 6, 8 routes have mean distance weights 0.628, 0.653, and
+0.665, and retain 0.800, 0.729, and 0.703 of the absolute
+raw intrinsic magnitude. The corresponding failure means
+are 0.985, 0.881, and 0.740, because regress motion repeat-
+edly raises the weight. Mean total reward on regress actions
+remains negative in all three failures (−1.027, −0.777, and
+−0.833). These values describe the displayed diagnostics;
+the next subsection uses the full bank.
+Fig. S9 compares independently trained controls on one
+fixed task. All three policies initially reduce target distance.
+The complete-reward policy survives several corrections and
+reaches the target on the tenth action. Without the distance
+weight, the route reaches distance one at step five but oscil-
+lates and finishes at distance two. Without PBRS, the route
+reaches distance one at step nine and then moves away. This
+case isolates one training factor at a time, while the aggregate
+ablation in the main paper reports the corresponding average
+effect.
+Population-Level Route Dynamics
+Fig. S10 extends the six displayed traces to the complete
+bank. At C = 8, our method follows an almost deterministic
+contraction through step seven and reaches a cumulative hit
+rate of 0.850 by step ten, compared with 0.683 for GOMAA-
+Geo and 0.600 for GeoExplorer. At C = 6, its mean distance
+falls below both baselines by step four and remains lowest at
+termination. At C = 4, early contraction stalls after step four
+and mean distance begins to rise. In this controlled bank,
+longer routes often provide several unambiguous progress
+transitions, whereas short routes expose target confirmation
+quickly.
+The state-conditioned curve isolates the near-goal bottle-
+neck. For our method, the probability of a progress action is
+1.000 at remaining distance eight, 0.914 at six, 0.770 at four,
+and 0.431 at distance one; the complementary regress prob-
+ability at distance one is 0.569. Among 547 routes that reach
+distance one, 59.8% subsequently hit the target, while 47.7%
+leave the target neighborhood at least once. The two events
+can both occur because a route may exit and later recover.
+The image-cluster intervals summarize sampling variation
+within the trajectory bank.
+Cross-Domain Targets and Enlarged Search
+Regions
+The shared Swiss aerial bank isolates route geometry under
+one target form. This section reports additional results in
+which the target modality, search image domain, grid size,
+or action horizon changes while the evaluator remains target
+conditioned.
+Target/Search Evaluation Contracts
+All cross-domain experiments in this section use the same
+evaluator contract. A target cue identifies the requested desti-
+nation before rollout, and the policy searches the correspond-
+ing observation stream under a fixed action budget. The cue
+may be an aerial crop, a ground photograph, a text-grounded
+target representation, or a pre-disaster target image. These
+forms change the evidence used to specify the goal, but suc-
+cess is still counted only when the trajectory reaches the
+target grid cell.
+The displayed target cue defines the task instance and is
+encoded through the target-conditioned input pipeline used
+by the evaluator. It is not refreshed as a new observation at
+every step. Each route image shows the realized greedy roll-
+out after legal-action masking. Aggregate tables summarize
+
+
+=== PDF PAGE 18 ===
+Figure S9: Controlled route comparison on one fixed C = 6 task. The complete-reward policy reaches the target; the separately
+trained policies without the distance gate or without PBRS both finish at SG = 2. Only one training factor changes in each
+comparison.
+Figure S10: Population dynamics over all 2,205 recorded routes. Bands and error bars are 95% percentile intervals from
+2,000 deterministic bootstrap resamples clustered by aerial image. Top: mean remaining distance by initial distance. Bottom:
+cumulative exact-hit rate, progress probability conditioned on current remaining distance, and outcomes after first reaching
+distance one. Curves summarize the full trajectory bank.
+
+
+=== PDF PAGE 19 ===
+success under a protocol, while route figures show the cor-
+responding endpoint decisions, local drift, and domain-shift
+effects.
+Aerial-to-aerial tasks mainly test spatial search once the
+target appearance is directly available. MM-GAG adds mul-
+timodal target specification. SwissViewMonuments ground-
+to-aerial tasks test cross-view endpoint confirmation. xBD
+pre/post tasks keep the target fixed while changing the
+searched image domain. Equal aggregate SR can correspond
+to different route-level behavior.
+Fig. S11 specifies the target evidence, the searched image
+stream, and the input path used by the evaluator. The sub-
+sequent route figures then show the realized greedy rollout
+under that fixed contract. In Fig. S12, the xBD pair is held
+constant except for the search domain. In Fig. S13, MM-GAG
+remains within one aerial family, whereas SwissViewMon-
+uments requires ground-to-aerial endpoint confirmation. In
+Fig. S14, the stress test increases grid size and action horizon.
+xBD Pre/Post Same-Task Analysis
+The xBD reproduction uses the fixed pre/post evaluation
+task bank defined for the main experiments. Each setting
+contains episodes under 5 × 5, B = 12, C = 4, . . . , 8, five
+repeats, greedy actions, and task seed 20260516. The target
+is always a pre-disaster cell. The search image is pre-disaster
+in xBD-pre and post-disaster in xBD-disaster, so the task
+tests whether a policy trained for target-conditioned search
+remains stable when the search observation changes after
+damage.
+Fig. S11 specifies the target evidence and searched image
+stream. Fig. S12 fixes the task tuple and shows how the
+realized route changes when only the search domain changes.
+Aggregate xBD scores can remain nearly unchanged while
+individual paired tasks reverse outcome.
+For all cross-domain cases, the evaluator uses the fixed
+target cue to define termination and metrics, keeping the
+panels comparable to the Swiss route bank.
+The aggregate behavior is nearly invariant to the im-
+age shift. SR/SG are 0.5973/1.3018 before disaster and
+0.5984/1.2813 after disaster. Across the 20,000 paired tasks,
+9,353 succeed in both domains, 5,439 fail in both, 2,593 suc-
+ceed only before disaster, and 2,615 succeed only after dis-
+aster. The discordant counts almost cancel at the aggregate
+level; Fig. S12 shows both directions of task-level reversal
+under the same start, target, distance, repeat, and budget.
+Route dynamics are also stable. Successful path efficiency
+is 0.9304 before disaster and 0.9322 after disaster; revisit
+ratios are 0.1882 and 0.1888. Among episodes that reach
+distance one, 73.16% and 73.32% subsequently hit the exact
+target, while 34.65% and 34.75% leave the target neighbor-
+hood at least once. Under this reproduction split, appearance
+change modifies individual decisions without increasing ag-
+gregate drift.
+Aerial and Ground-View Target Routes
+Fig. S13 separates two target-confirmation regimes. In MM-
+GAG, the aerial cue and search image share a view fam-
+ily, so the policy must retain the target hypothesis across
+a larger stitched scene. The MM-GAG evaluator uses new
+target-conditioned tasks on the indexed image set rather than
+a held-out-image split. In SwissViewMonuments, the target
+is a ground photograph and the search image is aerial; the
+displayed rows span castle, waterfront, civic-building, and
+dam/mountain landmarks. This setting adds cross-view end-
+point confirmation after global progress.
+Table S3 shows a sharper endpoint problem for the Swiss
+ground-target setting. Its revisit ratio is 0.2176 versus 0.1732
+for MM-GAG aerial targets, and 46.40% of episodes that
+reach distance one later exit the neighborhood versus 36.24%.
+Because the rows differ in both dataset and target modality,
+the comparison is descriptive rather than a controlled modal-
+ity ablation.
+Long-Range Stress Test
+The aggregate SR of our method is 0.746, 0.748, and 0.204
+on 8 × 8, 10 × 10, and 25 × 25, respectively, compared with
+0.679, 0.629, and 0.180 for GOMAA-Geo. The largest grid
+remains difficult for all methods. On 25 × 25, SR varies
+strongly by distance stratum, rising from 0.02 at C = 12 to
+0.58 at C = 48 for our method. The comparison is made
+under the same grid, budget, and distance setting for each
+row.
+Additional Quantitative Evidence
+This section reports additional numerical studies associated
+with the main-paper protocol. The tables cover training-pool
+selection, distance-stratified results for the unified scenarios,
+development hyperparameters, and enlarged-grid stress tests.
+They use the same evaluation definitions unless a separate
+grid size, budget, or distance range is stated.
+Training-Pool Selection
+The training image pool is not a fixed route list. For
+each sampled image, training episodes are generated on-
+line by resampling a start cell, a goal cell, and an initial-
+distance constraint. Dynamic sampling yields many target-
+conditioned navigation episodes from the same image pool,
+while evaluation task banks remain fixed. Table S4 re-
+ports the controlled training-pool study. Average SR/SG
+values are macro-averaged over nine evaluation settings:
+MASA/A, MM-GAG/A/G/T, SwissView100/A, SwissView-
+Monuments/A/G, xBD-pre/A, and xBD-disaster/A.
+The best aggregate result comes from the 184-image
+MASA+MM-GAG pool. MASA provides the base aerial
+search distribution, while MM-GAG adds target-modality di-
+versity. Adding SwissView100 increases the image count but
+reduces the macro-average. The final pool uses the smaller
+MASA+MM-GAG combination.
+Distance-Stratified Main Scenarios
+The main paper reports the unified B = 12 comparison as
+scenario-level averages. Table S5 adds the distance decompo-
+sition for the same rows of our method. Short-distance cases
+are not always easier: at C = 4 and C = 5, many failures
+are endpoint-confirmation errors near the target, while longer
+settings provide more room for repeated progress transitions
+before the final cell is reached.
+
+
+=== PDF PAGE 20 ===
+Figure S11: Target/search protocol illustrations for aerial, MM-GAG, SwissView, and xBD inputs. The target cue is fixed before
+rollout, and the policy searches the corresponding observation stream.
+Figure S12: Recorded xBD routes on four exactly matched tasks. Panels (a)–(d) show pre-only success, post-only success,
+success under both domains, and failure under both, respectively. Each panel pair fixes pair, start, pre-disaster target, C, repeat,
+and budget; only the search image changes from pre-disaster (left route) to post-disaster (right route). Target-cue thumbnails are
+omitted so the route panels remain large and unobstructed.
+
+
+=== PDF PAGE 21 ===
+Figure S13: Recorded cross-modal routes. Each row pairs an MM-GAG aerial target and route (left) with a SwissViewMonuments
+ground-photo target and aerial route (right). Cases cover long- and short-distance successes, near misses, and larger terminal
+errors. Swiss targets span castle, waterfront, civic-building, and dam/mountain scenes. The MM-GAG evaluator uses all 47
+indexed samples; the Swiss rows use the controlled ground-to-aerial route set described in this supplement.
+Recorded evaluator
+Episodes
+SR
+SG
+Succ. eff.
+Revisit
+Progress
+Hit after
+d = 1
+Exit after
+d = 1
+xBD pre, aerial target
+20,000
+0.5973
+1.3018
+0.9304
+0.1882
+0.7585
+0.7316
+0.3465
+xBD disaster, pre-disaster
+target
+20,000
+0.5984
+1.2813
+0.9322
+0.1888
+0.7599
+0.7332
+0.3475
+MM-GAG, aerial target
+1,175
+0.6357
+1.1319
+0.9278
+0.1732
+0.7720
+0.7477
+0.3624
+SwissMon ground, max80
+1,380
+0.5420
+1.4457
+0.8714
+0.2176
+0.7124
+0.6997
+0.4640
+Table S3: Route-level descriptors recomputed from every saved trajectory in four evaluators. Succ. eff. is shortest distance
+divided by path length on successful episodes. The last two columns condition on first reaching distance one. The rows have
+different dataset scopes and are diagnostic rather than a controlled modality ablation.
+Development Hyperparameter Checks
+Table S6 reports development checks for entropy, the distance
+lower bound, PBRS, training budget, and validation-distance
+selection. These rows are not separate baselines.
+Detailed Enlarged-Grid Results
+Fig. S14 summarizes the enlarged-grid stress tests. Tables S7
+and S8 give the numerical decomposition. The 8 × 8 and
+10 × 10 settings show gains over both baselines across most
+distance strata. The 25 × 25 setting remains difficult for all
+methods, but our method has the best aggregate SR/SG and
+higher SR at several larger distance bins.
+Discussion and Limitations
+Supported Claims
+The route evidence supports three claims. Recorded success-
+ful routes have high efficiency, low revisit ratios, and few
+
+
+=== PDF PAGE 22 ===
+Figure S14: Formal MASA enlarged-grid results. Panels (a)–(b) report per-distance SR for 8 × 8 (B = 24, C = 10, . . . , 14)
+and 25 × 25 (B = 60, C = 12, 16, . . . , 48); panel (c) reports aggregate SR for 8 × 8, 10 × 10, and 25 × 25, where 10 × 10 uses
+B = 32 and C = 14, . . . , 18.
+Training pool
+Images
+Avg. SR
+Avg. SG
+MASA+MM-GAG
+184
+0.6033
+1.2543
+MASA+SwissView100
+237
+0.5684
+1.4191
+MM-GAG+SwissView100
+147
+0.5497
+1.7869
+MASA+MM-
+GAG+SwissView100
+284
+0.5232
+1.7952
+SwissView100
+100
+0.5103
+2.0490
+MASA
+137
+0.4443
+2.1380
+MM-GAG
+47
+0.4328
+2.0731
+Table S4: Training-pool selection under the unified evaluator.
+The final pool uses MASA+MM-GAG: 137 MASA images
+and 47 MM-GAG images. The comparison uses dynamically
+sampled navigation episodes from each image pool.
+(a) Success rate by scenario and initial distance
+Scenario
+Avg.
+C = 4
+C = 5
+C = 6
+C = 7
+C = 8
+MASA/A
+0.6200
+0.2400
+0.4000
+0.6400
+0.8800
+0.9400
+MM-GAG/A
+0.6357
+0.2979
+0.3915
+0.6894
+0.8766
+0.9234
+xBD-pre/A
+0.5973
+0.3033
+0.4065
+0.6230
+0.8115
+0.8423
+xBD-dis./A
+0.5984
+0.2923
+0.4085
+0.6290
+0.8180
+0.8443
+(b) Final grid distance by scenario and initial distance
+Scenario
+Avg.
+C = 4
+C = 5
+C = 6
+C = 7
+C = 8
+MASA/A
+1.1360
+2.6800
+1.5200
+1.0000
+0.2400
+0.2400
+MM-GAG/A
+1.1319
+2.5021
+1.6894
+0.8681
+0.3617
+0.2383
+xBD-pre/A
+1.3018
+2.4470
+1.8755
+1.1565
+0.5125
+0.5175
+xBD-dis./A
+1.2813
+2.4475
+1.8685
+1.0945
+0.4960
+0.5000
+Table S5: Distance-stratified DynCur-Geo results for the uni-
+fied 5×5, B = 12, C = 4, . . . , 8 evaluator. Panel (a) reports
+SR and panel (b) reports SG. The same fixed task-bank pro-
+tocol is used as in the unified main comparison.
+immediate reversals relative to their displayed target cues.
+The realized distance weight attenuates intrinsic reward as
+remaining distance falls and increases it again when a route
+diverges. Potential shaping changes sign with progress versus
+regress transitions. The complete-bank curves further show
+high progress probability when the target is distant and lower
+progress probability in the immediate target neighborhood.
+The shared-bank SR values are close for the three meth-
+ods, but the paired counts show different route geometries.
+our method contributes additional successes on long or loop-
+prone tasks, while baseline successes remain visible on sev-
+(a) Entropy coefficient ce
+0.0025
+0.0050
+0.0075
+0.0100
+Avg. SR
+0.5497
+0.5765
+0.4344
+0.4729
+Avg. SG
+1.4166
+1.2885
+2.0582
+1.7864
+(b) Distance lower bound λmin
+0.250
+0.350
+0.405
+0.500
+0.650
+Avg. SR
+0.5009
+0.4861
+0.5765
+0.4987
+0.5089
+Avg. SG
+1.7052
+1.6788
+1.2885
+1.6200
+1.6526
+(c) PBRS coefficient β
+0.00
+0.05
+0.10
+0.15
+0.20
+Avg. SR
+0.5535
+0.5134
+0.5765
+0.4933
+0.5307
+Avg. SG
+1.3290
+1.5409
+1.2885
+1.7120
+1.4880
+(d) Training and checkpoint selection
+Budget
+240k
+480k
+720k
+Avg. SR
+0.4923
+0.5765
+0.5673
+Avg. SG
+1.6221
+1.2885
+1.2851
+Val. C
+4–8
+6–8
+7–8
+Avg. SR
+0.4282
+0.5334
+0.5765
+Avg. SG
+2.1324
+1.4900
+1.2885
+Table S6: Additional development checks under the standard
+5 × 5, B = 10, C = 4, . . . , 8 evaluator. The selected setting
+uses ce = 0.005, λmin = 0.405, β = 0.10, and 480k PPO
+steps.
+(a) 8 × 8, B = 24, MASA/A
+Method
+SR/SG
+10
+11
+12
+13
+14
+GOMAA-Geo
+0.679/1.345
+0.480
+0.525
+0.700
+0.870
+0.820
+GeoExplorer
+0.368/3.046
+0.385
+0.385
+0.340
+0.415
+0.315
+DynCur-Geo
+0.746/0.859
+0.510
+0.660
+0.790
+0.845
+0.925
+(b) 10 × 10, B = 32, MASA/A
+Method
+SR/SG
+14
+15
+16
+17
+18
+GOMAA-Geo
+0.629/1.801
+0.535
+0.475
+0.625
+0.750
+0.760
+GeoExplorer
+0.300/4.677
+0.335
+0.385
+0.335
+0.220
+0.225
+DynCur-Geo
+0.748/0.736
+0.540
+0.675
+0.755
+0.885
+0.885
+Table S7: Per-distance SR for the 8×8 and 10×10 enlarged-
+grid stress tests. Numeric headers give the initial distance C;
+the SR/SG column reports the aggregate pair for each grid.
+eral short-range endpoint cases.
+
+
+=== PDF PAGE 23 ===
+(a) 25 × 25, B = 60, C = 12, . . . , 28
+Method
+SR/SG
+12
+16
+20
+24
+28
+GOMAA-Geo 0.180/13.508 0.080 0.020 0.060 0.060 0.060
+GeoExplorer
+0.082/15.584 0.020 0.060 0.060 0.020 0.040
+DynCur-Geo
+0.204/12.312 0.020 0.040 0.020 0.060 0.040
+(b) 25 × 25, B = 60, C = 32, . . . , 48
+Method
+32
+36
+40
+44
+48
+GOMAA-Geo
+0.080
+0.220
+0.260
+0.240
+0.720
+GeoExplorer
+0.140
+0.120
+0.120
+0.200
+0.040
+DynCur-Geo
+0.140
+0.220
+0.360
+0.560
+0.580
+Table S8: Per-distance SR for the 25×25 enlarged-grid stress
+test. Numeric headers give the initial distance C; panel (a)
+also lists aggregate SR/SG for each method, and panel (b)
+continues the larger distance strata.
+Why Failures Persist
+Distance gating regulates curiosity during search, but near-
+goal target confirmation remains the most sensitive stage.
+More than half of recorded failures enter the target neighbor-
+hood and then drift. Across all policies, 55.8–60.7% of routes
+that first reach distance one subsequently hit the target, and
+45.1–48.6% leave that neighborhood at least once. A nonzero
+curiosity floor preserves adaptability near the goal, but the
+fixed action budget still requires exact final-cell resolution.
+Two behavior patterns account for most remaining errors.
+Recurrent history reduces but does not eliminate repeated-
+cell behavior; the 133 revisit/ping-pong failures concentrate
+in this category. When a route moves away from the target,
+the intrinsic weight rises again. This can support recovery
+from an incorrect local hypothesis, but also places greater
+demand on the visual state representation.
+Evidence Boundaries
+The principal trajectory bank uses SwissViewMonuments
+aerial targets, C ∈{4, 6, 8}, and one fixed task seed. The
+cross-domain section adds ground-target and disaster routes
+plus enlarged-grid aggregates with their own budgets and
+dataset scopes. The success and failure atlases cover behav-
+ior categories, while the aggregate tables provide the corre-
+sponding frequency summaries.
+The taxonomy uses explicit thresholds. Its two dominant
+geometries are reaching distance one before moving away,
+and revisiting or immediately reversing. Image-level expla-
+nations are treated as qualitative interpretations rather than
+encoder-level attribution.
+Reproducibility Details
+The Swiss route panels are reconstructed from recorded se-
+quences over 1500 × 1500 aerial images. Route views are
+uncropped; footers report the target cell and, when applica-
+ble, the terminal cell. Cross-domain route panels follow the
+same convention for xBD, MM-GAG, and Swiss ground-to-
+aerial cases.
+Case selection follows deterministic route descriptors: four
+cases per success category, four per failure category, and
+matched tasks across contrast figures. The Swiss route set
+contains 118 displayed route-panel records, and the cross-
+domain route set adds 16 evaluator panels. Reward figures
+replay fixed routes with task targets for diagnostic decompo-
+sition, population curves use all 2,205 sequences with 2,000
+fixed-seed aerial-image-cluster bootstraps, and enlarged-grid
+results are reported as aggregate and per-distance stress tests.
+The experiments use existing datasets rather than intro-
+ducing a new dataset. MASA, MM-GAG, SwissViewMonu-
+ments, and xBD follow the task definitions in the main paper.
+Fixed task banks specify image id, start cell, target cell, dis-
+tancestratum,repeatindex,gridsize,andactionbudget;route
+images are rendered from saved trajectories after evaluation.
+Route figures expose search geometry, endpoint drift, and
+same-task reversals. Aggregate tables summarize evaluator
+outputs across the corresponding route sets.
+Experimental Configuration
+Unless otherwise stated, the standard evaluator uses a 5 × 5
+grid, budget B = 12, distance strata C = 4, . . . , 8, five
+fixed task repeats per distance, greedy decoding, legal-action
+masking, and task-bank seed 20260516. The xBD pre/post
+analysis uses the fixed pre/post task bank defined for the main
+experiments. The enlarged-grid stress tests use the protocols
+in Fig. S14: 8×8 with B = 24 and C = 10, . . . , 14, 10×10
+with B = 32 and C = 14, . . . , 18, and 25 × 25 with B = 60
+and C = 12, 16, . . . , 48.
+The final PPO configuration uses actor and critic learning
+rates of 10−4, discount factor γ = 0.93, four PPO epochs
+per update, clipping parameter 0.2, and learning-rate de-
+cay 0.9999. The state-action transformer is loaded from its
+pretrained checkpoint and kept frozen during PPO. The re-
+ported training seed is 321. The 480k value is the PPO bud-
+get, and the reported model row uses the validation-selected
+checkpoint. The reward follows the main paper, including the
+distance-dependent intrinsic weight with floor 0.405 and the
+potential-based shaping term.
+Reported GPU experiments were run on a Linux x86_64
+workstation with four NVIDIA GeForce RTX 3080 GPUs,
+20 GB memory per GPU. The main software stack was
+Python 3.11, PyTorch 2.0.1, CUDA 11.7 runtime packages,
+torchvision 0.15.2, Transformers 4.39.2, NumPy 1.25.2, pan-
+das 2.0.3, SciPy 1.14.1, scikit-learn 1.4.0, and Matplotlib
+3.8.2.
+Training and evaluation randomness are separated. The
+reported checkpoint uses the fixed training seed above, while
+the evaluator uses task-bank seed 20260516 for start/target
+tuples. Route-atlas case selection is deterministic, and the
+population bands use a fixed 2,000-replicate aerial-image-
+cluster bootstrap; these intervals summarize variation within
+the saved route bank rather than across independently trained
+seeds.
+Implementation-Level Reproducibility
+Each inference episode is an ordered patch sequence initial-
+ized with the target embedding and the first observed search
+patch. After every selected action, the evaluator appends the
+next search-patch embedding. The frozen transformer re-
+ceives this sequence together with visited patch indices and
+previous action tokens. The PPO actor and critic operate on
+
+
+=== PDF PAGE 24 ===
+the resulting hidden state, so the action head uses transformer
+features rather than raw patch tokens alone.
+Before action selection, a legal-action mask removes out-
+ward moves at grid boundaries and renormalizes the remain-
+ing action probabilities. Formal evaluation uses greedy de-
+coding and stops only after reaching the target patch or ex-
+hausting the budget. The policy does not receive target dis-
+tance, reward values, success flags, or diagnostic categories
+at test time.
+Training rewards remain outside the inference input. The
+extrinsic term rewards exact hits and target-progress tran-
+sitions while penalizing repeats, non-progress, and invalid
+stays. The intrinsic term is the mean-squared next-state pre-
+diction error between predicted and target hidden represen-
+tations, multiplied by the distance-dependent weight. The
+potential term uses the change in normalized distance poten-
+tial between consecutive states.

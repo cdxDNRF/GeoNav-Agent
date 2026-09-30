@@ -1,0 +1,2215 @@
+=== PDF PAGE 1 ===
+GeoExplorer: Active Geo-localization with Curiosity-Driven Exploration
+Li Mi, Manon B´echaz, Zeming Chen, Antoine Bosselut, Devis Tuia
+EPFL, Switzerland
+https://limirs.github.io/GeoExplorer/
+Abstract
+Active Geo-localization (AGL) is the task of localizing a
+goal, represented in various modalities (e.g., aerial images,
+ground-level images, or text), within a predefined search
+area. Current methods approach AGL as a goal-reaching
+reinforcement learning (RL) problem with a distance-based
+reward. They localize the goal by implicitly learning to min-
+imize the relative distance from it. However, when distance
+estimation becomes challenging or when encountering un-
+seen targets and environments, the agent exhibits reduced
+robustness and generalization ability due to the less reliable
+exploration strategy learned during training. In this paper,
+we propose GeoExplorer, an AGL agent that incorporates
+curiosity-driven exploration through intrinsic rewards. Un-
+like distance-based rewards, our curiosity-driven reward is
+goal-agnostic, enabling robust, diverse, and contextually
+relevant exploration based on effective environment model-
+ing. These capabilities have been proven through extensive
+experiments across four AGL benchmarks, demonstrating
+the effectiveness and generalization ability of GeoExplorer
+in diverse settings, particularly in localizing unfamiliar tar-
+gets and environments.
+1. Introduction
+Guiding unmanned aerial vehicles (UAVs) is essential in
+search-and-rescue operations, which necessitate UAVs to
+screen affected areas and locate missing individuals or dam-
+aged structures [23, 26].
+Instead of conducting exhaus-
+tive searches across entire regions, UAVs can be actively
+guided using available information: one could use coordi-
+nates of the point of interest, historical aerial imagery, or
+even ground photographs or textual descriptions [29, 33].
+The problem is known in computer vision as Active
+Geo-Localization (AGL) [29, 33] within a goal-reaching
+reinforcement learning (RL) context (Figure 1 (a)). AGL
+focuses on localizing a target (goal), within a predefined
+search area (environment) presented in the bird’s eye view,
+by navigating the agent towards it. At a given time, the
+agent observes a state, i.e., a patch representing a limited
+Figure 1. GeoExplorer combines goal-oriented and curiosity-
+driven rewards to address AGL. (a) Task setting. Given a start-
+ing patch (◦) and a predefined search area (environment), AGL
+aims at localizing a goal (△), by guiding an agent towards it. At
+a given time, the agent observes a state and selects an action. The
+goal location is unknown for inference. (b) Goal modalities. The
+goal can be presented in various modalities including aerial images
+(I), ground-level images (G) and text (T), associated with a patch
+in the area. (c) GeoExplorer. The learning process of GeoEx-
+plorer is guided by two rewards: 1) a goal-oriented distance-based
+reward, as in previous methods, which directs the agent toward
+the goal, and 2) a goal-agnostic, curiosity-driven reward that en-
+courages the agent to explore the environment based on curiosity
+measured by similarity of state prediction and observation.
+observation of the environment, and selects an action, i.e.,
+a decision that modifies the agent position and the observed
+state. The goal content can be described in various modal-
+ities (e.g., aerial patches, ground-level images, and textual
+descriptions, Figure 1 (b)), but its location is unknown dur-
+ing inference. The task is considered successful if the agent
+reaches the goal location within a limited search budget (B).
+In real-world applications of AGL, robustness and general-
+izability are crucial as few scenarios are identical [33].
+Existing AGL methods rely on extrinsic rewards (i.e.,
+goal-oriented), and the policy is implicitly shaped by mini-
+mizing the relative distance between the agent and the goal
+during training. However, this distance is unknown during
+inference (since the goal’s location is unknown), making
+the learned strategy less reliable. Moreover, these distance
+estimations are often tailored to specific training environ-
+ments, making it challenging for models to adapt to unseen
+1
+arXiv:2508.00152v1  [cs.CV]  31 Jul 2025
+
+
+=== PDF PAGE 2 ===
+Figure 2. Comparison between (a) action-only prediction and (b)
+joint action-state modeling.
+goals or new environments. Curiosity-driven intrinsic re-
+wards (i.e., goal-agnostic) offer a compelling solution. By
+rewarding the agent for encountering less familiar [6, 28]
+or unpredictable [28, 41] state transitions, the intrinsic re-
+ward encourages exploration of the environment [19, 28].
+Therefore, integrating curiosity-driven rewards with goal-
+oriented rewards introduces an essential trade-off between
+following the direct, goal-oriented guidance and engaging
+in exploratory behavior. This balance ensures that the agent
+not only efficiently reaches its goals but also continually re-
+fines its understanding of the environment, leading to ef-
+fective and adaptive policies which enhance robustness and
+generalization in AGL.
+However, constructing intrinsic rewards requires a way
+to predict state transitions, as it is based on the discrep-
+ancy between state prediction and actual observation. Pre-
+vious AGL methods [29, 33] only focus on predicting the
+action sequence that leads to the goal [8] (Figure 2 (a)),
+and therefore do not satisfy this requirement. Without ex-
+plicit state prediction, these methods also fail to anticipate
+how an action can change the state accurately, resulting in
+reduced adaptability and accumulated errors in unseen en-
+vironments. Instead, joint action-state modeling (Figure 2
+(b)) encourages a more robust and adaptive environment
+modeling and representation refinement [3, 43], which is
+crucial when facing unfamiliar environments or goals.
+In this work, we introduce GeoExplorer, an AGL agent
+that 1) jointly predicts the action-state dynamics and 2)
+explores the search region with a curiosity-driven re-
+ward.
+The learning process of GeoExplorer boils down
+to two stages: Action-State Dynamics Modeling (DM) and
+Curiosity-Driven Exploration (CE). DM simultaneously
+models action-state dynamics using a causal Transformer
+and allows GeoExplorer not only to learn which actions lead
+to the goal, but also how these actions influence state tran-
+sitions, thus providing a richer, more comprehensive repre-
+sentation of the environment. Then, during CE, an intrin-
+sic reward is introduced to guide the exploration process
+by leveraging the discrepancy between the state prediction
+provided by DM and the real-world state observation. Ex-
+perimental results on four datasets, including a novel unseen
+target generalization setting, demonstrate that GeoExplorer
+provides dense, goal-agnostic and content-aware rewards
+for AGL. Combined with goal-oriented guidance, GeoEx-
+plorer highlights that balancing goal-reaching (extrinsic re-
+ward) and environment exploration (intrinsic reward) can
+improve both localization performance and generalization
+ability of the AGL agent. The resulting active and adaptive
+exploration ability of GeoExplorer represents a step towards
+deploying AGL in real-world search-and-rescue operations.
+2. Related Work
+Active Geo-Localization. Although related, AGL differs
+from traditional visual geo-localization [51] (i.e., typically
+focuses on identifying the location of a target through co-
+ordinate prediction [2, 42] or retrieval [4, 5, 24, 44, 47, 49,
+54]), by actively navigating the agent to reach the target.
+Current methods in AGL have made impressive progress in
+learning the action transitions from various UAV localiza-
+tion trajectories [29, 33]. Pirinen et al. [12] framed the AGL
+as a goal-reaching RL problem, guided by a sparse extrin-
+sic reward. Sarkar et al. [33] extended the AGL task with
+multiple goal modalities and proposed goal-aware action
+modeling pretraining and an actor-critic RL pipeline with
+distance-based extrinsic reward.
+Despite progress, these
+methods localize the goal guided by extrinsic reward, which
+might provide misleading guidance when the target’s loca-
+tion is unknown. Moreover, this approach fails to effec-
+tively and comprehensively model the environment, lead-
+ing to inefficient search strategies and generalization to un-
+seen regions. GeoExplorer aims to address these challenges
+by modeling action-state dynamics simultaneously and en-
+abling curiosity-driven exploration.
+Transformers for Action-State Modeling.
+Recent
+progress in RL has shown exciting potential in predicting
+actions through sequence modeling [8, 17] based on causal
+Transformers [31, 46]. They focus on predictive modeling
+of action sequences conditioned on a task specification (e.g.,
+target goal or returns) as opposed to explicitly learning Q-
+functions or policy gradients [11, 35, 40]. Moreover, re-
+cent work has focused on learning world models to describe
+environments. They further use transformer-style architec-
+ture to model the effect of the agent’s action on the environ-
+ment, by predicting future state representations [3, 43, 53]
+or observations [48, 50]. They often take the previous state
+history and a potential action as input and predict the next
+state. However, those world models are primarily designed
+for domains with continuous state transitions, such as au-
+tonomous driving and robotics. In contrast, the AGL set-
+ting may involve non-overlapping and abrupt state changes
+by taking an action. GeoExplorer demonstrates that even
+in such cases, state modeling enhances action prediction,
+further underscoring the critical role of comprehensive en-
+vironment modeling.
+Curiosity-Driven Reinforcement Learning. Curious ex-
+ploration plays a critical role in RL by enabling agents to
+navigate and learn in environments where rewards are far
+in the future, sparse, or non-existent. Even when the ex-
+2
+
+
+=== PDF PAGE 3 ===
+Figure 3. GeoExplorer learning pipeline. The learning process can be divided into three stages sequentially: Feature Representation,
+Action-State Dynamics Modeling (DM), and Curiosity-Driven Exploration (CE). (a) Feature Representation. The environment (st) and
+goal (sgoal) are encoded with different but aligned encoders, according to their modalities (e.g., aerial images (Igoal), ground-level images
+(Ggoal), or text (Tgoal)). (b) Action-State Dynamics Modeling. A causal Transformer is trained to jointly capture action-state dynamics,
+guided by supervision from generated action-state trajectories for environment modeling. (c) Curiosity-Driven Exploration. Based on state
+prediction from (b), a curiosity-driven intrinsic reward (rin
+t ) is combined with the distance-based extrinsic reward (rex
+t ) to encourage the
+agent to explore the environment by measuring the differences between prediction and observations.
+trinsic goal is well-defined, researchers have argued for the
+use of intrinsic motivation as an additional reward encour-
+aging exploration [34]. Different approaches to generate
+intrinsic rewards have been explored, including encourag-
+ing exploration of previously unencountered states [6, 28],
+fostering curiosity when predictions about future states and
+the outcomes of actions differ [28, 41], promoting ex-
+ploration in areas of high uncertainty [19] and encourag-
+ing agents to align their behaviors with the expectations
+of others [22]. Building upon these advances, we intro-
+duce curiosity-driven exploration to AGL, where adaptive
+and active exploration is essential for generalization. By
+rewarding the disagreement between predicted and actual
+states, GeoExplorer exemplifies the effective integration of
+curiosity-driven RL into sequence modeling frameworks,
+without additional components.
+3. GeoExplorer
+3.1. Overview
+Problem Definition. Following previous work [29, 33], the
+AGL task can be considered as a goal-reaching RL prob-
+lem. A UAV agent is located at a starting patch (I0) and
+aims at navigating within a predefined non-overlapping X
+× Y search grid to reach a goal location within a search
+budget (B). At each time step t, the agent observes only its
+current patch It and can move between patches by taking
+actions at ∈A (UP, DOWN, LEFT, RIGHT, when consid-
+ering a bird’s-eye-view). The state of time step t can be de-
+noted as st, which is a representation of the current patch.
+The overall objective of AGL is to determine a trajectory
+x = {s0, a0, · · · , st, at, · · · , sgoal} that leads the agent to
+the goal. During training, the goal is exclusively presented
+as an aerial view (Igoal) with known location. For infer-
+ence, the goal can be provided in one of the three modali-
+ties: aerial view, ground images (Ggoal) or text (Tgoal), but
+the location of the goal is unknown.
+Method Overview. The training process of GeoExplorer
+can be divided into three stages (Figure 3): 1) Feature Rep-
+resentation, 2) Action-State Dynamics Modeling (DM), and
+3) Curiosity-Driven Exploration (CE). DM is a supervised
+pretraining stage, where action-state dynamics are modeled
+by a causal Transformer. CE is a reinforcement learning
+stage, where an actor-critic network, used as an action pre-
+diction head, is trained to predict actions based on the out-
+put of the DM stage, combining both distance-based reward
+and curiosity-driven reward.
+3.2. Feature Representation
+In AGL, the goals are presented in different modalities. To
+achieve localization regardless of their nature, pre-aligned
+feature encoders are used for each modality (i.e., aerial
+images, ground-level images, and text), as in previous
+work [33] and as depicted in Figure 3 (a). Those modality-
+specific encoders are pre-trained to align within a joint
+embedding space, with text-image pairs or image-image
+pairs through contrastive learning [9, 32].
+More specif-
+ically, the ground image encoder (a Vision Transformer,
+CLIPimg) and text encoder (CLIPtext) are issued from
+the pre-trained CLIP model [32], while the aerial encoder
+(Sat2Capimg) is a ViT aligned with the CLIP image en-
+3
+
+
+=== PDF PAGE 4 ===
+coder using ground-level image and aerial image pairs [9].
+The process can be denoted as:
+  \la b el {eq:goal} s_\mathbf {goal} &= \mathbf {Sat2Cap_{img}}(I_\mathbf {goal}), \notag \\ \text {or} \quad s_\mathbf {goal} &= \mathbf {CLIP_{img}}(G_\mathbf {goal}), \\ \text {or} \quad s_\mathbf {goal} &= \mathbf {CLIP_{text}}(T_\mathbf {goal}). \notag
+Moreover, we also encode the environment using the same
+aerial image encoder, and the agent’s location at time step
+t, patch It, can be encoded as current state st as: st =
+Sat2Capimg(It).
+3.3. Action-State Dynamics Modeling
+Different from previous efforts that use causal Transformers
+(CausalTrans, e.g., LLMs) to predict actions only [8, 33],
+we simultaneously model the action-state dynamics without
+modifying the model architecture.
+Random Path Generation.
+To collect action-state se-
+quences for training, for each search area, we generate tra-
+jectories with random {start, goal} pairs, as in [33] (shown
+in Figure 3 (b)).
+Each generated sequence, denoted as
+xn = {s0, a0, s1, a1, . . . , st, at, . . . , sN, aN}, consists of a
+series of randomly chosen actions {a0, a1, . . . at, . . . , aN}
+that explore possible transitions between states.
+Ad-
+ditionally, we define a ground truth action transitions
+{a∗
+0, a∗
+1, . . . a∗
+t , . . . , a∗
+N} for each tracjectory. Each action
+a∗
+t represents an ideal goal-directed action which moves the
+agent from patch It closer to the goal patch Igoal.
+Causal Transformer for Sequence Modeling. With the
+generated trajectories, we train a causal Transformer on a
+sequence modeling task that 1) predicts the optimal actions
+a∗
+t that will bring the agent closer to the goal location; 2)
+predicts a state representation st at time t that depends on
+the action at the previous time step at−1. The modeling
+process, illustrated in Figure 3 (b), can be denoted as:
+ \ h at {a}_t &= \mathrm {Causal
+Tra
+ns} ( s_{t}|x_{t-1},s_\mathb f {goal}), \\ \hat {s}_t &= \mathrm {CausalTrans}(a_{t-1}|x_{t-1},s_\mathbf {goal}).
+(3)
+Before being processed by the causal Transformer, states
+are encoded using relative position encoding following [33].
+Action Modeling Loss. We use the binary cross-entropy
+loss to guide the action prediction at each time step t along
+the action-state sequence, as in previous work [33]:
+  \labe l
+ 
+{
+eq:
+acti on} \ma t hc a l { L}_{\ m athit
+ { \ text {Action}}} &= \sum _{t=0}^{N} -(y_t \log (P_t) + (1-y_t) \log (1-P_t))\nonumber ,\\ P_t &= \mathrm {Softmax}(\hat {a}_{t}),
+(4)
+where N is the length of the random sequence.
+Pt is
+the predicted probability of actions at t when xt−1 and
+sgoal are given as the input to the model, and yt
+=
+[y(1)
+t
+, y(2)
+t
+, . . . , y(|A|)
+t
+], indicates if an action from the A set
+is considered optimal at time step t. y(j)
+t
+= 1 if the j’th ac-
+tion leads agent closer to the goal, and y(j)
+t
+= 0 otherwise.
+State Modeling Loss. Without modifying the model archi-
+tecture, we extend the causal Transformer from predicting
+only actions to jointly predicting both states and actions. We
+do so by adding a state modeling loss. Inspired by recent ad-
+vances in world models [3, 16, 53], we propose to use the
+mean squared error between the predicted state representa-
+tion and the ground truth state representation to guide the
+model learning:
+  \lab e
+l {
+e
+q:s
+tate }  \ma
+t hcal {L}_{\mathit {\text {State}}} = \sum _{t=1}^{N-1} \left \|\hat {s}_t-s_t\right \|_2^2. 
+(5)
+Note that here the total sequence length is N −1 since we
+ignore the starting and ending state for prediction.
+The final DM loss (LDM) is the combination of the action
+modeling loss (LAction) and the state modeling loss (LState):
+  \ l abel {e q :dm} \mathcal {L}_{\mathit {\text {DM}}}=\mathcal {L}_{\mathit {\text {Action}}} + \alpha \mathcal {L}_{\mathit {\text {State}}}, 
+(6)
+where α is a scaling factor.
+3.4. Curiosity-Driven Exploration
+In this subsection, we first introduce the actor-critic pipeline
+for reinforcement learning, which serves as the foundation
+for our approach.
+Building on it, we then propose the
+curiosity-driven exploration guided by intrinsic rewards.
+Actor-Critic Reinforcement Learning Pipeline. During
+CE, the pre-trained causal Transformer is frozen. In this
+stage, we introduce an action prediction head as shown in
+Figure 3 (c), which includes an actor πθ (a|st) (policy net-
+work) and a critic vψ (st) (value function) optimized by
+Proximal Policy Optimization (PPO) following the actor-
+critic reinforcement learning pipeline [36]. At each time
+step t, (1) the actor chooses an action ˆat ∼πθ (a|st). (2) by
+executing ˆat, the state transits to st+1 and the reward rCE
+t
+is obtained. (3) the value vψ (st) denotes the expected total
+reward from state st is calucated by the critic. (4) the actor
+and critic are updated under PPO. See supplementary mate-
+rials (S2) for details of the PPO agent. The agent operates
+on outputs of the causal Transformer and thus benefits from
+the action-state dynamics learned during DM.
+Curiosity-Driven Exploration. The most straightforward
+reward for goal-reaching RL problems is designed based on
+whether the goal is achieved or not. However, these rewards
+are usually very sparse, leading to insufficient feedback to
+learn efficiently and effectively [28]. Previous efforts pro-
+posed shaping the reward to be dense, and feasible to obtain
+during the process. In particular, existing methods in AGL
+used an extrinsic reward based on the distance between the
+current and the goal patch, to optimize the actor-critic action
+prediction head, which can be denoted as:
+4
+
+
+=== PDF PAGE 5 ===
+  \
+r e
+s
+i
+z
+eb
+ox  {.9\h s ize }{!}
+{ $  r^{ \ mathit {
+\
+tex
+t {ex}}} _ {t} = \l
+e f t \{  \begin {
+a r ray}  {r@{\
+qu
+ad  }l}  \text {$1,$} & \text {if\>\>\>$|| p_{t+1} - p_{\mathbf {goal}} ||^2_2 < || p_{t} - p_{\mathbf {goal}} ||^2_2 $} \\ \text {$-1,$} & \text {if\>\>\>$|| p_{t+1} - p_{\mathbf {goal}} ||^2_2 > || p_{t} - p_{\mathbf {goal}} ||^2_2 \>\> \lor \>\> s_{t+1} \in \{x_{t}\}$}, \\ \text {$2,$} & \text {if\>\>\>$ s_{t+1} = s_{\mathbf {goal}}$} \end {array} \right . \label {eq:exreward}$} 
+(7)
+where pt denotes the position of patch It. The intuition
+behind the distance-based reward is learning from minimiz-
+ing the distance: The extrinsic reward encourages the agent
+when its actions reduce the distance to the goal, with the
+highest reward given upon successfully reaching the target
+location. Conversely, the agent will be penalized for mov-
+ing away from the goal or revisiting previously explored
+states. However, when the goal location is unknown (during
+inference), this reward becomes difficult to estimate and im-
+pacts the actor-critic network negatively.
+To address this challenge, while encouraging exploration
+of the environment, we introduce intrinsic curiosity-driven
+rewards to AGL. Intrinsic rewards are designed following
+the intuition that an action is rewarded when it tends to ex-
+plore an unexpected state. The degree of “unexpectedness”
+is measured based on the differences between state observa-
+tion and prediction, the latter being built upon the state dy-
+namics modeling in DM. Following the literature [22, 28],
+we define the curiosity-driven intrinsic reward for AGL
+based on two different measurements:
+• Mean squared error. The reward is measured by the
+mean squared error between the predicted state represen-
+tation (ˆst+1) and the observed state representation (st+1):
+ \l
+a b el {eq : mse} r
+^ {\mathit {\text {in}}}_{t}=\left \|\hat {s}_{t+1}-s_{t+1}\right \|_2^2. 
+(8)
+• Cosine similarity. The reward is measured by the cosine
+similarity between the two features.
+  r
+^ { \mathit {\t ext {in}}}_{t}=-\mathrm {cos}(\hat {s}_{t+1},s_{t+1}). 
+(9)
+To combine the two sources of feedback (goal and the
+exploration), the final reward is a weighted sum of extrinsic
+and intrinsic rewards, weighted by a parameter β:
+  \
+l
+a bel
+ { eq:c
+e } r^{\mathit {\text {CE}}}_{t} = r^{\mathit {\text {ex}}}_{t} + \beta r^{\mathit {\text {in}}}_{t}. 
+(10)
+Note that before multiplying by β, we normalize intrinsic
+rewards to [−1, 1].
+3.5. Inference
+During inference, given a goal presented as one of the three
+modalities and a starting patch, GeoExplorer represents the
+goal and environment, and determines a trajectory of ac-
+tions and states x = {s0, ˆa0, . . . , st, ˆat, . . . , sM } of length
+M within a search budget B (M ≤B) using the action
+prediction head. The actions are selected according to the
+argmax policy, i.e., the highest probability, for validation.
+For path visualization, we use stochastic policy, i.e., select-
+ing action probabilistically, to show more possible paths.
+Figure 4. Examples from the proposed SwissViewMonuments
+dataset with unseen targets. From top to bottom: ground-level
+images, aerial goal patches, and search areas.
+4. Data and Setup
+Datasets. We consider four AGL benchmarks: The Masa
+dataset [25] uses aerial views as goals. The dataset contains
+1188 images, with a split of 70% for training and 15% each
+for validation and test [29, 33]. Each image is regarded as a
+search area, and we randomly generate for each one 5 {start,
+goal} pairs to evaluate the model, resulting in 895 configu-
+rations for testing. The MM-GAG dataset [33] represents
+goals with different modalities such as text and ground-level
+images. It includes 73 search areas. The xBD dataset [15]
+is a subset of the xBD dataset test set. Following previ-
+ous work [33], 800 images are kept for both before (xBD-
+pre) and after (xBD-disaster) disaster images. Note that to
+mimic real-world search-and-rescue missions, the goal is al-
+ways represented with the pre-disaster image (xBD-pre), re-
+gardless of whether the xBD-pre or xDB-disaster is used as
+search areas. Our proposed SwissView dataset (Figure 4)
+is constructed from Swisstopo’s SWISSIMAGE 10cm im-
+agery, with two distinct components: SwissView100, which
+comprises 100 images randomly selected from across the
+Swiss territory, thereby providing diverse natural and urban
+environment; and SwissViewMonuments, which includes
+15 images of atypical or distinctive scenes, such as land-
+marks and unseen landscapes, with corresponding ground
+level images. Since the targets in the latter are unique, it is
+used to assess models’ generalization to unseen targets. De-
+tailed descriptions can be found in the supplementary ma-
+terials (S1). Following previous methods [29, 33], and un-
+less specified otherwise, GeoExplorer is only trained on the
+Masa dataset and evaluated on the others.
+Evaluation Metrics. We use the success ratio (SR) and
+step-to-the-goal (SG) for evaluation. Within a search bud-
+get B, if the agent reaches the goal, the attempt is considered
+successful. SR is defined as the ratio of successful localiza-
+tions to the total number of attempts. SG is the Manhattan
+distance between the path-end and goal locations. The eval-
+5
+
+
+=== PDF PAGE 6 ===
+uation is carried out over different distances C from the start
+to the goal location. The results of SG are provided in the
+supplementary materials (S4.7).
+Evaluation Settings. We evaluate GeoExplorer in four set-
+tings: 1) Validation: we evaluate the model on the same
+dataset as it is trained.
+2) Cross-domain transfer: the
+model trained on the Masa dataset is evaluated on an un-
+seen dataset using aerial view as goal modality. 3) Cross-
+modal generalization: the goal is presented from different
+modalities. 4) Unseen target generalization: to evaluate
+the models’ adaptation to the unseen targets, we evaluate
+the model on our SwissView dataset, with aerial view and
+ground-level images as goals.
+Implementation Details. Following [33], the search grid
+dimensions X and Y are set to 5, leading to 25 non-
+overlapping patches in a search area. The search budget
+B is set to 10 and the start-to-goal distance is chosen in a
+set C ∈{4, 5, 6, 7, 8}. α (Eq. 6) is set to 1 and β (Eq. 10)
+is set to 0.25 according to parameter analysis (see in sup-
+plementary materials S4.1). Eq. 8 is the default setting of
+intrinsic reward. We use the pretrained CLIP vision (ViT-
+b-32) and text encoders [30] as encoders for ground-level
+images and text descriptions. For aerial images, we use the
+Sat2Cap satellite encoder [9], which is fine-tuned to align
+with the CLIP vision encoder using contrastive learning.
+The pre-trained Falcon-7B model [1] is used as the causal
+Transformer in GeoExplorer, similarly to [33]. The hyper-
+parameter settings and model chosen follow the baselines
+to ensure a fair comparison. Detailed descriptions can be
+found in the supplementary materials (S2).
+Baselines. We compare GeoExplorer against:
+• Random policy, which randomly selects an action at each
+time step; PPO policy [36] selects actions based on the
+current observation.
+• Decision Transformer (DiT) [8], an RL pipeline trained
+with offline optimal trajectories with randomly generated
+{start, goal} pairs via action modeling.
+• AiRLoc [29], an RL-based model designed for unimodal
+AGL tasks. A goal-related sparse reward is used to guide
+model learning.
+• GOMAA-Geo [33], an RL-based method agnostic to mul-
+tiple goal modalities for AGL tasks. It involves pretrain-
+ing based on action modeling and an RL stage guided by
+distance-based extrinsic rewards.
+5. Results
+5.1. Numerical Results in the Evaluation Settings
+Validation.
+We first evaluate the models on the Masa
+dataset, i.e., the dataset used for training. Table 1 demon-
+strates that GeoExplorer outperforms all other comparison
+methods on the Masa dataset, particularly for longer search
+paths. Specifically, it achieves a success ratio improvement
+Table 1. Numerical results on the test set of the Masa dataset. The
+success ratio (SR) is reported with different start-to-goal distance
+C. The results of the baselines are taken from [33].
+Method
+C = 4
+C = 5
+C = 6
+C = 7
+C = 8
+Random policy
+0.1412
+0.0584
+0.0640
+0.0247
+0.0236
+PPO policy [36]
+0.1427
+0.1775
+0.1921
+0.2269
+0.2595
+AiRLoc [29]
+0.1786
+0.1561
+0.2134
+0.2415
+0.2393
+DiT [8]
+0.2011
+0.2956
+0.3567
+0.4216
+0.4559
+GOMAA-Geo [33]
+0.4090
+0.5056
+0.7168
+0.8034
+0.7854
+GeoExplorer
+0.4324
+0.5318
+0.8156
+0.9229
+0.9497
+Table 2. Generalization across domain and goal modalities on
+the MM-GAG dataset. The goal is presented as an aerial image
+(“I”), a ground-level image (“G”), or a text (“T”). Note that the
+models are only trained on the Masa dataset.
+Goal
+Method
+C = 4
+C = 5
+C = 6
+C = 7
+C = 8
+I
+Random policy
+0.1412
+0.0584
+0.0640
+0.0247
+0.0236
+PPO policy [36]
+0.1489
+0.1854
+0.1879
+0.2176
+0.2432
+AiRLoc [29]
+0.1745
+0.1689
+0.2019
+0.2156
+0.2290
+DiT [8]
+0.2023
+0.2856
+0.3516
+0.4190
+0.4423
+GOMAA-Geo [33]
+0.4085
+0.5064
+0.6638
+0.7362
+0.7021
+GeoExplorer
+0.4338
+0.5415
+0.7631
+0.8369
+0.8277
+G
+GOMAA-Geo [33]
+0.4383
+0.5150
+0.6808
+0.7489
+0.6893
+GeoExplorer
+0.4308
+0.5138
+0.7200
+0.8246
+0.7815
+T
+GOMAA-Geo [33]
+0.4000
+0.4978
+0.6766
+0.7702
+0.6595
+GeoExplorer
+0.4431
+0.4892
+0.7200
+0.8062
+0.7631
+of 0.0234 when C = 4 and 0.1643 when C = 8 compared to
+the baseline (GOMAA-Geo). Regarding reward design, ap-
+proaches employing dense rewards, such as GOMAA-Geo
+or GeoExplorer demonstrate a significant advantage over
+the baseline utilizing sparse rewards (e.g., AiRLoc). This
+highlights the importance of dense and timely guidance in
+the AGL process. Interestingly, we observe higher perfor-
+mance for larger C, even though we consider the task to be
+more challenging. This can be attributed to the limited vari-
+ability in configurations in these scenarios, which makes it
+easier for the model to overfit to the training data distribu-
+tion. (see supplementary materials (S5.1) for details).
+Cross-Domain Transfer. For an AGL agent, cross-domain
+transferability is crucial, as models are typically pre-trained
+on one dataset and subsequently deployed in an unseen
+environment. Here, we provide the results of the models
+trained on the Masa dataset and then deployed on two other
+datasets, but again with aerial view as the goal modality.
+For MM-GAG (Table 2), when the goal is presented as an
+aerial view (the first block ‘Goal = I’), GeoExplorer leads
+to the best overall performance, with a notable improve-
+ment of 0.0772 on average. Similarly, the results for the
+xBD dataset (shown in Table 3) confirm the effectiveness of
+GeoExplorer in cross-domain transfer setting, with an av-
+erage improvement of 0.0556 on the xBD-disaster subsets.
+Note that this setting is extremely challenging since the goal
+is presented as pre-disaster images.
+Cross-Modal Generalization. In real-world applications,
+6
+
+
+=== PDF PAGE 7 ===
+Table 3. Cross-domain transfer on the xBD-disaster dataset.
+Note that the models are only trained on the Masa dataset and the
+goal is always presented from the aerial view before the disaster.
+Method
+C = 4
+C = 5
+C = 6
+C = 7
+C = 8
+Random policy
+0.1412
+0.0584
+0.0640
+0.0247
+0.0236
+PPO policy [36]
+0.1132
+0.1146
+0.1292
+0.1665
+0.1953
+AiRLoc [29]
+0.1201
+0.1298
+0.1507
+0.1631
+0.1989
+DiT [8]
+0.1012
+0.2389
+0.3067
+0.3390
+0.3543
+GOMAA-Geo [33]
+0.4002
+0.4632
+0.6553
+0.7391
+0.6942
+GeoExplorer
+0.3975
+0.5025
+0.7185
+0.8190
+0.7923
+Table 4.
+Unseen objects generalization ability on the
+SwissViewMonuments dataset. ⋆corresponds to results obtained
+using the pretrained model [33].
+Method
+C = 4
+C = 5
+C = 6
+C = 7
+C = 8
+I
+GOMAA-Geo∗
+0.4027
+0.3833
+0.6267
+0.7278
+0.7833
+GeoExplorer
+0.4133
+0.5333
+0.7700
+0.8889
+0.8833
+G
+GOMAA-Geo∗
+0.4107
+0.3833
+0.6367
+0.7722
+0.7500
+GeoExplorer
+0.4160
+0.5167
+0.7733
+0.8778
+0.7833
+Table 5. Ablation study on the Masa dataset on state modeling
+and reward design. “MSE” and “COS” denote intrinsic reward
+based on mean squared error or cosine similarity, respectively.
+LAction
+LState
+rex
+t
+rin
+t
+C = 4
+C = 5
+C = 6
+C = 7
+C = 8
+✓
+✓
+0.4090
+0.5056
+0.7168
+0.8034
+0.7854
+✓
+✓
+✓
+0.3978
+0.4939
+0.7609
+0.8413
+0.8648
+✓
+✓
+MSE
+0.3888
+0.4938
+0.7408
+0.8615
+0.9140
+✓
+✓
+✓
+COS
+0.3955
+0.5385
+0.8134
+0.9050
+0.9352
+✓
+✓
+✓
+MSE
+0.4324
+0.5318
+0.8156
+0.9229
+0.9497
+the goal may be described using other modalities than aerial
+images. Experimental results on the MM-GAG dataset pre-
+sented in Table 2 suggest that with the same modality-
+specific encoders as used in GOMAA-Geo, GeoExplorer
+still shows better generalizability when the goal is described
+in ground-level images (second block ‘Goal = G’) and text
+(the third block ‘Goal = T’). With less direct informa-
+tion, GeoExplorer achieves performances comparable to the
+baseline on short paths, while significantly improving SR
+when the path is longer (0.0690 (ground-level images) and
+0.0610 (text) on average for C = {6, 7, 8}).
+Unseen Target Generalization. To assess the generaliza-
+tion ability of GeoExplorer and the baseline models, we
+design an unseen target generalization experiment on the
+SwissViewMonuments dataset. Unlike previous datasets,
+where goal patches were randomly selected, this dataset
+has fixed goal locations. As suggested in Table 4, Geo-
+Explorer exhibits an impressive generalization ability in lo-
+calizing unseen targets, especially when the path is long
+(e.g., for C = 6, improving 0.1433 when using aerial view
+and 0.1366 when using ground-level images).
+More re-
+sults from the SwissView dataset and evaluation using SG
+as metric are presented in supplementary materials (S4).
+5.2. Ablation Study
+We conduct ablation studies on the Masa dataset: first, we
+vary the training objectives in the DM stage to analyze the
+impact of the proposed Action-State Dynamics Modeling
+strategy (Eq. 6). Comparing Row 2 with Row 1, by adding
+state modeling loss, SR improves 0.0277 on average, which
+demonstrates the effectiveness of state transition model-
+ing on action prediction, especially for longer distances.
+Adding intrinsic reward without state modeling also shows
+improvements (0.0357 on average, Row 3 and 1), which
+indicates that state prediction without explicit supervision,
+even though inaccurate, still provides useful information for
+exploration. GeoExplorer with action-state dynamics mod-
+eling yields the best overall performance. With a learned
+state modeling, SR increases 0.0507 in average (Row 5 and
+3). We also test different configurations of the reward de-
+sign. Results show similar performance for the two reward
+designs, with an average SR difference of 0.0130. We no-
+ticed a slight performance drop on short paths (Row 1 and
+2/3). For shorter paths, the agent has limited steps to the
+goal, leaving less room for exploration, as it may lead to
+detours. Additionally, state modeling on short paths may be
+inaccurate due to limited history state observations.
+5.3. Does Intrinsic Reward Improve Exploration?
+Visualization of Exploration Ability. To better understand
+the exploration capabilities of GeoExplorer and the baseline
+GOMAA-Geo, we visualize the generated paths in Figure 5.
+In panel (a), we compare {start, goal} pairs with similar se-
+mantic content from two different search areas. When the
+distance between the start and the goal is short and easy
+to estimate, GOMAA-Geo successfully reaches the goal
+with the shortest path (upper example). However, in the
+lower example, where visually similar start and goal patches
+are located in different parts of the image, GOMAA-Geo
+struggles to accurately localize the goal, as it finds it more
+challenging to estimate the potential distance. In contrast,
+GeoExplorer succeeds, leveraging its action-state model-
+ing ability to differentiate between possible paths. In Fig-
+ure 5 (b), we reverse the {start, goal} patches to evaluate the
+model’s robustness. GOMAA-Geo fails to maintain robust-
+ness, while GeoExplorer benefits from its exploration abil-
+ity and successfully reaches the target irrespective of the
+search direction. The visited patch distribution shown in
+Figure 5 (c) provides a more comprehensive observation of
+the exploration ability: when C = 4, only 20.08% of the vis-
+ited patches are located in the central part of the search aera
+for GOMAA-Geo, while GeoExplorer increases this ratio
+to 30.79%, indicating a more comprehensive exploration.
+Those findings further confirm that Geoexplorer shows ro-
+bust, diverse, and content-related exploration ability.
+Analysis of Curiosity Patterns. We provide an in-depth
+analysis of the curiosity-driven intrinsic reward. In Figure 6
+7
+
+
+=== PDF PAGE 8 ===
+Figure 5. GeoExplorer shows robust, diverse, and content-related exploration ability. Given a pair of {start (◦), goal (△)} per search
+area, models generate four trials with stochastic policy (Sec. 3.5), randomly shown in four different colors. (a) Similar {start, goal} pairs
+with different distance. Despite the difficulties of estimating distance, GeoExplorer’s exploration ability maintains robust and diverse. (b)
+Reversed {start, goal} pairs in the same search area. GeoExplorer’s exploration is adaptive and robust to goal content irrespective of the
+search direction. (c) Statistics of visited patches by all generated paths for both models when the distance C = 4 and C = 8 in Masa test
+set. Numbers denote the counts of visits per patch. GeoExplorer develops a more comprehensive exploration covering the search area.
+Figure 6.
+Curiosity-driven intrinsic rewards provide dense,
+goal-agnostic, and content-related guidance to enhance the ex-
+ploration ability of GeoExplorer. Examples from the MM-GAG
+dataset targeting multiple goal modalities. (a) The goal of each
+example (column) is represented in different modalities. (b) Four
+trials, as well as average intrinsic rewards along the paths. (c) Av-
+erage intrinsic reward from four trials at the patch level.
+(b), we show four paths retrieved by our model and their
+corresponding average accumulated intrinsic reward (in the
+same colors as the path). As expected, we observe that tra-
+jectories visiting diverse image content (e.g., forest, city and
+river as in the green and blue trajectories) present higher
+average intrinsic rewards than those crossing forest patches
+only (e.g., the yellow trajectory). Figure 6 (c) presents the
+curiosity scores per patch. Note that for visualization, we
+normalize the intrinsic rewards. Curiosity-reward is nat-
+urally dense and content-related. Patches with higher in-
+trinsic reward turn out to be more “interesting”, i.e., the
+semantic content of these patches can hardly be predicted
+from the surrounding patches. For instance, the patch with
+the highest score in the right column example depicts the
+transition from a forest to an urban environment. These
+results show that curiosity-driven rewards provide dense,
+goal-agnostic, and content-related guidance, enhancing the
+exploration ability of GeoExplorer.
+6. Conclusion
+Adaptive and active exploration is a step toward develop-
+ing AGL in real-world search-and-recue operations. In this
+paper, we propose GeoExplorer, an AGL agent that ex-
+plores a search region with a combination of goal-oriented
+and curiosity-driven guidance based on comprehensive en-
+vironment modeling. The curiosity-driven reward is goal-
+agnostic and provides dense and reliable feedback by lever-
+aging the discrepancy between the state prediction and ob-
+servation to encourage exploration. Extensive experiments
+and analyses on four AGL benchmarks demonstrate that
+GeoExplorer outperforms state-of-the-art methods and ex-
+hibits remarkable transferability to unseen targets and en-
+vironments, highlighting its robust, generalizable, content-
+aware exploration ability driven by intrinsic curiosity.
+8
+
+
+=== PDF PAGE 9 ===
+Acknowledgement
+We thank the anonymous reviewers for their constructive
+and thoughtful comments. We thank Silin Gao, Valentin
+Gabeff, Chang Xu, Filip Dorm, Syrielle Montariol, and
+Sepideh Mamooler for providing helpful feedback on ear-
+lier versions of this work.
+We acknowledge the support
+from the CSC and EPFL Science Seed Fund, and the project
+“Transforming underwriting for commercial insurance with
+high-resolution remote sensing”, between EPFL and AXA
+Group Operations Switzerland AG. AB gratefully acknowl-
+edges the support of the Swiss National Science Foundation
+(No. 215390), Innosuisse (PFFS-21-29), the EPFL Center
+for Imaging, Sony Group Corporation, and a Meta LLM
+Evaluation Research Grant.
+9
+
+
+=== PDF PAGE 10 ===
+Supplementary Materials
+The supplementary materials are organized as follows:
+• Dataset details (Section S1).
+• Implementation details (Section S2).
+• Comparison of AGL and related tasks (Section S3).
+• Supplementary experiments: parameter analysis, ex-
+periments on varying budget and larger grid size, evalua-
+tions using step-to-the-goal as metric, and supplementary
+results (Section S4).
+• Supplementary analysis: path analysis, additional visu-
+alization samples and failure case analysis (Section S5).
+• Discussions: limitations and future work (Section S6).
+S1. Datasets Details
+S1.1. Massachusetts Buildings (Masa) Dataset
+Data Collection.
+The Massachusetts Buildings (Masa)
+dataset [25] consists of 1188 high resolution images of
+the Boston area. Building footprint annotations were ob-
+tained by rasterizing data from the OpenStreetMap project.
+Dataset Composition. The dataset is split in 70% for train-
+ing (832 images), 15% for testing and evaluation (178 for
+validation and 179 for testing) [29, 33]. Each image, or
+search area, is structured as a 5 × 5 grid of search cells,
+with 300 × 300 pixels per grid cell. During training, data
+augmentation is applied through top-right and left-right flip-
+ping, and each search area allows for 25 start positions with
+24 possible goal locations, leading to approximately 2 mil-
+lion unique training trajectories. For testing and validation,
+only a fixed configuration is randomly selected per start-to-
+goal distance and per search area, ensuring 895 fixed test
+trajectories.
+S1.2. MM-GAG Dataset
+The MM-GAG dataset [33] was constructed to address the
+limitations of existing datasets for Active Geo-localization
+(AGL), which often lack precise coordinate annotations and
+meaningful goal representations across diverse modalities.
+Multi-Modal Goal Representations. Unlike many exist-
+ing datasets that focus solely on aerial-to-aerial or aerial-
+to-ground localization, MM-GAG introduces multi-modal
+goal representations:
+• Aerial Imagery,
+• Ground-Level Imagery,
+• Natural Language Descriptions.
+Data Collection. The MM-GAG dataset was built by col-
+lecting high-quality geo-tagged images from smartphone
+devices across diverse locations. Images have been filtered,
+resulting in 73 distinct search areas. Note that through the
+link provided in the original paper1, we only find 65 search
+areas. To ensure fair comparison, we evaluate the proposed
+1https://huggingface.co/datasets/MVRL/MM-GAG/tree/main
+method and the pretrained baseline model provided in the
+original paper in Section S4. For each of the 73 ground-
+level images, high-resolution satellite image patches were
+retrieved at 0.6m per pixel resolution. From these patches,
+5 × 5 search grids with 256 × 256 pixels per grid cell
+were constructed.
+To generate textual goal descriptions,
+each ground-level image was automatically captioned us-
+ing LLaVA-7B [20]. The captioning prompt was carefully
+designed to ensure concise and relevant descriptions.
+Dataset Composition.
+Trajectories are selected by ran-
+domly sampling start and goal locations within each of the
+73 search areas, ensuring a diverse range of search scenar-
+ios. For each area, five {start, goal} pairs are chosen for
+every predefined distance category, resulting in a total of
+365 evaluation trajectories per start-to-goal distance.
+S1.3. xBD Dataset
+The xBD dataset [15] is a large-scale aerial imagery dataset
+designed for disaster analysis. It contains images captured
+before (xBD-pre) and after (xBD-disaster) various natural
+disasters such as wildfires, floods, and earthquakes.
+Data Collection. Imagery for the original xBD dataset was
+sourced from the Maxar/DigitalGlobe Open Data Program2,
+which provides high-resolution satellite images for major
+crisis events. The dataset includes imagery from 19 natural
+disasters across 45, 361.79 km² of affected areas. A total of
+22, 068 images were collected, covering 850, 736 human-
+annotated building polygons.
+Dataset Composition. For the specific task of AGL, 800
+bitemporal search areas (one image before and one im-
+age after the disaster) have been selected from the original
+dataset. Each search area corresponds to a 5 × 5 search
+grid with 300 × 300 pixels per grid cell. Trajectories are
+obtained by randomly sampling 5 pairs of start and goal lo-
+cation per start-to-goal distance, resulting in 4000 evalua-
+tion trajectories per start-to-goal distance.
+S1.4. SwissView Dataset
+Data Collection.
+The SwissView dataset consists in
+two complementary components:
+SwissView100 and
+SwissViewMonuments. For SwissView100, a total of 100
+images were randomly sampled across the entire territory
+of Switzerland, sourced from Swisstopo’s SWISSIMAGE
+10 cm database3. The spatial distribution of the images is
+provided in Figure S2. The original images, with a spa-
+tial resolution of 0.1 meters per pixel and dimensions of
+10, 000 × 10, 000 pixels, were downsampled to a resolu-
+tion of 0.6 meters per pixel, resulting in 1500 × 1500 pix-
+els images. These downsampled images were subsequently
+partitioned into 5 × 5 patches, each measuring 300 × 300
+2https://www.digitalglobe.com/
+3https://www.swisstopo.admin.ch/fr/orthophotos-swissimage-10-cm
+10
+
+
+=== PDF PAGE 11 ===
+Figure S1. Additional examples from the proposed SwissViewMonuments dataset with unseen targets. From up to down: goal
+presented as ground-level images, goal presented in aerial view, and the search areas.
+pixels. For SwissViewMonuments, the procedure is iden-
+tical, if only for the choice of images. For this part of the
+dataset, 15 specific areas of Switzerland have been care-
+fully selected for their atypical constructions or landscapes.
+We consider targets from two categories: 1) object unique-
+ness: landmarks or localizable architectures; 2) location
+and scene uniqueness: unseen scene classes. The result-
+ing dataset, for example, includes images from remarkable
+buildings such as cathedrals and castles, and rare landscapes
+like glaciers. Besides the aerial view of the search area, we
+also provide the corresponding ground-level images and its
+location associated to the aerial view. A few examples from
+the SwissViewMonuments dataset are shown in Figure S1.
+Dataset Statistics.
+The location of the selected areas is
+also given in Figure S2. Samples from the SwissView100
+dataset (in red) are distributed among the region and sam-
+ples from the SwissViewMonuments (in blue) are chosen
+from cities, tourist attractions and nature reserves.
+11
+
+
+=== PDF PAGE 12 ===
+Figure S2.
+Geographic distribution of the images from the
+SwissView dataset. Red points indicate the locations of the 100
+randomly sampled images from the SwissView100 subset, while
+blue points represent the images from the SwissViewMonuments
+subset.
+Dataset Composition.
+To generate trajectories for the
+SwissView100 subset, we followed a similar approach to
+other datasets by randomly generating 5 {start, goal} pairs
+for each trajectory and each start-to-goal distance, result-
+ing in 500 trajectories per distance considered. In contrast,
+for the SwissViewMonuments subset, we provide 25 shifted
+aerial views for each aerial-ground pair (15×25 samples in
+total), fixing the goal at all positions in a 5 × 5 grid. For
+each specified start-to-goal distance C ∈{4, 5, 6, 7, 8}, we
+randomly select one starting point per sample that satisfies
+the given distance relative to the fixed goal. Samples with
+goal positions that do not permit any valid starting point at
+a given distance are excluded from the evaluation for that
+distance. This process results in {375, 360, 300, 180, 60}
+configurations for distances C in {4, 5, 6, 7, 8}, respectively.
+S2. Implementation Details
+This section provides an overview of the implementa-
+tion details, including the pretrained models used for text,
+ground-level, and aerial image encoding, as well as the
+causal transformer used for action-state modeling.
+Note
+that apart from the action-state dynamics modeling and
+curiosity-driven component of our model, the implementa-
+tion and training parameters remain consistent with those
+outlined in the work of Sarkar et al. [33], which serves as
+the baseline for our study.
+Text and Ground-level Image Encoders.
+To encode text
+descriptions and ground-level images of the goal, we use
+the pretrained encoders from the CLIP model [30], with the
+same pretrained weights used in [33], which are available on
+Hugging Face4. Specifically, the vision encoder is a Vision
+Transformer (ViT-b-32), and the text encoder is based on
+4https://huggingface.co/openai/clip-vit-base-patch32
+the BERT architecture, both of which are aligned in a shared
+multimodal embedding space through contrastive learning.
+These encoders remain frozen during training of the Geo-
+Explorer model.
+Aerial Image Encoder.
+The aerial images are processed
+with the Sat2Cap satellite encoder [9], which is fine-tuned
+to align its feature representations with the CLIP embedding
+space. The alignment is performed using contrastive learn-
+ing with the InfoNCE loss [27], leveraging a large-scale
+dataset of paired aerial and ground-level images. Note that
+the CLIP image encoder remains frozen during this finetun-
+ing of the aerial image encoder. This alignment ensures that
+the features extracted from the aerial images share the same
+representation space as the features from the text descrip-
+tions and ground-level images. We use the same pretrained
+weights for Sat2Cap as the reference work [33], which can
+be found on Hugging Face5.
+Causal Transformer.
+For the Causal transformer used for
+sequential action and state prediction, we employ a pre-
+trained Falcon-7B model [1]. The pretrained weights can
+be found on Hugging Face6. We follow the multi-modal
+projection layer introduced in GOMAA-Geo [33], to align
+the visual and language modalities into the latent space of
+the Falcon-7B model. Additionally, relative position encod-
+ings, measured with respect to the top-left position of the
+image, are incorporated into each state representation, al-
+lowing the model to encode spatial relationships between
+observed aerial images. Note that the primary distinction
+from the work of Sarkar et al. [33] is that, in our approach,
+both states and actions are predicted sequentially, rather
+than solely predicting actions. However, the overall struc-
+ture remains unchanged. The Causal transformer is trained
+using a learning rate of 1e −4, a batch size of 1, and the
+Adam optimizer over 300 epochs. We followed the settings
+in GOMAA-Geo [33] to ensure a fair comparison.
+PPO.
+During the Curiosity-Driven Exploration (CE)
+phase, we introduce an action prediction head on top of
+the frozen pretrained Causal Transformer. Since the Causal
+Transformer alone does not inherently model decision poli-
+cies, the addition of the action prediction head is crucial, as
+it allows the system to explicitly learn a mapping from the
+learned state representations to the concrete actions to take.
+The action prediction head is implemented using an actor-
+critic framework and optimized using the Proximal Pol-
+icy Optimization (PPO) [36]. This framework consists of
+an actor network responsible for policy learning, πθ(a|st)
+5https://huggingface.co/MVRL/Sat2Cap
+6https://huggingface.co/openai/clip-vit-base-patch16
+12
+
+
+=== PDF PAGE 13 ===
+Figure S3. Model architecture of the actor-critic network (action
+prediction head).
+and a critic network vψ(st) that evaluates the expected to-
+tal reward from state st. As shown in Figure S3, the actor
+and critic networks are implemented as Multi-Layer Percep-
+trons (MLPs) with three hidden layers. Each hidden layer is
+followed by a tanh activation function. The final layer of
+the actor network includes a softmax activation to output
+a probability distribution over actions, ensuring valid action
+selection. The critic network outputs a single scalar value
+representing the estimated value function.
+At each time step t (which specifies the time index in
+[0, T]), with the state representation st, the learning process
+of PPO can be described as:
+(1) The actor chooses an action ˆat ∼πθ (a|st), where a ∈
+A is an action from avaliable action set.
+(2) The agent executes the action in the environment and
+obtains the new state st+1 and reward rCE
+t
+.
+(3) The value, i.e. the total reward from state st is calcu-
+lated by the critic vψ(st).
+(4) The return, i.e. the total reward from taking action ˆat
+from state st is calculated:
+  q(s _t,\ h
+a
+t
+ {a}
+_t)
+ 
+&= 
+\s
+u m _ {t^
+{
+\pri
+m e }
+=
+t }^T 
+E_{ \ pi 
+_ \t heta }\
+l ef t  [ r^{CE}_ {t^{\prime }}\mid s_t, \hat {a}_t\right ] \\ \notag &=r^{\mathit {\text {CE}}}_t + \gamma r^{\mathit {\text {CE}}}_{t+1} + ... \\ & + \gamma ^{T-t+1} r^{\mathit {\text {CE}}}_{T-1} + \gamma ^{T-t}v_\psi (s_{T}). \notag
+(5) The advantage function At is calculated to estimate
+how much better (or worse) an action ˆat is compared
+to the average performance expectation at state st:
+  A _t = q(s_ t ,\hat {a}_t) - v_\psi (s_t). 
+(12)
+(6) The actor and critic are updated.
+We update both the actor and critic networks using the
+PPO loss function, which consists of three main compo-
+nents:
+• Actor loss (clipped surrogate objective), which compares
+the probabilities from the old and the updated policies and
+will constrain the policy change in a small range:
+  \mat h cal
+ {L
+}_{\te
+xt {Act
+o
+r } }=  \ mi
+n 
+\left 
+\
+{\
+f
+rac {\pi _\theta }{\pi _{\theta ,\text {old}}}A_t, \: \text {clip}\left (1-\epsilon , 1+\epsilon , \frac {\pi _\theta }{\pi _{\theta ,\text {old}}}\right )A_t\right \}. 
+(13)
+• Critic loss, which measures how well the model predicts
+the expected reward:
+  \math c al {L}_ { \text  {Critic}}=(v_\psi (s_t)-q(s_t,\hat {a}_t))^2. 
+(14)
+• Entropy regularization, which encourages policy explo-
+ration by preventing premature convergence to subopti-
+mal policies:
+  \ma thca l  
+{
+H
+}\left [ \pi  _\theta \right ](s_t)=-\sum _a \pi _\theta (a|{s_t}) \log \pi _\theta (a|{s_t}). 
+(15)
+The final loss function used for optimization is:
+  \m a t hcal {L} _ \text {P P O}= \mathbb {E}\left [-\mathcal {L}_{\text {Actor}}+ \omega \mathcal {L}_{\text {Critic}} + \rho \mathcal {H}\right ], 
+(16)
+where ω and ρ are hyperparameters controlling the balance
+between policy learning, value estimation, and exploration.
+We choose the hyperparameters to be consistent with the
+baseline model [33]. The learning rate is set to 1e−4 and the
+batch size is 1. The model is trained for 300 epochs using
+the Adam optimizer. The values for the hyperparameters α
+and β are set to 0.5 and 0.01, respectively. The clipping
+ratio ϵ is chosen to be 0.2 and the discount factor γ is set to
+0.99 for all experiments. As in [33], we copy the parameters
+of πθ onto πθ,old every 4 epochs of policy training. For CE
+stage, patches are resized to 224 × 224 and normalized.
+S3. Comparison of AGL and Related Tasks
+The following section provides a comparison of four related
+tasks: Active Geo-Localization, Visual Geo-Localization,
+Cross-View Geo-Localization, and Visual Navigation.
+It
+highlights their characteristics and differences, as well as
+associated challenges.
+Active Geo-Localization.
+Active Geo-Localization aims
+at locating a target by exploring an environment using a
+sequence of visual aerial observations [29]. This task is
+especially important in applications such as search-and-
+rescue [29, 33], where efficient exploration is crucial for
+success. Unlike Visual Geo-Localization [51], where local-
+ization relies solely on unique and static observations, AGL
+involves movement of an agent to refine position estimates
+and ultimately reach the goal. Generally, the goal can be
+specified with different modalities, such as images or text
+descriptions [29, 33]. Reinforcement learning is often used
+to define the agent’s exploration strategy, guiding it towards
+the predefined target.
+13
+
+
+=== PDF PAGE 14 ===
+Visual Geo-Localization.
+The task of Visual Geo-
+Localization [51] is linked to the task of Active Geo-
+Localization in the sense that both aim at determining a
+location based on a given image.
+However, while Ac-
+tive Geo-Localization uses an agent to explore the environ-
+ment to refine its position and reach the goal, visual geo-
+localization depends on single inputs, such as images or
+video frames, without the need for an agent to move [2, 42].
+The input image’s location is estimated by comparing the
+observed images to an existing database of geotagged im-
+ages, often leveraging image-retrieval techniques [4, 5]. Vi-
+sual geo-localization can operate in various settings, from
+small-scale areas like specific streets [2] to large urban en-
+vironments [4], depending on the breadth of the dataset
+used. Common applications include mobile device localiza-
+tion [7] or autonomous vehicles using street-view data [10].
+Cross-View Geo-Localization.
+The task of cross-view
+geo-localization aims at localizing a ground-level image
+by retrieving its corresponding geo-tagged aerial view [47,
+47, 52, 54].
+Especially, fine-grained cross-view geo-
+localization [13, 38, 39, 44, 49] requires estimating the 3
+Degrees of Freedom (DoF) pose of a query ground-level
+image on an aerial image, which is similar to the AGL set-
+ting. Although related, cross-view geo-localization requires
+full access to the search area to perform matching, while
+AGL only provides the agent with partial visibility to the
+search area from the outset and performs observation only
+along the exploration trajectory.
+Visual Navigation.
+Visual navigation [3, 18, 37] is sim-
+ilar to Visual Geo-Localization as both tasks involve an
+agent exploring its environment to reach a predefined goal.
+However, unlike Visual Geo-Localization, which functions
+in aerial, i.e., bird-eye-view environments, visual naviga-
+tion typically operates in a ground-level environment. De-
+spite the similarities, Active Geo-Localization presents its
+unique challenges compared to Visual Navigation. One key
+difference is that, in Active Geo-Localization, the goal may
+not be visible to the agent in advance or even presented in
+different modalities from the agent observation, which intro-
+duces a level of uncertainty and complexity. Moreover, the
+environment may change abruptly between two actions, as
+the agent can quickly transition from one type of terrain to
+another (such as moving from an urban region to a wooded
+area) due to the larger spatial scope of observations at each
+step. In contrast, the environment in which the agent oper-
+ates is more localized in visual navigation, which allows for
+more accurate location estimation and easier navigation.
+Vision-Language Navigation.
+Vision-language naviga-
+tion (VLN) [14, 45], especially Aerial VLN [12, 21], is
+linked to AGL as both tasks provide multimodal guidance
+to the agent to reach a goal in an environment. Unlike AGL,
+VLN performs the navigation in a continuous space in terms
+of both observation and action, which poses an additional
+challenge. However, AGL also has its unique challenges
+compared to VLN. Since VLN assumes that the instructor
+knows the goal’s location, the natural language instructions
+are detailed throughout the navigation and typically corre-
+spond to the agent’s actions (e.g.,“turn right”). In AGL, the
+only guidance provided is the goal information, making the
+setting more challenging due to the sparse reward and ac-
+cumulated errors in a goal-reaching reinforcement learning
+context. Moreover, the mainstream methods of VLN are
+based on sequence modeling and prediction, which differs
+from the RL pipeline in AGL.
+S4. Supplementary Experiments
+S4.1. Parameter Analysis
+The impact of loss weight α.
+We use loss weight α to
+balance the contribution of action modeling loss and state
+modeling loss. To evaluate the effectiveness of different ab-
+lations, we randomly generate the action-state trajectories
+with the optimal actions for each time step on the test set of
+the Masa dataset, following the steps described in Section
+3.3 of the main paper. Then, we evaluate the models to pre-
+dict optimal actions at each step of the trajectory. We use
+random seeds to ensure the same trajectories are tested for
+all the methods in a test, and we evaluate the models on 5
+different tests. The action prediction accuracy for each test
+as well as the average prediction among 5 tests are reported
+in Table S1. Among most of the tests except test 1, adding
+state modeling loss leads to a better action prediction per-
+formance, which confirms the fact that state and action tran-
+sitions are inherently interconnected and dynamically influ-
+encing each other. When α = 1, the model achieves best
+overall performance with an improvement of 0.0271 over
+the baseline with only the action modeling loss (α = 0).
+The impact of reward weight β.
+We also control the im-
+pact of intrinsic reward on the final reward by using reward
+weights β.
+Results in Table S2 suggest a good balance
+should be achieved between the goal-oriented extrinsic re-
+ward, which directs the agent to the goal and the curiosity-
+driven intrinsic reward, which encourages the agent to ex-
+plore the environment.
+The empirical results show that
+when β = 0.25, the agent balances the guidance from ex-
+trinsic goal and intrinsic curiosity best.
+S4.2. Results on the xBD dataset
+We present the supplementary results on the xBD dataset
+in Table S3. The results show a small performance gap of
+GeoExplorer between the two subsets (0.0149 on average),
+indicating the generalization ability of the model.
+14
+
+
+=== PDF PAGE 15 ===
+Table S1. Parameter analysis of loss weight α on the test set of
+the Masa dataset. The action prediction accuracy is reported for
+the DM stage. α = 0 denotes the baseline with action modeling
+loss only.
+α
+Test 1
+Test 2
+Test 3
+Test 4
+Test 5
+Average
+0
+0.6056
+0.1883
+0.0838
+0.6953
+0.1429
+0.3432
+0.5
+0.5162
+0.1708
+0.1133
+0.7034
+0.1429
+0.3293
+1
+0.5777
+0.2602
+0.0407
+0.8299
+0.1429
+0.3703
+2
+0.5687
+0.2179
+0.0064
+0.8055
+0.1524
+0.3502
+Table S2. Parameter analysis of reward weight β on the test set
+of the Masa dataset. β = 0 denotes the baseline with extrinsic
+reward only.
+β
+C = 4
+C = 5
+C = 6
+C = 7
+C = 8
+0
+0.3978
+0.4939
+0.7609
+0.8413
+0.8648
+0.25
+0.4324
+0.5318
+0.8156
+0.9229
+0.9497
+0.5
+0.3597
+0.4849
+0.7687
+0.9073
+0.9587
+1
+0.3988
+0.4983
+0.7542
+0.9028
+0.9352
+S4.3. Results on the SwissView100 dataset
+The
+proposed
+SwissView
+dataset
+has
+two
+subsets:
+SwissViewMonuments for unseen target generalization
+evaluation and SwissView100 for cross-domain transfer
+evaluation. We present the results from the former setting in
+the main paper and the latter one in this section. As stated
+before, the test setting for SwissView100 dataset is the same
+as the cross-domain transfer setting on the MM-GAG Aerial
+and xBD dataset: the model is only trained on the Masa
+dataset and the goal is presented in aerial view. As shown
+in Table S4, the model faces domain shifts across datasets:
+Compared with the performance on the Masa dataset, the
+performance of both methods decreases 0.0375 on average.
+However, GeoExplorer still outperforms the baseline, sug-
+gesting a better cross-domain transferability.
+S4.4. Supplementary results on the MM-GAG
+dataset
+As mentioned in Section S1, only 65 search areas are found
+through the link provided by the paper.
+To ensure fair
+comparison, we evaluate GeoExplorer and the pre-trained
+GOMAA-Geo on the same test configurations and report
+the results in Table S5. We also report the GOMAA-Geo
+performance from the original paper for reference. The re-
+sults suggest similar observations with 65 and 73 search ar-
+eas: GeoExplorer achieves performances comparable to the
+baseline on short paths, while significantly improving SR
+when the path is longer.
+S4.5. Exploration with varying search budget
+Search budget (B) is an important factor in AGL. To give
+further insights on its impact on the exploration behaviour,
+Figure S4. Comparison between GeoExplorer and the baseline
+model with varying search budget when C = 6.
+we compare GeoExplorer and the baseline model GOMAA-
+Geo with varying B, when C = 6 in Figure S4. As expected,
+as B increases, the performance of both models improves,
+as the tolerance for mistakes is higher. More interestingly,
+the advantage of GeoExplorer is more obvious when B in-
+creases (0.0603 when B = 6 while 0.0850 when B = 12),
+as it allows more exploration during the localization pro-
+cess.
+S4.6. Exploration with larger grid size
+We compare GeoExplorer and GOMAA-Geo [33] on a grid
+size of 10 × 10 with C = {14 −18}, providing more
+variability for longer paths. As shown in Table S6, Geo-
+Explorer consistently shows improvements, especially for
+longer paths, which aligns with results tested on 5×5. Note
+that all the models are retrained for the grid size of 10 × 10.
+S4.7. Step-to-the-goal (SG) Evaluation
+Besides the commonly used metric success ratio (SR) in
+AGL, we also provide step-to-the-goal (SG) to evaluate the
+Manhattan distance between the path-end and goal loca-
+tions on the SwissView dataset. Results in the Table S7
+indicate that GeoExplorer improves success rate and brings
+the agent much closer to the goal.
+S5. Suppelmentary Analysis
+S5.1. Path statistics
+We provide an in-depth analysis of the exploration ability
+of the model by tracking the visited patches of the baseline
+model and GeoExplorer. In Figure S5 (a), we count the end
+location of 895 paths from the Masa test set for the ground
+truth (goal location), GOMAA-Geo and GeoExplorer. The
+results confirm that 1) for C = 4 the goal locations are more
+evenly distributed in the search area while the configura-
+tions are limited for C = 8. This could explain why we usu-
+ally have higher performance when C = 8. As the trajectory
+15
+
+
+=== PDF PAGE 16 ===
+Table S3. Cross-domain transfer on the xBD-pre and xBD-disaster datasets. Note that the models are only trained on the Masa dataset
+and the goal is always presented from the aerial view before the disaster for both datasets.
+Evaluation using xBD-pre Dataset
+Evaluation using xBD-disaster Dataset
+Method
+C = 4
+C = 5
+C = 6
+C = 7
+C = 8
+C = 4
+C = 5
+C = 6
+C = 7
+C = 8
+Random policy
+0.1412
+0.0584
+0.0640
+0.0247
+0.0236
+0.1412
+0.0584
+0.0640
+0.0247
+0.0236
+PPO policy [36]
+0.1237
+0.1262
+0.1425
+0.1737
+0.2075
+0.1132
+0.1146
+0.1292
+0.1665
+0.1953
+AiRLoc [29]
+0.1191
+0.1254
+0.1436
+0.1676
+0.2021
+0.1201
+0.1298
+0.1507
+0.1631
+0.1989
+DiT [8]
+0.1132
+0.2341
+0.3198
+0.3664
+0.3772
+0.1012
+0.2389
+0.3067
+0.3390
+0.3543
+GOMAA-Geo [33]
+0.3825
+0.4737
+0.6808
+0.7489
+0.7125
+0.4002
+0.4632
+0.6553
+0.7391
+0.6942
+GeoExplorer
+0.3973
+0.4990
+0.7328
+0.8390
+0.8363
+0.3975
+0.5025
+0.7185
+0.8190
+0.7923
+Table
+S4.
+Cross-domain
+transfer
+evaluation
+on
+the
+SwissView100 subset of SwissView dataset.
+Method
+C = 4
+C = 5
+C = 6
+C = 7
+C = 8
+GOMAA-Geo∗
+0.4100
+0.5000
+0.6580
+0.7780
+0.6880
+GeoExplorer
+0.4020
+0.5120
+0.7660
+0.9040
+0.8800
+Table S5. Supplementary results on the MM-GAG dataset with
+65 search areas. The goal is presented as an aerial image (“I”), a
+ground-level image (“G”), or a text (“T”). Results from the original
+paper are in gray and ∗denotes the results on the same configura-
+tions using pretrained model provided by the paper.
+Goal
+Method
+C = 4
+C = 5
+C = 6
+C = 7
+C = 8
+I
+GOMAA-Geo [33]
+0.4085
+0.5064
+0.6638
+0.7362
+0.7021
+GOMAA-Geo∗
+0.4246
+0.4769
+0.7385
+0.7662
+0.6369
+GeoExplorer
+0.4338
+0.5415
+0.7631
+0.8369
+0.8277
+G
+GOMAA-Geo [33]
+0.4383
+0.5150
+0.6808
+0.7489
+0.6893
+GOMAA-Geo∗
+0.4585
+0.4554
+0.6646
+0.7169
+0.6708
+GeoExplorer
+0.4308
+0.5138
+0.7200
+0.8246
+0.7815
+T
+GOMAA-Geo [33]
+0.4000
+0.4978
+0.6766
+0.7702
+0.6595
+GOMAA-Geo∗
+0.4277
+0.5015
+0.6523
+0.7538
+0.6677
+GeoExplorer
+0.4431
+0.4892
+0.7200
+0.8062
+0.7631
+Table S6.
+Comparison between GeoExplorer and the baseline
+model with larger grid size on the Masa dataset. Note that all
+the methods are trained on the 10×10 grid size. ⋆⋆corresponds to
+results obtained from the re-trained model using official code [33].
+Method
+C = 14
+C = 15
+C = 16
+C = 17
+C = 18
+GOMAA-Geo⋆⋆
+0.2603
+0.2704
+0.2916
+0.2413
+0.2201
+GeoExplorer
+0.2883
+0.3117
+0.3352
+0.3073
+0.3151
+Table S7. Step-to-the-goal evaluation of unseen objects gener-
+alization ability on the SwissViewMonuments dataset. ⋆corre-
+sponds to results obtained from the pretrained model [33].
+Method
+C = 4
+C = 5
+C = 6
+C = 7
+C = 8
+I
+GOMAA-Geo⋆
+2.16
+1.91
+1.18
+0.93
+0.77
+GeoExplorer
+2.08
+1.56
+0.65
+0.28
+0.30
+G
+GOMAA-Geo⋆
+2.19
+1.81
+1.07
+0.69
+0.77
+GeoExplorer
+2.14
+1.51
+0.64
+0.29
+0.70
+grows, the agent may infer that the goal is likely located at
+the corner, based on the training data distribution. 2) The
+path end distribution of the baseline model suggests a ten-
+dency to visit edge patches (with 84.36% of paths ended
+on the edge patches when C = 4), while GeoExplorer im-
+proves the exploration of inside patches. The visited patch
+distribution shown in Figure S5 (b) confirms this observa-
+tion: when C = 4, only 20.08% of the visited patches are
+inside for GOMAA-Geo and GeoExplorer increases this ra-
+tio as 30.79%. This finding indicates that Geoexplorer im-
+proves the performance on the AGL benchmarks by a better
+exploration ability of the environment.
+S5.2. Failure case analysis
+We check and analyze the failure cases of GeoExplorer.
+Examples shown in Figure S6 imply two main reasons of
+failure: (a) Insufficient target information and (b) Homoge-
+nized search area. In Figure S6 (a), the goals are located in
+the water and are very similar to the surrounding patches,
+providing limited localization information. Along the gen-
+erated path, several similar patches have been visited, but
+not the target patch. In Figure S6 (b), all patches are similar
+in the search area (e.g., similar building patches in an urban
+area or mountain patches), which could probably mislead
+the exploration process.
+S5.3. Additional path visualization examples
+To further support our findings, we provide additional
+visualization examples from the SwissViewMonuments
+dataset (Figure S7), the Masa dataset (Figure S8) and the
+SwissView100 dataset (Figure S9). These figures illustrate
+key aspects of GeoExplore’s performance, in particular in
+terms of adaptation to new environments and targets and
+better exploration strategies, and confirm the quantitative
+results presented before.
+In particular, the three figures
+show that (1) GeoExplorer achieves higher success rates
+(SR) and generalizes better in novel environments (Fig-
+ure S9, SwissView100 examples) and when faced with un-
+usual and unseen goals (Figure S7, SwissViewMonuments
+examples).
+(2) GeoExplorer produces also more diverse
+paths, while the baseline model (GOMAA-Geo) tends to
+16
+
+
+=== PDF PAGE 17 ===
+Figure S5. GeoExplorer tends to explore more patches in the search areas, especially the inside patches. (a) Statistics of the path end.
+We count the end location of the 895 paths in the Masa dataset test set for ground truth (goal location), GOMAA-Geo and GeoExplorer
+when C = 4 and C = 8. (b) Statistics of the path visited. We count all the visited patches of 895 paths in the Masa dataset test set for
+GOMAA-Geo and GeoExplorer when C = 4 and C = 8.
+Figure S6. Failure case analysis. (a) Insufficient target informa-
+tion. The target provides limited information for the localization.
+(b) Homogenized search area. Patches in the search area are simi-
+lar and could mislead the exploration.
+follow edge patches, often navigating towards corners be-
+fore heading to the goal. This aligns with the statistical
+observations made in the main paper, which highlighted
+that the goals were more frequently located on the edges
+and corners and may lead GOMAA-Geo to overfit in these
+areas. (3) Visualization samples also indicate the robust-
+ness of GeoExplorer’s exploration.
+The right panels of
+Figures S8 illustrate how a slight change in the goal lo-
+cation affects the exploration process for both the Masa
+dataset. GeoExplorer seems to be more robust and adapt
+its exploration, demonstrating diverse and flexible path se-
+lection. In contrast, the baseline model tends to follow sim-
+ilar paths regardless of these small changes. The right pan-
+els of Figure S9 show another controllable configuration on
+the SwissView100 dataset, where we reverse start and goal
+locations between the upper and lower examples, which
+demonstrates GeoExplorer’s exploration is more robust to
+this reversion. Moreover, the images in the two figures are
+sourced from different platforms, have varying resolutions,
+and depict different locations. This highlights how the pro-
+posed dataset enhances data diversity for the task.
+S5.4. Additional intrinsic reward visualization ex-
+amples
+To provide further insights to the intrinsic reward, we pro-
+vide additional samples from the SwissViewMonuments
+dataset in Figure S10. The patches with higher intrinsic re-
+wards are usually unique patches in the search area (e.g.,
+the first example of the right column: a green land in an
+urban region) or the surprising sample along the path (e.g.,
+17
+
+
+=== PDF PAGE 18 ===
+the first example of the left column: moving from an urban
+patch to river). The findings indicate the intrinsic rewards
+are content-aware and improve the model’s exploration abil-
+ity with dense and goal-agnostic guidance.
+S6. Discussion
+As an emerging research topic, the task configuration of
+AGL still includes some limitations: (1) Continuous state
+and action space. Currently, AGL considers a grid-like en-
+vironment space for states and actions. For example, differ-
+ent states have no overlaps and actions are chosen from a
+discrete space. This setting could be further improved as a
+continuous space for both states and actions to meet the re-
+quirements of real-world search-and-rescue operations. (2)
+Real-world development. When developing the models on
+an UAV agent, there are some other challenges, for exam-
+ple, the noisy ego-pose of the agent and the observation de-
+formation. Those challenges should also be considered for
+further real-world development of AGL tasks.
+As for the methodology, the proposed Curiosity-Driven
+Exploration has shown impressive exploration ability for
+the AGL task, and would encourage future work to further
+understand the exploration pattern of an agent. For exam-
+ple, an in-depth study and analysis of how intrinsic reward
+affects extrinsic reward and a comprehensive analysis of
+how to combine those two motivations would further pro-
+vide insights to not only AGL but also other goal-reaching
+reinforcement learning tasks.
+18
+
+
+=== PDF PAGE 19 ===
+Figure S7. Path visualization from the SwissViewMonuments dataset with goals presented in aerial and ground views.
+Figure S8. Path visualization from the Masa dataset test set with goals presented in aerial view. On the right, we show examples with
+more controllable {start, goal} configuration: the location of the goal patches changed slightly and the start patch remains the same.
+19
+
+
+=== PDF PAGE 20 ===
+Figure S9. Path visualization from the SwissView100 dataset with goals presented in aerial view. On the right, we show examples with
+more controllable {start, goal} configurations: with reversed start and goal locations.
+Figure S10. Intrinsic reward visualization with images from the SwissViewMonuments dataset. For each sample, from left to right:
+the search area, path visualization and intrinsic reward per patch. The patch with the highest intrinsic reward is highlighted with an orange
+rectangle in the search area.
+20
+
+
+=== PDF PAGE 21 ===
+References
+[1] Ebtesam Almazrouei, Hamza Alobeidli, Abdulaziz Al-
+shamsi, Alessandro Cappelli, Ruxandra Cojocaru, M´erouane
+Debbah, ´Etienne Goffinet, Daniel Hesslow, Julien Launay,
+Quentin Malartic, et al. The Falcon series of open language
+models. arXiv preprint arXiv:2311.16867, 2023. 6, 12
+[2] Guillaume Astruc, Nicolas Dufour, Ioannis Siglidis, Con-
+stantin Aronssohn, Nacim Bouia, Stephanie Fu, Romain
+Loiseau, Van Nguyen Nguyen, Charles Raude, Elliot Vin-
+cent, et al. OpenStreetView-5M: The many roads to global
+visual geolocation. In CVPR, pages 21967–21977, 2024. 2,
+14
+[3] Amir Bar, Gaoyue Zhou, Danny Tran, Trevor Darrell, and
+Yann LeCun. Navigation world models. In CVPR, pages
+15791–15801, 2025. 2, 4, 14
+[4] Gabriele Berton, Carlo Masone, and Barbara Caputo. Re-
+thinking visual geo-localization for large-scale applications.
+In CVPR, pages 4878–4888, 2022. 2, 14
+[5] Gabriele Berton, Riccardo Mereu, Gabriele Trivigno, Carlo
+Masone, Gabriela Csurka, Torsten Sattler, and Barbara Ca-
+puto. Deep visual geo-localization benchmark. In CVPR,
+pages 5396–5407, 2022. 2, 14
+[6] Yuri Burda, Harri Edwards, Deepak Pathak, Amos Storkey,
+Trevor Darrell, and Alexei A Efros. Large-scale study of
+curiosity-driven learning. In ICLR, 2018. 2, 3
+[7] David M. Chen, Georges Baatz, Kevin K¨oser, Sam S.
+Tsai, Ramakrishna Vedantham, Timo Pylv¨an¨ainen, Kimmo
+Roimela, Xin Chen, Jeff Bach, Marc Pollefeys, Bernd Girod,
+and Radek Grzeszczuk. City-scale landmark identification
+on mobile devices. In CVPR, pages 737–744, 2011. 14
+[8] Lili Chen, Kevin Lu, Aravind Rajeswaran, Kimin Lee,
+Aditya Grover, Misha Laskin, Pieter Abbeel, Aravind Srini-
+vas, and Igor Mordatch. Decision transformer: Reinforce-
+ment learning via sequence modeling.
+In NeurIPS, pages
+15084–15097, 2021. 2, 4, 6, 7, 16
+[9] Aayush Dhakal, Adeel Ahmad, Subash Khanal, Srikumar
+Sastry, Hannah Kerner, and Nathan Jacobs. Sat2Cap: Map-
+ping fine-grained textual descriptions from satellite images.
+In CVPRW, pages 533–542, 2024. 3, 4, 6, 12
+[10] Dzung Doan, Yasir Latif, Tat-Jun Chin, Yu Liu, Thanh-Toan
+Do, and Ian Reid. Scalable place recognition under appear-
+ance change for autonomous driving. In ICCV, 2019. 14
+[11] Scott Emmons, Benjamin Eysenbach, Ilya Kostrikov, and
+Sergey Levine. RvS: What is essential for offline RL via
+supervised learning? In ICLR, 2022. 2
+[12] Yue Fan, Winson Chen, Tongzhou Jiang, Chun Zhou, Yi
+Zhang, and Xin Eric Wang. Aerial vision-and-dialog nav-
+igation. In ACL Findings 2023, pages 3043–3061, 2022. 2,
+14
+[13] Florian
+Fervers,
+Sebastian
+Bullinger,
+Christoph
+Bo-
+densteiner,
+Michael
+Arens,
+and
+Rainer
+Stiefelhagen.
+Uncertainty-aware vision-based metric cross-view geolocal-
+ization. In CVPR, pages 21621–21631, 2023. 14
+[14] Jing Gu, Eliana Stefani, Qi Wu, Jesse Thomason, and
+Xin Eric Wang.
+Vision-and-language navigation: A sur-
+vey of tasks, methods, and future directions. In ACL, pages
+7606–7623, 2022. 14
+[15] Ritwik Gupta, Bryce Goodman, Nirav Patel, Ricky Hosfelt,
+Sandra Sajeev, Eric Heim, Jigar Doshi, Keane Lucas, Howie
+Choset, and Matthew Gaston.
+Creating xBD: A dataset
+for assessing building damage from satellite imagery.
+In
+CVPRW, pages 10–17, 2019. 5, 10
+[16] Danijar Hafner, Jurgis Pasukonis, Jimmy Ba, and Timothy
+Lillicrap. Mastering diverse domains through world models.
+arXiv preprint arXiv:2301.04104, 2023. 4
+[17] Michael Janner, Qiyang Li, and Sergey Levine. Offline rein-
+forcement learning as one big sequence modeling problem.
+In NeurIPS, pages 1273–1286, 2021. 2
+[18] Mukul Khanna, Ram Ramrakhya, Gunjan Chhablani, Sriram
+Yenamandra, Theophile Gervet, Matthew Chang, Zsolt Kira,
+Devendra Singh Chaplot, Dhruv Batra, and Roozbeh Mot-
+taghi. Goat-bench: A benchmark for multi-modal lifelong
+navigation. In CVPR, pages 16373–16383, 2024. 14
+[19] Kuno Kim, Megumi Sano, Julian De Freitas, Nick Haber,
+and Daniel Yamins.
+Active world model learning with
+progress curiosity. In ICML, pages 5306–5315, 2020. 2,
+3
+[20] Haotian Liu, Chunyuan Li, Qingyang Wu, and Yong Jae Lee.
+Visual instruction tuning. NeurIPS, 36:34892–34916, 2023.
+10
+[21] Shubo Liu, Hongsheng Zhang, Yuankai Qi, Peng Wang, Yan-
+ning Zhang, and Qi Wu. AerialVLN: Vision-and-language
+navigation for uavs. In ICCV, pages 15384–15394, 2023. 14
+[22] Zixian Ma, Rose Wang, Fei-Fei Li, Michael Bernstein, and
+Ranjay Krishna. ELIGN: Expectation alignment as a multi-
+agent intrinsic reward. In NeurIPS, pages 8304–8317, 2022.
+3, 5
+[23] Ajith Anil Meera, Marija Popovi´c, Alexander Millane, and
+Roland Siegwart. Obstacle-aware adaptive informative path
+planning for uav-based target search. In ICRA, pages 718–
+724, 2019. 1
+[24] Li Mi, Chang Xu, Javiera Castillo-Navarro, Syrielle Montar-
+iol, Wen Yang, Antoine Bosselut, and Devis Tuia. ConGeo:
+Robust cross-view geo-localization across ground view vari-
+ations. In ECCV, pages 214–230, 2024. 2
+[25] Volodymyr Mnih. Machine learning for aerial image label-
+ing. PhD thesis, University of Toronto (Canada), 2013. 5,
+10
+[26] Yasutaka Narazaki, Vedhus Hoskere, Girish Chowdhary, and
+Billie F Spencer Jr. Vision-based navigation planning for au-
+tonomous post-earthquake inspection of reinforced concrete
+railway viaducts using unmanned aerial vehicles. Automa-
+tion in Construction, 137:104214, 2022. 1
+[27] Aaron van den Oord, Yazhe Li, and Oriol Vinyals. Repre-
+sentation learning with contrastive predictive coding. arXiv
+preprint arXiv:1807.03748, 2018. 12
+[28] Deepak Pathak, Pulkit Agrawal, Alexei A Efros, and Trevor
+Darrell. Curiosity-driven exploration by self-supervised pre-
+diction. In ICML, pages 2778–2787, 2017. 2, 3, 4, 5
+[29] Aleksis Pirinen, Anton Samuelsson, John Backsund, and
+Kalle ˚Astr¨om. Aerial view localization with reinforcement
+learning: Towards emulating search-and-rescue. Swedish Ar-
+tificial Intelligence Society, pages 28–37, 2023. 1, 2, 3, 5, 6,
+7, 10, 13, 16
+21
+
+
+=== PDF PAGE 22 ===
+[30] Alec Radford, Karthik Narasimhan, Tim Salimans, and Ilya
+Sutskever. Improving language understanding by generative
+pre-training. OpenAI blog, 2018. 6, 12
+[31] Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario
+Amodei, Ilya Sutskever, et al. Language models are unsu-
+pervised multitask learners. OpenAI blog, 2019. 2
+[32] Alec Radford, Jong Wook Kim, Chris Hallacy, Aditya
+Ramesh, Gabriel Goh, Sandhini Agarwal, Girish Sastry,
+Amanda Askell, Pamela Mishkin, Jack Clark, et al. Learn-
+ing transferable visual models from natural language super-
+vision. In ICML, pages 8748–8763, 2021. 3
+[33] Anindya Sarkar, Srikumar Sastry, Aleksis Pirinen, Chongjie
+Zhang,
+Nathan
+Jacobs,
+and
+Yevgeniy
+Vorobeychik.
+GOMAA-Geo:
+Goal
+modality
+agnostic
+active
+geo-
+localization. In NeurIPS, pages 104934–104964, 2024. 1, 2,
+3, 4, 5, 6, 7, 10, 12, 13, 15, 16
+[34] J¨urgen Schmidhuber. A possibility for implementing curios-
+ity and boredom in model-building neural controllers.
+In
+Proc. of the International Conference on Simulation of Adap-
+tive Behavior: From Animals to Animats, pages 222–227,
+1991. 3
+[35] J¨urgen Schmidhuber. Reinforcement learning upside down:
+Don’t predict rewards–just map them to actions.
+arXiv
+preprint arXiv:1912.02875, 2019. 2
+[36] John Schulman, Filip Wolski, Prafulla Dhariwal, Alec Rad-
+ford, and Oleg Klimov. Proximal policy optimization algo-
+rithms. arXiv preprint arXiv:1707.06347, 2017. 4, 6, 7, 12,
+16
+[37] Dhruv Shah, Ajay Sridhar, Nitish Dashora, Kyle Stachowicz,
+Kevin Black, Noriaki Hirose, and Sergey Levine. ViNT: A
+foundation model for visual navigation. In CoRL, 2023. 14
+[38] Yujiao Shi, Fei Wu, Akhil Perincherry, Ankit Vora, and
+Hongdong Li.
+Boosting 3-dof ground-to-satellite camera
+localization accuracy via geometry-guided cross-view trans-
+former. In ICCV, pages 21516–21526, 2023. 14
+[39] Tavis Shore, Oscar Mendez, and Simon Hadfield.
+PEnG:
+Pose-enhanced geo-localisation.
+IEEE Robotics and Au-
+tomation Letters, 10(4):3835–3842, 2025. 14
+[40] Rupesh Kumar Srivastava, Pranav Shyam, Filipe Mutz, Wo-
+jciech Ja´skowski, and J¨urgen Schmidhuber. Training agents
+using upside-down reinforcement learning. arXiv preprint
+arXiv:1912.02877, 2019. 2
+[41] Bradly C Stadie, Sergey Levine, and Pieter Abbeel. Incen-
+tivizing exploration in reinforcement learning with deep pre-
+dictive models. arXiv preprint arXiv:1507.00814, 2015. 2,
+3
+[42] Vicente Vivanco Cepeda,
+Gaurav Kumar Nayak,
+and
+Mubarak Shah.
+GeoCLIP: Clip-inspired alignment be-
+tween locations and images for effective worldwide geo-
+localization. In NeurIPS, pages 8690–8701, 2023. 2, 14
+[43] Chen Wang, Linxi Fan, Jiankai Sun, Ruohan Zhang, Li Fei-
+Fei, Danfei Xu, Yuke Zhu, and Anima Anandkumar. Mim-
+icPlay: Long-horizon imitation learning by watching human
+play. In CoRL, 2023. 2
+[44] Xiaolong Wang, Runsen Xu, Zhuofan Cui, Zeyu Wan, and
+Yu Zhang. Fine-grained cross-view geo-localization using a
+correlation-aware homography estimator. In NeurIPS, pages
+5301–5319, 2023. 2, 14
+[45] Xiangyu Wang, Donglin Yang, Ziqin Wang, Hohin Kwan,
+Jinyu Chen, Wenjun Wu, Hongsheng Li, Yue Liao, and Si
+Liu. Towards realistic uav vision-language navigation: Plat-
+form, benchmark, and methodology. In ICLR, 2025. 14
+[46] A Waswani, N Shazeer, N Parmar, J Uszkoreit, L Jones, A
+Gomez, L Kaiser, and I Polosukhin.
+Attention is all you
+need. In NeurIPS, 2017. 2
+[47] Scott Workman, Richard Souvenir, and Nathan Jacobs.
+Wide-area image geolocalization with aerial reference im-
+agery. In ICCV, pages 3961–3969, 2015. 2, 14
+[48] Hongtao Wu, Ya Jing, Chilam Cheang, Guangzeng Chen,
+Jiafeng Xu, Xinghang Li, Minghuan Liu, Hang Li, and Tao
+Kong. Unleashing large-scale video generative pre-training
+for visual robot manipulation. In ICLR, 2024. 2
+[49] Zimin Xia and Alexandre Alahi. FG2: Fine-grained cross-
+view localization by fine-grained feature matching. In CVPR,
+pages 6362–6372, 2025. 2, 14
+[50] Sherry Yang, Yilun Du, Seyed Kamyar Seyed Ghasemipour,
+Jonathan Tompson, Leslie Pack Kaelbling, Dale Schuur-
+mans, and Pieter Abbeel.
+Learning interactive real-world
+simulators. In ICLR, 2024. 2
+[51] Amir R Zamir, Asaad Hakeem, Luc Van Gool, Mubarak
+Shah, and Richard Szeliski. Introduction to large-scale visual
+geo-localization.
+In Large-Scale Visual Geo-Localization,
+pages 1–18. Springer, 2016. 2, 13, 14
+[52] Xiaohan Zhang, Xingyu Li, Waqas Sultani, Chen Chen, and
+Safwan Wshah. GeoDTR+: Toward generic cross-view ge-
+olocalization via geometric disentanglement. IEEE Transac-
+tions on Pattern Analysis and Machine Intelligence, 46(12):
+10419–10433, 2024. 14
+[53] Gaoyue Zhou, Hengkai Pan, Yann LeCun, and Lerrel Pinto.
+DINO-WM: World models on pre-trained visual features en-
+able zero-shot planning. In ICML, 2025. 2, 4
+[54] Sijie Zhu, Taojiannan Yang, and Chen Chen. VIGOR: Cross-
+view image geo-localization beyond one-to-one retrieval. In
+CVPR, pages 3640–3649, 2021. 2, 14
+22

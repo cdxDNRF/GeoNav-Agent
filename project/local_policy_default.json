@@ -1,0 +1,59 @@
+{
+  "architecture": "Small256",
+  "checkpoints": [
+    {
+      "path": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/Small256_NoTarget_s0/model.pt",
+      "seed": 0,
+      "sha256": "b35b0f87865530e8965e561eeda450c481af9d87ba5ab0dcfb9a4932bf4179bd"
+    },
+    {
+      "path": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/Small256_NoTarget_s1/model.pt",
+      "seed": 1,
+      "sha256": "d734ab8d9e755e697e7dd1cc8f8eb8b4055aae1780e1fc16d27749eab3115dfa"
+    },
+    {
+      "path": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/Small256_NoTarget_s2/model.pt",
+      "seed": 2,
+      "sha256": "8ca13f1829f35f2e18dd002c6f661129ccaaa2e11fc1bd72d8751819d14b999b"
+    }
+  ],
+  "ensemble": false,
+  "evidence": {
+    "audit_path": "DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1/独立复核.json",
+    "audit_sha256": "d36fecf6ff011a165e33a33f26de2d30e35d80287f5041d02acb0b4abe32335b",
+    "registration_path": "DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1/预登记.json",
+    "registration_sha256": "8e5a9fc0a464c855ce540543d513e06429e35896b4f86221834b1bb5d307fab1"
+  },
+  "formal_S2_passed": false,
+  "inference_condition": "NoTarget",
+  "means": {
+    "全局拟合均值.npy": {
+      "path": "DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1/全局拟合均值.npy",
+      "sha256": "3bb5233fc6fbef7eece51ee78979b37dfaadfcb98d310e6f1b5de7b3d25a8158"
+    },
+    "局部拟合均值.npy": {
+      "path": "DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1/局部拟合均值.npy",
+      "sha256": "c854af5b09bf800d220a7c057d255919e0c2d3ed3b9a16f8248ab026d26b81c0"
+    }
+  },
+  "protocol": {
+    "actions": [
+      "up",
+      "right",
+      "down",
+      "left"
+    ],
+    "boundary_filter": true,
+    "budget": 10,
+    "decode": "argmax",
+    "grid_size": 5,
+    "memory": "episode_isolated"
+  },
+  "reference_seed": 0,
+  "scope": "Local development default from known validation; no independent map confirmation.",
+  "selected_arm": "Small256_NoTarget",
+  "selected_by_best_seed": false,
+  "trained_condition": "NoTarget",
+  "version": "local-policy-default-v1",
+  "vision_target_contribution_proven": false
+}

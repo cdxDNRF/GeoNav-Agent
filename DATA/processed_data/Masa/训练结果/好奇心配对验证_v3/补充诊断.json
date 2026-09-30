@@ -1,0 +1,166 @@
+{
+  "masked_mean_SR": {
+    "Curiosity": 0.41333333333333333,
+    "GatedCuriosity": 0.44333333333333336,
+    "PBRS": 0.4366666666666667
+  },
+  "source_paired_intervals": {
+    "Curiosity_minus_PBRS": {
+      "limitation": "Only four val source images; does not capture all training uncertainty; repeated routes/seeds are not independent maps.",
+      "resamples": 2000,
+      "sg_difference": 0.3066666666666667,
+      "sg_interval": [
+        0.08666666666666663,
+        0.6333333333333334
+      ],
+      "source_count": 4,
+      "sr_difference": -0.07999999999999999,
+      "sr_interval": [
+        -0.14,
+        -0.019999999999999993
+      ]
+    },
+    "GatedCuriosity_minus_Curiosity": {
+      "limitation": "Only four val source images; does not capture all training uncertainty; repeated routes/seeds are not independent maps.",
+      "resamples": 2000,
+      "sg_difference": -0.29,
+      "sg_interval": [
+        -0.38333333333333325,
+        -0.22666666666666677
+      ],
+      "source_count": 4,
+      "sr_difference": 0.07666666666666666,
+      "sr_interval": [
+        0.029999999999999985,
+        0.13333333333333336
+      ]
+    },
+    "GatedCuriosity_minus_PBRS": {
+      "limitation": "Only four val source images; does not capture all training uncertainty; repeated routes/seeds are not independent maps.",
+      "resamples": 2000,
+      "sg_difference": 0.016666666666666663,
+      "sg_interval": [
+        -0.2533333333333333,
+        0.3866666666666666
+      ],
+      "source_count": 4,
+      "sr_difference": -0.003333333333333327,
+      "sr_interval": [
+        -0.026666666666666672,
+        0.03333333333333334
+      ]
+    }
+  },
+  "training_reward_scales": {
+    "Curiosity_s0": {
+      "external_abs_mean": 0.1292211989639327,
+      "external_mean": 0.09682373353280127,
+      "intrinsic_mean": 0.10177279403433204,
+      "pbrs_mean": 0.04351505980594084
+    },
+    "Curiosity_s1": {
+      "external_abs_mean": 0.12752686359453946,
+      "external_mean": 0.09571533557027578,
+      "intrinsic_mean": 0.10104876733385026,
+      "pbrs_mean": 0.04370428388938308
+    },
+    "Curiosity_s2": {
+      "external_abs_mean": 0.128679207758978,
+      "external_mean": 0.0969604536658153,
+      "intrinsic_mean": 0.1017875443212688,
+      "pbrs_mean": 0.04343366890680045
+    },
+    "GatedCuriosity_s0": {
+      "external_abs_mean": 0.13079102395568043,
+      "external_mean": 0.098764652851969,
+      "intrinsic_mean": 0.0802557849092409,
+      "pbrs_mean": 0.043708159355446696
+    },
+    "GatedCuriosity_s1": {
+      "external_abs_mean": 0.1294043044326827,
+      "external_mean": 0.09753906668629497,
+      "intrinsic_mean": 0.08004134066868573,
+      "pbrs_mean": 0.043762434797827154
+    },
+    "GatedCuriosity_s2": {
+      "external_abs_mean": 0.12950196280144155,
+      "external_mean": 0.09674805076792836,
+      "intrinsic_mean": 0.08105098956730217,
+      "pbrs_mean": 0.0434989919885993
+    },
+    "PBRS_s0": {
+      "external_abs_mean": 0.1291552809998393,
+      "external_mean": 0.09901367663405836,
+      "intrinsic_mean": 0.0,
+      "pbrs_mean": 0.04368342470843345
+    },
+    "PBRS_s1": {
+      "external_abs_mean": 0.1301025467691943,
+      "external_mean": 0.09906738658901304,
+      "intrinsic_mean": 0.0,
+      "pbrs_mean": 0.043863402504939586
+    },
+    "PBRS_s2": {
+      "external_abs_mean": 0.13112549588549882,
+      "external_mean": 0.10006592236459255,
+      "intrinsic_mean": 0.0,
+      "pbrs_mean": 0.043875289091374725
+    }
+  },
+  "trajectory_analysis": {
+    "Curiosity_s0": {
+      "actions": 913,
+      "adjacent_but_not_reached": 32,
+      "failures": 57,
+      "out_of_bounds_actions": 170
+    },
+    "Curiosity_s1": {
+      "actions": 929,
+      "adjacent_but_not_reached": 38,
+      "failures": 75,
+      "out_of_bounds_actions": 225
+    },
+    "Curiosity_s2": {
+      "actions": 911,
+      "adjacent_but_not_reached": 28,
+      "failures": 59,
+      "out_of_bounds_actions": 262
+    },
+    "GatedCuriosity_s0": {
+      "actions": 891,
+      "adjacent_but_not_reached": 28,
+      "failures": 55,
+      "out_of_bounds_actions": 139
+    },
+    "GatedCuriosity_s1": {
+      "actions": 907,
+      "adjacent_but_not_reached": 33,
+      "failures": 54,
+      "out_of_bounds_actions": 176
+    },
+    "GatedCuriosity_s2": {
+      "actions": 906,
+      "adjacent_but_not_reached": 38,
+      "failures": 59,
+      "out_of_bounds_actions": 162
+    },
+    "PBRS_s0": {
+      "actions": 930,
+      "adjacent_but_not_reached": 36,
+      "failures": 67,
+      "out_of_bounds_actions": 175
+    },
+    "PBRS_s1": {
+      "actions": 907,
+      "adjacent_but_not_reached": 27,
+      "failures": 50,
+      "out_of_bounds_actions": 195
+    },
+    "PBRS_s2": {
+      "actions": 886,
+      "adjacent_but_not_reached": 26,
+      "failures": 50,
+      "out_of_bounds_actions": 157
+    }
+  }
+}

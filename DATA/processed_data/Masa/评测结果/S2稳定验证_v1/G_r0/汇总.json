@@ -1,0 +1,197 @@
+{
+  "api": {
+    "attempts": 191,
+    "errors": 6,
+    "latency_p50": 4.077089899990824,
+    "latency_p95": 10.445843949994014,
+    "responses": 191,
+    "usage": {
+      "completion_tokens": 16266,
+      "prompt_tokens": 157421,
+      "total_tokens": 173687
+    },
+    "usage_missing": 6
+  },
+  "arm": "G",
+  "audit_passed": true,
+  "episode_latency_p50": 0.018144499998015817,
+  "episode_latency_p95": 46.42117330500985,
+  "job_id": "G_r0",
+  "metrics": {
+    "by_area": {
+      "img_0": {
+        "completed": 20,
+        "executed_actions": 185,
+        "planned": 25,
+        "q": 0.8,
+        "recorded": 25,
+        "repeat_rate": 0.010810810810810811,
+        "sg_gate": 3.6,
+        "sg_nav": 2.5,
+        "sr_gate": 0.28,
+        "sr_nav": 0.35,
+        "successes": 7,
+        "terminal_states": {
+          "api_error": 3,
+          "completed": 20,
+          "not_run": 2
+        }
+      },
+      "img_1": {
+        "completed": 0,
+        "executed_actions": 0,
+        "planned": 25,
+        "q": 0.0,
+        "recorded": 25,
+        "repeat_rate": null,
+        "sg_gate": 8.0,
+        "sg_nav": null,
+        "sr_gate": 0.0,
+        "sr_nav": null,
+        "successes": 0,
+        "terminal_states": {
+          "not_run": 25
+        }
+      },
+      "img_2": {
+        "completed": 0,
+        "executed_actions": 0,
+        "planned": 25,
+        "q": 0.0,
+        "recorded": 25,
+        "repeat_rate": null,
+        "sg_gate": 8.0,
+        "sg_nav": null,
+        "sr_gate": 0.0,
+        "sr_nav": null,
+        "successes": 0,
+        "terminal_states": {
+          "not_run": 25
+        }
+      },
+      "img_3": {
+        "completed": 0,
+        "executed_actions": 0,
+        "planned": 25,
+        "q": 0.0,
+        "recorded": 25,
+        "repeat_rate": null,
+        "sg_gate": 8.0,
+        "sg_nav": null,
+        "sr_gate": 0.0,
+        "sr_nav": null,
+        "successes": 0,
+        "terminal_states": {
+          "not_run": 25
+        }
+      }
+    },
+    "by_distance": {
+      "4": {
+        "completed": 5,
+        "executed_actions": 42,
+        "planned": 20,
+        "q": 0.25,
+        "recorded": 20,
+        "repeat_rate": 0.047619047619047616,
+        "sg_gate": 6.5,
+        "sg_nav": 2.0,
+        "sr_gate": 0.1,
+        "sr_nav": 0.4,
+        "successes": 2,
+        "terminal_states": {
+          "completed": 5,
+          "not_run": 15
+        }
+      },
+      "5": {
+        "completed": 5,
+        "executed_actions": 46,
+        "planned": 20,
+        "q": 0.25,
+        "recorded": 20,
+        "repeat_rate": 0.0,
+        "sg_gate": 6.65,
+        "sg_nav": 2.6,
+        "sr_gate": 0.1,
+        "sr_nav": 0.4,
+        "successes": 2,
+        "terminal_states": {
+          "completed": 5,
+          "not_run": 15
+        }
+      },
+      "6": {
+        "completed": 5,
+        "executed_actions": 46,
+        "planned": 20,
+        "q": 0.25,
+        "recorded": 20,
+        "repeat_rate": 0.0,
+        "sg_gate": 6.7,
+        "sg_nav": 2.8,
+        "sr_gate": 0.05,
+        "sr_nav": 0.2,
+        "successes": 1,
+        "terminal_states": {
+          "completed": 5,
+          "not_run": 15
+        }
+      },
+      "7": {
+        "completed": 5,
+        "executed_actions": 48,
+        "planned": 20,
+        "q": 0.25,
+        "recorded": 20,
+        "repeat_rate": 0.0,
+        "sg_gate": 6.65,
+        "sg_nav": 2.6,
+        "sr_gate": 0.1,
+        "sr_nav": 0.4,
+        "successes": 2,
+        "terminal_states": {
+          "completed": 5,
+          "not_run": 15
+        }
+      },
+      "8": {
+        "completed": 0,
+        "executed_actions": 3,
+        "planned": 20,
+        "q": 0.0,
+        "recorded": 20,
+        "repeat_rate": 0.0,
+        "sg_gate": 8.0,
+        "sg_nav": null,
+        "sr_gate": 0.0,
+        "sr_nav": null,
+        "successes": 0,
+        "terminal_states": {
+          "api_error": 3,
+          "not_run": 17
+        }
+      }
+    },
+    "completed": 20,
+    "distance_complete": true,
+    "executed_actions": 185,
+    "planned": 100,
+    "q": 0.2,
+    "recorded": 100,
+    "repeat_rate": 0.010810810810810811,
+    "sg_gate": 6.9,
+    "sg_macro": 6.9,
+    "sg_nav": 2.5,
+    "sr_gate": 0.07,
+    "sr_macro": 0.07,
+    "sr_nav": 0.35,
+    "successes": 7,
+    "terminal_states": {
+      "api_error": 3,
+      "completed": 20,
+      "not_run": 77
+    }
+  },
+  "round": 0
+}

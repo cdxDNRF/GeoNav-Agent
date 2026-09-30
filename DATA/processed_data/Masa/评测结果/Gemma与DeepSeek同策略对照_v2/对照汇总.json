@@ -1,0 +1,4099 @@
+{
+  "both_models_complete": false,
+  "deepseek_minus_gemma_SR_gate": -0.25,
+  "extra": {
+    "DeepSeek": {
+      "reported_reasoning_tokens": 0,
+      "returned_models": [
+        "deepseek-flash"
+      ],
+      "truncated": 0
+    },
+    "Gemma": {
+      "reported_reasoning_tokens": 0,
+      "returned_models": [
+        "gemma4:31b"
+      ],
+      "truncated": 0
+    }
+  },
+  "formal_S2_passed": false,
+  "jobs": {
+    "DeepSeek": {
+      "api": {
+        "attempts": 181,
+        "errors": 2,
+        "latency_p50": 1.0084058000065852,
+        "latency_p95": 1.3502398999989964,
+        "responses": 181,
+        "usage": {
+          "completion_tokens": 12318,
+          "prompt_tokens": 123711,
+          "total_tokens": 136029
+        },
+        "usage_missing": 0
+      },
+      "arm": "G",
+      "audit_passed": true,
+      "episode_latency_p50": 10.138988400009112,
+      "episode_latency_p95": 11.511473160007155,
+      "job_id": "DeepSeek",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 4,
+            "executed_actions": 43,
+            "planned": 5,
+            "q": 0.8,
+            "recorded": 5,
+            "repeat_rate": 0.06976744186046512,
+            "sg_gate": 3.0,
+            "sg_nav": 1.75,
+            "sr_gate": 0.4,
+            "sr_nav": 0.5,
+            "successes": 2,
+            "terminal_states": {
+              "api_error": 1,
+              "completed": 4
+            }
+          },
+          "img_1": {
+            "completed": 4,
+            "executed_actions": 43,
+            "planned": 5,
+            "q": 0.8,
+            "recorded": 5,
+            "repeat_rate": 0.023255813953488372,
+            "sg_gate": 4.0,
+            "sg_nav": 3.0,
+            "sr_gate": 0.0,
+            "sr_nav": 0.0,
+            "successes": 0,
+            "terminal_states": {
+              "api_error": 1,
+              "completed": 4
+            }
+          },
+          "img_2": {
+            "completed": 5,
+            "executed_actions": 47,
+            "planned": 5,
+            "q": 1.0,
+            "recorded": 5,
+            "repeat_rate": 0.02127659574468085,
+            "sg_gate": 1.8,
+            "sg_nav": 1.8,
+            "sr_gate": 0.2,
+            "sr_nav": 0.2,
+            "successes": 1,
+            "terminal_states": {
+              "completed": 5
+            }
+          },
+          "img_3": {
+            "completed": 5,
+            "executed_actions": 46,
+            "planned": 5,
+            "q": 1.0,
+            "recorded": 5,
+            "repeat_rate": 0.021739130434782608,
+            "sg_gate": 2.8,
+            "sg_nav": 2.8,
+            "sr_gate": 0.2,
+            "sr_nav": 0.2,
+            "successes": 1,
+            "terminal_states": {
+              "completed": 5
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 2,
+            "executed_actions": 22,
+            "planned": 4,
+            "q": 0.5,
+            "recorded": 4,
+            "repeat_rate": 0.0,
+            "sg_gate": 4.5,
+            "sg_nav": 1.0,
+            "sr_gate": 0.25,
+            "sr_nav": 0.5,
+            "successes": 1,
+            "terminal_states": {
+              "api_error": 2,
+              "completed": 2
+            }
+          },
+          "5": {
+            "completed": 4,
+            "executed_actions": 37,
+            "planned": 4,
+            "q": 1.0,
+            "recorded": 4,
+            "repeat_rate": 0.05405405405405406,
+            "sg_gate": 2.5,
+            "sg_nav": 2.5,
+            "sr_gate": 0.5,
+            "sr_nav": 0.5,
+            "successes": 2,
+            "terminal_states": {
+              "completed": 4
+            }
+          },
+          "6": {
+            "completed": 4,
+            "executed_actions": 40,
+            "planned": 4,
+            "q": 1.0,
+            "recorded": 4,
+            "repeat_rate": 0.05,
+            "sg_gate": 1.5,
+            "sg_nav": 1.5,
+            "sr_gate": 0.25,
+            "sr_nav": 0.25,
+            "successes": 1,
+            "terminal_states": {
+              "completed": 4
+            }
+          },
+          "7": {
+            "completed": 4,
+            "executed_actions": 40,
+            "planned": 4,
+            "q": 1.0,
+            "recorded": 4,
+            "repeat_rate": 0.025,
+            "sg_gate": 3.5,
+            "sg_nav": 3.5,
+            "sr_gate": 0.0,
+            "sr_nav": 0.0,
+            "successes": 0,
+            "terminal_states": {
+              "completed": 4
+            }
+          },
+          "8": {
+            "completed": 4,
+            "executed_actions": 40,
+            "planned": 4,
+            "q": 1.0,
+            "recorded": 4,
+            "repeat_rate": 0.025,
+            "sg_gate": 2.5,
+            "sg_nav": 2.5,
+            "sr_gate": 0.0,
+            "sr_nav": 0.0,
+            "successes": 0,
+            "terminal_states": {
+              "completed": 4
+            }
+          }
+        },
+        "completed": 18,
+        "distance_complete": true,
+        "executed_actions": 179,
+        "planned": 20,
+        "q": 0.9,
+        "recorded": 20,
+        "repeat_rate": 0.0335195530726257,
+        "sg_gate": 2.9,
+        "sg_macro": 2.9,
+        "sg_nav": 2.3333333333333335,
+        "sr_gate": 0.2,
+        "sr_macro": 0.2,
+        "sr_nav": 0.2222222222222222,
+        "successes": 4,
+        "terminal_states": {
+          "api_error": 2,
+          "completed": 18
+        }
+      },
+      "round": 0
+    },
+    "Frontier": {
+      "api": {
+        "attempts": 0,
+        "errors": 0,
+        "latency_p50": null,
+        "latency_p95": null,
+        "responses": 0,
+        "usage": null,
+        "usage_missing": 0
+      },
+      "arm": "Frontier",
+      "audit_passed": true,
+      "episode_latency_p50": 0.0432608500123024,
+      "episode_latency_p95": 0.1637222449950059,
+      "job_id": "Frontier",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 5,
+            "executed_actions": 45,
+            "planned": 5,
+            "q": 1.0,
+            "recorded": 5,
+            "repeat_rate": 0.0,
+            "sg_gate": 1.4,
+            "sg_nav": 1.4,
+            "sr_gate": 0.6,
+            "sr_nav": 0.6,
+            "successes": 3,
+            "terminal_states": {
+              "completed": 5
+            }
+          },
+          "img_1": {
+            "completed": 5,
+            "executed_actions": 47,
+            "planned": 5,
+            "q": 1.0,
+            "recorded": 5,
+            "repeat_rate": 0.0,
+            "sg_gate": 2.6,
+            "sg_nav": 2.6,
+            "sr_gate": 0.4,
+            "sr_nav": 0.4,
+            "successes": 2,
+            "terminal_states": {
+              "completed": 5
+            }
+          },
+          "img_2": {
+            "completed": 5,
+            "executed_actions": 42,
+            "planned": 5,
+            "q": 1.0,
+            "recorded": 5,
+            "repeat_rate": 0.0,
+            "sg_gate": 2.0,
+            "sg_nav": 2.0,
+            "sr_gate": 0.6,
+            "sr_nav": 0.6,
+            "successes": 3,
+            "terminal_states": {
+              "completed": 5
+            }
+          },
+          "img_3": {
+            "completed": 5,
+            "executed_actions": 47,
+            "planned": 5,
+            "q": 1.0,
+            "recorded": 5,
+            "repeat_rate": 0.0,
+            "sg_gate": 3.0,
+            "sg_nav": 3.0,
+            "sr_gate": 0.4,
+            "sr_nav": 0.4,
+            "successes": 2,
+            "terminal_states": {
+              "completed": 5
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 4,
+            "executed_actions": 40,
+            "planned": 4,
+            "q": 1.0,
+            "recorded": 4,
+            "repeat_rate": 0.0,
+            "sg_gate": 2.0,
+            "sg_nav": 2.0,
+            "sr_gate": 0.5,
+            "sr_nav": 0.5,
+            "successes": 2,
+            "terminal_states": {
+              "completed": 4
+            }
+          },
+          "5": {
+            "completed": 4,
+            "executed_actions": 31,
+            "planned": 4,
+            "q": 1.0,
+            "recorded": 4,
+            "repeat_rate": 0.0,
+            "sg_gate": 0.75,
+            "sg_nav": 0.75,
+            "sr_gate": 0.75,
+            "sr_nav": 0.75,
+            "successes": 3,
+            "terminal_states": {
+              "completed": 4
+            }
+          },
+          "6": {
+            "completed": 4,
+            "executed_actions": 36,
+            "planned": 4,
+            "q": 1.0,
+            "recorded": 4,
+            "repeat_rate": 0.0,
+            "sg_gate": 2.0,
+            "sg_nav": 2.0,
+            "sr_gate": 0.5,
+            "sr_nav": 0.5,
+            "successes": 2,
+            "terminal_states": {
+              "completed": 4
+            }
+          },
+          "7": {
+            "completed": 4,
+            "executed_actions": 36,
+            "planned": 4,
+            "q": 1.0,
+            "recorded": 4,
+            "repeat_rate": 0.0,
+            "sg_gate": 2.0,
+            "sg_nav": 2.0,
+            "sr_gate": 0.5,
+            "sr_nav": 0.5,
+            "successes": 2,
+            "terminal_states": {
+              "completed": 4
+            }
+          },
+          "8": {
+            "completed": 4,
+            "executed_actions": 38,
+            "planned": 4,
+            "q": 1.0,
+            "recorded": 4,
+            "repeat_rate": 0.0,
+            "sg_gate": 4.5,
+            "sg_nav": 4.5,
+            "sr_gate": 0.25,
+            "sr_nav": 0.25,
+            "successes": 1,
+            "terminal_states": {
+              "completed": 4
+            }
+          }
+        },
+        "completed": 20,
+        "distance_complete": true,
+        "executed_actions": 181,
+        "planned": 20,
+        "q": 1.0,
+        "recorded": 20,
+        "repeat_rate": 0.0,
+        "sg_gate": 2.25,
+        "sg_macro": 2.25,
+        "sg_nav": 2.25,
+        "sr_gate": 0.5,
+        "sr_macro": 0.5,
+        "sr_nav": 0.5,
+        "successes": 10,
+        "terminal_states": {
+          "completed": 20
+        }
+      },
+      "round": 0
+    },
+    "Gemma": {
+      "api": {
+        "attempts": 184,
+        "errors": 0,
+        "latency_p50": 4.0658451999916,
+        "latency_p95": 6.8790105050138655,
+        "responses": 184,
+        "usage": {
+          "completion_tokens": 16198,
+          "prompt_tokens": 156560,
+          "total_tokens": 172758
+        },
+        "usage_missing": 0
+      },
+      "arm": "G",
+      "audit_passed": true,
+      "episode_latency_p50": 41.120099399995524,
+      "episode_latency_p95": 52.45742955000315,
+      "job_id": "Gemma",
+      "metrics": {
+        "by_area": {
+          "img_0": {
+            "completed": 5,
+            "executed_actions": 45,
+            "planned": 5,
+            "q": 1.0,
+            "recorded": 5,
+            "repeat_rate": 0.0,
+            "sg_gate": 1.4,
+            "sg_nav": 1.4,
+            "sr_gate": 0.6,
+            "sr_nav": 0.6,
+            "successes": 3,
+            "terminal_states": {
+              "completed": 5
+            }
+          },
+          "img_1": {
+            "completed": 5,
+            "executed_actions": 45,
+            "planned": 5,
+            "q": 1.0,
+            "recorded": 5,
+            "repeat_rate": 0.044444444444444446,
+            "sg_gate": 1.8,
+            "sg_nav": 1.8,
+            "sr_gate": 0.4,
+            "sr_nav": 0.4,
+            "successes": 2,
+            "terminal_states": {
+              "completed": 5
+            }
+          },
+          "img_2": {
+            "completed": 5,
+            "executed_actions": 44,
+            "planned": 5,
+            "q": 1.0,
+            "recorded": 5,
+            "repeat_rate": 0.0,
+            "sg_gate": 2.4,
+            "sg_nav": 2.4,
+            "sr_gate": 0.6,
+            "sr_nav": 0.6,
+            "successes": 3,
+            "terminal_states": {
+              "completed": 5
+            }
+          },
+          "img_3": {
+            "completed": 5,
+            "executed_actions": 50,
+            "planned": 5,
+            "q": 1.0,
+            "recorded": 5,
+            "repeat_rate": 0.0,
+            "sg_gate": 3.2,
+            "sg_nav": 3.2,
+            "sr_gate": 0.2,
+            "sr_nav": 0.2,
+            "successes": 1,
+            "terminal_states": {
+              "completed": 5
+            }
+          }
+        },
+        "by_distance": {
+          "4": {
+            "completed": 4,
+            "executed_actions": 34,
+            "planned": 4,
+            "q": 1.0,
+            "recorded": 4,
+            "repeat_rate": 0.058823529411764705,
+            "sg_gate": 1.5,
+            "sg_nav": 1.5,
+            "sr_gate": 0.5,
+            "sr_nav": 0.5,
+            "successes": 2,
+            "terminal_states": {
+              "completed": 4
+            }
+          },
+          "5": {
+            "completed": 4,
+            "executed_actions": 33,
+            "planned": 4,
+            "q": 1.0,
+            "recorded": 4,
+            "repeat_rate": 0.0,
+            "sg_gate": 1.25,
+            "sg_nav": 1.25,
+            "sr_gate": 0.75,
+            "sr_nav": 0.75,
+            "successes": 3,
+            "terminal_states": {
+              "completed": 4
+            }
+          },
+          "6": {
+            "completed": 4,
+            "executed_actions": 38,
+            "planned": 4,
+            "q": 1.0,
+            "recorded": 4,
+            "repeat_rate": 0.0,
+            "sg_gate": 2.5,
+            "sg_nav": 2.5,
+            "sr_gate": 0.5,
+            "sr_nav": 0.5,
+            "successes": 2,
+            "terminal_states": {
+              "completed": 4
+            }
+          },
+          "7": {
+            "completed": 4,
+            "executed_actions": 39,
+            "planned": 4,
+            "q": 1.0,
+            "recorded": 4,
+            "repeat_rate": 0.0,
+            "sg_gate": 2.75,
+            "sg_nav": 2.75,
+            "sr_gate": 0.25,
+            "sr_nav": 0.25,
+            "successes": 1,
+            "terminal_states": {
+              "completed": 4
+            }
+          },
+          "8": {
+            "completed": 4,
+            "executed_actions": 40,
+            "planned": 4,
+            "q": 1.0,
+            "recorded": 4,
+            "repeat_rate": 0.0,
+            "sg_gate": 3.0,
+            "sg_nav": 3.0,
+            "sr_gate": 0.25,
+            "sr_nav": 0.25,
+            "successes": 1,
+            "terminal_states": {
+              "completed": 4
+            }
+          }
+        },
+        "completed": 20,
+        "distance_complete": true,
+        "executed_actions": 184,
+        "planned": 20,
+        "q": 1.0,
+        "recorded": 20,
+        "repeat_rate": 0.010869565217391304,
+        "sg_gate": 2.2,
+        "sg_macro": 2.2,
+        "sg_nav": 2.2,
+        "sr_gate": 0.45,
+        "sr_macro": 0.45,
+        "sr_nav": 0.45,
+        "successes": 9,
+        "terminal_states": {
+          "completed": 20
+        }
+      },
+      "round": 0
+    }
+  },
+  "origins": {
+    "Frontier": {
+      "file_sha256": {
+        "任务结果.jsonl": "9c7d1e7da9c1fd8664112f28790ed1cb8c7d2d57d8459c374709d38dd59872ae",
+        "动作事件.jsonl": "7fbf1e054c1d6013ea2ef251377aa29b88a558cf7b2e821ee444937d514e102d",
+        "汇总.json": "618db956ec1674ea25d7af1c94b036656bd5685ef74b6c2712e09dc8aa74969b",
+        "离线审计.json": "488a3e85bf6ee422d8ba1251bb2095b72f539b3aed41534438f5d4f9d6ae5e2e",
+        "运行配置.json": "ba17efc18f6d11b388c425e89c42326e7b6b1f9db2afd1f5c36b386e2847c456",
+        "进度.json": "46d4ae8f34b986f342ad0f206476d8a9f880f805b20cc114b1928481b9c706bd"
+      },
+      "registration_sha256": "a86e3614ca3b8c7f0f9a4a62386eb1f431d7d0d68be766cb71a7f3d221b4f4b7",
+      "source": "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\DATA\\processed_data\\Masa\\评测结果\\Gemma与DeepSeek同策略对照_v1\\Frontier"
+    },
+    "Gemma": {
+      "file_sha256": {
+        "API调用.jsonl": "0aa0a8cc26a2fcb731b20c6c20c223908a16fd62765f936629381fd97c62dfec",
+        "任务结果.jsonl": "5ea3b3992acaca5d63a5cd3f1b2049ec3278c2663a3b52b3e56840afb651c6c9",
+        "动作事件.jsonl": "52654c960f9a072098c58ef27230108a9eb661ee56dcc63facaa78fdd9c744b1",
+        "汇总.json": "10c134815718480093c6607253aaa57331135f994f927580ae2f0efc1b46d764",
+        "离线审计.json": "faaf84d1041bdff73f0918840d0d0dced482e3c490a3b9477f8c5172a25335c3",
+        "请求意图.jsonl": "c46e15883d9d3a0fc773c3802ba29bba71c0b21f4e0863d76fca7d3a12984409",
+        "运行配置.json": "42de8071e9401b028fad9ddb52dc247162065645695214c7a6ca206c612f868e",
+        "进度.json": "5ede17d953bd6869dfa644860a200809517f784cc8fb786cbbeceace89ddc558"
+      },
+      "registration_sha256": "a86e3614ca3b8c7f0f9a4a62386eb1f431d7d0d68be766cb71a7f3d221b4f4b7",
+      "source": "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\DATA\\processed_data\\Masa\\评测结果\\Gemma与DeepSeek同策略对照_v1\\Gemma"
+    }
+  },
+  "paired": {
+    "common_SR_difference": -0.2222222222222222,
+    "common_completed": 18,
+    "counts": {
+      "both_failure": 8,
+      "both_success": 2,
+      "deepseek_only": 2,
+      "gemma_only": 6,
+      "incomplete_pair": 2
+    },
+    "note": "Common-completed subset may be selected by provider failures; planned-task metrics remain primary.",
+    "rows": [
+      {
+        "DeepSeek": {
+          "completion": "api_error",
+          "evaluation": null
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_0_d4_000",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 0,
+            "steps": 6,
+            "success": true,
+            "termination": "goal_reached",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 21,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 22,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 6
+              }
+            ]
+          }
+        },
+        "area": "img_0",
+        "distance": 4,
+        "episode_id": "val_img_0_d4_000",
+        "outcome": "incomplete_pair"
+      },
+      {
+        "DeepSeek": {
+          "completion": "api_error",
+          "evaluation": null
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_1_d4_000",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.2,
+            "revisits": 2,
+            "sg": 2,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 0,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 1,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 6,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 8,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 3,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 2,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 1,
+                "revisited": true,
+                "step": 7
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 6,
+                "revisited": true,
+                "step": 8
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 5,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 10,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "area": "img_1",
+        "distance": 4,
+        "episode_id": "val_img_1_d4_000",
+        "outcome": "incomplete_pair"
+      },
+      {
+        "DeepSeek": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_2_d4_003",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 2,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 15,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 10,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 5,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 0,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 1,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 6,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 2,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 3,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 8,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_2_d4_003",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 0,
+            "steps": 8,
+            "success": true,
+            "termination": "goal_reached",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 15,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 10,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 11,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 14,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 8
+              }
+            ]
+          }
+        },
+        "area": "img_2",
+        "distance": 4,
+        "episode_id": "val_img_2_d4_003",
+        "outcome": "gemma_only"
+      },
+      {
+        "DeepSeek": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_3_d4_003",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 0,
+            "steps": 6,
+            "success": true,
+            "termination": "goal_reached",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 14,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 8,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 3,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 2,
+                "revisited": false,
+                "step": 6
+              }
+            ]
+          }
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_3_d4_003",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 4,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 14,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 24,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 23,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 22,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 21,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 16,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "area": "img_3",
+        "distance": 4,
+        "episode_id": "val_img_3_d4_003",
+        "outcome": "deepseek_only"
+      },
+      {
+        "DeepSeek": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_0_d5_004",
+            "out_of_bounds": 1,
+            "repeat_visit_rate": 0.2,
+            "revisits": 2,
+            "sg": 0,
+            "steps": 10,
+            "success": true,
+            "termination": "goal_reached",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 6,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 2,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 3,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 8,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 4,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "up",
+                "out_of_bounds": true,
+                "patch_id": 4,
+                "revisited": true,
+                "step": 7
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": true,
+                "step": 8
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 14,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_0_d5_004",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 0,
+            "steps": 9,
+            "success": true,
+            "termination": "goal_reached",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 6,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 22,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 23,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 24,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 9
+              }
+            ]
+          }
+        },
+        "area": "img_0",
+        "distance": 5,
+        "episode_id": "val_img_0_d5_004",
+        "outcome": "both_success"
+      },
+      {
+        "DeepSeek": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_1_d5_004",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 5,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 14,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 4,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 3,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 8,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_1_d5_004",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 0,
+            "steps": 7,
+            "success": true,
+            "termination": "goal_reached",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 23,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 22,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 21,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 20,
+                "revisited": false,
+                "step": 7
+              }
+            ]
+          }
+        },
+        "area": "img_1",
+        "distance": 5,
+        "episode_id": "val_img_1_d5_004",
+        "outcome": "gemma_only"
+      },
+      {
+        "DeepSeek": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_2_d5_004",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 0,
+            "steps": 7,
+            "success": true,
+            "termination": "goal_reached",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 2,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 3,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 8,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 4,
+                "revisited": false,
+                "step": 7
+              }
+            ]
+          }
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_2_d5_004",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 0,
+            "steps": 7,
+            "success": true,
+            "termination": "goal_reached",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 14,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 4,
+                "revisited": false,
+                "step": 7
+              }
+            ]
+          }
+        },
+        "area": "img_2",
+        "distance": 5,
+        "episode_id": "val_img_2_d5_004",
+        "outcome": "both_success"
+      },
+      {
+        "DeepSeek": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_3_d5_002",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 5,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 11,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 6,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 1,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 0,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 5,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 10,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 15,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 16,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_3_d5_002",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 5,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 11,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 6,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 1,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 0,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 5,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 10,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 15,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 16,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "area": "img_3",
+        "distance": 5,
+        "episode_id": "val_img_3_d5_002",
+        "outcome": "both_failure"
+      },
+      {
+        "DeepSeek": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_0_d6_000",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 0,
+            "steps": 10,
+            "success": true,
+            "termination": "goal_reached",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 4,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 14,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 24,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 23,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 16,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_0_d6_000",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 4,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 4,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 14,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 22,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 23,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 24,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "area": "img_0",
+        "distance": 6,
+        "episode_id": "val_img_0_d6_000",
+        "outcome": "deepseek_only"
+      },
+      {
+        "DeepSeek": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_1_d6_002",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.1,
+            "revisits": 1,
+            "sg": 2,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 5,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 0,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 1,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 6,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 2,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 3,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 8,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 4,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": true,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_1_d6_002",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 0,
+            "steps": 8,
+            "success": true,
+            "termination": "goal_reached",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 5,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 10,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 11,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 14,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 8
+              }
+            ]
+          }
+        },
+        "area": "img_1",
+        "distance": 6,
+        "episode_id": "val_img_1_d6_002",
+        "outcome": "gemma_only"
+      },
+      {
+        "DeepSeek": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_2_d6_001",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 2,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 24,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 23,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 22,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 21,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 20,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 15,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 10,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 11,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 16,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_2_d6_001",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 6,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 24,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 14,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 23,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 22,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 21,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 20,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "area": "img_2",
+        "distance": 6,
+        "episode_id": "val_img_2_d6_001",
+        "outcome": "both_failure"
+      },
+      {
+        "DeepSeek": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_3_d6_002",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.1,
+            "revisits": 1,
+            "sg": 2,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 21,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 16,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 11,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 10,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 15,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 20,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 21,
+                "revisited": true,
+                "step": 6
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 22,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_3_d6_002",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 0,
+            "steps": 10,
+            "success": true,
+            "termination": "goal_reached",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 21,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 22,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 23,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 24,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 14,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "area": "img_3",
+        "distance": 6,
+        "episode_id": "val_img_3_d6_002",
+        "outcome": "gemma_only"
+      },
+      {
+        "DeepSeek": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_0_d7_004",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 5,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 4,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 3,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 2,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 8,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_0_d7_004",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 3,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 4,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 3,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 8,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 2,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 1,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 6,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 11,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "area": "img_0",
+        "distance": 7,
+        "episode_id": "val_img_0_d7_004",
+        "outcome": "both_failure"
+      },
+      {
+        "DeepSeek": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_1_d7_001",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 3,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 5,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 0,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 1,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 6,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 2,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 3,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 8,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_1_d7_001",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 5,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 5,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 10,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 11,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 8,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 3,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 2,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "area": "img_1",
+        "distance": 7,
+        "episode_id": "val_img_1_d7_001",
+        "outcome": "both_failure"
+      },
+      {
+        "DeepSeek": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_2_d7_004",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.1,
+            "revisits": 1,
+            "sg": 3,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 1,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 0,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 5,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 6,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 2,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 3,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 8,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 4,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": true,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_2_d7_004",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 0,
+            "steps": 9,
+            "success": true,
+            "termination": "goal_reached",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 1,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 6,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 11,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 14,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 24,
+                "revisited": false,
+                "step": 9
+              }
+            ]
+          }
+        },
+        "area": "img_2",
+        "distance": 7,
+        "episode_id": "val_img_2_d7_004",
+        "outcome": "gemma_only"
+      },
+      {
+        "DeepSeek": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_3_d7_000",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 3,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 4,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 14,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 8,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 3,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 2,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_3_d7_000",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 3,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 4,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 3,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 8,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 2,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 1,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 6,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 5,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 10,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 11,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "area": "img_3",
+        "distance": 7,
+        "episode_id": "val_img_3_d7_000",
+        "outcome": "both_failure"
+      },
+      {
+        "DeepSeek": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_0_d8_003",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.1,
+            "revisits": 1,
+            "sg": 2,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 0,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 1,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 6,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 2,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 3,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 8,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 4,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": true,
+                "step": 9
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 14,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_0_d8_003",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 0,
+            "steps": 10,
+            "success": true,
+            "termination": "goal_reached",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 0,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 1,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 2,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 22,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 23,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 24,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "area": "img_0",
+        "distance": 8,
+        "episode_id": "val_img_0_d8_003",
+        "outcome": "gemma_only"
+      },
+      {
+        "DeepSeek": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_1_d8_003",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 2,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 4,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 14,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 24,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 23,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 16,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_1_d8_003",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 2,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 4,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 9,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 14,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 24,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 23,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 22,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "area": "img_1",
+        "distance": 8,
+        "episode_id": "val_img_1_d8_003",
+        "outcome": "both_failure"
+      },
+      {
+        "DeepSeek": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_2_d8_001",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 2,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 24,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 23,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 22,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 21,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 20,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 15,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 10,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 11,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 6,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 2,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_2_d8_001",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 6,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 24,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 23,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 22,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 21,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 20,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 15,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 10,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 11,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "area": "img_2",
+        "distance": 8,
+        "episode_id": "val_img_2_d8_001",
+        "outcome": "both_failure"
+      },
+      {
+        "DeepSeek": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_3_d8_001",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 4,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 24,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 23,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 22,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 21,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 20,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 15,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 10,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 11,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "down",
+                "out_of_bounds": false,
+                "patch_id": 16,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "Gemma": {
+          "completion": "completed",
+          "evaluation": {
+            "episode_id": "val_img_3_d8_001",
+            "out_of_bounds": 0,
+            "repeat_visit_rate": 0.0,
+            "revisits": 0,
+            "sg": 4,
+            "steps": 10,
+            "success": false,
+            "termination": "budget_exhausted",
+            "trajectory": [
+              {
+                "action": null,
+                "out_of_bounds": false,
+                "patch_id": 24,
+                "revisited": false,
+                "step": 0
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 19,
+                "revisited": false,
+                "step": 1
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 18,
+                "revisited": false,
+                "step": 2
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 17,
+                "revisited": false,
+                "step": 3
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 12,
+                "revisited": false,
+                "step": 4
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 13,
+                "revisited": false,
+                "step": 5
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 8,
+                "revisited": false,
+                "step": 6
+              },
+              {
+                "action": "left",
+                "out_of_bounds": false,
+                "patch_id": 7,
+                "revisited": false,
+                "step": 7
+              },
+              {
+                "action": "up",
+                "out_of_bounds": false,
+                "patch_id": 2,
+                "revisited": false,
+                "step": 8
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 3,
+                "revisited": false,
+                "step": 9
+              },
+              {
+                "action": "right",
+                "out_of_bounds": false,
+                "patch_id": 4,
+                "revisited": false,
+                "step": 10
+              }
+            ]
+          }
+        },
+        "area": "img_3",
+        "distance": 8,
+        "episode_id": "val_img_3_d8_001",
+        "outcome": "both_failure"
+      }
+    ]
+  },
+  "provider_options_audit": {
+    "actual_payload_hashes_verified": true,
+    "errors_also_checked": true,
+    "passed": true,
+    "provider_option": "thinking.type=disabled",
+    "requests": 181
+  }
+}

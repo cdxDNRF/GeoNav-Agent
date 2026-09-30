@@ -1,0 +1,1038 @@
+{
+  "audit": {
+    "checkpoint_replay": true,
+    "checkpoint_sha256": "6ff3b97b58561b872443629574ea55db407c694a6e2071e548d6232b30bc8111",
+    "invalid_actions": 0,
+    "predictions_sha256": "8dedc65a7ed9df71306e7bdad92f5ab94a38a5a3941e53e4731010865944bf78"
+  },
+  "by_distance": {
+    "1": {
+      "action_change_rate": 0.6549707602339181,
+      "both_correct_rate": 0.0029239766081871343,
+      "cross_entropy": 3.002316923034568,
+      "direction_accuracy": 0.17690058479532164,
+      "invalid_actions": 0,
+      "pairs": 342,
+      "targets": 684
+    },
+    "2": {
+      "action_change_rate": 0.8605577689243028,
+      "both_correct_rate": 0.0013280212483399733,
+      "cross_entropy": 4.344075246526368,
+      "direction_accuracy": 0.07569721115537849,
+      "invalid_actions": 0,
+      "pairs": 753,
+      "targets": 1506
+    },
+    "3": {
+      "action_change_rate": 0.9365384615384615,
+      "both_correct_rate": 0.0019230769230769232,
+      "cross_entropy": 5.022512569710111,
+      "direction_accuracy": 0.0375,
+      "invalid_actions": 0,
+      "pairs": 520,
+      "targets": 1040
+    },
+    "4": {
+      "action_change_rate": 0.9689922480620154,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 5.550517193077839,
+      "direction_accuracy": 0.015503875968992248,
+      "invalid_actions": 0,
+      "pairs": 129,
+      "targets": 258
+    }
+  },
+  "by_source": {
+    "img_0": {
+      "action_change_rate": 0.6875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.424779528344516,
+      "direction_accuracy": 0.1875,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_1": {
+      "action_change_rate": 0.8125,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.169253627769649,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_10": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.847202880308032,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_100": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.87396872555837,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_101": {
+      "action_change_rate": 0.9375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.208524369634688,
+      "direction_accuracy": 0.03125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_103": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 5.12782464036718,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_105": {
+      "action_change_rate": 1.0,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.467959433794022,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_108": {
+      "action_change_rate": 0.9375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 5.252079011872411,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_109": {
+      "action_change_rate": 0.9375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.5341349029913545,
+      "direction_accuracy": 0.03125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_11": {
+      "action_change_rate": 1.0,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.6319672763347626,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_110": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 5.303344051353633,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_111": {
+      "action_change_rate": 0.9375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.844870440196246,
+      "direction_accuracy": 0.03125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_112": {
+      "action_change_rate": 0.9375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 5.329534210264683,
+      "direction_accuracy": 0.03125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_113": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0625,
+      "cross_entropy": 4.145167437149212,
+      "direction_accuracy": 0.125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_114": {
+      "action_change_rate": 0.625,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.287698432803154,
+      "direction_accuracy": 0.1875,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_115": {
+      "action_change_rate": 0.8125,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.504737849812955,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_116": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 5.449807739118114,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_117": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.9508019561180845,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_119": {
+      "action_change_rate": 0.8125,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.46742198895663,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_120": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.5349442716687918,
+      "direction_accuracy": 0.125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_122": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.553603651467711,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_124": {
+      "action_change_rate": 0.9375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.232810067012906,
+      "direction_accuracy": 0.03125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_125": {
+      "action_change_rate": 1.0,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.715926170349121,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_126": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.182873526588082,
+      "direction_accuracy": 0.125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_127": {
+      "action_change_rate": 0.375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 2.488767573144287,
+      "direction_accuracy": 0.34375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_128": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 5.3121088752523065,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_130": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.838287444785237,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_131": {
+      "action_change_rate": 0.6875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.5332462061196566,
+      "direction_accuracy": 0.15625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_132": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0625,
+      "cross_entropy": 4.073491903807735,
+      "direction_accuracy": 0.1875,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_133": {
+      "action_change_rate": 0.9375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.379410558380187,
+      "direction_accuracy": 0.03125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_134": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.7053446610225365,
+      "direction_accuracy": 0.125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_135": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.6478162779239938,
+      "direction_accuracy": 0.15625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_136": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 5.444362274836749,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_14": {
+      "action_change_rate": 0.8125,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.611862340942025,
+      "direction_accuracy": 0.125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_15": {
+      "action_change_rate": 1.0,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.459801556542516,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_17": {
+      "action_change_rate": 1.0,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.491166640073061,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_18": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.6690658561419696,
+      "direction_accuracy": 0.15625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_19": {
+      "action_change_rate": 0.9375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.011796085629612,
+      "direction_accuracy": 0.03125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_2": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.233830801909789,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_21": {
+      "action_change_rate": 0.8125,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.4644628000678495,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_22": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.683848182205111,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_23": {
+      "action_change_rate": 0.6875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.229300642153248,
+      "direction_accuracy": 0.1875,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_24": {
+      "action_change_rate": 0.8125,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.219474645331502,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_25": {
+      "action_change_rate": 1.0,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.528887880966067,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_26": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.6103990552946925,
+      "direction_accuracy": 0.15625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_27": {
+      "action_change_rate": 1.0,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.846097156405449,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_28": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.437074686284177,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_29": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.544818780384958,
+      "direction_accuracy": 0.125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_3": {
+      "action_change_rate": 0.8125,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.470135084120557,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_31": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.934242818504572,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_33": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.0697677350835875,
+      "direction_accuracy": 0.1875,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_34": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.3232434960082173,
+      "direction_accuracy": 0.125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_35": {
+      "action_change_rate": 1.0,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.47196626663208,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_36": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.5631538559682667,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_37": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.583914709277451,
+      "direction_accuracy": 0.15625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_38": {
+      "action_change_rate": 0.9375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.407631495967507,
+      "direction_accuracy": 0.03125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_39": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.198261251673102,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_40": {
+      "action_change_rate": 0.8125,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.510630838572979,
+      "direction_accuracy": 0.125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_41": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.067789424210787,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_42": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.275101025123149,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_43": {
+      "action_change_rate": 1.0,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.1683010421693325,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_44": {
+      "action_change_rate": 0.9375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.0997813530266285,
+      "direction_accuracy": 0.03125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_45": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.165493912994862,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_46": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.7762719235615805,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_47": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.229268565773964,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_48": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.329062348464504,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_49": {
+      "action_change_rate": 0.9375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.757447293028235,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_50": {
+      "action_change_rate": 0.8125,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.451754424721003,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_51": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.252761356066912,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_52": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 5.237037237457116,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_53": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.675691238604486,
+      "direction_accuracy": 0.125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_54": {
+      "action_change_rate": 0.8125,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.9316980575677007,
+      "direction_accuracy": 0.125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_55": {
+      "action_change_rate": 1.0,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 5.43936600163579,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_56": {
+      "action_change_rate": 0.8125,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.264519554097205,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_57": {
+      "action_change_rate": 0.6875,
+      "both_correct_rate": 0.0625,
+      "cross_entropy": 4.810792640782893,
+      "direction_accuracy": 0.21875,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_58": {
+      "action_change_rate": 1.0,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.956448618322611,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_59": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.5253473185002804,
+      "direction_accuracy": 0.125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_6": {
+      "action_change_rate": 0.8125,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.326907649287023,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_60": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 2.948406334966421,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_61": {
+      "action_change_rate": 0.8125,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.059742227196693,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_62": {
+      "action_change_rate": 0.8125,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.600972033105791,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_63": {
+      "action_change_rate": 0.9375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.148389708250761,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_65": {
+      "action_change_rate": 0.9375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.213019142858684,
+      "direction_accuracy": 0.03125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_66": {
+      "action_change_rate": 0.8125,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.014524090336636,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_67": {
+      "action_change_rate": 1.0,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.020243391394615,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_68": {
+      "action_change_rate": 0.9375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.043546435423195,
+      "direction_accuracy": 0.03125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_69": {
+      "action_change_rate": 1.0,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.784681366756558,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_7": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.173601248301566,
+      "direction_accuracy": 0.125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_70": {
+      "action_change_rate": 0.8125,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.801605876535177,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_71": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.540179097093642,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_73": {
+      "action_change_rate": 0.8125,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.933337663358543,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_74": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.714864901266992,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_75": {
+      "action_change_rate": 0.625,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.7284861826337874,
+      "direction_accuracy": 0.1875,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_76": {
+      "action_change_rate": 0.6875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.523349275346845,
+      "direction_accuracy": 0.15625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_77": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.056429102085531,
+      "direction_accuracy": 0.125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_78": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.0064154784195125,
+      "direction_accuracy": 0.15625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_79": {
+      "action_change_rate": 0.8125,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.3806427717208862,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_80": {
+      "action_change_rate": 1.0,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.964171472936869,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_81": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.404700445942581,
+      "direction_accuracy": 0.0625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_84": {
+      "action_change_rate": 0.9375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 6.105814913287759,
+      "direction_accuracy": 0.03125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_87": {
+      "action_change_rate": 0.9375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.96129129640758,
+      "direction_accuracy": 0.03125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_88": {
+      "action_change_rate": 0.9375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.525506878271699,
+      "direction_accuracy": 0.03125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_89": {
+      "action_change_rate": 0.875,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.7400134969502687,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_9": {
+      "action_change_rate": 1.0,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.569810546934605,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_91": {
+      "action_change_rate": 0.5625,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 3.1620301539078355,
+      "direction_accuracy": 0.15625,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_93": {
+      "action_change_rate": 0.9375,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 5.114627983421087,
+      "direction_accuracy": 0.03125,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_96": {
+      "action_change_rate": 0.75,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 4.3686276017688215,
+      "direction_accuracy": 0.09375,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_98": {
+      "action_change_rate": 1.0,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 5.4819033443927765,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    },
+    "img_99": {
+      "action_change_rate": 1.0,
+      "both_correct_rate": 0.0,
+      "cross_entropy": 5.729586830362678,
+      "direction_accuracy": 0.0,
+      "invalid_actions": 0,
+      "pairs": 16,
+      "targets": 32
+    }
+  },
+  "metrics": {
+    "action_change_rate": 0.8509174311926605,
+    "both_correct_rate": 0.0017201834862385322,
+    "cross_entropy": 4.3724795312319245,
+    "direction_accuracy": 0.07970183486238532,
+    "invalid_actions": 0,
+    "pairs": 1744,
+    "targets": 3488
+  }
+}

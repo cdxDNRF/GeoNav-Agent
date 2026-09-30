@@ -1,0 +1,23 @@
+{
+  "utc": "2026-09-29T17:37:48.266333+00:00",
+  "provider": {
+    "base_url": "https://api.deepseek.com/v1",
+    "model": "deepseek-flash",
+    "timeout_seconds": 45,
+    "max_tokens": 1024,
+    "temperature": 0,
+    "stream": false,
+    "response_format": "json_object",
+    "api_key": "[REDACTED]"
+  },
+  "scope": "Synthetic shapes only; not a navigation or general visual capability benchmark.",
+  "maximum_requests": 3,
+  "retries": 0,
+  "prompt": "Inspect the two supplied images in order. Return only a JSON object with first_color, first_shape, second_color, second_shape. Colors: red, green, blue. Shapes: circle, square, triangle. Describe the colored shape on the white background in each image.",
+  "image_sha256": [
+    "dbe77b1a2c445d7c902ec887d65b262c8cf34d4548411e86ad2473d9abd76ef4",
+    "e05d045a69f5d96a205777a6b509c1e7abc5904feef477c8c48bbea4df596e2a"
+  ],
+  "seed": 9030,
+  "source_sha256": "064a4b9a1badbbd3a2f60f555bc3c0648f8a48f3b9ef89c59ba8ec1c58d8da0b"
+}

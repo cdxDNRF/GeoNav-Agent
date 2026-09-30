@@ -1,0 +1,54 @@
+{
+  "actions": [
+    "up",
+    "right",
+    "down",
+    "left"
+  ],
+  "area_count": 4,
+  "area_sha256": {
+    "img_0": "0f8705f7ccf77722dcd750dae1f1601cc8d08bf5e8bcdf921fac51ed5e1e9982",
+    "img_1": "bd3973731ec3f4efef05876d92015a53d9f4d765da21b6143fe6a7d2ba50cfa4",
+    "img_2": "2d252b445a72ebf5d5dda923fe3f6ad960a70d193a3cb363ff2c280398640812",
+    "img_3": "c90b341ddb9aa2bcc24a4635569e932fee5b2d35391adc606ac2b2045fc96a6c"
+  },
+  "available_pairs_per_distance": {
+    "4": 120,
+    "5": 80,
+    "6": 40,
+    "7": 16,
+    "8": 4
+  },
+  "boundary": "stay_and_consume_one_step",
+  "budget": 10,
+  "distances": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "duplicate_draws_per_distance": {
+    "4": 0,
+    "5": 1,
+    "6": 1,
+    "7": 4,
+    "8": 8
+  },
+  "episode_count": 100,
+  "episodes_sha256": "91bfe1bbda6ff775fe1bdf2d396191aa64fdfd1c8e0603086319e3317cfdb8be",
+  "generator_sha256": "2d82caf923a0073bdb111e0b673127a9fa4945ca281117d2d114dc1b4598420e",
+  "grid_size": 5,
+  "memory": "episode_isolated",
+  "metadata_sha256": "564491fd8be5120274b4999e73a676096a361ede51de12ef05642eaa5610b5a9",
+  "n_per_area_per_distance": 5,
+  "protocol": "masa-local-grid5-v2",
+  "rng": "python_random_sha256_per_split_area_distance",
+  "sampling": "ordered_pairs_with_replacement",
+  "scope": "local_151_image_Masa_not_paper_split",
+  "seed": 42,
+  "split": "val",
+  "target_modality": "aerial_image",
+  "termination": "first_arrival_success_including_last_budget_step",
+  "validator_sha256": "3c85105ae7bf8efb90f1726e695c8db90e03544de342c874c08eb166e8019502"
+}

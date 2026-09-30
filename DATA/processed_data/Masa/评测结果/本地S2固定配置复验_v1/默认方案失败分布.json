@@ -1,0 +1,30 @@
+{
+  "arm": "Small256_NoTarget",
+  "post_run_diagnostic": true,
+  "seed_episode_records": 300,
+  "failures": 81,
+  "by_distance": {
+    "4": {
+      "episodes": 60,
+      "failures": 31
+    },
+    "5": {
+      "episodes": 60,
+      "failures": 26
+    },
+    "6": {
+      "episodes": 60,
+      "failures": 20
+    },
+    "7": {
+      "episodes": 60,
+      "failures": 4
+    },
+    "8": {
+      "episodes": 60,
+      "failures": 0
+    }
+  },
+  "C4_C5_failure_share": 0.7037037037037037,
+  "note": "Seed repetitions are not independent maps; distance strata have different start/goal distributions."
+}

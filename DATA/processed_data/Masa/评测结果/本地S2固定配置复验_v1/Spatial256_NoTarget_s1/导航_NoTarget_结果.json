@@ -1,0 +1,112 @@
+{
+  "audit": {
+    "checkpoint_replay": true,
+    "checkpoint_sha256": "2803ceb45b371e84a324bee335a5cd58475f4f68749931e24b29753f22ffebe5",
+    "environment_replay": true,
+    "records_sha256": "0b771dd877a9b6c5284ac735a78489e326616e0de549d5c786b7466d9f42c6fd"
+  },
+  "by_distance": {
+    "4": {
+      "episodes": 20,
+      "mean_sg_all_episodes": 1.5,
+      "mean_steps": 7.6,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.05666666666666667,
+      "repeat_visit_rate_micro": 0.06578947368421052,
+      "sr": 0.55,
+      "successes": 11
+    },
+    "5": {
+      "episodes": 20,
+      "mean_sg_all_episodes": 1.35,
+      "mean_steps": 7.95,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.029285714285714286,
+      "repeat_visit_rate_micro": 0.031446540880503145,
+      "sr": 0.55,
+      "successes": 11
+    },
+    "6": {
+      "episodes": 20,
+      "mean_sg_all_episodes": 0.4,
+      "mean_steps": 7.2,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.0,
+      "repeat_visit_rate_micro": 0.0,
+      "sr": 0.85,
+      "successes": 17
+    },
+    "7": {
+      "episodes": 20,
+      "mean_sg_all_episodes": 0.25,
+      "mean_steps": 7.95,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.015,
+      "repeat_visit_rate_micro": 0.018867924528301886,
+      "sr": 0.95,
+      "successes": 19
+    },
+    "8": {
+      "episodes": 20,
+      "mean_sg_all_episodes": 0,
+      "mean_steps": 8,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.0,
+      "repeat_visit_rate_micro": 0.0,
+      "sr": 1.0,
+      "successes": 20
+    }
+  },
+  "by_source": {
+    "img_0": {
+      "episodes": 25,
+      "mean_sg_all_episodes": 0.72,
+      "mean_steps": 7.6,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.008,
+      "repeat_visit_rate_micro": 0.010526315789473684,
+      "sr": 0.8,
+      "successes": 20
+    },
+    "img_1": {
+      "episodes": 25,
+      "mean_sg_all_episodes": 1,
+      "mean_steps": 8.2,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.008,
+      "repeat_visit_rate_micro": 0.00975609756097561,
+      "sr": 0.64,
+      "successes": 16
+    },
+    "img_2": {
+      "episodes": 25,
+      "mean_sg_all_episodes": 0.48,
+      "mean_steps": 7.68,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.03809523809523809,
+      "repeat_visit_rate_micro": 0.041666666666666664,
+      "sr": 0.84,
+      "successes": 21
+    },
+    "img_3": {
+      "episodes": 25,
+      "mean_sg_all_episodes": 0.6,
+      "mean_steps": 7.48,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.02666666666666667,
+      "repeat_visit_rate_micro": 0.03208556149732621,
+      "sr": 0.84,
+      "successes": 21
+    }
+  },
+  "metrics": {
+    "episodes": 100,
+    "mean_sg_all_episodes": 0.7,
+    "mean_steps": 7.74,
+    "out_of_bounds_rate": 0.0,
+    "repeat_visit_rate_macro": 0.02019047619047619,
+    "repeat_visit_rate_micro": 0.023255813953488372,
+    "sr": 0.78,
+    "successes": 78
+  }
+}

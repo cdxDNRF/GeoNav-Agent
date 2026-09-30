@@ -1,0 +1,309 @@
+{
+  "averages": {
+    "Small256": {
+      "Full": {
+        "mean_sg_all_episodes": 1.1738095238095239,
+        "out_of_bounds_rate": 0.0,
+        "repeat_visit_rate_micro": 0.06907964363906195,
+        "sr": 0.6595238095238095,
+        "sr_by_seed": [
+          0.6357142857142857,
+          0.6642857142857143,
+          0.6785714285714286
+        ],
+        "successes_by_seed": [
+          89,
+          93,
+          95
+        ]
+      },
+      "MeanCue": {
+        "mean_sg_all_episodes": 1.0476190476190477,
+        "out_of_bounds_rate": 0.0,
+        "repeat_visit_rate_micro": 0.030741226928158547,
+        "sr": 0.6904761904761906,
+        "sr_by_seed": [
+          0.6785714285714286,
+          0.65,
+          0.7428571428571429
+        ],
+        "successes_by_seed": [
+          95,
+          91,
+          104
+        ]
+      },
+      "NoTarget": {
+        "mean_sg_all_episodes": 0.8642857142857143,
+        "out_of_bounds_rate": 0.0,
+        "repeat_visit_rate_micro": 0.033121838463753,
+        "sr": 0.7261904761904763,
+        "sr_by_seed": [
+          0.7071428571428572,
+          0.7714285714285715,
+          0.7
+        ],
+        "successes_by_seed": [
+          99,
+          108,
+          98
+        ]
+      },
+      "WrongCue": {
+        "mean_sg_all_episodes": 1.2,
+        "out_of_bounds_rate": 0.0,
+        "repeat_visit_rate_micro": 0.059914406454276654,
+        "sr": 0.6380952380952382,
+        "sr_by_seed": [
+          0.6285714285714286,
+          0.5785714285714286,
+          0.7071428571428572
+        ],
+        "successes_by_seed": [
+          88,
+          81,
+          99
+        ]
+      }
+    },
+    "Spatial256": {
+      "Full": {
+        "mean_sg_all_episodes": 1.0523809523809524,
+        "out_of_bounds_rate": 0.0,
+        "repeat_visit_rate_micro": 0.042783976675290714,
+        "sr": 0.688095238095238,
+        "sr_by_seed": [
+          0.7357142857142858,
+          0.6285714285714286,
+          0.7
+        ],
+        "successes_by_seed": [
+          103,
+          88,
+          98
+        ]
+      },
+      "MeanCue": {
+        "mean_sg_all_episodes": 0.780952380952381,
+        "out_of_bounds_rate": 0.0,
+        "repeat_visit_rate_micro": 0.01297953189902254,
+        "sr": 0.7476190476190476,
+        "sr_by_seed": [
+          0.8142857142857143,
+          0.6785714285714286,
+          0.75
+        ],
+        "successes_by_seed": [
+          114,
+          95,
+          105
+        ]
+      },
+      "NoTarget": {
+        "mean_sg_all_episodes": 0.7880952380952381,
+        "out_of_bounds_rate": 0.0,
+        "repeat_visit_rate_micro": 0.022647577466069404,
+        "sr": 0.730952380952381,
+        "sr_by_seed": [
+          0.6857142857142857,
+          0.7642857142857142,
+          0.7428571428571429
+        ],
+        "successes_by_seed": [
+          96,
+          107,
+          104
+        ]
+      },
+      "WrongCue": {
+        "mean_sg_all_episodes": 1.0595238095238095,
+        "out_of_bounds_rate": 0.0,
+        "repeat_visit_rate_micro": 0.03863290941125051,
+        "sr": 0.6809523809523809,
+        "sr_by_seed": [
+          0.7357142857142858,
+          0.6214285714285714,
+          0.6857142857142857
+        ],
+        "successes_by_seed": [
+          103,
+          87,
+          96
+        ]
+      }
+    }
+  },
+  "formal_S2_passed": false,
+  "known_development_holdout": true,
+  "models": 12,
+  "neural_navigation_episodes": 3360,
+  "original_val_test_used": false,
+  "previous_direction_training": {
+    "Small256": {
+      "current_sr": 0.6595238095238095,
+      "descriptive_only": true,
+      "difference": 0.4476190476190476,
+      "equal_training_budget": false,
+      "previous_sr": 0.2119047619047619
+    },
+    "Spatial256": {
+      "current_sr": 0.688095238095238,
+      "descriptive_only": true,
+      "difference": 0.4523809523809522,
+      "equal_training_budget": false,
+      "previous_sr": 0.23571428571428574
+    }
+  },
+  "rule_navigation_episodes": 280,
+  "rules": {
+    "FixedRegion": {
+      "episodes": 140,
+      "mean_sg_all_episodes": 2.3714285714285714,
+      "mean_steps": 9.45,
+      "out_of_bounds_rate": 0.02343159486016629,
+      "repeat_visit_rate_macro": 0.06714285714285714,
+      "repeat_visit_rate_micro": 0.0710506424792139,
+      "sr": 0.29285714285714287,
+      "successes": 41
+    },
+    "Frontier": {
+      "episodes": 140,
+      "mean_sg_all_episodes": 2.085714285714286,
+      "mean_steps": 8.528571428571428,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.0035714285714285718,
+      "repeat_visit_rate_micro": 0.0041876046901172526,
+      "sr": 0.5214285714285715,
+      "successes": 73
+    }
+  },
+  "spatial_effect": {
+    "gain": 0.02857142857142858,
+    "lower_metric_change": -0.1214285714285714,
+    "observational_candidate": true,
+    "positive_seeds": 2,
+    "sg_source_interval": {
+      "interval95": [
+        -0.3095238095238095,
+        0.07857142857142858
+      ],
+      "mean": -0.12142857142857143,
+      "resamples": 2000,
+      "scope": "known development source split; not independent confirmation",
+      "source_count": 28
+    },
+    "source_interval": {
+      "interval95": [
+        -0.014285714285714282,
+        0.06904761904761904
+      ],
+      "mean": 0.02857142857142857,
+      "resamples": 2000,
+      "scope": "known development source split; not independent confirmation",
+      "source_count": 28
+    }
+  },
+  "target_contrasts": {
+    "Small256": {
+      "MeanCue": {
+        "gain": -0.03095238095238099,
+        "lower_metric_change": 0.1261904761904761,
+        "observational_candidate": false,
+        "positive_seeds": 1,
+        "source_interval": {
+          "interval95": [
+            -0.07142857142857142,
+            0.00952380952380953
+          ],
+          "mean": -0.03095238095238095,
+          "resamples": 2000,
+          "scope": "known development source split; not independent confirmation",
+          "source_count": 28
+        }
+      },
+      "NoTarget": {
+        "gain": -0.0666666666666667,
+        "lower_metric_change": 0.3095238095238095,
+        "observational_candidate": false,
+        "positive_seeds": 0,
+        "source_interval": {
+          "interval95": [
+            -0.10714285714285714,
+            -0.02857142857142857
+          ],
+          "mean": -0.06666666666666667,
+          "resamples": 2000,
+          "scope": "known development source split; not independent confirmation",
+          "source_count": 28
+        }
+      },
+      "WrongCue": {
+        "gain": 0.02142857142857139,
+        "lower_metric_change": -0.02619047619047617,
+        "observational_candidate": true,
+        "positive_seeds": 2,
+        "source_interval": {
+          "interval95": [
+            -0.019047619047619053,
+            0.05952380952380953
+          ],
+          "mean": 0.021428571428571432,
+          "resamples": 2000,
+          "scope": "known development source split; not independent confirmation",
+          "source_count": 28
+        }
+      }
+    },
+    "Spatial256": {
+      "MeanCue": {
+        "gain": -0.059523809523809534,
+        "lower_metric_change": 0.27142857142857146,
+        "observational_candidate": false,
+        "positive_seeds": 0,
+        "source_interval": {
+          "interval95": [
+            -0.09523809523809526,
+            -0.026190476190476188
+          ],
+          "mean": -0.05952380952380953,
+          "resamples": 2000,
+          "scope": "known development source split; not independent confirmation",
+          "source_count": 28
+        }
+      },
+      "NoTarget": {
+        "gain": -0.04285714285714285,
+        "lower_metric_change": 0.2642857142857143,
+        "observational_candidate": false,
+        "positive_seeds": 1,
+        "source_interval": {
+          "interval95": [
+            -0.0857142857142857,
+            -0.0023809523809523773
+          ],
+          "mean": -0.04285714285714286,
+          "resamples": 2000,
+          "scope": "known development source split; not independent confirmation",
+          "source_count": 28
+        }
+      },
+      "WrongCue": {
+        "gain": 0.0071428571428571175,
+        "lower_metric_change": -0.007142857142857155,
+        "observational_candidate": false,
+        "positive_seeds": 2,
+        "source_interval": {
+          "interval95": [
+            -0.035714285714285705,
+            0.049999999999999996
+          ],
+          "mean": 0.0071428571428571435,
+          "resamples": 2000,
+          "scope": "known development source split; not independent confirmation",
+          "source_count": 28
+        }
+      }
+    }
+  },
+  "training_steps": 1966080
+}

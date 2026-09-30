@@ -1,0 +1,50 @@
+{
+  "requested_model": "deepseek-flash",
+  "base_url": "https://api.deepseek.com/v1",
+  "model_list_http_status": 200,
+  "model_listed": true,
+  "requests": 3,
+  "visual_checks": [
+    {
+      "order": [
+        0,
+        1
+      ],
+      "expected": {
+        "first_color": "green",
+        "first_shape": "square",
+        "second_color": "blue",
+        "second_shape": "triangle"
+      },
+      "parsed": {
+        "first_color": "green",
+        "first_shape": "square",
+        "second_color": "blue",
+        "second_shape": "triangle"
+      },
+      "passed": true
+    },
+    {
+      "order": [
+        1,
+        0
+      ],
+      "expected": {
+        "first_color": "blue",
+        "first_shape": "triangle",
+        "second_color": "green",
+        "second_shape": "square"
+      },
+      "parsed": {
+        "first_color": "blue",
+        "first_shape": "triangle",
+        "second_color": "green",
+        "second_shape": "square"
+      },
+      "passed": true
+    }
+  ],
+  "synthetic_two_image_passed": true,
+  "navigation_evaluated": false,
+  "parameter_count_verified": false
+}

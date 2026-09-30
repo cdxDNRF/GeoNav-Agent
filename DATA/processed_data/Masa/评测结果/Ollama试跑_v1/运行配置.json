@@ -1,0 +1,55 @@
+{
+  "api": {
+    "api_key": "[REDACTED]",
+    "base_url": "https://ollama.com/v1",
+    "max_tokens": 128,
+    "model": "gemma4:31b",
+    "response_format": "json_object",
+    "stream": false,
+    "temperature": 0,
+    "timeout_seconds": 90.0
+  },
+  "automatic_retries": 0,
+  "context": "two_images_and_current_state_with_visited_ids_no_conversation_history",
+  "max_action_requests": 20,
+  "pricing": null,
+  "prompt_version": "aerial-pair-four-actions-v1",
+  "protocol": "masa-local-grid5-v2",
+  "selected_episodes": [
+    {
+      "area": "img_3",
+      "budget": 10,
+      "dist": 4,
+      "episode_id": "val_img_3_d4_001",
+      "goal": 13,
+      "grid_size": 5,
+      "protocol": "masa-local-grid5-v2",
+      "source_tile": "23728930_15.png",
+      "split": "val",
+      "start": 5
+    },
+    {
+      "area": "img_0",
+      "budget": 10,
+      "dist": 6,
+      "episode_id": "val_img_0_d6_001",
+      "goal": 23,
+      "grid_size": 5,
+      "protocol": "masa-local-grid5-v2",
+      "source_tile": "22978945_15.png",
+      "split": "val",
+      "start": 5
+    }
+  ],
+  "selection": "minimum_sha256_episode_id_at_val_dist_4_and_6",
+  "source_sha256": {
+    "agents/vlm.py": "9044d8a59a37d468473590d9571b5c33ea8a91133d6667fe1ad4f021807be78c",
+    "env/environment.py": "ad19a173945f86ed04b18c0f5365e543217688d124271f51bc05f2747af92b5b",
+    "env/episode.py": "3c85105ae7bf8efb90f1726e695c8db90e03544de342c874c08eb166e8019502",
+    "eval/evaluate.py": "c8ba4f434d0b3ed2bff24c09af368431b42d503e64233228e9d8c4fa42de7279",
+    "eval/pilot.py": "cb00e5fec94a0a7fc2dc7bd04aeb1468eb724d8bd26155000c4fa1c270af22b6"
+  },
+  "split": "val",
+  "system_prompt": "You are an aerial-image search policy in a 5 by 5 grid. The first image is the target clue and the second is your CURRENT local observation. Rows increase downward and columns increase rightward. You see no unvisited cells and do not know the target coordinates or true distance. The target may not be directionally identifiable from these two images: choose a reasonable exploratory move using only visible evidence and the provided visited-cell IDs. Boundary moves stay in place and cost one step. Output ONLY a JSON object with one key, action, whose value is up, right, down, or left. Do not output explanations or reasoning. Never output stop.",
+  "task_sha256": "91bfe1bbda6ff775fe1bdf2d396191aa64fdfd1c8e0603086319e3317cfdb8be"
+}

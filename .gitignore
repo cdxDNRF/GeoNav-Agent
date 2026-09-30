@@ -1,0 +1,31 @@
+# Local API credentials (keep example templates versioned).
+.env
+.env.*
+!.env.example
+!.env.*.example
+
+# Local tooling, dependencies, and caches.
+.zcode/
+node_modules/
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ipynb_checkpoints/
+.DS_Store
+Thumbs.db
+~$*
+
+# Downloaded datasets, model weights, and the upstream reference checkout.
+/DATA/raw_data/
+/DATA/processed_data/**/patches/
+/models/
+/GOMAA-Geo/
+*.npy
+*.npz
+*.pt
+*.pth
+*.ckpt
+*.safetensors
