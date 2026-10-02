@@ -130,9 +130,8 @@ class CueNavigationTests(Fixture):
             self.assertTrue(all(d['cue_action'] is None for d in result['decisions']))
 
     def test_explorer_hidden_state_advances_even_when_cue_changes_action(self):
-        class TrackedExplorer:
-            def __init__(self):self.carries=[]
-            def eval(self):return self
+        class TrackedExplorer(torch.nn.Module):
+            def __init__(self):super().__init__();self.carries=[]
             def step(self,x,hidden):
                 value=0 if hidden is None else int(hidden[0,0])
                 self.carries.append(value)
@@ -141,9 +140,8 @@ class CueNavigationTests(Fixture):
                 legal=torch.tensor([[row>0,col<4,row<4,col>0]])
                 logits.masked_fill_(~legal,torch.finfo(logits.dtype).min)
                 return logits,None,None,torch.tensor([[value+1.]])
-        class DownCue:
-            def eval(self):return self
-            def __call__(self,x):return torch.tensor([[0.,0.,10.,0.,0.]])
+        class DownCue(torch.nn.Module):
+            def forward(self,x):return torch.tensor([[0.,0.,10.,0.,0.]])
         explorer=TrackedExplorer();result=self.run_condition('CueFull',.9,explorer,DownCue())
         self.assertEqual(explorer.carries,list(range(result['steps'])))
         self.assertTrue(any(d['cue_action'] and d['action']!=d['explorer_action'] for d in result['decisions']))
