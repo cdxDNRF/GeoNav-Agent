@@ -1,0 +1,36 @@
+{
+  "post_hoc_diagnostic": true,
+  "method": "Spatial256_Full",
+  "three_seed_episodes": 420,
+  "failures": 131,
+  "by_distance": {
+    "4": {
+      "episodes": 84,
+      "failures": 49
+    },
+    "5": {
+      "episodes": 84,
+      "failures": 44
+    },
+    "6": {
+      "episodes": 84,
+      "failures": 27
+    },
+    "7": {
+      "episodes": 84,
+      "failures": 6
+    },
+    "8": {
+      "episodes": 84,
+      "failures": 5
+    }
+  },
+  "C4_C5_failures": 93,
+  "C4_C5_share_of_failures": 0.7099236641221374,
+  "source_files_sha256": {
+    "Spatial256_Full_s0\\导航_Full_轨迹.jsonl": "98b1d089dce43e224b03a769361038da2f147451ff37dc6f5b51f50a585260f5",
+    "Spatial256_Full_s1\\导航_Full_轨迹.jsonl": "998e0e29639c4e6a104823ee9dd2bc251bcfc021b6999a74a6cd1b0f158a6fb8",
+    "Spatial256_Full_s2\\导航_Full_轨迹.jsonl": "3732b11bbf29387c5d9adb4aa9e3157515c9439182f7d61c5b00fbfe112795ba"
+  },
+  "note": "Repeated seed evaluations are not independent map samples; this does not establish distance as the causal failure mechanism."
+}

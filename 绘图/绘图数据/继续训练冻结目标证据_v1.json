@@ -1,0 +1,35 @@
+{
+  "figures": [
+    {
+      "caption": "Continue5冻结目标证据：真实目标SR79.73%/SG0.823，禁用cue59.40%/1.723、均值目标52.20%/1.877、错目标57.20%/1.698。每条件500题×三最终权重、20已见源文件、10×10/B20；均值/错图作用于全局、局部、边缘全部目标通道，禁用cue保留同一探索器。SR主指标，SG为所有终局曼哈顿距离。白色点是训练权重，不是CI。目标证据通过不等于独立确认或默认替换。",
+      "files": [
+        {
+          "path": "绘图/数据结果图/34_继续训练冻结目标证据.pdf",
+          "sha256": "5071639de7fe881bd745206038438c8f23231f21fc7d0db4a3d55a65a5d9953c"
+        },
+        {
+          "path": "绘图/数据结果图/34_继续训练冻结目标证据.svg",
+          "sha256": "b058d536cf60c3af42df13ec243a51de4fdb2e48ee151428df3b1ff15fe9bbc6"
+        },
+        {
+          "path": "绘图/数据结果图/34_继续训练冻结目标证据.png",
+          "sha256": "0ab521d1e0c1845e2cb85e6bf0e0f681054449f913699ebe88050ca3df43c380"
+        }
+      ],
+      "id": "34_继续训练冻结目标证据",
+      "protocol": "继续训练冻结目标证据",
+      "reproduction_script": "project/src/documents/summarize_continued_validation.py",
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/目标证据汇总.json",
+        "DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/独立复核.json"
+      ]
+    }
+  ],
+  "min_font_pt": 9,
+  "recommended_width_cm": 18,
+  "script_sha256": "53bdb5b96f27888a304e3fe5dbcf08303e027dd06d8889ae595a44337891f0ad",
+  "source_sha256": {
+    "DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/独立复核.json": "506ed891c44c14e13a4d1baad79c0e70cb40ba0a83d33a59ad3e787239f55edf",
+    "DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/目标证据汇总.json": "57e524a7c35952b32426540711ad7d64aa0850e1b27475e28e0250b5c812c47a"
+  }
+}

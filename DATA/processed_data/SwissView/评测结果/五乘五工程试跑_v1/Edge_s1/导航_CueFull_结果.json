@@ -1,0 +1,132 @@
+{
+  "audit": {
+    "canonical_wrapper_replay": true,
+    "explorer_sha256": "d734ab8d9e755e697e7dd1cc8f8eb8b4055aae1780e1fc16d27749eab3115dfa",
+    "head_sha256": "f37734c1d19b38a99b7d589eac004a801d1571ae46df55cbf8161d97ea3bbb53",
+    "independent_checkpoint_replay_pending": true,
+    "trajectory_sha256": "7b70aa84e06d63c0774a3836015a2bb23864ba0ebdef4396405a75dee5c9b56d"
+  },
+  "by_distance": {
+    "4": {
+      "episodes": 4,
+      "mean_sg_all_episodes": 0.5,
+      "mean_steps": 9.5,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.03125,
+      "repeat_visit_rate_micro": 0.02631578947368421,
+      "sr": 0.75,
+      "successes": 3
+    },
+    "5": {
+      "episodes": 4,
+      "mean_sg_all_episodes": 0,
+      "mean_steps": 6,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.0,
+      "repeat_visit_rate_micro": 0.0,
+      "sr": 1.0,
+      "successes": 4
+    },
+    "6": {
+      "episodes": 4,
+      "mean_sg_all_episodes": 1,
+      "mean_steps": 9,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.075,
+      "repeat_visit_rate_micro": 0.08333333333333333,
+      "sr": 0.75,
+      "successes": 3
+    },
+    "7": {
+      "episodes": 4,
+      "mean_sg_all_episodes": 0,
+      "mean_steps": 7.5,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.0,
+      "repeat_visit_rate_micro": 0.0,
+      "sr": 1.0,
+      "successes": 4
+    },
+    "8": {
+      "episodes": 4,
+      "mean_sg_all_episodes": 0,
+      "mean_steps": 8,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.0,
+      "repeat_visit_rate_micro": 0.0,
+      "sr": 1.0,
+      "successes": 4
+    }
+  },
+  "by_source": {
+    "img_0": {
+      "episodes": 5,
+      "mean_sg_all_episodes": 0,
+      "mean_steps": 8,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.0,
+      "repeat_visit_rate_micro": 0.0,
+      "sr": 1.0,
+      "successes": 5
+    },
+    "img_1": {
+      "episodes": 5,
+      "mean_sg_all_episodes": 0.4,
+      "mean_steps": 7.6,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.0,
+      "repeat_visit_rate_micro": 0.0,
+      "sr": 0.8,
+      "successes": 4
+    },
+    "img_2": {
+      "episodes": 5,
+      "mean_sg_all_episodes": 0,
+      "mean_steps": 7.2,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.025,
+      "repeat_visit_rate_micro": 0.027777777777777776,
+      "sr": 1.0,
+      "successes": 5
+    },
+    "img_3": {
+      "episodes": 5,
+      "mean_sg_all_episodes": 0.8,
+      "mean_steps": 9.2,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.06,
+      "repeat_visit_rate_micro": 0.06521739130434782,
+      "sr": 0.8,
+      "successes": 4
+    }
+  },
+  "changed_actions": 5,
+  "interventions": 25,
+  "metrics": {
+    "episodes": 20,
+    "mean_sg_all_episodes": 0.3,
+    "mean_steps": 8,
+    "out_of_bounds_rate": 0.0,
+    "repeat_visit_rate_macro": 0.021249999999999998,
+    "repeat_visit_rate_micro": 0.025,
+    "sr": 0.9,
+    "successes": 18
+  },
+  "rejection_counts": {
+    "accepted": 25,
+    "illegal_top_direction": 3,
+    "low_confidence": 1,
+    "not_adjacent": 127,
+    "visited_top_destination": 4
+  },
+  "short_distance": {
+    "episodes": 8,
+    "mean_sg_all_episodes": 0.25,
+    "mean_steps": 7.75,
+    "out_of_bounds_rate": 0.0,
+    "repeat_visit_rate_macro": 0.015625,
+    "repeat_visit_rate_micro": 0.016129032258064516,
+    "sr": 0.875,
+    "successes": 7
+  }
+}

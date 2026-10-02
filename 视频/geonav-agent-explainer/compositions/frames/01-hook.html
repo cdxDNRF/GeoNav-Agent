@@ -1,0 +1,494 @@
+<template>
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <style>/*localfont-injected*/@font-face{font-family:'Noto Sans SC';src:local('Noto Sans SC');}@font-face{font-family:'Microsoft YaHei';src:local('Microsoft YaHei');}@font-face{font-family:'PingFang SC';src:local('PingFang SC');}@font-face{font-family:'Noto Serif SC';src:local('Noto Serif SC');}@font-face{font-family:'SimSun';src:local('SimSun');}@font-face{font-family:'Songti SC';src:local('Songti SC');}@font-face{font-family:'DM Mono';src:local('DM Mono');}@font-face{font-family:'Newsreader';src:local('Newsreader');}@font-face{font-family:'Hanken Grotesk';src:local('Hanken Grotesk');}
+    /*
+      01-hook — Hook：没有GPS怎么定位 (18.837s, 1920x1080)
+      blueprint: kinetic-type-beats (adapt) — beat-slam x3 -> scale-swap resolve lock -> grid+dot third beat.
+      Fonts: per project dispatch (no font files shipped) — CJK display "Noto Serif SC","SimSun",serif;
+      CJK body/labels "Noto Sans SC","Microsoft YaHei",sans-serif; Latin/mono chrome DM Mono stack.
+      Tokens from frame.md: paper #F0EBDE, ink #1F2BE0, ink-soft #515CDB, grid 10%, ink-faint 18%.
+      Caption keep-out: all content above y=896 (bottom hairline moved up to y=884 to stay clear of the band).
+    */
+    #root {
+      position: absolute;
+      inset: 0;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      container-type: size;
+      color: #1f2be0;
+      font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* full-bleed ground: cream paper + permanent 2cqw graph-paper grid (clip, track 0) */
+    #f01-hook-ground {
+      position: absolute;
+      inset: 0;
+      background-color: #f0ebde;
+      background-image: linear-gradient(to right, rgba(31, 43, 224, 0.1) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(31, 43, 224, 0.1) 1px, transparent 1px);
+      background-size: 38.4px 38.4px;
+    }
+
+    #f01-hook-stage {
+      position: absolute;
+      inset: 0;
+    }
+
+    /* frame furniture: top + bottom cobalt hairlines (bottom raised above the caption band) */
+    .f01-hook-hairline {
+      position: absolute;
+      left: 77px;
+      right: 77px;
+      height: 2px;
+      background: #1f2be0;
+    }
+    .f01-hook-hairline-top {
+      top: 58px;
+    }
+    .f01-hook-hairline-bottom {
+      top: 884px;
+    }
+
+    /* ── Scene 1 (0–8.1s): asymmetric 60/40 three-beat question stack ── */
+    #f01-hook-q {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+    }
+    .f01-hook-qline {
+      position: absolute;
+      left: 128px;
+      display: flex;
+      align-items: center;
+      gap: 30px;
+      white-space: nowrap;
+      font-family: "Noto Serif SC", "SimSun", serif;
+      font-weight: 400;
+      color: #1f2be0;
+    }
+    #f01-hook-q1 {
+      top: 248px;
+      font-size: 92px;
+      line-height: 1.12;
+      letter-spacing: 0.04em;
+    }
+    #f01-hook-q2 {
+      top: 396px;
+      font-size: 92px;
+      line-height: 1.12;
+      letter-spacing: 0.04em;
+    }
+    #f01-hook-q3 {
+      top: 544px;
+      font-size: 124px;
+      line-height: 1.08;
+      letter-spacing: 0.04em;
+    }
+    .f01-hook-qmark {
+      display: inline-block;
+    }
+
+    /* signal-strength bars (pixel language) + knockout strike-through */
+    #f01-hook-sig {
+      width: 120px;
+      height: 92px;
+      flex: none;
+      margin-top: 6px;
+      overflow: visible;
+    }
+    #f01-hook-sig rect {
+      fill: #1f2be0;
+    }
+    #f01-hook-sig line {
+      fill: none;
+    }
+    #f01-hook-strike-case {
+      stroke: #f0ebde;
+      stroke-width: 20;
+    }
+    #f01-hook-strike-ink {
+      stroke: #1f2be0;
+      stroke-width: 9;
+    }
+
+    /* ── Scene 2 (8.1–10.4s): concept-name resolve lock ── */
+    #f01-hook-lock {
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+    }
+    #f01-hook-title {
+      position: absolute;
+      top: 364px;
+      left: 0;
+      width: 100%;
+      margin: 0;
+      text-align: center;
+      font-family: "Noto Serif SC", "SimSun", serif;
+      font-weight: 400;
+      font-size: 180px;
+      line-height: 1;
+      letter-spacing: 0.04em;
+      color: #1f2be0;
+      white-space: nowrap;
+    }
+    #f01-hook-sub {
+      position: absolute;
+      top: 585px;
+      left: 0;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+    }
+    .f01-hook-subwrap {
+      display: inline-flex;
+      align-items: center;
+      min-width: 620px; /* ≥ widest typed state — no right-edge jitter during type-on */
+      white-space: nowrap;
+    }
+    #f01-hook-subtext {
+      font-family: "DM Mono", ui-monospace, Consolas, monospace;
+      font-weight: 400;
+      font-size: 32px;
+      letter-spacing: 0.18em;
+      color: #5560e5;
+    }
+    #f01-hook-caret {
+      display: inline-block;
+      width: 4px;
+      height: 36px;
+      margin-left: 10px;
+      background: #5560e5;
+      opacity: 0;
+    }
+
+    /* ── Scene 3 (10.4–18.8s): 5x5 wireframe + walking dot + flanking words ── */
+    #f01-hook-net {
+      position: absolute;
+      left: 690px;
+      top: 260px;
+      width: 540px;
+      height: 540px;
+      z-index: 1;
+      overflow: visible;
+    }
+    #f01-hook-netgrid {
+      opacity: 0.32;
+    }
+    .f01-hook-netline {
+      stroke: #1f2be0;
+      stroke-width: 2.5;
+      fill: none;
+    }
+    .f01-hook-seg {
+      stroke: #1f2be0;
+      stroke-width: 3;
+      fill: none;
+    }
+    #f01-hook-cell-fill {
+      fill: #1f2be0;
+      fill-opacity: 0;
+      stroke: none;
+    }
+    #f01-hook-cell-pulse {
+      fill: none;
+      stroke: #1f2be0;
+      stroke-width: 3;
+      opacity: 0;
+    }
+
+    #f01-hook-dot {
+      position: absolute;
+      left: 839px;
+      top: 733px;
+      width: 26px;
+      height: 26px;
+      background: #1f2be0;
+      z-index: 2;
+      opacity: 0;
+    }
+
+    .f01-hook-flank {
+      position: absolute;
+      top: 487px;
+      width: 280px;
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      opacity: 0;
+    }
+    .f01-hook-flank-l {
+      left: 360px;
+      align-items: flex-end;
+      text-align: right;
+    }
+    .f01-hook-flank-r {
+      left: 1280px;
+      align-items: flex-start;
+      text-align: left;
+    }
+    .f01-hook-tick {
+      font-family: "DM Mono", ui-monospace, Consolas, monospace;
+      font-size: 20px;
+      letter-spacing: 0.12em;
+      color: #5560e5;
+    }
+    .f01-hook-word {
+      font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      font-weight: 500;
+      font-size: 46px;
+      line-height: 1.2;
+      letter-spacing: 0.3em;
+      color: #1f2be0;
+      white-space: nowrap;
+    }
+  </style>
+
+  <div data-hf-id="hf-laf9" id="root" data-composition-id="01-hook" data-width="1920" data-height="1080" data-duration="19.337" data-fps="30">
+    <div data-hf-id="hf-i5b0" id="f01-hook-ground" class="clip" data-start="0" data-duration="19.337" data-track-index="0"></div>
+
+    <div data-hf-id="hf-8a18" id="f01-hook-stage" class="clip" data-start="0" data-duration="19.337" data-track-index="1">
+      <div data-hf-id="hf-1yz6" class="f01-hook-hairline f01-hook-hairline-top"></div>
+      <div data-hf-id="hf-ro0g" class="f01-hook-hairline f01-hook-hairline-bottom"></div>
+
+      <!-- Scene 1: three-beat kinetic question stack (left-anchored 60/40) -->
+      <div data-hf-id="hf-pl52" id="f01-hook-q">
+        <div data-hf-id="hf-68d5" class="f01-hook-qline" id="f01-hook-q1">
+          <span data-hf-id="hf-1ecn">导航卫星信号不可用</span>
+          <svg data-hf-id="hf-0d2v" id="f01-hook-sig" viewBox="0 0 120 92" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <rect data-hf-id="hf-5ban" x="6" y="70" width="20" height="22" />
+            <rect data-hf-id="hf-d6vu" x="34" y="50" width="20" height="42" />
+            <rect data-hf-id="hf-bh4x" x="62" y="30" width="20" height="62" />
+            <rect data-hf-id="hf-r55w" x="90" y="10" width="20" height="82" />
+            <line data-hf-id="hf-h48t" id="f01-hook-strike-case" x1="4" y1="86" x2="114" y2="8" />
+            <line data-hf-id="hf-xlk3" id="f01-hook-strike-ink" x1="4" y1="86" x2="114" y2="8" />
+          </svg>
+        </div>
+        <div data-hf-id="hf-a6h6" class="f01-hook-qline" id="f01-hook-q2"><span data-hf-id="hf-4ylq">只剩一台相机</span></div>
+        <div data-hf-id="hf-e4l7" class="f01-hook-qline" id="f01-hook-q3">
+          <span data-hf-id="hf-oxrm">能找到目标吗</span><span data-hf-id="hf-lriw" class="f01-hook-qmark" id="f01-hook-qmark">？</span>
+        </div>
+      </div>
+
+      <!-- Scene 2: concept-name resolve lock + mono subtitle type-on -->
+      <div data-hf-id="hf-69ug" id="f01-hook-lock">
+        <h1 data-hf-id="hf-wnev" id="f01-hook-title">主动地理定位</h1>
+        <div data-hf-id="hf-m2rt" id="f01-hook-sub">
+          <span data-hf-id="hf-2qu1" class="f01-hook-subwrap"><span data-hf-id="hf-1w8v" id="f01-hook-subtext"></span><span data-hf-id="hf-jnjd" id="f01-hook-caret"></span></span>
+        </div>
+      </div>
+
+      <!-- Scene 3: dim 5x5 wireframe (self-draw), route segments, target fill + one pulse -->
+      <svg data-hf-id="hf-ndev" id="f01-hook-net" viewBox="0 0 540 540" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <g data-hf-id="hf-m7no" id="f01-hook-netgrid">
+          <line data-hf-id="hf-suvb" class="f01-hook-netline" id="f01-hook-v0" x1="0" y1="0" x2="0" y2="540" />
+          <line data-hf-id="hf-1i4g" class="f01-hook-netline" id="f01-hook-v1" x1="108" y1="0" x2="108" y2="540" />
+          <line data-hf-id="hf-bgjr" class="f01-hook-netline" id="f01-hook-v2" x1="216" y1="0" x2="216" y2="540" />
+          <line data-hf-id="hf-qyuq" class="f01-hook-netline" id="f01-hook-v3" x1="324" y1="0" x2="324" y2="540" />
+          <line data-hf-id="hf-47ex" class="f01-hook-netline" id="f01-hook-v4" x1="432" y1="0" x2="432" y2="540" />
+          <line data-hf-id="hf-urrw" class="f01-hook-netline" id="f01-hook-v5" x1="540" y1="0" x2="540" y2="540" />
+          <line data-hf-id="hf-ubpp" class="f01-hook-netline" id="f01-hook-h0" x1="0" y1="0" x2="540" y2="0" />
+          <line data-hf-id="hf-8qs2" class="f01-hook-netline" id="f01-hook-h1" x1="0" y1="108" x2="540" y2="108" />
+          <line data-hf-id="hf-not5" class="f01-hook-netline" id="f01-hook-h2" x1="0" y1="216" x2="540" y2="216" />
+          <line data-hf-id="hf-2on8" class="f01-hook-netline" id="f01-hook-h3" x1="0" y1="324" x2="540" y2="324" />
+          <line data-hf-id="hf-vf8r" class="f01-hook-netline" id="f01-hook-h4" x1="0" y1="432" x2="540" y2="432" />
+          <line data-hf-id="hf-lvfy" class="f01-hook-netline" id="f01-hook-h5" x1="0" y1="540" x2="540" y2="540" />
+        </g>
+        <line data-hf-id="hf-tva9" class="f01-hook-seg" id="f01-hook-seg0" x1="162" y1="486" x2="270" y2="486" />
+        <line data-hf-id="hf-yih6" class="f01-hook-seg" id="f01-hook-seg1" x1="270" y1="486" x2="270" y2="378" />
+        <line data-hf-id="hf-nl68" class="f01-hook-seg" id="f01-hook-seg2" x1="270" y1="378" x2="378" y2="378" />
+        <line data-hf-id="hf-t47v" class="f01-hook-seg" id="f01-hook-seg3" x1="378" y1="378" x2="378" y2="270" />
+        <rect data-hf-id="hf-s7nw" id="f01-hook-cell-fill" x="324" y="216" width="108" height="108" />
+        <rect data-hf-id="hf-r1a0" id="f01-hook-cell-pulse" x="324" y="216" width="108" height="108" />
+      </svg>
+      <div data-hf-id="hf-p4ta" id="f01-hook-dot"></div>
+
+      <!-- Scene 3 supporting words: 探索 (left) / 定位 (right), mono ordinals -->
+      <div data-hf-id="hf-d2i2" class="f01-hook-flank f01-hook-flank-l" id="f01-hook-flank-l">
+        <span data-hf-id="hf-rhad" class="f01-hook-tick">01</span>
+        <span data-hf-id="hf-frc9" class="f01-hook-word">探索</span>
+      </div>
+      <div data-hf-id="hf-jxny" class="f01-hook-flank f01-hook-flank-r" id="f01-hook-flank-r">
+        <span data-hf-id="hf-so7g" class="f01-hook-tick">02</span>
+        <span data-hf-id="hf-ggh8" class="f01-hook-word">定位</span>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      var DUR = 18.837;
+      // Voice-cue map (audio/voice-01.mp3, 18.837s):
+      //   g1 0.10–8.125  "如果导航卫星信号不可用，一架只带相机的无人机，能在大范围未知区域里找到目标吗？"
+      //   g2 8.075–10.35 "这就是主动地理定位。"
+      //   g3 10.35–18.387 "智能体看不到全局地图，只能凭脚下的画面一步一步探索，直到走进目标所在的那一格。"
+      var BEATS = [0.3, 2.7, 5.1]; // Scene 1 beat-slam onsets (导航卫星信号不可用 / 只剩一台相机 / 能找到目标吗？)
+      var SWAP = 8.1; // Scene 1 -> Scene 2 scale-swap trigger
+      var tl = gsap.timeline({ paused: true });
+
+      /* ── setup: measure SVG strokes (dash draw) ── */
+      var gridLines = [];
+      var i;
+      for (i = 0; i < 6; i++) gridLines.push(document.getElementById("f01-hook-v" + i));
+      for (i = 0; i < 6; i++) gridLines.push(document.getElementById("f01-hook-h" + i));
+      gridLines.forEach(function (ln) {
+        var len = ln.getTotalLength();
+        ln.style.strokeDasharray = String(len);
+        ln.style.strokeDashoffset = String(len);
+      });
+      var strikes = ["f01-hook-strike-case", "f01-hook-strike-ink"].map(function (id) {
+        return document.getElementById(id);
+      });
+      strikes.forEach(function (ln) {
+        var len = ln.getTotalLength();
+        ln.style.strokeDasharray = String(len);
+        ln.style.strokeDashoffset = String(len);
+      });
+      var segEls = [0, 1, 2, 3].map(function (k) {
+        return document.getElementById("f01-hook-seg" + k);
+      });
+      segEls.forEach(function (seg) {
+        var len = seg.getTotalLength();
+        seg.style.strokeDasharray = String(len);
+        seg.style.strokeDashoffset = String(len);
+      });
+
+      /* ── Scene 1: three-beat kinetic beat-slam, distinct entrance per phrase ── */
+      // beat 1 — scale+blur slam (power4.out)
+      tl.fromTo(
+        "#f01-hook-q1",
+        { scale: 1.35, filter: "blur(12px)", opacity: 0 },
+        { scale: 1, filter: "blur(0px)", opacity: 1, duration: 0.5, ease: "power4.out" },
+        BEATS[0]
+      );
+      // attached signal-bars icon pops in just after the line lands
+      tl.fromTo(
+        "#f01-hook-sig",
+        { scale: 0.6, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(2)" },
+        BEATS[0] + 0.18
+      );
+      // strike-through draws as the VO says 不可用 (≈1.6–2.3s)
+      strikes.forEach(function (ln) {
+        tl.to(ln, { strokeDashoffset: 0, duration: 0.35, ease: "power2.out" }, 1.7);
+      });
+      // signal lost — bars dim
+      tl.to("#f01-hook-sig", { opacity: 0.45, duration: 0.3, ease: "power1.inOut" }, 2.15);
+      // beat 2 — side snap from left (expo.out); prior line recedes to ink-faint
+      tl.to("#f01-hook-q1", { opacity: 0.18, duration: 0.35, ease: "power2.out" }, BEATS[1] - 0.05);
+      tl.fromTo(
+        "#f01-hook-q2",
+        { x: -300, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.45, ease: "expo.out" },
+        BEATS[1]
+      );
+      // beat 3 — heavy rise (circ.out); beat 2 recedes
+      tl.to("#f01-hook-q2", { opacity: 0.18, duration: 0.35, ease: "power2.out" }, BEATS[2] - 0.05);
+      tl.fromTo(
+        "#f01-hook-q3",
+        { y: 110, rotation: 2.5, opacity: 0 },
+        { y: 0, rotation: 0, opacity: 1, duration: 0.55, ease: "circ.out" },
+        BEATS[2]
+      );
+      // final-token punctuation snap on ？ as the VO asks 吗？(≈7.5s)
+      tl.fromTo("#f01-hook-qmark", { scale: 1 }, { scale: 1.18, duration: 0.14, ease: "power2.out" }, 7.5);
+      tl.to("#f01-hook-qmark", { scale: 1, duration: 0.24, ease: "power2.inOut" }, 7.64);
+
+      /* ── Scene 2 (8.1s): scale-swap — question group shrinks up + fades; concept name locks center ── */
+      tl.to("#f01-hook-q", { scale: 0.62, y: -130, duration: 0.34, ease: "power2.in" }, SWAP);
+      tl.to("#f01-hook-q", { opacity: 0, duration: 0.26, ease: "none" }, SWAP);
+      tl.fromTo(
+        "#f01-hook-lock",
+        { scale: 0.62, opacity: 0 },
+        { scale: 1, opacity: 1, duration: 0.62, ease: "back.out(1.8)", transformOrigin: "50% 50%" },
+        SWAP + 0.19
+      );
+      // mono subtitle "Active Geo-localization" type-on (smooth char slice) + bounded caret blink
+      var SUB = "ACTIVE GEO-LOCALIZATION";
+      var subEl = document.getElementById("f01-hook-subtext");
+      var typeDr = { n: 0 };
+      tl.to(
+        typeDr,
+        {
+          n: SUB.length,
+          duration: 1.1,
+          ease: "none",
+          onUpdate: function () {
+            subEl.textContent = SUB.substring(0, Math.floor(typeDr.n));
+          },
+        },
+        9.05
+      );
+      var caret = document.getElementById("f01-hook-caret");
+      tl.set(caret, { opacity: 1 }, 9.05);
+      var blink = { p: 0 };
+      tl.to(
+        blink,
+        {
+          p: Math.PI * 2 * 4,
+          duration: 2.2,
+          ease: "none",
+          onUpdate: function () {
+            caret.style.opacity = Math.sin(blink.p) > 0 ? "1" : "0";
+          },
+        },
+        9.05
+      );
+      tl.set(caret, { opacity: 0 }, 11.26);
+
+      /* ── Scene 3 (10.4s+): title yields upward; dim 5x5 wireframe self-draws ── */
+      tl.to("#f01-hook-lock", { y: -170, duration: 1.0, ease: "power3.inOut" }, 10.55);
+      gridLines.forEach(function (ln, k) {
+        var isV = k < 6;
+        var idx = k % 6;
+        var start = isV ? 10.7 + idx * 0.11 : 11.08 + idx * 0.11;
+        tl.to(ln, { strokeDashoffset: 0, duration: 0.42, ease: "power2.out" }, start);
+      });
+
+      /* ── the square dot walks four steps along the grid; route draws under it ── */
+      tl.fromTo(
+        "#f01-hook-dot",
+        { opacity: 0, scale: 0.4 },
+        { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" },
+        13.1
+      );
+      var stepTimes = [13.7, 14.25, 14.8, 16.4]; // 一步一步 (13.7/14.25/14.8) then 走进 (16.4)
+      tl.fromTo("#f01-hook-dot", { x: 0 }, { x: 108, duration: 0.5, ease: "power2.inOut" }, stepTimes[0]);
+      tl.fromTo("#f01-hook-dot", { y: 0, immediateRender: false }, { y: -108, duration: 0.5, ease: "power2.inOut" }, stepTimes[1]);
+      tl.fromTo("#f01-hook-dot", { x: 108, immediateRender: false }, { x: 216, duration: 0.5, ease: "power2.inOut" }, stepTimes[2]);
+      tl.fromTo("#f01-hook-dot", { y: -108, immediateRender: false }, { y: -216, duration: 0.5, ease: "power2.inOut" }, stepTimes[3]);
+      segEls.forEach(function (seg, k) {
+        tl.to(seg, { strokeDashoffset: 0, duration: 0.5, ease: "none" }, stepTimes[k]);
+      });
+
+      /* ── resolve: target cell fills solid ink + ONE highlight pulse; flanking words ── */
+      tl.fromTo(
+        "#f01-hook-flank-l",
+        { x: -36, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.5, ease: "expo.out" },
+        15.0
+      );
+      tl.to("#f01-hook-cell-fill", { fillOpacity: 1, duration: 0.4, ease: "power2.out" }, 17.05);
+      tl.fromTo(
+        "#f01-hook-cell-pulse",
+        { scale: 1, opacity: 0.85, immediateRender: false, transformOrigin: "50% 50%" },
+        { scale: 1.9, opacity: 0, duration: 0.6, ease: "power2.out" },
+        17.25
+      );
+      tl.fromTo(
+        "#f01-hook-flank-r",
+        { x: 36, opacity: 0 },
+        { x: 0, opacity: 1, duration: 0.5, ease: "expo.out" },
+        17.35
+      );
+
+      /* full-span anchor + settle into the held end card (定格 hold to frame end) */
+      tl.to({}, { duration: DUR }, 0);
+
+      window.__timelines["01-hook"] = tl;
+    })();
+  </script>
+</template>

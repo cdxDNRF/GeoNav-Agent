@@ -1,0 +1,49 @@
+{
+  "Pillow": "12.1.1",
+  "current_images_unchanged": true,
+  "geometry_grid5_B10_unchanged": true,
+  "source_count": 20,
+  "specs": {
+    "Blur1": {
+      "operation": "GaussianBlur",
+      "radius": 1.0
+    },
+    "Bright080": {
+      "factor": 0.8,
+      "operation": "multiply_floor_uint8"
+    },
+    "Clean": {
+      "operation": "identity"
+    },
+    "Crop8": {
+      "border": 8,
+      "operation": "center_crop_resize",
+      "resampling": "BICUBIC"
+    },
+    "JPEG25": {
+      "operation": "JPEG_roundtrip",
+      "quality": 25,
+      "subsampling": 2
+    },
+    "Ring8": {
+      "operation": "fill_border",
+      "value": 128,
+      "width": 8
+    },
+    "Rot90CW": {
+      "direction": "clockwise90",
+      "operation": "transpose"
+    }
+  },
+  "target_images": 3500,
+  "target_only": true,
+  "variants": [
+    "Clean",
+    "Bright080",
+    "JPEG25",
+    "Blur1",
+    "Crop8",
+    "Rot90CW",
+    "Ring8"
+  ]
+}

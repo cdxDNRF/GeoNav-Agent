@@ -1,0 +1,690 @@
+<template>
+  <style>/*localfont-injected*/@font-face{font-family:'Noto Sans SC';src:local('Noto Sans SC');}@font-face{font-family:'Microsoft YaHei';src:local('Microsoft YaHei');}@font-face{font-family:'PingFang SC';src:local('PingFang SC');}@font-face{font-family:'Noto Serif SC';src:local('Noto Serif SC');}@font-face{font-family:'SimSun';src:local('SimSun');}@font-face{font-family:'Songti SC';src:local('Songti SC');}@font-face{font-family:'DM Mono';src:local('DM Mono');}@font-face{font-family:'Newsreader';src:local('Newsreader');}@font-face{font-family:'Hanken Grotesk';src:local('Hanken Grotesk');}
+    /* ============================================================
+       Frame 02 — 任务定义：五乘五网格世界  (grid-card-assemble, adapt)
+       Cobalt Grid frame layer: cream paper + cobalt ink only,
+       permanent graph grid, top/bottom hairlines, 0 radius.
+       Canvas 1920x1080 · duration 27.562s · captions keep-out y<=896.
+       Blueprint signature: stagger self-assembly — grid cells cascade
+       into slots, then task-diagram parts (cards / keys / budget /
+       stamp) enter in VO-paced windows.
+       ============================================================ */
+
+    #root {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      container-type: size;
+      color: #1F2BE0;
+      font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      font-weight: 400;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* ---------- full-bleed ground (clip, track 0) ---------- */
+    #root .t2-bg {
+      position: absolute;
+      inset: 0;
+      background-color: #F0EBDE;
+      background-image:
+        linear-gradient(to right, rgba(31, 43, 224, 0.10) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(31, 43, 224, 0.10) 1px, transparent 1px);
+      background-size: 38.4px 38.4px;
+    }
+    .t2-hairline {
+      position: absolute;
+      left: 77px;
+      width: 1766px;
+      height: 2px;
+      background: #1F2BE0;
+    }
+    .t2-metaline {
+      position: absolute;
+      top: 842px;
+      font-family: "DM Mono", "Consolas", "Courier New", monospace;
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      opacity: 0.85;
+    }
+
+    /* ---------- stage + single-writer camera drift ---------- */
+    #root .t2-stage { position: absolute; inset: 0; }
+    .t2-camera {
+      position: absolute;
+      inset: 0;
+      will-change: transform;
+    }
+
+    /* ---------- type roles ---------- */
+    .t2-serif { font-family: "Noto Serif SC", "SimSun", serif; font-weight: 400; }
+    .t2-mono  { font-family: "DM Mono", "Consolas", "Courier New", monospace; letter-spacing: 0.10em; }
+    .t2-num   { font-variant-numeric: tabular-nums; }
+
+    /* ---------- topbar ---------- */
+    .t2-topbar { position: absolute; left: 77px; top: 76px; width: 1766px; height: 82px; }
+    .t2-kicker {
+      position: absolute; left: 0; top: 0;
+      font-size: 15px; letter-spacing: 0.16em;
+    }
+    .t2-title {
+      position: absolute; left: 0; top: 30px;
+      font-size: 44px; line-height: 1.05; letter-spacing: 0.01em;
+    }
+    .t2-fig {
+      position: absolute; right: 0; top: 26px;
+      font-size: 15px; letter-spacing: 0.14em; text-align: right;
+    }
+    .t2-toprule {
+      position: absolute; left: 77px; top: 158px;
+      width: 1766px; height: 2.5px; background: #1F2BE0;
+    }
+
+    /* ---------- 5x5 grid (Scene 1 hero, final slot left in Scene 2+) ---------- */
+    .t2-gridWrap {
+      position: absolute;
+      left: 137px; top: 200px;
+      width: 520px; height: 520px;
+      will-change: transform;
+      z-index: 2;
+    }
+    .t2-gridFrame {
+      position: absolute; inset: 0;
+      border: 3px solid #1F2BE0;
+      background: rgba(31, 43, 224, 0.03);
+    }
+    .t2-gridTag {
+      position: absolute; left: 14px; top: -34px;
+      font-size: 14px; letter-spacing: 0.14em; opacity: 0.85;
+      white-space: nowrap;
+    }
+    .t2-cell {
+      position: absolute;
+      width: 96px; height: 96px;
+      border: 2px solid rgba(31, 43, 224, 0.5);
+      background: #F0EBDE;
+      will-change: transform, opacity;
+    }
+    .t2-cellfill {
+      position: absolute; inset: 0;
+      background: rgba(31, 43, 224, 0.18);
+      opacity: 0;
+    }
+    .t2-dot {
+      position: absolute; left: 34px; top: 34px;
+      width: 28px; height: 28px;
+      background: #1F2BE0;
+      will-change: transform, opacity;
+      z-index: 3;
+    }
+    .t2-dotlabel {
+      position: absolute; left: 70px; top: 38px;
+      font-size: 13px; letter-spacing: 0.12em;
+      white-space: nowrap; opacity: 0.9;
+    }
+    .t2-edgeflash {
+      position: absolute; left: -4px; top: -8px;
+      width: 528px; height: 10px;
+      background: #1F2BE0;
+      opacity: 0;
+    }
+    .t2-goalmark {
+      position: absolute; left: 312px; top: 100px;
+      width: 108px; height: 108px;
+      border: 3px solid #1F2BE0;
+      will-change: transform, opacity;
+      z-index: 2;
+    }
+    .t2-goaltag {
+      position: absolute; right: -3px; top: -30px;
+      padding: 1px 8px;
+      border: 2px solid #1F2BE0;
+      background: #F0EBDE;
+      font-family: "DM Mono", "Consolas", "Courier New", monospace;
+      font-size: 12px; letter-spacing: 0.14em;
+    }
+
+    /* ---------- per-step input cards (Scene 2, right 40%) ---------- */
+    .t2-inputtag {
+      position: absolute; left: 906px; top: 232px; width: 830px;
+      text-align: center;
+      font-size: 14px; letter-spacing: 0.16em; opacity: 0.85;
+    }
+    .t2-card {
+      position: absolute; top: 270px;
+      width: 340px; height: 440px;
+      border: 3px solid #1F2BE0;
+      background: #F0EBDE;
+      will-change: transform, opacity;
+      z-index: 3;
+    }
+    .t2-cardG { left: 906px; }
+    .t2-cardC { left: 1396px; }
+    .t2-cardtag {
+      position: absolute; left: 20px; top: 16px;
+      font-size: 13px; letter-spacing: 0.18em; opacity: 0.85;
+    }
+    .t2-cardsq {
+      position: absolute; right: 20px; top: 20px;
+      width: 12px; height: 12px; background: #1F2BE0;
+    }
+    .t2-cardzh {
+      position: absolute; left: 20px; top: 40px;
+      font-size: 34px; line-height: 1.1;
+    }
+    .t2-cardsub {
+      position: absolute; left: 20px; top: 88px;
+      font-size: 12px; letter-spacing: 0.14em; opacity: 0.75;
+    }
+    .t2-tex {
+      position: absolute; left: 20px; top: 116px;
+      width: 294px; height: 252px;
+      border: 2px solid rgba(31, 43, 224, 0.35);
+      clip-path: inset(0 0 100% 0);
+    }
+    .t2-cardfoot {
+      position: absolute; left: 20px; top: 396px;
+      font-size: 12px; letter-spacing: 0.14em; opacity: 0.75;
+    }
+    .t2-conn {
+      position: absolute; left: 1252px; top: 489px;
+      width: 138px; height: 0;
+      border-top: 3px dashed #1F2BE0;
+      will-change: transform, opacity;
+      z-index: 3;
+    }
+    .t2-connsq {
+      position: absolute; top: 484px;
+      width: 11px; height: 11px; background: #1F2BE0;
+      will-change: transform, opacity;
+      z-index: 3;
+    }
+
+    /* ---------- bottom strip: keys + step budget (Scene 3) ---------- */
+    .t2-strip {
+      position: absolute; left: 77px; top: 740px;
+      width: 1766px; height: 126px;
+      border: 3px solid #1F2BE0;
+      background: #E6E0CE;
+      will-change: transform, opacity;
+      z-index: 4;
+    }
+    .t2-key {
+      position: absolute; top: 20px;
+      width: 80px; height: 80px;
+      border: 2.5px solid #1F2BE0;
+      background: #F0EBDE;
+      will-change: transform, opacity;
+    }
+    .t2-keysvg {
+      position: absolute; left: 18px; top: 8px;
+      width: 44px; height: 44px;
+    }
+    .t2-keyzh {
+      position: absolute; left: 0; right: 0; bottom: 6px;
+      text-align: center;
+      font-size: 20px; font-weight: 600; line-height: 1;
+    }
+    .t2-kdiv {
+      position: absolute; left: 453px; top: 20px;
+      width: 2px; height: 86px;
+      background: rgba(31, 43, 224, 0.18);
+    }
+    .t2-budlabel {
+      position: absolute; left: 483px; top: 18px;
+      font-size: 15px; letter-spacing: 0.14em;
+    }
+    .t2-budlabel .t2-zh { font-size: 21px; font-weight: 600; margin-right: 12px; }
+    .t2-budcount {
+      position: absolute; right: 56px; top: 22px;
+      width: 170px; height: 36px;
+      font-size: 30px; letter-spacing: 0.08em;
+    }
+    .t2-budcount span {
+      position: absolute; right: 0; top: 0;
+      will-change: transform, opacity;
+    }
+    .t2-budcells {
+      position: absolute; left: 483px; top: 62px;
+      width: 1050px; height: 40px;
+    }
+    .t2-bud {
+      position: absolute; top: 0;
+      width: 96px; height: 40px;
+      border: 2px solid rgba(31, 43, 224, 0.5);
+      background: #F0EBDE;
+    }
+    .t2-budfill {
+      position: absolute; inset: 0;
+      width: 100%;
+      background: #1F2BE0;
+      transform: scaleX(0);
+      transform-origin: left center;
+    }
+    .t2-budspent {
+      position: absolute; inset: 0;
+      background: repeating-linear-gradient(45deg, #1F2BE0 0 3px, transparent 3px 9px);
+      opacity: 0;
+    }
+    .t2-minus1 {
+      position: absolute; left: 1460px; top: 36px;
+      padding: 0 7px;
+      border: 2px solid #1F2BE0;
+      background: #F0EBDE;
+      font-family: "DM Mono", "Consolas", "Courier New", monospace;
+      font-size: 16px; letter-spacing: 0.06em;
+      will-change: transform, opacity;
+      z-index: 2;
+    }
+
+    /* ---------- oracle stamp (Scene 4, top-right, over the corner) ---------- */
+    .t2-stampLayer { position: absolute; inset: 0; z-index: 8; }
+    .t2-burst {
+      position: absolute; left: 1710px; top: 254px;
+      width: 80px; height: 80px;
+      border: 3px solid #1F2BE0;
+      will-change: transform, opacity;
+      z-index: 7;
+    }
+    .t2-stamp {
+      position: absolute; left: 1556px; top: 150px;
+      width: 333px; height: 288px;
+      border: 3.5px solid #1F2BE0;
+      background: #F0EBDE;
+      will-change: transform, opacity;
+    }
+    .t2-stag {
+      position: absolute; left: 24px; top: 18px;
+      font-size: 12px; letter-spacing: 0.18em; opacity: 0.85;
+    }
+    .t2-stsq {
+      position: absolute; right: 22px; top: 20px;
+      width: 12px; height: 12px; background: #1F2BE0;
+    }
+    .t2-stzh {
+      position: absolute; left: 24px; top: 46px;
+      font-size: 56px; line-height: 1.1;
+    }
+    .t2-srow {
+      position: absolute; left: 24px; width: 285px; height: 56px;
+    }
+    .t2-srowA { top: 122px; }
+    .t2-srowB { top: 182px; }
+    .t2-srowzh {
+      position: absolute; left: 0; top: 0;
+      font-size: 27px; line-height: 1.2;
+    }
+    .t2-srowsub {
+      position: absolute; left: 2px; top: 38px;
+      font-size: 12px; letter-spacing: 0.14em; opacity: 0.7;
+    }
+    .t2-slot {
+      position: absolute; right: 0; top: 3px;
+      width: 124px; height: 34px;
+      border: 2px solid rgba(31, 43, 224, 0.45);
+      text-align: center;
+      font-family: "DM Mono", "Consolas", "Courier New", monospace;
+      font-size: 15px; letter-spacing: 0.1em;
+      line-height: 30px; opacity: 0.45;
+    }
+    .t2-maskbar {
+      position: absolute; right: -4px; top: -1px;
+      width: 132px; height: 38px;
+      border: 2px solid #1F2BE0;
+      background:
+        repeating-linear-gradient(45deg, rgba(31, 43, 224, 0.85) 0 3px, transparent 3px 9px), #F0EBDE;
+      transform: scaleX(0);
+      transform-origin: left center;
+    }
+    .t2-chip {
+      position: absolute; left: 24px; top: 240px;
+      padding: 6px 18px;
+      background: #1F2BE0; color: #F0EBDE;
+      font-size: 26px; font-weight: 600; line-height: 1.2;
+      letter-spacing: 0.04em;
+      will-change: transform, opacity;
+    }
+  </style>
+
+  <div data-hf-id="hf-wqql" id="root" data-composition-id="02-task" data-start="0" data-duration="28.062" data-width="1920" data-height="1080">
+    <!-- track 0 — permanent ground: paper + graph grid + hairlines + page chrome -->
+    <div data-hf-id="hf-kzjg" class="clip t2-bg" data-start="0" data-duration="28.062" data-track-index="0">
+      <div data-hf-id="hf-j1yt" class="t2-hairline" style="top: 58px"></div>
+      <div data-hf-id="hf-7sjy" class="t2-hairline" style="top: 884px"></div>
+      <div data-hf-id="hf-x0k9" class="t2-metaline t2-mono" style="left: 77px">GEONAV-AGENT · EVAL PLATFORM</div>
+      <div data-hf-id="hf-jmcu" class="t2-metaline t2-mono" style="right: 77px; text-align: right">02 / 10</div>
+    </div>
+
+    <!-- track 1 — camera stage: grid + cards + strip + stamp -->
+    <div data-hf-id="hf-mg7i" class="clip t2-stage" data-start="0" data-duration="28.062" data-track-index="1">
+      <div data-hf-id="hf-23ea" class="t2-camera" id="t2-camera">
+
+        <!-- topbar -->
+        <div data-hf-id="hf-dm6b" class="t2-topbar">
+          <div data-hf-id="hf-i13t" class="t2-kicker t2-mono" id="t2-kicker">SEC.02 — TASK DEFINITION</div>
+          <div data-hf-id="hf-5utu" class="t2-title t2-serif" id="t2-title">任务定义：五乘五网格世界</div>
+          <div data-hf-id="hf-b0li" class="t2-fig t2-mono" id="t2-fig">FIG.02 — GRID WORLD</div>
+        </div>
+        <div data-hf-id="hf-aqi2" class="t2-toprule" id="t2-toprule"></div>
+
+        <!-- Scene 1 hero: 5x5 grid, centered at t=0, morphs left at Scene 2 -->
+        <div data-hf-id="hf-avmo" class="t2-gridWrap" id="t2-gridWrap">
+          <div data-hf-id="hf-h0ak" class="t2-gridTag t2-mono" id="t2-gridTag">GRID WORLD · 5 × 5</div>
+          <div data-hf-id="hf-agze" class="t2-gridFrame" id="t2-gridFrame"></div>
+          <div data-hf-id="hf-hrt7" id="t2-gridCells"></div>
+          <div data-hf-id="hf-5obm" class="t2-edgeflash" id="t2-edgeflash"></div>
+          <div data-hf-id="hf-0dq8" class="t2-goalmark" id="t2-goalmark">
+            <div data-hf-id="hf-z44j" class="t2-goaltag t2-mono">GOAL</div>
+          </div>
+          <div data-hf-id="hf-tj46" class="t2-dot" id="t2-dot"></div>
+          <div data-hf-id="hf-tzjd" class="t2-dotlabel t2-mono" id="t2-dotlabel">AGENT</div>
+        </div>
+
+        <!-- Scene 2: per-step input cards -->
+        <div data-hf-id="hf-ax0k" class="t2-inputtag t2-mono" id="t2-inputtag">PER-STEP INPUTS ×2</div>
+
+        <div data-hf-id="hf-0gsx" class="t2-card t2-cardG" id="t2-cardG">
+          <div data-hf-id="hf-hrjq" class="t2-cardtag t2-mono" id="t2-cardGtag">GOAL</div>
+          <div data-hf-id="hf-3nbn" class="t2-cardsq" id="t2-cardGsq"></div>
+          <div data-hf-id="hf-xlfi" class="t2-cardzh t2-serif" id="t2-cardGzh">目标图</div>
+          <div data-hf-id="hf-23mo" class="t2-cardsub t2-mono" id="t2-cardGsub">GIVEN TARGET VIEW</div>
+          <svg data-hf-id="hf-sv29" class="t2-tex" id="t2-texA" viewBox="0 0 294 252" xmlns="http://www.w3.org/2000/svg">
+            <rect data-hf-id="hf-e7hr" x="0" y="0" width="294" height="252" fill="#E6E0CE" />
+            <rect data-hf-id="hf-5jj6" x="0" y="0" width="84" height="64" fill="#1F2BE0" opacity="0.16" />
+            <rect data-hf-id="hf-xn9u" x="84" y="0" width="72" height="64" fill="#1F2BE0" opacity="0.08" />
+            <rect data-hf-id="hf-y3vs" x="200" y="0" width="94" height="64" fill="#1F2BE0" opacity="0.22" />
+            <rect data-hf-id="hf-0pz6" x="0" y="64" width="60" height="48" fill="#1F2BE0" opacity="0.10" />
+            <rect data-hf-id="hf-zb29" x="156" y="64" width="52" height="48" fill="#1F2BE0" opacity="0.30" />
+            <rect data-hf-id="hf-vssi" x="246" y="64" width="48" height="48" fill="#1F2BE0" opacity="0.12" />
+            <rect data-hf-id="hf-0yc9" x="0" y="112" width="72" height="40" fill="#1F2BE0" opacity="0.18" />
+            <rect data-hf-id="hf-z8wa" x="108" y="112" width="48" height="40" fill="#1F2BE0" opacity="0.08" />
+            <rect data-hf-id="hf-vrd0" x="228" y="112" width="66" height="40" fill="#1F2BE0" opacity="0.16" />
+            <rect data-hf-id="hf-cx7r" x="0" y="168" width="294" height="24" fill="#F0EBDE" />
+            <rect data-hf-id="hf-8kuf" x="180" y="0" width="24" height="252" fill="#F0EBDE" />
+            <line data-hf-id="hf-udh4" x1="0" y1="180" x2="294" y2="180" stroke="#1F2BE0" stroke-width="2" stroke-dasharray="7 7" opacity="0.55" />
+            <line data-hf-id="hf-2kk0" x1="192" y1="0" x2="192" y2="252" stroke="#1F2BE0" stroke-width="2" stroke-dasharray="7 7" opacity="0.55" />
+            <rect data-hf-id="hf-1h3i" x="0" y="200" width="96" height="52" fill="#1F2BE0" opacity="0.12" />
+            <rect data-hf-id="hf-o4gf" x="120" y="200" width="60" height="52" fill="#1F2BE0" opacity="0.20" />
+            <rect data-hf-id="hf-94lj" x="216" y="200" width="78" height="52" fill="#1F2BE0" opacity="0.10" />
+            <rect data-hf-id="hf-ojh9" x="52" y="52" width="16" height="16" fill="none" stroke="#1F2BE0" stroke-width="3" />
+            <rect data-hf-id="hf-il05" x="57" y="57" width="6" height="6" fill="#1F2BE0" />
+          </svg>
+          <div data-hf-id="hf-wstx" class="t2-cardfoot t2-mono" id="t2-cardGfoot">GIVEN · FIXED</div>
+        </div>
+
+        <div data-hf-id="hf-wqwg" class="t2-conn" id="t2-conn"></div>
+        <div data-hf-id="hf-lb6s" class="t2-connsq" id="t2-connsqL" style="left: 1244px"></div>
+        <div data-hf-id="hf-kpkw" class="t2-connsq" id="t2-connsqR" style="left: 1387px"></div>
+
+        <div data-hf-id="hf-ce7l" class="t2-card t2-cardC" id="t2-cardC">
+          <div data-hf-id="hf-2r1a" class="t2-cardtag t2-mono" id="t2-cardCtag">CURRENT</div>
+          <div data-hf-id="hf-do9b" class="t2-cardsq" id="t2-cardCsq"></div>
+          <div data-hf-id="hf-gc8r" class="t2-cardzh t2-serif" id="t2-cardCzh">当前图</div>
+          <div data-hf-id="hf-x5ug" class="t2-cardsub t2-mono" id="t2-cardCsub">EGO AERIAL TILE</div>
+          <svg data-hf-id="hf-vxew" class="t2-tex" id="t2-texB" viewBox="0 0 294 252" xmlns="http://www.w3.org/2000/svg">
+            <rect data-hf-id="hf-8ryn" x="0" y="0" width="294" height="252" fill="#E6E0CE" />
+            <rect data-hf-id="hf-mxjt" x="0" y="0" width="70" height="56" fill="#1F2BE0" opacity="0.20" />
+            <rect data-hf-id="hf-dsq5" x="126" y="0" width="54" height="56" fill="#1F2BE0" opacity="0.10" />
+            <rect data-hf-id="hf-dmrq" x="220" y="0" width="74" height="56" fill="#1F2BE0" opacity="0.14" />
+            <rect data-hf-id="hf-aat4" x="0" y="56" width="48" height="48" fill="#1F2BE0" opacity="0.08" />
+            <rect data-hf-id="hf-w03i" x="132" y="56" width="46" height="48" fill="#1F2BE0" opacity="0.24" />
+            <rect data-hf-id="hf-v5h8" x="244" y="56" width="50" height="48" fill="#1F2BE0" opacity="0.10" />
+            <rect data-hf-id="hf-0co9" x="0" y="160" width="66" height="40" fill="#1F2BE0" opacity="0.14" />
+            <rect data-hf-id="hf-yjew" x="140" y="160" width="52" height="40" fill="#1F2BE0" opacity="0.22" />
+            <rect data-hf-id="hf-z91l" x="240" y="160" width="54" height="40" fill="#1F2BE0" opacity="0.08" />
+            <rect data-hf-id="hf-1r22" x="88" y="0" width="24" height="252" fill="#F0EBDE" />
+            <rect data-hf-id="hf-lmpv" x="0" y="120" width="294" height="24" fill="#F0EBDE" />
+            <line data-hf-id="hf-jj3e" x1="100" y1="0" x2="100" y2="252" stroke="#1F2BE0" stroke-width="2" stroke-dasharray="7 7" opacity="0.55" />
+            <line data-hf-id="hf-kv2a" x1="0" y1="132" x2="294" y2="132" stroke="#1F2BE0" stroke-width="2" stroke-dasharray="7 7" opacity="0.55" />
+            <rect data-hf-id="hf-c364" x="0" y="208" width="80" height="44" fill="#1F2BE0" opacity="0.18" />
+            <rect data-hf-id="hf-c938" x="128" y="208" width="58" height="44" fill="#1F2BE0" opacity="0.10" />
+            <rect data-hf-id="hf-uom3" x="222" y="208" width="72" height="44" fill="#1F2BE0" opacity="0.16" />
+            <rect data-hf-id="hf-i9kf" x="138" y="84" width="14" height="14" fill="#1F2BE0" />
+            <rect data-hf-id="hf-0boy" x="134" y="80" width="22" height="22" fill="none" stroke="#1F2BE0" stroke-width="2" />
+          </svg>
+          <div data-hf-id="hf-cmzf" class="t2-cardfoot t2-mono" id="t2-cardCfoot">OBSERVED · PER STEP</div>
+        </div>
+
+        <!-- Scene 3: bottom strip — direction keys + step budget -->
+        <div data-hf-id="hf-qoie" class="t2-strip" id="t2-strip">
+          <div data-hf-id="hf-pjr1" class="t2-key" id="t2-keyU" style="left: 23px">
+            <svg data-hf-id="hf-h35y" class="t2-keysvg" style="transform: rotate(0deg)" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+              <polygon data-hf-id="hf-6xgb" points="22,5 36,23 27,23 27,39 17,39 17,23 8,23" fill="#1F2BE0" />
+            </svg>
+            <div data-hf-id="hf-ujg0" class="t2-keyzh">上</div>
+          </div>
+          <div data-hf-id="hf-5ec2" class="t2-key" id="t2-keyD" style="left: 119px">
+            <svg data-hf-id="hf-ou51" class="t2-keysvg" style="transform: rotate(180deg)" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+              <polygon data-hf-id="hf-76e3" points="22,5 36,23 27,23 27,39 17,39 17,23 8,23" fill="#1F2BE0" />
+            </svg>
+            <div data-hf-id="hf-u54z" class="t2-keyzh">下</div>
+          </div>
+          <div data-hf-id="hf-b085" class="t2-key" id="t2-keyL" style="left: 215px">
+            <svg data-hf-id="hf-w7tg" class="t2-keysvg" style="transform: rotate(-90deg)" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+              <polygon data-hf-id="hf-6s32" points="22,5 36,23 27,23 27,39 17,39 17,23 8,23" fill="#1F2BE0" />
+            </svg>
+            <div data-hf-id="hf-hlv8" class="t2-keyzh">左</div>
+          </div>
+          <div data-hf-id="hf-2ozi" class="t2-key" id="t2-keyR" style="left: 311px">
+            <svg data-hf-id="hf-nplb" class="t2-keysvg" style="transform: rotate(90deg)" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
+              <polygon data-hf-id="hf-6ds1" points="22,5 36,23 27,23 27,39 17,39 17,23 8,23" fill="#1F2BE0" />
+            </svg>
+            <div data-hf-id="hf-k45n" class="t2-keyzh">右</div>
+          </div>
+          <div data-hf-id="hf-oat0" class="t2-kdiv" id="t2-kdiv"></div>
+          <div data-hf-id="hf-wyd4" class="t2-budlabel t2-mono" id="t2-budlabel">
+            <span data-hf-id="hf-r4d6" class="t2-zh">步数预算</span><span data-hf-id="hf-8ub0">STEP BUDGET</span>
+          </div>
+          <div data-hf-id="hf-7xan" class="t2-budcount t2-mono t2-num" id="t2-budcount">
+            <span data-hf-id="hf-59fm" id="t2-count10">10 / 10</span>
+            <span data-hf-id="hf-dc1x" id="t2-count9" style="opacity: 0">9 / 10</span>
+          </div>
+          <div data-hf-id="hf-plro" class="t2-budcells" id="t2-budcells"></div>
+          <div data-hf-id="hf-f22a" class="t2-minus1 t2-mono t2-num" id="t2-minus1">−1</div>
+        </div>
+
+        <!-- Scene 4: oracle stamp pressed over the top-right corner -->
+        <div data-hf-id="hf-w4yz" class="t2-stampLayer">
+          <div data-hf-id="hf-yfdq" class="t2-burst" id="t2-burst"></div>
+          <div data-hf-id="hf-yb0m" class="t2-stamp" id="t2-stamp">
+            <div data-hf-id="hf-fo3g" class="t2-stag t2-mono" id="t2-stag">ORACLE · EVALUATOR ONLY</div>
+            <div data-hf-id="hf-rbtu" class="t2-stsq" id="t2-stsq"></div>
+            <div data-hf-id="hf-pgha" class="t2-stzh t2-serif" id="t2-stzh">评测端</div>
+            <div data-hf-id="hf-a91w" class="t2-srow t2-srowA" id="t2-srowA">
+              <div data-hf-id="hf-kfiv" class="t2-srowzh t2-serif" id="t2-srowAzh">目标坐标</div>
+              <div data-hf-id="hf-tcqb" class="t2-srowsub t2-mono" id="t2-srowAsub">GOAL XY</div>
+              <div data-hf-id="hf-4qcn" class="t2-slot t2-num" id="t2-slotA">— · —</div>
+              <div data-hf-id="hf-nbnk" class="t2-maskbar" id="t2-maskA"></div>
+            </div>
+            <div data-hf-id="hf-82do" class="t2-srow t2-srowB" id="t2-srowB">
+              <div data-hf-id="hf-y5un" class="t2-srowzh t2-serif" id="t2-srowBzh">真实距离</div>
+              <div data-hf-id="hf-ejpy" class="t2-srowsub t2-mono" id="t2-srowBsub">TRUE DIST</div>
+              <div data-hf-id="hf-zmay" class="t2-slot t2-num" id="t2-slotB">— · —</div>
+              <div data-hf-id="hf-vzjf" class="t2-maskbar" id="t2-maskB"></div>
+            </div>
+            <div data-hf-id="hf-xewx" class="t2-chip" id="t2-chip">智能体不可见</div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script>
+    (function () {
+      var tl = gsap.timeline({ paused: true });
+
+      /* ---------- deterministic DOM: 25 grid cells + 10 budget cells ---------- */
+      var grid = document.querySelector("#t2-gridCells");
+      var cells = [];
+      for (var r = 0; r < 5; r++) {
+        for (var c = 0; c < 5; c++) {
+          var cell = document.createElement("div");
+          cell.className = "t2-cell";
+          cell.style.left = c * 106 + "px";
+          cell.style.top = r * 106 + "px";
+          var fill = document.createElement("div");
+          fill.className = "t2-cellfill";
+          cell.appendChild(fill);
+          grid.appendChild(cell);
+          cells.push(cell);
+        }
+      }
+      var budWrap = document.querySelector("#t2-budcells");
+      var buds = [];
+      for (var b = 0; b < 10; b++) {
+        var bud = document.createElement("div");
+        bud.className = "t2-bud";
+        bud.style.left = b * 106 + "px";
+        var bfill = document.createElement("div");
+        bfill.className = "t2-budfill";
+        bud.appendChild(bfill);
+        if (b === 9) {
+          var spent = document.createElement("div");
+          spent.className = "t2-budspent";
+          bud.appendChild(spent);
+        }
+        budWrap.appendChild(bud);
+        buds.push(bud);
+      }
+
+      /* ---------- continuous camera micro-drift (single writer, seek-safe) ---------- */
+      var camera = document.querySelector("#t2-camera");
+      var drift = { p: 0 };
+      var writeCamera = function () {
+        var dx = Math.sin(drift.p) * 3;
+        var dy = Math.sin(drift.p * 1.3) * 2.5;
+        camera.style.transform = "translate(" + dx + "px," + dy + "px)";
+      };
+      tl.to(drift, { p: Math.PI * 2 * 1.25, duration: 27.562, ease: "none", onUpdate: writeCamera }, 0);
+      writeCamera(); /* seed frame 0 */
+
+      /* ---------- topbar ---------- */
+      tl.fromTo("#t2-title", { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 0.12);
+      tl.fromTo("#t2-kicker", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, 0.26);
+      tl.fromTo("#t2-fig", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, 0.38);
+      tl.fromTo("#t2-toprule", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power2.out", transformOrigin: "left center" }, 0.32);
+
+      /* ============================================================
+         Scene 1 (0.0-5.1s) — 5x5 grid stagger self-assembly, centered.
+         25 cells > 8, so per the blueprint merge note each cell takes the
+         short-path slide form: fades + slides a short distance directly
+         into its own slot (no center burst), diagonal cascade wave.
+         ============================================================ */
+      cells.forEach(function (cell, i) {
+        var cr = Math.floor(i / 5), cc = i % 5;
+        var at = 0.35 + (cr + cc) * 0.085 + cc * 0.012;
+        tl.fromTo(cell, { opacity: 0, scale: 0.7, y: 16 }, { opacity: 1, scale: 1, y: 0, duration: 0.5, ease: "power3.out" }, at);
+      });
+      /* 3 visited cells mark ink-faint (route history behind the agent) */
+      [5, 6, 11].forEach(function (idx, k) {
+        tl.fromTo(cells[idx].firstChild, { opacity: 0 }, { opacity: 1, duration: 0.45, ease: "power2.out" }, 2.3 + k * 0.16);
+      });
+      /* agent dot enters from the top-left corner */
+      tl.fromTo("#t2-dot", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(1.6)", transformOrigin: "50% 50%" }, 3.15);
+      tl.fromTo("#t2-dotlabel", { opacity: 0, x: -8 }, { opacity: 0.9, x: 0, duration: 0.5, ease: "power2.out" }, 3.4);
+      tl.fromTo("#t2-gridTag", { opacity: 0, y: -8 }, { opacity: 0.85, y: 0, duration: 0.5, ease: "power2.out" }, 4.2);
+
+      /* ============================================================
+         Scene 2 (5.1-11.5s) — asymmetric 60/40: grid shrinks left,
+         goal / current cards face each other, dashed connector.
+         ============================================================ */
+      tl.fromTo("#t2-gridWrap", { x: 563, y: 10, scale: 1.15 }, { x: 0, y: 0, scale: 1, duration: 1.3, ease: "power3.inOut" }, 5.15);
+      tl.fromTo("#t2-gridFrame", { opacity: 0 }, { opacity: 1, duration: 0.55, ease: "power1.out" }, 0.15);
+
+      tl.fromTo("#t2-inputtag", { opacity: 0, y: -8 }, { opacity: 0.85, y: 0, duration: 0.5, ease: "power2.out" }, 6.2);
+
+      /* goal card */
+      tl.fromTo("#t2-cardG", { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 6.55);
+      tl.fromTo(["#t2-cardGtag", "#t2-cardGsq"], { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 6.85);
+      tl.fromTo("#t2-cardGzh", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" }, 6.95);
+      tl.fromTo("#t2-cardGsub", { opacity: 0, y: 8 }, { opacity: 0.75, y: 0, duration: 0.45, ease: "power2.out" }, 7.1);
+      tl.fromTo("#t2-texA", { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 0.85, ease: "power3.out" }, 7.25);
+      tl.fromTo("#t2-cardGfoot", { opacity: 0 }, { opacity: 0.75, duration: 0.45, ease: "power1.out" }, 8.1);
+
+      /* current card */
+      tl.fromTo("#t2-cardC", { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 8.65);
+      tl.fromTo(["#t2-cardCtag", "#t2-cardCsq"], { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 8.95);
+      tl.fromTo("#t2-cardCzh", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" }, 9.05);
+      tl.fromTo("#t2-cardCsub", { opacity: 0, y: 8 }, { opacity: 0.75, y: 0, duration: 0.45, ease: "power2.out" }, 9.2);
+      tl.fromTo("#t2-texB", { clipPath: "inset(0 0 100% 0)" }, { clipPath: "inset(0 0 0% 0)", duration: 0.85, ease: "power3.out" }, 9.35);
+      tl.fromTo("#t2-cardCfoot", { opacity: 0 }, { opacity: 0.75, duration: 0.45, ease: "power1.out" }, 10.2);
+
+      /* dashed connector between the two cards */
+      tl.fromTo("#t2-conn", { scaleX: 0, opacity: 0 }, { scaleX: 1, opacity: 1, duration: 0.6, ease: "power2.out", transformOrigin: "left center" }, 9.9);
+      tl.fromTo("#t2-connsqL", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(1.6)", transformOrigin: "50% 50%" }, 10.25);
+      tl.fromTo("#t2-connsqR", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(1.6)", transformOrigin: "50% 50%" }, 10.35);
+
+      /* ============================================================
+         Scene 3 (11.5-19.8s) — bottom strip: 4 keys pop one by one,
+         10 budget segments light up, out-of-bounds bounce demo costs
+         one segment (detail as rule), GOAL cell marked.
+         ============================================================ */
+      tl.fromTo("#t2-strip", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 11.75);
+
+      var keys = ["#t2-keyU", "#t2-keyD", "#t2-keyL", "#t2-keyR"];
+      keys.forEach(function (k, i) {
+        tl.fromTo(k, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(1.6)", transformOrigin: "50% 50%" }, 12.15 + i * 0.32);
+      });
+
+      tl.fromTo("#t2-kdiv", { scaleY: 0 }, { scaleY: 1, duration: 0.4, ease: "power2.out", transformOrigin: "center top" }, 13.5);
+      tl.fromTo("#t2-budlabel", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 13.7);
+      tl.fromTo("#t2-budcount", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 13.85);
+      buds.forEach(function (bud, i) {
+        tl.fromTo(bud.firstChild, { scaleX: 0 }, { scaleX: 1, duration: 0.28, ease: "power2.out" }, 13.95 + i * 0.14);
+      });
+
+      /* out-of-bounds demo: dot pushes up, hits the border, springs back;
+         the step is still spent — one segment extinguishes, counter drops */
+      tl.to("#t2-dot", { y: -58, duration: 0.32, ease: "power2.out" }, 15.75);
+      tl.fromTo("#t2-edgeflash", { opacity: 0 }, { opacity: 0.85, duration: 0.08, ease: "none" }, 16.05);
+      tl.to("#t2-edgeflash", { opacity: 0, duration: 0.4, ease: "power2.out" }, 16.2);
+      tl.to("#t2-dot", { y: 0, duration: 0.55, ease: "back.out(2.4)" }, 16.07);
+      tl.to(buds[9].querySelector(".t2-budfill"), { opacity: 0.12, duration: 0.3, ease: "power2.out" }, 16.12);
+      tl.fromTo(buds[9].querySelector(".t2-budspent"), { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power2.out" }, 16.12);
+      tl.fromTo("#t2-minus1", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.7)", transformOrigin: "50% 50%" }, 16.2);
+      tl.to("#t2-count10", { opacity: 0, y: -8, duration: 0.3, ease: "power2.in" }, 16.12);
+      tl.fromTo("#t2-count9", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }, 16.18);
+
+      /* goal cell marked on the grid */
+      tl.fromTo("#t2-goalmark", { opacity: 0, scale: 0.6 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.6)", transformOrigin: "50% 50%" }, 17.9);
+
+      /* ============================================================
+         Scene 4 (19.8-27.562s) — "评测端" stamp lands top-right with a
+         press-release spring (linear press-in, spring settle, square
+         burst ring at release); oracle rows masked; highlight chip;
+         whole frame holds.
+         ============================================================ */
+      /* press: descends and compresses (linear-in, state continuity into release) */
+      tl.fromTo("#t2-stamp", { scale: 2.15, opacity: 0, rotation: -13 }, { scale: 0.92, opacity: 1, rotation: -4, duration: 0.5, ease: "power1.in", transformOrigin: "50% 50%" }, 19.95);
+      /* release: spring back to rest, adjacent position (tilt kept shallow so
+         rotated text line-boxes stay clear of each other and of the card text) */
+      tl.to("#t2-stamp", { scale: 1, rotation: -3, duration: 0.6, ease: "back.out(1.8)" }, 20.45);
+      /* square burst ring expands behind the stamp at release */
+      tl.fromTo("#t2-burst", { scale: 0.6, opacity: 0.6 }, { scale: 3.4, opacity: 0, duration: 0.75, ease: "power2.out", transformOrigin: "50% 50%" }, 20.45);
+
+      tl.fromTo("#t2-stag", { opacity: 0, y: 8 }, { opacity: 0.85, y: 0, duration: 0.45, ease: "power2.out" }, 20.85);
+      tl.fromTo("#t2-stsq", { opacity: 0, scale: 0 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(1.6)", transformOrigin: "50% 50%" }, 20.9);
+      tl.fromTo("#t2-stzh", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" }, 20.95);
+
+      /* row 1 — 目标坐标: label in, redaction mask wipes over the value slot */
+      tl.fromTo("#t2-srowAzh", { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: "power2.out" }, 21.4);
+      tl.fromTo("#t2-srowAsub", { opacity: 0 }, { opacity: 0.7, duration: 0.4, ease: "power1.out" }, 21.55);
+      tl.fromTo("#t2-slotA", { opacity: 0 }, { opacity: 0.45, duration: 0.4, ease: "power1.out" }, 21.6);
+      tl.fromTo("#t2-maskA", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power3.inOut" }, 21.9);
+      /* row 2 — 真实距离 */
+      tl.fromTo("#t2-srowBzh", { opacity: 0, x: -14 }, { opacity: 1, x: 0, duration: 0.45, ease: "power2.out" }, 22.45);
+      tl.fromTo("#t2-srowBsub", { opacity: 0 }, { opacity: 0.7, duration: 0.4, ease: "power1.out" }, 22.6);
+      tl.fromTo("#t2-slotB", { opacity: 0 }, { opacity: 0.45, duration: 0.4, ease: "power1.out" }, 22.65);
+      tl.fromTo("#t2-maskB", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power3.inOut" }, 22.95);
+
+      /* highlight chip: the agent can never see this */
+      tl.fromTo("#t2-chip", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.5, ease: "back.out(1.6)", transformOrigin: "0% 50%" }, 24.45);
+
+      /* register (no exits — non-final frame; root transition owns the out) */
+      (window.__timelines = window.__timelines || {})["02-task"] = tl;
+      tl.seek(0);
+    })();
+  </script>
+</template>

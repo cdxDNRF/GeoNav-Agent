@@ -1,0 +1,61 @@
+{
+  "source_sha256": {
+    "DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1/对照汇总.json": "c5659e4f81b85b4eedaaf6538666367fe2ddb89a5f41a4cf2d8774780f53620f",
+    "DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1/独立复核.json": "d946f807be031666211ce6e36a790d83937f8290e6c81cf20fc81af4f20610d5",
+    "DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1/验收结论.json": "78b78ad5edb3b8347ef89e06a15830cb8d4a26709d4d8c34102e2e0066614d3a",
+    "DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1/预登记.json": "b75cf6caa1137379288530162b6c5a0f1d9ae437fcc31dae7d24555ba3c3db54",
+    "DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1/线索接受诊断.json": "e7c150bb28c407b4ae57cb71f8f8f5bd8c7269a5054baeb15e09068c324178e8"
+  },
+  "script_sha256": "174ee4d1e0c1f7dad0923a49d11344e59ebd6bd07bd6b4fa67253b7c743561bb",
+  "style_helper_sha256": "6eeefaa84f1ce6a7e8701f2c725c45e055e8f0ff2460b27d0d0041e96777deab",
+  "report_sha256": "974acac25539bf220f06a6becd5d9113a36b28148086a3c50fa8b823d1668dc3",
+  "figures": [
+    {
+      "id": "17_方向候选开发成功率与距离",
+      "caption": "四方向候选在本批干净/旋转题上取得相同SR88.81%，原策略分别为88.57%/72.86%。候选来自给定像素的0/90/180/270度无插值变换，原权重、阈值0.50、当前图与预算不变，未提供真角度；全部权重均展示。SR为成功比例，SG为全部终点距离均值；本图范围为Masa已知开发28图/140题×3；5×5/B10；白色标记：三份权重，非CI。，候选是否放行还取决于干净保护与目标收益。",
+      "protocol": "Masa已知开发28图/140题×3；5×5/B10；白色标记：三份权重，非CI。",
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1/对照汇总.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/17_方向候选开发成功率与距离.pdf",
+          "sha256": "ae0322796804425e87e9fbdaef99d482cc6b5fc9c252c1c3b2126000e5b42d4c"
+        },
+        {
+          "path": "绘图/数据结果图/17_方向候选开发成功率与距离.svg",
+          "sha256": "1f61b598116a9f637535f1379b5804c424a78da6f09558f1c81473893ec1ec70"
+        },
+        {
+          "path": "绘图/数据结果图/17_方向候选开发成功率与距离.png",
+          "sha256": "3246bb38cbbc2df3665e8326b16cc9ab91d4478e94407542913fa4e668262291"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_orientation.py"
+    },
+    {
+      "id": "18_方向候选开发配对收益与保护",
+      "caption": "恢复旋转题不代表候选整体可用，干净题的预定保护同样决定放行。四项全部展示，每个源文件先平均三份权重的配对差，再seed3031/2000次成组bootstrap；区间为逐项95%，不声称四项同时保证。橙短线为运行前固定的+5点收益或−2点干净保护尺度，完整门槛还包含SG、至少两份正权重及全量复核。",
+      "protocol": "Masa已知开发28图/140题×3；5×5/B10；白色标记：三份权重，非CI。",
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1/对照汇总.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/18_方向候选开发配对收益与保护.pdf",
+          "sha256": "7e7b26761b38d613f550d50f6872559d8afd24d4ad8df7b170b6854962cea66a"
+        },
+        {
+          "path": "绘图/数据结果图/18_方向候选开发配对收益与保护.svg",
+          "sha256": "f8094df22b47ba9d7a35f80f883a56b386675af2c7589d209559fd55a49a2714"
+        },
+        {
+          "path": "绘图/数据结果图/18_方向候选开发配对收益与保护.png",
+          "sha256": "cd1286a5b924c28b417c271894d94943255c6c0650f3e605c65511cfa0f9bef9"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_orientation.py"
+    }
+  ],
+  "mode": "development"
+}

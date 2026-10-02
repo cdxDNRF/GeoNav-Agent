@@ -1,0 +1,30 @@
+{
+  "architectures": {
+    "Small256": {
+      "runs": 6,
+      "parameters": 797701,
+      "trained_parameters": 665860,
+      "training_seconds_sum": 411.629419600009,
+      "training_seconds_median": 29.49078500000178,
+      "peak_training_allocated_MiB": 285.83544921875
+    },
+    "Large512": {
+      "runs": 6,
+      "parameters": 2381317,
+      "trained_parameters": 2118148,
+      "training_seconds_sum": 145.4480726000038,
+      "training_seconds_median": 20.356431899999734,
+      "peak_training_allocated_MiB": 357.5771484375
+    },
+    "Spatial256": {
+      "runs": 6,
+      "parameters": 801797,
+      "trained_parameters": 669956,
+      "training_seconds_sum": 147.50712710001972,
+      "training_seconds_median": 24.617408750011236,
+      "peak_training_allocated_MiB": 355.66064453125
+    }
+  },
+  "frozen_encoder_parameters": 87849216,
+  "note": "Times varied with shared GPU load; not a controlled speed benchmark. PyTorch training allocation excludes driver, other applications, reserved cache and encoder feature-extraction peak."
+}

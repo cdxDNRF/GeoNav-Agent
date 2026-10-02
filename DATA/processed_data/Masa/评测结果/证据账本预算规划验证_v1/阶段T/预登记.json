@@ -1,0 +1,61 @@
+{
+  "D_ablation": [
+    "hidden",
+    "shuffled",
+    "hidden",
+    "shuffled"
+  ],
+  "D_selection": "two different-source baseline-failure first eligibleT prefixes; two different-source elapsed2 prefixes (success/failure); sha256 order",
+  "G_selection": "all20 sources hash order, distance12+i%5, minimum task JSON hash, no outcomes",
+  "T_gate": {
+    "different_failure_sources": 2,
+    "nonfailure_protection_required": true
+  },
+  "budget": 20,
+  "default_sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b",
+  "descriptive_checkpoints": [
+    1,
+    2
+  ],
+  "frozen_files_sha256": {
+    "总体任务.json": "eca30ebf5a316d390dbabea43dd6c452422829601039b503f5d5cbe75e6b10a3",
+    "执行协议.md": "1aba0e8104dc245c746ea92bc4dddd7607d76ddb506acd54fae5a93ef3c2820e",
+    "调研建议设计.md": "098555e484d14a82a8d7d3a3c8e469777518dce29242ffc20a4c3482cecf6023",
+    "阶段T测试.json": "588cd51771fe0190070350e89f7820c9a7e3434eb8bb83484cb715a4c89764f2"
+  },
+  "grid_size": 10,
+  "maximum_chat_requests": 420,
+  "model_calls": 0,
+  "new_training_steps": 0,
+  "phase_caps": {
+    "D": 48,
+    "G": 360,
+    "engineering": 12
+  },
+  "primary_checkpoint": 0,
+  "source_sha256": {
+    "agents/evidence_budget.py": "ccb4685deda85da375c2e8012f04dc90f5b9a835b838f54d63d15ac257e3b9e7",
+    "eval/evidence_budget_stage_t.py": "786236510cfdd430da9a1e2a0e197955f48c0efb07dd8b4c0924ff61c07e8441",
+    "tests/test_evidence_budget.py": "864102783664253d0ab7528fd31b57068e245edbb243e44165c8f8c3c0f02d6c"
+  },
+  "sources_sha256": {
+    "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/Edge_s0/导航_CueFull_轨迹.jsonl": "82af285a9385a2cc7330296bf92250dd9e38b2e9f85beeee7b38aa7dd7a7a2df",
+    "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/Edge_s1/导航_CueFull_轨迹.jsonl": "f424ec12dfbf0821d4b05db08e5705a19f274298ceb761a9469af2dbde40c5f6",
+    "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/Edge_s2/导航_CueFull_轨迹.jsonl": "47ed1b26f0283452ab58d417f6b20f5a0662db2df2271c327c2bd6d99d219021",
+    "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/导航任务.json": "79596a76c5a11a0582666ae445df49e286394c1589dbc3755c503b9f78984f39",
+    "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/独立复核.json": "d6f5987436ec262cd0b2a5238b48bb3f0719b459d55a70fd87b750dd8d72756f",
+    "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/验收结论.json": "2c80528498810091bf844c869ef35d6a074fff4750dbc2a988e0f0723c60840c",
+    "project/local_policy_default.json": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b"
+  },
+  "trigger": {
+    "checkpoint_step": 7,
+    "max_interventions": 1,
+    "max_new_in_window": 1,
+    "minimum_remaining": 2,
+    "protect_accepted_cue": true,
+    "require_repeat": true,
+    "stagnation_window": 2
+  },
+  "utc": "2026-10-01T11:32:21.611577+00:00",
+  "version": "ledger-budget-T-v1"
+}

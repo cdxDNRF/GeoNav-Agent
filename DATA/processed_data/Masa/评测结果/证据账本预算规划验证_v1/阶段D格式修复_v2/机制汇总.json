@@ -1,0 +1,130 @@
+{
+  "D_numeric_passed": false,
+  "allow_G": false,
+  "audit_pending": true,
+  "chat_requests": 13,
+  "checks": {
+    "all_D_valid": false,
+    "engineering_passed": true,
+    "grounded_evidence_nonempty": false,
+    "no_unvalidated_target_claim": true,
+    "repeated_useful_message_effect": false,
+    "two_failure_states_executable": false
+  },
+  "circuit": "provider_status_or_three_consecutive_errors",
+  "new_engineering_requests": 0,
+  "no_new_navigation_SR": true,
+  "old_engineering_invalid_before_repair": 1,
+  "paired_message_effects": [
+    {
+      "pairs": [
+        {
+          "ablation_candidate": "c02",
+          "changed": false,
+          "full_candidate": "c02",
+          "full_strictly_better": false,
+          "message_reported_used": true,
+          "repeat": 0
+        },
+        {
+          "ablation_candidate": null,
+          "changed": false,
+          "full_candidate": null,
+          "full_strictly_better": false,
+          "message_reported_used": false,
+          "repeat": 1
+        }
+      ],
+      "repeated_useful_message_effect": false,
+      "state": 0
+    },
+    {
+      "pairs": [
+        {
+          "ablation_candidate": null,
+          "changed": false,
+          "full_candidate": null,
+          "full_strictly_better": false,
+          "message_reported_used": false,
+          "repeat": 0
+        },
+        {
+          "ablation_candidate": null,
+          "changed": false,
+          "full_candidate": null,
+          "full_strictly_better": false,
+          "message_reported_used": false,
+          "repeat": 1
+        }
+      ],
+      "repeated_useful_message_effect": false,
+      "state": 1
+    },
+    {
+      "pairs": [
+        {
+          "ablation_candidate": null,
+          "changed": false,
+          "full_candidate": null,
+          "full_strictly_better": false,
+          "message_reported_used": false,
+          "repeat": 0
+        },
+        {
+          "ablation_candidate": null,
+          "changed": false,
+          "full_candidate": null,
+          "full_strictly_better": false,
+          "message_reported_used": false,
+          "repeat": 1
+        }
+      ],
+      "repeated_useful_message_effect": false,
+      "state": 2
+    },
+    {
+      "pairs": [
+        {
+          "ablation_candidate": null,
+          "changed": false,
+          "full_candidate": null,
+          "full_strictly_better": false,
+          "message_reported_used": false,
+          "repeat": 0
+        },
+        {
+          "ablation_candidate": null,
+          "changed": false,
+          "full_candidate": null,
+          "full_strictly_better": false,
+          "message_reported_used": false,
+          "repeat": 1
+        }
+      ],
+      "repeated_useful_message_effect": false,
+      "state": 3
+    }
+  ],
+  "phase_counts": {
+    "D": 7,
+    "engineering": 6
+  },
+  "semantic_accuracy_not_proven": true,
+  "workflow_counts": {
+    "M2": {
+      "executable": 0,
+      "message_reported_used": 0,
+      "records": 8
+    },
+    "M4": {
+      "executable": 1,
+      "message_reported_used": 1,
+      "records": 8
+    },
+    "M4_ablation": {
+      "executable": 1,
+      "message_reported_used": 1,
+      "records": 8
+    }
+  }
+}

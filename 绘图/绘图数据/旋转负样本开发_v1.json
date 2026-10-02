@@ -1,0 +1,75 @@
+{
+  "mode": "development",
+  "source_sha256": {
+    "DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1/对照汇总.json": "41eeb7435c3f1b54c5cb212fe36a4bd8dd619326d60d1e8dd6031a813a881b77",
+    "DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1/独立复核.json": "ff0f69cd21850c298c41fe82e88cf003fb3ebc5784cd800733f634e98ee73f9f",
+    "DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1/验收结论.json": "2aed59800c6b523c6d1938a6354d9302c02a93abe9279ef5ea499ead5711ab1f",
+    "DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1/预登记.json": "fe027a5b9ab225b1191ad9aa0f2b7704c846f0b377e918447e661fbf3b1e2cc1",
+    "DATA/processed_data/Masa/训练结果/旋转负样本视觉头对照_v1/独立复核.json": "0093ae9df675413ab965b93ae2514a6dc95d0931d8ba2058c66d91eeee5b54f1",
+    "DATA/processed_data/Masa/训练结果/旋转负样本视觉头对照_v1/诊断汇总.json": "cb5f1ebf0fde15445fc36c6a4843d36cd7e20990de16b36795448817518f285b",
+    "DATA/processed_data/Masa/训练结果/旋转负样本视觉头对照_v1/验收结论.json": "7234d8e37d8405386a882b62894933802c27509716edfb55bae1b7b6bd8d1e57",
+    "DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1/接受与失败诊断.json": "0668b87e1539c6767c7c706d1dd125609d6f4f7b4393e6d9a190e78f2454c912"
+  },
+  "script_sha256": "0bc47e69fe968fc9cc73ce4ac39e972a6f12c2bc555c4f1a3057a14dd5a3c67c",
+  "style_helper_sha256": "6eeefaa84f1ce6a7e8701f2c725c45e055e8f0ff2460b27d0d0041e96777deab",
+  "report_sha256": "4c28e7aa56e88c6dc303aab036ccd748c2bbb5b7ee949e15ccb07ae47bd426bb",
+  "figures": [
+    {
+      "id": "23_旋转负样本开发成功率与距离",
+      "caption": "负旋转头本批SR为89.05%，相同预算原头四方向为88.81%。只将原非邻接负样本的一半目标旋转，正样本、探索器、encoder、接受阈值0.50与预算冻结；原头对照逐参数复现。Masa已知开发28图/140题×3；5×5/B10；白点：三权重，非CI。 SR为成功比例，SG为所有终点平均曼哈顿距离；图示SG两位小数，精确值见报告。",
+      "protocol": "Masa已知开发28图/140题×3；5×5/B10；白点：三权重，非CI。",
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1/对照汇总.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/23_旋转负样本开发成功率与距离.pdf",
+          "sha256": "04ae998f155d4459f6ec43e163d54fe1f8c835e4321ebb4e14753e4cbcb51c77"
+        },
+        {
+          "path": "绘图/数据结果图/23_旋转负样本开发成功率与距离.svg",
+          "sha256": "22ecfce4c1f0225656ce5bb01ea1c11ac85ca4f2871444f6adfda1f5a411f697"
+        },
+        {
+          "path": "绘图/数据结果图/23_旋转负样本开发成功率与距离.png",
+          "sha256": "3784e07a1e49cd3dcda4d72593ebaea44be3bcca389e6d31dceb6b8ac87b4441"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_rotation_negative.py"
+    },
+    {
+      "id": "24_旋转负样本开发配对收益与保护",
+      "caption": "本批负旋转训练相对原头四方向SR变化+0.24点，源文件95%区间[+0.00,+0.71]点。每源文件先平均三权重配对差，再2000次seed3031成组bootstrap；全部五项区间均展示，不声称同时覆盖。开发源文件曾参与方法选择，区间不能当独立test保证；工程判定还检查种子一致性、SG、干净保护与全量重放。",
+      "protocol": "Masa已知开发28图/140题×3；5×5/B10；白点：三权重，非CI。",
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1/对照汇总.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/24_旋转负样本开发配对收益与保护.pdf",
+          "sha256": "94476e9540f45c74a80212875cc6b60b2a0ab38e5f2befeb2f0ed0b68d79a134"
+        },
+        {
+          "path": "绘图/数据结果图/24_旋转负样本开发配对收益与保护.svg",
+          "sha256": "9abb0bbba113ed063f17468f9ca770adbbb4d8e1567d431623382134858cec68"
+        },
+        {
+          "path": "绘图/数据结果图/24_旋转负样本开发配对收益与保护.png",
+          "sha256": "6b5f58662d0e22ef2db92af8ef86932e75070b2ec5902e336599cf0b9dd18455"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_rotation_negative.py"
+    }
+  ],
+  "pre_delivery_QA_repair": {
+    "reason": "training effect label overlapped +2pp gate; shifted label right",
+    "first_draft_hashes": {
+      "绘图/数据结果图/23_旋转负样本开发成功率与距离.pdf": "5cbb9448d42b36bef0e3d04987e383f93d0d8ab09f79d74520a1b911accec59d",
+      "绘图/数据结果图/23_旋转负样本开发成功率与距离.svg": "06a0a25fd93635f7edd559b65f8f7354e2ea9317a92034bb88927cc70ef65f33",
+      "绘图/数据结果图/23_旋转负样本开发成功率与距离.png": "3784e07a1e49cd3dcda4d72593ebaea44be3bcca389e6d31dceb6b8ac87b4441",
+      "绘图/数据结果图/24_旋转负样本开发配对收益与保护.pdf": "f5a59ac15d3348aa5c59b776347ce81e43b1b044fc2e4f08ae500ab59cee495b",
+      "绘图/数据结果图/24_旋转负样本开发配对收益与保护.svg": "e9d7a8136e1be4464efce334c59f76a8c2671688a8591dcdb7bbf2bc47d5fe74",
+      "绘图/数据结果图/24_旋转负样本开发配对收益与保护.png": "ec99875d64bd81054e2b58e843f619701de84b91cc22937d7b688720f4ad1284"
+    }
+  }
+}

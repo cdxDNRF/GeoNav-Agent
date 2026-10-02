@@ -1,0 +1,81 @@
+[
+  {
+    "call_id": 52,
+    "error_type": "ReadTimeout",
+    "http_status": null,
+    "status": "transport_error",
+    "tag": {
+      "arm": "M3",
+      "episode_id": "test_img_8_d16_004",
+      "global_call_id": 112,
+      "phase": "G",
+      "repeat": 0,
+      "slot": 1,
+      "step": 7
+    }
+  },
+  {
+    "call_id": 53,
+    "error_type": "ReadTimeout",
+    "http_status": null,
+    "status": "transport_error",
+    "tag": {
+      "arm": "M4",
+      "episode_id": "test_img_8_d16_004",
+      "global_call_id": 113,
+      "phase": "G",
+      "repeat": 0,
+      "slot": 0,
+      "step": 7
+    }
+  },
+  {
+    "call_id": 147,
+    "error_type": "ReadTimeout",
+    "http_status": null,
+    "status": "transport_error",
+    "tag": {
+      "arm": "M3",
+      "episode_id": "dev_img_13_d12_004",
+      "global_call_id": 207,
+      "phase": "G",
+      "repeat": 1,
+      "slot": 1,
+      "step": 7
+    }
+  },
+  {
+    "call_id": 209,
+    "error_type": null,
+    "http_status": 200,
+    "raw_content": "{\"candidate_id\":\"c03\",\"evidence_ids\":[\"g:c03\"]}",
+    "rejection": "compact plan keys",
+    "status": "invalid_recommendation",
+    "tag": {
+      "arm": "M3",
+      "episode_id": "test_img_1_d13_002",
+      "global_call_id": 269,
+      "phase": "G",
+      "repeat": 1,
+      "slot": 1,
+      "step": 7
+    }
+  },
+  {
+    "call_id": 321,
+    "error_type": null,
+    "http_status": 200,
+    "raw_content": "{\"candidate_id\":\"c03\",\"evidence_ids\":[\"g:c03\"]}",
+    "rejection": "compact plan keys",
+    "status": "invalid_recommendation",
+    "tag": {
+      "arm": "M3",
+      "episode_id": "test_img_1_d13_002",
+      "global_call_id": 381,
+      "phase": "G",
+      "repeat": 2,
+      "slot": 1,
+      "step": 7
+    }
+  }
+]

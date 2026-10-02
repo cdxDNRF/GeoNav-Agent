@@ -1,0 +1,33 @@
+{
+  "T_sha256": "cf74a6f6b11d1f56b72d070625fbdf25069796b108d40c2fae8cd3f62259eeaa",
+  "audit_sha256": "6255cfe8863b89ae9d40f52d1885b416bf247cdef59336aba5e89b4ee8035386",
+  "figures": [
+    {
+      "caption": "阶段T静态读取1500条既有S4记录、25476公开前缀；权重0原失败115题中旧冲突12、新公开预算/停滞111获得介入机会，不代表恢复成功。原成功385题中也有372触发，不能当失败预测。三白点是已有训练权重的描述，不增加源图或形成CI。阶段D跨格式版本14实际请求，原解析8有效/6拒绝，其中1已知类型事实别名复核修复；其余5失败保留。工程与消息关卡未通过，闭环G未启动，无新SR、无新训练或新地图。",
+      "files": [
+        {
+          "path": "绘图/数据结果图/28_证据账本触发机会与接口诊断.pdf",
+          "sha256": "2558d608fbdf2f42299603307cb2dac11bc3bbf39a3eec2efd61cd793b4c3306"
+        },
+        {
+          "path": "绘图/数据结果图/28_证据账本触发机会与接口诊断.svg",
+          "sha256": "f09c04943b1089a1efb9faf5827e5dec0fdae783975bd7b404d6ab220815080b"
+        },
+        {
+          "path": "绘图/数据结果图/28_证据账本触发机会与接口诊断.png",
+          "sha256": "7dbf30e9c8fefed0713d78c384161c71ae71d62f3213dcd898c491ea1be93df0"
+        }
+      ],
+      "id": "28_证据账本触发机会与接口诊断",
+      "protocol": "static known S4 prefix check, incomplete D interface diagnosis",
+      "reproduction_script": "project/src/documents/summarize_evidence_budget.py",
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/证据账本预算规划验证_v1/阶段T/机会汇总.json",
+        "DATA/processed_data/Masa/评测结果/证据账本预算规划验证_v1/独立复核.json"
+      ]
+    }
+  ],
+  "min_font_pt": 9,
+  "new_SR_available": false,
+  "recommended_width_cm": 18
+}

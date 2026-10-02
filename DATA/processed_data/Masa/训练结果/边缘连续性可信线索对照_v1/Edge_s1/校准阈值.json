@@ -1,0 +1,819 @@
+{
+  "all_abstain": false,
+  "calibration_only": true,
+  "grid": [
+    {
+      "metrics": {
+        "acceptance_coverage": 0.12515151515151515,
+        "accepted": 1652,
+        "accepted_precision": 0.9279661016949152,
+        "adjacent_direction_accuracy": 0.9602272727272727,
+        "adjacent_recall": 0.8710227272727272,
+        "by_source": {
+          "img_0": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_100": {
+            "accepted": 91,
+            "correct_accepted": 80
+          },
+          "img_101": {
+            "accepted": 85,
+            "correct_accepted": 80
+          },
+          "img_11": {
+            "accepted": 78,
+            "correct_accepted": 78
+          },
+          "img_111": {
+            "accepted": 79,
+            "correct_accepted": 77
+          },
+          "img_116": {
+            "accepted": 92,
+            "correct_accepted": 74
+          },
+          "img_120": {
+            "accepted": 41,
+            "correct_accepted": 41
+          },
+          "img_126": {
+            "accepted": 80,
+            "correct_accepted": 78
+          },
+          "img_128": {
+            "accepted": 85,
+            "correct_accepted": 68
+          },
+          "img_130": {
+            "accepted": 71,
+            "correct_accepted": 60
+          },
+          "img_135": {
+            "accepted": 34,
+            "correct_accepted": 23
+          },
+          "img_136": {
+            "accepted": 93,
+            "correct_accepted": 65
+          },
+          "img_14": {
+            "accepted": 82,
+            "correct_accepted": 80
+          },
+          "img_23": {
+            "accepted": 79,
+            "correct_accepted": 79
+          },
+          "img_24": {
+            "accepted": 82,
+            "correct_accepted": 79
+          },
+          "img_37": {
+            "accepted": 81,
+            "correct_accepted": 80
+          },
+          "img_44": {
+            "accepted": 59,
+            "correct_accepted": 57
+          },
+          "img_53": {
+            "accepted": 78,
+            "correct_accepted": 78
+          },
+          "img_55": {
+            "accepted": 83,
+            "correct_accepted": 79
+          },
+          "img_59": {
+            "accepted": 43,
+            "correct_accepted": 43
+          },
+          "img_70": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_93": {
+            "accepted": 76,
+            "correct_accepted": 74
+          }
+        },
+        "class_accuracy": 0.9722727272727273,
+        "correct_accepted": 1533,
+        "non_adjacent_constant_accuracy": 0.8666666666666667,
+        "precision_interval": {
+          "interval95": [
+            0.8865531524512751,
+            0.9643156419863725
+          ],
+          "resamples": 2000,
+          "scope": "Known development threshold screening; no independent precision guarantee.",
+          "source_count": 22,
+          "zero_accept_resamples": 0
+        },
+        "samples": 13200,
+        "sources_with_acceptances": 22
+      },
+      "passed": true,
+      "threshold": 0.5
+    },
+    {
+      "metrics": {
+        "acceptance_coverage": 0.1193939393939394,
+        "accepted": 1576,
+        "accepted_precision": 0.950507614213198,
+        "adjacent_direction_accuracy": 0.9602272727272727,
+        "adjacent_recall": 0.8511363636363637,
+        "by_source": {
+          "img_0": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_100": {
+            "accepted": 88,
+            "correct_accepted": 80
+          },
+          "img_101": {
+            "accepted": 84,
+            "correct_accepted": 80
+          },
+          "img_11": {
+            "accepted": 78,
+            "correct_accepted": 78
+          },
+          "img_111": {
+            "accepted": 79,
+            "correct_accepted": 77
+          },
+          "img_116": {
+            "accepted": 89,
+            "correct_accepted": 74
+          },
+          "img_120": {
+            "accepted": 39,
+            "correct_accepted": 39
+          },
+          "img_126": {
+            "accepted": 79,
+            "correct_accepted": 78
+          },
+          "img_128": {
+            "accepted": 72,
+            "correct_accepted": 63
+          },
+          "img_130": {
+            "accepted": 59,
+            "correct_accepted": 52
+          },
+          "img_135": {
+            "accepted": 26,
+            "correct_accepted": 21
+          },
+          "img_136": {
+            "accepted": 74,
+            "correct_accepted": 57
+          },
+          "img_14": {
+            "accepted": 82,
+            "correct_accepted": 80
+          },
+          "img_23": {
+            "accepted": 77,
+            "correct_accepted": 77
+          },
+          "img_24": {
+            "accepted": 82,
+            "correct_accepted": 79
+          },
+          "img_37": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_44": {
+            "accepted": 55,
+            "correct_accepted": 53
+          },
+          "img_53": {
+            "accepted": 78,
+            "correct_accepted": 78
+          },
+          "img_55": {
+            "accepted": 82,
+            "correct_accepted": 79
+          },
+          "img_59": {
+            "accepted": 43,
+            "correct_accepted": 43
+          },
+          "img_70": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_93": {
+            "accepted": 70,
+            "correct_accepted": 70
+          }
+        },
+        "class_accuracy": 0.9722727272727273,
+        "correct_accepted": 1498,
+        "non_adjacent_constant_accuracy": 0.8666666666666667,
+        "precision_interval": {
+          "interval95": [
+            0.9218929877479428,
+            0.975426523050592
+          ],
+          "resamples": 2000,
+          "scope": "Known development threshold screening; no independent precision guarantee.",
+          "source_count": 22,
+          "zero_accept_resamples": 0
+        },
+        "samples": 13200,
+        "sources_with_acceptances": 22
+      },
+      "passed": true,
+      "threshold": 0.6
+    },
+    {
+      "metrics": {
+        "acceptance_coverage": 0.11492424242424243,
+        "accepted": 1517,
+        "accepted_precision": 0.964403427818062,
+        "adjacent_direction_accuracy": 0.9602272727272727,
+        "adjacent_recall": 0.83125,
+        "by_source": {
+          "img_0": {
+            "accepted": 78,
+            "correct_accepted": 78
+          },
+          "img_100": {
+            "accepted": 86,
+            "correct_accepted": 80
+          },
+          "img_101": {
+            "accepted": 84,
+            "correct_accepted": 80
+          },
+          "img_11": {
+            "accepted": 78,
+            "correct_accepted": 78
+          },
+          "img_111": {
+            "accepted": 77,
+            "correct_accepted": 75
+          },
+          "img_116": {
+            "accepted": 84,
+            "correct_accepted": 74
+          },
+          "img_120": {
+            "accepted": 36,
+            "correct_accepted": 36
+          },
+          "img_126": {
+            "accepted": 78,
+            "correct_accepted": 77
+          },
+          "img_128": {
+            "accepted": 65,
+            "correct_accepted": 57
+          },
+          "img_130": {
+            "accepted": 54,
+            "correct_accepted": 48
+          },
+          "img_135": {
+            "accepted": 19,
+            "correct_accepted": 17
+          },
+          "img_136": {
+            "accepted": 63,
+            "correct_accepted": 52
+          },
+          "img_14": {
+            "accepted": 81,
+            "correct_accepted": 79
+          },
+          "img_23": {
+            "accepted": 77,
+            "correct_accepted": 77
+          },
+          "img_24": {
+            "accepted": 79,
+            "correct_accepted": 78
+          },
+          "img_37": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_44": {
+            "accepted": 50,
+            "correct_accepted": 50
+          },
+          "img_53": {
+            "accepted": 78,
+            "correct_accepted": 78
+          },
+          "img_55": {
+            "accepted": 80,
+            "correct_accepted": 79
+          },
+          "img_59": {
+            "accepted": 42,
+            "correct_accepted": 42
+          },
+          "img_70": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_93": {
+            "accepted": 68,
+            "correct_accepted": 68
+          }
+        },
+        "class_accuracy": 0.9722727272727273,
+        "correct_accepted": 1463,
+        "non_adjacent_constant_accuracy": 0.8666666666666667,
+        "precision_interval": {
+          "interval95": [
+            0.9427943807218774,
+            0.9826849894291755
+          ],
+          "resamples": 2000,
+          "scope": "Known development threshold screening; no independent precision guarantee.",
+          "source_count": 22,
+          "zero_accept_resamples": 0
+        },
+        "samples": 13200,
+        "sources_with_acceptances": 22
+      },
+      "passed": true,
+      "threshold": 0.7
+    },
+    {
+      "metrics": {
+        "acceptance_coverage": 0.10840909090909091,
+        "accepted": 1431,
+        "accepted_precision": 0.9748427672955975,
+        "adjacent_direction_accuracy": 0.9602272727272727,
+        "adjacent_recall": 0.7926136363636364,
+        "by_source": {
+          "img_0": {
+            "accepted": 76,
+            "correct_accepted": 76
+          },
+          "img_100": {
+            "accepted": 85,
+            "correct_accepted": 80
+          },
+          "img_101": {
+            "accepted": 81,
+            "correct_accepted": 79
+          },
+          "img_11": {
+            "accepted": 77,
+            "correct_accepted": 77
+          },
+          "img_111": {
+            "accepted": 72,
+            "correct_accepted": 70
+          },
+          "img_116": {
+            "accepted": 76,
+            "correct_accepted": 69
+          },
+          "img_120": {
+            "accepted": 25,
+            "correct_accepted": 25
+          },
+          "img_126": {
+            "accepted": 77,
+            "correct_accepted": 76
+          },
+          "img_128": {
+            "accepted": 56,
+            "correct_accepted": 50
+          },
+          "img_130": {
+            "accepted": 44,
+            "correct_accepted": 41
+          },
+          "img_135": {
+            "accepted": 11,
+            "correct_accepted": 11
+          },
+          "img_136": {
+            "accepted": 54,
+            "correct_accepted": 46
+          },
+          "img_14": {
+            "accepted": 80,
+            "correct_accepted": 78
+          },
+          "img_23": {
+            "accepted": 76,
+            "correct_accepted": 76
+          },
+          "img_24": {
+            "accepted": 77,
+            "correct_accepted": 77
+          },
+          "img_37": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_44": {
+            "accepted": 49,
+            "correct_accepted": 49
+          },
+          "img_53": {
+            "accepted": 78,
+            "correct_accepted": 78
+          },
+          "img_55": {
+            "accepted": 76,
+            "correct_accepted": 76
+          },
+          "img_59": {
+            "accepted": 39,
+            "correct_accepted": 39
+          },
+          "img_70": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_93": {
+            "accepted": 62,
+            "correct_accepted": 62
+          }
+        },
+        "class_accuracy": 0.9722727272727273,
+        "correct_accepted": 1395,
+        "non_adjacent_constant_accuracy": 0.8666666666666667,
+        "precision_interval": {
+          "interval95": [
+            0.9581921742201372,
+            0.9892986522732541
+          ],
+          "resamples": 2000,
+          "scope": "Known development threshold screening; no independent precision guarantee.",
+          "source_count": 22,
+          "zero_accept_resamples": 0
+        },
+        "samples": 13200,
+        "sources_with_acceptances": 22
+      },
+      "passed": true,
+      "threshold": 0.8
+    },
+    {
+      "metrics": {
+        "acceptance_coverage": 0.09560606060606061,
+        "accepted": 1262,
+        "accepted_precision": 0.9889064976228209,
+        "adjacent_direction_accuracy": 0.9602272727272727,
+        "adjacent_recall": 0.7090909090909091,
+        "by_source": {
+          "img_0": {
+            "accepted": 68,
+            "correct_accepted": 68
+          },
+          "img_100": {
+            "accepted": 79,
+            "correct_accepted": 78
+          },
+          "img_101": {
+            "accepted": 78,
+            "correct_accepted": 78
+          },
+          "img_11": {
+            "accepted": 74,
+            "correct_accepted": 74
+          },
+          "img_111": {
+            "accepted": 64,
+            "correct_accepted": 63
+          },
+          "img_116": {
+            "accepted": 58,
+            "correct_accepted": 53
+          },
+          "img_120": {
+            "accepted": 20,
+            "correct_accepted": 20
+          },
+          "img_126": {
+            "accepted": 75,
+            "correct_accepted": 74
+          },
+          "img_128": {
+            "accepted": 33,
+            "correct_accepted": 30
+          },
+          "img_130": {
+            "accepted": 29,
+            "correct_accepted": 29
+          },
+          "img_135": {
+            "accepted": 7,
+            "correct_accepted": 7
+          },
+          "img_136": {
+            "accepted": 32,
+            "correct_accepted": 31
+          },
+          "img_14": {
+            "accepted": 78,
+            "correct_accepted": 76
+          },
+          "img_23": {
+            "accepted": 76,
+            "correct_accepted": 76
+          },
+          "img_24": {
+            "accepted": 71,
+            "correct_accepted": 71
+          },
+          "img_37": {
+            "accepted": 79,
+            "correct_accepted": 79
+          },
+          "img_44": {
+            "accepted": 37,
+            "correct_accepted": 37
+          },
+          "img_53": {
+            "accepted": 76,
+            "correct_accepted": 76
+          },
+          "img_55": {
+            "accepted": 68,
+            "correct_accepted": 68
+          },
+          "img_59": {
+            "accepted": 32,
+            "correct_accepted": 32
+          },
+          "img_70": {
+            "accepted": 77,
+            "correct_accepted": 77
+          },
+          "img_93": {
+            "accepted": 51,
+            "correct_accepted": 51
+          }
+        },
+        "class_accuracy": 0.9722727272727273,
+        "correct_accepted": 1248,
+        "non_adjacent_constant_accuracy": 0.8666666666666667,
+        "precision_interval": {
+          "interval95": [
+            0.9793319146007089,
+            0.9966136122827394
+          ],
+          "resamples": 2000,
+          "scope": "Known development threshold screening; no independent precision guarantee.",
+          "source_count": 22,
+          "zero_accept_resamples": 0
+        },
+        "samples": 13200,
+        "sources_with_acceptances": 22
+      },
+      "passed": true,
+      "threshold": 0.9
+    },
+    {
+      "metrics": {
+        "acceptance_coverage": 0.08,
+        "accepted": 1056,
+        "accepted_precision": 0.9933712121212122,
+        "adjacent_direction_accuracy": 0.9602272727272727,
+        "adjacent_recall": 0.5960227272727273,
+        "by_source": {
+          "img_0": {
+            "accepted": 48,
+            "correct_accepted": 48
+          },
+          "img_100": {
+            "accepted": 71,
+            "correct_accepted": 70
+          },
+          "img_101": {
+            "accepted": 73,
+            "correct_accepted": 73
+          },
+          "img_11": {
+            "accepted": 67,
+            "correct_accepted": 67
+          },
+          "img_111": {
+            "accepted": 55,
+            "correct_accepted": 54
+          },
+          "img_116": {
+            "accepted": 46,
+            "correct_accepted": 43
+          },
+          "img_120": {
+            "accepted": 17,
+            "correct_accepted": 17
+          },
+          "img_126": {
+            "accepted": 71,
+            "correct_accepted": 70
+          },
+          "img_128": {
+            "accepted": 19,
+            "correct_accepted": 19
+          },
+          "img_130": {
+            "accepted": 20,
+            "correct_accepted": 20
+          },
+          "img_135": {
+            "accepted": 4,
+            "correct_accepted": 4
+          },
+          "img_136": {
+            "accepted": 22,
+            "correct_accepted": 22
+          },
+          "img_14": {
+            "accepted": 60,
+            "correct_accepted": 59
+          },
+          "img_23": {
+            "accepted": 73,
+            "correct_accepted": 73
+          },
+          "img_24": {
+            "accepted": 66,
+            "correct_accepted": 66
+          },
+          "img_37": {
+            "accepted": 70,
+            "correct_accepted": 70
+          },
+          "img_44": {
+            "accepted": 24,
+            "correct_accepted": 24
+          },
+          "img_53": {
+            "accepted": 74,
+            "correct_accepted": 74
+          },
+          "img_55": {
+            "accepted": 55,
+            "correct_accepted": 55
+          },
+          "img_59": {
+            "accepted": 17,
+            "correct_accepted": 17
+          },
+          "img_70": {
+            "accepted": 66,
+            "correct_accepted": 66
+          },
+          "img_93": {
+            "accepted": 38,
+            "correct_accepted": 38
+          }
+        },
+        "class_accuracy": 0.9722727272727273,
+        "correct_accepted": 1049,
+        "non_adjacent_constant_accuracy": 0.8666666666666667,
+        "precision_interval": {
+          "interval95": [
+            0.9867021276595744,
+            0.9982596568509086
+          ],
+          "resamples": 2000,
+          "scope": "Known development threshold screening; no independent precision guarantee.",
+          "source_count": 22,
+          "zero_accept_resamples": 0
+        },
+        "samples": 13200,
+        "sources_with_acceptances": 22
+      },
+      "passed": true,
+      "threshold": 0.95
+    },
+    {
+      "metrics": {
+        "acceptance_coverage": 0.039242424242424245,
+        "accepted": 518,
+        "accepted_precision": 1.0,
+        "adjacent_direction_accuracy": 0.9602272727272727,
+        "adjacent_recall": 0.2943181818181818,
+        "by_source": {
+          "img_0": {
+            "accepted": 20,
+            "correct_accepted": 20
+          },
+          "img_100": {
+            "accepted": 47,
+            "correct_accepted": 47
+          },
+          "img_101": {
+            "accepted": 59,
+            "correct_accepted": 59
+          },
+          "img_11": {
+            "accepted": 29,
+            "correct_accepted": 29
+          },
+          "img_111": {
+            "accepted": 14,
+            "correct_accepted": 14
+          },
+          "img_116": {
+            "accepted": 19,
+            "correct_accepted": 19
+          },
+          "img_120": {
+            "accepted": 10,
+            "correct_accepted": 10
+          },
+          "img_126": {
+            "accepted": 31,
+            "correct_accepted": 31
+          },
+          "img_128": {
+            "accepted": 3,
+            "correct_accepted": 3
+          },
+          "img_130": {
+            "accepted": 6,
+            "correct_accepted": 6
+          },
+          "img_135": {
+            "accepted": 2,
+            "correct_accepted": 2
+          },
+          "img_136": {
+            "accepted": 5,
+            "correct_accepted": 5
+          },
+          "img_14": {
+            "accepted": 29,
+            "correct_accepted": 29
+          },
+          "img_23": {
+            "accepted": 31,
+            "correct_accepted": 31
+          },
+          "img_24": {
+            "accepted": 29,
+            "correct_accepted": 29
+          },
+          "img_37": {
+            "accepted": 36,
+            "correct_accepted": 36
+          },
+          "img_44": {
+            "accepted": 9,
+            "correct_accepted": 9
+          },
+          "img_53": {
+            "accepted": 51,
+            "correct_accepted": 51
+          },
+          "img_55": {
+            "accepted": 30,
+            "correct_accepted": 30
+          },
+          "img_59": {
+            "accepted": 11,
+            "correct_accepted": 11
+          },
+          "img_70": {
+            "accepted": 30,
+            "correct_accepted": 30
+          },
+          "img_93": {
+            "accepted": 17,
+            "correct_accepted": 17
+          }
+        },
+        "class_accuracy": 0.9722727272727273,
+        "correct_accepted": 518,
+        "non_adjacent_constant_accuracy": 0.8666666666666667,
+        "precision_interval": {
+          "interval95": [
+            1.0,
+            1.0
+          ],
+          "resamples": 2000,
+          "scope": "Known development threshold screening; no independent precision guarantee.",
+          "source_count": 22,
+          "zero_accept_resamples": 0
+        },
+        "samples": 13200,
+        "sources_with_acceptances": 22
+      },
+      "passed": true,
+      "threshold": 0.99
+    }
+  ],
+  "threshold": 0.5
+}

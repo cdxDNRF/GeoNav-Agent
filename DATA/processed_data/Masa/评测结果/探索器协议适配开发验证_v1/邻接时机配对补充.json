@@ -1,0 +1,39 @@
+{
+  "comparisons": {
+    "Adapt10_vs_Continue5": {
+      "both_reached_records": 1059,
+      "earlier": 335,
+      "later": 129,
+      "lost_reach": 147,
+      "mean_first_step_change_on_common_reached": -0.6931067044381491,
+      "newly_reached": 156,
+      "planned_records": 1500,
+      "restricted_mean_wait_change_all_planned": -0.506,
+      "same": 595
+    },
+    "Adapt10_vs_M0": {
+      "both_reached_records": 1023,
+      "earlier": 300,
+      "later": 151,
+      "lost_reach": 145,
+      "mean_first_step_change_on_common_reached": -0.4496578690127077,
+      "newly_reached": 192,
+      "planned_records": 1500,
+      "restricted_mean_wait_change_all_planned": -0.49133333333333334,
+      "same": 572
+    },
+    "Continue5_vs_M0": {
+      "both_reached_records": 1023,
+      "earlier": 167,
+      "later": 296,
+      "lost_reach": 145,
+      "mean_first_step_change_on_common_reached": 0.4203323558162268,
+      "newly_reached": 183,
+      "planned_records": 1500,
+      "restricted_mean_wait_change_all_planned": 0.014666666666666666,
+      "same": 560
+    }
+  },
+  "restricted_wait_definition": "first budgeted adjacency step if reached; otherwise censored at20; not a fabricated observed arrival",
+  "scope": "posthoc diagnostic only; no gate changes"
+}

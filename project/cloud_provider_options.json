@@ -1,0 +1,10 @@
+{
+  "version": "optional-cloud-gateway-v1",
+  "default_changed": false,
+  "base_url": "http://127.0.0.1:8790/v1",
+  "provider_kind": "cloud_api_aggregator",
+  "authentication": "no_secret_required; adapter sends a dummy bearer",
+  "models": ["buddy/deepseek-v4.1-flash", "buddy/glm-5.3-flash", "qoder/qfmodel"],
+  "capability_status": "must consult separate diagnostic results; vision not assumed",
+  "adapter": "agents.cloud_gateway.make_gateway_policy"
+}

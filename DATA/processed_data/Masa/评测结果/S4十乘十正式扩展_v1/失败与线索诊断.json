@@ -1,0 +1,47 @@
+{
+  "scope": "Post-hoc descriptive evaluator-only diagnostic; not gate, achievable oracle SR, or causal attribution.",
+  "by_seed": [
+    {
+      "seed": 0,
+      "episodes": 500,
+      "failures": 115,
+      "failed_with_pre_action_adjacent_opportunity": 5,
+      "failed_without_pre_action_adjacent_opportunity": 110,
+      "pre_action_adjacent_states": 390,
+      "accepted_cues": 410,
+      "accepted_cues_reaching_true_goal": 360,
+      "accepted_cues_not_reaching_true_goal": 50,
+      "accepted_cue_precision_on_actual_trajectories": 0.8780487804878049
+    },
+    {
+      "seed": 1,
+      "episodes": 500,
+      "failures": 93,
+      "failed_with_pre_action_adjacent_opportunity": 2,
+      "failed_without_pre_action_adjacent_opportunity": 91,
+      "pre_action_adjacent_states": 412,
+      "accepted_cues": 452,
+      "accepted_cues_reaching_true_goal": 388,
+      "accepted_cues_not_reaching_true_goal": 64,
+      "accepted_cue_precision_on_actual_trajectories": 0.8584070796460177
+    },
+    {
+      "seed": 2,
+      "episodes": 500,
+      "failures": 135,
+      "failed_with_pre_action_adjacent_opportunity": 4,
+      "failed_without_pre_action_adjacent_opportunity": 131,
+      "pre_action_adjacent_states": 371,
+      "accepted_cues": 417,
+      "accepted_cues_reaching_true_goal": 346,
+      "accepted_cues_not_reaching_true_goal": 71,
+      "accepted_cue_precision_on_actual_trajectories": 0.829736211031175
+    }
+  ],
+  "source_sha256": {
+    "DATA\\processed_data\\Masa\\评测结果\\S4十乘十正式扩展_v1\\导航任务.json": "79596a76c5a11a0582666ae445df49e286394c1589dbc3755c503b9f78984f39",
+    "DATA\\processed_data\\Masa\\评测结果\\S4十乘十正式扩展_v1\\Edge_s0\\导航_CueFull_轨迹.jsonl": "82af285a9385a2cc7330296bf92250dd9e38b2e9f85beeee7b38aa7dd7a7a2df",
+    "DATA\\processed_data\\Masa\\评测结果\\S4十乘十正式扩展_v1\\Edge_s1\\导航_CueFull_轨迹.jsonl": "f424ec12dfbf0821d4b05db08e5705a19f274298ceb761a9469af2dbde40c5f6",
+    "DATA\\processed_data\\Masa\\评测结果\\S4十乘十正式扩展_v1\\Edge_s2\\导航_CueFull_轨迹.jsonl": "47ed1b26f0283452ab58d417f6b20f5a0662db2df2271c327c2bd6d99d219021"
+  }
+}

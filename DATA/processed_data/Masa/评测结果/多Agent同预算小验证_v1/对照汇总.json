@@ -1,0 +1,514 @@
+{
+  "audit_pending": true,
+  "averages": {
+    "Edge": {
+      "Q_nav": 1.0,
+      "SG_gate": 0.15,
+      "SR_gate": 0.95
+    },
+    "SingleOnce": {
+      "Q_nav": 1.0,
+      "SG_gate": 0.15,
+      "SR_gate": 0.95
+    },
+    "SingleReflect": {
+      "Q_nav": 1.0,
+      "SG_gate": 0.15,
+      "SR_gate": 0.95
+    },
+    "TwoAgent": {
+      "Q_nav": 1.0,
+      "SG_gate": 0.15,
+      "SR_gate": 0.95
+    }
+  },
+  "candidate_numeric_passed": false,
+  "checks": {
+    "SG_no_worse": true,
+    "SR_gain_2pp": false,
+    "complete": true,
+    "preflight": true,
+    "two_positive_API_repeats": false,
+    "valid_cloud_responses": true
+  },
+  "default_changed": false,
+  "independent_generalization_proven": false,
+  "paired_SG_by_API_repeat": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "paired_SR_by_API_repeat": [
+    0.0,
+    0.0,
+    0.0
+  ],
+  "per_distance": {
+    "Edge": {
+      "4": {
+        "Q_nav": 1.0,
+        "SG_gate": 0,
+        "SR_gate": 1.0,
+        "completed": 4,
+        "mean_steps": 7,
+        "planned": 4,
+        "revisit_rate": 0.0,
+        "successes": 4
+      },
+      "5": {
+        "Q_nav": 1.0,
+        "SG_gate": 0.75,
+        "SR_gate": 0.75,
+        "completed": 4,
+        "mean_steps": 7.25,
+        "planned": 4,
+        "revisit_rate": 0.10344827586206896,
+        "successes": 3
+      },
+      "6": {
+        "Q_nav": 1.0,
+        "SG_gate": 0,
+        "SR_gate": 1.0,
+        "completed": 4,
+        "mean_steps": 8.5,
+        "planned": 4,
+        "revisit_rate": 0.0,
+        "successes": 4
+      },
+      "7": {
+        "Q_nav": 1.0,
+        "SG_gate": 0,
+        "SR_gate": 1.0,
+        "completed": 4,
+        "mean_steps": 8,
+        "planned": 4,
+        "revisit_rate": 0.0,
+        "successes": 4
+      },
+      "8": {
+        "Q_nav": 1.0,
+        "SG_gate": 0,
+        "SR_gate": 1.0,
+        "completed": 4,
+        "mean_steps": 8,
+        "planned": 4,
+        "revisit_rate": 0.0,
+        "successes": 4
+      }
+    },
+    "SingleOnce": {
+      "4": {
+        "Q_nav": 1.0,
+        "SG_gate": 0,
+        "SR_gate": 1.0,
+        "completed": 12,
+        "mean_steps": 7,
+        "planned": 12,
+        "revisit_rate": 0.0,
+        "successes": 12
+      },
+      "5": {
+        "Q_nav": 1.0,
+        "SG_gate": 0.75,
+        "SR_gate": 0.75,
+        "completed": 12,
+        "mean_steps": 7.25,
+        "planned": 12,
+        "revisit_rate": 0.10344827586206896,
+        "successes": 9
+      },
+      "6": {
+        "Q_nav": 1.0,
+        "SG_gate": 0,
+        "SR_gate": 1.0,
+        "completed": 12,
+        "mean_steps": 8.5,
+        "planned": 12,
+        "revisit_rate": 0.0,
+        "successes": 12
+      },
+      "7": {
+        "Q_nav": 1.0,
+        "SG_gate": 0,
+        "SR_gate": 1.0,
+        "completed": 12,
+        "mean_steps": 8,
+        "planned": 12,
+        "revisit_rate": 0.0,
+        "successes": 12
+      },
+      "8": {
+        "Q_nav": 1.0,
+        "SG_gate": 0,
+        "SR_gate": 1.0,
+        "completed": 12,
+        "mean_steps": 8,
+        "planned": 12,
+        "revisit_rate": 0.0,
+        "successes": 12
+      }
+    },
+    "SingleReflect": {
+      "4": {
+        "Q_nav": 1.0,
+        "SG_gate": 0,
+        "SR_gate": 1.0,
+        "completed": 12,
+        "mean_steps": 7,
+        "planned": 12,
+        "revisit_rate": 0.0,
+        "successes": 12
+      },
+      "5": {
+        "Q_nav": 1.0,
+        "SG_gate": 0.75,
+        "SR_gate": 0.75,
+        "completed": 12,
+        "mean_steps": 7.25,
+        "planned": 12,
+        "revisit_rate": 0.10344827586206896,
+        "successes": 9
+      },
+      "6": {
+        "Q_nav": 1.0,
+        "SG_gate": 0,
+        "SR_gate": 1.0,
+        "completed": 12,
+        "mean_steps": 8.5,
+        "planned": 12,
+        "revisit_rate": 0.0,
+        "successes": 12
+      },
+      "7": {
+        "Q_nav": 1.0,
+        "SG_gate": 0,
+        "SR_gate": 1.0,
+        "completed": 12,
+        "mean_steps": 8,
+        "planned": 12,
+        "revisit_rate": 0.0,
+        "successes": 12
+      },
+      "8": {
+        "Q_nav": 1.0,
+        "SG_gate": 0,
+        "SR_gate": 1.0,
+        "completed": 12,
+        "mean_steps": 8,
+        "planned": 12,
+        "revisit_rate": 0.0,
+        "successes": 12
+      }
+    },
+    "TwoAgent": {
+      "4": {
+        "Q_nav": 1.0,
+        "SG_gate": 0,
+        "SR_gate": 1.0,
+        "completed": 12,
+        "mean_steps": 7,
+        "planned": 12,
+        "revisit_rate": 0.0,
+        "successes": 12
+      },
+      "5": {
+        "Q_nav": 1.0,
+        "SG_gate": 0.75,
+        "SR_gate": 0.75,
+        "completed": 12,
+        "mean_steps": 7.25,
+        "planned": 12,
+        "revisit_rate": 0.10344827586206896,
+        "successes": 9
+      },
+      "6": {
+        "Q_nav": 1.0,
+        "SG_gate": 0,
+        "SR_gate": 1.0,
+        "completed": 12,
+        "mean_steps": 8.5,
+        "planned": 12,
+        "revisit_rate": 0.0,
+        "successes": 12
+      },
+      "7": {
+        "Q_nav": 1.0,
+        "SG_gate": 0,
+        "SR_gate": 1.0,
+        "completed": 12,
+        "mean_steps": 8,
+        "planned": 12,
+        "revisit_rate": 0.0,
+        "successes": 12
+      },
+      "8": {
+        "Q_nav": 1.0,
+        "SG_gate": 0,
+        "SR_gate": 1.0,
+        "completed": 12,
+        "mean_steps": 8,
+        "planned": 12,
+        "revisit_rate": 0.0,
+        "successes": 12
+      }
+    }
+  },
+  "resources": {
+    "SingleOnce": {
+      "calls": 9,
+      "changed_actions": 0,
+      "disagreement_or_abstention": 0,
+      "images": 36,
+      "input_tokens": 13857,
+      "median_latency_seconds": 4.508466299972497,
+      "output_tokens": 208,
+      "review_rounds": 9,
+      "valid": 9
+    },
+    "SingleReflect": {
+      "calls": 18,
+      "changed_actions": 0,
+      "disagreement_or_abstention": 9,
+      "images": 72,
+      "input_tokens": 27975,
+      "median_latency_seconds": 5.01520840000012,
+      "output_tokens": 396,
+      "review_rounds": 9,
+      "valid": 18
+    },
+    "TwoAgent": {
+      "calls": 18,
+      "changed_actions": 0,
+      "disagreement_or_abstention": 9,
+      "images": 72,
+      "input_tokens": 27876,
+      "median_latency_seconds": 4.634169599972665,
+      "output_tokens": 460,
+      "review_rounds": 9,
+      "valid": 18
+    }
+  },
+  "runs": {
+    "Edge": {
+      "None": {
+        "Q_nav": 1.0,
+        "SG_gate": 0.15,
+        "SR_gate": 0.95,
+        "completed": 20,
+        "mean_steps": 7.75,
+        "planned": 20,
+        "revisit_rate": 0.01935483870967742,
+        "successes": 19
+      }
+    },
+    "SingleOnce": {
+      "0": {
+        "Q_nav": 1.0,
+        "SG_gate": 0.15,
+        "SR_gate": 0.95,
+        "completed": 20,
+        "mean_steps": 7.75,
+        "planned": 20,
+        "revisit_rate": 0.01935483870967742,
+        "successes": 19
+      },
+      "1": {
+        "Q_nav": 1.0,
+        "SG_gate": 0.15,
+        "SR_gate": 0.95,
+        "completed": 20,
+        "mean_steps": 7.75,
+        "planned": 20,
+        "revisit_rate": 0.01935483870967742,
+        "successes": 19
+      },
+      "2": {
+        "Q_nav": 1.0,
+        "SG_gate": 0.15,
+        "SR_gate": 0.95,
+        "completed": 20,
+        "mean_steps": 7.75,
+        "planned": 20,
+        "revisit_rate": 0.01935483870967742,
+        "successes": 19
+      }
+    },
+    "SingleReflect": {
+      "0": {
+        "Q_nav": 1.0,
+        "SG_gate": 0.15,
+        "SR_gate": 0.95,
+        "completed": 20,
+        "mean_steps": 7.75,
+        "planned": 20,
+        "revisit_rate": 0.01935483870967742,
+        "successes": 19
+      },
+      "1": {
+        "Q_nav": 1.0,
+        "SG_gate": 0.15,
+        "SR_gate": 0.95,
+        "completed": 20,
+        "mean_steps": 7.75,
+        "planned": 20,
+        "revisit_rate": 0.01935483870967742,
+        "successes": 19
+      },
+      "2": {
+        "Q_nav": 1.0,
+        "SG_gate": 0.15,
+        "SR_gate": 0.95,
+        "completed": 20,
+        "mean_steps": 7.75,
+        "planned": 20,
+        "revisit_rate": 0.01935483870967742,
+        "successes": 19
+      }
+    },
+    "TwoAgent": {
+      "0": {
+        "Q_nav": 1.0,
+        "SG_gate": 0.15,
+        "SR_gate": 0.95,
+        "completed": 20,
+        "mean_steps": 7.75,
+        "planned": 20,
+        "revisit_rate": 0.01935483870967742,
+        "successes": 19
+      },
+      "1": {
+        "Q_nav": 1.0,
+        "SG_gate": 0.15,
+        "SR_gate": 0.95,
+        "completed": 20,
+        "mean_steps": 7.75,
+        "planned": 20,
+        "revisit_rate": 0.01935483870967742,
+        "successes": 19
+      },
+      "2": {
+        "Q_nav": 1.0,
+        "SG_gate": 0.15,
+        "SR_gate": 0.95,
+        "completed": 20,
+        "mean_steps": 7.75,
+        "planned": 20,
+        "revisit_rate": 0.01935483870967742,
+        "successes": 19
+      }
+    }
+  },
+  "source_SG_interval95": [
+    0.0,
+    0.0
+  ],
+  "source_SR_interval95": [
+    0.0,
+    0.0
+  ],
+  "source_effects": [
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_102"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_104"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_107"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_12"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_123"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_129"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_13"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_16"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_20"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_30"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_4"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_5"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_72"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_8"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_83"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_85"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_90"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_92"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_95"
+    },
+    {
+      "SG_change": 0,
+      "SR_gain": 0,
+      "area": "img_97"
+    }
+  ],
+  "target_mechanism_proven": false,
+  "total_requests": 51,
+  "training_steps": 0
+}

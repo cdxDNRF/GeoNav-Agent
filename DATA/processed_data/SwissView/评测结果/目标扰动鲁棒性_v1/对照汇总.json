@@ -1,0 +1,3231 @@
+{
+  "all_six_fixed_stresses_retained_numeric": false,
+  "audit_pending": true,
+  "cloud_calls": 0,
+  "planned_neural_episodes": 21000,
+  "planned_tasks_each": 500,
+  "robustness_confirmation_complete": false,
+  "rules": {
+    "FixedRegion": {
+      "by_source": {
+        "img_20": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 1.52,
+          "mean_steps": 8.96,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.004,
+          "repeat_visit_rate_micro": 0.004464285714285714,
+          "sr": 0.48,
+          "successes": 12
+        },
+        "img_21": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.84,
+          "mean_steps": 9.56,
+          "out_of_bounds_rate": 0.02510460251046025,
+          "repeat_visit_rate_macro": 0.072,
+          "repeat_visit_rate_micro": 0.07531380753138076,
+          "sr": 0.24,
+          "successes": 6
+        },
+        "img_22": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 1.48,
+          "mean_steps": 8.92,
+          "out_of_bounds_rate": 0.008968609865470852,
+          "repeat_visit_rate_macro": 0.02,
+          "repeat_visit_rate_micro": 0.02242152466367713,
+          "sr": 0.32,
+          "successes": 8
+        },
+        "img_23": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 1.96,
+          "mean_steps": 9,
+          "out_of_bounds_rate": 0.02666666666666667,
+          "repeat_visit_rate_macro": 0.064,
+          "repeat_visit_rate_micro": 0.07111111111111111,
+          "sr": 0.4,
+          "successes": 10
+        },
+        "img_24": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 3.24,
+          "mean_steps": 9.48,
+          "out_of_bounds_rate": 0.02531645569620253,
+          "repeat_visit_rate_macro": 0.056,
+          "repeat_visit_rate_micro": 0.05907172995780591,
+          "sr": 0.2,
+          "successes": 5
+        },
+        "img_25": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 1.56,
+          "mean_steps": 9.2,
+          "out_of_bounds_rate": 0.013043478260869565,
+          "repeat_visit_rate_macro": 0.032,
+          "repeat_visit_rate_micro": 0.034782608695652174,
+          "sr": 0.52,
+          "successes": 13
+        },
+        "img_26": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 1.8,
+          "mean_steps": 9.56,
+          "out_of_bounds_rate": 0.016736401673640166,
+          "repeat_visit_rate_macro": 0.032,
+          "repeat_visit_rate_micro": 0.03347280334728033,
+          "sr": 0.28,
+          "successes": 7
+        },
+        "img_27": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.24,
+          "mean_steps": 9.32,
+          "out_of_bounds_rate": 0.012875536480686695,
+          "repeat_visit_rate_macro": 0.032,
+          "repeat_visit_rate_micro": 0.034334763948497854,
+          "sr": 0.32,
+          "successes": 8
+        },
+        "img_28": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.2,
+          "mean_steps": 9.6,
+          "out_of_bounds_rate": 0.0125,
+          "repeat_visit_rate_macro": 0.036000000000000004,
+          "repeat_visit_rate_micro": 0.0375,
+          "sr": 0.32,
+          "successes": 8
+        },
+        "img_29": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.16,
+          "mean_steps": 9.32,
+          "out_of_bounds_rate": 0.012875536480686695,
+          "repeat_visit_rate_macro": 0.028,
+          "repeat_visit_rate_micro": 0.030042918454935622,
+          "sr": 0.32,
+          "successes": 8
+        },
+        "img_30": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 1.92,
+          "mean_steps": 8.92,
+          "out_of_bounds_rate": 0.02242152466367713,
+          "repeat_visit_rate_macro": 0.052,
+          "repeat_visit_rate_micro": 0.05829596412556054,
+          "sr": 0.36,
+          "successes": 9
+        },
+        "img_31": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.2,
+          "mean_steps": 9.56,
+          "out_of_bounds_rate": 0.016736401673640166,
+          "repeat_visit_rate_macro": 0.032,
+          "repeat_visit_rate_micro": 0.03347280334728033,
+          "sr": 0.28,
+          "successes": 7
+        },
+        "img_32": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2,
+          "mean_steps": 9.28,
+          "out_of_bounds_rate": 0.008620689655172414,
+          "repeat_visit_rate_macro": 0.024,
+          "repeat_visit_rate_micro": 0.02586206896551724,
+          "sr": 0.32,
+          "successes": 8
+        },
+        "img_33": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.84,
+          "mean_steps": 9.4,
+          "out_of_bounds_rate": 0.03404255319148936,
+          "repeat_visit_rate_macro": 0.07200000000000001,
+          "repeat_visit_rate_micro": 0.07659574468085106,
+          "sr": 0.16,
+          "successes": 4
+        },
+        "img_34": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 1.84,
+          "mean_steps": 9.08,
+          "out_of_bounds_rate": 0.022026431718061675,
+          "repeat_visit_rate_macro": 0.064,
+          "repeat_visit_rate_micro": 0.07048458149779736,
+          "sr": 0.44,
+          "successes": 11
+        },
+        "img_35": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 1.72,
+          "mean_steps": 8.84,
+          "out_of_bounds_rate": 0.027149321266968326,
+          "repeat_visit_rate_macro": 0.04,
+          "repeat_visit_rate_micro": 0.04524886877828054,
+          "sr": 0.36,
+          "successes": 9
+        },
+        "img_36": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.44,
+          "mean_steps": 9.16,
+          "out_of_bounds_rate": 0.017467248908296942,
+          "repeat_visit_rate_macro": 0.048,
+          "repeat_visit_rate_micro": 0.05240174672489083,
+          "sr": 0.24,
+          "successes": 6
+        },
+        "img_37": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 1.76,
+          "mean_steps": 9.4,
+          "out_of_bounds_rate": 0.029787234042553193,
+          "repeat_visit_rate_macro": 0.072,
+          "repeat_visit_rate_micro": 0.07659574468085106,
+          "sr": 0.32,
+          "successes": 8
+        },
+        "img_38": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.44,
+          "mean_steps": 9.44,
+          "out_of_bounds_rate": 0.029661016949152543,
+          "repeat_visit_rate_macro": 0.084,
+          "repeat_visit_rate_micro": 0.08898305084745763,
+          "sr": 0.2,
+          "successes": 5
+        },
+        "img_39": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.4,
+          "mean_steps": 9,
+          "out_of_bounds_rate": 0.022222222222222223,
+          "repeat_visit_rate_macro": 0.06,
+          "repeat_visit_rate_micro": 0.06666666666666667,
+          "sr": 0.4,
+          "successes": 10
+        }
+      },
+      "metrics": {
+        "episodes": 500,
+        "mean_sg_all_episodes": 2.128,
+        "mean_steps": 9.25,
+        "out_of_bounds_rate": 0.01924324324324324,
+        "repeat_visit_rate_macro": 0.0462,
+        "repeat_visit_rate_micro": 0.049945945945945945,
+        "sr": 0.324,
+        "successes": 162
+      }
+    },
+    "Frontier": {
+      "by_source": {
+        "img_20": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.08,
+          "mean_steps": 8.32,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.012,
+          "repeat_visit_rate_micro": 0.014423076923076924,
+          "sr": 0.56,
+          "successes": 14
+        },
+        "img_21": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.04,
+          "mean_steps": 8.44,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.0,
+          "repeat_visit_rate_micro": 0.0,
+          "sr": 0.48,
+          "successes": 12
+        },
+        "img_22": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 3.36,
+          "mean_steps": 9.36,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.012,
+          "repeat_visit_rate_micro": 0.01282051282051282,
+          "sr": 0.4,
+          "successes": 10
+        },
+        "img_23": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.28,
+          "mean_steps": 9,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.004,
+          "repeat_visit_rate_micro": 0.0044444444444444444,
+          "sr": 0.48,
+          "successes": 12
+        },
+        "img_24": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 1.56,
+          "mean_steps": 8.12,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.012,
+          "repeat_visit_rate_micro": 0.014778325123152709,
+          "sr": 0.64,
+          "successes": 16
+        },
+        "img_25": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.56,
+          "mean_steps": 8.88,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.008,
+          "repeat_visit_rate_micro": 0.009009009009009009,
+          "sr": 0.4,
+          "successes": 10
+        },
+        "img_26": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.6,
+          "mean_steps": 9.24,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.008,
+          "repeat_visit_rate_micro": 0.008658008658008658,
+          "sr": 0.32,
+          "successes": 8
+        },
+        "img_27": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 1.88,
+          "mean_steps": 8.36,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.012,
+          "repeat_visit_rate_micro": 0.014354066985645933,
+          "sr": 0.6,
+          "successes": 15
+        },
+        "img_28": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 1.88,
+          "mean_steps": 8.52,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.004,
+          "repeat_visit_rate_micro": 0.004694835680751174,
+          "sr": 0.52,
+          "successes": 13
+        },
+        "img_29": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.52,
+          "mean_steps": 8.68,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.004,
+          "repeat_visit_rate_micro": 0.004608294930875576,
+          "sr": 0.44,
+          "successes": 11
+        },
+        "img_30": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.4,
+          "mean_steps": 8.72,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.004,
+          "repeat_visit_rate_micro": 0.0045871559633027525,
+          "sr": 0.48,
+          "successes": 12
+        },
+        "img_31": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.32,
+          "mean_steps": 8.24,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.004,
+          "repeat_visit_rate_micro": 0.0048543689320388345,
+          "sr": 0.52,
+          "successes": 13
+        },
+        "img_32": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 1.72,
+          "mean_steps": 8.28,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.004,
+          "repeat_visit_rate_micro": 0.004830917874396135,
+          "sr": 0.6,
+          "successes": 15
+        },
+        "img_33": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.32,
+          "mean_steps": 8.8,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.004,
+          "repeat_visit_rate_micro": 0.004545454545454545,
+          "sr": 0.36,
+          "successes": 9
+        },
+        "img_34": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.68,
+          "mean_steps": 8.84,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.0,
+          "repeat_visit_rate_micro": 0.0,
+          "sr": 0.4,
+          "successes": 10
+        },
+        "img_35": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.84,
+          "mean_steps": 8.68,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.016,
+          "repeat_visit_rate_micro": 0.018433179723502304,
+          "sr": 0.44,
+          "successes": 11
+        },
+        "img_36": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 1.8,
+          "mean_steps": 8.36,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.008,
+          "repeat_visit_rate_micro": 0.009569377990430622,
+          "sr": 0.64,
+          "successes": 16
+        },
+        "img_37": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.92,
+          "mean_steps": 9.08,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.008,
+          "repeat_visit_rate_micro": 0.00881057268722467,
+          "sr": 0.36,
+          "successes": 9
+        },
+        "img_38": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.36,
+          "mean_steps": 8.68,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.004,
+          "repeat_visit_rate_micro": 0.004608294930875576,
+          "sr": 0.48,
+          "successes": 12
+        },
+        "img_39": {
+          "episodes": 25,
+          "mean_sg_all_episodes": 2.52,
+          "mean_steps": 9,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.0,
+          "repeat_visit_rate_micro": 0.0,
+          "sr": 0.4,
+          "successes": 10
+        }
+      },
+      "metrics": {
+        "episodes": 500,
+        "mean_sg_all_episodes": 2.332,
+        "mean_steps": 8.68,
+        "out_of_bounds_rate": 0.0,
+        "repeat_visit_rate_macro": 0.0064,
+        "repeat_visit_rate_micro": 0.007373271889400922,
+        "sr": 0.476,
+        "successes": 238
+      }
+    }
+  },
+  "scope": "Known SwissView20/500 paired fixed perturbations; not new independent geographic confirmation or real temporal/cross-view test",
+  "source_count": 20,
+  "strongest_rule": "Frontier",
+  "training_steps": 0,
+  "variants": {
+    "Blur1": {
+      "Full": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 0.8866666666666667,
+            "sr": 0.7200000000000001
+          },
+          "5": {
+            "mean_sg_all_episodes": 0.62,
+            "sr": 0.7600000000000001
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.2733333333333334,
+            "sr": 0.93
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.10666666666666665,
+            "sr": 0.9400000000000001
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.10000000000000002,
+            "sr": 0.9633333333333333
+          }
+        },
+        "by_source": {
+          "img_20": {
+            "mean_sg_all_episodes": 0.25333333333333335,
+            "sr": 0.9066666666666667
+          },
+          "img_21": {
+            "mean_sg_all_episodes": 0.29333333333333333,
+            "sr": 0.88
+          },
+          "img_22": {
+            "mean_sg_all_episodes": 0.06666666666666667,
+            "sr": 0.9733333333333333
+          },
+          "img_23": {
+            "mean_sg_all_episodes": 0.64,
+            "sr": 0.7866666666666667
+          },
+          "img_24": {
+            "mean_sg_all_episodes": 0.44,
+            "sr": 0.7866666666666667
+          },
+          "img_25": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.8533333333333334
+          },
+          "img_26": {
+            "mean_sg_all_episodes": 0.3066666666666667,
+            "sr": 0.8933333333333334
+          },
+          "img_27": {
+            "mean_sg_all_episodes": 0.25333333333333335,
+            "sr": 0.8933333333333334
+          },
+          "img_28": {
+            "mean_sg_all_episodes": 0.36000000000000004,
+            "sr": 0.8133333333333334
+          },
+          "img_29": {
+            "mean_sg_all_episodes": 0.6133333333333333,
+            "sr": 0.7733333333333334
+          },
+          "img_30": {
+            "mean_sg_all_episodes": 0.41333333333333333,
+            "sr": 0.8533333333333334
+          },
+          "img_31": {
+            "mean_sg_all_episodes": 0.3333333333333333,
+            "sr": 0.9199999999999999
+          },
+          "img_32": {
+            "mean_sg_all_episodes": 0.7600000000000001,
+            "sr": 0.7733333333333334
+          },
+          "img_33": {
+            "mean_sg_all_episodes": 0.6,
+            "sr": 0.8133333333333334
+          },
+          "img_34": {
+            "mean_sg_all_episodes": 0.16,
+            "sr": 0.96
+          },
+          "img_35": {
+            "mean_sg_all_episodes": 0.7066666666666667,
+            "sr": 0.84
+          },
+          "img_36": {
+            "mean_sg_all_episodes": 0.3466666666666667,
+            "sr": 0.8533333333333334
+          },
+          "img_37": {
+            "mean_sg_all_episodes": 0.46666666666666673,
+            "sr": 0.8666666666666667
+          },
+          "img_38": {
+            "mean_sg_all_episodes": 0.21333333333333335,
+            "sr": 0.9199999999999999
+          },
+          "img_39": {
+            "mean_sg_all_episodes": 0.19999999999999998,
+            "sr": 0.8933333333333334
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 500,
+        "repeat_by_seed": [
+          0.035233160621761656,
+          0.014964557626673668,
+          0.038773906209064714
+        ],
+        "sg_mean": 0.39733333333333337,
+        "source_count": 20,
+        "sr_by_seed": [
+          0.856,
+          0.864,
+          0.868
+        ],
+        "sr_mean": 0.8626666666666667,
+        "successes_by_seed": [
+          428,
+          432,
+          434
+        ]
+      },
+      "NoTarget": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 1.9533333333333331,
+            "sr": 0.47333333333333333
+          },
+          "5": {
+            "mean_sg_all_episodes": 1.3466666666666667,
+            "sr": 0.5666666666666665
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7966666666666665
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.15,
+            "sr": 0.9233333333333333
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.10666666666666667,
+            "sr": 0.9733333333333333
+          }
+        },
+        "by_source": {
+          "img_20": {
+            "mean_sg_all_episodes": 0.8933333333333334,
+            "sr": 0.6933333333333334
+          },
+          "img_21": {
+            "mean_sg_all_episodes": 1.0,
+            "sr": 0.8266666666666667
+          },
+          "img_22": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.8133333333333334
+          },
+          "img_23": {
+            "mean_sg_all_episodes": 0.92,
+            "sr": 0.7200000000000001
+          },
+          "img_24": {
+            "mean_sg_all_episodes": 0.4533333333333333,
+            "sr": 0.8533333333333334
+          },
+          "img_25": {
+            "mean_sg_all_episodes": 1.0533333333333335,
+            "sr": 0.6533333333333333
+          },
+          "img_26": {
+            "mean_sg_all_episodes": 1.4400000000000002,
+            "sr": 0.5333333333333333
+          },
+          "img_27": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7600000000000001
+          },
+          "img_28": {
+            "mean_sg_all_episodes": 0.5333333333333333,
+            "sr": 0.7466666666666667
+          },
+          "img_29": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.7999999999999999
+          },
+          "img_30": {
+            "mean_sg_all_episodes": 0.9866666666666667,
+            "sr": 0.7333333333333334
+          },
+          "img_31": {
+            "mean_sg_all_episodes": 0.5733333333333334,
+            "sr": 0.8266666666666667
+          },
+          "img_32": {
+            "mean_sg_all_episodes": 0.96,
+            "sr": 0.7200000000000001
+          },
+          "img_33": {
+            "mean_sg_all_episodes": 0.9466666666666667,
+            "sr": 0.7333333333333334
+          },
+          "img_34": {
+            "mean_sg_all_episodes": 0.84,
+            "sr": 0.7466666666666667
+          },
+          "img_35": {
+            "mean_sg_all_episodes": 1.3866666666666667,
+            "sr": 0.7200000000000001
+          },
+          "img_36": {
+            "mean_sg_all_episodes": 0.5466666666666667,
+            "sr": 0.8400000000000002
+          },
+          "img_37": {
+            "mean_sg_all_episodes": 0.8799999999999999,
+            "sr": 0.7333333333333333
+          },
+          "img_38": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.8000000000000002
+          },
+          "img_39": {
+            "mean_sg_all_episodes": 1.1333333333333333,
+            "sr": 0.68
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 500,
+        "repeat_by_seed": [
+          0.04662062160828811,
+          0.009916094584286803,
+          0.044820717131474105
+        ],
+        "sg_mean": 0.8473333333333333,
+        "source_count": 20,
+        "sr_by_seed": [
+          0.724,
+          0.788,
+          0.728
+        ],
+        "sr_mean": 0.7466666666666667,
+        "successes_by_seed": [
+          362,
+          394,
+          364
+        ]
+      },
+      "SR_gain_CI95_positive": true,
+      "SR_seed_range": 0.01200000000000001,
+      "engineering_checks": {
+        "SG2p5": true,
+        "SG_no_worse_than_rule": true,
+        "SR45": true,
+        "all500_normal_terminals": true,
+        "rule_SR_gain5pp": true
+      },
+      "engineering_numeric_passed": true,
+      "performance_retained": true,
+      "retention_checks": {
+        "SG_increase_at_most0p30": true,
+        "SR_drop_at_most5pp": true
+      },
+      "six_stress_adjusted_SR_positive": true,
+      "target_checks": {
+        "SG_no_worse": true,
+        "SR_gain_at_least5pp": true,
+        "two_positive_seeds": true
+      },
+      "target_gain_retained": true,
+      "versus_Clean": {
+        "gain": -0.005333333333333338,
+        "gains_by_seed": [
+          -0.0040000000000000036,
+          -0.0040000000000000036,
+          -0.008000000000000007
+        ],
+        "gains_by_source": {
+          "img_20": 0.0,
+          "img_21": 0.0,
+          "img_22": 0.0,
+          "img_23": -0.040000000000000036,
+          "img_24": -0.08000000000000003,
+          "img_25": 0.0,
+          "img_26": 3.700743415417188e-17,
+          "img_27": 0.0,
+          "img_28": 0.0,
+          "img_29": -0.026666666666666655,
+          "img_30": -0.013333333333333345,
+          "img_31": 0.0,
+          "img_32": 0.0,
+          "img_33": 0.013333333333333345,
+          "img_34": 0.0,
+          "img_35": 0.0,
+          "img_36": 0.05333333333333331,
+          "img_37": 0.0,
+          "img_38": 0.0,
+          "img_39": -0.013333333333333308
+        },
+        "positive_seeds": 0,
+        "positive_sources": 2,
+        "sg_change": 0.016666666666666663,
+        "sg_source_interval": {
+          "interval95": [
+            -0.012666666666666668,
+            0.041999999999999996
+          ],
+          "mean": 0.016666666666666666,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        },
+        "six_stress_adjusted_SR_interval": [
+          -0.020666666666666677,
+          0.00666666666666667
+        ],
+        "source_interval": {
+          "interval95": [
+            -0.016016666666666672,
+            0.004
+          ],
+          "mean": -0.005333333333333333,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        }
+      },
+      "versus_NoTarget": {
+        "gain": 0.11599999999999999,
+        "gains_by_seed": [
+          0.132,
+          0.07599999999999996,
+          0.14
+        ],
+        "gains_by_source": {
+          "img_20": 0.21333333333333335,
+          "img_21": 0.053333333333333344,
+          "img_22": 0.15999999999999995,
+          "img_23": 0.06666666666666665,
+          "img_24": -0.0666666666666667,
+          "img_25": 0.19999999999999998,
+          "img_26": 0.36000000000000004,
+          "img_27": 0.13333333333333333,
+          "img_28": 0.0666666666666667,
+          "img_29": -0.026666666666666655,
+          "img_30": 0.11999999999999995,
+          "img_31": 0.09333333333333331,
+          "img_32": 0.053333333333333344,
+          "img_33": 0.07999999999999996,
+          "img_34": 0.2133333333333333,
+          "img_35": 0.12,
+          "img_36": 0.013333333333333272,
+          "img_37": 0.13333333333333333,
+          "img_38": 0.12,
+          "img_39": 0.21333333333333335
+        },
+        "positive_seeds": 3,
+        "positive_sources": 18,
+        "sg_change": -0.45,
+        "sg_source_interval": {
+          "interval95": [
+            -0.58535,
+            -0.32666666666666666
+          ],
+          "mean": -0.45,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        },
+        "six_stress_adjusted_SR_interval": [
+          0.06043888888888887,
+          0.17622777777777782
+        ],
+        "source_interval": {
+          "interval95": [
+            0.07666666666666665,
+            0.162
+          ],
+          "mean": 0.11599999999999999,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        }
+      }
+    },
+    "Bright080": {
+      "Full": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 0.8866666666666667,
+            "sr": 0.7133333333333333
+          },
+          "5": {
+            "mean_sg_all_episodes": 0.6133333333333334,
+            "sr": 0.7666666666666666
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.25333333333333335,
+            "sr": 0.9366666666666665
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.06666666666666667,
+            "sr": 0.9666666666666667
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.02666666666666667,
+            "sr": 0.9866666666666667
+          }
+        },
+        "by_source": {
+          "img_20": {
+            "mean_sg_all_episodes": 0.25333333333333335,
+            "sr": 0.9066666666666667
+          },
+          "img_21": {
+            "mean_sg_all_episodes": 0.22666666666666666,
+            "sr": 0.8933333333333334
+          },
+          "img_22": {
+            "mean_sg_all_episodes": 0.06666666666666667,
+            "sr": 0.9733333333333333
+          },
+          "img_23": {
+            "mean_sg_all_episodes": 0.5066666666666667,
+            "sr": 0.8266666666666668
+          },
+          "img_24": {
+            "mean_sg_all_episodes": 0.3466666666666667,
+            "sr": 0.8666666666666667
+          },
+          "img_25": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.8533333333333334
+          },
+          "img_26": {
+            "mean_sg_all_episodes": 0.29333333333333333,
+            "sr": 0.8933333333333334
+          },
+          "img_27": {
+            "mean_sg_all_episodes": 0.25333333333333335,
+            "sr": 0.8933333333333334
+          },
+          "img_28": {
+            "mean_sg_all_episodes": 0.26666666666666666,
+            "sr": 0.84
+          },
+          "img_29": {
+            "mean_sg_all_episodes": 0.6133333333333334,
+            "sr": 0.7866666666666666
+          },
+          "img_30": {
+            "mean_sg_all_episodes": 0.38666666666666666,
+            "sr": 0.88
+          },
+          "img_31": {
+            "mean_sg_all_episodes": 0.39999999999999997,
+            "sr": 0.9066666666666666
+          },
+          "img_32": {
+            "mean_sg_all_episodes": 0.4666666666666666,
+            "sr": 0.8266666666666667
+          },
+          "img_33": {
+            "mean_sg_all_episodes": 0.6266666666666666,
+            "sr": 0.7999999999999999
+          },
+          "img_34": {
+            "mean_sg_all_episodes": 0.16,
+            "sr": 0.96
+          },
+          "img_35": {
+            "mean_sg_all_episodes": 0.7066666666666667,
+            "sr": 0.84
+          },
+          "img_36": {
+            "mean_sg_all_episodes": 0.43999999999999995,
+            "sr": 0.84
+          },
+          "img_37": {
+            "mean_sg_all_episodes": 0.46666666666666673,
+            "sr": 0.8666666666666667
+          },
+          "img_38": {
+            "mean_sg_all_episodes": 0.18666666666666665,
+            "sr": 0.9199999999999999
+          },
+          "img_39": {
+            "mean_sg_all_episodes": 0.20000000000000004,
+            "sr": 0.9066666666666666
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 500,
+        "repeat_by_seed": [
+          0.031754294638209266,
+          0.011882756799577503,
+          0.03399209486166008
+        ],
+        "sg_mean": 0.36933333333333335,
+        "source_count": 20,
+        "sr_by_seed": [
+          0.862,
+          0.88,
+          0.88
+        ],
+        "sr_mean": 0.874,
+        "successes_by_seed": [
+          431,
+          440,
+          440
+        ]
+      },
+      "NoTarget": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 1.9533333333333331,
+            "sr": 0.47333333333333333
+          },
+          "5": {
+            "mean_sg_all_episodes": 1.3466666666666667,
+            "sr": 0.5666666666666665
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7966666666666665
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.15,
+            "sr": 0.9233333333333333
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.10666666666666667,
+            "sr": 0.9733333333333333
+          }
+        },
+        "by_source": {
+          "img_20": {
+            "mean_sg_all_episodes": 0.8933333333333334,
+            "sr": 0.6933333333333334
+          },
+          "img_21": {
+            "mean_sg_all_episodes": 1.0,
+            "sr": 0.8266666666666667
+          },
+          "img_22": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.8133333333333334
+          },
+          "img_23": {
+            "mean_sg_all_episodes": 0.92,
+            "sr": 0.7200000000000001
+          },
+          "img_24": {
+            "mean_sg_all_episodes": 0.4533333333333333,
+            "sr": 0.8533333333333334
+          },
+          "img_25": {
+            "mean_sg_all_episodes": 1.0533333333333335,
+            "sr": 0.6533333333333333
+          },
+          "img_26": {
+            "mean_sg_all_episodes": 1.4400000000000002,
+            "sr": 0.5333333333333333
+          },
+          "img_27": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7600000000000001
+          },
+          "img_28": {
+            "mean_sg_all_episodes": 0.5333333333333333,
+            "sr": 0.7466666666666667
+          },
+          "img_29": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.7999999999999999
+          },
+          "img_30": {
+            "mean_sg_all_episodes": 0.9866666666666667,
+            "sr": 0.7333333333333334
+          },
+          "img_31": {
+            "mean_sg_all_episodes": 0.5733333333333334,
+            "sr": 0.8266666666666667
+          },
+          "img_32": {
+            "mean_sg_all_episodes": 0.96,
+            "sr": 0.7200000000000001
+          },
+          "img_33": {
+            "mean_sg_all_episodes": 0.9466666666666667,
+            "sr": 0.7333333333333334
+          },
+          "img_34": {
+            "mean_sg_all_episodes": 0.84,
+            "sr": 0.7466666666666667
+          },
+          "img_35": {
+            "mean_sg_all_episodes": 1.3866666666666667,
+            "sr": 0.7200000000000001
+          },
+          "img_36": {
+            "mean_sg_all_episodes": 0.5466666666666667,
+            "sr": 0.8400000000000002
+          },
+          "img_37": {
+            "mean_sg_all_episodes": 0.8799999999999999,
+            "sr": 0.7333333333333333
+          },
+          "img_38": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.8000000000000002
+          },
+          "img_39": {
+            "mean_sg_all_episodes": 1.1333333333333333,
+            "sr": 0.68
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 500,
+        "repeat_by_seed": [
+          0.04662062160828811,
+          0.009916094584286803,
+          0.044820717131474105
+        ],
+        "sg_mean": 0.8473333333333333,
+        "source_count": 20,
+        "sr_by_seed": [
+          0.724,
+          0.788,
+          0.728
+        ],
+        "sr_mean": 0.7466666666666667,
+        "successes_by_seed": [
+          362,
+          394,
+          364
+        ]
+      },
+      "SR_gain_CI95_positive": true,
+      "SR_seed_range": 0.018000000000000016,
+      "engineering_checks": {
+        "SG2p5": true,
+        "SG_no_worse_than_rule": true,
+        "SR45": true,
+        "all500_normal_terminals": true,
+        "rule_SR_gain5pp": true
+      },
+      "engineering_numeric_passed": true,
+      "performance_retained": true,
+      "retention_checks": {
+        "SG_increase_at_most0p30": true,
+        "SR_drop_at_most5pp": true
+      },
+      "six_stress_adjusted_SR_positive": true,
+      "target_checks": {
+        "SG_no_worse": true,
+        "SR_gain_at_least5pp": true,
+        "two_positive_seeds": true
+      },
+      "target_gain_retained": true,
+      "versus_Clean": {
+        "gain": 0.006000000000000005,
+        "gains_by_seed": [
+          0.0020000000000000018,
+          0.01200000000000001,
+          0.0040000000000000036
+        ],
+        "gains_by_source": {
+          "img_20": 0.0,
+          "img_21": 0.013333333333333345,
+          "img_22": 0.0,
+          "img_23": 0.0,
+          "img_24": 0.0,
+          "img_25": 0.0,
+          "img_26": 3.700743415417188e-17,
+          "img_27": 0.0,
+          "img_28": 0.026666666666666655,
+          "img_29": -0.013333333333333345,
+          "img_30": 0.013333333333333345,
+          "img_31": -0.013333333333333345,
+          "img_32": 0.05333333333333331,
+          "img_33": 0.0,
+          "img_34": 0.0,
+          "img_35": 0.0,
+          "img_36": 0.04,
+          "img_37": 0.0,
+          "img_38": 0.0,
+          "img_39": 0.0
+        },
+        "positive_seeds": 3,
+        "positive_sources": 5,
+        "sg_change": -0.011333333333333325,
+        "sg_source_interval": {
+          "interval95": [
+            -0.04800000000000001,
+            0.019349999999999905
+          ],
+          "mean": -0.01133333333333334,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        },
+        "six_stress_adjusted_SR_interval": [
+          -0.001999999999999998,
+          0.016
+        ],
+        "source_interval": {
+          "interval95": [
+            -1.734723475976807e-18,
+            0.013333333333333336
+          ],
+          "mean": 0.006,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        }
+      },
+      "versus_NoTarget": {
+        "gain": 0.12733333333333333,
+        "gains_by_seed": [
+          0.138,
+          0.09199999999999997,
+          0.15200000000000002
+        ],
+        "gains_by_source": {
+          "img_20": 0.21333333333333335,
+          "img_21": 0.0666666666666667,
+          "img_22": 0.15999999999999995,
+          "img_23": 0.10666666666666669,
+          "img_24": 0.013333333333333345,
+          "img_25": 0.19999999999999998,
+          "img_26": 0.36000000000000004,
+          "img_27": 0.13333333333333333,
+          "img_28": 0.09333333333333334,
+          "img_29": -0.013333333333333345,
+          "img_30": 0.14666666666666664,
+          "img_31": 0.07999999999999996,
+          "img_32": 0.10666666666666665,
+          "img_33": 0.06666666666666661,
+          "img_34": 0.2133333333333333,
+          "img_35": 0.12,
+          "img_36": -3.700743415417188e-17,
+          "img_37": 0.13333333333333333,
+          "img_38": 0.12,
+          "img_39": 0.22666666666666666
+        },
+        "positive_seeds": 3,
+        "positive_sources": 18,
+        "sg_change": -0.47800000000000004,
+        "sg_source_interval": {
+          "interval95": [
+            -0.61,
+            -0.357266666666667
+          ],
+          "mean": -0.47800000000000004,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        },
+        "six_stress_adjusted_SR_interval": [
+          0.07999999999999999,
+          0.18178888888888892
+        ],
+        "source_interval": {
+          "interval95": [
+            0.09199999999999998,
+            0.16869999999999982
+          ],
+          "mean": 0.12733333333333333,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        }
+      }
+    },
+    "Clean": {
+      "Full": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 0.9133333333333332,
+            "sr": 0.7133333333333333
+          },
+          "5": {
+            "mean_sg_all_episodes": 0.5933333333333334,
+            "sr": 0.7666666666666666
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.24666666666666667,
+            "sr": 0.9366666666666666
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.05666666666666667,
+            "sr": 0.9566666666666667
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.09333333333333334,
+            "sr": 0.9666666666666667
+          }
+        },
+        "by_source": {
+          "img_20": {
+            "mean_sg_all_episodes": 0.25333333333333335,
+            "sr": 0.9066666666666667
+          },
+          "img_21": {
+            "mean_sg_all_episodes": 0.29333333333333333,
+            "sr": 0.88
+          },
+          "img_22": {
+            "mean_sg_all_episodes": 0.06666666666666667,
+            "sr": 0.9733333333333333
+          },
+          "img_23": {
+            "mean_sg_all_episodes": 0.5066666666666667,
+            "sr": 0.8266666666666668
+          },
+          "img_24": {
+            "mean_sg_all_episodes": 0.3466666666666667,
+            "sr": 0.8666666666666667
+          },
+          "img_25": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.8533333333333334
+          },
+          "img_26": {
+            "mean_sg_all_episodes": 0.27999999999999997,
+            "sr": 0.8933333333333332
+          },
+          "img_27": {
+            "mean_sg_all_episodes": 0.25333333333333335,
+            "sr": 0.8933333333333334
+          },
+          "img_28": {
+            "mean_sg_all_episodes": 0.36000000000000004,
+            "sr": 0.8133333333333334
+          },
+          "img_29": {
+            "mean_sg_all_episodes": 0.48,
+            "sr": 0.8000000000000002
+          },
+          "img_30": {
+            "mean_sg_all_episodes": 0.32,
+            "sr": 0.8666666666666667
+          },
+          "img_31": {
+            "mean_sg_all_episodes": 0.3333333333333333,
+            "sr": 0.9199999999999999
+          },
+          "img_32": {
+            "mean_sg_all_episodes": 0.7600000000000001,
+            "sr": 0.7733333333333334
+          },
+          "img_33": {
+            "mean_sg_all_episodes": 0.6266666666666666,
+            "sr": 0.7999999999999999
+          },
+          "img_34": {
+            "mean_sg_all_episodes": 0.16,
+            "sr": 0.96
+          },
+          "img_35": {
+            "mean_sg_all_episodes": 0.7066666666666667,
+            "sr": 0.84
+          },
+          "img_36": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.8000000000000002
+          },
+          "img_37": {
+            "mean_sg_all_episodes": 0.46666666666666673,
+            "sr": 0.8666666666666667
+          },
+          "img_38": {
+            "mean_sg_all_episodes": 0.18666666666666665,
+            "sr": 0.9199999999999999
+          },
+          "img_39": {
+            "mean_sg_all_episodes": 0.17333333333333334,
+            "sr": 0.9066666666666666
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 500,
+        "repeat_by_seed": [
+          0.03434816549570648,
+          0.012143611404435059,
+          0.03326293558606125
+        ],
+        "sg_mean": 0.3806666666666667,
+        "source_count": 20,
+        "sr_by_seed": [
+          0.86,
+          0.868,
+          0.876
+        ],
+        "sr_mean": 0.868,
+        "successes_by_seed": [
+          430,
+          434,
+          438
+        ]
+      },
+      "NoTarget": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 1.9533333333333331,
+            "sr": 0.47333333333333333
+          },
+          "5": {
+            "mean_sg_all_episodes": 1.3466666666666667,
+            "sr": 0.5666666666666665
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7966666666666665
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.15,
+            "sr": 0.9233333333333333
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.10666666666666667,
+            "sr": 0.9733333333333333
+          }
+        },
+        "by_source": {
+          "img_20": {
+            "mean_sg_all_episodes": 0.8933333333333334,
+            "sr": 0.6933333333333334
+          },
+          "img_21": {
+            "mean_sg_all_episodes": 1.0,
+            "sr": 0.8266666666666667
+          },
+          "img_22": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.8133333333333334
+          },
+          "img_23": {
+            "mean_sg_all_episodes": 0.92,
+            "sr": 0.7200000000000001
+          },
+          "img_24": {
+            "mean_sg_all_episodes": 0.4533333333333333,
+            "sr": 0.8533333333333334
+          },
+          "img_25": {
+            "mean_sg_all_episodes": 1.0533333333333335,
+            "sr": 0.6533333333333333
+          },
+          "img_26": {
+            "mean_sg_all_episodes": 1.4400000000000002,
+            "sr": 0.5333333333333333
+          },
+          "img_27": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7600000000000001
+          },
+          "img_28": {
+            "mean_sg_all_episodes": 0.5333333333333333,
+            "sr": 0.7466666666666667
+          },
+          "img_29": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.7999999999999999
+          },
+          "img_30": {
+            "mean_sg_all_episodes": 0.9866666666666667,
+            "sr": 0.7333333333333334
+          },
+          "img_31": {
+            "mean_sg_all_episodes": 0.5733333333333334,
+            "sr": 0.8266666666666667
+          },
+          "img_32": {
+            "mean_sg_all_episodes": 0.96,
+            "sr": 0.7200000000000001
+          },
+          "img_33": {
+            "mean_sg_all_episodes": 0.9466666666666667,
+            "sr": 0.7333333333333334
+          },
+          "img_34": {
+            "mean_sg_all_episodes": 0.84,
+            "sr": 0.7466666666666667
+          },
+          "img_35": {
+            "mean_sg_all_episodes": 1.3866666666666667,
+            "sr": 0.7200000000000001
+          },
+          "img_36": {
+            "mean_sg_all_episodes": 0.5466666666666667,
+            "sr": 0.8400000000000002
+          },
+          "img_37": {
+            "mean_sg_all_episodes": 0.8799999999999999,
+            "sr": 0.7333333333333333
+          },
+          "img_38": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.8000000000000002
+          },
+          "img_39": {
+            "mean_sg_all_episodes": 1.1333333333333333,
+            "sr": 0.68
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 500,
+        "repeat_by_seed": [
+          0.04662062160828811,
+          0.009916094584286803,
+          0.044820717131474105
+        ],
+        "sg_mean": 0.8473333333333333,
+        "source_count": 20,
+        "sr_by_seed": [
+          0.724,
+          0.788,
+          0.728
+        ],
+        "sr_mean": 0.7466666666666667,
+        "successes_by_seed": [
+          362,
+          394,
+          364
+        ]
+      },
+      "SR_gain_CI95_positive": true,
+      "SR_seed_range": 0.016000000000000014,
+      "engineering_checks": {
+        "SG2p5": true,
+        "SG_no_worse_than_rule": true,
+        "SR45": true,
+        "all500_normal_terminals": true,
+        "rule_SR_gain5pp": true
+      },
+      "engineering_numeric_passed": true,
+      "performance_retained": true,
+      "retention_checks": {
+        "SG_increase_at_most0p30": true,
+        "SR_drop_at_most5pp": true
+      },
+      "six_stress_adjusted_SR_positive": null,
+      "target_checks": {
+        "SG_no_worse": true,
+        "SR_gain_at_least5pp": true,
+        "two_positive_seeds": true
+      },
+      "target_gain_retained": true,
+      "versus_Clean": {
+        "gain": 0.0,
+        "gains_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "gains_by_source": {
+          "img_20": 0.0,
+          "img_21": 0.0,
+          "img_22": 0.0,
+          "img_23": 0.0,
+          "img_24": 0.0,
+          "img_25": 0.0,
+          "img_26": 0.0,
+          "img_27": 0.0,
+          "img_28": 0.0,
+          "img_29": 0.0,
+          "img_30": 0.0,
+          "img_31": 0.0,
+          "img_32": 0.0,
+          "img_33": 0.0,
+          "img_34": 0.0,
+          "img_35": 0.0,
+          "img_36": 0.0,
+          "img_37": 0.0,
+          "img_38": 0.0,
+          "img_39": 0.0
+        },
+        "positive_seeds": 0,
+        "positive_sources": 0,
+        "sg_change": 0.0,
+        "sg_source_interval": {
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        },
+        "six_stress_adjusted_SR_interval": [
+          0.0,
+          0.0
+        ],
+        "source_interval": {
+          "interval95": [
+            0.0,
+            0.0
+          ],
+          "mean": 0.0,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        }
+      },
+      "versus_NoTarget": {
+        "gain": 0.12133333333333333,
+        "gains_by_seed": [
+          0.136,
+          0.07999999999999996,
+          0.14800000000000002
+        ],
+        "gains_by_source": {
+          "img_20": 0.21333333333333335,
+          "img_21": 0.053333333333333344,
+          "img_22": 0.15999999999999995,
+          "img_23": 0.10666666666666669,
+          "img_24": 0.013333333333333345,
+          "img_25": 0.19999999999999998,
+          "img_26": 0.35999999999999993,
+          "img_27": 0.13333333333333333,
+          "img_28": 0.0666666666666667,
+          "img_29": 0.0,
+          "img_30": 0.1333333333333333,
+          "img_31": 0.09333333333333331,
+          "img_32": 0.053333333333333344,
+          "img_33": 0.06666666666666661,
+          "img_34": 0.2133333333333333,
+          "img_35": 0.12,
+          "img_36": -0.040000000000000036,
+          "img_37": 0.13333333333333333,
+          "img_38": 0.12,
+          "img_39": 0.22666666666666666
+        },
+        "positive_seeds": 3,
+        "positive_sources": 18,
+        "sg_change": -0.46666666666666673,
+        "sg_source_interval": {
+          "interval95": [
+            -0.6013333333333334,
+            -0.3459833333333334
+          ],
+          "mean": -0.4666666666666666,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        },
+        "six_stress_adjusted_SR_interval": [
+          0.07066666666666666,
+          0.17933333333333332
+        ],
+        "source_interval": {
+          "interval95": [
+            0.08266666666666667,
+            0.16468333333333326
+          ],
+          "mean": 0.12133333333333333,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        }
+      }
+    },
+    "Crop8": {
+      "Full": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 1.6333333333333335,
+            "sr": 0.5466666666666667
+          },
+          "5": {
+            "mean_sg_all_episodes": 1.0666666666666667,
+            "sr": 0.62
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.5466666666666667,
+            "sr": 0.82
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.11,
+            "sr": 0.9500000000000001
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.08666666666666667,
+            "sr": 0.9666666666666667
+          }
+        },
+        "by_source": {
+          "img_20": {
+            "mean_sg_all_episodes": 0.8666666666666667,
+            "sr": 0.6933333333333334
+          },
+          "img_21": {
+            "mean_sg_all_episodes": 0.41333333333333333,
+            "sr": 0.8933333333333334
+          },
+          "img_22": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.8133333333333334
+          },
+          "img_23": {
+            "mean_sg_all_episodes": 0.7600000000000001,
+            "sr": 0.7466666666666667
+          },
+          "img_24": {
+            "mean_sg_all_episodes": 0.3466666666666667,
+            "sr": 0.8666666666666667
+          },
+          "img_25": {
+            "mean_sg_all_episodes": 1.0533333333333335,
+            "sr": 0.6533333333333333
+          },
+          "img_26": {
+            "mean_sg_all_episodes": 0.32,
+            "sr": 0.88
+          },
+          "img_27": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7600000000000001
+          },
+          "img_28": {
+            "mean_sg_all_episodes": 0.5333333333333333,
+            "sr": 0.7466666666666667
+          },
+          "img_29": {
+            "mean_sg_all_episodes": 0.64,
+            "sr": 0.7733333333333334
+          },
+          "img_30": {
+            "mean_sg_all_episodes": 0.8533333333333334,
+            "sr": 0.7733333333333334
+          },
+          "img_31": {
+            "mean_sg_all_episodes": 0.5333333333333333,
+            "sr": 0.84
+          },
+          "img_32": {
+            "mean_sg_all_episodes": 0.9733333333333333,
+            "sr": 0.6666666666666666
+          },
+          "img_33": {
+            "mean_sg_all_episodes": 0.6666666666666666,
+            "sr": 0.7733333333333334
+          },
+          "img_34": {
+            "mean_sg_all_episodes": 0.7066666666666667,
+            "sr": 0.7866666666666666
+          },
+          "img_35": {
+            "mean_sg_all_episodes": 1.3466666666666665,
+            "sr": 0.7466666666666667
+          },
+          "img_36": {
+            "mean_sg_all_episodes": 0.49333333333333335,
+            "sr": 0.8133333333333334
+          },
+          "img_37": {
+            "mean_sg_all_episodes": 0.7866666666666667,
+            "sr": 0.7599999999999999
+          },
+          "img_38": {
+            "mean_sg_all_episodes": 0.32,
+            "sr": 0.8666666666666667
+          },
+          "img_39": {
+            "mean_sg_all_episodes": 0.8000000000000002,
+            "sr": 0.7600000000000001
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 500,
+        "repeat_by_seed": [
+          0.03792064289301859,
+          0.013674347936186377,
+          0.039141414141414144
+        ],
+        "sg_mean": 0.6886666666666666,
+        "source_count": 20,
+        "sr_by_seed": [
+          0.77,
+          0.806,
+          0.766
+        ],
+        "sr_mean": 0.7806666666666667,
+        "successes_by_seed": [
+          385,
+          403,
+          383
+        ]
+      },
+      "NoTarget": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 1.9533333333333331,
+            "sr": 0.47333333333333333
+          },
+          "5": {
+            "mean_sg_all_episodes": 1.3466666666666667,
+            "sr": 0.5666666666666665
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7966666666666665
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.15,
+            "sr": 0.9233333333333333
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.10666666666666667,
+            "sr": 0.9733333333333333
+          }
+        },
+        "by_source": {
+          "img_20": {
+            "mean_sg_all_episodes": 0.8933333333333334,
+            "sr": 0.6933333333333334
+          },
+          "img_21": {
+            "mean_sg_all_episodes": 1.0,
+            "sr": 0.8266666666666667
+          },
+          "img_22": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.8133333333333334
+          },
+          "img_23": {
+            "mean_sg_all_episodes": 0.92,
+            "sr": 0.7200000000000001
+          },
+          "img_24": {
+            "mean_sg_all_episodes": 0.4533333333333333,
+            "sr": 0.8533333333333334
+          },
+          "img_25": {
+            "mean_sg_all_episodes": 1.0533333333333335,
+            "sr": 0.6533333333333333
+          },
+          "img_26": {
+            "mean_sg_all_episodes": 1.4400000000000002,
+            "sr": 0.5333333333333333
+          },
+          "img_27": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7600000000000001
+          },
+          "img_28": {
+            "mean_sg_all_episodes": 0.5333333333333333,
+            "sr": 0.7466666666666667
+          },
+          "img_29": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.7999999999999999
+          },
+          "img_30": {
+            "mean_sg_all_episodes": 0.9866666666666667,
+            "sr": 0.7333333333333334
+          },
+          "img_31": {
+            "mean_sg_all_episodes": 0.5733333333333334,
+            "sr": 0.8266666666666667
+          },
+          "img_32": {
+            "mean_sg_all_episodes": 0.96,
+            "sr": 0.7200000000000001
+          },
+          "img_33": {
+            "mean_sg_all_episodes": 0.9466666666666667,
+            "sr": 0.7333333333333334
+          },
+          "img_34": {
+            "mean_sg_all_episodes": 0.84,
+            "sr": 0.7466666666666667
+          },
+          "img_35": {
+            "mean_sg_all_episodes": 1.3866666666666667,
+            "sr": 0.7200000000000001
+          },
+          "img_36": {
+            "mean_sg_all_episodes": 0.5466666666666667,
+            "sr": 0.8400000000000002
+          },
+          "img_37": {
+            "mean_sg_all_episodes": 0.8799999999999999,
+            "sr": 0.7333333333333333
+          },
+          "img_38": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.8000000000000002
+          },
+          "img_39": {
+            "mean_sg_all_episodes": 1.1333333333333333,
+            "sr": 0.68
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 500,
+        "repeat_by_seed": [
+          0.04662062160828811,
+          0.009916094584286803,
+          0.044820717131474105
+        ],
+        "sg_mean": 0.8473333333333333,
+        "source_count": 20,
+        "sr_by_seed": [
+          0.724,
+          0.788,
+          0.728
+        ],
+        "sr_mean": 0.7466666666666667,
+        "successes_by_seed": [
+          362,
+          394,
+          364
+        ]
+      },
+      "SR_gain_CI95_positive": true,
+      "SR_seed_range": 0.040000000000000036,
+      "engineering_checks": {
+        "SG2p5": true,
+        "SG_no_worse_than_rule": true,
+        "SR45": true,
+        "all500_normal_terminals": true,
+        "rule_SR_gain5pp": true
+      },
+      "engineering_numeric_passed": true,
+      "performance_retained": false,
+      "retention_checks": {
+        "SG_increase_at_most0p30": false,
+        "SR_drop_at_most5pp": false
+      },
+      "six_stress_adjusted_SR_positive": true,
+      "target_checks": {
+        "SG_no_worse": true,
+        "SR_gain_at_least5pp": false,
+        "two_positive_seeds": true
+      },
+      "target_gain_retained": false,
+      "versus_Clean": {
+        "gain": -0.0873333333333333,
+        "gains_by_seed": [
+          -0.08999999999999997,
+          -0.061999999999999944,
+          -0.10999999999999999
+        ],
+        "gains_by_source": {
+          "img_20": -0.21333333333333335,
+          "img_21": 0.013333333333333345,
+          "img_22": -0.15999999999999995,
+          "img_23": -0.08000000000000003,
+          "img_24": 0.0,
+          "img_25": -0.19999999999999998,
+          "img_26": -0.013333333333333308,
+          "img_27": -0.13333333333333333,
+          "img_28": -0.0666666666666667,
+          "img_29": -0.026666666666666655,
+          "img_30": -0.09333333333333331,
+          "img_31": -0.07999999999999996,
+          "img_32": -0.10666666666666665,
+          "img_33": -0.026666666666666655,
+          "img_34": -0.17333333333333334,
+          "img_35": -0.09333333333333334,
+          "img_36": 0.013333333333333308,
+          "img_37": -0.10666666666666665,
+          "img_38": -0.053333333333333344,
+          "img_39": -0.14666666666666664
+        },
+        "positive_seeds": 0,
+        "positive_sources": 2,
+        "sg_change": 0.308,
+        "sg_source_interval": {
+          "interval95": [
+            0.20531666666666665,
+            0.4113499999999999
+          ],
+          "mean": 0.30800000000000005,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        },
+        "six_stress_adjusted_SR_interval": [
+          -0.12866666666666665,
+          -0.0477722222222222
+        ],
+        "source_interval": {
+          "interval95": [
+            -0.11866666666666667,
+            -0.056666666666666664
+          ],
+          "mean": -0.08733333333333335,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        }
+      },
+      "versus_NoTarget": {
+        "gain": 0.03400000000000003,
+        "gains_by_seed": [
+          0.04600000000000004,
+          0.018000000000000016,
+          0.038000000000000034
+        ],
+        "gains_by_source": {
+          "img_20": 0.0,
+          "img_21": 0.0666666666666667,
+          "img_22": 0.0,
+          "img_23": 0.026666666666666655,
+          "img_24": 0.013333333333333345,
+          "img_25": 0.0,
+          "img_26": 0.3466666666666667,
+          "img_27": 0.0,
+          "img_28": 0.0,
+          "img_29": -0.026666666666666655,
+          "img_30": 0.04,
+          "img_31": 0.013333333333333345,
+          "img_32": -0.05333333333333331,
+          "img_33": 0.03999999999999996,
+          "img_34": 0.03999999999999996,
+          "img_35": 0.026666666666666655,
+          "img_36": -0.026666666666666727,
+          "img_37": 0.02666666666666669,
+          "img_38": 0.06666666666666665,
+          "img_39": 0.08
+        },
+        "positive_seeds": 3,
+        "positive_sources": 12,
+        "sg_change": -0.1586666666666667,
+        "sg_source_interval": {
+          "interval95": [
+            -0.28868333333333335,
+            -0.06133333333333333
+          ],
+          "mean": -0.15866666666666668,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        },
+        "six_stress_adjusted_SR_interval": [
+          0.0013333333333333292,
+          0.08956111111111113
+        ],
+        "source_interval": {
+          "interval95": [
+            0.006666666666666668,
+            0.07333333333333333
+          ],
+          "mean": 0.033999999999999996,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        }
+      }
+    },
+    "JPEG25": {
+      "Full": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 0.9199999999999999,
+            "sr": 0.7033333333333335
+          },
+          "5": {
+            "mean_sg_all_episodes": 0.64,
+            "sr": 0.7600000000000001
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.24666666666666667,
+            "sr": 0.9366666666666666
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.09333333333333334,
+            "sr": 0.9533333333333333
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.013333333333333334,
+            "sr": 0.9966666666666667
+          }
+        },
+        "by_source": {
+          "img_20": {
+            "mean_sg_all_episodes": 0.25333333333333335,
+            "sr": 0.9066666666666667
+          },
+          "img_21": {
+            "mean_sg_all_episodes": 0.26666666666666666,
+            "sr": 0.8933333333333334
+          },
+          "img_22": {
+            "mean_sg_all_episodes": 0.06666666666666667,
+            "sr": 0.9733333333333333
+          },
+          "img_23": {
+            "mean_sg_all_episodes": 0.5066666666666667,
+            "sr": 0.8266666666666668
+          },
+          "img_24": {
+            "mean_sg_all_episodes": 0.3466666666666667,
+            "sr": 0.8666666666666667
+          },
+          "img_25": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.8533333333333334
+          },
+          "img_26": {
+            "mean_sg_all_episodes": 0.5333333333333333,
+            "sr": 0.8133333333333334
+          },
+          "img_27": {
+            "mean_sg_all_episodes": 0.25333333333333335,
+            "sr": 0.8933333333333334
+          },
+          "img_28": {
+            "mean_sg_all_episodes": 0.36000000000000004,
+            "sr": 0.8133333333333334
+          },
+          "img_29": {
+            "mean_sg_all_episodes": 0.4000000000000001,
+            "sr": 0.8533333333333334
+          },
+          "img_30": {
+            "mean_sg_all_episodes": 0.32,
+            "sr": 0.8666666666666667
+          },
+          "img_31": {
+            "mean_sg_all_episodes": 0.3333333333333333,
+            "sr": 0.9199999999999999
+          },
+          "img_32": {
+            "mean_sg_all_episodes": 0.5466666666666667,
+            "sr": 0.8266666666666667
+          },
+          "img_33": {
+            "mean_sg_all_episodes": 0.6133333333333333,
+            "sr": 0.7999999999999999
+          },
+          "img_34": {
+            "mean_sg_all_episodes": 0.16,
+            "sr": 0.96
+          },
+          "img_35": {
+            "mean_sg_all_episodes": 0.7066666666666667,
+            "sr": 0.84
+          },
+          "img_36": {
+            "mean_sg_all_episodes": 0.4666666666666666,
+            "sr": 0.8266666666666667
+          },
+          "img_37": {
+            "mean_sg_all_episodes": 0.46666666666666673,
+            "sr": 0.8666666666666667
+          },
+          "img_38": {
+            "mean_sg_all_episodes": 0.21333333333333335,
+            "sr": 0.9199999999999999
+          },
+          "img_39": {
+            "mean_sg_all_episodes": 0.32,
+            "sr": 0.88
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 500,
+        "repeat_by_seed": [
+          0.03288958496476116,
+          0.010542962572482868,
+          0.03418353931107021
+        ],
+        "sg_mean": 0.3826666666666667,
+        "source_count": 20,
+        "sr_by_seed": [
+          0.858,
+          0.876,
+          0.876
+        ],
+        "sr_mean": 0.87,
+        "successes_by_seed": [
+          429,
+          438,
+          438
+        ]
+      },
+      "NoTarget": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 1.9533333333333331,
+            "sr": 0.47333333333333333
+          },
+          "5": {
+            "mean_sg_all_episodes": 1.3466666666666667,
+            "sr": 0.5666666666666665
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7966666666666665
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.15,
+            "sr": 0.9233333333333333
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.10666666666666667,
+            "sr": 0.9733333333333333
+          }
+        },
+        "by_source": {
+          "img_20": {
+            "mean_sg_all_episodes": 0.8933333333333334,
+            "sr": 0.6933333333333334
+          },
+          "img_21": {
+            "mean_sg_all_episodes": 1.0,
+            "sr": 0.8266666666666667
+          },
+          "img_22": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.8133333333333334
+          },
+          "img_23": {
+            "mean_sg_all_episodes": 0.92,
+            "sr": 0.7200000000000001
+          },
+          "img_24": {
+            "mean_sg_all_episodes": 0.4533333333333333,
+            "sr": 0.8533333333333334
+          },
+          "img_25": {
+            "mean_sg_all_episodes": 1.0533333333333335,
+            "sr": 0.6533333333333333
+          },
+          "img_26": {
+            "mean_sg_all_episodes": 1.4400000000000002,
+            "sr": 0.5333333333333333
+          },
+          "img_27": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7600000000000001
+          },
+          "img_28": {
+            "mean_sg_all_episodes": 0.5333333333333333,
+            "sr": 0.7466666666666667
+          },
+          "img_29": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.7999999999999999
+          },
+          "img_30": {
+            "mean_sg_all_episodes": 0.9866666666666667,
+            "sr": 0.7333333333333334
+          },
+          "img_31": {
+            "mean_sg_all_episodes": 0.5733333333333334,
+            "sr": 0.8266666666666667
+          },
+          "img_32": {
+            "mean_sg_all_episodes": 0.96,
+            "sr": 0.7200000000000001
+          },
+          "img_33": {
+            "mean_sg_all_episodes": 0.9466666666666667,
+            "sr": 0.7333333333333334
+          },
+          "img_34": {
+            "mean_sg_all_episodes": 0.84,
+            "sr": 0.7466666666666667
+          },
+          "img_35": {
+            "mean_sg_all_episodes": 1.3866666666666667,
+            "sr": 0.7200000000000001
+          },
+          "img_36": {
+            "mean_sg_all_episodes": 0.5466666666666667,
+            "sr": 0.8400000000000002
+          },
+          "img_37": {
+            "mean_sg_all_episodes": 0.8799999999999999,
+            "sr": 0.7333333333333333
+          },
+          "img_38": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.8000000000000002
+          },
+          "img_39": {
+            "mean_sg_all_episodes": 1.1333333333333333,
+            "sr": 0.68
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 500,
+        "repeat_by_seed": [
+          0.04662062160828811,
+          0.009916094584286803,
+          0.044820717131474105
+        ],
+        "sg_mean": 0.8473333333333333,
+        "source_count": 20,
+        "sr_by_seed": [
+          0.724,
+          0.788,
+          0.728
+        ],
+        "sr_mean": 0.7466666666666667,
+        "successes_by_seed": [
+          362,
+          394,
+          364
+        ]
+      },
+      "SR_gain_CI95_positive": true,
+      "SR_seed_range": 0.018000000000000016,
+      "engineering_checks": {
+        "SG2p5": true,
+        "SG_no_worse_than_rule": true,
+        "SR45": true,
+        "all500_normal_terminals": true,
+        "rule_SR_gain5pp": true
+      },
+      "engineering_numeric_passed": true,
+      "performance_retained": true,
+      "retention_checks": {
+        "SG_increase_at_most0p30": true,
+        "SR_drop_at_most5pp": true
+      },
+      "six_stress_adjusted_SR_positive": true,
+      "target_checks": {
+        "SG_no_worse": true,
+        "SR_gain_at_least5pp": true,
+        "two_positive_seeds": true
+      },
+      "target_gain_retained": true,
+      "versus_Clean": {
+        "gain": 0.0020000000000000018,
+        "gains_by_seed": [
+          -0.0020000000000000018,
+          0.008000000000000007,
+          0.0
+        ],
+        "gains_by_source": {
+          "img_20": 0.0,
+          "img_21": 0.013333333333333345,
+          "img_22": 0.0,
+          "img_23": 0.0,
+          "img_24": 0.0,
+          "img_25": 0.0,
+          "img_26": -0.07999999999999996,
+          "img_27": 0.0,
+          "img_28": 0.0,
+          "img_29": 0.053333333333333344,
+          "img_30": 0.0,
+          "img_31": 0.0,
+          "img_32": 0.05333333333333331,
+          "img_33": 0.0,
+          "img_34": 0.0,
+          "img_35": 0.0,
+          "img_36": 0.026666666666666655,
+          "img_37": 0.0,
+          "img_38": 0.0,
+          "img_39": -0.026666666666666655
+        },
+        "positive_seeds": 1,
+        "positive_sources": 4,
+        "sg_change": 0.0020000000000000018,
+        "sg_source_interval": {
+          "interval95": [
+            -0.03266666666666667,
+            0.042
+          ],
+          "mean": 0.0020000000000000005,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        },
+        "six_stress_adjusted_SR_interval": [
+          -0.014447222222222215,
+          0.0171138888888889
+        ],
+        "source_interval": {
+          "interval95": [
+            -0.010666666666666661,
+            0.01201666666666658
+          ],
+          "mean": 0.0020000000000000018,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        }
+      },
+      "versus_NoTarget": {
+        "gain": 0.12333333333333334,
+        "gains_by_seed": [
+          0.134,
+          0.08799999999999997,
+          0.14800000000000002
+        ],
+        "gains_by_source": {
+          "img_20": 0.21333333333333335,
+          "img_21": 0.0666666666666667,
+          "img_22": 0.15999999999999995,
+          "img_23": 0.10666666666666669,
+          "img_24": 0.013333333333333345,
+          "img_25": 0.19999999999999998,
+          "img_26": 0.27999999999999997,
+          "img_27": 0.13333333333333333,
+          "img_28": 0.0666666666666667,
+          "img_29": 0.053333333333333344,
+          "img_30": 0.1333333333333333,
+          "img_31": 0.09333333333333331,
+          "img_32": 0.10666666666666665,
+          "img_33": 0.06666666666666661,
+          "img_34": 0.2133333333333333,
+          "img_35": 0.12,
+          "img_36": -0.013333333333333383,
+          "img_37": 0.13333333333333333,
+          "img_38": 0.12,
+          "img_39": 0.19999999999999998
+        },
+        "positive_seeds": 3,
+        "positive_sources": 19,
+        "sg_change": -0.46466666666666673,
+        "sg_source_interval": {
+          "interval95": [
+            -0.5733333333333335,
+            -0.3639666666666668
+          ],
+          "mean": -0.4646666666666667,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        },
+        "six_stress_adjusted_SR_interval": [
+          0.08155277777777777,
+          0.16800833333333337
+        ],
+        "source_interval": {
+          "interval95": [
+            0.09266666666666665,
+            0.15733333333333333
+          ],
+          "mean": 0.12333333333333334,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        }
+      }
+    },
+    "Ring8": {
+      "Full": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 1.9333333333333333,
+            "sr": 0.48
+          },
+          "5": {
+            "mean_sg_all_episodes": 1.3066666666666666,
+            "sr": 0.5733333333333333
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.6866666666666666,
+            "sr": 0.79
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.19999999999999998,
+            "sr": 0.9133333333333334
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.10666666666666667,
+            "sr": 0.9733333333333333
+          }
+        },
+        "by_source": {
+          "img_20": {
+            "mean_sg_all_episodes": 0.8933333333333334,
+            "sr": 0.6933333333333334
+          },
+          "img_21": {
+            "mean_sg_all_episodes": 1.0,
+            "sr": 0.8266666666666667
+          },
+          "img_22": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.8133333333333334
+          },
+          "img_23": {
+            "mean_sg_all_episodes": 0.92,
+            "sr": 0.7200000000000001
+          },
+          "img_24": {
+            "mean_sg_all_episodes": 0.4533333333333333,
+            "sr": 0.8533333333333334
+          },
+          "img_25": {
+            "mean_sg_all_episodes": 1.0533333333333335,
+            "sr": 0.6533333333333333
+          },
+          "img_26": {
+            "mean_sg_all_episodes": 1.4400000000000002,
+            "sr": 0.5333333333333333
+          },
+          "img_27": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7600000000000001
+          },
+          "img_28": {
+            "mean_sg_all_episodes": 0.5333333333333333,
+            "sr": 0.7466666666666667
+          },
+          "img_29": {
+            "mean_sg_all_episodes": 0.49333333333333335,
+            "sr": 0.8133333333333334
+          },
+          "img_30": {
+            "mean_sg_all_episodes": 0.8933333333333332,
+            "sr": 0.7333333333333334
+          },
+          "img_31": {
+            "mean_sg_all_episodes": 0.5733333333333334,
+            "sr": 0.8266666666666667
+          },
+          "img_32": {
+            "mean_sg_all_episodes": 0.96,
+            "sr": 0.7200000000000001
+          },
+          "img_33": {
+            "mean_sg_all_episodes": 0.9466666666666667,
+            "sr": 0.7333333333333334
+          },
+          "img_34": {
+            "mean_sg_all_episodes": 0.84,
+            "sr": 0.7466666666666667
+          },
+          "img_35": {
+            "mean_sg_all_episodes": 1.3866666666666667,
+            "sr": 0.7200000000000001
+          },
+          "img_36": {
+            "mean_sg_all_episodes": 0.4533333333333333,
+            "sr": 0.8533333333333334
+          },
+          "img_37": {
+            "mean_sg_all_episodes": 0.8799999999999999,
+            "sr": 0.7333333333333333
+          },
+          "img_38": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.8000000000000002
+          },
+          "img_39": {
+            "mean_sg_all_episodes": 1.3333333333333333,
+            "sr": 0.64
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 500,
+        "repeat_by_seed": [
+          0.04717444717444717,
+          0.010670731707317074,
+          0.04394240317775571
+        ],
+        "sg_mean": 0.8466666666666667,
+        "source_count": 20,
+        "sr_by_seed": [
+          0.72,
+          0.788,
+          0.73
+        ],
+        "sr_mean": 0.746,
+        "successes_by_seed": [
+          360,
+          394,
+          365
+        ]
+      },
+      "NoTarget": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 1.9533333333333331,
+            "sr": 0.47333333333333333
+          },
+          "5": {
+            "mean_sg_all_episodes": 1.3466666666666667,
+            "sr": 0.5666666666666665
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7966666666666665
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.15,
+            "sr": 0.9233333333333333
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.10666666666666667,
+            "sr": 0.9733333333333333
+          }
+        },
+        "by_source": {
+          "img_20": {
+            "mean_sg_all_episodes": 0.8933333333333334,
+            "sr": 0.6933333333333334
+          },
+          "img_21": {
+            "mean_sg_all_episodes": 1.0,
+            "sr": 0.8266666666666667
+          },
+          "img_22": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.8133333333333334
+          },
+          "img_23": {
+            "mean_sg_all_episodes": 0.92,
+            "sr": 0.7200000000000001
+          },
+          "img_24": {
+            "mean_sg_all_episodes": 0.4533333333333333,
+            "sr": 0.8533333333333334
+          },
+          "img_25": {
+            "mean_sg_all_episodes": 1.0533333333333335,
+            "sr": 0.6533333333333333
+          },
+          "img_26": {
+            "mean_sg_all_episodes": 1.4400000000000002,
+            "sr": 0.5333333333333333
+          },
+          "img_27": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7600000000000001
+          },
+          "img_28": {
+            "mean_sg_all_episodes": 0.5333333333333333,
+            "sr": 0.7466666666666667
+          },
+          "img_29": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.7999999999999999
+          },
+          "img_30": {
+            "mean_sg_all_episodes": 0.9866666666666667,
+            "sr": 0.7333333333333334
+          },
+          "img_31": {
+            "mean_sg_all_episodes": 0.5733333333333334,
+            "sr": 0.8266666666666667
+          },
+          "img_32": {
+            "mean_sg_all_episodes": 0.96,
+            "sr": 0.7200000000000001
+          },
+          "img_33": {
+            "mean_sg_all_episodes": 0.9466666666666667,
+            "sr": 0.7333333333333334
+          },
+          "img_34": {
+            "mean_sg_all_episodes": 0.84,
+            "sr": 0.7466666666666667
+          },
+          "img_35": {
+            "mean_sg_all_episodes": 1.3866666666666667,
+            "sr": 0.7200000000000001
+          },
+          "img_36": {
+            "mean_sg_all_episodes": 0.5466666666666667,
+            "sr": 0.8400000000000002
+          },
+          "img_37": {
+            "mean_sg_all_episodes": 0.8799999999999999,
+            "sr": 0.7333333333333333
+          },
+          "img_38": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.8000000000000002
+          },
+          "img_39": {
+            "mean_sg_all_episodes": 1.1333333333333333,
+            "sr": 0.68
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 500,
+        "repeat_by_seed": [
+          0.04662062160828811,
+          0.009916094584286803,
+          0.044820717131474105
+        ],
+        "sg_mean": 0.8473333333333333,
+        "source_count": 20,
+        "sr_by_seed": [
+          0.724,
+          0.788,
+          0.728
+        ],
+        "sr_mean": 0.7466666666666667,
+        "successes_by_seed": [
+          362,
+          394,
+          364
+        ]
+      },
+      "SR_gain_CI95_positive": false,
+      "SR_seed_range": 0.06800000000000006,
+      "engineering_checks": {
+        "SG2p5": true,
+        "SG_no_worse_than_rule": true,
+        "SR45": true,
+        "all500_normal_terminals": true,
+        "rule_SR_gain5pp": true
+      },
+      "engineering_numeric_passed": true,
+      "performance_retained": false,
+      "retention_checks": {
+        "SG_increase_at_most0p30": false,
+        "SR_drop_at_most5pp": false
+      },
+      "six_stress_adjusted_SR_positive": false,
+      "target_checks": {
+        "SG_no_worse": true,
+        "SR_gain_at_least5pp": false,
+        "two_positive_seeds": false
+      },
+      "target_gain_retained": false,
+      "versus_Clean": {
+        "gain": -0.122,
+        "gains_by_seed": [
+          -0.14,
+          -0.07999999999999996,
+          -0.14600000000000002
+        ],
+        "gains_by_source": {
+          "img_20": -0.21333333333333335,
+          "img_21": -0.053333333333333344,
+          "img_22": -0.15999999999999995,
+          "img_23": -0.10666666666666669,
+          "img_24": -0.013333333333333345,
+          "img_25": -0.19999999999999998,
+          "img_26": -0.35999999999999993,
+          "img_27": -0.13333333333333333,
+          "img_28": -0.0666666666666667,
+          "img_29": 0.013333333333333345,
+          "img_30": -0.1333333333333333,
+          "img_31": -0.09333333333333331,
+          "img_32": -0.053333333333333344,
+          "img_33": -0.06666666666666661,
+          "img_34": -0.2133333333333333,
+          "img_35": -0.12,
+          "img_36": 0.053333333333333344,
+          "img_37": -0.13333333333333333,
+          "img_38": -0.12,
+          "img_39": -0.26666666666666666
+        },
+        "positive_seeds": 0,
+        "positive_sources": 2,
+        "sg_change": 0.46599999999999997,
+        "sg_source_interval": {
+          "interval95": [
+            0.33663333333333334,
+            0.6120166666666667
+          ],
+          "mean": 0.466,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        },
+        "six_stress_adjusted_SR_interval": [
+          -0.182,
+          -0.06887777777777773
+        ],
+        "source_interval": {
+          "interval95": [
+            -0.16735,
+            -0.0819833333333334
+          ],
+          "mean": -0.122,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        }
+      },
+      "versus_NoTarget": {
+        "gain": -0.0006666666666666673,
+        "gains_by_seed": [
+          -0.0040000000000000036,
+          0.0,
+          0.0020000000000000018
+        ],
+        "gains_by_source": {
+          "img_20": 0.0,
+          "img_21": 0.0,
+          "img_22": 0.0,
+          "img_23": 0.0,
+          "img_24": 0.0,
+          "img_25": 0.0,
+          "img_26": 0.0,
+          "img_27": 0.0,
+          "img_28": 0.0,
+          "img_29": 0.013333333333333345,
+          "img_30": 0.0,
+          "img_31": 0.0,
+          "img_32": 0.0,
+          "img_33": 0.0,
+          "img_34": 0.0,
+          "img_35": 0.0,
+          "img_36": 0.013333333333333308,
+          "img_37": 0.0,
+          "img_38": 0.0,
+          "img_39": -0.04
+        },
+        "positive_seeds": 1,
+        "positive_sources": 2,
+        "sg_change": -0.0006666666666667043,
+        "sg_source_interval": {
+          "interval95": [
+            -0.02268333333333334,
+            0.025333333333333326
+          ],
+          "mean": -0.000666666666666671,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        },
+        "six_stress_adjusted_SR_interval": [
+          -0.008,
+          0.003333333333333335
+        ],
+        "source_interval": {
+          "interval95": [
+            -0.005333333333333334,
+            0.002666666666666667
+          ],
+          "mean": -0.0006666666666666675,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        }
+      }
+    },
+    "Rot90CW": {
+      "Full": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 2.013333333333333,
+            "sr": 0.45
+          },
+          "5": {
+            "mean_sg_all_episodes": 1.3633333333333333,
+            "sr": 0.5433333333333333
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.7200000000000001,
+            "sr": 0.7699999999999999
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.21999999999999997,
+            "sr": 0.8733333333333334
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.18666666666666668,
+            "sr": 0.9266666666666667
+          }
+        },
+        "by_source": {
+          "img_20": {
+            "mean_sg_all_episodes": 0.8933333333333334,
+            "sr": 0.6933333333333334
+          },
+          "img_21": {
+            "mean_sg_all_episodes": 1.24,
+            "sr": 0.7066666666666667
+          },
+          "img_22": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.8133333333333334
+          },
+          "img_23": {
+            "mean_sg_all_episodes": 0.9199999999999999,
+            "sr": 0.7200000000000001
+          },
+          "img_24": {
+            "mean_sg_all_episodes": 0.4266666666666667,
+            "sr": 0.8533333333333334
+          },
+          "img_25": {
+            "mean_sg_all_episodes": 1.0533333333333335,
+            "sr": 0.6533333333333333
+          },
+          "img_26": {
+            "mean_sg_all_episodes": 1.4400000000000002,
+            "sr": 0.48
+          },
+          "img_27": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7600000000000001
+          },
+          "img_28": {
+            "mean_sg_all_episodes": 0.5333333333333333,
+            "sr": 0.7466666666666667
+          },
+          "img_29": {
+            "mean_sg_all_episodes": 1.0666666666666667,
+            "sr": 0.64
+          },
+          "img_30": {
+            "mean_sg_all_episodes": 0.9466666666666667,
+            "sr": 0.7066666666666667
+          },
+          "img_31": {
+            "mean_sg_all_episodes": 0.7200000000000001,
+            "sr": 0.7600000000000001
+          },
+          "img_32": {
+            "mean_sg_all_episodes": 1.4266666666666667,
+            "sr": 0.49333333333333335
+          },
+          "img_33": {
+            "mean_sg_all_episodes": 0.5333333333333333,
+            "sr": 0.84
+          },
+          "img_34": {
+            "mean_sg_all_episodes": 0.84,
+            "sr": 0.7466666666666667
+          },
+          "img_35": {
+            "mean_sg_all_episodes": 1.3866666666666667,
+            "sr": 0.7200000000000001
+          },
+          "img_36": {
+            "mean_sg_all_episodes": 0.5733333333333334,
+            "sr": 0.8000000000000002
+          },
+          "img_37": {
+            "mean_sg_all_episodes": 0.8799999999999999,
+            "sr": 0.7333333333333333
+          },
+          "img_38": {
+            "mean_sg_all_episodes": 0.6533333333333333,
+            "sr": 0.7200000000000001
+          },
+          "img_39": {
+            "mean_sg_all_episodes": 1.12,
+            "sr": 0.6666666666666666
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 500,
+        "repeat_by_seed": [
+          0.046625766871165646,
+          0.018476903870162296,
+          0.04819277108433735
+        ],
+        "sg_mean": 0.9006666666666666,
+        "source_count": 20,
+        "sr_by_seed": [
+          0.712,
+          0.732,
+          0.694
+        ],
+        "sr_mean": 0.7126666666666667,
+        "successes_by_seed": [
+          356,
+          366,
+          347
+        ]
+      },
+      "NoTarget": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 1.9533333333333331,
+            "sr": 0.47333333333333333
+          },
+          "5": {
+            "mean_sg_all_episodes": 1.3466666666666667,
+            "sr": 0.5666666666666665
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7966666666666665
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.15,
+            "sr": 0.9233333333333333
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.10666666666666667,
+            "sr": 0.9733333333333333
+          }
+        },
+        "by_source": {
+          "img_20": {
+            "mean_sg_all_episodes": 0.8933333333333334,
+            "sr": 0.6933333333333334
+          },
+          "img_21": {
+            "mean_sg_all_episodes": 1.0,
+            "sr": 0.8266666666666667
+          },
+          "img_22": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.8133333333333334
+          },
+          "img_23": {
+            "mean_sg_all_episodes": 0.92,
+            "sr": 0.7200000000000001
+          },
+          "img_24": {
+            "mean_sg_all_episodes": 0.4533333333333333,
+            "sr": 0.8533333333333334
+          },
+          "img_25": {
+            "mean_sg_all_episodes": 1.0533333333333335,
+            "sr": 0.6533333333333333
+          },
+          "img_26": {
+            "mean_sg_all_episodes": 1.4400000000000002,
+            "sr": 0.5333333333333333
+          },
+          "img_27": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7600000000000001
+          },
+          "img_28": {
+            "mean_sg_all_episodes": 0.5333333333333333,
+            "sr": 0.7466666666666667
+          },
+          "img_29": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.7999999999999999
+          },
+          "img_30": {
+            "mean_sg_all_episodes": 0.9866666666666667,
+            "sr": 0.7333333333333334
+          },
+          "img_31": {
+            "mean_sg_all_episodes": 0.5733333333333334,
+            "sr": 0.8266666666666667
+          },
+          "img_32": {
+            "mean_sg_all_episodes": 0.96,
+            "sr": 0.7200000000000001
+          },
+          "img_33": {
+            "mean_sg_all_episodes": 0.9466666666666667,
+            "sr": 0.7333333333333334
+          },
+          "img_34": {
+            "mean_sg_all_episodes": 0.84,
+            "sr": 0.7466666666666667
+          },
+          "img_35": {
+            "mean_sg_all_episodes": 1.3866666666666667,
+            "sr": 0.7200000000000001
+          },
+          "img_36": {
+            "mean_sg_all_episodes": 0.5466666666666667,
+            "sr": 0.8400000000000002
+          },
+          "img_37": {
+            "mean_sg_all_episodes": 0.8799999999999999,
+            "sr": 0.7333333333333333
+          },
+          "img_38": {
+            "mean_sg_all_episodes": 0.52,
+            "sr": 0.8000000000000002
+          },
+          "img_39": {
+            "mean_sg_all_episodes": 1.1333333333333333,
+            "sr": 0.68
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 500,
+        "repeat_by_seed": [
+          0.04662062160828811,
+          0.009916094584286803,
+          0.044820717131474105
+        ],
+        "sg_mean": 0.8473333333333333,
+        "source_count": 20,
+        "sr_by_seed": [
+          0.724,
+          0.788,
+          0.728
+        ],
+        "sr_mean": 0.7466666666666667,
+        "successes_by_seed": [
+          362,
+          394,
+          364
+        ]
+      },
+      "SR_gain_CI95_positive": false,
+      "SR_seed_range": 0.038000000000000034,
+      "engineering_checks": {
+        "SG2p5": true,
+        "SG_no_worse_than_rule": true,
+        "SR45": true,
+        "all500_normal_terminals": true,
+        "rule_SR_gain5pp": true
+      },
+      "engineering_numeric_passed": true,
+      "performance_retained": false,
+      "retention_checks": {
+        "SG_increase_at_most0p30": false,
+        "SR_drop_at_most5pp": false
+      },
+      "six_stress_adjusted_SR_positive": false,
+      "target_checks": {
+        "SG_no_worse": false,
+        "SR_gain_at_least5pp": false,
+        "two_positive_seeds": false
+      },
+      "target_gain_retained": false,
+      "versus_Clean": {
+        "gain": -0.15533333333333335,
+        "gains_by_seed": [
+          -0.14800000000000002,
+          -0.136,
+          -0.18200000000000005
+        ],
+        "gains_by_source": {
+          "img_20": -0.21333333333333335,
+          "img_21": -0.17333333333333334,
+          "img_22": -0.15999999999999995,
+          "img_23": -0.10666666666666669,
+          "img_24": -0.013333333333333345,
+          "img_25": -0.19999999999999998,
+          "img_26": -0.4133333333333333,
+          "img_27": -0.13333333333333333,
+          "img_28": -0.0666666666666667,
+          "img_29": -0.16,
+          "img_30": -0.16,
+          "img_31": -0.16,
+          "img_32": -0.27999999999999997,
+          "img_33": 0.040000000000000036,
+          "img_34": -0.2133333333333333,
+          "img_35": -0.12,
+          "img_36": 0.0,
+          "img_37": -0.13333333333333333,
+          "img_38": -0.19999999999999998,
+          "img_39": -0.24
+        },
+        "positive_seeds": 0,
+        "positive_sources": 1,
+        "sg_change": 0.52,
+        "sg_source_interval": {
+          "interval95": [
+            0.3919833333333333,
+            0.6553333333333333
+          ],
+          "mean": 0.52,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        },
+        "six_stress_adjusted_SR_interval": [
+          -0.21666666666666667,
+          -0.09866666666666664
+        ],
+        "source_interval": {
+          "interval95": [
+            -0.20199999999999996,
+            -0.11333333333333333
+          ],
+          "mean": -0.15533333333333332,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        }
+      },
+      "versus_NoTarget": {
+        "gain": -0.03400000000000003,
+        "gains_by_seed": [
+          -0.01200000000000001,
+          -0.05600000000000005,
+          -0.03400000000000003
+        ],
+        "gains_by_source": {
+          "img_20": 0.0,
+          "img_21": -0.12,
+          "img_22": 0.0,
+          "img_23": 0.0,
+          "img_24": 0.0,
+          "img_25": 0.0,
+          "img_26": -0.053333333333333344,
+          "img_27": 0.0,
+          "img_28": 0.0,
+          "img_29": -0.16,
+          "img_30": -0.02666666666666669,
+          "img_31": -0.0666666666666667,
+          "img_32": -0.22666666666666666,
+          "img_33": 0.10666666666666665,
+          "img_34": 0.0,
+          "img_35": 0.0,
+          "img_36": -0.040000000000000036,
+          "img_37": 0.0,
+          "img_38": -0.08,
+          "img_39": -0.013333333333333345
+        },
+        "positive_seeds": 0,
+        "positive_sources": 1,
+        "sg_change": 0.053333333333333344,
+        "sg_source_interval": {
+          "interval95": [
+            -0.03000000000000001,
+            0.1386666666666667
+          ],
+          "mean": 0.05333333333333333,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        },
+        "six_stress_adjusted_SR_interval": [
+          -0.08000833333333333,
+          0.0017805555555555593
+        ],
+        "source_interval": {
+          "interval95": [
+            -0.06666666666666668,
+            -0.004666666666666675
+          ],
+          "mean": -0.034,
+          "resamples": 2000,
+          "scope": "known SwissView source-file groups; paired corruption diagnostic",
+          "source_count": 20
+        }
+      }
+    }
+  },
+  "version": "target-robustness-v1"
+}

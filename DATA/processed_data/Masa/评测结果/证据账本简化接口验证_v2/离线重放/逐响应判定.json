@@ -1,0 +1,371 @@
+[
+  {
+    "accepted": true,
+    "call_id": 1,
+    "markdown_fence": true,
+    "new_navigation_SR": false,
+    "normalized": {
+      "counter_evidence": [],
+      "evidence_ids": [
+        "e0",
+        "e1"
+      ],
+      "observed_facts": [
+        {
+          "candidate_id": null,
+          "evidence_id": "e0",
+          "kind": "geometry",
+          "source_ids": [
+            "ledger"
+          ],
+          "statement": "Current position is [1,9], having moved right from [0,3] then down to [1,9]."
+        },
+        {
+          "candidate_id": null,
+          "evidence_id": "e1",
+          "kind": "visual",
+          "source_ids": [
+            "target"
+          ],
+          "statement": "Target image shows a road with yellow lines and adjacent houses."
+        }
+      ],
+      "ranked_candidates": [
+        "c02",
+        "c00",
+        "c03"
+      ],
+      "unknowns": [
+        "target_direction",
+        "unvisited_visual_content",
+        "target_relation"
+      ]
+    },
+    "raw_response_sha256": "e75e5a577116f43a2ae5308423d5acb9829f12d4bb4fecb2c1c72bb4df2c2059",
+    "raw_schema_status": "ok",
+    "receipt": []
+  },
+  {
+    "accepted": true,
+    "call_id": 2,
+    "markdown_fence": true,
+    "new_navigation_SR": false,
+    "normalized": {
+      "candidate_id": "c02",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "e0",
+        "e1",
+        "ledger"
+      ],
+      "expected_new_cells": 2,
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "raw_response_sha256": "e3081eb06586f194957b7fd90ef354582dc958c380dfbae57deecb7c80df50fa",
+    "raw_schema_status": "ok",
+    "receipt": []
+  },
+  {
+    "accepted": true,
+    "call_id": 3,
+    "markdown_fence": true,
+    "new_navigation_SR": false,
+    "normalized": {
+      "counter_evidence": [],
+      "evidence_ids": [
+        "e0",
+        "e1"
+      ],
+      "observed_facts": [
+        {
+          "candidate_id": null,
+          "evidence_id": "e0",
+          "kind": "geometry",
+          "source_ids": [
+            "ledger"
+          ],
+          "statement": "Current position is [6,3], having moved south from [0,3]."
+        },
+        {
+          "candidate_id": null,
+          "evidence_id": "e1",
+          "kind": "visual",
+          "source_ids": [
+            "target",
+            "current"
+          ],
+          "statement": "Target contains a residential block with a distinct T-junction road."
+        }
+      ],
+      "ranked_candidates": [
+        "c01",
+        "c08",
+        "c09"
+      ],
+      "unknowns": [
+        "target_direction",
+        "unvisited_visual_content"
+      ]
+    },
+    "raw_response_sha256": "05a9393474e47a19bdf5b1defea1aba9eafe9c3570832ae8746868dc25fece0c",
+    "raw_schema_status": "ok",
+    "receipt": []
+  },
+  {
+    "accepted": true,
+    "call_id": 4,
+    "markdown_fence": true,
+    "new_navigation_SR": false,
+    "normalized": {
+      "candidate_id": "c01",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "e0",
+        "ledger"
+      ],
+      "expected_new_cells": 1,
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "raw_response_sha256": "61efe710c232e5987a52f6385661dab02e4edf441f94065010352108c700395d",
+    "raw_schema_status": "ok",
+    "receipt": []
+  },
+  {
+    "accepted": true,
+    "call_id": 5,
+    "markdown_fence": true,
+    "new_navigation_SR": false,
+    "normalized": {
+      "counter_evidence": [],
+      "evidence_ids": [
+        "e0"
+      ],
+      "observed_facts": [
+        {
+          "candidate_id": null,
+          "evidence_id": "e0",
+          "kind": "geometry",
+          "source_ids": [
+            "ledger"
+          ],
+          "statement": "Current position is [9,6]; visited cells are 98, 97, 96."
+        }
+      ],
+      "ranked_candidates": [
+        "c01",
+        "c06",
+        "c07"
+      ],
+      "unknowns": [
+        "target_direction",
+        "unvisited_visual_content",
+        "target_relation"
+      ]
+    },
+    "raw_response_sha256": "6be426eac8e0ca3c4bad07636af2ded484166a8a7d92906d49619500e2f581ff",
+    "raw_schema_status": "ok",
+    "receipt": []
+  },
+  {
+    "accepted": true,
+    "call_id": 6,
+    "markdown_fence": true,
+    "new_navigation_SR": false,
+    "normalized": {
+      "candidate_id": "c01",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "e0",
+        "ledger"
+      ],
+      "expected_new_cells": 1,
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "raw_response_sha256": "fc53b54c5cbfe5130f5c2002f2f4a39cc6e78d0f4abcd7561f66d453cf000731",
+    "raw_schema_status": "invalid_recommendation",
+    "receipt": [
+      {
+        "normalized": "e0",
+        "original": "geometry:e0",
+        "verified_fact_kind": "geometry"
+      }
+    ]
+  },
+  {
+    "accepted": false,
+    "call_id": 7,
+    "new_navigation_SR": false,
+    "raw_response_sha256": "edea52b7ddb4d701de5b6612f499b671bb6bc1dea9a0e06dd299f8ba517dc4d2",
+    "raw_schema_status": "invalid_recommendation",
+    "receipt": [],
+    "rejection": "unobserved source"
+  },
+  {
+    "accepted": true,
+    "call_id": 8,
+    "markdown_fence": true,
+    "new_navigation_SR": false,
+    "normalized": {
+      "counter_evidence": [],
+      "evidence_ids": [
+        "e0",
+        "e1"
+      ],
+      "observed_facts": [
+        {
+          "candidate_id": null,
+          "evidence_id": "e0",
+          "kind": "geometry",
+          "source_ids": [
+            "ledger"
+          ],
+          "statement": "Current position is [1, 9]."
+        },
+        {
+          "candidate_id": null,
+          "evidence_id": "e1",
+          "kind": "visual",
+          "source_ids": [
+            "target"
+          ],
+          "statement": "Target image shows a road with yellow center lines and houses."
+        }
+      ],
+      "ranked_candidates": [
+        "c02",
+        "c00",
+        "c03"
+      ],
+      "unknowns": [
+        "target_direction",
+        "unvisited_visual_content",
+        "target_relation"
+      ]
+    },
+    "raw_response_sha256": "ad01c59fd5f48548aad03e12f39eb2aad854761c0903754ce8d2605affc231ed",
+    "raw_schema_status": "ok",
+    "receipt": []
+  },
+  {
+    "accepted": true,
+    "call_id": 9,
+    "markdown_fence": true,
+    "new_navigation_SR": false,
+    "normalized": {
+      "candidate_id": "c02",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "e0",
+        "e1",
+        "ledger"
+      ],
+      "expected_new_cells": 2,
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "raw_response_sha256": "cba8d0e9e250fe65ca1c47cfeb9f32fc2d3b975ea9257f331eca00fbd6e54131",
+    "raw_schema_status": "ok",
+    "receipt": []
+  },
+  {
+    "accepted": true,
+    "call_id": 10,
+    "markdown_fence": true,
+    "new_navigation_SR": false,
+    "normalized": {
+      "candidate_id": "c02",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "ledger",
+        "current"
+      ],
+      "expected_new_cells": 2,
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "raw_response_sha256": "39ac869edb715bb8b469d8f5f6e21b165f7239e2cd895f1698d2dd396bf7e622",
+    "raw_schema_status": "ok",
+    "receipt": []
+  },
+  {
+    "accepted": false,
+    "call_id": 11,
+    "new_navigation_SR": false,
+    "raw_response_sha256": "ffdb05eafc58a8cb02fd5424cd6dd1f59a05d0aa17f595f0d07e5b0ab673232e",
+    "raw_schema_status": "invalid_recommendation",
+    "receipt": [],
+    "rejection": "unobserved source"
+  },
+  {
+    "accepted": false,
+    "call_id": 12,
+    "new_navigation_SR": false,
+    "raw_response_sha256": "fa839abb48334eadbd92e76163772b5ba75d75ddc0343b12083754db3ad83461",
+    "raw_schema_status": "invalid_recommendation",
+    "receipt": [],
+    "rejection": "unobserved source"
+  },
+  {
+    "accepted": false,
+    "call_id": 13,
+    "new_navigation_SR": false,
+    "raw_response_sha256": "3cd3539a1bf6920be8d6758606e5dc3c9a406ed6dbaced04589db897ef37c13c",
+    "raw_schema_status": "invalid_recommendation",
+    "receipt": [],
+    "rejection": "unobserved source"
+  },
+  {
+    "accepted": true,
+    "call_id": 14,
+    "markdown_fence": true,
+    "new_navigation_SR": false,
+    "normalized": {
+      "counter_evidence": [],
+      "evidence_ids": [
+        "e0",
+        "e1"
+      ],
+      "observed_facts": [
+        {
+          "candidate_id": null,
+          "evidence_id": "e0",
+          "kind": "geometry",
+          "source_ids": [
+            "ledger"
+          ],
+          "statement": "Current position is [1, 9]."
+        },
+        {
+          "candidate_id": null,
+          "evidence_id": "e1",
+          "kind": "visual",
+          "source_ids": [
+            "target"
+          ],
+          "statement": "Target image shows a road with yellow center lines and houses."
+        }
+      ],
+      "ranked_candidates": [
+        "c00",
+        "c02",
+        "c03"
+      ],
+      "unknowns": [
+        "target_direction",
+        "unvisited_visual_content",
+        "target_relation"
+      ]
+    },
+    "raw_response_sha256": "e995531d8d34feeb812a2b86b7c84795cfab44d3b98f55feb6cebd974289070b",
+    "raw_schema_status": "invalid_recommendation",
+    "receipt": [
+      {
+        "field": "counter_evidence",
+        "operation": "null_to_empty"
+      }
+    ]
+  }
+]

@@ -1,0 +1,35 @@
+{
+  "data_scope": "formal localS2 confirmation; independent S3 pending",
+  "source_sha256": {
+    "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/对照汇总.json": "85d043ff63f838e18700037427518c643de3c7c06d0eeb0d50ba48db8e03a2a7",
+    "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/验收结论.json": "96694ff74c206e1b062eed8a2ca6a1aa54891ec499a540ea79db6b39fc7e9500",
+    "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/独立复核.json": "1b99142ff02a1cdc9a24aa0cdae8d9f43d951736e1ea8890321a50c69b08fd35"
+  },
+  "interpretation_sha256": "6402a79064c29a43fafd1aba34e21ca56d44622869f3cf63d64d6298899156a9",
+  "figures": [
+    {
+      "id": "08_S2正式复验结果",
+      "caption": "冻结边缘线索在完整val100×3上将SR从73.00%提升至89.33%，SG从0.800降至0.320。图示固定100题、4张已用开发源图、三个训练种子，白色标记为seed0/1/2，不是置信区间；NoTarget探索与同容量ZeroEdge轨迹一致。目标均值/错误条件同时处理全局、局部与RGB边缘通道，阈值沿用训练校准的0.50。最终判定见验收结论；4图证据不代表独立S3或跨数据集泛化。",
+      "protocol": "完整固定val100×3，4源图/86不同路线，冻结5×5/B10",
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/对照汇总.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/08_S2正式复验结果.pdf",
+          "sha256": "70cc35b7425b740f3bb8b50cffe5d2375c79a79847d706c0b8be7669c2b500cb"
+        },
+        {
+          "path": "绘图/数据结果图/08_S2正式复验结果.svg",
+          "sha256": "9bec4412c071bf054f255f8a6569f18605316490fbe57f5e58397c45395785c4"
+        },
+        {
+          "path": "绘图/数据结果图/08_S2正式复验结果.png",
+          "sha256": "9bb656124327932bc67b214a6ddeb36aef78dd6162588e306018c5e346c6b772"
+        }
+      ],
+      "reproduction_script": "project/src/documents/stage_figures.py"
+    }
+  ],
+  "script_sha256": "1147ad8d3ac05a54b347fb23664a484f1d36ad5d2f3a03d15966c43634f05147"
+}

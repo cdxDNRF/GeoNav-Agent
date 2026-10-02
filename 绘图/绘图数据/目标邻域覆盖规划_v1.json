@@ -1,0 +1,32 @@
+{
+  "audit_sha256": "df64bf3dcff7165d7c911b68a8361de9d9b82237c467a2dc28cc957c96c17f00",
+  "figures": [
+    {
+      "caption": "目标邻域覆盖单因素开发验证：M0 SR77.13%/SG1.201，M1 78.40%/1.110，N 76.93%/1.281。未通过升级条件，收束本因素，默认保持。20已见源文件、同500题、三冻结权重、10×10/B20；N新1500轨迹，旧M0/M1按已审计SHA引用。标记为训练权重而非CI，SG为所有终局曼哈顿距离；不代表新源图或更大实际面积确认。",
+      "files": [
+        {
+          "path": "绘图/数据结果图/32_目标邻域覆盖规划成功率与距离.pdf",
+          "sha256": "07bca31cf98ee81855976097e2a572b006735933ad408d3a93bbb544e386a78c"
+        },
+        {
+          "path": "绘图/数据结果图/32_目标邻域覆盖规划成功率与距离.svg",
+          "sha256": "c8049c20ad073cda6656f1b3a84df3422206e7e2daa29dec4a0fbee052e93c33"
+        },
+        {
+          "path": "绘图/数据结果图/32_目标邻域覆盖规划成功率与距离.png",
+          "sha256": "647c45c36019c14f0d9263ffffc1cc11e7bd73147e2632b4747f8743c5c1c400"
+        }
+      ],
+      "id": "32_目标邻域覆盖规划成功率与距离",
+      "protocol": "known-source neighborhood-planning development,500tasks/20sources/3frozen weights",
+      "reproduction_script": "project/src/documents/summarize_neighborhood_coverage.py",
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1/主对照/对照汇总.json",
+        "DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1/独立复核.json"
+      ]
+    }
+  ],
+  "min_font_pt": 9,
+  "recommended_width_cm": 18,
+  "summary_sha256": "4b94ca01df6096329090084868dda49126723e60f43cfc4798c8b508ac68ca3e"
+}

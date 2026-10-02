@@ -1,0 +1,128 @@
+{
+  "audit": {
+    "checkpoint_replay": true,
+    "environment_replay": true,
+    "explorer_sha256": "d734ab8d9e755e697e7dd1cc8f8eb8b4055aae1780e1fc16d27749eab3115dfa",
+    "head_sha256": "f37734c1d19b38a99b7d589eac004a801d1571ae46df55cbf8161d97ea3bbb53",
+    "trajectory_sha256": "6ae0d18131b92bddde48381b0bf3f6eecd59f2f7935c58075d9f0a6eb9b913fe"
+  },
+  "by_distance": {
+    "4": {
+      "episodes": 20,
+      "mean_sg_all_episodes": 1.4,
+      "mean_steps": 8,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.02,
+      "repeat_visit_rate_micro": 0.025,
+      "sr": 0.6,
+      "successes": 12
+    },
+    "5": {
+      "episodes": 20,
+      "mean_sg_all_episodes": 1.15,
+      "mean_steps": 8.15,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.027698412698412698,
+      "repeat_visit_rate_micro": 0.03067484662576687,
+      "sr": 0.55,
+      "successes": 11
+    },
+    "6": {
+      "episodes": 20,
+      "mean_sg_all_episodes": 0.5,
+      "mean_steps": 8.3,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.015000000000000001,
+      "repeat_visit_rate_micro": 0.018072289156626505,
+      "sr": 0.75,
+      "successes": 15
+    },
+    "7": {
+      "episodes": 20,
+      "mean_sg_all_episodes": 0.25,
+      "mean_steps": 7.75,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.015,
+      "repeat_visit_rate_micro": 0.01935483870967742,
+      "sr": 0.95,
+      "successes": 19
+    },
+    "8": {
+      "episodes": 20,
+      "mean_sg_all_episodes": 0,
+      "mean_steps": 8,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.0,
+      "repeat_visit_rate_micro": 0.0,
+      "sr": 1.0,
+      "successes": 20
+    }
+  },
+  "by_source": {
+    "img_0": {
+      "episodes": 25,
+      "mean_sg_all_episodes": 0.96,
+      "mean_steps": 8.4,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.036,
+      "repeat_visit_rate_micro": 0.04285714285714286,
+      "sr": 0.68,
+      "successes": 17
+    },
+    "img_1": {
+      "episodes": 25,
+      "mean_sg_all_episodes": 0.76,
+      "mean_steps": 7.8,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.012,
+      "repeat_visit_rate_micro": 0.015384615384615385,
+      "sr": 0.72,
+      "successes": 18
+    },
+    "img_2": {
+      "episodes": 25,
+      "mean_sg_all_episodes": 0.56,
+      "mean_steps": 8.24,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.0,
+      "repeat_visit_rate_micro": 0.0,
+      "sr": 0.84,
+      "successes": 21
+    },
+    "img_3": {
+      "episodes": 25,
+      "mean_sg_all_episodes": 0.36,
+      "mean_steps": 7.72,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.014158730158730159,
+      "repeat_visit_rate_micro": 0.015544041450777202,
+      "sr": 0.84,
+      "successes": 21
+    }
+  },
+  "changed_actions": 0,
+  "interventions": 0,
+  "metrics": {
+    "episodes": 100,
+    "mean_sg_all_episodes": 0.66,
+    "mean_steps": 8.04,
+    "out_of_bounds_rate": 0.0,
+    "repeat_visit_rate_macro": 0.015539682539682539,
+    "repeat_visit_rate_micro": 0.018656716417910446,
+    "sr": 0.77,
+    "successes": 77
+  },
+  "rejection_counts": {
+    "uncalibrated_abstain": 804
+  },
+  "short_distance": {
+    "episodes": 40,
+    "mean_sg_all_episodes": 1.275,
+    "mean_steps": 8.075,
+    "out_of_bounds_rate": 0.0,
+    "repeat_visit_rate_macro": 0.02384920634920635,
+    "repeat_visit_rate_micro": 0.02786377708978328,
+    "sr": 0.575,
+    "successes": 23
+  }
+}

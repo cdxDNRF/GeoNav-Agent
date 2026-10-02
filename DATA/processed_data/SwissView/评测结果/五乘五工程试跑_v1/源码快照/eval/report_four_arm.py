@@ -1,0 +1,49 @@
+"""汇总已完成四臂目录；不调用API、不覆盖组内原始日志。"""
+import argparse
+import json
+from pathlib import Path
+import sys
+
+if __package__ in (None, ""):
+    sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
+from data.make_episodes import MASA
+from env.episode import write_immutable_files
+
+
+def report(root: Path):
+    root=Path(root)
+    suites=[]
+    for folder in sorted(root.iterdir() if root.exists() else []):
+        if not folder.is_dir() or not (folder/"验证汇总.json").exists(): continue
+        cfg=json.loads((folder/"运行配置.json").read_text(encoding='utf-8'))
+        summ=json.loads((folder/"验证汇总.json").read_text(encoding='utf-8'))
+        suites.append((cfg,summ,folder.name))
+    if not suites: raise ValueError('没有完成的实验臂')
+    task={x[0]['task_sha256'] for x in suites}
+    if len(task)!=1: raise ValueError('实验臂任务hash不一致')
+    lines=['# 四组实验对照报告','','## 实验定义','',
+           '- A：legacy单动作VLM；B：ranked_actions top-1；C：ranked_actions + 不读目标真值的ABAB Action Governor；D：不看图Frontier规则；Random另作sanity。',
+           '- 所有臂使用同一20道验证题、5×5、B=10、四动作和局部观测；20题来自4个区域，不是20个独立地理样本。',
+           '- 该报告是开发诊断，不是论文复现、显著性检验或test集结果。','',
+           '| 实验臂 | 完整题数 | 成功 | SR | 平均SG | 平均不同格数 | 重复率 | ABAB循环题数 | Governor改写 | API请求 |','|---|---:|---:|---:|---:|---:|---:|---:|---:|---:|']
+    for cfg,summ,name in suites:
+        m=summ['summary']['metrics_completed_only']; d=summ['summary']['diagnostics']; a=summ['summary']['api']
+        lines.append(f"| {name} | {summ['summary']['completed']}/{summ['summary']['scheduled']} | {m['successes'] if m else '—'} | {m['sr']:.1%} | {m['mean_sg_all_episodes']:.2f} | {d['mean_unique_cells']:.2f} | {m['repeat_visit_rate_micro']:.1%} | {d['repeat_cycle_episodes']} | {d['governor_overrides']} | {a['requests']} |")
+    lines += ['', '## 解读规则','',
+              '- A→B的变化只允许解释为输出协议从单动作到全排序，不能单独归因于“更强推理”。',
+              '- B→C的变化只允许解释为在线Governor的ABAB治理；C不调用Frontier，不使用目标坐标/距离/完整地图。',
+              '- D只说明网格覆盖管理效果，不说明视觉理解；不能把D的SR归因于VLM。',
+              '- API错误不计入正常导航失败；成功题和失败题的完整覆盖率必须同时报告。','',
+              '## 限制','',
+              '- 每臂一次运行，任务仅4个区域；未做模型随机重复、无图/错图消融、跨域或test评测。',
+              '- API usage记录只使用供应商返回值，价格未核验。',
+              '- 所有详细配置、逐步动作、请求和离线审计保存在各实验臂目录；历史三项验证目录未改写。','',
+              '该报告由离线汇总脚本生成，不产生API调用。']
+    out=root/'四组对照报告.md'
+    write_immutable_files({out:('\n'.join(lines)+'\n').encode('utf-8')})
+    return out
+
+if __name__=='__main__':
+    parser=argparse.ArgumentParser(description=__doc__)
+    parser.add_argument('--root',type=Path,default=MASA/'评测结果/四组实验_v1')
+    args=parser.parse_args(); print(report(args.root))

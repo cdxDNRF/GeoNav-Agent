@@ -1,0 +1,87 @@
+{
+  "default_sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b",
+  "fixtures": [
+    {
+      "expected": {
+        "lower_left": "blue",
+        "lower_right": "yellow",
+        "upper_left": "red",
+        "upper_right": "green"
+      },
+      "path": "DATA/processed_data/Masa/评测结果/云端8790接口检查_v1/诊断图像/quadrants_0.png",
+      "sha256": "3abbaf0c02c65415cc910e15cd972497e1ddec156e2e603cd1cafc68752221f3"
+    },
+    {
+      "expected": {
+        "lower_left": "yellow",
+        "lower_right": "green",
+        "upper_left": "blue",
+        "upper_right": "red"
+      },
+      "path": "DATA/processed_data/Masa/评测结果/云端8790接口检查_v1/诊断图像/quadrants_1.png",
+      "sha256": "906cbfa0b4e3f9689cc5d8eff8ce8d4b1d92a0255d2de3abdc3c66719e5a356a"
+    }
+  ],
+  "frozen_https_source_sha256": {
+    "agents/curl_transport.py": "9d8c2546c31995ff54f8011d905c0e4e3f6415d9ec469640eccda10d4f6fbabf",
+    "agents/vlm.py": "135dde6ee4cd79f5dd104a3b11f4effc61e32a1f2f743ec1383dc37bf83356dc"
+  },
+  "max_generation_requests": 9,
+  "max_model_list_requests": 1,
+  "max_tokens": 1024,
+  "new_navigation_episodes": 0,
+  "new_training_steps": 0,
+  "no_retries": true,
+  "per_model": "one text, then two counterfactual quadrant images iff text final JSON succeeds",
+  "providers": [
+    {
+      "api_key": "[REDACTED]",
+      "base_url": "http://127.0.0.1:8790/v1",
+      "max_tokens": 1024,
+      "model": "buddy/deepseek-v4.1-flash",
+      "provider_kind": "cloud_api_aggregator",
+      "response_format": "json_object",
+      "stream": false,
+      "temperature": 0,
+      "timeout_seconds": 45.0
+    },
+    {
+      "api_key": "[REDACTED]",
+      "base_url": "http://127.0.0.1:8790/v1",
+      "max_tokens": 1024,
+      "model": "buddy/glm-5.3-flash",
+      "provider_kind": "cloud_api_aggregator",
+      "response_format": "json_object",
+      "stream": false,
+      "temperature": 0,
+      "timeout_seconds": 45.0
+    },
+    {
+      "api_key": "[REDACTED]",
+      "base_url": "http://127.0.0.1:8790/v1",
+      "max_tokens": 1024,
+      "model": "qoder/qfmodel",
+      "provider_kind": "cloud_api_aggregator",
+      "response_format": "json_object",
+      "stream": false,
+      "temperature": 0,
+      "timeout_seconds": 45.0
+    }
+  ],
+  "registry_sha256": "acd821df06ae608f3bf01b4ae37b49a48876dd808c1bf08b64cd46dc443cf33b",
+  "source_sha256": {
+    "agents/cloud_gateway.py": "4fa84341ef935efa3fed5a5790ef6351cffebaec0a8553f931f984807884c287",
+    "eval/gateway_smoke.py": "c0352f3ca3ccc084034d0b35895bbbdcd0c767577c2a226529461861459f472e",
+    "tests/test_gateway_and_protection.py": "87245e59daa138a34e30d350abfebb388c30786cc8a5d913ab0e04af267fb280"
+  },
+  "stream": false,
+  "system": "Return only the requested JSON object. Do not include reasoning or additional keys.",
+  "temperature": 0,
+  "text_expected": {
+    "ok": true
+  },
+  "timeout_seconds": 45,
+  "utc": "2026-10-01T15:33:17.203237+00:00",
+  "version": "8790-cloud-options-smoke-v1",
+  "visual_prompt": "For the supplied image, name each quadrant color. Allowed values: red, green, blue, yellow. Return exactly upper_left, upper_right, lower_left, lower_right."
+}

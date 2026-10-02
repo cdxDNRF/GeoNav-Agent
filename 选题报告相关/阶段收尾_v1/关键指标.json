@@ -1,0 +1,1210 @@
+{
+  "version": "stage-figure-data-v1",
+  "scope": "snapshot 2026-09-30; no new experiments",
+  "metric_definitions": {
+    "SR": "预算内首次到达的成功比例；百分数显示时乘100",
+    "SG": "所有正常完成轨迹的终点曼哈顿距离平均，成功轨迹为0，单位：格",
+    "cloud_gate": "计划20题分母；DeepSeek两题中断的SG按8补入，不能与SG_nav混用",
+    "seeds": "三份独立训练权重；跨种子重复任务不算独立地图",
+    "ci": "28张源图先平均种子，再成组bootstrap，2000次；来自原实验结果，非本次重算"
+  },
+  "edge": {
+    "rows": [
+      {
+        "condition": "Baseline",
+        "label": "冻结探索/置零对照",
+        "sr": 0.7261904761904763,
+        "sg": 0.8642857142857143,
+        "short_sr": 0.4464285714285714,
+        "sr_by_seed": [
+          0.7071428571428572,
+          0.7714285714285715,
+          0.7
+        ],
+        "sg_by_seed": [
+          0.8785714285714286,
+          0.75,
+          0.9642857142857143
+        ],
+        "successes": 305,
+        "planned": 420,
+        "by_distance": {
+          "4": {
+            "sr_by_seed": [
+              0.39285714285714285,
+              0.4642857142857143,
+              0.4642857142857143
+            ],
+            "sr": 0.44047619047619047,
+            "sg": 2.0714285714285716,
+            "episodes_per_seed": 28
+          },
+          "5": {
+            "sr_by_seed": [
+              0.35714285714285715,
+              0.6071428571428571,
+              0.39285714285714285
+            ],
+            "sr": 0.4523809523809524,
+            "sg": 1.5476190476190477,
+            "episodes_per_seed": 28
+          },
+          "6": {
+            "sr_by_seed": [
+              0.8214285714285714,
+              0.7857142857142857,
+              0.6785714285714286
+            ],
+            "sr": 0.7619047619047619,
+            "sg": 0.6666666666666666,
+            "episodes_per_seed": 28
+          },
+          "7": {
+            "sr_by_seed": [
+              0.9642857142857143,
+              1.0,
+              1.0
+            ],
+            "sr": 0.9880952380952381,
+            "sg": 0.011904761904761904,
+            "episodes_per_seed": 28
+          },
+          "8": {
+            "sr_by_seed": [
+              1.0,
+              1.0,
+              0.9642857142857143
+            ],
+            "sr": 0.9880952380952381,
+            "sg": 0.023809523809523808,
+            "episodes_per_seed": 28
+          }
+        },
+        "source_file": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/对照汇总.json",
+        "source_field": "averages.Edge.Baseline",
+        "per_seed_source_pattern": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s{seed}/导航_Baseline_结果.json"
+      },
+      {
+        "condition": "CueFull",
+        "label": "边缘线索·真实目标",
+        "sr": 0.8857142857142857,
+        "sg": 0.34761904761904755,
+        "short_sr": 0.744047619047619,
+        "sr_by_seed": [
+          0.8785714285714286,
+          0.9142857142857143,
+          0.8642857142857143
+        ],
+        "sg_by_seed": [
+          0.37142857142857144,
+          0.2642857142857143,
+          0.40714285714285714
+        ],
+        "successes": 372,
+        "planned": 420,
+        "by_distance": {
+          "4": {
+            "sr_by_seed": [
+              0.8214285714285714,
+              0.8214285714285714,
+              0.7857142857142857
+            ],
+            "sr": 0.8095238095238094,
+            "sg": 0.6904761904761906,
+            "episodes_per_seed": 28
+          },
+          "5": {
+            "sr_by_seed": [
+              0.6071428571428571,
+              0.8214285714285714,
+              0.6071428571428571
+            ],
+            "sr": 0.6785714285714285,
+            "sg": 0.7976190476190476,
+            "episodes_per_seed": 28
+          },
+          "6": {
+            "sr_by_seed": [
+              1.0,
+              0.9285714285714286,
+              0.9285714285714286
+            ],
+            "sr": 0.9523809523809524,
+            "sg": 0.2380952380952381,
+            "episodes_per_seed": 28
+          },
+          "7": {
+            "sr_by_seed": [
+              0.9642857142857143,
+              1.0,
+              1.0
+            ],
+            "sr": 0.9880952380952381,
+            "sg": 0.011904761904761904,
+            "episodes_per_seed": 28
+          },
+          "8": {
+            "sr_by_seed": [
+              1.0,
+              1.0,
+              1.0
+            ],
+            "sr": 1.0,
+            "sg": 0.0,
+            "episodes_per_seed": 28
+          }
+        },
+        "source_file": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/对照汇总.json",
+        "source_field": "averages.Edge.CueFull",
+        "per_seed_source_pattern": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s{seed}/导航_CueFull_结果.json"
+      },
+      {
+        "condition": "CueMean",
+        "label": "边缘线索·均值目标",
+        "sr": 0.7023809523809524,
+        "sg": 0.8952380952380953,
+        "short_sr": 0.4702380952380952,
+        "sr_by_seed": [
+          0.6928571428571428,
+          0.7357142857142858,
+          0.6785714285714286
+        ],
+        "sg_by_seed": [
+          0.9071428571428571,
+          0.7714285714285715,
+          1.0071428571428571
+        ],
+        "successes": 295,
+        "planned": 420,
+        "by_distance": {
+          "4": {
+            "sr_by_seed": [
+              0.5,
+              0.4642857142857143,
+              0.5
+            ],
+            "sr": 0.48809523809523814,
+            "sg": 1.8095238095238095,
+            "episodes_per_seed": 28
+          },
+          "5": {
+            "sr_by_seed": [
+              0.35714285714285715,
+              0.6071428571428571,
+              0.39285714285714285
+            ],
+            "sr": 0.4523809523809524,
+            "sg": 1.5238095238095237,
+            "episodes_per_seed": 28
+          },
+          "6": {
+            "sr_by_seed": [
+              0.7857142857142857,
+              0.6785714285714286,
+              0.6071428571428571
+            ],
+            "sr": 0.6904761904761904,
+            "sg": 0.8809523809523809,
+            "episodes_per_seed": 28
+          },
+          "7": {
+            "sr_by_seed": [
+              0.8928571428571429,
+              0.9642857142857143,
+              1.0
+            ],
+            "sr": 0.9523809523809524,
+            "sg": 0.11904761904761905,
+            "episodes_per_seed": 28
+          },
+          "8": {
+            "sr_by_seed": [
+              0.9285714285714286,
+              0.9642857142857143,
+              0.8928571428571429
+            ],
+            "sr": 0.9285714285714285,
+            "sg": 0.14285714285714285,
+            "episodes_per_seed": 28
+          }
+        },
+        "source_file": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/对照汇总.json",
+        "source_field": "averages.Edge.CueMean",
+        "per_seed_source_pattern": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s{seed}/导航_CueMean_结果.json"
+      },
+      {
+        "condition": "CueWrong",
+        "label": "边缘线索·错误目标",
+        "sr": 0.7000000000000001,
+        "sg": 0.9285714285714285,
+        "short_sr": 0.3988095238095238,
+        "sr_by_seed": [
+          0.6785714285714286,
+          0.75,
+          0.6714285714285714
+        ],
+        "sg_by_seed": [
+          0.9357142857142857,
+          0.7857142857142857,
+          1.0642857142857143
+        ],
+        "successes": 294,
+        "planned": 420,
+        "by_distance": {
+          "4": {
+            "sr_by_seed": [
+              0.2857142857142857,
+              0.42857142857142855,
+              0.35714285714285715
+            ],
+            "sr": 0.35714285714285715,
+            "sg": 2.285714285714286,
+            "episodes_per_seed": 28
+          },
+          "5": {
+            "sr_by_seed": [
+              0.35714285714285715,
+              0.5714285714285714,
+              0.39285714285714285
+            ],
+            "sr": 0.44047619047619047,
+            "sg": 1.5833333333333333,
+            "episodes_per_seed": 28
+          },
+          "6": {
+            "sr_by_seed": [
+              0.8214285714285714,
+              0.7857142857142857,
+              0.6785714285714286
+            ],
+            "sr": 0.7619047619047619,
+            "sg": 0.6666666666666666,
+            "episodes_per_seed": 28
+          },
+          "7": {
+            "sr_by_seed": [
+              0.9642857142857143,
+              1.0,
+              1.0
+            ],
+            "sr": 0.9880952380952381,
+            "sg": 0.011904761904761904,
+            "episodes_per_seed": 28
+          },
+          "8": {
+            "sr_by_seed": [
+              0.9642857142857143,
+              0.9642857142857143,
+              0.9285714285714286
+            ],
+            "sr": 0.9523809523809524,
+            "sg": 0.09523809523809523,
+            "episodes_per_seed": 28
+          }
+        },
+        "source_file": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/对照汇总.json",
+        "source_field": "averages.Edge.CueWrong",
+        "per_seed_source_pattern": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s{seed}/导航_CueWrong_结果.json"
+      }
+    ],
+    "effects": {
+      "Baseline": {
+        "gain": 0.1595238095238095,
+        "lower_metric_change": -0.5166666666666667,
+        "observational_candidate": true,
+        "positive_seeds": 3,
+        "sg_source_interval": {
+          "interval95": [
+            -0.6714285714285715,
+            -0.3690476190476191
+          ],
+          "mean": -0.5166666666666667,
+          "resamples": 2000,
+          "scope": "known development source split; not independent confirmation",
+          "source_count": 28
+        },
+        "source_interval": {
+          "interval95": [
+            0.1142857142857143,
+            0.20714285714285713
+          ],
+          "mean": 0.15952380952380948,
+          "resamples": 2000,
+          "scope": "known development source split; not independent confirmation",
+          "source_count": 28
+        }
+      },
+      "MeanCue": {
+        "gain": 0.18333333333333332,
+        "lower_metric_change": -0.5476190476190476,
+        "observational_candidate": true,
+        "positive_seeds": 3,
+        "sg_source_interval": {
+          "interval95": [
+            -0.6952380952380952,
+            -0.4119047619047619
+          ],
+          "mean": -0.5476190476190477,
+          "resamples": 2000,
+          "scope": "known development source split; not independent confirmation",
+          "source_count": 28
+        },
+        "source_interval": {
+          "interval95": [
+            0.13809523809523808,
+            0.23333333333333334
+          ],
+          "mean": 0.18333333333333335,
+          "resamples": 2000,
+          "scope": "known development source split; not independent confirmation",
+          "source_count": 28
+        }
+      },
+      "WrongCue": {
+        "gain": 0.18571428571428572,
+        "lower_metric_change": -0.580952380952381,
+        "observational_candidate": true,
+        "positive_seeds": 3,
+        "sg_source_interval": {
+          "interval95": [
+            -0.7761904761904761,
+            -0.41904761904761906
+          ],
+          "mean": -0.5809523809523809,
+          "resamples": 2000,
+          "scope": "known development source split; not independent confirmation",
+          "source_count": 28
+        },
+        "source_interval": {
+          "interval95": [
+            0.1380952380952381,
+            0.23333333333333334
+          ],
+          "mean": 0.1857142857142857,
+          "resamples": 2000,
+          "scope": "known development source split; not independent confirmation",
+          "source_count": 28
+        }
+      },
+      "ZeroEdgeFull": {
+        "gain": 0.1595238095238095,
+        "lower_metric_change": -0.5166666666666667,
+        "observational_candidate": true,
+        "positive_seeds": 3,
+        "sg_source_interval": {
+          "interval95": [
+            -0.6714285714285715,
+            -0.3690476190476191
+          ],
+          "mean": -0.5166666666666667,
+          "resamples": 2000,
+          "scope": "known development source split; not independent confirmation",
+          "source_count": 28
+        },
+        "source_interval": {
+          "interval95": [
+            0.1142857142857143,
+            0.20714285714285713
+          ],
+          "mean": 0.15952380952380948,
+          "resamples": 2000,
+          "scope": "known development source split; not independent confirmation",
+          "source_count": 28
+        }
+      }
+    },
+    "short_effects": {
+      "Baseline": {
+        "gain": 0.2976190476190476,
+        "lower_metric_change": -1.0654761904761905,
+        "observational_candidate": true,
+        "positive_seeds": 3,
+        "sg_source_interval": {
+          "interval95": [
+            -1.4166666666666665,
+            -0.744047619047619
+          ],
+          "mean": -1.0654761904761905,
+          "resamples": 2000,
+          "scope": "known development source split; not independent confirmation",
+          "source_count": 28
+        },
+        "source_interval": {
+          "interval95": [
+            0.20833333333333331,
+            0.39285714285714285
+          ],
+          "mean": 0.2976190476190476,
+          "resamples": 2000,
+          "scope": "known development source split; not independent confirmation",
+          "source_count": 28
+        }
+      },
+      "ZeroEdgeFull": {
+        "gain": 0.2976190476190476,
+        "lower_metric_change": -1.0654761904761905,
+        "observational_candidate": true,
+        "positive_seeds": 3,
+        "sg_source_interval": {
+          "interval95": [
+            -1.4166666666666665,
+            -0.744047619047619
+          ],
+          "mean": -1.0654761904761905,
+          "resamples": 2000,
+          "scope": "known development source split; not independent confirmation",
+          "source_count": 28
+        },
+        "source_interval": {
+          "interval95": [
+            0.20833333333333331,
+            0.39285714285714285
+          ],
+          "mean": 0.2976190476190476,
+          "resamples": 2000,
+          "scope": "known development source split; not independent confirmation",
+          "source_count": 28
+        }
+      }
+    },
+    "offline": {
+      "0": {
+        "acceptance_coverage": 0.12428571428571429,
+        "accepted": 2088,
+        "accepted_precision": 0.9511494252873564,
+        "adjacent_direction_accuracy": 0.9625,
+        "adjacent_recall": 0.8866071428571428,
+        "by_source": {
+          "img_102": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_104": {
+            "accepted": 49,
+            "correct_accepted": 46
+          },
+          "img_106": {
+            "accepted": 63,
+            "correct_accepted": 58
+          },
+          "img_107": {
+            "accepted": 57,
+            "correct_accepted": 54
+          },
+          "img_118": {
+            "accepted": 82,
+            "correct_accepted": 80
+          },
+          "img_12": {
+            "accepted": 84,
+            "correct_accepted": 80
+          },
+          "img_121": {
+            "accepted": 88,
+            "correct_accepted": 57
+          },
+          "img_123": {
+            "accepted": 82,
+            "correct_accepted": 78
+          },
+          "img_129": {
+            "accepted": 80,
+            "correct_accepted": 76
+          },
+          "img_13": {
+            "accepted": 82,
+            "correct_accepted": 80
+          },
+          "img_16": {
+            "accepted": 84,
+            "correct_accepted": 77
+          },
+          "img_20": {
+            "accepted": 81,
+            "correct_accepted": 80
+          },
+          "img_30": {
+            "accepted": 78,
+            "correct_accepted": 74
+          },
+          "img_32": {
+            "accepted": 81,
+            "correct_accepted": 80
+          },
+          "img_4": {
+            "accepted": 77,
+            "correct_accepted": 77
+          },
+          "img_5": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_64": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_72": {
+            "accepted": 67,
+            "correct_accepted": 64
+          },
+          "img_8": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_82": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_83": {
+            "accepted": 81,
+            "correct_accepted": 80
+          },
+          "img_85": {
+            "accepted": 81,
+            "correct_accepted": 80
+          },
+          "img_86": {
+            "accepted": 76,
+            "correct_accepted": 74
+          },
+          "img_90": {
+            "accepted": 38,
+            "correct_accepted": 36
+          },
+          "img_92": {
+            "accepted": 24,
+            "correct_accepted": 24
+          },
+          "img_94": {
+            "accepted": 88,
+            "correct_accepted": 74
+          },
+          "img_95": {
+            "accepted": 86,
+            "correct_accepted": 78
+          },
+          "img_97": {
+            "accepted": 79,
+            "correct_accepted": 79
+          }
+        },
+        "checkpoint_replay": true,
+        "checkpoint_sha256": "2c2e4167b14a9a439b81efd78e80436ffde75d35d5c6d75274c3d60ecaa59b2c",
+        "class_accuracy": 0.9783928571428572,
+        "correct_accepted": 1986,
+        "non_adjacent_constant_accuracy": 0.8666666666666667,
+        "precision_interval": {
+          "interval95": [
+            0.9201241356796207,
+            0.9748188645354046
+          ],
+          "resamples": 2000,
+          "scope": "Known development threshold screening; no independent precision guarantee.",
+          "source_count": 28,
+          "zero_accept_resamples": 0
+        },
+        "predictions_sha256": "3c84ccf9f8cb7814908a8c88bafe7065606a45edfd8f1c2e481e70933c6759e4",
+        "samples": 16800,
+        "sources_with_acceptances": 28,
+        "threshold": 0.5
+      },
+      "1": {
+        "acceptance_coverage": 0.1257738095238095,
+        "accepted": 2113,
+        "accepted_precision": 0.9465215333648841,
+        "adjacent_direction_accuracy": 0.9633928571428572,
+        "adjacent_recall": 0.8928571428571429,
+        "by_source": {
+          "img_102": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_104": {
+            "accepted": 53,
+            "correct_accepted": 47
+          },
+          "img_106": {
+            "accepted": 65,
+            "correct_accepted": 59
+          },
+          "img_107": {
+            "accepted": 59,
+            "correct_accepted": 56
+          },
+          "img_118": {
+            "accepted": 82,
+            "correct_accepted": 80
+          },
+          "img_12": {
+            "accepted": 84,
+            "correct_accepted": 80
+          },
+          "img_121": {
+            "accepted": 87,
+            "correct_accepted": 56
+          },
+          "img_123": {
+            "accepted": 82,
+            "correct_accepted": 79
+          },
+          "img_129": {
+            "accepted": 79,
+            "correct_accepted": 76
+          },
+          "img_13": {
+            "accepted": 82,
+            "correct_accepted": 80
+          },
+          "img_16": {
+            "accepted": 84,
+            "correct_accepted": 77
+          },
+          "img_20": {
+            "accepted": 82,
+            "correct_accepted": 80
+          },
+          "img_30": {
+            "accepted": 87,
+            "correct_accepted": 79
+          },
+          "img_32": {
+            "accepted": 82,
+            "correct_accepted": 80
+          },
+          "img_4": {
+            "accepted": 78,
+            "correct_accepted": 78
+          },
+          "img_5": {
+            "accepted": 79,
+            "correct_accepted": 79
+          },
+          "img_64": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_72": {
+            "accepted": 68,
+            "correct_accepted": 64
+          },
+          "img_8": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_82": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_83": {
+            "accepted": 82,
+            "correct_accepted": 80
+          },
+          "img_85": {
+            "accepted": 82,
+            "correct_accepted": 80
+          },
+          "img_86": {
+            "accepted": 77,
+            "correct_accepted": 76
+          },
+          "img_90": {
+            "accepted": 40,
+            "correct_accepted": 38
+          },
+          "img_92": {
+            "accepted": 26,
+            "correct_accepted": 24
+          },
+          "img_94": {
+            "accepted": 87,
+            "correct_accepted": 74
+          },
+          "img_95": {
+            "accepted": 86,
+            "correct_accepted": 78
+          },
+          "img_97": {
+            "accepted": 80,
+            "correct_accepted": 80
+          }
+        },
+        "checkpoint_replay": true,
+        "checkpoint_sha256": "f37734c1d19b38a99b7d589eac004a801d1571ae46df55cbf8161d97ea3bbb53",
+        "class_accuracy": 0.9783928571428572,
+        "correct_accepted": 2000,
+        "non_adjacent_constant_accuracy": 0.8666666666666667,
+        "precision_interval": {
+          "interval95": [
+            0.9155590613673613,
+            0.9704394811528374
+          ],
+          "resamples": 2000,
+          "scope": "Known development threshold screening; no independent precision guarantee.",
+          "source_count": 28,
+          "zero_accept_resamples": 0
+        },
+        "predictions_sha256": "b3689de09da53c43e0d8f76f1ab5d82a57e79ca7b3420ccade7751d608e3bf93",
+        "samples": 16800,
+        "sources_with_acceptances": 28,
+        "threshold": 0.5
+      },
+      "2": {
+        "acceptance_coverage": 0.12214285714285714,
+        "accepted": 2052,
+        "accepted_precision": 0.9580896686159844,
+        "adjacent_direction_accuracy": 0.9625,
+        "adjacent_recall": 0.8776785714285714,
+        "by_source": {
+          "img_102": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_104": {
+            "accepted": 52,
+            "correct_accepted": 47
+          },
+          "img_106": {
+            "accepted": 61,
+            "correct_accepted": 57
+          },
+          "img_107": {
+            "accepted": 57,
+            "correct_accepted": 56
+          },
+          "img_118": {
+            "accepted": 82,
+            "correct_accepted": 80
+          },
+          "img_12": {
+            "accepted": 83,
+            "correct_accepted": 80
+          },
+          "img_121": {
+            "accepted": 90,
+            "correct_accepted": 53
+          },
+          "img_123": {
+            "accepted": 80,
+            "correct_accepted": 78
+          },
+          "img_129": {
+            "accepted": 78,
+            "correct_accepted": 75
+          },
+          "img_13": {
+            "accepted": 82,
+            "correct_accepted": 80
+          },
+          "img_16": {
+            "accepted": 80,
+            "correct_accepted": 77
+          },
+          "img_20": {
+            "accepted": 81,
+            "correct_accepted": 80
+          },
+          "img_30": {
+            "accepted": 84,
+            "correct_accepted": 76
+          },
+          "img_32": {
+            "accepted": 81,
+            "correct_accepted": 80
+          },
+          "img_4": {
+            "accepted": 76,
+            "correct_accepted": 76
+          },
+          "img_5": {
+            "accepted": 79,
+            "correct_accepted": 79
+          },
+          "img_64": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_72": {
+            "accepted": 62,
+            "correct_accepted": 62
+          },
+          "img_8": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_82": {
+            "accepted": 80,
+            "correct_accepted": 80
+          },
+          "img_83": {
+            "accepted": 79,
+            "correct_accepted": 79
+          },
+          "img_85": {
+            "accepted": 78,
+            "correct_accepted": 77
+          },
+          "img_86": {
+            "accepted": 74,
+            "correct_accepted": 73
+          },
+          "img_90": {
+            "accepted": 37,
+            "correct_accepted": 35
+          },
+          "img_92": {
+            "accepted": 25,
+            "correct_accepted": 24
+          },
+          "img_94": {
+            "accepted": 78,
+            "correct_accepted": 71
+          },
+          "img_95": {
+            "accepted": 74,
+            "correct_accepted": 72
+          },
+          "img_97": {
+            "accepted": 79,
+            "correct_accepted": 79
+          }
+        },
+        "checkpoint_replay": true,
+        "checkpoint_sha256": "045984f575be3e660f04c7237fc65a515abf6d2f1a0d660adb93a4e812925a53",
+        "class_accuracy": 0.978452380952381,
+        "correct_accepted": 1966,
+        "non_adjacent_constant_accuracy": 0.8666666666666667,
+        "precision_interval": {
+          "interval95": [
+            0.9203190272328018,
+            0.983004829708833
+          ],
+          "resamples": 2000,
+          "scope": "Known development threshold screening; no independent precision guarantee.",
+          "source_count": 28,
+          "zero_accept_resamples": 0
+        },
+        "predictions_sha256": "162b05efcc628db54defa221d4d40b56bb71474f3cd9053cfac0d616dbc2e8e1",
+        "samples": 16800,
+        "sources_with_acceptances": 28,
+        "threshold": 0.5
+      }
+    },
+    "thresholds": {
+      "Edge": {
+        "0": 0.5,
+        "1": 0.5,
+        "2": 0.5
+      },
+      "ZeroEdge": {
+        "0": null,
+        "1": null,
+        "2": null
+      }
+    },
+    "rules": {
+      "FixedRegion": {
+        "episodes": 140,
+        "mean_sg_all_episodes": 2.3714285714285714,
+        "mean_steps": 9.45,
+        "out_of_bounds_rate": 0.02343159486016629,
+        "repeat_visit_rate_macro": 0.06714285714285714,
+        "repeat_visit_rate_micro": 0.0710506424792139,
+        "sr": 0.29285714285714287,
+        "successes": 41
+      },
+      "Frontier": {
+        "episodes": 140,
+        "mean_sg_all_episodes": 2.085714285714286,
+        "mean_steps": 8.528571428571428,
+        "out_of_bounds_rate": 0.0,
+        "repeat_visit_rate_macro": 0.0035714285714285718,
+        "repeat_visit_rate_micro": 0.0041876046901172526,
+        "sr": 0.5214285714285715,
+        "successes": 73
+      }
+    },
+    "protocol": "已知开发140题 / 28张源图 / 3训练种子 / 5×5 / B=10 / C4–C8",
+    "status": "开发候选与复核通过；正式S2待固定val100×3复验；默认未替换"
+  },
+  "formal_val": {
+    "rows": [
+      {
+        "label": "历史动作筛选",
+        "sr": 0.66,
+        "sg": 1.0200000000000002,
+        "sr_by_seed": [
+          0.66,
+          0.72,
+          0.6
+        ],
+        "source_file": "DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1/对照汇总.json",
+        "source_field": "averages.HistoricalBoundary.Full"
+      },
+      {
+        "label": "Small·真实目标",
+        "sr": 0.6366666666666666,
+        "sg": 1.1533333333333333,
+        "sr_by_seed": [
+          0.59,
+          0.62,
+          0.7
+        ],
+        "source_file": "DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1/对照汇总.json",
+        "source_field": "averages.Small256_Full.Full"
+      },
+      {
+        "label": "Spatial·真实目标",
+        "sr": 0.6866666666666666,
+        "sg": 0.9166666666666666,
+        "sr_by_seed": [
+          0.75,
+          0.66,
+          0.65
+        ],
+        "source_file": "DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1/对照汇总.json",
+        "source_field": "averages.Spatial256_Full.Full"
+      },
+      {
+        "label": "Small·无目标（默认）",
+        "sr": 0.73,
+        "sg": 0.8000000000000002,
+        "sr_by_seed": [
+          0.75,
+          0.77,
+          0.67
+        ],
+        "source_file": "DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1/对照汇总.json",
+        "source_field": "averages.Small256_NoTarget.NoTarget"
+      },
+      {
+        "label": "Spatial·无目标",
+        "sr": 0.7399999999999999,
+        "sg": 0.79,
+        "sr_by_seed": [
+          0.69,
+          0.78,
+          0.75
+        ],
+        "source_file": "DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1/对照汇总.json",
+        "source_field": "averages.Spatial256_NoTarget.NoTarget"
+      }
+    ],
+    "rules": {
+      "FixedRegion": {
+        "episodes": 100,
+        "mean_sg_all_episodes": 2.33,
+        "mean_steps": 9.42,
+        "out_of_bounds_rate": 0.01592356687898089,
+        "repeat_visit_rate_macro": 0.044,
+        "repeat_visit_rate_micro": 0.04670912951167728,
+        "sr": 0.29,
+        "successes": 29
+      },
+      "Frontier": {
+        "episodes": 100,
+        "mean_sg_all_episodes": 2.11,
+        "mean_steps": 8.61,
+        "out_of_bounds_rate": 0.0,
+        "repeat_visit_rate_macro": 0.007,
+        "repeat_visit_rate_micro": 0.008130081300813009,
+        "sr": 0.53,
+        "successes": 53
+      }
+    },
+    "protocol": "固定val100 / 4张已用开发源图 / 3训练种子 / 5×5 / B=10"
+  },
+  "cloud": {
+    "rows": [
+      {
+        "label": "Gemma",
+        "model": "Gemma",
+        "sr": 0.45,
+        "sg": 2.2,
+        "successes": 9,
+        "completed": 20,
+        "planned": 20,
+        "source_file": "DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v2/对照汇总.json",
+        "source_field": "jobs.Gemma.metrics"
+      },
+      {
+        "label": "DeepSeek\n非思考",
+        "model": "DeepSeek",
+        "sr": 0.2,
+        "sg": 2.9,
+        "successes": 4,
+        "completed": 18,
+        "planned": 20,
+        "source_file": "DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v2/对照汇总.json",
+        "source_field": "jobs.DeepSeek.metrics"
+      },
+      {
+        "label": "Frontier",
+        "model": "Frontier",
+        "sr": 0.5,
+        "sg": 2.25,
+        "successes": 10,
+        "completed": 20,
+        "planned": 20,
+        "source_file": "DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v2/对照汇总.json",
+        "source_field": "jobs.Frontier.metrics"
+      }
+    ],
+    "protocol": "固定val20 / 同G策略 / 单轮 / 5×5 / B=10"
+  },
+  "historical_milestones": [
+    {
+      "label": "PBRS",
+      "protocol": "val100×3（历史批次）",
+      "sr": 0.44333333333333336,
+      "sg": 1.5066666666666668,
+      "sr_by_seed": [
+        0.33,
+        0.5,
+        0.5
+      ],
+      "source_file": "DATA/processed_data/Masa/训练结果/好奇心配对验证_v3/配对汇总.json",
+      "source_field": "arms.PBRS"
+    },
+    {
+      "label": "Curiosity",
+      "protocol": "val100×3（历史批次）",
+      "sr": 0.3633333333333333,
+      "sg": 1.8133333333333332,
+      "sr_by_seed": [
+        0.43,
+        0.25,
+        0.41
+      ],
+      "source_file": "DATA/processed_data/Masa/训练结果/好奇心配对验证_v3/配对汇总.json",
+      "source_field": "arms.Curiosity"
+    },
+    {
+      "label": "GatedCuriosity",
+      "protocol": "val100×3（历史批次）",
+      "sr": 0.44,
+      "sg": 1.5233333333333334,
+      "sr_by_seed": [
+        0.45,
+        0.46,
+        0.41
+      ],
+      "source_file": "DATA/processed_data/Masa/训练结果/好奇心配对验证_v3/配对汇总.json",
+      "source_field": "arms.GatedCuriosity"
+    },
+    {
+      "label": "Boundary",
+      "protocol": "val100×3（历史批次）",
+      "sr": 0.66,
+      "sg": 1.0200000000000002,
+      "sr_by_seed": [
+        0.66,
+        0.72,
+        0.6
+      ],
+      "source_file": "DATA/processed_data/Masa/训练结果/合法动作协作验证_v1/配对汇总.json",
+      "source_field": "arms.Boundary"
+    },
+    {
+      "label": "PBRS完整导航",
+      "protocol": "已知开发140×3",
+      "sr": 0.6595238095238095,
+      "sg": 1.1738095238095239,
+      "sr_by_seed": [
+        0.6357142857142857,
+        0.6642857142857143,
+        0.6785714285714286
+      ],
+      "source_file": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/对照汇总.json",
+      "source_field": "averages.Small256.Full"
+    },
+    {
+      "label": "PBRS＋局部匹配",
+      "protocol": "已知开发140×3",
+      "sr": 0.688095238095238,
+      "sg": 1.0523809523809524,
+      "sr_by_seed": [
+        0.7357142857142858,
+        0.6285714285714286,
+        0.7
+      ],
+      "source_file": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/对照汇总.json",
+      "source_field": "averages.Spatial256.Full"
+    },
+    {
+      "label": "冻结强探索",
+      "protocol": "已知开发140×3",
+      "sr": 0.7261904761904763,
+      "sg": 0.8642857142857143,
+      "sr_by_seed": [
+        0.7071428571428572,
+        0.7714285714285715,
+        0.7
+      ],
+      "source_file": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/对照汇总.json",
+      "source_field": "averages.Small256.NoTarget"
+    },
+    {
+      "label": "五分类可信线索",
+      "protocol": "已知开发140×3",
+      "sr": 0.7261904761904763,
+      "sg": 0.8642857142857143,
+      "sr_by_seed": [
+        0.7071428571428572,
+        0.7714285714285715,
+        0.7
+      ],
+      "source_file": "DATA/processed_data/Masa/训练结果/可信邻接目标线索与探索协作_v1/对照汇总.json",
+      "source_field": "averages.CueFull"
+    },
+    {
+      "label": "邻接/方向解耦",
+      "protocol": "已知开发140×3",
+      "sr": 0.7261904761904763,
+      "sg": 0.8642857142857143,
+      "sr_by_seed": [
+        0.7071428571428572,
+        0.7714285714285715,
+        0.7
+      ],
+      "source_file": "DATA/processed_data/Masa/训练结果/邻接与方向解耦对照_v1/对照汇总.json",
+      "source_field": "averages.CueFull"
+    },
+    {
+      "label": "边缘连续性候选",
+      "protocol": "已知开发140×3",
+      "sr": 0.8857142857142857,
+      "sg": 0.34761904761904755,
+      "sr_by_seed": [
+        0.8785714285714286,
+        0.9142857142857143,
+        0.8642857142857143
+      ],
+      "source_file": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/对照汇总.json",
+      "source_field": "averages.Edge.CueFull"
+    }
+  ],
+  "source_sha256": {
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/对照汇总.json": "5bba212779da7aa65ccd1b0e0b66ed3860bf74f7806b684d062be9cc66246238",
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/验收结论.json": "59f68d833bb9a6732af68e00189d76e8492307c248783357be92898ba83d8f18",
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/独立复核.json": "80f6c324df798b3b263dbf63d525d750316c770fa79f498266c3d71450cd72aa",
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s0/导航_Baseline_结果.json": "5650df2246e045dc2440fc97d6f6f0ee74364a42a992437f6947f61c6cc1ef09",
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s1/导航_Baseline_结果.json": "7653cdc5e2f5cfd3862c7d78175b01f793190de8e7c1e8f7b430cf4723c0e070",
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s2/导航_Baseline_结果.json": "3279c18b49533dab8afe126d59a4974d41a4909400574ec0fa8595bfe025b05b",
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s0/导航_CueFull_结果.json": "dddc421c86565b91cc8e9ddca6cd621bb92db133dc427aebc6c88bb612655563",
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s1/导航_CueFull_结果.json": "1d3a466c0612bfb1937f8358e4d083b30993e79f545599f9ca6f885d8cd2daae",
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s2/导航_CueFull_结果.json": "7027cc8b0dac02e3a5980ad51af3cac3aa4f959d86cf314031a19b2a100bcb9d",
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s0/导航_CueMean_结果.json": "af8ff469426d48fccf68ce5273a6dd06fe6729d0b0dce3584facd393f6b71bf1",
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s1/导航_CueMean_结果.json": "71e9d1d761bd7b893793821bb15b9cd1d84d0904537302d9024bee67ae15af6f",
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s2/导航_CueMean_结果.json": "da50ed315b6ce021f444b519fbe66445460a183faa2e48d3fe548dab16ad4e30",
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s0/导航_CueWrong_结果.json": "8d31e0ebcdb936b982f5fe03b3886f99d01a2bb24f6fe0efbb9a112c6cc8b3ef",
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s1/导航_CueWrong_结果.json": "22405e9b54c209cc1b9ab9458ee4f7d87dbc289f934b7e73989312b8c635f5c0",
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s2/导航_CueWrong_结果.json": "37af8bd123f3e6f7f90eb0acea2b54b99067abb4478718768f9252781dd9cc4f",
+    "DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1/对照汇总.json": "8200cd1c7eb1cc14ddf583356b21dc5c7552236ca396d762ee50ab1a4634a4d4",
+    "DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v2/对照汇总.json": "962ac0f25b138a3b07c4524c5b043d30bf2da6bcfdccfdf5751670f53d742d17",
+    "DATA/processed_data/Masa/训练结果/好奇心配对验证_v3/配对汇总.json": "6c5a68913f3b64095dbb83d5ebb5928048ce779d57f959b21f98261bcba535cc",
+    "DATA/processed_data/Masa/训练结果/合法动作协作验证_v1/配对汇总.json": "31029bd5939173c709d73c2df57b8a1e6caded2d902443a0f44f0ed051522a47",
+    "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/对照汇总.json": "22bc406ec33133d4eb066740e96f645fd82387c33bb914e600e3a03bde0893c3",
+    "DATA/processed_data/Masa/训练结果/可信邻接目标线索与探索协作_v1/对照汇总.json": "ae5c400b3ae1b9c8fdcd5de7318263e801223b8d7f516279d4f84a294e82caa2",
+    "DATA/processed_data/Masa/训练结果/邻接与方向解耦对照_v1/对照汇总.json": "a6e718110f74483ed266c88d4b071fc2deaaf4f291eced6e36f9865c35fcb7d0"
+  }
+}

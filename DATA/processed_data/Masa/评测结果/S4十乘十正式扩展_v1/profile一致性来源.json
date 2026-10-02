@@ -1,0 +1,122 @@
+{
+  "actions": 5491,
+  "all_actions_inputs_gates_and_outcomes_equal": true,
+  "episodes": 300,
+  "max_abs_logits_difference": 1.9073486328125e-06,
+  "max_abs_probability_difference": 4.172325134277344e-07,
+  "proof": [
+    {
+      "all_actions_inputs_gates_and_outcomes_equal": true,
+      "arm": "Edge",
+      "condition": "Baseline",
+      "episodes": 20,
+      "seed": 0
+    },
+    {
+      "all_actions_inputs_gates_and_outcomes_equal": true,
+      "arm": "Edge",
+      "condition": "CueFull",
+      "episodes": 20,
+      "seed": 0
+    },
+    {
+      "all_actions_inputs_gates_and_outcomes_equal": true,
+      "arm": "Edge",
+      "condition": "CueMean",
+      "episodes": 20,
+      "seed": 0
+    },
+    {
+      "all_actions_inputs_gates_and_outcomes_equal": true,
+      "arm": "Edge",
+      "condition": "CueWrong",
+      "episodes": 20,
+      "seed": 0
+    },
+    {
+      "all_actions_inputs_gates_and_outcomes_equal": true,
+      "arm": "Edge",
+      "condition": "Baseline",
+      "episodes": 20,
+      "seed": 1
+    },
+    {
+      "all_actions_inputs_gates_and_outcomes_equal": true,
+      "arm": "Edge",
+      "condition": "CueFull",
+      "episodes": 20,
+      "seed": 1
+    },
+    {
+      "all_actions_inputs_gates_and_outcomes_equal": true,
+      "arm": "Edge",
+      "condition": "CueMean",
+      "episodes": 20,
+      "seed": 1
+    },
+    {
+      "all_actions_inputs_gates_and_outcomes_equal": true,
+      "arm": "Edge",
+      "condition": "CueWrong",
+      "episodes": 20,
+      "seed": 1
+    },
+    {
+      "all_actions_inputs_gates_and_outcomes_equal": true,
+      "arm": "Edge",
+      "condition": "Baseline",
+      "episodes": 20,
+      "seed": 2
+    },
+    {
+      "all_actions_inputs_gates_and_outcomes_equal": true,
+      "arm": "Edge",
+      "condition": "CueFull",
+      "episodes": 20,
+      "seed": 2
+    },
+    {
+      "all_actions_inputs_gates_and_outcomes_equal": true,
+      "arm": "Edge",
+      "condition": "CueMean",
+      "episodes": 20,
+      "seed": 2
+    },
+    {
+      "all_actions_inputs_gates_and_outcomes_equal": true,
+      "arm": "Edge",
+      "condition": "CueWrong",
+      "episodes": 20,
+      "seed": 2
+    },
+    {
+      "all_actions_inputs_gates_and_outcomes_equal": true,
+      "arm": "ZeroEdge",
+      "condition": "CueFull",
+      "episodes": 20,
+      "seed": 0
+    },
+    {
+      "all_actions_inputs_gates_and_outcomes_equal": true,
+      "arm": "ZeroEdge",
+      "condition": "CueFull",
+      "episodes": 20,
+      "seed": 1
+    },
+    {
+      "all_actions_inputs_gates_and_outcomes_equal": true,
+      "arm": "ZeroEdge",
+      "condition": "CueFull",
+      "episodes": 20,
+      "seed": 2
+    }
+  ],
+  "scope": "Existing20 pilot tasks; image-feature computation equivalence, not new SR evidence.",
+  "seconds": 50.25868999998784,
+  "source_sha256": {
+    "check_scaled_fast_execution.py": "5dd77f4e0623adcc2c3f739a55b7a6ef35f921c70d290a814c561c3625a9f42b",
+    "precomputed_scaled_edge.py": "93d38dd58b3707a51936b9a4f7851f071fc3ab9d69546fdb3df1e671a3da9586",
+    "scaled_fast_execution.py": "72bef111e1394671784fef16c22103a632c025ad84fa243583f6bf05b450b07f"
+  },
+  "status": "passed"
+}

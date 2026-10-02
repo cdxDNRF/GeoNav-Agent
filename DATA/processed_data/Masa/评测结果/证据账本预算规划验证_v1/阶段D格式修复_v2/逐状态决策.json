@@ -1,0 +1,483 @@
+[
+  {
+    "all_responses_valid": false,
+    "arm": "M2",
+    "call_ids": [
+      7
+    ],
+    "evidence": null,
+    "input_sha256": "9b8a32d1105b6a538c4dbdf6f8f2e3046eec62d2cca84a3f78ce26474090de72",
+    "phase": "D",
+    "plan": null,
+    "repeat": 0,
+    "state": 0,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "API_or_parse_failure",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": true,
+    "arm": "M4",
+    "call_ids": [
+      8,
+      9
+    ],
+    "evidence": {
+      "counter_evidence": [],
+      "evidence_ids": [
+        "e0",
+        "e1"
+      ],
+      "observed_facts": [
+        {
+          "candidate_id": null,
+          "evidence_id": "e0",
+          "kind": "geometry",
+          "source_ids": [
+            "ledger"
+          ],
+          "statement": "Current position is [1, 9]."
+        },
+        {
+          "candidate_id": null,
+          "evidence_id": "e1",
+          "kind": "visual",
+          "source_ids": [
+            "target"
+          ],
+          "statement": "Target image shows a road with yellow center lines and houses."
+        }
+      ],
+      "ranked_candidates": [
+        "c02",
+        "c00",
+        "c03"
+      ],
+      "unknowns": [
+        "target_direction",
+        "unvisited_visual_content",
+        "target_relation"
+      ]
+    },
+    "input_sha256": "9b8a32d1105b6a538c4dbdf6f8f2e3046eec62d2cca84a3f78ce26474090de72",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c02",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "e0",
+        "e1",
+        "ledger"
+      ],
+      "expected_new_cells": 2,
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 0,
+    "state": 0,
+    "status": {
+      "candidate_id": "c02",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        2,
+        -2
+      ]
+    }
+  },
+  {
+    "ablation": "hidden",
+    "all_responses_valid": true,
+    "arm": "M4_ablation",
+    "call_ids": [
+      10
+    ],
+    "evidence": {
+      "counter_evidence": [],
+      "evidence_ids": [],
+      "observed_facts": [],
+      "ranked_candidates": [],
+      "unknowns": [
+        "target_direction",
+        "unvisited_visual_content"
+      ]
+    },
+    "input_sha256": "9b8a32d1105b6a538c4dbdf6f8f2e3046eec62d2cca84a3f78ce26474090de72",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c02",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "ledger",
+        "current"
+      ],
+      "expected_new_cells": 2,
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 0,
+    "shared_E_call_id": 8,
+    "state": 0,
+    "status": {
+      "candidate_id": "c02",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        2,
+        -2
+      ]
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M4",
+    "call_ids": [
+      11
+    ],
+    "evidence": null,
+    "input_sha256": "3537035cf46c038ee447973b89ccacf4105ffc8d786dac1273b0f2b142ba025a",
+    "phase": "D",
+    "plan": null,
+    "repeat": 0,
+    "state": 1,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "API_or_parse_failure",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M2",
+    "call_ids": [
+      12
+    ],
+    "evidence": null,
+    "input_sha256": "3537035cf46c038ee447973b89ccacf4105ffc8d786dac1273b0f2b142ba025a",
+    "phase": "D",
+    "plan": null,
+    "repeat": 0,
+    "state": 1,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "API_or_parse_failure",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M4_ablation",
+    "call_ids": [],
+    "evidence": null,
+    "phase": "D",
+    "plan": null,
+    "repeat": 0,
+    "state": 1,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "no_usable_full_E_or_circuit",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M2",
+    "call_ids": [
+      13
+    ],
+    "evidence": null,
+    "input_sha256": "5b7703bb0d48edb1274193d3f3c5cc300d7962795e10f1c20a3c799a2ea8bc33",
+    "phase": "D",
+    "plan": null,
+    "repeat": 0,
+    "state": 2,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "API_or_parse_failure",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M4",
+    "call_ids": [],
+    "evidence": null,
+    "phase": "D",
+    "plan": null,
+    "repeat": 0,
+    "state": 2,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "provider_status_or_three_consecutive_errors",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M4_ablation",
+    "call_ids": [],
+    "evidence": null,
+    "phase": "D",
+    "plan": null,
+    "repeat": 0,
+    "state": 2,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "no_usable_full_E_or_circuit",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M2",
+    "call_ids": [],
+    "evidence": null,
+    "phase": "D",
+    "plan": null,
+    "repeat": 0,
+    "state": 3,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "provider_status_or_three_consecutive_errors",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M4",
+    "call_ids": [],
+    "evidence": null,
+    "phase": "D",
+    "plan": null,
+    "repeat": 0,
+    "state": 3,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "provider_status_or_three_consecutive_errors",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M4_ablation",
+    "call_ids": [],
+    "evidence": null,
+    "phase": "D",
+    "plan": null,
+    "repeat": 0,
+    "state": 3,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "provider_status_or_three_consecutive_errors",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M2",
+    "call_ids": [],
+    "evidence": null,
+    "phase": "D",
+    "plan": null,
+    "repeat": 1,
+    "state": 0,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "provider_status_or_three_consecutive_errors",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M4",
+    "call_ids": [],
+    "evidence": null,
+    "phase": "D",
+    "plan": null,
+    "repeat": 1,
+    "state": 0,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "provider_status_or_three_consecutive_errors",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M4_ablation",
+    "call_ids": [],
+    "evidence": null,
+    "phase": "D",
+    "plan": null,
+    "repeat": 1,
+    "state": 0,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "provider_status_or_three_consecutive_errors",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M2",
+    "call_ids": [],
+    "evidence": null,
+    "phase": "D",
+    "plan": null,
+    "repeat": 1,
+    "state": 1,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "provider_status_or_three_consecutive_errors",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M4",
+    "call_ids": [],
+    "evidence": null,
+    "phase": "D",
+    "plan": null,
+    "repeat": 1,
+    "state": 1,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "provider_status_or_three_consecutive_errors",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M4_ablation",
+    "call_ids": [],
+    "evidence": null,
+    "phase": "D",
+    "plan": null,
+    "repeat": 1,
+    "state": 1,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "provider_status_or_three_consecutive_errors",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M2",
+    "call_ids": [],
+    "evidence": null,
+    "phase": "D",
+    "plan": null,
+    "repeat": 1,
+    "state": 2,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "provider_status_or_three_consecutive_errors",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M4",
+    "call_ids": [],
+    "evidence": null,
+    "phase": "D",
+    "plan": null,
+    "repeat": 1,
+    "state": 2,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "provider_status_or_three_consecutive_errors",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M4_ablation",
+    "call_ids": [],
+    "evidence": null,
+    "phase": "D",
+    "plan": null,
+    "repeat": 1,
+    "state": 2,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "provider_status_or_three_consecutive_errors",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M2",
+    "call_ids": [],
+    "evidence": null,
+    "phase": "D",
+    "plan": null,
+    "repeat": 1,
+    "state": 3,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "provider_status_or_three_consecutive_errors",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M4",
+    "call_ids": [],
+    "evidence": null,
+    "phase": "D",
+    "plan": null,
+    "repeat": 1,
+    "state": 3,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "provider_status_or_three_consecutive_errors",
+      "score": null
+    }
+  },
+  {
+    "all_responses_valid": false,
+    "arm": "M4_ablation",
+    "call_ids": [],
+    "evidence": null,
+    "phase": "D",
+    "plan": null,
+    "repeat": 1,
+    "state": 3,
+    "status": {
+      "candidate_id": null,
+      "executable": false,
+      "reason": "provider_status_or_three_consecutive_errors",
+      "score": null
+    }
+  }
+]

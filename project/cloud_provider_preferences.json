@@ -1,0 +1,12 @@
+{
+  "version": "cloud-provider-preferences-v1",
+  "user_decision_date": "2026-10-01",
+  "excluded_models": ["buddy/deepseek-v4.1-flash", "buddy/glm-5.3-flash", "qoder/qfmodel"],
+  "excluded_gateway": "http://127.0.0.1:8790/v1",
+  "reason": "User explicitly decided not to consider these three options after diagnostic results.",
+  "historical_registry": "project/cloud_provider_options.json",
+  "history_preserved": true,
+  "default_changed": false,
+  "current_work": "local navigation; no new cloud calls",
+  "future_rule": "This active preference supersedes historical registration; do not call excluded options unless the user changes this decision."
+}

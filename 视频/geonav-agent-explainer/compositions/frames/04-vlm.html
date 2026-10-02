@@ -1,0 +1,759 @@
+<template>
+<style>/*localfont-injected*/@font-face{font-family:'Noto Sans SC';src:local('Noto Sans SC');}@font-face{font-family:'Microsoft YaHei';src:local('Microsoft YaHei');}@font-face{font-family:'PingFang SC';src:local('PingFang SC');}@font-face{font-family:'Noto Serif SC';src:local('Noto Serif SC');}@font-face{font-family:'SimSun';src:local('SimSun');}@font-face{font-family:'Songti SC';src:local('Songti SC');}@font-face{font-family:'DM Mono';src:local('DM Mono');}@font-face{font-family:'Newsreader';src:local('Newsreader');}@font-face{font-family:'Hanken Grotesk';src:local('Hanken Grotesk');}
+  /* ============ Cobalt Grid — frame 04-vlm (云端VLM：接口通了，策略失败了) ============ */
+  #root {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    container-type: size;
+    font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+    color: #1F2BE0;
+  }
+  #root .clip {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+  /* ---------- track 0 · permanent graph-paper ground ---------- */
+  .vlm4-bg {
+    background-color: #F0EBDE;
+    background-image:
+      linear-gradient(rgba(31, 43, 224, 0.10) 1.5px, transparent 1.5px),
+      linear-gradient(90deg, rgba(31, 43, 224, 0.10) 1.5px, transparent 1.5px);
+    background-size: 38.4px 38.4px;
+  }
+  /* ---------- track 1 · furniture: hairlines + page chrome ---------- */
+  .vlm4-hair-top {
+    position: absolute;
+    left: 77px;
+    right: 77px;
+    top: 58px;
+    height: 2.5px;
+    background: #1F2BE0;
+    transform-origin: left center;
+  }
+  .vlm4-hair-bottom {
+    position: absolute;
+    left: 77px;
+    right: 77px;
+    top: 870px; /* kept above the 83% caption keep-out (y <= 896) */
+    height: 2.5px;
+    background: #1F2BE0;
+    transform-origin: right center;
+  }
+  .vlm4-page {
+    position: absolute;
+    right: 77px;
+    top: 18px;
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    color: #1F2BE0;
+    font-variant-numeric: tabular-nums;
+  }
+  /* ---------- shared ---------- */
+  .vlm4-kick {
+    position: absolute;
+    left: 77px;
+    top: 88px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    color: #1F2BE0;
+  }
+  .vlm4-kick::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #1F2BE0;
+    margin-right: 16px;
+  }
+  .vlm4-serif {
+    font-family: "Noto Serif SC", "SimSun", "Songti SC", serif;
+    font-weight: 400;
+  }
+  .vlm4-numfont {
+    font-family: "Newsreader", "Noto Serif SC", "SimSun", serif;
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+  }
+  .vlm4-mono {
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  /* ---------- scene 1 · kinetic beat-slam title ---------- */
+  .vlm4-s1-stage {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 170px;
+  }
+  .vlm4-s1-kicker {
+    font-size: 26px;
+    font-weight: 600;
+    letter-spacing: 0.34em;
+    color: #515CDB;
+    margin-bottom: 30px;
+  }
+  .vlm4-s1-title {
+    display: flex;
+    align-items: baseline;
+    gap: 28px;
+    margin: 0;
+    font-size: 148px;
+    line-height: 1.08;
+    letter-spacing: -0.008em;
+    color: #1F2BE0;
+  }
+  .vlm4-s1-w2wrap {
+    position: relative;
+    display: inline-block;
+  }
+  .vlm4-s1-ul {
+    position: absolute;
+    left: 0;
+    bottom: -14px;
+    width: 100%;
+    height: 5px;
+    background: #1F2BE0;
+    transform-origin: left center;
+  }
+  .vlm4-s1-note {
+    margin-top: 52px;
+    width: 620px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: flex-start;
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 30px;
+    letter-spacing: 0.05em;
+    color: #515CDB;
+  }
+  .vlm4-s1-notetext {
+    display: inline-block;
+    white-space: nowrap;
+  }
+  .vlm4-caret {
+    display: inline-block;
+    width: 15px;
+    height: 32px;
+    background: #1F2BE0;
+    margin-left: 8px;
+    opacity: 0;
+  }
+  /* ---------- scene 2 · request-composition diagram (60/40) ---------- */
+  .vlm4-s2-stage {
+    position: absolute;
+    inset: 0;
+  }
+  .vlm4-s2-svg {
+    position: absolute;
+    inset: 0;
+    width: 1920px;
+    height: 1080px;
+    pointer-events: none;
+  }
+  .vlm4-card {
+    position: absolute;
+    left: 130px;
+    width: 360px;
+    height: 200px;
+    background-color: #E6E0CE;
+    border: 2.5px solid #1F2BE0;
+    background-image:
+      linear-gradient(rgba(31, 43, 224, 0.10) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(31, 43, 224, 0.10) 1px, transparent 1px);
+    background-size: 24px 24px;
+  }
+  .vlm4-cardA { top: 185px; }
+  .vlm4-cardB { top: 425px; }
+  .vlm4-card-ordinal {
+    position: absolute;
+    top: 10px;
+    left: 12px;
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 20px;
+    color: #515CDB;
+  }
+  .vlm4-sq {
+    position: absolute;
+    width: 24px;
+    height: 24px;
+    background: #1F2BE0;
+  }
+  .vlm4-sq-faint { background: rgba(31, 43, 224, 0.18); }
+  .vlm4-sq-hollow { background: transparent; border: 2px solid #1F2BE0; }
+  .vlm4-cardlabel {
+    position: absolute;
+    left: 532px;
+    font-size: 34px;
+    letter-spacing: 0.08em;
+    color: #1F2BE0;
+  }
+  .vlm4-labelA { top: 263px; }
+  .vlm4-labelB { top: 503px; }
+  .vlm4-statelabel {
+    position: absolute;
+    left: 130px;
+    top: 650px;
+    font-size: 24px;
+    letter-spacing: 0.2em;
+    color: #515CDB;
+  }
+  .vlm4-chip {
+    position: absolute;
+    top: 694px;
+    height: 66px;
+    display: flex;
+    align-items: center;
+    padding: 0 30px;
+    background: #E6E0CE;
+    border: 2px solid #1F2BE0;
+    font-size: 30px;
+    letter-spacing: 0.06em;
+    color: #1F2BE0;
+  }
+  .vlm4-chip1 { left: 130px; }
+  .vlm4-chip2 { left: 288px; }
+  .vlm4-chip3 { left: 446px; }
+  .vlm4-cloudlabel {
+    position: absolute;
+    left: 1285px;
+    top: 495px;
+    width: 320px;
+    text-align: center;
+    font-size: 26px;
+    letter-spacing: 0.14em;
+    color: #1F2BE0;
+  }
+  .vlm4-vlm {
+    position: absolute;
+    left: 1285px;
+    top: 428px;
+    width: 320px;
+    text-align: center;
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 42px;
+    letter-spacing: 0.1em;
+    color: #1F2BE0;
+  }
+  .vlm4-jsoncard {
+    position: absolute;
+    left: 1230px;
+    top: 655px;
+    width: 430px;
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #F0EBDE;
+    border: 2.5px solid #1F2BE0;
+  }
+  .vlm4-jsonwrap {
+    display: inline-flex;
+    align-items: center;
+    width: 330px;
+    justify-content: flex-start;
+  }
+  .vlm4-jsontext {
+    display: inline-block;
+    white-space: nowrap;
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 36px;
+    letter-spacing: 0.02em;
+    color: #1F2BE0;
+  }
+  /* ---------- scene 3 · 0/20 counter ---------- */
+  .vlm4-s3-stage {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 150px;
+  }
+  .vlm4-s3-hero {
+    display: flex;
+    align-items: baseline;
+    gap: 40px;
+    font-size: 250px;
+    line-height: 0.9;
+    letter-spacing: -0.015em;
+    color: #1F2BE0;
+  }
+  .vlm4-zero { display: inline-block; }
+  .vlm4-total { display: inline-block; min-width: 2ch; text-align: left; }
+  .vlm4-s3-sep {
+    font-size: 170px;
+    color: #1F2BE0;
+    opacity: 0.55;
+  }
+  .vlm4-s3-sub {
+    margin-top: 44px;
+    font-size: 60px;
+    letter-spacing: 0.1em;
+    color: #515CDB;
+  }
+  /* ---------- scene 4 · ABAB loop ---------- */
+  .vlm4-s4-stage {
+    position: absolute;
+    inset: 0;
+  }
+  .vlm4-s4-svg {
+    position: absolute;
+    inset: 0;
+    width: 1920px;
+    height: 1080px;
+    pointer-events: none;
+  }
+  .vlm4-gridblock {
+    position: absolute;
+    left: 320px;
+    top: 250px;
+    width: 465px;
+    height: 465px;
+    border: 2.5px solid #1F2BE0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    background: transparent;
+  }
+  .vlm4-cell {
+    position: relative;
+    background: #E6E0CE;
+  }
+  .vlm4-cellA { border-right: 2.5px solid #1F2BE0; border-bottom: 2.5px solid #1F2BE0; }
+  .vlm4-cellB { border-bottom: 2.5px solid #1F2BE0; }
+  .vlm4-cellC { border-right: 2.5px solid #1F2BE0; }
+  .vlm4-celltag {
+    position: absolute;
+    top: 12px;
+    left: 18px;
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 40px;
+    color: #1F2BE0;
+  }
+  .vlm4-dotmove {
+    position: absolute;
+    left: 410px;
+    top: 340px;
+    width: 54px;
+    height: 54px;
+    z-index: 5;
+  }
+  .vlm4-dot {
+    width: 54px;
+    height: 54px;
+    background: #1F2BE0;
+  }
+  .vlm4-rightcol {
+    position: absolute;
+    left: 1080px;
+    top: 0;
+    width: 760px;
+  }
+  .vlm4-stat {
+    position: absolute;
+    left: 0;
+    top: 268px;
+    display: flex;
+    align-items: baseline;
+    gap: 24px;
+    font-size: 150px;
+    line-height: 0.9;
+    letter-spacing: -0.015em;
+    color: #1F2BE0;
+  }
+  .vlm4-stat-sep {
+    font-size: 100px;
+    opacity: 0.55;
+  }
+  .vlm4-statline {
+    position: absolute;
+    left: 0;
+    top: 442px;
+    font-size: 46px;
+    letter-spacing: 0.06em;
+    color: #1F2BE0;
+    white-space: nowrap;
+  }
+  .vlm4-strip {
+    position: absolute;
+    left: 0;
+    top: 558px;
+    display: flex;
+    gap: 4px;
+  }
+  .vlm4-pcell {
+    position: relative;
+    width: 34px;
+    height: 34px;
+    background: #E6E0CE;
+    border: 1.5px solid rgba(31, 43, 224, 0.35);
+  }
+  .vlm4-pfill {
+    position: absolute;
+    inset: 0;
+    background: #1F2BE0;
+    opacity: 0;
+  }
+  /* ---------- scene 5 · versus ---------- */
+  .vlm4-s5-stage {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 56px;
+    padding-bottom: 150px;
+  }
+  .vlm5-line {
+    font-size: 116px;
+    line-height: 1.1;
+    letter-spacing: -0.008em;
+    color: #1F2BE0;
+  }
+  .vlm5-hollow {
+    position: relative;
+    /* hollow look via ink outline; fill is paper (not transparent) so the glyph fill counts
+       as painted for the text-visibility check — visually identical on the paper ground */
+    color: #F0EBDE;
+    -webkit-text-fill-color: #F0EBDE;
+    -webkit-text-stroke: 2.5px #1F2BE0;
+  }
+  .vlm5-strike {
+    position: absolute;
+    left: -3%;
+    top: calc(50% - 9px);
+    width: 106%;
+    height: 18px;
+    background: repeating-linear-gradient(90deg, #1F2BE0 0 3px, transparent 3px 10px);
+    transform-origin: left center;
+  }
+  .vlm5-rule {
+    width: 3px;
+    height: 200px;
+    background: #1F2BE0;
+    transform-origin: center center;
+  }
+</style>
+
+<div data-hf-id="hf-c3tj" id="root" data-composition-id="04-vlm" data-start="0" data-duration="28.387" data-width="1920" data-height="1080">
+
+  <!-- track 0 · graph-paper ground -->
+  <div data-hf-id="hf-7pkj" class="clip vlm4-bg" data-start="0" data-duration="28.387" data-track-index="0"></div>
+
+  <!-- track 1 · furniture -->
+  <div data-hf-id="hf-p543" class="clip" data-start="0" data-duration="28.387" data-track-index="1">
+    <div data-hf-id="hf-fhx2" class="vlm4-hair-top" id="vlm4-hair-top"></div>
+    <div data-hf-id="hf-bpje" class="vlm4-hair-bottom" id="vlm4-hair-bottom"></div>
+    <div data-hf-id="hf-zxqa" class="vlm4-page" id="vlm4-page">04 / 10</div>
+  </div>
+
+  <!-- track 2 · scene 1 : kinetic beat-slam title (0.0-3.7) -->
+  <div data-hf-id="hf-3mca" class="clip" data-start="0" data-duration="4.8" data-track-index="2">
+    <div data-hf-id="hf-0qqk" class="vlm4-s1-stage" id="vlm4-s1-stage">
+      <div data-hf-id="hf-33ly" class="vlm4-s1-kicker" id="vlm4-kicker">第一阶段</div>
+      <h1 data-hf-id="hf-wv7u" class="vlm4-s1-title vlm4-serif">
+        <span data-hf-id="hf-a19e" class="vlm4-s1-w1" id="vlm4-w1">云端</span>
+        <span data-hf-id="hf-d6ol" class="vlm4-s1-w2wrap"><span data-hf-id="hf-ilz8" class="vlm4-s1-w2" id="vlm4-w2">视觉语言模型</span><i data-hf-id="hf-tfgb" class="vlm4-s1-ul" id="vlm4-ul"></i></span>
+      </h1>
+      <div data-hf-id="hf-xgxd" class="vlm4-s1-note" id="vlm4-note">
+        <span data-hf-id="hf-z4qv" class="vlm4-s1-notetext" id="vlm4-note-text"></span><span data-hf-id="hf-ia8j" class="vlm4-caret" id="vlm4-caret"></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- track 3 · scene 2 : request-composition diagram (3.6-12.4) -->
+  <div data-hf-id="hf-x533" class="clip" data-start="3.6" data-duration="9.8" data-track-index="3">
+    <div data-hf-id="hf-3dwm" class="vlm4-s2-stage" id="vlm4-s2-stage">
+      <div data-hf-id="hf-cccu" class="vlm4-kick" id="vlm4-k2">请求构成</div>
+
+      <div data-hf-id="hf-c8tq" class="vlm4-card vlm4-cardA" id="vlm4-cardA">
+        <span data-hf-id="hf-fzto" class="vlm4-card-ordinal">01</span>
+        <i data-hf-id="hf-uoxz" class="vlm4-sq" style="left:150px; top:78px;"></i>
+        <i data-hf-id="hf-7o45" class="vlm4-sq" style="left:174px; top:78px;"></i>
+        <i data-hf-id="hf-b0pv" class="vlm4-sq" style="left:150px; top:102px;"></i>
+        <i data-hf-id="hf-6yhp" class="vlm4-sq" style="left:174px; top:102px;"></i>
+        <i data-hf-id="hf-u0jq" class="vlm4-sq vlm4-sq-faint" style="left:198px; top:102px;"></i>
+      </div>
+      <div data-hf-id="hf-o1g5" class="vlm4-cardlabel vlm4-labelA" id="vlm4-labelA">目标图</div>
+
+      <div data-hf-id="hf-rcpe" class="vlm4-card vlm4-cardB" id="vlm4-cardB">
+        <span data-hf-id="hf-eswl" class="vlm4-card-ordinal">02</span>
+        <i data-hf-id="hf-idsk" class="vlm4-sq" style="left:96px; top:96px;"></i>
+        <i data-hf-id="hf-tepv" class="vlm4-sq vlm4-sq-faint" style="left:156px; top:60px;"></i>
+        <i data-hf-id="hf-wpy7" class="vlm4-sq vlm4-sq-faint" style="left:216px; top:120px;"></i>
+        <i data-hf-id="hf-eu44" class="vlm4-sq vlm4-sq-hollow" style="left:264px; top:84px;"></i>
+      </div>
+      <div data-hf-id="hf-c0h9" class="vlm4-cardlabel vlm4-labelB" id="vlm4-labelB">当前画面</div>
+
+      <div data-hf-id="hf-uudh" class="vlm4-statelabel" id="vlm4-statelabel">公开状态</div>
+      <div data-hf-id="hf-p6ml" class="vlm4-chip vlm4-chip1" id="vlm4-chip1">位置</div>
+      <div data-hf-id="hf-nn7b" class="vlm4-chip vlm4-chip2" id="vlm4-chip2">预算</div>
+      <div data-hf-id="hf-33mt" class="vlm4-chip vlm4-chip3" id="vlm4-chip3">已访问格子</div>
+
+      <!-- converging arrows + blocky cloud node + JSON out -->
+      <svg data-hf-id="hf-j5ob" class="vlm4-s2-svg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+        <path data-hf-id="hf-sgui" id="vlm4-arr1" d="M 700 285 C 900 285, 1080 400, 1269 435" fill="none" stroke="#1F2BE0" stroke-width="3" />
+        <path data-hf-id="hf-gzdq" id="vlm4-arr2" d="M 700 525 C 900 525, 1080 505, 1269 470" fill="none" stroke="#1F2BE0" stroke-width="3" />
+        <path data-hf-id="hf-grfi" id="vlm4-arr3" d="M 690 727 C 950 727, 1100 590, 1269 505" fill="none" stroke="#1F2BE0" stroke-width="3" />
+        <rect data-hf-id="hf-euu2" id="vlm4-tick1" x="1269" y="429" width="12" height="12" fill="#1F2BE0" opacity="0" />
+        <rect data-hf-id="hf-0csw" id="vlm4-tick2" x="1269" y="464" width="12" height="12" fill="#1F2BE0" opacity="0" />
+        <rect data-hf-id="hf-8zv5" id="vlm4-tick3" x="1269" y="499" width="12" height="12" fill="#1F2BE0" opacity="0" />
+        <path data-hf-id="hf-vnxy" id="vlm4-cloud" d="M 1305 565 L 1305 485 L 1325 485 L 1325 445 L 1365 445 L 1365 405 L 1405 405 L 1405 385 L 1445 385 L 1445 365 L 1485 365 L 1485 385 L 1525 385 L 1525 405 L 1565 405 L 1565 445 L 1595 445 L 1595 485 L 1605 485 L 1605 565 Z" fill="#E6E0CE" fill-opacity="0" stroke="#1F2BE0" stroke-width="3" />
+        <path data-hf-id="hf-hbhx" id="vlm4-jsonarr" d="M 1445 565 L 1445 640" fill="none" stroke="#1F2BE0" stroke-width="3" />
+      </svg>
+
+      <div data-hf-id="hf-dhkj" class="vlm4-vlm" id="vlm4-vlm">VLM</div>
+      <div data-hf-id="hf-jrok" class="vlm4-cloudlabel" id="vlm4-cloudlabel">云端模型</div>
+
+      <div data-hf-id="hf-yxe2" class="vlm4-jsoncard" id="vlm4-jsoncard">
+        <span data-hf-id="hf-d3i3" class="vlm4-jsonwrap"><span data-hf-id="hf-m248" class="vlm4-jsontext" id="vlm4-json-text"></span><span data-hf-id="hf-11kj" class="vlm4-caret" id="vlm4-caret2"></span></span>
+      </div>
+    </div>
+  </div>
+
+  <!-- track 4 · scene 3 : 0/20 counter (12.4-16.5) -->
+  <div data-hf-id="hf-6v4g" class="clip" data-start="12.4" data-duration="5.2" data-track-index="4">
+    <div data-hf-id="hf-tclo" class="vlm4-s3-stage" id="vlm4-s3-stage">
+      <div data-hf-id="hf-tp3i" class="vlm4-s3-hero vlm4-numfont">
+        <span data-hf-id="hf-j421" class="vlm4-zero" id="vlm4-zero">0</span>
+        <span data-hf-id="hf-ya7x" class="vlm4-s3-sep">/</span>
+        <span data-hf-id="hf-o6r9" class="vlm4-total" id="vlm4-total">0</span>
+      </div>
+      <div data-hf-id="hf-ke01" class="vlm4-s3-sub" id="vlm4-s3-sub">二十道验证题</div>
+    </div>
+  </div>
+
+  <!-- track 5 · scene 4 : ABAB loop diagram (16.5-24.1) -->
+  <div data-hf-id="hf-tpy7" class="clip" data-start="16.5" data-duration="8.4" data-track-index="5">
+    <div data-hf-id="hf-vr6a" class="vlm4-s4-stage" id="vlm4-s4-stage">
+      <div data-hf-id="hf-gl70" class="vlm4-kick" id="vlm4-k4">轨迹分析</div>
+
+      <div data-hf-id="hf-fav2" class="vlm4-gridblock" id="vlm4-gridblock">
+        <div data-hf-id="hf-0ac0" class="vlm4-cell vlm4-cellA" id="vlm4-cellA"><span data-hf-id="hf-90kq" class="vlm4-celltag">A</span></div>
+        <div data-hf-id="hf-ffg4" class="vlm4-cell vlm4-cellB" id="vlm4-cellB"><span data-hf-id="hf-9evr" class="vlm4-celltag">B</span></div>
+        <div data-hf-id="hf-4fnc" class="vlm4-cell vlm4-cellC" id="vlm4-cellC"></div>
+        <div data-hf-id="hf-1jsc" class="vlm4-cell vlm4-cellD" id="vlm4-cellD"></div>
+      </div>
+
+      <svg data-hf-id="hf-zltx" class="vlm4-s4-svg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+        <defs data-hf-id="hf-mh0t">
+          <mask data-hf-id="hf-0n3h" id="vlm4-trailmask-wrap">
+            <path data-hf-id="hf-c3ep" id="vlm4-trailmask" d="M 437 367 L 668 367" fill="none" stroke="#ffffff" stroke-width="8" />
+          </mask>
+        </defs>
+        <path data-hf-id="hf-o54f" d="M 437 367 L 668 367" fill="none" stroke="#515CDB" stroke-width="4" stroke-dasharray="16 12" mask="url(#vlm4-trailmask-wrap)" />
+      </svg>
+
+      <div data-hf-id="hf-xovi" class="vlm4-dotmove" id="vlm4-dotmove">
+        <div data-hf-id="hf-7ldm" class="vlm4-dot" id="vlm4-dot"></div>
+      </div>
+
+      <div data-hf-id="hf-uex2" class="vlm4-rightcol">
+        <div data-hf-id="hf-rfk5" class="vlm4-stat vlm4-numfont" id="vlm4-stat">
+          <span data-hf-id="hf-zciz">19</span><span data-hf-id="hf-mhi5" class="vlm4-stat-sep">/</span><span data-hf-id="hf-qd23">20</span>
+        </div>
+        <div data-hf-id="hf-fpj4" class="vlm4-statline" id="vlm4-statline">道题出现 ABAB 循环</div>
+        <div data-hf-id="hf-f8gi" class="vlm4-strip" id="vlm4-strip">
+          <div data-hf-id="hf-exju" class="vlm4-pcell"><i data-hf-id="hf-equl" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-dmda" class="vlm4-pcell"><i data-hf-id="hf-2u5d" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-e0ob" class="vlm4-pcell"><i data-hf-id="hf-412g" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-eezc" class="vlm4-pcell"><i data-hf-id="hf-3mrf" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-bmu5" class="vlm4-pcell"><i data-hf-id="hf-1n8a" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-c156" class="vlm4-pcell"><i data-hf-id="hf-18x9" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-cfg7" class="vlm4-pcell"><i data-hf-id="hf-2fuc" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-ctr8" class="vlm4-pcell"><i data-hf-id="hf-21jb" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-geih" class="vlm4-pcell"><i data-hf-id="hf-6ewm" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-gsti" class="vlm4-pcell"><i data-hf-id="hf-60ll" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-9kne" class="vlm4-pcell"><i data-hf-id="hf-xtj7" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-96cd" class="vlm4-pcell"><i data-hf-id="hf-y7u8" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-ad9g" class="vlm4-pcell"><i data-hf-id="hf-x0x5" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-9yyf" class="vlm4-pcell"><i data-hf-id="hf-xf86" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-b5vi" class="vlm4-pcell"><i data-hf-id="hf-w8b3" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-arkh" class="vlm4-pcell"><i data-hf-id="hf-wmm4" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-byhk" class="vlm4-pcell"><i data-hf-id="hf-vfp1" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-bk6j" class="vlm4-pcell"><i data-hf-id="hf-vu02" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-cr3m" class="vlm4-pcell"><i data-hf-id="hf-un2z" class="vlm4-pfill"></i></div>
+          <div data-hf-id="hf-ccsl" class="vlm4-pcell"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- track 6 · scene 5 : versus close (24.1-27.887) -->
+  <div data-hf-id="hf-gfdu" class="clip" data-start="24.1" data-duration="4.287" data-track-index="6">
+    <div data-hf-id="hf-4wg4" class="vlm4-s5-stage" id="vlm4-s5-stage">
+      <div data-hf-id="hf-cgpz" class="vlm5-line vlm4-serif" id="vlm5-left">接口是通的</div>
+      <div data-hf-id="hf-z6cw" class="vlm5-rule" id="vlm5-rule"></div>
+      <div data-hf-id="hf-ot9r" class="vlm5-line vlm4-serif vlm5-hollow" id="vlm5-right">策略却是失败的<i data-hf-id="hf-j244" class="vlm5-strike" id="vlm5-strike"></i></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script>
+  (function () {
+    var tl = gsap.timeline({ paused: true });
+    window.__timelines = window.__timelines || {};
+    window.__timelines["04-vlm"] = tl;
+
+    /* ---------- furniture ---------- */
+    tl.fromTo("#vlm4-hair-top", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.inOut" }, 0.08);
+    tl.fromTo("#vlm4-hair-bottom", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.inOut" }, 0.22);
+    tl.fromTo("#vlm4-page", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 0.4);
+
+    /* ================= Scene 1 (0.0-3.7) · kinetic beat-slam ================= */
+    var B1 = 0.15, B2 = 0.85;
+    tl.fromTo("#vlm4-kicker", { opacity: 0, y: -18 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, B1);
+    tl.fromTo("#vlm4-w1",
+      { scale: 1.6, opacity: 0, filter: "blur(14px)" },
+      { scale: 1, opacity: 1, filter: "blur(0px)", duration: 0.45, ease: "power4.out" }, B1);
+    tl.fromTo("#vlm4-w2", { y: 84, opacity: 0 }, { y: 0, opacity: 1, duration: 0.55, ease: "circ.out" }, B2);
+    tl.fromTo("#vlm4-ul", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power2.out" }, 1.55);
+
+    var noteText = "gemma4:31b · OpenAI-compatible";
+    var noteEl = document.getElementById("vlm4-note-text");
+    var noteLen = { v: 0 };
+    tl.to(noteLen, {
+      v: noteText.length, duration: 1.15, ease: "none",
+      onUpdate: function () { noteEl.textContent = noteText.substring(0, Math.floor(noteLen.v)); }
+    }, 1.95);
+    var c1 = { p: 0 }, caret1 = document.getElementById("vlm4-caret");
+    tl.to(c1, {
+      p: Math.PI * 2 * 3, duration: 2.0, ease: "none",
+      onUpdate: function () { caret1.style.opacity = Math.sin(c1.p) > 0 ? "1" : "0"; }
+    }, 1.95);
+
+    /* seam S1->S2 : cut-the-curve, upward */
+    tl.to("#vlm4-s1-stage", { y: -230, duration: 0.34, ease: "power4.in" }, 3.95);
+    tl.to("#vlm4-s1-stage", { opacity: 0, duration: 0.22, ease: "power1.in" }, 3.95);
+
+    /* ================= Scene 2 (3.6-12.4) · request diagram ================= */
+    tl.fromTo("#vlm4-s2-stage", { y: 230, opacity: 0 }, { y: 0, opacity: 1, duration: 0.36, ease: "power4.out" }, 3.97);
+    tl.fromTo("#vlm4-k2", { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 4.15);
+
+    tl.fromTo("#vlm4-cardA", { x: -70, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 4.5);
+    tl.fromTo("#vlm4-labelA", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 4.75);
+    tl.fromTo("#vlm4-cardB", { x: -70, opacity: 0 }, { x: 0, opacity: 1, duration: 0.5, ease: "power3.out" }, 5.7);
+    tl.fromTo("#vlm4-labelB", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 5.95);
+    tl.fromTo("#vlm4-statelabel", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 6.9);
+    tl.fromTo("#vlm4-chip1", { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.42, ease: "back.out(1.8)" }, 7.1);
+    tl.fromTo("#vlm4-chip2", { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.42, ease: "back.out(1.8)" }, 7.55);
+    tl.fromTo("#vlm4-chip3", { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.42, ease: "back.out(1.8)" }, 8.0);
+
+    /* svg-path-draw setup: measured lengths, never guessed */
+    ["vlm4-arr1", "vlm4-arr2", "vlm4-arr3", "vlm4-cloud", "vlm4-jsonarr"].forEach(function (id) {
+      var p = document.getElementById(id);
+      var L = p.getTotalLength() * 1.02;
+      p.style.strokeDasharray = L;
+      p.style.strokeDashoffset = L;
+    });
+    tl.to("#vlm4-arr1", { strokeDashoffset: 0, duration: 0.55, ease: "power2.out" }, 8.6);
+    tl.to("#vlm4-arr2", { strokeDashoffset: 0, duration: 0.55, ease: "power2.out" }, 8.85);
+    tl.to("#vlm4-arr3", { strokeDashoffset: 0, duration: 0.55, ease: "power2.out" }, 9.1);
+    tl.fromTo("#vlm4-tick1", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power1.out" }, 9.15);
+    tl.fromTo("#vlm4-tick2", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power1.out" }, 9.4);
+    tl.fromTo("#vlm4-tick3", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power1.out" }, 9.65);
+
+    /* blocky cloud node: draw outline, then fill */
+    tl.to("#vlm4-cloud", { strokeDashoffset: 0, duration: 0.9, ease: "power2.out" }, 9.2);
+    tl.to("#vlm4-cloud", { fillOpacity: 1, duration: 0.35, ease: "power1.out" }, 10.1);
+    tl.fromTo("#vlm4-vlm", { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power1.out" }, 10.25);
+    tl.fromTo("#vlm4-cloudlabel", { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power1.out" }, 10.35);
+
+    /* JSON action card: arrow, pop, type-on + caret */
+    tl.to("#vlm4-jsonarr", { strokeDashoffset: 0, duration: 0.3, ease: "power2.out" }, 10.5);
+    tl.fromTo("#vlm4-jsoncard", { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(1.7)" }, 10.85);
+    var jsonText = '{"action":"…"}';
+    var jsonEl = document.getElementById("vlm4-json-text");
+    var jsonLen = { v: 0 };
+    tl.to(jsonLen, {
+      v: jsonText.length, duration: 1.1, ease: "none",
+      onUpdate: function () { jsonEl.textContent = jsonText.substring(0, Math.floor(jsonLen.v)); }
+    }, 11.0);
+    var c2 = { p: 0 }, caret2 = document.getElementById("vlm4-caret2");
+    tl.to(c2, {
+      p: Math.PI * 2 * 2.5, duration: 1.6, ease: "none",
+      onUpdate: function () { caret2.style.opacity = Math.sin(c2.p) > 0 ? "1" : "0"; }
+    }, 11.0);
+
+    /* seam S2->S3 : scale-swap clear (outgoing shrinks away) */
+    tl.to("#vlm4-s2-stage", { scale: 0.74, opacity: 0, duration: 0.42, ease: "power2.in" }, 12.6);
+
+    /* ================= Scene 3 (12.4-16.5) · 0/20 counter ================= */
+    /* incoming half of the scale-swap: pops in with weight */
+    tl.fromTo("#vlm4-s3-stage", { scale: 0.72, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.55, ease: "back.out(1.6)" }, 12.78);
+    /* value-scaled counter: denominator tallies 0 -> 20, the zero never moves */
+    var totalEl = document.getElementById("vlm4-total");
+    var cnt = { v: 0 };
+    tl.to(cnt, {
+      v: 20, duration: 1.5, ease: "power3.out",
+      onUpdate: function () { totalEl.textContent = String(Math.round(cnt.v)); }
+    }, 12.78);
+    tl.fromTo("#vlm4-s3-sub", { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" }, 14.35);
+    tl.to("#vlm4-zero", { scale: 1.05, duration: 0.14, ease: "sine.inOut", yoyo: true, repeat: 1 }, 14.5);
+
+    /* seam S3->S4 : cut-the-curve, leftward */
+    tl.to("#vlm4-s3-stage", { x: -230, duration: 0.32, ease: "power4.in" }, 17.1);
+    tl.to("#vlm4-s3-stage", { opacity: 0, duration: 0.2, ease: "power1.in" }, 17.1);
+
+    /* ================= Scene 4 (16.5-24.1) · ABAB loop ================= */
+    tl.fromTo("#vlm4-s4-stage", { x: 230, opacity: 0 }, { x: 0, opacity: 1, duration: 0.36, ease: "power4.out" }, 17.12);
+    tl.fromTo("#vlm4-k4", { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 17.3);
+
+    tl.fromTo("#vlm4-cellA", { opacity: 0, scale: 0.88 }, { opacity: 1, scale: 1, duration: 0.42, ease: "back.out(1.5)" }, 17.55);
+    tl.fromTo("#vlm4-cellB", { opacity: 0, scale: 0.88 }, { opacity: 1, scale: 1, duration: 0.42, ease: "back.out(1.5)" }, 17.71);
+    tl.fromTo("#vlm4-cellC", { opacity: 0, scale: 0.88 }, { opacity: 0.45, scale: 1, duration: 0.42, ease: "back.out(1.5)" }, 17.87);
+    tl.fromTo("#vlm4-cellD", { opacity: 0, scale: 0.88 }, { opacity: 0.45, scale: 1, duration: 0.42, ease: "back.out(1.5)" }, 18.03);
+
+    /* dashed round-trip trail self-draws (masked reveal) */
+    var tm = document.getElementById("vlm4-trailmask");
+    var TML = tm.getTotalLength() * 1.02;
+    tm.style.strokeDasharray = TML;
+    tm.style.strokeDashoffset = TML;
+    tl.to(tm, { strokeDashoffset: 0, duration: 0.9, ease: "none" }, 18.7);
+
+    /* the dot pops in, then bounces A<->B — bounded phase loop on the timeline clock */
+    tl.fromTo("#vlm4-dot", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(2)" }, 18.45);
+    var mv = document.getElementById("vlm4-dotmove");
+    var ph = { p: 0 };
+    tl.to(ph, {
+      p: Math.PI * 2 * 5, duration: 5.4, ease: "none",
+      onUpdate: function () {
+        var u = (ph.p / Math.PI) % 2;
+        var dir = u < 1 ? u : 2 - u;          /* triangle wave: A->B->A per cycle */
+        var dx = 230 * dir;
+        var dy = -Math.abs(Math.sin(ph.p)) * 72; /* hop arc, lands exactly on cells */
+        mv.style.transform = "translate(" + dx + "px," + dy + "px)";
+      }
+    }, 18.55);
+
+    /* 19/20 stat + pixel-strip tally */
+    tl.fromTo("#vlm4-stat", { opacity: 0, y: 40 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 20.3);
+    tl.fromTo("#vlm4-statline", { opacity: 0, y: 26 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 20.65);
+    tl.fromTo(".vlm4-pfill", { opacity: 0 }, { opacity: 1, duration: 0.2, ease: "power1.out", stagger: 0.04 }, 20.9);
+
+    /* seam S4->S5 : cut-the-curve, downward (the next beat drops the same way) */
+    tl.to("#vlm4-s4-stage", { y: 230, duration: 0.32, ease: "power4.in" }, 24.4);
+    tl.to("#vlm4-s4-stage", { opacity: 0, duration: 0.2, ease: "power1.in" }, 24.4);
+
+    /* ================= Scene 5 (24.1-27.9) · versus, same-beat drop ================= */
+    tl.fromTo("#vlm5-left", { y: -130 }, { y: 0, duration: 0.42, ease: "power3.out" }, 24.55);
+    tl.fromTo("#vlm5-left", { opacity: 0 }, { opacity: 1, duration: 0.1, ease: "none" }, 24.55);
+    tl.fromTo("#vlm5-right", { y: -130 }, { y: 0, duration: 0.42, ease: "power3.out" }, 24.55);
+    tl.fromTo("#vlm5-right", { opacity: 0 }, { opacity: 1, duration: 0.1, ease: "none" }, 24.55);
+    tl.fromTo("#vlm5-rule", { scaleY: 0 }, { scaleY: 1, duration: 0.32, ease: "power3.out" }, 24.6);
+    tl.fromTo("#vlm5-strike", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power3.inOut" }, 25.35);
+    /* hold to end — final beat settles, no exit */
+  })();
+</script>
+</template>

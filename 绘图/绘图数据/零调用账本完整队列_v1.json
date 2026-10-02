@@ -1,0 +1,32 @@
+{
+  "audit_sha256": "0b424f8d99bd02b695d00cdafc8a0a8cdc80308d35db8a2842707a57cdba5b53",
+  "figures": [
+    {
+      "caption": "零调用账本相对原策略平均SR变化+1.27个百分点、SG变化-0.091格，未达到主数值门槛，停止该因素的后续扩展。M0/M1在同一原S4队列各执行500题×3冻结训练权重，20已见源文件、493不同起终点路线，10×10/B20；不代表新地理泛化或面积扩大。白色圆/三角/方形表示权重0/1/2，非置信区间；配对20源文件95%SR差区间为[+0.07, +2.47]点。SG为所有轨迹终点曼哈顿距离，成功记0，全部计划题保留。",
+      "files": [
+        {
+          "path": "绘图/数据结果图/30_零调用账本完整队列成功率与距离.pdf",
+          "sha256": "0e78b756a07c803839e54d495fa397dcc18ad1aaeb91433cf4dcfae243d01fe6"
+        },
+        {
+          "path": "绘图/数据结果图/30_零调用账本完整队列成功率与距离.svg",
+          "sha256": "5d8745a0b99981fe84761513dcfe296204f9ddb3e3a67e507bec5965011d5e84"
+        },
+        {
+          "path": "绘图/数据结果图/30_零调用账本完整队列成功率与距离.png",
+          "sha256": "c554b6732059415f0e27ecd571966394ffc2ee0b31ba88898829eeb1f09004a9"
+        }
+      ],
+      "id": "30_零调用账本完整队列成功率与距离",
+      "protocol": "500shared original S4 tasks,20already-used source files,three frozen training weights; development expansion",
+      "reproduction_script": "project/src/documents/summarize_local_ledger_expansion.py",
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/零调用账本完整队列验证_v1/主对照/对照汇总.json",
+        "DATA/processed_data/Masa/评测结果/零调用账本完整队列验证_v1/独立复核.json"
+      ]
+    }
+  ],
+  "min_font_pt": 9,
+  "recommended_width_cm": 18,
+  "summary_sha256": "516027b127e28471954c7d3e0c6c9895672dcac1d52859baf45799a45b4652a2"
+}

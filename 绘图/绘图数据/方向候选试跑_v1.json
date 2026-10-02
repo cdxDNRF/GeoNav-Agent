@@ -1,0 +1,61 @@
+{
+  "source_sha256": {
+    "DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1/对照汇总.json": "b3e62b7d9586f642ef9e1d8a459f51c9658c3f4b10dc4b27a7369257a4988403",
+    "DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1/独立复核.json": "4bdb2bff0e70dff4c3334725e9c001a598338fe363575b83ccddd06adf3497da",
+    "DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1/验收结论.json": "1970bba7429c2e543f4caae9416a765ebbfc689a2fc11c474a722ff72ef2370d",
+    "DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1/预登记.json": "69f006640321571c2d79c5fb14232200a6bb5068c322bf7c769cd53a84dfb42e",
+    "DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1/线索接受诊断.json": "6fd1f6cb2f13e8525123e118daef42f09989975c81380253802af9e2fe57a610"
+  },
+  "script_sha256": "174ee4d1e0c1f7dad0923a49d11344e59ebd6bd07bd6b4fa67253b7c743561bb",
+  "style_helper_sha256": "6eeefaa84f1ce6a7e8701f2c725c45e055e8f0ff2460b27d0d0041e96777deab",
+  "report_sha256": "ecb39c3abdb794ebd284132bbe561c9fcc325d2147e4644597caabd4dcf6f844",
+  "figures": [
+    {
+      "id": "19_方向候选试跑成功率与距离",
+      "caption": "四方向候选在本批干净/旋转题上取得相同SR81.67%，原策略分别为86.67%/71.67%。候选来自给定像素的0/90/180/270度无插值变换，原权重、阈值0.50、当前图与预算不变，未提供真角度；全部权重均展示。SR为成功比例，SG为全部终点距离均值；本图范围为SwissView新源文件4图/20题×3；5×5/B10；白色标记：三份权重，非CI。，候选是否放行还取决于干净保护与目标收益。",
+      "protocol": "SwissView新源文件4图/20题×3；5×5/B10；白色标记：三份权重，非CI。",
+      "sources": [
+        "DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1/对照汇总.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/19_方向候选试跑成功率与距离.pdf",
+          "sha256": "dad5b73a03c5d20719f036c2d0854bc529ae2823375674021f06c69cb6c2f096"
+        },
+        {
+          "path": "绘图/数据结果图/19_方向候选试跑成功率与距离.svg",
+          "sha256": "616333180f9ac513a107b112bdc007472f92d2a183db3f51b37db4225a8d50e9"
+        },
+        {
+          "path": "绘图/数据结果图/19_方向候选试跑成功率与距离.png",
+          "sha256": "90e8026f9ea46497878a84625437e3d26556d5333a4f8642694ccf63e7d08ff6"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_orientation.py"
+    },
+    {
+      "id": "20_方向候选试跑配对收益与保护",
+      "caption": "恢复旋转题不代表候选整体可用，干净题的预定保护同样决定放行。四项全部展示，每个源文件先平均三份权重的配对差，再seed3031/2000次成组bootstrap；区间为逐项95%，不声称四项同时保证。橙短线为运行前固定的+5点收益或−2点干净保护尺度，完整门槛还包含SG、至少两份正权重及全量复核。",
+      "protocol": "SwissView新源文件4图/20题×3；5×5/B10；白色标记：三份权重，非CI。",
+      "sources": [
+        "DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1/对照汇总.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/20_方向候选试跑配对收益与保护.pdf",
+          "sha256": "c8e472692c12a465a7c57647eb1e8ae34f503fdb58e4d121ce02f3e8320998ef"
+        },
+        {
+          "path": "绘图/数据结果图/20_方向候选试跑配对收益与保护.svg",
+          "sha256": "7ce9e98a16de08bc59031913531745aa2cb36f0ea4110e5e87b9470b48324e04"
+        },
+        {
+          "path": "绘图/数据结果图/20_方向候选试跑配对收益与保护.png",
+          "sha256": "4be0cae470cc08500fcd68a9bcd79605fa1d35956ae9e8cc7748a02e9380317c"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_orientation.py"
+    }
+  ],
+  "mode": "pilot"
+}

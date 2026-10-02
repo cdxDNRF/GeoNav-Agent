@@ -1,0 +1,222 @@
+<template id="captions-template" data-composition-id="captions" data-width="1920" data-height="1080">
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+
+
+<style data-brand-tokens="">
+      :root {
+      --paper: #F0EBDE;
+      --paper-2: #E6E0CE;
+      --ink: #1F2BE0;
+      --ink-soft: #5560E5;
+      --grid: rgba(31,43,224,0.10);
+      --ink-faint: rgba(31,43,224,0.18);
+      --cap-ink: #1F2BE0;
+      --cap-canvas: #F0EBDE;
+      --cap-accent: #5560E5;
+      --cap-accent-2: #E6E0CE;
+      --font-display: "Newsreader", system-ui, serif;
+      --font-body: "Hanken Grotesk", system-ui, sans-serif;
+      --cap-band-top: 900px;
+      --cap-band-height: 180px;
+      }
+    </style>
+
+<style>/*localfont-injected*/@font-face{font-family:'Noto Sans SC';src:local('Noto Sans SC');}@font-face{font-family:'Microsoft YaHei';src:local('Microsoft YaHei');}@font-face{font-family:'PingFang SC';src:local('PingFang SC');}@font-face{font-family:'Noto Serif SC';src:local('Noto Serif SC');}@font-face{font-family:'SimSun';src:local('SimSun');}@font-face{font-family:'Songti SC';src:local('Songti SC');}@font-face{font-family:'DM Mono';src:local('DM Mono');}@font-face{font-family:'Newsreader';src:local('Newsreader');}@font-face{font-family:'Hanken Grotesk';src:local('Hanken Grotesk');}
+  #captions-root {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+  }
+  .caption-layer {
+    position: absolute;
+    inset: 0;
+    z-index: 20;
+    pointer-events: none;
+  }
+  /* the keep-out band, from captionBand(H) — frame content stays above it */
+  .caption-stage {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: var(--cap-band-top, 900px);
+    height: var(--cap-band-height, 180px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .caption-group {
+    /* every group is absolutely stacked over the SAME band — exactly one shown at a
+       time via opacity. Must be absolute: in-flow groups would lay out side-by-side. */
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+  }
+
+  /* THE cream card — graph-paper grid behind the line + top/bottom 1.5px cobalt
+     hairlines (cobalt's frame furniture), square corners, NO drop shadow */
+  .caption-pill {
+    position: relative;
+    max-width: 78%;
+    padding: 20px 44px 24px;
+    background: var(--cap-canvas, #f0ebde);
+    background-image:
+      linear-gradient(
+        to right,
+        color-mix(in srgb, var(--cap-ink, #1f2be0) 10%, transparent) 1px,
+        transparent 1px
+      ),
+      linear-gradient(
+        to bottom,
+        color-mix(in srgb, var(--cap-ink, #1f2be0) 10%, transparent) 1px,
+        transparent 1px
+      );
+    background-size: 16px 16px;
+    border-top: 1.5px solid var(--cap-ink, #1f2be0);
+    border-bottom: 1.5px solid var(--cap-ink, #1f2be0);
+    border-radius: 0;
+  }
+  .caption-line {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.1em 0.34em;
+    font-family: "Newsreader", Georgia, serif;
+    font-weight: 400;
+    font-size: clamp(40px, 4.4vw, 58px);
+    line-height: 1.16;
+    letter-spacing: -0.01em;
+  }
+
+  /* upcoming — faint cobalt, no block */
+  .caption-word {
+    display: inline-block;
+    padding: 0 0.06em;
+    color: color-mix(in srgb, var(--cap-ink, #1f2be0) 42%, var(--cap-canvas, #f0ebde));
+  }
+  /* current word — THE cobalt flat block (risograph knockout): a solid cobalt fill
+     via box-shadow spread = a hard square block w/o layout shift, no blur; the cream
+     paper reads on top */
+  .caption-word.is-active {
+    color: var(--cap-canvas, #f0ebde);
+    background: var(--cap-ink, #1f2be0);
+    box-shadow: 0 0 0 0.06em var(--cap-ink, #1f2be0);
+  }
+  /* already spoken — solid cobalt ink, block cleared */
+  .caption-word.is-spoken {
+    color: var(--cap-ink, #1f2be0);
+    background: transparent;
+    box-shadow: none;
+  }
+
+  /* optional per-word accents (dormant until a word-classer tags them) */
+  /* brand / key term — Newsreader italic, cobalt's only display inflection */
+  .caption-word.cap-brand {
+    font-style: italic;
+  }
+  /* numerals / data — the body sans voice, slightly recessed */
+  .caption-word.cap-num {
+    font-family: "Hanken Grotesk", ui-monospace, monospace;
+    color: color-mix(in srgb, var(--cap-ink, #1f2be0) 72%, var(--cap-canvas, #f0ebde));
+  }
+  /* emphasis — a cobalt hairline underline (no second hue; emphasis is the ink) */
+  .caption-word.cap-cta {
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-decoration-color: var(--cap-accent, #5560e5);
+    text-underline-offset: 0.1em;
+  }
+
+  @media (max-aspect-ratio: 9/16) {
+    .caption-pill {
+      max-width: 92%;
+    }
+    .caption-line {
+      font-size: clamp(34px, 5.4vw, 48px);
+    }
+  }
+</style>
+
+<div data-hf-id="hf-5diw" id="captions-root" data-composition-id="captions" data-timeline-locked="" data-start="0" data-duration="257.109" data-fps="30" data-width="1920" data-height="1080">
+  <div data-hf-id="hf-9flp" class="caption-layer" aria-hidden="true">
+    <div data-hf-id="hf-ajrg" id="caption-stage" class="caption-stage"></div>
+  </div>
+</div>
+
+<script>
+  // captions.mjs injects the engine's scene-aware groups + real duration here.
+  var GROUPS = [{"id":"caption-group-0","frame":1,"start":0.1,"end":8.075,"text":"如果导航卫星信号不可用，一架只带相机的无人机，能在大范围未知区域里找到目标吗？","words":[{"id":"caption-word-0-0","text":"如果导航卫星信号不可用，一架只带相机的无人机，能在大范围未知区域里找到目标吗？","start":0.1,"end":8.125}]},{"id":"caption-group-1","frame":1,"start":8.075,"end":10.35,"text":"这就是主动地理定位。","words":[{"id":"caption-word-1-0","text":"这就是主动地理定位。","start":8.075,"end":10.35}]},{"id":"caption-group-2","frame":1,"start":10.35,"end":18.507,"text":"智能体看不到全局地图，只能凭脚下的画面一步一步探索，直到走进目标所在的那一格。","words":[{"id":"caption-word-2-0","text":"智能体看不到全局地图，只能凭脚下的画面一步一步探索，直到走进目标所在的那一格。","start":10.35,"end":18.387}]},{"id":"caption-group-3","frame":2,"start":18.937,"end":23.912,"text":"我们的平台把这个任务抽象成一个五乘五的网格世界。","words":[{"id":"caption-word-3-0","text":"我们的平台把这个任务抽象成一个五乘五的网格世界。","start":18.937,"end":23.962}]},{"id":"caption-group-4","frame":2,"start":23.912,"end":30.337,"text":"智能体每一步拿到两样东西：一张给定的目标图，和脚下的航拍图块。","words":[{"id":"caption-word-4-0","text":"智能体每一步拿到两样东西：一张给定的目标图，和脚下的航拍图块。","start":23.912,"end":30.337}]},{"id":"caption-group-5","frame":2,"start":30.337,"end":38.637,"text":"它可以选择上下左右移动，越界原地不动也要消耗一步，十步预算内走到目标格才算成功。","words":[{"id":"caption-word-5-0","text":"它可以选择上下左右移动，越界原地不动也要消耗一步，十步预算内走到目标格才算成功。","start":30.337,"end":38.637}]},{"id":"caption-group-6","frame":2,"start":38.637,"end":46.069,"text":"目标坐标和真实距离是神谕信息，物理隔离在评测端，智能体永远看不到。","words":[{"id":"caption-word-6-0","text":"目标坐标和真实距离是神谕信息，物理隔离在评测端，智能体永远看不到。","start":38.637,"end":45.949}]},{"id":"caption-group-7","frame":3,"start":46.499,"end":54.236,"text":"评测的公平性靠工程保证：智能体只能读取公开状态，答案只在评测端解密。","words":[{"id":"caption-word-7-0","text":"评测的公平性靠工程保证：智能体只能读取公开状态，答案只在评测端解密。","start":46.499,"end":54.286}]},{"id":"caption-group-8","frame":3,"start":54.236,"end":61.561,"text":"主指标是成功率，按起始距离四到八格分层统计；辅助指标是终点距离。","words":[{"id":"caption-word-8-0","text":"主指标是成功率，按起始距离四到八格分层统计；辅助指标是终点距离。","start":54.236,"end":61.561}]},{"id":"caption-group-9","frame":3,"start":61.561,"end":68.949,"text":"数据使用Masa航拍数据集，一百三十七张训练源图，验证与测试严格分开。","words":[{"id":"caption-word-9-0","text":"数据使用Masa航拍数据集，一百三十七张训练源图，验证与测试严格分开。","start":61.561,"end":68.949}]},{"id":"caption-group-10","frame":3,"start":68.949,"end":73.806,"text":"全套平台有一百九十六项回归测试护住底线。","words":[{"id":"caption-word-10-0","text":"全套平台有一百九十六项回归测试护住底线。","start":68.949,"end":73.686}]},{"id":"caption-group-11","frame":4,"start":74.236,"end":77.773,"text":"第一阶段接入云端视觉语言模型。","words":[{"id":"caption-word-11-0","text":"第一阶段接入云端视觉语言模型。","start":74.236,"end":77.823}]},{"id":"caption-group-12","frame":4,"start":77.773,"end":86.573,"text":"每一步把目标图、当前画面，加上位置、预算和已访问格子发给模型，让它输出下一步动作。","words":[{"id":"caption-word-12-0","text":"每一步把目标图、当前画面，加上位置、预算和已访问格子发给模型，让它输出下一步动作。","start":77.773,"end":86.573}]},{"id":"caption-group-13","frame":4,"start":86.573,"end":90.648,"text":"结果出乎意料：二十道验证题零成功。","words":[{"id":"caption-word-13-0","text":"结果出乎意料：二十道验证题零成功。","start":86.573,"end":90.648}]},{"id":"caption-group-14","frame":4,"start":90.648,"end":98.223,"text":"轨迹分析发现，模型在两个格子之间来回打转，十九道题出现ABAB循环。","words":[{"id":"caption-word-14-0","text":"轨迹分析发现，模型在两个格子之间来回打转，十九道题出现ABAB循环。","start":90.648,"end":98.223}]},{"id":"caption-group-15","frame":4,"start":98.223,"end":101.693,"text":"接口是通的，策略却是失败的。","words":[{"id":"caption-word-15-0","text":"接口是通的，策略却是失败的。","start":98.223,"end":101.573}]},{"id":"caption-group-16","frame":5,"start":102.123,"end":105.66,"text":"四臂对照实验给出了更完整的诊断。","words":[{"id":"caption-word-16-0","text":"四臂对照实验给出了更完整的诊断。","start":102.123,"end":105.71}]},{"id":"caption-group-17","frame":5,"start":105.66,"end":118.96,"text":"单动作模型成功率百分之五，动作排序百分之十，加上防重复治理器仍是百分之十；而不看图的Frontier规则探索，成功率高达百分之五十。","words":[{"id":"caption-word-17-0","text":"单动作模型成功率百分之五，动作排序百分之十，加上防重复治理器仍是百分之十；而不看图的Frontier规则探索，成功率高达百分之五十。","start":105.66,"end":118.96}]},{"id":"caption-group-18","frame":5,"start":118.96,"end":123.773,"text":"治理器把重复访问率降了一半，却换不来定位成功。","words":[{"id":"caption-word-18-0","text":"治理器把重复访问率降了一半，却换不来定位成功。","start":118.96,"end":123.773}]},{"id":"caption-group-19","frame":5,"start":123.773,"end":128.58,"text":"云端路线按预登记协议暂停，问题转向本地。","words":[{"id":"caption-word-19-0","text":"云端路线按预登记协议暂停，问题转向本地。","start":123.773,"end":128.46}]},{"id":"caption-group-20","frame":6,"start":129.01,"end":133.685,"text":"本地分支在八GB显存的笔记本上重新开始。","words":[{"id":"caption-word-20-0","text":"本地分支在八GB显存的笔记本上重新开始。","start":129.01,"end":133.735}]},{"id":"caption-group-21","frame":6,"start":133.685,"end":139.347,"text":"冻结卫星图编码器，只训练一个八十万参数的小策略网络。","words":[{"id":"caption-word-21-0","text":"冻结卫星图编码器，只训练一个八十万参数的小策略网络。","start":133.685,"end":139.347}]},{"id":"caption-group-22","frame":6,"start":139.347,"end":155.267,"text":"修正到达奖励的错误之后，奖励塑形把成功率带到百分之四十四；再加入合法动作筛选，禁止越界和无效动作，三个种子全部提升，平均百分之六十六，越界率降到零。","words":[{"id":"caption-word-22-0","text":"修正到达奖励的错误之后，奖励塑形把成功率带到百分之四十四；再加入合法动作筛选，禁止越界和无效动作，三个种子全部提升，平均百分之六十六，越界率降到零。","start":139.347,"end":155.147}]},{"id":"caption-group-23","frame":7,"start":155.697,"end":159.522,"text":"但百分之六十六的模型，真的看懂目标了吗？","words":[{"id":"caption-word-23-0","text":"但百分之六十六的模型，真的看懂目标了吗？","start":155.697,"end":159.572}]},{"id":"caption-group-24","frame":7,"start":159.522,"end":164.072,"text":"把目标图换成训练集均值，成功率几乎不掉。","words":[{"id":"caption-word-24-0","text":"把目标图换成训练集均值，成功率几乎不掉。","start":159.522,"end":164.072}]},{"id":"caption-group-25","frame":7,"start":164.072,"end":173.509,"text":"目标监督、源图留出诊断、五分类邻接头、解耦线索头，四轮实验全部没能建立可靠的目标证据。","words":[{"id":"caption-word-25-0","text":"目标监督、源图留出诊断、五分类邻接头、解耦线索头，四轮实验全部没能建立可靠的目标证据。","start":164.072,"end":173.509}]},{"id":"caption-group-26","frame":7,"start":173.509,"end":179.367,"text":"问题被精确定位成一句话：模型没有真正利用目标图的信息。","words":[{"id":"caption-word-26-0","text":"问题被精确定位成一句话：模型没有真正利用目标图的信息。","start":173.509,"end":179.247}]},{"id":"caption-group-27","frame":8,"start":179.797,"end":183.509,"text":"突破来自一个很细的表征：边缘接缝。","words":[{"id":"caption-word-27-0","text":"突破来自一个很细的表征：边缘接缝。","start":179.797,"end":183.559}]},{"id":"caption-group-28","frame":8,"start":183.509,"end":193.309,"text":"把当前图块与目标图块的四条边切成小段，逐段比较颜色误差、梯度误差和相关性，构成二十维特征。","words":[{"id":"caption-word-28-0","text":"把当前图块与目标图块的四条边切成小段，逐段比较颜色误差、梯度误差和相关性，构成二十维特征。","start":183.509,"end":193.309}]},{"id":"caption-group-29","frame":8,"start":193.309,"end":202.972,"text":"只新增两千五百六十个参数，线索头第一次给出可信的邻接判断：目标是否就在相邻格、朝哪个方向。","words":[{"id":"caption-word-29-0","text":"只新增两千五百六十个参数，线索头第一次给出可信的邻接判断：目标是否就在相邻格、朝哪个方向。","start":193.309,"end":202.972}]},{"id":"caption-group-30","frame":8,"start":202.972,"end":211.892,"text":"同样的开发集，成功率从百分之七十二点六跃升到百分之八十八点六，最难的短距离档提升最大。","words":[{"id":"caption-word-30-0","text":"同样的开发集，成功率从百分之七十二点六跃升到百分之八十八点六，最难的短距离档提升最大。","start":202.972,"end":211.772}]},{"id":"caption-group-31","frame":9,"start":212.322,"end":227.372,"text":"冻结全部权重与阈值，一百道验证题乘三个种子正式复验：成功率百分之八十九点三，终点距离零点三二，比基线高出十六点三个百分点，置信区间不包含零。","words":[{"id":"caption-word-31-0","text":"冻结全部权重与阈值，一百道验证题乘三个种子正式复验：成功率百分之八十九点三，终点距离零点三二，比基线高出十六点三个百分点，置信区间不包含零。","start":212.322,"end":227.372}]},{"id":"caption-group-32","frame":9,"start":227.372,"end":231.709,"text":"十二项冻结检查全部通过，独立复核确认。","words":[{"id":"caption-word-32-0","text":"十二项冻结检查全部通过，独立复核确认。","start":227.372,"end":231.709}]},{"id":"caption-group-33","frame":9,"start":231.709,"end":235.517,"text":"默认配置正式切换到边缘线索方案。","words":[{"id":"caption-word-33-0","text":"默认配置正式切换到边缘线索方案。","start":231.709,"end":235.397}]},{"id":"caption-group-34","frame":10,"start":235.947,"end":243.672,"text":"项目至今沉淀了完整的实验台账：每个批次可重放审计，失败与负结果全部保留。","words":[{"id":"caption-word-34-0","text":"项目至今沉淀了完整的实验台账：每个批次可重放审计，失败与负结果全部保留。","start":235.947,"end":243.722}]},{"id":"caption-group-35","frame":10,"start":243.672,"end":249.434,"text":"下一步是独立源图确认、测试集终评与跨数据集验证。","words":[{"id":"caption-word-35-0","text":"下一步是独立源图确认、测试集终评与跨数据集验证。","start":243.672,"end":249.434}]},{"id":"caption-group-36","frame":10,"start":249.434,"end":255.172,"text":"主动探索的定位方法，正在从平台走向方法，再走向证据。","words":[{"id":"caption-word-36-0","text":"主动探索的定位方法，正在从平台走向方法，再走向证据。","start":249.434,"end":255.172}]},{"id":"caption-group-37","frame":10,"start":255.172,"end":256.779,"text":"谢谢观看。","words":[{"id":"caption-word-37-0","text":"谢谢观看。","start":255.172,"end":256.659}]}];
+  var DURATION = 257.109;
+
+  (function () {
+    var stage = document.getElementById("caption-stage");
+
+    // build DOM: one .caption-group per group, .caption-word per word
+    GROUPS.forEach(function (group, g) {
+      var groupEl = document.createElement("div");
+      groupEl.className = "caption-group";
+      groupEl.id = "caption-group-" + g;
+      var pill = document.createElement("div");
+      pill.className = "caption-pill";
+      var line = document.createElement("div");
+      line.className = "caption-line";
+      (group.words || []).forEach(function (w, i) {
+        var span = document.createElement("span");
+        span.className = "caption-word";
+        span.id = "caption-word-" + g + "-" + i;
+        span.textContent = String(w.text);
+        line.appendChild(span);
+      });
+      pill.appendChild(line);
+      groupEl.appendChild(pill);
+      stage.appendChild(groupEl);
+    });
+
+    window.__timelines = window.__timelines || {};
+    var tl = gsap.timeline({ paused: true });
+
+    GROUPS.forEach(function (group, g) {
+      var groupEl = document.getElementById("caption-group-" + g);
+      var words = group.words || [];
+      var next = GROUPS[g + 1];
+      var isLast = g === GROUPS.length - 1;
+      var start = Math.max(0, Number(group.start));
+      var end = isLast ? DURATION : Math.min(Number(next.start), Number(group.end) + 0.3);
+      if (end <= start) end = start + 0.01;
+
+      // group on/off — exactly one group visible at a time
+      tl.set(groupEl, { opacity: 1 }, start);
+      tl.set(groupEl, { opacity: 0 }, end);
+
+      // 3-state karaoke via className SETS — seek-safe (gsap.set applies on the
+      // engine's frame-by-frame seek; .call callbacks would NOT fire).
+      words.forEach(function (w, i) {
+        var el = document.getElementById("caption-word-" + g + "-" + i);
+        var at = Math.max(start, Number(w.start));
+        tl.set(el, { className: "caption-word" }, start); // upcoming (also resets on reverse-seek)
+        tl.set(el, { className: "caption-word is-active" }, at); // current
+        tl.fromTo(el, { scale: 0.985 }, { scale: 1, duration: 0.1, ease: "power3.out" }, at);
+        if (i + 1 < words.length) {
+          var nextAt = Math.max(start, Number(words[i + 1].start));
+          tl.set(el, { className: "caption-word is-spoken" }, nextAt); // demote when next activates
+        }
+      });
+      if (words.length) {
+        var lastEl = document.getElementById("caption-word-" + g + "-" + (words.length - 1));
+        var lastSpoken = Math.min(end, Number(words[words.length - 1].end) + 0.1);
+        tl.set(lastEl, { className: "caption-word is-spoken" }, lastSpoken);
+      }
+    });
+
+    // full-span anchor so the sub-comp timeline spans the whole video
+    tl.to({}, { duration: DURATION }, 0);
+    window.__timelines["captions"] = tl;
+  })();
+</script>
+
+<style>
+  .caption-line { line-height: 1.1 !important; }
+</style>
+</template>

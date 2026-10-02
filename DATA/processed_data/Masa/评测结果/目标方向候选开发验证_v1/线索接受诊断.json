@@ -1,0 +1,239 @@
+{
+  "scope": "posthoc evaluator truth; not a policy input or calibration",
+  "conditions": {
+    "Clean": {
+      "Original": [
+        {
+          "seed": 0,
+          "accepted": 112,
+          "correct": 108,
+          "false_accepts": 4,
+          "accepted_precision": 0.9642857142857143,
+          "accepted_when_adjacent": 108,
+          "false_accepts_without_adjacent_goal": 4,
+          "selected_absolute_R0_on_accepted": null,
+          "head_forward_calls": 1078,
+          "neural_actions": 1078
+        },
+        {
+          "seed": 1,
+          "accepted": 114,
+          "correct": 111,
+          "false_accepts": 3,
+          "accepted_precision": 0.9736842105263158,
+          "accepted_when_adjacent": 111,
+          "false_accepts_without_adjacent_goal": 3,
+          "selected_absolute_R0_on_accepted": null,
+          "head_forward_calls": 1067,
+          "neural_actions": 1067
+        },
+        {
+          "seed": 2,
+          "accepted": 106,
+          "correct": 103,
+          "false_accepts": 3,
+          "accepted_precision": 0.9716981132075472,
+          "accepted_when_adjacent": 103,
+          "false_accepts_without_adjacent_goal": 3,
+          "selected_absolute_R0_on_accepted": null,
+          "head_forward_calls": 1073,
+          "neural_actions": 1073
+        }
+      ],
+      "Candidate4": [
+        {
+          "seed": 0,
+          "accepted": 119,
+          "correct": 109,
+          "false_accepts": 10,
+          "accepted_precision": 0.9159663865546218,
+          "accepted_when_adjacent": 109,
+          "false_accepts_without_adjacent_goal": 10,
+          "selected_absolute_R0_on_accepted": 111,
+          "head_forward_calls": 4292,
+          "neural_actions": 1073
+        },
+        {
+          "seed": 1,
+          "accepted": 123,
+          "correct": 111,
+          "false_accepts": 12,
+          "accepted_precision": 0.9024390243902439,
+          "accepted_when_adjacent": 111,
+          "false_accepts_without_adjacent_goal": 12,
+          "selected_absolute_R0_on_accepted": 114,
+          "head_forward_calls": 4268,
+          "neural_actions": 1067
+        },
+        {
+          "seed": 2,
+          "accepted": 109,
+          "correct": 103,
+          "false_accepts": 6,
+          "accepted_precision": 0.944954128440367,
+          "accepted_when_adjacent": 103,
+          "false_accepts_without_adjacent_goal": 6,
+          "selected_absolute_R0_on_accepted": 106,
+          "head_forward_calls": 4300,
+          "neural_actions": 1075
+        }
+      ],
+      "NoTarget": [
+        {
+          "seed": 0,
+          "accepted": 0,
+          "correct": 0,
+          "false_accepts": 0,
+          "accepted_precision": null,
+          "accepted_when_adjacent": 0,
+          "false_accepts_without_adjacent_goal": 0,
+          "selected_absolute_R0_on_accepted": null,
+          "head_forward_calls": 1157,
+          "neural_actions": 1157
+        },
+        {
+          "seed": 1,
+          "accepted": 0,
+          "correct": 0,
+          "false_accepts": 0,
+          "accepted_precision": null,
+          "accepted_when_adjacent": 0,
+          "false_accepts_without_adjacent_goal": 0,
+          "selected_absolute_R0_on_accepted": null,
+          "head_forward_calls": 1135,
+          "neural_actions": 1135
+        },
+        {
+          "seed": 2,
+          "accepted": 0,
+          "correct": 0,
+          "false_accepts": 0,
+          "accepted_precision": null,
+          "accepted_when_adjacent": 0,
+          "false_accepts_without_adjacent_goal": 0,
+          "selected_absolute_R0_on_accepted": null,
+          "head_forward_calls": 1141,
+          "neural_actions": 1141
+        }
+      ]
+    },
+    "Rot90CW": {
+      "Original": [
+        {
+          "seed": 0,
+          "accepted": 4,
+          "correct": 0,
+          "false_accepts": 4,
+          "accepted_precision": 0.0,
+          "accepted_when_adjacent": 1,
+          "false_accepts_without_adjacent_goal": 3,
+          "selected_absolute_R0_on_accepted": null,
+          "head_forward_calls": 1152,
+          "neural_actions": 1152
+        },
+        {
+          "seed": 1,
+          "accepted": 2,
+          "correct": 0,
+          "false_accepts": 2,
+          "accepted_precision": 0.0,
+          "accepted_when_adjacent": 1,
+          "false_accepts_without_adjacent_goal": 1,
+          "selected_absolute_R0_on_accepted": null,
+          "head_forward_calls": 1135,
+          "neural_actions": 1135
+        },
+        {
+          "seed": 2,
+          "accepted": 2,
+          "correct": 0,
+          "false_accepts": 2,
+          "accepted_precision": 0.0,
+          "accepted_when_adjacent": 1,
+          "false_accepts_without_adjacent_goal": 1,
+          "selected_absolute_R0_on_accepted": null,
+          "head_forward_calls": 1143,
+          "neural_actions": 1143
+        }
+      ],
+      "Candidate4": [
+        {
+          "seed": 0,
+          "accepted": 119,
+          "correct": 109,
+          "false_accepts": 10,
+          "accepted_precision": 0.9159663865546218,
+          "accepted_when_adjacent": 109,
+          "false_accepts_without_adjacent_goal": 10,
+          "selected_absolute_R0_on_accepted": 111,
+          "head_forward_calls": 4292,
+          "neural_actions": 1073
+        },
+        {
+          "seed": 1,
+          "accepted": 123,
+          "correct": 111,
+          "false_accepts": 12,
+          "accepted_precision": 0.9024390243902439,
+          "accepted_when_adjacent": 111,
+          "false_accepts_without_adjacent_goal": 12,
+          "selected_absolute_R0_on_accepted": 114,
+          "head_forward_calls": 4268,
+          "neural_actions": 1067
+        },
+        {
+          "seed": 2,
+          "accepted": 109,
+          "correct": 103,
+          "false_accepts": 6,
+          "accepted_precision": 0.944954128440367,
+          "accepted_when_adjacent": 103,
+          "false_accepts_without_adjacent_goal": 6,
+          "selected_absolute_R0_on_accepted": 106,
+          "head_forward_calls": 4300,
+          "neural_actions": 1075
+        }
+      ],
+      "NoTarget": [
+        {
+          "seed": 0,
+          "accepted": 0,
+          "correct": 0,
+          "false_accepts": 0,
+          "accepted_precision": null,
+          "accepted_when_adjacent": 0,
+          "false_accepts_without_adjacent_goal": 0,
+          "selected_absolute_R0_on_accepted": null,
+          "head_forward_calls": 1157,
+          "neural_actions": 1157
+        },
+        {
+          "seed": 1,
+          "accepted": 0,
+          "correct": 0,
+          "false_accepts": 0,
+          "accepted_precision": null,
+          "accepted_when_adjacent": 0,
+          "false_accepts_without_adjacent_goal": 0,
+          "selected_absolute_R0_on_accepted": null,
+          "head_forward_calls": 1135,
+          "neural_actions": 1135
+        },
+        {
+          "seed": 2,
+          "accepted": 0,
+          "correct": 0,
+          "false_accepts": 0,
+          "accepted_precision": null,
+          "accepted_when_adjacent": 0,
+          "false_accepts_without_adjacent_goal": 0,
+          "selected_absolute_R0_on_accepted": null,
+          "head_forward_calls": 1141,
+          "neural_actions": 1141
+        }
+      ]
+    }
+  },
+  "total_head_forward_calls": 39234,
+  "online_runtime_note": "shared resource load; total run duration is not a controlled speed comparison"
+}

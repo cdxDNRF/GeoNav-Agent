@@ -1,0 +1,91 @@
+{
+  "checkpoint": "model.pt",
+  "config": {
+    "curiosity_weight": 0.0,
+    "device": "cuda",
+    "episodes_per_epoch": 1000,
+    "epochs": 4,
+    "gamma": 0.99,
+    "learning_rate": 0.0003,
+    "mode": "ppo_pbrs",
+    "pbrs_beta": 0.5,
+    "seed": 0
+  },
+  "data": {
+    "train_embedding_sha256": "50ea69c4f6b98bf456163c2b37f9d7e83bd78180398f268e6ece5f3c2ecbdb67",
+    "train_episodes": 3425,
+    "train_task_sha256": "e8ac9ea43df601e76addefee80e5897870cf7e859aec184b8bb92d7cf22d2a1b",
+    "val_embedding_sha256": "2f156d63363a47f3e4e4e7fe6ee3e1ac9466526910f7c38a050dc0142099405f",
+    "val_episodes": 100,
+    "val_task_sha256": "91bfe1bbda6ff775fe1bdf2d396191aa64fdfd1c8e0603086319e3317cfdb8be"
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 0.11033553608200129,
+      "successes": 0,
+      "transitions": 8284
+    },
+    {
+      "epoch": 2,
+      "loss": 0.0722625154782744,
+      "successes": 0,
+      "transitions": 8512
+    },
+    {
+      "epoch": 3,
+      "loss": 0.04967755057355937,
+      "successes": 0,
+      "transitions": 8624
+    },
+    {
+      "epoch": 4,
+      "loss": 0.0484533777789158,
+      "successes": 0,
+      "transitions": 8655
+    }
+  ],
+  "model": {
+    "class": "TinyPolicy",
+    "feature_dim": 1052,
+    "inference_goal_fields": false,
+    "parameters": 797701
+  },
+  "target_used_only_for_training": true,
+  "val": {
+    "by_distance": {
+      "4": {
+        "episodes": 20,
+        "sg": 3.05,
+        "sr": 0.1
+      },
+      "5": {
+        "episodes": 20,
+        "sg": 1.95,
+        "sr": 0.25
+      },
+      "6": {
+        "episodes": 20,
+        "sg": 1.4,
+        "sr": 0.35
+      },
+      "7": {
+        "episodes": 20,
+        "sg": 1.35,
+        "sr": 0.25
+      },
+      "8": {
+        "episodes": 20,
+        "sg": 0.5,
+        "sr": 0.6
+      }
+    },
+    "episodes": 100,
+    "repeat_visit_rate": 0.27334126984126983,
+    "sg": 1.65,
+    "split": "val",
+    "sr": 0.31,
+    "successes": 31
+  },
+  "version": "tiny-dyncur-v1"
+}

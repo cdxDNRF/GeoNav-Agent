@@ -1,0 +1,34 @@
+{
+  "audit_sha256": "4d8a4f387b9b62ac4125384731f09352260f0f13cf70a7a08fe2cae642c6e6fc",
+  "figures": [
+    {
+      "caption": "20源图/20题已见开发小验证，原本地checkpoint0与三轮Gemma云端控制同图像权限/动作预算；双调用臂同调用上限。协作未通过小规模候选门槛。白点是三轮API重复，不增加独立源图。SG包含全部失败终点；全部云端臂0个改变动作，不能把相同SR归因于新增协作。",
+      "files": [
+        {
+          "path": "绘图/数据结果图/27_多Agent同预算小验证成功率与距离.pdf",
+          "sha256": "45cda3499ea6ce1eff396c490a44bc002751ba9224a51cb86fe078e3ab44e5a0"
+        },
+        {
+          "path": "绘图/数据结果图/27_多Agent同预算小验证成功率与距离.svg",
+          "sha256": "6649ba594e4604aa551a9d2cfa5e19bae81974af0cd5dd87f8b81ee2cf851ef9"
+        },
+        {
+          "path": "绘图/数据结果图/27_多Agent同预算小验证成功率与距离.png",
+          "sha256": "f414a93eb582daf029917ffae05af4eb919ba1e4faa641203f84369d563804e4"
+        }
+      ],
+      "id": "27_多Agent同预算小验证成功率与距离",
+      "protocol": "known Masa20sources/20tasks, cloud3repeats, frozen localcheckpoint0",
+      "reproduction_script": "project/src/documents/summarize_collaboration_pilot.py",
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/多Agent同预算小验证_v1/对照汇总.json"
+      ]
+    }
+  ],
+  "minimum_font_pt": 9,
+  "recommended_width_cm": 18,
+  "registration_sha256": "e75b4531aabef7715ed47c92552d26fd543f7bf9a66161ed47b71fc41af1ae62",
+  "scope": "known20source pilot, no generalizationclaim",
+  "summary_sha256": "7ec9a512027696c5d835d34a00bd99eb78a60f5474ede40761416c4b93dd6c2a",
+  "version": "collaboration-pilot-figure-v1"
+}

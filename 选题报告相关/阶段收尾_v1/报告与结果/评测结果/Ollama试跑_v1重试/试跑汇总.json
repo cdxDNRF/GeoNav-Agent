@@ -1,0 +1,58 @@
+{
+  "api": {
+    "cost": null,
+    "cost_note": "未配置或核验价格，不估算费用；以供应商账单为准",
+    "latency_mean_seconds": 2.814800125000147,
+    "latency_p50_seconds": 2.5889497499993013,
+    "latency_p95_seconds": 4.807548750000933,
+    "reported_token_totals": {
+      "completion_tokens": 117,
+      "prompt_tokens": 11980,
+      "total_tokens": 12097
+    },
+    "requests": 16,
+    "stream": false,
+    "time_to_first_token": null,
+    "usage_note": "仅供应商实际返回值；不把缺失用量当0，不推断图像/推理token明细",
+    "usage_reported_requests": 16,
+    "valid_actions": 15
+  },
+  "automatic_retries": 0,
+  "probe_error": null,
+  "random": {
+    "api_errors": 0,
+    "completed": 2,
+    "metrics_completed_only": {
+      "episodes": 2,
+      "mean_sg_all_episodes": 5,
+      "mean_steps": 10,
+      "out_of_bounds_rate": 0.4,
+      "repeat_visit_rate_macro": 0.7,
+      "repeat_visit_rate_micro": 0.7,
+      "sr": 0.0,
+      "successes": 0
+    },
+    "not_run": 0,
+    "note": "错误/未运行不伪装为正常任务；completed-only指标不得掩盖覆盖率",
+    "scheduled": 2
+  },
+  "scope": "2 validation episodes compatibility/latency pilot, not model-performance evidence",
+  "test_split_used": false,
+  "vlm": {
+    "api_errors": 1,
+    "completed": 1,
+    "metrics_completed_only": {
+      "episodes": 1,
+      "mean_sg_all_episodes": 2,
+      "mean_steps": 10,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.6,
+      "repeat_visit_rate_micro": 0.6,
+      "sr": 0.0,
+      "successes": 0
+    },
+    "not_run": 0,
+    "note": "错误/未运行不伪装为正常任务；completed-only指标不得掩盖覆盖率",
+    "scheduled": 2
+  }
+}

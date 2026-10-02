@@ -1,0 +1,715 @@
+{
+  "SR_gain_CI_positive": {
+    "FixedRegion": true,
+    "Frontier": true,
+    "MeanCue": true,
+    "NoTargetBaseline": true,
+    "WrongCue": true,
+    "ZeroEdgeFull": true
+  },
+  "audit_pending": true,
+  "averages": {
+    "Edge": {
+      "Baseline": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 1.1666666666666667,
+            "sr": 0.75
+          },
+          "5": {
+            "mean_sg_all_episodes": 1.75,
+            "sr": 0.5833333333333334
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.8333333333333334,
+            "sr": 0.75
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.3333333333333333,
+            "sr": 0.8333333333333334
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.0,
+            "sr": 1.0
+          }
+        },
+        "by_source": {
+          "img_0": {
+            "mean_sg_all_episodes": 1.3333333333333333,
+            "sr": 0.7999999999999999
+          },
+          "img_1": {
+            "mean_sg_all_episodes": 0.8666666666666667,
+            "sr": 0.6666666666666666
+          },
+          "img_2": {
+            "mean_sg_all_episodes": 0.6,
+            "sr": 0.8666666666666667
+          },
+          "img_3": {
+            "mean_sg_all_episodes": 0.4666666666666666,
+            "sr": 0.7999999999999999
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 20,
+        "repeat_by_seed": [
+          0.09090909090909091,
+          0.03680981595092025,
+          0.0440251572327044
+        ],
+        "sg_mean": 0.8166666666666668,
+        "source_count": 4,
+        "sr_by_seed": [
+          0.75,
+          0.85,
+          0.75
+        ],
+        "sr_mean": 0.7833333333333333,
+        "successes_by_seed": [
+          15,
+          17,
+          15
+        ]
+      },
+      "CueFull": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 1.1666666666666667,
+            "sr": 0.75
+          },
+          "5": {
+            "mean_sg_all_episodes": 0.5,
+            "sr": 0.8333333333333334
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.5,
+            "sr": 0.8333333333333334
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.08333333333333333,
+            "sr": 0.9166666666666666
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.0,
+            "sr": 1.0
+          }
+        },
+        "by_source": {
+          "img_0": {
+            "mean_sg_all_episodes": 0.39999999999999997,
+            "sr": 0.9333333333333332
+          },
+          "img_1": {
+            "mean_sg_all_episodes": 0.6,
+            "sr": 0.7333333333333334
+          },
+          "img_2": {
+            "mean_sg_all_episodes": 0.39999999999999997,
+            "sr": 0.9333333333333332
+          },
+          "img_3": {
+            "mean_sg_all_episodes": 0.4000000000000001,
+            "sr": 0.8666666666666667
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 20,
+        "repeat_by_seed": [
+          0.06369426751592357,
+          0.025,
+          0.04666666666666667
+        ],
+        "sg_mean": 0.45,
+        "source_count": 4,
+        "sr_by_seed": [
+          0.85,
+          0.9,
+          0.85
+        ],
+        "sr_mean": 0.8666666666666667,
+        "successes_by_seed": [
+          17,
+          18,
+          17
+        ]
+      },
+      "CueMean": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 1.5,
+            "sr": 0.5
+          },
+          "5": {
+            "mean_sg_all_episodes": 1.5833333333333333,
+            "sr": 0.5833333333333334
+          },
+          "6": {
+            "mean_sg_all_episodes": 1.0,
+            "sr": 0.6666666666666666
+          },
+          "7": {
+            "mean_sg_all_episodes": 1.0833333333333333,
+            "sr": 0.5833333333333334
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.16666666666666666,
+            "sr": 0.9166666666666666
+          }
+        },
+        "by_source": {
+          "img_0": {
+            "mean_sg_all_episodes": 2.466666666666667,
+            "sr": 0.3333333333333333
+          },
+          "img_1": {
+            "mean_sg_all_episodes": 0.7333333333333334,
+            "sr": 0.6666666666666666
+          },
+          "img_2": {
+            "mean_sg_all_episodes": 0.39999999999999997,
+            "sr": 0.9333333333333332
+          },
+          "img_3": {
+            "mean_sg_all_episodes": 0.6666666666666666,
+            "sr": 0.6666666666666666
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 20,
+        "repeat_by_seed": [
+          0.06547619047619048,
+          0.06629834254143646,
+          0.006134969325153374
+        ],
+        "sg_mean": 1.0666666666666667,
+        "source_count": 4,
+        "sr_by_seed": [
+          0.7,
+          0.55,
+          0.7
+        ],
+        "sr_mean": 0.65,
+        "successes_by_seed": [
+          14,
+          11,
+          14
+        ]
+      },
+      "CueWrong": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 1.6666666666666667,
+            "sr": 0.5833333333333334
+          },
+          "5": {
+            "mean_sg_all_episodes": 1.75,
+            "sr": 0.5833333333333334
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.8333333333333334,
+            "sr": 0.75
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.25,
+            "sr": 0.9166666666666666
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.16666666666666666,
+            "sr": 0.9166666666666666
+          }
+        },
+        "by_source": {
+          "img_0": {
+            "mean_sg_all_episodes": 1.8666666666666665,
+            "sr": 0.6
+          },
+          "img_1": {
+            "mean_sg_all_episodes": 0.7999999999999999,
+            "sr": 0.7333333333333334
+          },
+          "img_2": {
+            "mean_sg_all_episodes": 0.6,
+            "sr": 0.8666666666666667
+          },
+          "img_3": {
+            "mean_sg_all_episodes": 0.4666666666666666,
+            "sr": 0.7999999999999999
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 20,
+        "repeat_by_seed": [
+          0.08284023668639054,
+          0.041916167664670656,
+          0.04216867469879518
+        ],
+        "sg_mean": 0.9333333333333332,
+        "source_count": 4,
+        "sr_by_seed": [
+          0.7,
+          0.8,
+          0.75
+        ],
+        "sr_mean": 0.75,
+        "successes_by_seed": [
+          14,
+          16,
+          15
+        ]
+      }
+    },
+    "ZeroEdge": {
+      "CueFull": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 1.1666666666666667,
+            "sr": 0.75
+          },
+          "5": {
+            "mean_sg_all_episodes": 1.75,
+            "sr": 0.5833333333333334
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.8333333333333334,
+            "sr": 0.75
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.3333333333333333,
+            "sr": 0.8333333333333334
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.0,
+            "sr": 1.0
+          }
+        },
+        "by_source": {
+          "img_0": {
+            "mean_sg_all_episodes": 1.3333333333333333,
+            "sr": 0.7999999999999999
+          },
+          "img_1": {
+            "mean_sg_all_episodes": 0.8666666666666667,
+            "sr": 0.6666666666666666
+          },
+          "img_2": {
+            "mean_sg_all_episodes": 0.6,
+            "sr": 0.8666666666666667
+          },
+          "img_3": {
+            "mean_sg_all_episodes": 0.4666666666666666,
+            "sr": 0.7999999999999999
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 20,
+        "repeat_by_seed": [
+          0.09090909090909091,
+          0.03680981595092025,
+          0.0440251572327044
+        ],
+        "sg_mean": 0.8166666666666668,
+        "source_count": 4,
+        "sr_by_seed": [
+          0.75,
+          0.85,
+          0.75
+        ],
+        "sr_mean": 0.7833333333333333,
+        "successes_by_seed": [
+          15,
+          17,
+          15
+        ]
+      }
+    }
+  },
+  "cloud_calls": 0,
+  "dataset": "SwissView100",
+  "diagnostics": {
+    "SR_seed_range": 0.050000000000000044
+  },
+  "effects": {
+    "FixedRegion": {
+      "gain": 0.4666666666666666,
+      "gains_by_seed": [
+        0.44999999999999996,
+        0.5,
+        0.44999999999999996
+      ],
+      "gains_by_source": {
+        "img_0": 0.5333333333333333,
+        "img_1": 0.3333333333333333,
+        "img_2": 0.5333333333333333,
+        "img_3": 0.4666666666666666
+      },
+      "positive_seeds": 3,
+      "positive_sources": 4,
+      "sg_change": -1.9000000000000004,
+      "sg_source_interval": {
+        "interval95": [
+          -2.0,
+          -1.8
+        ],
+        "mean": -1.9,
+        "resamples": 2000,
+        "scope": "SwissView100 source-file groups; geographic footprint nonoverlap not established",
+        "source_count": 4
+      },
+      "source_interval": {
+        "interval95": [
+          0.3833333333333333,
+          0.5333333333333333
+        ],
+        "mean": 0.4666666666666666,
+        "resamples": 2000,
+        "scope": "SwissView100 source-file groups; geographic footprint nonoverlap not established",
+        "source_count": 4
+      }
+    },
+    "Frontier": {
+      "gain": 0.4666666666666666,
+      "gains_by_seed": [
+        0.44999999999999996,
+        0.5,
+        0.44999999999999996
+      ],
+      "gains_by_source": {
+        "img_0": 0.3333333333333333,
+        "img_1": 0.5333333333333333,
+        "img_2": 0.3333333333333333,
+        "img_3": 0.6666666666666666
+      },
+      "positive_seeds": 3,
+      "positive_sources": 4,
+      "sg_change": -2.15,
+      "sg_source_interval": {
+        "interval95": [
+          -2.8499999999999996,
+          -1.5999999999999999
+        ],
+        "mean": -2.15,
+        "resamples": 2000,
+        "scope": "SwissView100 source-file groups; geographic footprint nonoverlap not established",
+        "source_count": 4
+      },
+      "source_interval": {
+        "interval95": [
+          0.3333333333333333,
+          0.6
+        ],
+        "mean": 0.4666666666666667,
+        "resamples": 2000,
+        "scope": "SwissView100 source-file groups; geographic footprint nonoverlap not established",
+        "source_count": 4
+      }
+    },
+    "MeanCue": {
+      "gain": 0.21666666666666667,
+      "gains_by_seed": [
+        0.15000000000000002,
+        0.35,
+        0.15000000000000002
+      ],
+      "gains_by_source": {
+        "img_0": 0.6,
+        "img_1": 0.0666666666666667,
+        "img_2": 0.0,
+        "img_3": 0.20000000000000004
+      },
+      "positive_seeds": 3,
+      "positive_sources": 3,
+      "sg_change": -0.6166666666666666,
+      "sg_source_interval": {
+        "interval95": [
+          -1.5833333333333335,
+          -0.06666666666666665
+        ],
+        "mean": -0.6166666666666667,
+        "resamples": 2000,
+        "scope": "SwissView100 source-file groups; geographic footprint nonoverlap not established",
+        "source_count": 4
+      },
+      "source_interval": {
+        "interval95": [
+          0.03333333333333335,
+          0.4666666666666667
+        ],
+        "mean": 0.21666666666666667,
+        "resamples": 2000,
+        "scope": "SwissView100 source-file groups; geographic footprint nonoverlap not established",
+        "source_count": 4
+      }
+    },
+    "NoTargetBaseline": {
+      "gain": 0.08333333333333333,
+      "gains_by_seed": [
+        0.09999999999999998,
+        0.050000000000000044,
+        0.09999999999999998
+      ],
+      "gains_by_source": {
+        "img_0": 0.13333333333333333,
+        "img_1": 0.06666666666666665,
+        "img_2": 0.0666666666666667,
+        "img_3": 0.0666666666666667
+      },
+      "positive_seeds": 3,
+      "positive_sources": 4,
+      "sg_change": -0.3666666666666667,
+      "sg_source_interval": {
+        "interval95": [
+          -0.7499999999999999,
+          -0.11666666666666665
+        ],
+        "mean": -0.36666666666666664,
+        "resamples": 2000,
+        "scope": "SwissView100 source-file groups; geographic footprint nonoverlap not established",
+        "source_count": 4
+      },
+      "source_interval": {
+        "interval95": [
+          0.06666666666666667,
+          0.11666666666666667
+        ],
+        "mean": 0.08333333333333334,
+        "resamples": 2000,
+        "scope": "SwissView100 source-file groups; geographic footprint nonoverlap not established",
+        "source_count": 4
+      }
+    },
+    "WrongCue": {
+      "gain": 0.11666666666666665,
+      "gains_by_seed": [
+        0.15000000000000002,
+        0.09999999999999998,
+        0.09999999999999998
+      ],
+      "gains_by_source": {
+        "img_0": 0.3333333333333333,
+        "img_1": 0.0,
+        "img_2": 0.0666666666666667,
+        "img_3": 0.0666666666666667
+      },
+      "positive_seeds": 3,
+      "positive_sources": 3,
+      "sg_change": -0.4833333333333334,
+      "sg_source_interval": {
+        "interval95": [
+          -1.1500000000000001,
+          -0.1
+        ],
+        "mean": -0.48333333333333334,
+        "resamples": 2000,
+        "scope": "SwissView100 source-file groups; geographic footprint nonoverlap not established",
+        "source_count": 4
+      },
+      "source_interval": {
+        "interval95": [
+          0.016666666666666673,
+          0.26666666666666666
+        ],
+        "mean": 0.11666666666666668,
+        "resamples": 2000,
+        "scope": "SwissView100 source-file groups; geographic footprint nonoverlap not established",
+        "source_count": 4
+      }
+    },
+    "ZeroEdgeFull": {
+      "gain": 0.08333333333333333,
+      "gains_by_seed": [
+        0.09999999999999998,
+        0.050000000000000044,
+        0.09999999999999998
+      ],
+      "gains_by_source": {
+        "img_0": 0.13333333333333333,
+        "img_1": 0.06666666666666665,
+        "img_2": 0.0666666666666667,
+        "img_3": 0.0666666666666667
+      },
+      "positive_seeds": 3,
+      "positive_sources": 4,
+      "sg_change": -0.3666666666666667,
+      "sg_source_interval": {
+        "interval95": [
+          -0.7499999999999999,
+          -0.11666666666666665
+        ],
+        "mean": -0.36666666666666664,
+        "resamples": 2000,
+        "scope": "SwissView100 source-file groups; geographic footprint nonoverlap not established",
+        "source_count": 4
+      },
+      "source_interval": {
+        "interval95": [
+          0.06666666666666667,
+          0.11666666666666667
+        ],
+        "mean": 0.08333333333333334,
+        "resamples": 2000,
+        "scope": "SwissView100 source-file groups; geographic footprint nonoverlap not established",
+        "source_count": 4
+      }
+    }
+  },
+  "engineering_checks": {
+    "SG_no_worse_than_rule": true,
+    "all_planned_normal_terminals": true,
+    "mean_SG_2p5": true,
+    "mean_SR_45pct": true,
+    "rule_SR_gain_5pp": true
+  },
+  "engineering_numeric_passed": true,
+  "formal_cross_dataset_passed": false,
+  "mode": "pilot",
+  "planned_neural_episodes": 300,
+  "planned_rule_episodes": 40,
+  "rules": {
+    "FixedRegion": {
+      "by_source": {
+        "img_0": {
+          "episodes": 5,
+          "mean_sg_all_episodes": 2.2,
+          "mean_steps": 7.8,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.0,
+          "repeat_visit_rate_micro": 0.0,
+          "sr": 0.4,
+          "successes": 2
+        },
+        "img_1": {
+          "episodes": 5,
+          "mean_sg_all_episodes": 2.6,
+          "mean_steps": 9.2,
+          "out_of_bounds_rate": 0.06521739130434782,
+          "repeat_visit_rate_macro": 0.16,
+          "repeat_visit_rate_micro": 0.17391304347826086,
+          "sr": 0.4,
+          "successes": 2
+        },
+        "img_2": {
+          "episodes": 5,
+          "mean_sg_all_episodes": 2.4,
+          "mean_steps": 9.8,
+          "out_of_bounds_rate": 0.02040816326530612,
+          "repeat_visit_rate_macro": 0.06,
+          "repeat_visit_rate_micro": 0.061224489795918366,
+          "sr": 0.4,
+          "successes": 2
+        },
+        "img_3": {
+          "episodes": 5,
+          "mean_sg_all_episodes": 2.2,
+          "mean_steps": 9.4,
+          "out_of_bounds_rate": 0.0425531914893617,
+          "repeat_visit_rate_macro": 0.12,
+          "repeat_visit_rate_micro": 0.1276595744680851,
+          "sr": 0.4,
+          "successes": 2
+        }
+      },
+      "metrics": {
+        "episodes": 20,
+        "mean_sg_all_episodes": 2.35,
+        "mean_steps": 9.05,
+        "out_of_bounds_rate": 0.03314917127071823,
+        "repeat_visit_rate_macro": 0.08499999999999999,
+        "repeat_visit_rate_micro": 0.09392265193370165,
+        "sr": 0.4,
+        "successes": 8
+      }
+    },
+    "Frontier": {
+      "by_source": {
+        "img_0": {
+          "episodes": 5,
+          "mean_sg_all_episodes": 2.6,
+          "mean_steps": 7.4,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.0,
+          "repeat_visit_rate_micro": 0.0,
+          "sr": 0.6,
+          "successes": 3
+        },
+        "img_1": {
+          "episodes": 5,
+          "mean_sg_all_episodes": 2.4,
+          "mean_steps": 9.2,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.0,
+          "repeat_visit_rate_micro": 0.0,
+          "sr": 0.2,
+          "successes": 1
+        },
+        "img_2": {
+          "episodes": 5,
+          "mean_sg_all_episodes": 1.8,
+          "mean_steps": 8.2,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.02,
+          "repeat_visit_rate_micro": 0.024390243902439025,
+          "sr": 0.6,
+          "successes": 3
+        },
+        "img_3": {
+          "episodes": 5,
+          "mean_sg_all_episodes": 3.6,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.0,
+          "repeat_visit_rate_micro": 0.0,
+          "sr": 0.2,
+          "successes": 1
+        }
+      },
+      "metrics": {
+        "episodes": 20,
+        "mean_sg_all_episodes": 2.6,
+        "mean_steps": 8.7,
+        "out_of_bounds_rate": 0.0,
+        "repeat_visit_rate_macro": 0.005,
+        "repeat_visit_rate_micro": 0.005747126436781609,
+        "sr": 0.4,
+        "successes": 8
+      }
+    }
+  },
+  "source_domain_description": {
+    "SG": 0.3,
+    "SG_change": 0.15000000000000002,
+    "SR": 0.868,
+    "SR_change": -0.0013333333333332975,
+    "interpretation": "Different tasks/maps; descriptive distribution shift, not paired causal comparison",
+    "reference": "Masa S3 test250/10files"
+  },
+  "strongest_rule": "FixedRegion",
+  "target_numeric_passed": true,
+  "target_transfer_checks": {
+    "MeanCue": true,
+    "NoTargetBaseline": true,
+    "WrongCue": true,
+    "ZeroEdgeFull": true
+  },
+  "training_steps": 0
+}

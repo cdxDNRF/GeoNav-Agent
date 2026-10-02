@@ -1,0 +1,42 @@
+{
+  "status": "completed_and_audited",
+  "candidate_retained": true,
+  "candidate": "Spatial256_Full",
+  "baseline": "Small256_Full",
+  "baseline_SR": 0.6595238095238095,
+  "candidate_SR": 0.688095238095238,
+  "effect": {
+    "gain": 0.02857142857142858,
+    "lower_metric_change": -0.1214285714285714,
+    "observational_candidate": true,
+    "positive_seeds": 2,
+    "sg_source_interval": {
+      "interval95": [
+        -0.3095238095238095,
+        0.07857142857142858
+      ],
+      "mean": -0.12142857142857143,
+      "resamples": 2000,
+      "scope": "known development source split; not independent confirmation",
+      "source_count": 28
+    },
+    "source_interval": {
+      "interval95": [
+        -0.014285714285714282,
+        0.06904761904761904
+      ],
+      "mean": 0.02857142857142857,
+      "resamples": 2000,
+      "scope": "known development source split; not independent confirmation",
+      "source_count": 28
+    }
+  },
+  "stable_superiority_proven": false,
+  "stable_target_contribution_proven": false,
+  "formal_S2_passed": false,
+  "next_step": "Freeze configuration and revalidate the SR candidate alongside the trained NoTarget baseline; no additional strategy factors in this batch.",
+  "audit_sha256": "b17f089ca7db1daf8a9fbeb16b255660e25b06f37e3c17c1023a33cc3b8d6a6a",
+  "registration_sha256": "43176d0d41cf0d544d2336a11c10d17abd00f244e76c5de8e8b2ebc2a2c2fd07",
+  "source_training_evaluation_unchanged_during_audit_repair": true,
+  "execution_status_note": "执行状态.json records runner completion before independent audit. This later acceptance record references the completed audit without rewriting that historical runner record."
+}

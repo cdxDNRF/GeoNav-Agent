@@ -1,0 +1,115 @@
+{
+  "D_mechanism_test_completed": true,
+  "D_numeric_passed": true,
+  "allow_G": false,
+  "audit_pending": true,
+  "checks": {
+    "all_D_valid": true,
+    "engineering_passed": true,
+    "grounded_geometry_message_nonempty": true,
+    "no_unvalidated_target_claim": true,
+    "repeated_useful_message_effect": true,
+    "two_failure_states_executable": true
+  },
+  "circuit": null,
+  "combined_requests": 60,
+  "legal_executable": 24,
+  "new_requests": 46,
+  "no_new_navigation_SR": true,
+  "paired_message_effects": [
+    {
+      "pairs": [
+        {
+          "ablation_candidate": "c02",
+          "changed": true,
+          "full_candidate": "c03",
+          "full_strictly_better": true,
+          "message_reported_used": true,
+          "repeat": 0
+        },
+        {
+          "ablation_candidate": "c02",
+          "changed": true,
+          "full_candidate": "c03",
+          "full_strictly_better": true,
+          "message_reported_used": true,
+          "repeat": 1
+        }
+      ],
+      "repeated_useful_message_effect": true,
+      "state": 0
+    },
+    {
+      "pairs": [
+        {
+          "ablation_candidate": "c08",
+          "changed": true,
+          "full_candidate": "c06",
+          "full_strictly_better": false,
+          "message_reported_used": true,
+          "repeat": 0
+        },
+        {
+          "ablation_candidate": "c08",
+          "changed": true,
+          "full_candidate": "c06",
+          "full_strictly_better": false,
+          "message_reported_used": true,
+          "repeat": 1
+        }
+      ],
+      "repeated_useful_message_effect": false,
+      "state": 1
+    },
+    {
+      "pairs": [
+        {
+          "ablation_candidate": "c01",
+          "changed": true,
+          "full_candidate": "c02",
+          "full_strictly_better": true,
+          "message_reported_used": true,
+          "repeat": 0
+        },
+        {
+          "ablation_candidate": "c01",
+          "changed": true,
+          "full_candidate": "c02",
+          "full_strictly_better": true,
+          "message_reported_used": true,
+          "repeat": 1
+        }
+      ],
+      "repeated_useful_message_effect": true,
+      "state": 2
+    },
+    {
+      "pairs": [
+        {
+          "ablation_candidate": "c06",
+          "changed": true,
+          "full_candidate": "c02",
+          "full_strictly_better": false,
+          "message_reported_used": true,
+          "repeat": 0
+        },
+        {
+          "ablation_candidate": "c06",
+          "changed": true,
+          "full_candidate": "c02",
+          "full_strictly_better": false,
+          "message_reported_used": true,
+          "repeat": 1
+        }
+      ],
+      "repeated_useful_message_effect": false,
+      "state": 3
+    }
+  ],
+  "phase_counts": {
+    "D": 40,
+    "engineering": 6
+  },
+  "planned_records": 24,
+  "visual_semantic_accuracy_not_proven": true
+}

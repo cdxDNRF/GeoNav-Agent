@@ -1,0 +1,33 @@
+{
+  "audit_sha256": "046ed665885f14e78a2db5581ed42e14ea278fed511b15f450b07caaa1c08ad2",
+  "figures": [
+    {
+      "caption": "探索器训练协议同预算适配：M0 SR77.13%/SG1.201，Continue5 79.73%/0.823，Adapt10 80.00%/1.059。10×10协议适配未通过升级条件，收束本适配因素，默认保持。20已见源文件、同500题×三权重、10×10/B20；两训练臂各81920实际动作与1024优化器更新，Small256/encoder/目标头/阈值保持。训练协议包含网格密度、预算及距离分布，不单独归因网格。标记为权重seed非CI，SG为所有终局曼哈顿距离；不代表独立新图或更大实际面积确认。",
+      "files": [
+        {
+          "path": "绘图/数据结果图/33_探索器训练协议适配成功率与距离.pdf",
+          "sha256": "d8dbe9bf4f800178d08f7c9db9fefe1738d9026e12d3189a9811a79f90503ad6"
+        },
+        {
+          "path": "绘图/数据结果图/33_探索器训练协议适配成功率与距离.svg",
+          "sha256": "9427add336cec11124fd3f507fec49988bcf2a369a75ff21ade6bbb7cefe34c8"
+        },
+        {
+          "path": "绘图/数据结果图/33_探索器训练协议适配成功率与距离.png",
+          "sha256": "95c362aa38ef77d022f83505fd14404f61c5be522f4b5a94219bae5e0085bdf2"
+        }
+      ],
+      "id": "33_探索器训练协议适配成功率与距离",
+      "protocol": "equal-budget continued training,20known evaluation sources,500tasks/3weights",
+      "reproduction_script": "project/src/documents/summarize_protocol_adaptation.py",
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/主对照/对照汇总.json",
+        "DATA/processed_data/Masa/训练结果/探索器协议适配同预算对照_v1/独立复核.json",
+        "DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/独立复核.json"
+      ]
+    }
+  ],
+  "min_font_pt": 9,
+  "recommended_width_cm": 18,
+  "summary_sha256": "b3657d4c3668e1500d822c4cca1d4634a72ed02a67f0372ddf13d368ac1baca2"
+}

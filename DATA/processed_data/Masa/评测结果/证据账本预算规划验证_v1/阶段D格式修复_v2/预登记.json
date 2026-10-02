@@ -1,0 +1,35 @@
+{
+  "gate_unchanged": true,
+  "max_all_chat_requests": 420,
+  "model": {
+    "api_key": "[REDACTED]",
+    "base_url": "https://ollama.com/v1",
+    "max_tokens": 512,
+    "model": "gemma4:31b",
+    "response_format": "json_object",
+    "stream": false,
+    "temperature": 0,
+    "timeout_seconds": 60
+  },
+  "previous_D_registration_sha256": "7adc24f694489dba2201cc9ad85b1c76afabb9713ab08baefcdbb125df0445c5",
+  "reference_repair_sha256": "a09e8c281a23cb39e6c318e49ff9ef4f670f875b61dea5f8827146e3e20faf8e",
+  "reused_engineering_calls": 6,
+  "source_sha256": {
+    "agents/evidence_reference_repair.py": "d97d249bba7604b8c34ebc230fd6d8b053d8db1290313df3be872a784bee300b",
+    "eval/evidence_budget_d_repair.py": "9fa4cc5fc59b134459b79a80adf84344b41f0e6c83a40ecf3ddbbaf961ce9a4c",
+    "tests/test_evidence_reference_repair.py": "4990a999e39beefbfc88c7cc4003b89cffc8d5dc59038393ec0ff31c3bda6e42"
+  },
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "successful": true,
+    "tests_run": 3
+  },
+  "unchanged_phase_caps": {
+    "D": 48,
+    "G": 360,
+    "engineering": 12
+  },
+  "utc": "2026-10-01T11:51:12.670667+00:00",
+  "version": "ledger-budget-D-reference-repair-v2"
+}

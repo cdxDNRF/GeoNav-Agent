@@ -1,0 +1,1115 @@
+[
+  {
+    "all_responses_valid": true,
+    "arm": "M2",
+    "call_ids": [
+      7,
+      8
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c03",
+        "c05",
+        "c02"
+      ],
+      "source_ids": [],
+      "visual_relation": "unknown"
+    },
+    "input_sha256": "9b8a32d1105b6a538c4dbdf6f8f2e3046eec62d2cca84a3f78ce26474090de72",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c03",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c03",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 0,
+    "state": 0,
+    "status": {
+      "candidate_id": "c03",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "all_responses_valid": true,
+    "arm": "M4",
+    "call_ids": [
+      9,
+      10
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c03",
+        "c05",
+        "c02"
+      ],
+      "source_ids": [],
+      "visual_relation": "unknown"
+    },
+    "input_sha256": "9b8a32d1105b6a538c4dbdf6f8f2e3046eec62d2cca84a3f78ce26474090de72",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c03",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c03",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 0,
+    "state": 0,
+    "status": {
+      "candidate_id": "c03",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "ablation": "hidden",
+    "all_responses_valid": true,
+    "arm": "M4_ablation",
+    "call_ids": [
+      11
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [],
+      "source_ids": [],
+      "visual_relation": "unknown"
+    },
+    "input_sha256": "9b8a32d1105b6a538c4dbdf6f8f2e3046eec62d2cca84a3f78ce26474090de72",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c02",
+      "consumed_message_id": null,
+      "evidence_ids": [
+        "g:c02"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 0,
+    "shared_E_call_id": 9,
+    "state": 0,
+    "status": {
+      "candidate_id": "c02",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        2,
+        -2
+      ]
+    }
+  },
+  {
+    "all_responses_valid": true,
+    "arm": "M4",
+    "call_ids": [
+      12,
+      13
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c06",
+        "c07",
+        "c08"
+      ],
+      "source_ids": [
+        "target",
+        "current"
+      ],
+      "visual_relation": "different"
+    },
+    "input_sha256": "3537035cf46c038ee447973b89ccacf4105ffc8d786dac1273b0f2b142ba025a",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c06",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c06",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 0,
+    "state": 1,
+    "status": {
+      "candidate_id": "c06",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "all_responses_valid": true,
+    "arm": "M2",
+    "call_ids": [
+      14,
+      15
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c09",
+        "c08",
+        "c10"
+      ],
+      "source_ids": [
+        "target",
+        "current"
+      ],
+      "visual_relation": "different"
+    },
+    "input_sha256": "3537035cf46c038ee447973b89ccacf4105ffc8d786dac1273b0f2b142ba025a",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c09",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c09",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 0,
+    "state": 1,
+    "status": {
+      "candidate_id": "c09",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "ablation": "shuffled",
+    "all_responses_valid": true,
+    "arm": "M4_ablation",
+    "call_ids": [
+      16
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c08",
+        "c07",
+        "c06"
+      ],
+      "source_ids": [
+        "target",
+        "current"
+      ],
+      "visual_relation": "different"
+    },
+    "input_sha256": "3537035cf46c038ee447973b89ccacf4105ffc8d786dac1273b0f2b142ba025a",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c08",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c08",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 0,
+    "shared_E_call_id": 12,
+    "state": 1,
+    "status": {
+      "candidate_id": "c08",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "all_responses_valid": true,
+    "arm": "M2",
+    "call_ids": [
+      17,
+      18
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c06",
+        "c04",
+        "c02"
+      ],
+      "source_ids": [
+        "target",
+        "current"
+      ],
+      "visual_relation": "different"
+    },
+    "input_sha256": "5b7703bb0d48edb1274193d3f3c5cc300d7962795e10f1c20a3c799a2ea8bc33",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c06",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c06",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 0,
+    "state": 2,
+    "status": {
+      "candidate_id": "c06",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "all_responses_valid": true,
+    "arm": "M4",
+    "call_ids": [
+      19,
+      20
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c02",
+        "c04",
+        "c06"
+      ],
+      "source_ids": [
+        "target",
+        "current"
+      ],
+      "visual_relation": "different"
+    },
+    "input_sha256": "5b7703bb0d48edb1274193d3f3c5cc300d7962795e10f1c20a3c799a2ea8bc33",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c02",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c02",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 0,
+    "state": 2,
+    "status": {
+      "candidate_id": "c02",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "ablation": "hidden",
+    "all_responses_valid": true,
+    "arm": "M4_ablation",
+    "call_ids": [
+      21
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [],
+      "source_ids": [],
+      "visual_relation": "unknown"
+    },
+    "input_sha256": "5b7703bb0d48edb1274193d3f3c5cc300d7962795e10f1c20a3c799a2ea8bc33",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c01",
+      "consumed_message_id": null,
+      "evidence_ids": [
+        "g:c01"
+      ],
+      "expected_new_cells": 1,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 0,
+    "shared_E_call_id": 19,
+    "state": 2,
+    "status": {
+      "candidate_id": "c01",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        1,
+        0,
+        2,
+        -1
+      ]
+    }
+  },
+  {
+    "all_responses_valid": true,
+    "arm": "M4",
+    "call_ids": [
+      22,
+      23
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c02",
+        "c04",
+        "c06"
+      ],
+      "source_ids": [
+        "target",
+        "current"
+      ],
+      "visual_relation": "different"
+    },
+    "input_sha256": "c319253c79c6b81a2efe3a86230d823d70452fe4f8725b9c0167171a61ca5ccc",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c02",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c02",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 0,
+    "state": 3,
+    "status": {
+      "candidate_id": "c02",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "all_responses_valid": true,
+    "arm": "M2",
+    "call_ids": [
+      24,
+      25
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c06",
+        "c02",
+        "c04"
+      ],
+      "source_ids": [
+        "target",
+        "current"
+      ],
+      "visual_relation": "different"
+    },
+    "input_sha256": "c319253c79c6b81a2efe3a86230d823d70452fe4f8725b9c0167171a61ca5ccc",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c06",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c06",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 0,
+    "state": 3,
+    "status": {
+      "candidate_id": "c06",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "ablation": "shuffled",
+    "all_responses_valid": true,
+    "arm": "M4_ablation",
+    "call_ids": [
+      26
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c06",
+        "c04",
+        "c02"
+      ],
+      "source_ids": [
+        "target",
+        "current"
+      ],
+      "visual_relation": "different"
+    },
+    "input_sha256": "c319253c79c6b81a2efe3a86230d823d70452fe4f8725b9c0167171a61ca5ccc",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c06",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c06",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 0,
+    "shared_E_call_id": 22,
+    "state": 3,
+    "status": {
+      "candidate_id": "c06",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "all_responses_valid": true,
+    "arm": "M4",
+    "call_ids": [
+      27,
+      28
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c03",
+        "c05",
+        "c02"
+      ],
+      "source_ids": [],
+      "visual_relation": "unknown"
+    },
+    "input_sha256": "9b8a32d1105b6a538c4dbdf6f8f2e3046eec62d2cca84a3f78ce26474090de72",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c03",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c03",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 1,
+    "state": 0,
+    "status": {
+      "candidate_id": "c03",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "all_responses_valid": true,
+    "arm": "M2",
+    "call_ids": [
+      29,
+      30
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c03",
+        "c05",
+        "c02"
+      ],
+      "source_ids": [
+        "target",
+        "history_0"
+      ],
+      "visual_relation": "different"
+    },
+    "input_sha256": "9b8a32d1105b6a538c4dbdf6f8f2e3046eec62d2cca84a3f78ce26474090de72",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c03",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c03",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 1,
+    "state": 0,
+    "status": {
+      "candidate_id": "c03",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "ablation": "hidden",
+    "all_responses_valid": true,
+    "arm": "M4_ablation",
+    "call_ids": [
+      31
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [],
+      "source_ids": [],
+      "visual_relation": "unknown"
+    },
+    "input_sha256": "9b8a32d1105b6a538c4dbdf6f8f2e3046eec62d2cca84a3f78ce26474090de72",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c02",
+      "consumed_message_id": null,
+      "evidence_ids": [
+        "g:c02"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 1,
+    "shared_E_call_id": 27,
+    "state": 0,
+    "status": {
+      "candidate_id": "c02",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        2,
+        -2
+      ]
+    }
+  },
+  {
+    "all_responses_valid": true,
+    "arm": "M2",
+    "call_ids": [
+      32,
+      33
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c09",
+        "c08",
+        "c10"
+      ],
+      "source_ids": [
+        "target",
+        "current"
+      ],
+      "visual_relation": "different"
+    },
+    "input_sha256": "3537035cf46c038ee447973b89ccacf4105ffc8d786dac1273b0f2b142ba025a",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c09",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c09",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 1,
+    "state": 1,
+    "status": {
+      "candidate_id": "c09",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "all_responses_valid": true,
+    "arm": "M4",
+    "call_ids": [
+      34,
+      35
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c06",
+        "c07",
+        "c08"
+      ],
+      "source_ids": [],
+      "visual_relation": "unknown"
+    },
+    "input_sha256": "3537035cf46c038ee447973b89ccacf4105ffc8d786dac1273b0f2b142ba025a",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c06",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c06",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 1,
+    "state": 1,
+    "status": {
+      "candidate_id": "c06",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "ablation": "shuffled",
+    "all_responses_valid": true,
+    "arm": "M4_ablation",
+    "call_ids": [
+      36
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c08",
+        "c07",
+        "c06"
+      ],
+      "source_ids": [],
+      "visual_relation": "unknown"
+    },
+    "input_sha256": "3537035cf46c038ee447973b89ccacf4105ffc8d786dac1273b0f2b142ba025a",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c08",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c08",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 1,
+    "shared_E_call_id": 34,
+    "state": 1,
+    "status": {
+      "candidate_id": "c08",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "all_responses_valid": true,
+    "arm": "M4",
+    "call_ids": [
+      37,
+      38
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c02",
+        "c04",
+        "c06"
+      ],
+      "source_ids": [
+        "target",
+        "current"
+      ],
+      "visual_relation": "different"
+    },
+    "input_sha256": "5b7703bb0d48edb1274193d3f3c5cc300d7962795e10f1c20a3c799a2ea8bc33",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c02",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c02",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 1,
+    "state": 2,
+    "status": {
+      "candidate_id": "c02",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "all_responses_valid": true,
+    "arm": "M2",
+    "call_ids": [
+      39,
+      40
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c06",
+        "c02",
+        "c04"
+      ],
+      "source_ids": [
+        "target",
+        "current"
+      ],
+      "visual_relation": "different"
+    },
+    "input_sha256": "5b7703bb0d48edb1274193d3f3c5cc300d7962795e10f1c20a3c799a2ea8bc33",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c06",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c06",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 1,
+    "state": 2,
+    "status": {
+      "candidate_id": "c06",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "ablation": "hidden",
+    "all_responses_valid": true,
+    "arm": "M4_ablation",
+    "call_ids": [
+      41
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [],
+      "source_ids": [],
+      "visual_relation": "unknown"
+    },
+    "input_sha256": "5b7703bb0d48edb1274193d3f3c5cc300d7962795e10f1c20a3c799a2ea8bc33",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c01",
+      "consumed_message_id": null,
+      "evidence_ids": [
+        "g:c01"
+      ],
+      "expected_new_cells": 1,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 1,
+    "shared_E_call_id": 37,
+    "state": 2,
+    "status": {
+      "candidate_id": "c01",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        1,
+        0,
+        2,
+        -1
+      ]
+    }
+  },
+  {
+    "all_responses_valid": true,
+    "arm": "M2",
+    "call_ids": [
+      42,
+      43
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c06",
+        "c02",
+        "c04"
+      ],
+      "source_ids": [
+        "target",
+        "current"
+      ],
+      "visual_relation": "different"
+    },
+    "input_sha256": "c319253c79c6b81a2efe3a86230d823d70452fe4f8725b9c0167171a61ca5ccc",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c06",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c06",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 1,
+    "state": 3,
+    "status": {
+      "candidate_id": "c06",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "all_responses_valid": true,
+    "arm": "M4",
+    "call_ids": [
+      44,
+      45
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c02",
+        "c04",
+        "c06"
+      ],
+      "source_ids": [
+        "target",
+        "current"
+      ],
+      "visual_relation": "different"
+    },
+    "input_sha256": "c319253c79c6b81a2efe3a86230d823d70452fe4f8725b9c0167171a61ca5ccc",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c02",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c02",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 1,
+    "state": 3,
+    "status": {
+      "candidate_id": "c02",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  },
+  {
+    "ablation": "shuffled",
+    "all_responses_valid": true,
+    "arm": "M4_ablation",
+    "call_ids": [
+      46
+    ],
+    "evidence": {
+      "normalization_receipt": [],
+      "ranked_candidates": [
+        "c06",
+        "c04",
+        "c02"
+      ],
+      "source_ids": [
+        "target",
+        "current"
+      ],
+      "visual_relation": "different"
+    },
+    "input_sha256": "c319253c79c6b81a2efe3a86230d823d70452fe4f8725b9c0167171a61ca5ccc",
+    "phase": "D",
+    "plan": {
+      "candidate_id": "c06",
+      "consumed_message_id": "m0",
+      "evidence_ids": [
+        "g:c06",
+        "m0"
+      ],
+      "expected_new_cells": 2,
+      "normalization_receipt": [],
+      "proposal_type": "exploration_plan",
+      "stop_condition": "after_option_or_new_cue"
+    },
+    "repeat": 1,
+    "shared_E_call_id": 44,
+    "state": 3,
+    "status": {
+      "candidate_id": "c06",
+      "executable": true,
+      "reason": "legal_exploration",
+      "score": [
+        2,
+        0,
+        3,
+        -2
+      ]
+    }
+  }
+]

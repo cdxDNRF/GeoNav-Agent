@@ -1,0 +1,544 @@
+{
+  "scope": "posthoc evaluator labels; not threshold selection; no causal guarantee",
+  "conditions": {
+    "Clean": {
+      "Original": [
+        {
+          "seed": 0,
+          "accepted": 112,
+          "correct": 108,
+          "false_accepts": 4,
+          "accepted_precision": 0.9642857142857143,
+          "neural_actions": 1078,
+          "head_forward_calls": 1078,
+          "same_visited_state_true_cues_filtered": null,
+          "same_visited_state_false_cues_filtered": null,
+          "failed_episodes_with_filtered_true_opportunity": null
+        },
+        {
+          "seed": 1,
+          "accepted": 114,
+          "correct": 111,
+          "false_accepts": 3,
+          "accepted_precision": 0.9736842105263158,
+          "neural_actions": 1067,
+          "head_forward_calls": 1067,
+          "same_visited_state_true_cues_filtered": null,
+          "same_visited_state_false_cues_filtered": null,
+          "failed_episodes_with_filtered_true_opportunity": null
+        },
+        {
+          "seed": 2,
+          "accepted": 106,
+          "correct": 103,
+          "false_accepts": 3,
+          "accepted_precision": 0.9716981132075472,
+          "neural_actions": 1073,
+          "head_forward_calls": 1073,
+          "same_visited_state_true_cues_filtered": null,
+          "same_visited_state_false_cues_filtered": null,
+          "failed_episodes_with_filtered_true_opportunity": null
+        }
+      ],
+      "Naive4": [
+        {
+          "seed": 0,
+          "accepted": 119,
+          "correct": 109,
+          "false_accepts": 10,
+          "accepted_precision": 0.9159663865546218,
+          "neural_actions": 1073,
+          "head_forward_calls": 4292,
+          "same_visited_state_true_cues_filtered": null,
+          "same_visited_state_false_cues_filtered": null,
+          "failed_episodes_with_filtered_true_opportunity": null
+        },
+        {
+          "seed": 1,
+          "accepted": 123,
+          "correct": 111,
+          "false_accepts": 12,
+          "accepted_precision": 0.9024390243902439,
+          "neural_actions": 1067,
+          "head_forward_calls": 4268,
+          "same_visited_state_true_cues_filtered": null,
+          "same_visited_state_false_cues_filtered": null,
+          "failed_episodes_with_filtered_true_opportunity": null
+        },
+        {
+          "seed": 2,
+          "accepted": 109,
+          "correct": 103,
+          "false_accepts": 6,
+          "accepted_precision": 0.944954128440367,
+          "neural_actions": 1075,
+          "head_forward_calls": 4300,
+          "same_visited_state_true_cues_filtered": null,
+          "same_visited_state_false_cues_filtered": null,
+          "failed_episodes_with_filtered_true_opportunity": null
+        }
+      ],
+      "Calibrated4": [
+        {
+          "seed": 0,
+          "accepted": 90,
+          "correct": 88,
+          "false_accepts": 2,
+          "accepted_precision": 0.9777777777777777,
+          "neural_actions": 1089,
+          "head_forward_calls": 4356,
+          "same_visited_state_true_cues_filtered": 22,
+          "same_visited_state_false_cues_filtered": 10,
+          "failed_episodes_with_filtered_true_opportunity": [
+            "train_img_104_d4_002",
+            "train_img_121_d5_000",
+            "train_img_95_d4_004",
+            "train_img_95_d5_000",
+            "train_img_97_d4_001"
+          ]
+        },
+        {
+          "seed": 1,
+          "accepted": 94,
+          "correct": 93,
+          "false_accepts": 1,
+          "accepted_precision": 0.9893617021276596,
+          "neural_actions": 1072,
+          "head_forward_calls": 4288,
+          "same_visited_state_true_cues_filtered": 20,
+          "same_visited_state_false_cues_filtered": 11,
+          "failed_episodes_with_filtered_true_opportunity": [
+            "train_img_86_d4_001",
+            "train_img_95_d5_000"
+          ]
+        },
+        {
+          "seed": 2,
+          "accepted": 82,
+          "correct": 81,
+          "false_accepts": 1,
+          "accepted_precision": 0.9878048780487805,
+          "neural_actions": 1082,
+          "head_forward_calls": 4328,
+          "same_visited_state_true_cues_filtered": 24,
+          "same_visited_state_false_cues_filtered": 5,
+          "failed_episodes_with_filtered_true_opportunity": [
+            "train_img_104_d4_002",
+            "train_img_121_d5_000",
+            "train_img_82_d6_000",
+            "train_img_85_d6_000"
+          ]
+        }
+      ],
+      "NoTarget": [
+        {
+          "seed": 0,
+          "accepted": 0,
+          "correct": 0,
+          "false_accepts": 0,
+          "accepted_precision": null,
+          "neural_actions": 1157,
+          "head_forward_calls": 1157,
+          "same_visited_state_true_cues_filtered": null,
+          "same_visited_state_false_cues_filtered": null,
+          "failed_episodes_with_filtered_true_opportunity": null
+        },
+        {
+          "seed": 1,
+          "accepted": 0,
+          "correct": 0,
+          "false_accepts": 0,
+          "accepted_precision": null,
+          "neural_actions": 1135,
+          "head_forward_calls": 1135,
+          "same_visited_state_true_cues_filtered": null,
+          "same_visited_state_false_cues_filtered": null,
+          "failed_episodes_with_filtered_true_opportunity": null
+        },
+        {
+          "seed": 2,
+          "accepted": 0,
+          "correct": 0,
+          "false_accepts": 0,
+          "accepted_precision": null,
+          "neural_actions": 1141,
+          "head_forward_calls": 1141,
+          "same_visited_state_true_cues_filtered": null,
+          "same_visited_state_false_cues_filtered": null,
+          "failed_episodes_with_filtered_true_opportunity": null
+        }
+      ]
+    },
+    "Rot90CW": {
+      "Original": [
+        {
+          "seed": 0,
+          "accepted": 4,
+          "correct": 0,
+          "false_accepts": 4,
+          "accepted_precision": 0.0,
+          "neural_actions": 1152,
+          "head_forward_calls": 1152,
+          "same_visited_state_true_cues_filtered": null,
+          "same_visited_state_false_cues_filtered": null,
+          "failed_episodes_with_filtered_true_opportunity": null
+        },
+        {
+          "seed": 1,
+          "accepted": 2,
+          "correct": 0,
+          "false_accepts": 2,
+          "accepted_precision": 0.0,
+          "neural_actions": 1135,
+          "head_forward_calls": 1135,
+          "same_visited_state_true_cues_filtered": null,
+          "same_visited_state_false_cues_filtered": null,
+          "failed_episodes_with_filtered_true_opportunity": null
+        },
+        {
+          "seed": 2,
+          "accepted": 2,
+          "correct": 0,
+          "false_accepts": 2,
+          "accepted_precision": 0.0,
+          "neural_actions": 1143,
+          "head_forward_calls": 1143,
+          "same_visited_state_true_cues_filtered": null,
+          "same_visited_state_false_cues_filtered": null,
+          "failed_episodes_with_filtered_true_opportunity": null
+        }
+      ],
+      "Naive4": [
+        {
+          "seed": 0,
+          "accepted": 119,
+          "correct": 109,
+          "false_accepts": 10,
+          "accepted_precision": 0.9159663865546218,
+          "neural_actions": 1073,
+          "head_forward_calls": 4292,
+          "same_visited_state_true_cues_filtered": null,
+          "same_visited_state_false_cues_filtered": null,
+          "failed_episodes_with_filtered_true_opportunity": null
+        },
+        {
+          "seed": 1,
+          "accepted": 123,
+          "correct": 111,
+          "false_accepts": 12,
+          "accepted_precision": 0.9024390243902439,
+          "neural_actions": 1067,
+          "head_forward_calls": 4268,
+          "same_visited_state_true_cues_filtered": null,
+          "same_visited_state_false_cues_filtered": null,
+          "failed_episodes_with_filtered_true_opportunity": null
+        },
+        {
+          "seed": 2,
+          "accepted": 109,
+          "correct": 103,
+          "false_accepts": 6,
+          "accepted_precision": 0.944954128440367,
+          "neural_actions": 1075,
+          "head_forward_calls": 4300,
+          "same_visited_state_true_cues_filtered": null,
+          "same_visited_state_false_cues_filtered": null,
+          "failed_episodes_with_filtered_true_opportunity": null
+        }
+      ],
+      "Calibrated4": [
+        {
+          "seed": 0,
+          "accepted": 90,
+          "correct": 88,
+          "false_accepts": 2,
+          "accepted_precision": 0.9777777777777777,
+          "neural_actions": 1089,
+          "head_forward_calls": 4356,
+          "same_visited_state_true_cues_filtered": 22,
+          "same_visited_state_false_cues_filtered": 10,
+          "failed_episodes_with_filtered_true_opportunity": [
+            "train_img_104_d4_002",
+            "train_img_121_d5_000",
+            "train_img_95_d4_004",
+            "train_img_95_d5_000",
+            "train_img_97_d4_001"
+          ]
+        },
+        {
+          "seed": 1,
+          "accepted": 94,
+          "correct": 93,
+          "false_accepts": 1,
+          "accepted_precision": 0.9893617021276596,
+          "neural_actions": 1072,
+          "head_forward_calls": 4288,
+          "same_visited_state_true_cues_filtered": 20,
+          "same_visited_state_false_cues_filtered": 11,
+          "failed_episodes_with_filtered_true_opportunity": [
+            "train_img_86_d4_001",
+            "train_img_95_d5_000"
+          ]
+        },
+        {
+          "seed": 2,
+          "accepted": 82,
+          "correct": 81,
+          "false_accepts": 1,
+          "accepted_precision": 0.9878048780487805,
+          "neural_actions": 1082,
+          "head_forward_calls": 4328,
+          "same_visited_state_true_cues_filtered": 24,
+          "same_visited_state_false_cues_filtered": 5,
+          "failed_episodes_with_filtered_true_opportunity": [
+            "train_img_104_d4_002",
+            "train_img_121_d5_000",
+            "train_img_82_d6_000",
+            "train_img_85_d6_000"
+          ]
+        }
+      ],
+      "NoTarget": [
+        {
+          "seed": 0,
+          "accepted": 0,
+          "correct": 0,
+          "false_accepts": 0,
+          "accepted_precision": null,
+          "neural_actions": 1157,
+          "head_forward_calls": 1157,
+          "same_visited_state_true_cues_filtered": null,
+          "same_visited_state_false_cues_filtered": null,
+          "failed_episodes_with_filtered_true_opportunity": null
+        },
+        {
+          "seed": 1,
+          "accepted": 0,
+          "correct": 0,
+          "false_accepts": 0,
+          "accepted_precision": null,
+          "neural_actions": 1135,
+          "head_forward_calls": 1135,
+          "same_visited_state_true_cues_filtered": null,
+          "same_visited_state_false_cues_filtered": null,
+          "failed_episodes_with_filtered_true_opportunity": null
+        },
+        {
+          "seed": 2,
+          "accepted": 0,
+          "correct": 0,
+          "false_accepts": 0,
+          "accepted_precision": null,
+          "neural_actions": 1141,
+          "head_forward_calls": 1141,
+          "same_visited_state_true_cues_filtered": null,
+          "same_visited_state_false_cues_filtered": null,
+          "failed_episodes_with_filtered_true_opportunity": null
+        }
+      ]
+    }
+  },
+  "paired_clean_changes": {
+    "Original": {
+      "lost_clean_successes": 11,
+      "new_clean_successes": 1,
+      "losses": [
+        {
+          "seed": 0,
+          "episode_id": "train_img_104_d4_002",
+          "area": "img_104",
+          "distance": 4,
+          "final_SG": 2
+        },
+        {
+          "seed": 0,
+          "episode_id": "train_img_121_d5_000",
+          "area": "img_121",
+          "distance": 5,
+          "final_SG": 1
+        },
+        {
+          "seed": 0,
+          "episode_id": "train_img_95_d4_004",
+          "area": "img_95",
+          "distance": 4,
+          "final_SG": 8
+        },
+        {
+          "seed": 0,
+          "episode_id": "train_img_95_d5_000",
+          "area": "img_95",
+          "distance": 5,
+          "final_SG": 3
+        },
+        {
+          "seed": 0,
+          "episode_id": "train_img_97_d4_001",
+          "area": "img_97",
+          "distance": 4,
+          "final_SG": 2
+        },
+        {
+          "seed": 1,
+          "episode_id": "train_img_86_d4_001",
+          "area": "img_86",
+          "distance": 4,
+          "final_SG": 2
+        },
+        {
+          "seed": 1,
+          "episode_id": "train_img_95_d5_000",
+          "area": "img_95",
+          "distance": 5,
+          "final_SG": 3
+        },
+        {
+          "seed": 2,
+          "episode_id": "train_img_104_d4_002",
+          "area": "img_104",
+          "distance": 4,
+          "final_SG": 4
+        },
+        {
+          "seed": 2,
+          "episode_id": "train_img_121_d5_000",
+          "area": "img_121",
+          "distance": 5,
+          "final_SG": 1
+        },
+        {
+          "seed": 2,
+          "episode_id": "train_img_82_d6_000",
+          "area": "img_82",
+          "distance": 6,
+          "final_SG": 2
+        },
+        {
+          "seed": 2,
+          "episode_id": "train_img_85_d6_000",
+          "area": "img_85",
+          "distance": 6,
+          "final_SG": 2
+        }
+      ],
+      "gains": [
+        {
+          "seed": 0,
+          "episode_id": "train_img_16_d5_001",
+          "area": "img_16",
+          "distance": 5
+        }
+      ]
+    },
+    "Naive4": {
+      "lost_clean_successes": 11,
+      "new_clean_successes": 0,
+      "losses": [
+        {
+          "seed": 0,
+          "episode_id": "train_img_104_d4_002",
+          "area": "img_104",
+          "distance": 4,
+          "final_SG": 2
+        },
+        {
+          "seed": 0,
+          "episode_id": "train_img_121_d5_000",
+          "area": "img_121",
+          "distance": 5,
+          "final_SG": 1
+        },
+        {
+          "seed": 0,
+          "episode_id": "train_img_95_d4_004",
+          "area": "img_95",
+          "distance": 4,
+          "final_SG": 8
+        },
+        {
+          "seed": 0,
+          "episode_id": "train_img_95_d5_000",
+          "area": "img_95",
+          "distance": 5,
+          "final_SG": 3
+        },
+        {
+          "seed": 0,
+          "episode_id": "train_img_97_d4_001",
+          "area": "img_97",
+          "distance": 4,
+          "final_SG": 2
+        },
+        {
+          "seed": 1,
+          "episode_id": "train_img_86_d4_001",
+          "area": "img_86",
+          "distance": 4,
+          "final_SG": 2
+        },
+        {
+          "seed": 1,
+          "episode_id": "train_img_95_d5_000",
+          "area": "img_95",
+          "distance": 5,
+          "final_SG": 3
+        },
+        {
+          "seed": 2,
+          "episode_id": "train_img_104_d4_002",
+          "area": "img_104",
+          "distance": 4,
+          "final_SG": 4
+        },
+        {
+          "seed": 2,
+          "episode_id": "train_img_121_d5_000",
+          "area": "img_121",
+          "distance": 5,
+          "final_SG": 1
+        },
+        {
+          "seed": 2,
+          "episode_id": "train_img_82_d6_000",
+          "area": "img_82",
+          "distance": 6,
+          "final_SG": 2
+        },
+        {
+          "seed": 2,
+          "episode_id": "train_img_85_d6_000",
+          "area": "img_85",
+          "distance": 6,
+          "final_SG": 2
+        }
+      ],
+      "gains": []
+    }
+  },
+  "source_sha256": {
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s0/导航_Clean_Original_轨迹.jsonl": "f289deee81db7a61fc8e0de34947b8b9c1b1871b7bb9d6c8651d9baf44fef83e",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s1/导航_Clean_Original_轨迹.jsonl": "70c1f89357977fd306c124e3612f8f57469d94b1a22db74b13302af990bdbdc2",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s2/导航_Clean_Original_轨迹.jsonl": "4d648ad62128993158f4501062e37129f6105851cac7664a353197ec3d04807a",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s0/导航_Clean_Naive4_轨迹.jsonl": "0e26bfcc80cd1f6a0b536ba5a4299c240baf2e34f217476f62a4bce22ba09493",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s1/导航_Clean_Naive4_轨迹.jsonl": "9d089bf7fd7873ce5c8e984b258eba86c03c395e9c0241811e1987a984189d41",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s2/导航_Clean_Naive4_轨迹.jsonl": "9e560707abad2f3fdb60c7a85d4314d9c402aac70e123a6b6e65c848ccab3d3e",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s0/导航_Clean_Calibrated4_轨迹.jsonl": "af1da31cf3509c82b03ac1c89a87f6049658980528c836056bf6f51513abb596",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s1/导航_Clean_Calibrated4_轨迹.jsonl": "22b093c94595dae5fa898eea4c7d0531e40a1d2ba17c3afd0d6a7d6aedf93b0a",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s2/导航_Clean_Calibrated4_轨迹.jsonl": "373a117c9b681778cef8fc2a48c45a449452b83d428af6418642c8bd47a04ddf",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s0/导航_Clean_NoTarget_轨迹.jsonl": "25e5266a2ef6d4f0ca07655bafe3082a2d7bb1ce266aef2b1df9d99708ef967b",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s1/导航_Clean_NoTarget_轨迹.jsonl": "003f10d50af73ccd98b0726347a2204fd33b9dbb3c42d37ad61aaab529053ea1",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s2/导航_Clean_NoTarget_轨迹.jsonl": "0a4d31f94c37d76fe4d4fd86084985d74cce6beb90af3836033b19cf408b6f06",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s0/导航_Rot90CW_Original_轨迹.jsonl": "2d4785c1fafc4ee1f3efc4a196ea6744b097e2a3477664d2b2b70f460d2f157d",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s1/导航_Rot90CW_Original_轨迹.jsonl": "f91419a57da69871e67c5c2e5ba862034cc51dcd2413a9e04016692fd2855771",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s2/导航_Rot90CW_Original_轨迹.jsonl": "9109ab0f0a20abbb5eeccd76e41146dd8a050318da245851e8a2f3a712be8ed3",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s0/导航_Rot90CW_Naive4_轨迹.jsonl": "f6d921e9bba298921cb3edd2c4564c6c799cc32f08b83912f3ca96c2eca24a2c",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s1/导航_Rot90CW_Naive4_轨迹.jsonl": "46a9f591defde57ea42b0344847b492080634ceb1a4c9bcbdc80dac6aaf588f7",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s2/导航_Rot90CW_Naive4_轨迹.jsonl": "1fb3c19b53604dff449166f51d83eb2bed10ee82e35cc1d64461ac734aa63459",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s0/导航_Rot90CW_Calibrated4_轨迹.jsonl": "2e888190f53430695ce2d977d55726d5fac1faca3e5147d58d17b8674701cbf0",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s1/导航_Rot90CW_Calibrated4_轨迹.jsonl": "671ddad3c769953e8236d441cf6c51ad0db52dc8b51b146442b3772ffe63ad5b",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s2/导航_Rot90CW_Calibrated4_轨迹.jsonl": "0bec8b07a35ecd2c772ca0c78119f4d5dcc7f8aead3101605e6e6877800bfb9a",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s0/导航_Rot90CW_NoTarget_轨迹.jsonl": "a98bc68c627f698026eed77a09f770f536897c726ef4f179d411cafdcf6e1dce",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s1/导航_Rot90CW_NoTarget_轨迹.jsonl": "b7057af9d3a2c1cf27ff7022b7783ab6e271041da8aab0acff83473e62d7b236",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/Edge_s2/导航_Rot90CW_NoTarget_轨迹.jsonl": "9b50e4b9cdadf957a984dda161f66bc2d1f0f66fe0cb869952215c68a823f26f"
+  }
+}

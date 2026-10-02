@@ -1,0 +1,119 @@
+{
+  "arms": [
+    "Full",
+    "NoTarget",
+    "StateOnly"
+  ],
+  "bank_sha256": {
+    "拟合样本.json": "6f3a5e8556e258eef5c8d287d508725b170f6924491fa835eb34356ccf399416",
+    "拟合诊断样本.json": "92c962ce8a04c8fcc007532cd1857d893d4dfb93380b932cbaa0c854e67100c5",
+    "源图划分.json": "76e279a80e39a7a4a0a5da001dab5caac10933bf1cb532823f856672b2244278",
+    "留出诊断样本.json": "c36182c5889cb8e68d4a244a9dae36e12d276e6ead612a313944c36c13d05d24"
+  },
+  "data_sha256": {
+    "metadata.csv": "564491fd8be5120274b4999e73a676096a361ede51de12ef05642eaa5610b5a9",
+    "papr_train_sat_embeds_grid_5.npy": "50ea69c4f6b98bf456163c2b37f9d7e83bd78180398f268e6ece5f3c2ecbdb67",
+    "任务清单_v2/episodes_train.jsonl": "e8ac9ea43df601e76addefee80e5897870cf7e859aec184b8bb92d7cf22d2a1b",
+    "任务清单_v2/manifest_train.json": "92aba15c1ae92e790c46f8bb2d05260a0c034fcf95a5290b13096a3266d126ca"
+  },
+  "decision": "All audits; full-vs-NoTarget/StateOnly/MeanCue/SwapCue each DA+5pp, CE no worse, >=2/3 seeds positive; joint>uniform+5pp; source CI lower>0",
+  "distance_counts": {
+    "fit": {
+      "1": 1331,
+      "2": 2940,
+      "3": 2281,
+      "4": 424
+    },
+    "held": {
+      "1": 311,
+      "2": 799,
+      "3": 550,
+      "4": 132
+    }
+  },
+  "document_sha256": "b72aa3ff98f4231d2791fe64d22cddaf83a2b5c825176dd39ee2bc72acca77b3",
+  "encoder_sha256": "fec6802fbf27664ddd556fc445ff7d8e7ab0f05fea160c2e16680642dcebf3e0",
+  "fit_diagnostic_pairs": 1744,
+  "fit_pairs": 6976,
+  "fit_sources": 109,
+  "fresh_initialization": true,
+  "head": "same BoundaryPolicy GRU; critic and next_state frozen",
+  "held_pairs": 1792,
+  "held_sources": 28,
+  "history_observations": 3,
+  "mean_sha256": "3bb5233fc6fbef7eece51ee78979b37dfaadfcb98d310e6f1b5de7b3d25a8158",
+  "optimization_steps_per_run": 1744,
+  "optimizer": {
+    "batch_pairs": 64,
+    "epochs": 16,
+    "grad_clip": 1,
+    "lr": 0.0003,
+    "name": "AdamW",
+    "weight_decay": 0.01
+  },
+  "prior_policy_loaded": false,
+  "runtime": {
+    "cuda": "12.4",
+    "deterministic": true,
+    "device": "cuda",
+    "python": "3.13.12 (tags/v3.13.12:1cbe481, Feb  3 2026, 18:22:25) [MSC v.1944 64 bit (AMD64)]",
+    "torch": "2.6.0+cu124"
+  },
+  "scope": "original train only; no held-out checkpoint selection; direction task not navigation SR; finish then stop",
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "source_sha256": {
+    "agents/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "agents/boundary_policy.py": "f670350464f2774dff67f2352f55492d8d6b8898b8f9be03cd05284319f80c79",
+    "agents/curl_transport.py": "9d8c2546c31995ff54f8011d905c0e4e3f6415d9ec469640eccda10d4f6fbabf",
+    "agents/exploration.py": "bfa9c3bddddc354e794ce27ad000fb24d41e77e804b42805d1b7a2ca00b9596e",
+    "agents/governor.py": "b72e43b046a861506f4bbb9703a7b3f20d3203c574bbe478e4c42fcda962e72e",
+    "agents/vlm.py": "5b0cb2f71efdac061bef9a6f90662f00b1e6b88c3fe4502ead434f1d85d2e231",
+    "data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "data/make_episodes.py": "2d82caf923a0073bdb111e0b673127a9fa4945ca281117d2d114dc1b4598420e",
+    "data/process_masa.py": "0ddce87481edb98a7cb6ca6563fdcca9fa6488acfab8226b01ec3222f7caaba6",
+    "env/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "env/environment.py": "ad19a173945f86ed04b18c0f5365e543217688d124271f51bc05f2747af92b5b",
+    "env/episode.py": "3c85105ae7bf8efb90f1726e695c8db90e03544de342c874c08eb166e8019502",
+    "eval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "eval/audit_four_arm.py": "f241bb9000f89a9228d311c10d260981f098df06d2ff84cc1261a52390f9ab6e",
+    "eval/audit_validation.py": "caae1bd5dc682b27d19cb603c2cf37aa39a909e9e280ceebe1db30f003001ae5",
+    "eval/diagnostics.py": "679106b56be23641ae9800ec896eb397af08b7f34fa1c586ef358d5d3117b1d9",
+    "eval/evaluate.py": "c8ba4f434d0b3ed2bff24c09af368431b42d503e64233228e9d8c4fa42de7279",
+    "eval/four_arm_suite.py": "7e872bbc8df0648cf865ddf2c79260a5d953c76e0d0b12d8532c53c7be05da99",
+    "eval/pilot.py": "cb00e5fec94a0a7fc2dc7bd04aeb1468eb724d8bd26155000c4fa1c270af22b6",
+    "eval/replay_responses.py": "129c2578f51e4f5de9f2408e2c512c5e4b527c04d59541a91cef71f4da850ca3",
+    "eval/report_confirmation.py": "e522057d0199d2ec2cc1b38accc034fd4a4cf1848669a755c101edbad29544b4",
+    "eval/report_curiosity.py": "8d5e7c84d9c908755d2d168c71ff4f91905a428bb43a2a4fb02e26bc654a23c8",
+    "eval/report_four_arm.py": "d2eb18bce1101a513675a70f055db242bfda118e2f29f4f0eac5af1dcd81660c",
+    "eval/report_hierarchical.py": "c885ad1820beb80c8e9213db9532748c7a1221b4e7bede12fa36b18bc58f91c1",
+    "eval/report_spatial_memory.py": "6a2a3270a5164172affd416e71362b0c443aad2a5c1364fe35c4831d38e5633d",
+    "eval/report_validation.py": "4e8dbf535f44225e2a7a6931f74a7fff0501900bae4b7e5d3f38d7a37fad256e",
+    "eval/s2_metrics.py": "0f976c5dc756705ed5eaf548db3b90fb32a9f87f806da847d608f7e22ee1df3c",
+    "eval/s2_suite.py": "36302dc9617b2696b73ab7673be1aa9244017275445893f5aa357f103ea96813",
+    "eval/validation_suite.py": "1f0472f993437519e9cb53d5bcad832b7137ac8e1d5f37920b544ea7b973e670",
+    "tests/test_boundary_policy.py": "201d614fabe6941bfdcb601d6750fc3ae377130e1f66a9e92faa99bc231c0283",
+    "tests/test_curiosity_controlled.py": "79f13b065f7849d7e7ca0f79fee4a3d6e22110fd29520c7f7532e0ad53eee614",
+    "tests/test_foundation.py": "491321aedb4a54eef88db00fb8a0dcdd5c3442793b8527b51a8585500f0ec1ba",
+    "tests/test_governor.py": "8389118ba4c27960cd6c9a157df3562a7d881bd0ef48e76d8425090b1a9c19c6",
+    "tests/test_s2.py": "6b897814993027c9ecab65c9fdda327e8090676df35d3fa9b947c30118d96760",
+    "tests/test_source_holdout_probe.py": "02068a009888c1408157eeed7fd4a3f2e310a7b08709ae4661a4e7c39dac954c",
+    "tests/test_target_pairs.py": "2a7424bf62d553e1f0f3c6b9bb7ae1d110aa5829ccbd9c0936f27f86467c7d29",
+    "tests/test_tiny_dyncur.py": "888a010c76b9b4b3f0de0ff3db18d60c4303f4369e657473ff930bcd9c5f1185",
+    "tests/test_validation.py": "7c14c1404a723c6787b5e4dbdc9e270b7f3b850cef8f52fb415d57035eb101e0",
+    "tests/test_vlm.py": "08ec99a923b660321e75de64e5b9c056c38817afc02c638b9d6c61653789fd03",
+    "train/__init__.py": "876af8af8be92a56fa350ef4dedb6ddc37e78b1e6f57b3fc3c62dd231da87516",
+    "train/boundary_controlled.py": "3dc2270c3e348b7e5ad6ca5bd7f3177d0381ed566d7b84efd3d318a435be2270",
+    "train/curiosity_controlled.py": "52b8b3e4583370e7b5cc0a5c793781483bd12b71b4d55a1db97a0b41e0141ebb",
+    "train/dyncur_tiny.py": "5dc0d7ecef17ef0f067504215ecf6b379ddb0df32005c1f2590dba03e996a5e1",
+    "train/source_holdout_probe.py": "be76bf57ad14aeaf712134194e70b55d2c2d2fa2a3947facffb874e93bf43a93",
+    "train/target_controlled.py": "c0691db61fbf3b905df6b8da505d26970104a572f5efc81306d4382b497897da",
+    "train/target_pairs.py": "ebf984af8f815ec93684efa520ef4a5291067134cb796779e008707ea5bf02f2"
+  },
+  "target_uses_per_run": 223232,
+  "utc": "2026-09-29T17:08:32.237959+00:00",
+  "version": "source-holdout-probe-v1"
+}

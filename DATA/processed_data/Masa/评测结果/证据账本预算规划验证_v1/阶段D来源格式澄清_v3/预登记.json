@@ -1,0 +1,42 @@
+{
+  "additional_D_cap": 40,
+  "model": {
+    "api_key": "[REDACTED]",
+    "base_url": "https://ollama.com/v1",
+    "max_tokens": 512,
+    "model": "gemma4:31b",
+    "response_format": "json_object",
+    "stream": false,
+    "temperature": 0,
+    "timeout_seconds": 60
+  },
+  "no_further_format_version_this_batch": true,
+  "phase_caps": {
+    "D": 48,
+    "G": 360,
+    "engineering": 12
+  },
+  "previous_chat_requests": 13,
+  "previous_phase_counts": {
+    "D": 7,
+    "engineering": 6
+  },
+  "previous_response_log_sha256": "e8701f201e68a34bcd5667747615718e29fab6bc82f8bfa2387a879859dae957",
+  "remaining_engineering_cap": 6,
+  "same_T_candidates_images_and_mechanism_gate": true,
+  "source_sha256": {
+    "agents/evidence_source_clarification.py": "2c510de2dde40d151808cab0cc2df99550dcbbc988848e0f8053c48056e540ca",
+    "eval/evidence_budget_d_clarification.py": "e6b1ab1a322028c03d992e5e9d2da9eabb9c965bc88b706465361da336f8c08c",
+    "tests/test_evidence_source_clarification.py": "262442ab42ae46bae3e0baed3797a705d7796e1c7a2d17b4acaf57f650f42edf"
+  },
+  "strict_source_validation": true,
+  "tests": {
+    "errors": 0,
+    "failures": 0,
+    "successful": true,
+    "tests_run": 2
+  },
+  "total_cap": 420,
+  "utc": "2026-10-01T11:58:48.347736+00:00",
+  "version": "source-catalog-format-v3"
+}

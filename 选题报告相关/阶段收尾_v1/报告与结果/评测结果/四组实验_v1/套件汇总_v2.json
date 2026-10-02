@@ -1,0 +1,34 @@
+{
+  "suite": "four-arm-validation-v1",
+  "variants": [
+    "A_legacy-action-vlm",
+    "B_ranked-vlm-top1",
+    "C_ranked-vlm-governed",
+    "D_frontier-rule",
+    "Random_sanity"
+  ],
+  "task_sha256": "91bfe1bbda6ff775fe1bdf2d396191aa64fdfd1c8e0603086319e3317cfdb8be",
+  "task_count_per_arm": 20,
+  "source": "各实验臂运行配置、验证汇总、离线审计_v2；未改写历史三项验证目录",
+  "offline_test_evidence": "自动测试结果_v3.txt；61 tests OK",
+  "offline_audit_status": {
+    "A_legacy-action-vlm": "passed",
+    "B_ranked-vlm-top1": "passed",
+    "C_ranked-vlm-governed": "passed",
+    "D_frontier-rule": "passed",
+    "Random_sanity": "passed"
+  },
+  "results": {
+    "A_legacy-action-vlm": {"completed": 20, "successes": 1, "sr": 0.05, "mean_sg": 3.6, "mean_unique_cells": 5.1, "repeat_visit_rate_micro": 0.5858585858585859, "abab_cycle_episodes": 19, "governor_overrides": 0, "api_requests": 198, "api_errors": 0},
+    "B_ranked-vlm-top1": {"completed": 20, "successes": 2, "sr": 0.1, "mean_sg": 3.4, "mean_unique_cells": 5.3, "repeat_visit_rate_micro": 0.5520833333333334, "abab_cycle_episodes": 17, "governor_overrides": 0, "api_requests": 194, "api_errors": 2},
+    "C_ranked-vlm-governed": {"completed": 20, "successes": 2, "sr": 0.1, "mean_sg": 3.1, "mean_unique_cells": 7.1, "repeat_visit_rate_micro": 0.3711340206185567, "abab_cycle_episodes": 18, "governor_overrides": 23, "api_requests": 194, "api_errors": 0},
+    "D_frontier-rule": {"completed": 20, "successes": 10, "sr": 0.5, "mean_sg": 2.25, "mean_unique_cells": 10.05, "repeat_visit_rate_micro": 0.0, "abab_cycle_episodes": 0, "governor_overrides": 0, "api_requests": 0, "api_errors": 0},
+    "Random_sanity": {"completed": 20, "successes": 1, "sr": 0.05, "mean_sg": 3.45, "mean_unique_cells": 6.65, "repeat_visit_rate_micro": 0.4321608040201005, "abab_cycle_episodes": 6, "governor_overrides": 0, "api_requests": 0, "api_errors": 0}
+  },
+  "interpretation": [
+    "B相对A仅改变输出为严格动作排序并取top1；本小样本SR提高但未消除循环。",
+    "C相对B仅增加不读目标真值的ABAB Governor；重复率下降、覆盖提高，但ABAB题数仍高且SR未提升。",
+    "D是无图Frontier规则覆盖基线，不应将其SR归因于VLM。",
+    "20题来自4个区域，每臂一次运行，不作显著性、泛化或论文复现结论。"
+  ]
+}

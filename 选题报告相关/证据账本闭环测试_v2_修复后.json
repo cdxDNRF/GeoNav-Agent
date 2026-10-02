@@ -1,0 +1,8 @@
+{
+  "successful": true,
+  "command": "python -m unittest discover -s tests -p test_evidence_compact_g.py -v",
+  "stdout": "",
+  "stderr": "test_accepted_cue_interrupts_remaining_option (test_evidence_compact_g.ClosedLoopTests.test_accepted_cue_interrupts_remaining_option) ... ok\ntest_cloud_history_is_only_distinct_actual_prior_observations (test_evidence_compact_g.ClosedLoopTests.test_cloud_history_is_only_distinct_actual_prior_observations) ... ok\ntest_frozen_M0_all_20_routes_exactly_reproduce_old_S4 (test_evidence_compact_g.ClosedLoopTests.test_frozen_M0_all_20_routes_exactly_reproduce_old_S4) ... ok\ntest_option_uses_actual_next_move_then_returns_to_base (test_evidence_compact_g.ClosedLoopTests.test_option_uses_actual_next_move_then_returns_to_base) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 16.550s\n\nOK\n",
+  "previous_failure_preserved": "证据账本闭环测试_v2.json",
+  "fix": "canonical list at new G ledger input; frozen local code unchanged"
+}

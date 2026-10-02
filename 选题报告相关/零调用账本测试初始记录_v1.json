@@ -1,0 +1,8 @@
+{
+  "successful": false,
+  "stage": "new controller tests before preregistration",
+  "tests": 4,
+  "errors": 1,
+  "reason": "reset test requested ledger.snapshot before initial observation; target_sha not yet defined",
+  "fix": "assert reset visited/nodes directly; runtime controller and old ledger unchanged"
+}

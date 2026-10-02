@@ -1,0 +1,626 @@
+<template>
+<style>/*localfont-injected*/@font-face{font-family:'Noto Sans SC';src:local('Noto Sans SC');}@font-face{font-family:'Microsoft YaHei';src:local('Microsoft YaHei');}@font-face{font-family:'PingFang SC';src:local('PingFang SC');}@font-face{font-family:'Noto Serif SC';src:local('Noto Serif SC');}@font-face{font-family:'SimSun';src:local('SimSun');}@font-face{font-family:'Songti SC';src:local('Songti SC');}@font-face{font-family:'DM Mono';src:local('DM Mono');}@font-face{font-family:'Newsreader';src:local('Newsreader');}@font-face{font-family:'Hanken Grotesk';src:local('Hanken Grotesk');}
+  /* ============ Cobalt Grid — frame 09-s2 (正式复验：数字落定 · dataviz-countup) ============ */
+  #root {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    container-type: size;
+    font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+    color: #1F2BE0;
+  }
+  #root .clip {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+  /* ---------- track 0 · permanent graph-paper ground ---------- */
+  .rv9-bg {
+    background-color: #F0EBDE;
+    background-image:
+      linear-gradient(rgba(31, 43, 224, 0.10) 1.5px, transparent 1.5px),
+      linear-gradient(90deg, rgba(31, 43, 224, 0.10) 1.5px, transparent 1.5px);
+    background-size: 38.4px 38.4px;
+  }
+  /* ---------- track 1 · furniture ---------- */
+  .rv9-hair-top {
+    position: absolute;
+    left: 77px;
+    right: 77px;
+    top: 58px;
+    height: 2.5px;
+    background: #1F2BE0;
+    transform-origin: left center;
+  }
+  .rv9-hair-bottom {
+    position: absolute;
+    left: 77px;
+    right: 77px;
+    top: 870px; /* kept above the 83% caption keep-out (y <= 896) */
+    height: 2.5px;
+    background: #1F2BE0;
+    transform-origin: right center;
+  }
+  .rv9-page {
+    position: absolute;
+    right: 77px;
+    top: 18px;
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    color: #1F2BE0;
+    font-variant-numeric: tabular-nums;
+  }
+  /* ---------- track 2 · header chrome ---------- */
+  .rv9-kick {
+    position: absolute;
+    left: 77px;
+    top: 84px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    color: #1F2BE0;
+  }
+  .rv9-kick::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #1F2BE0;
+    margin-right: 16px;
+  }
+  .rv9-meta {
+    position: absolute;
+    right: 77px;
+    top: 92px;
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 20px;
+    letter-spacing: 0.18em;
+    color: #515CDB;
+    font-variant-numeric: tabular-nums;
+  }
+  /* ---------- type helpers ---------- */
+  .rv9-num {
+    font-family: "Newsreader", "Noto Serif SC", "SimSun", serif;
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+  }
+  .rv9-mono {
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  .rv9-monomix {
+    font-family: "DM Mono", "Consolas", "Courier New", "Noto Sans SC", "Microsoft YaHei", monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  /* ---------- track 3 · camera stage ---------- */
+  .rv9-zoom {
+    position: absolute;
+    inset: 0;
+  }
+  /* hero lockup — centered, biased up (anchor ~0.42h) */
+  .rv9-hlabel {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 96px; /* checker env swaps in a taller serif for the hero digits (~1.35em Range): keep 20px+ clearance at worst-case scale */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+  }
+  .rv9-hlr { width: 54px; height: 2.5px; background: #1F2BE0; }
+  .rv9-hlt {
+    font-size: 29px;
+    line-height: 1; /* deterministic 29px flex-item box, no font-metric overflow downward */
+    font-weight: 600;
+    letter-spacing: 0.3em;
+    text-indent: 0.3em;
+    color: #1F2BE0;
+  }
+  .rv9-hnum {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 204px;
+    text-align: center;
+    line-height: 1;
+  }
+  /* inline-block pins the counter digits' bounding box to the 300px line box; as a plain inline
+     span its font-metric content box (~1.48em) bled up into the label and down into the mono tag */
+  #rv9-hn {
+    display: inline-block;
+  }
+  .rv9-hnwrap {
+    display: inline-block;
+    font-family: "Times New Roman", "Newsreader", Georgia, serif; /* digits only: tight ~1.1em metrics, no CJK em-box overflow */
+    font-weight: 400;
+    font-size: 300px;
+    line-height: 1;
+    letter-spacing: -0.015em;
+    color: #1F2BE0;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  .rv9-pct { font-size: 0.42em; margin-left: 8px; }
+  .rv9-underline {
+    position: absolute;
+    left: 650px;
+    top: 526px;
+    width: 620px;
+    height: 2.5px;
+    background: #1F2BE0;
+    transform-origin: center center;
+  }
+  .rv9-mtag {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 556px;
+    text-align: center;
+    font-size: 23px;
+    letter-spacing: 0.06em;
+    color: #515CDB;
+    white-space: nowrap;
+  }
+  /* evidence chips — spring-pop per voice flow */
+  .rv9-chips {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 622px;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    gap: 22px;
+  }
+  .rv9-chip {
+    display: flex;
+    align-items: baseline;
+    gap: 10px;
+    padding: 13px 26px;
+    border: 2.5px solid #1F2BE0;
+    background: #F0EBDE;
+    white-space: nowrap;
+  }
+  .rv9-chip .rv9-cv { font-size: 30px; letter-spacing: 0.02em; color: #1F2BE0; }
+  .rv9-chip .rv9-cu { font-size: 26px; font-weight: 600; color: #1F2BE0; }
+  .rv9-chip .rv9-cs { font-size: 26px; letter-spacing: 0.02em; color: #1F2BE0; }
+  /* bar comparison — bottom-left */
+  .rv9-bh { position: absolute; left: 150px; top: 440px; }
+  .rv9-bt { font-size: 27px; font-weight: 600; letter-spacing: 0.12em; color: #1F2BE0; }
+  .rv9-bs {
+    margin-top: 6px;
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 15px;
+    letter-spacing: 0.18em;
+    color: #515CDB;
+  }
+  .rv9-base {
+    position: absolute;
+    left: 150px;
+    top: 820px;
+    width: 370px;
+    height: 2.5px;
+    background: #1F2BE0;
+    transform-origin: left center;
+  }
+  .rv9-bar1 {
+    position: absolute;
+    left: 196px;
+    bottom: 260px; /* chart baseline y=820 */
+    width: 108px;
+    height: 234px; /* 73.00 */
+    border: 2.5px solid #1F2BE0;
+    box-sizing: border-box;
+  }
+  .rv9-bar2 {
+    position: absolute;
+    left: 368px;
+    bottom: 260px;
+    width: 108px;
+    height: 286px; /* 89.33 */
+    background: #1F2BE0;
+  }
+  .rv9-guide {
+    position: absolute;
+    left: 304px;
+    top: 586px;
+    width: 216px;
+    height: 0;
+    border-top: 2.5px dashed rgba(31, 43, 224, 0.4);
+  }
+  .rv9-bv {
+    position: absolute;
+    width: 108px;
+    text-align: center;
+    font-size: 26px;
+    letter-spacing: 0.02em;
+    color: #1F2BE0;
+  }
+  .rv9-bv1 { left: 196px; top: 544px; }
+  .rv9-bv2 { left: 368px; top: 492px; }
+  .rv9-bn {
+    position: absolute;
+    top: 832px;
+    width: 168px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    color: #1F2BE0;
+  }
+  .rv9-bn1 { left: 166px; }
+  .rv9-bn2 { left: 338px; }
+  /* Scene 2 · acceptance checklist card — right column */
+  .rv9-card {
+    position: absolute;
+    left: 1443px;
+    top: 176px;
+    width: 400px;
+    height: 620px;
+    box-sizing: border-box;
+    background: #E6E0CE;
+    border: 2.5px solid #1F2BE0;
+    padding: 24px 26px;
+    display: flex;
+    flex-direction: column;
+  }
+  .rv9-cmic {
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 15px;
+    line-height: 1; /* deterministic 15px block box */
+    letter-spacing: 0.22em;
+    color: #515CDB;
+  }
+  .rv9-chrow {
+    margin: 16px 0 14px; /* extra headroom so the 0/12 digits clear the mic label above */
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+  }
+  .rv9-cbig {
+    font-family: "Newsreader", "Noto Serif SC", "SimSun", serif;
+    font-weight: 400;
+    font-size: 76px;
+    line-height: 0.95;
+    letter-spacing: -0.01em;
+    color: #1F2BE0;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  /* inline-block pins the digit to the 72px line box; as a plain inline span its font-metric
+     content box (~1.48em) overflowed upward into the CHECKLIST mic label */
+  #rv9-cnt {
+    display: inline-block;
+  }
+  .rv9-ct1 { font-size: 27px; font-weight: 600; letter-spacing: 0.1em; color: #1F2BE0; }
+  .rv9-cdiv { height: 2px; background: #1F2BE0; flex: none; }
+  .rv9-row {
+    flex: 1;
+    min-height: 0;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-bottom: 1px solid rgba(31, 43, 224, 0.18);
+  }
+  .rv9-slot { position: relative; width: 42px; height: 42px; flex: none; }
+  .rv9-ck-o {
+    position: absolute;
+    inset: 0;
+    border: 2.5px solid #1F2BE0;
+    background: rgba(31, 43, 224, 0.06);
+  }
+  .rv9-ck-s {
+    position: absolute;
+    inset: 0;
+    background: #1F2BE0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+  }
+  .rv9-ck-s svg { width: 60%; height: 60%; }
+  .rv9-rtx { font-size: 28px; letter-spacing: 0.04em; color: #1F2BE0; white-space: nowrap; }
+  .rv9-rtx .rv9-monomix { font-size: 27px; }
+  .rv9-ridx {
+    margin-left: auto;
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 16px;
+    letter-spacing: 0.1em;
+    color: #515CDB;
+    font-variant-numeric: tabular-nums;
+  }
+  .rv9-final {
+    margin-top: 14px;
+    height: 88px;
+    flex: none;
+    background: #1F2BE0;
+    color: #F0EBDE;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 0 20px;
+  }
+  .rv9-final svg { width: 38px; height: 38px; flex: none; }
+  .rv9-ftx { font-size: 28px; font-weight: 600; letter-spacing: 0.08em; }
+  .rv9-fok { margin-left: auto; font-size: 26px; font-weight: 600; letter-spacing: 0.2em; }
+  /* Scene 3 · status bar — outline flips to solid */
+  .rv9-sbwrap {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 728px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .rv9-sbmic {
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 15px;
+    letter-spacing: 0.26em;
+    color: #515CDB;
+  }
+  .rv9-sb {
+    position: relative;
+    margin-top: 16px;
+    width: 660px;
+    height: 84px;
+    perspective: 1100px;
+  }
+  .rv9-sbA,
+  .rv9-sbB {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    backface-visibility: hidden;
+    white-space: nowrap;
+  }
+  .rv9-sbA { background: #E6E0CE; border: 2.5px solid #1F2BE0; }
+  .rv9-sbB { background: #1F2BE0; color: #F0EBDE; opacity: 0; }
+  .rv9-sbl { font-size: 30px; font-weight: 600; letter-spacing: 0.08em; }
+  .rv9-sba { font-size: 28px; }
+  .rv9-sbv { font-size: 29px; letter-spacing: 0.04em; font-variant-numeric: tabular-nums; }
+</style>
+
+<div data-hf-id="hf-w4f4" id="root" data-composition-id="09-s2" data-start="0" data-duration="24.125" data-width="1920" data-height="1080">
+
+  <!-- track 0 · graph-paper ground -->
+  <div data-hf-id="hf-9j65" class="clip rv9-bg" data-start="0" data-duration="24.125" data-track-index="0"></div>
+
+  <!-- track 1 · furniture -->
+  <div data-hf-id="hf-vl21" class="clip" data-start="0" data-duration="24.125" data-track-index="1">
+    <div data-hf-id="hf-iq46" class="rv9-hair-top" id="rv9-hair-top"></div>
+    <div data-hf-id="hf-odnu" class="rv9-hair-bottom" id="rv9-hair-bottom"></div>
+    <div data-hf-id="hf-gew5" class="rv9-page" id="rv9-page">09 / 10</div>
+  </div>
+
+  <!-- track 2 · header chrome (outside the camera) -->
+  <div data-hf-id="hf-zj62" class="clip" data-start="0" data-duration="24.125" data-track-index="2">
+    <div data-hf-id="hf-746e" class="rv9-kick" id="rv9-kick">正式复验 · 数字落定</div>
+    <div data-hf-id="hf-7z7u" class="rv9-meta" id="rv9-meta">FINAL REVAL</div>
+  </div>
+
+  <!-- track 3 · dataviz stage (one slow camera zoom runs underneath, stills for Scene 3) -->
+  <div data-hf-id="hf-3ha3" class="clip" data-start="0" data-duration="24.125" data-track-index="3">
+    <div data-hf-id="hf-07ui" class="rv9-zoom" id="rv9-zoom">
+
+      <!-- hero lockup: label · 89.33% counter · freeze underline · protocol tag -->
+      <div data-hf-id="hf-ya2y" class="rv9-hlabel" id="rv9-hlabel">
+        <i data-hf-id="hf-1rw0" class="rv9-hlr"></i>
+        <span data-hf-id="hf-a77y" class="rv9-hlt">复验成功率</span>
+        <i data-hf-id="hf-p93c" class="rv9-hlr"></i>
+      </div>
+      <div data-hf-id="hf-ixoi" class="rv9-hnum">
+        <span data-hf-id="hf-pmd7" class="rv9-hnwrap" id="rv9-hnwrap"><span data-hf-id="hf-5ov4" id="rv9-hn">0.00</span><span data-hf-id="hf-pxeb" class="rv9-pct">%</span></span>
+      </div>
+      <div data-hf-id="hf-td5e" class="rv9-underline" id="rv9-underline"></div>
+      <div data-hf-id="hf-nqoy" class="rv9-mtag rv9-monomix" id="rv9-mtag">val100 × 3 种子 · 5×5 / B=10 · 冻结权重</div>
+
+      <!-- evidence chips, popping in voice order: SG → delta → CI -->
+      <div data-hf-id="hf-tje3" class="rv9-chips">
+        <div data-hf-id="hf-t11r" class="rv9-chip" id="rv9-chipA"><span data-hf-id="hf-ybr1" class="rv9-cv rv9-mono">+16.33</span><span data-hf-id="hf-ird2" class="rv9-cu">点</span></div>
+        <div data-hf-id="hf-kd5w" class="rv9-chip" id="rv9-chipB"><span data-hf-id="hf-i0tr" class="rv9-cs rv9-mono">95% CI [+9.33, +23.33]</span></div>
+        <div data-hf-id="hf-l4tp" class="rv9-chip" id="rv9-chipC"><span data-hf-id="hf-n6u0" class="rv9-cv rv9-mono">SG 0.320</span></div>
+      </div>
+
+      <!-- bottom-left bar comparison: hollow baseline 73.00 vs solid reval 89.33 -->
+      <div data-hf-id="hf-z0sq" class="rv9-bh" id="rv9-bh">
+        <div data-hf-id="hf-o016" class="rv9-bt">成功率对照</div>
+        <div data-hf-id="hf-u7dq" class="rv9-bs">SUCCESS RATE · %</div>
+      </div>
+      <div data-hf-id="hf-pxkm" class="rv9-base" id="rv9-base"></div>
+      <div data-hf-id="hf-4x1e" class="rv9-bar1" id="rv9-bar1"></div>
+      <div data-hf-id="hf-kmdy" class="rv9-bar2" id="rv9-bar2"></div>
+      <div data-hf-id="hf-szvu" class="rv9-guide" id="rv9-guide"></div>
+      <div data-hf-id="hf-sm7p" class="rv9-bv rv9-bv2 rv9-mono" id="rv9-bv2">89.33%</div>
+      <div data-hf-id="hf-pjda" class="rv9-bv rv9-bv1 rv9-mono" id="rv9-bv1">73.00%</div>
+      <div data-hf-id="hf-4zg1" class="rv9-bn rv9-bn1" id="rv9-bn1">基线</div>
+      <div data-hf-id="hf-oke1" class="rv9-bn rv9-bn2" id="rv9-bn2">复验</div>
+
+      <!-- Scene 2 · right acceptance checklist card -->
+      <div data-hf-id="hf-gati" class="rv9-card" id="rv9-card">
+        <div data-hf-id="hf-l9ob" class="rv9-cmic">CHECKLIST · FROZEN</div>
+        <div data-hf-id="hf-42pp" class="rv9-chrow">
+          <span data-hf-id="hf-2ize" class="rv9-cbig"><span data-hf-id="hf-ey6f" id="rv9-cnt">0</span>/12</span>
+          <span data-hf-id="hf-sj2u" class="rv9-ct1">冻结检查</span>
+        </div>
+        <div data-hf-id="hf-cbca" class="rv9-cdiv"></div>
+
+        <div data-hf-id="hf-b5jb" class="rv9-row" id="rv9-row1">
+          <div data-hf-id="hf-4n82" class="rv9-slot">
+            <i data-hf-id="hf-owre" class="rv9-ck-o" id="rv9-cko1"></i>
+            <div data-hf-id="hf-fs5i" class="rv9-ck-s" id="rv9-cks1">
+              <svg data-hf-id="hf-wgi3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path data-hf-id="hf-kq2e" id="rv9-ckp1" d="M5 12.5 L10.5 18 L19 7" fill="none" stroke="#F0EBDE" stroke-width="3.2" />
+              </svg>
+            </div>
+          </div>
+          <span data-hf-id="hf-e3ff" class="rv9-rtx">任务完成</span>
+          <span data-hf-id="hf-sx1b" class="rv9-ridx">01</span>
+        </div>
+
+        <div data-hf-id="hf-0a1o" class="rv9-row" id="rv9-row2">
+          <div data-hf-id="hf-k1jq" class="rv9-slot">
+            <i data-hf-id="hf-ir1l" class="rv9-ck-o" id="rv9-cko2"></i>
+            <div data-hf-id="hf-bu1h" class="rv9-ck-s" id="rv9-cks2">
+              <svg data-hf-id="hf-s357" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path data-hf-id="hf-afi1" id="rv9-ckp2" d="M5 12.5 L10.5 18 L19 7" fill="none" stroke="#F0EBDE" stroke-width="3.2" />
+              </svg>
+            </div>
+          </div>
+          <span data-hf-id="hf-5lbp" class="rv9-rtx rv9-mono">SR ≥ 60%</span>
+          <span data-hf-id="hf-siqa" class="rv9-ridx">02</span>
+        </div>
+
+        <div data-hf-id="hf-11ph" class="rv9-row" id="rv9-row3">
+          <div data-hf-id="hf-kfur" class="rv9-slot">
+            <i data-hf-id="hf-hzds" class="rv9-ck-o" id="rv9-cko3"></i>
+            <div data-hf-id="hf-8urw" class="rv9-ck-s" id="rv9-cks3">
+              <svg data-hf-id="hf-rou6" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path data-hf-id="hf-vi0g" id="rv9-ckp3" d="M5 12.5 L10.5 18 L19 7" fill="none" stroke="#F0EBDE" stroke-width="3.2" />
+              </svg>
+            </div>
+          </div>
+          <span data-hf-id="hf-xlbk" class="rv9-rtx">目标对照 <span data-hf-id="hf-wt9b" class="rv9-monomix">+5 点</span></span>
+          <span data-hf-id="hf-s4f9" class="rv9-ridx">03</span>
+        </div>
+
+        <div data-hf-id="hf-h91e" class="rv9-final" id="rv9-final">
+          <svg data-hf-id="hf-raj5" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path data-hf-id="hf-e3f2" id="rv9-fkp" d="M5 12.5 L10.5 18 L19 7" fill="none" stroke="#F0EBDE" stroke-width="3.2" />
+          </svg>
+          <span data-hf-id="hf-hlyn" class="rv9-ftx">独立复核</span>
+          <span data-hf-id="hf-snce" class="rv9-fok">通过</span>
+        </div>
+      </div>
+
+      <!-- Scene 3 · status bar, outline flips to solid ink -->
+      <div data-hf-id="hf-urta" class="rv9-sbwrap" id="rv9-sbwrap">
+        <div data-hf-id="hf-00tu" class="rv9-sbmic">SYSTEM DEFAULT</div>
+        <div data-hf-id="hf-rreq" class="rv9-sb" id="rv9-sb">
+          <div data-hf-id="hf-a9ya" class="rv9-sbA" id="rv9-sbA">
+            <span data-hf-id="hf-azav" class="rv9-sbl">默认配置</span>
+            <span data-hf-id="hf-lf6u" class="rv9-sba rv9-mono">→</span>
+            <span data-hf-id="hf-iaoc" class="rv9-sbv rv9-mono">EdgeTargetCue</span>
+          </div>
+          <div data-hf-id="hf-ytis" class="rv9-sbB" id="rv9-sbB">
+            <span data-hf-id="hf-72uv" class="rv9-sbl">默认配置</span>
+            <span data-hf-id="hf-45gq" class="rv9-sba rv9-mono">→</span>
+            <span data-hf-id="hf-je78" class="rv9-sbv rv9-mono">EdgeTargetCue</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script>
+  (function () {
+    var tl = gsap.timeline({ paused: true });
+    window.__timelines = window.__timelines || {};
+    window.__timelines["09-s2"] = tl;
+
+    /* ---------- furniture ---------- */
+    tl.fromTo("#rv9-hair-top", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.inOut" }, 0.08);
+    tl.fromTo("#rv9-hair-bottom", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.inOut" }, 0.22);
+    tl.fromTo("#rv9-page", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 0.4);
+    tl.fromTo("#rv9-kick", { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.3);
+    tl.fromTo("#rv9-meta", { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.45);
+
+    /* camera: one slow continuous zoom through Scenes 1-2, dead still for the Scene 3 hold */
+    tl.fromTo("#rv9-zoom", { scale: 1 }, { scale: 1.048, duration: 18.5, ease: "none", transformOrigin: "960px 470px" }, 0.8);
+
+    /* ================= Scene 1 (0.0-15.2) · hero counter + paired bars land as one beat ================= */
+
+    /* hero enters small immediately (visible <= 0.5s), counts up while its scale grows on the same ease */
+    tl.fromTo("#rv9-hlabel", { opacity: 0, y: -16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.28);
+    tl.fromTo("#rv9-hnwrap", { opacity: 0, y: 30 }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, 0.3);
+    var hnEl = document.getElementById("rv9-hn");
+    var hc = { v: 0 };
+    tl.to(hc, {
+      v: 89.33, duration: 7.0, ease: "power2.out",
+      onUpdate: function () { hnEl.textContent = hc.v.toFixed(2); }
+    }, 2.6);
+    tl.fromTo("#rv9-hnwrap", { scale: 0.5 }, { scale: 1, duration: 7.0, ease: "power2.out" }, 2.6);
+    /* 定格: freeze pulse + underline sweep as the number locks */
+    tl.fromTo("#rv9-hnwrap", { scale: 1 }, { scale: 1.03, duration: 0.14, ease: "power2.out", immediateRender: false }, 9.62);
+    tl.fromTo("#rv9-hnwrap", { scale: 1.03 }, { scale: 1, duration: 0.22, ease: "power2.inOut", immediateRender: false }, 9.76);
+    tl.fromTo("#rv9-underline", { scaleX: 0 }, { scaleX: 1, duration: 0.55, ease: "power3.inOut" }, 9.8);
+
+    /* eval protocol tag + bar-comparison header */
+    tl.fromTo("#rv9-mtag", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 3.3);
+    tl.fromTo("#rv9-bh", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 3.1);
+
+    /* paired graphic: baseline (hollow) vs reval (solid) bars grow on the SAME ease as the counter */
+    tl.fromTo("#rv9-base", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power2.inOut" }, 2.7);
+    tl.fromTo("#rv9-bar1", { height: 0 }, { height: 234, duration: 6.8, ease: "power2.out" }, 2.9);
+    tl.fromTo("#rv9-bar2", { height: 0 }, { height: 286, duration: 6.8, ease: "power2.out" }, 2.9);
+    tl.fromTo("#rv9-bn1", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 3.5);
+    tl.fromTo("#rv9-bn2", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 3.65);
+    tl.fromTo("#rv9-bv2", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 10.15);
+    tl.fromTo("#rv9-bv1", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 10.35);
+
+    /* evidence chips pop in voice order: 终点距离 → +16.33 点 → 置信区间 */
+    tl.fromTo("#rv9-chipC", { opacity: 0, y: 22, scale: 0.6 }, { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "back.out(1.8)" }, 11.0);
+    tl.fromTo("#rv9-chipA", { opacity: 0, y: 22, scale: 0.6 }, { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "back.out(1.8)" }, 13.0);
+    tl.fromTo("#rv9-chipB", { opacity: 0, y: 22, scale: 0.6 }, { opacity: 1, y: 0, scale: 1, duration: 0.5, ease: "back.out(1.8)" }, 14.8);
+    /* dashed guide at the 73.00 level as the voice says 比基线高出 */
+    tl.fromTo("#rv9-guide", { width: 0 }, { width: 216, duration: 0.5, ease: "power2.inOut" }, 12.7);
+
+    /* ================= Scene 2 (15.2-19.5) · right checklist card, fast check-off ================= */
+    tl.fromTo("#rv9-card", { opacity: 0, x: 64 }, { opacity: 1, x: 0, duration: 0.55, ease: "power3.out" }, 15.35);
+    tl.fromTo("#rv9-row1", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 15.7);
+    tl.fromTo("#rv9-row2", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 15.95);
+    tl.fromTo("#rv9-row3", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 16.2);
+
+    /* 12/12 counter rolls while the rows tick off */
+    var cntEl = document.getElementById("rv9-cnt");
+    var cc = { v: 0 };
+    tl.to(cc, {
+      v: 12, duration: 1.6, ease: "power1.inOut",
+      onUpdate: function () { cntEl.textContent = String(Math.floor(cc.v)); }
+    }, 15.9);
+
+    /* check slots flip outline -> solid, check strokes sweep */
+    var ckTimes = [16.65, 17.15, 17.65];
+    for (var i = 1; i <= 3; i++) {
+      var t0 = ckTimes[i - 1];
+      tl.fromTo("#rv9-cko" + i, { opacity: 1 }, { opacity: 0, duration: 0.2, ease: "power1.out" }, t0);
+      tl.fromTo("#rv9-cks" + i, { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, t0);
+      var p = document.getElementById("rv9-ckp" + i);
+      var PL = (p.getTotalLength ? p.getTotalLength() : 30) * 1.02;
+      p.style.strokeDasharray = PL;
+      p.style.strokeDashoffset = PL;
+      tl.to("#rv9-ckp" + i, { strokeDashoffset: 0, duration: 0.28, ease: "power2.out" }, t0 + 0.1);
+    }
+
+    /* last row: 独立复核 ✓ 通过 (solid ink) */
+    tl.fromTo("#rv9-final", { opacity: 0, y: 20, scale: 0.92 }, { opacity: 1, y: 0, scale: 1, duration: 0.45, ease: "back.out(1.5)" }, 18.9);
+    var fp = document.getElementById("rv9-fkp");
+    var FL = (fp.getTotalLength ? fp.getTotalLength() : 30) * 1.02;
+    fp.style.strokeDasharray = FL;
+    fp.style.strokeDashoffset = FL;
+    tl.to("#rv9-fkp", { strokeDashoffset: 0, duration: 0.3, ease: "power2.out" }, 19.15);
+
+    /* ================= Scene 3 (19.5-23.625) · status bar flip, then a deliberate full-frame hold ================= */
+    tl.fromTo("#rv9-sbwrap", { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 19.65);
+    /* outline state reads while the voice names the default, then the bar flips ink-hollow -> ink-solid */
+    tl.fromTo("#rv9-sbA", { rotationX: 0 }, { rotationX: -88, duration: 0.26, ease: "power2.in", immediateRender: false }, 21.0);
+    tl.fromTo("#rv9-sbA", { opacity: 1 }, { opacity: 0, duration: 0.12, ease: "power1.out", immediateRender: false }, 21.24);
+    tl.fromTo("#rv9-sbB", { opacity: 1, rotationX: 88 }, { opacity: 1, rotationX: 0, duration: 0.34, ease: "power3.out", immediateRender: false }, 21.18);
+    /* small settle pulse, then still — no exit, the hold is the ending */
+    tl.fromTo("#rv9-sb", { scale: 1 }, { scale: 1.02, duration: 0.16, ease: "power2.out", immediateRender: false }, 21.75);
+    tl.fromTo("#rv9-sb", { scale: 1.02 }, { scale: 1, duration: 0.24, ease: "power2.inOut", immediateRender: false }, 21.91);
+
+    /* hold to end — the flipped status bar is the last image */
+  })();
+</script>
+</template>

@@ -1,0 +1,546 @@
+<template>
+<style>/*localfont-injected*/@font-face{font-family:'Noto Sans SC';src:local('Noto Sans SC');}@font-face{font-family:'Microsoft YaHei';src:local('Microsoft YaHei');}@font-face{font-family:'PingFang SC';src:local('PingFang SC');}@font-face{font-family:'Noto Serif SC';src:local('Noto Serif SC');}@font-face{font-family:'SimSun';src:local('SimSun');}@font-face{font-family:'Songti SC';src:local('Songti SC');}@font-face{font-family:'DM Mono';src:local('DM Mono');}@font-face{font-family:'Newsreader';src:local('Newsreader');}@font-face{font-family:'Hanken Grotesk';src:local('Hanken Grotesk');}
+  /* ============ Cobalt Grid — frame 05-fourarm (四臂对照：规则赢了模型) ============ */
+  #root {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    container-type: size;
+    font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    color: #1F2BE0;
+  }
+  #root .clip {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+  /* ---------- track 0 · permanent graph-paper ground ---------- */
+  .fa5-bg {
+    background-color: #F0EBDE;
+    background-image:
+      linear-gradient(rgba(31, 43, 224, 0.10) 1.5px, transparent 1.5px),
+      linear-gradient(90deg, rgba(31, 43, 224, 0.10) 1.5px, transparent 1.5px);
+    background-size: 38.4px 38.4px;
+  }
+  /* ---------- track 1 · furniture: hairlines + page chrome ---------- */
+  .fa5-hair-top {
+    position: absolute;
+    left: 77px;
+    right: 77px;
+    top: 58px;
+    height: 2.5px;
+    background: #1F2BE0;
+    transform-origin: left center;
+  }
+  .fa5-hair-bottom {
+    position: absolute;
+    left: 77px;
+    right: 77px;
+    top: 838px; /* bottom furniture; closing line lives above it (labels 700, close 734) */
+    height: 2.5px;
+    background: #1F2BE0;
+    transform-origin: right center;
+  }
+  .fa5-page {
+    position: absolute;
+    right: 77px;
+    top: 18px;
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    color: #1F2BE0;
+    font-variant-numeric: tabular-nums;
+  }
+  /* ---------- camera wrapper (multi-phase-camera: single writer) ---------- */
+  #fa5-camera {
+    position: absolute;
+    inset: 0;
+    transform-origin: 50% 50%;
+    will-change: transform;
+  }
+  /* ---------- header (topbar-rule component) ---------- */
+  .fa5-kick {
+    position: absolute;
+    left: 77px;
+    top: 84px;
+    font-family: "Noto Serif SC", "SimSun", serif;
+    font-weight: 400;
+    font-size: 44px;
+    line-height: 1.15;
+    letter-spacing: 0.04em;
+    color: #1F2BE0;
+  }
+  .fa5-axtag {
+    position: absolute;
+    right: 77px;
+    top: 106px;
+    font-size: 24px;
+    letter-spacing: 0.2em;
+    color: #515CDB;
+  }
+  .fa5-toprule {
+    position: absolute;
+    left: 77px;
+    right: 77px;
+    top: 150px;
+    height: 2.5px;
+    background: #1F2BE0;
+    transform-origin: left center;
+  }
+  /* ---------- shared type roles ---------- */
+  .fa5-numfont {
+    font-family: "Newsreader", "Noto Serif SC", "SimSun", serif;
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+  }
+  .fa5-mono {
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  /* ---------- axis svg ---------- */
+  .fa5-svg {
+    position: absolute;
+    inset: 0;
+    width: 1920px;
+    height: 1080px;
+    z-index: 2;
+    pointer-events: none;
+  }
+  .fa5-ytick {
+    position: absolute;
+    left: 56px;
+    width: 100px;
+    text-align: right;
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0.04em;
+    color: #515CDB;
+    font-variant-numeric: tabular-nums;
+    z-index: 2;
+  }
+  /* ---------- ambient glow behind the D hero bar ---------- */
+  .fa5-glow {
+    position: absolute;
+    left: 1386px;
+    top: 150px;
+    width: 520px;
+    height: 630px;
+    background: radial-gradient(closest-side, rgba(31, 43, 224, 0.38) 0%, rgba(31, 43, 224, 0.14) 46%, rgba(31, 43, 224, 0) 72%);
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+  /* ---------- growth bars (stat-bars-and-fills: scaleY from baseline) ---------- */
+  .fa5-bar {
+    position: absolute;
+    width: 150px;
+    border: 2.5px solid #1F2BE0;
+    background-color: rgba(31, 43, 224, 0.05);
+    background-image: repeating-linear-gradient(90deg, rgba(31, 43, 224, 0.45) 0 3px, transparent 3px 9px);
+    transform-origin: bottom center;
+    z-index: 3;
+    box-sizing: border-box;
+  }
+  .fa5-dfill {
+    position: absolute;
+    inset: 0;
+    background: #1F2BE0;
+    opacity: 0;
+  }
+  /* ---------- bar-top value-scaled counters ---------- */
+  .fa5-val {
+    position: absolute;
+    width: 240px;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    z-index: 4;
+  }
+  .fa5-num {
+    display: inline-block;
+    min-width: 2ch;
+    text-align: center;
+    font-family: "Newsreader", "Noto Serif SC", "SimSun", serif;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 1;
+    letter-spacing: -0.01em;
+    color: #1F2BE0;
+    font-variant-numeric: tabular-nums;
+    transform-origin: center center;
+  }
+  .fa5-numD { font-size: 116px; letter-spacing: -0.015em; }
+  .fa5-suf {
+    display: inline-block;
+    font-family: "Newsreader", "Noto Serif SC", "SimSun", serif;
+    font-weight: 400;
+    font-size: 32px;
+    color: #1F2BE0;
+  }
+  .fa5-sufD { font-size: 58px; }
+  /* ---------- column labels (mono tag + name, arrive before the bars) ----------
+     Bottom cluster keep-out: the caption card's top edge rides ~y=770 and its
+     first word-box ~y=788, so all frame text must end above ~y=764 even at
+     climax scale 1.035. Baseline sits at 690, labels 700-731. */
+  .fa5-lab {
+    position: absolute;
+    top: 700px;
+    width: 328px;
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.1;
+    letter-spacing: 0.06em;
+    color: #1F2BE0;
+    white-space: nowrap;
+    z-index: 4;
+  }
+  .fa5-lab i {
+    font-style: normal;
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 24px;
+    color: #515CDB;
+    margin-right: 10px;
+  }
+  .fa5-labmono {
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 27px;
+    letter-spacing: 0.04em;
+  }
+  /* ---------- scene 3 · annotation card beside bar C ---------- */
+  .fa5-card {
+    position: absolute;
+    left: 1120px;
+    top: 436px;
+    width: 450px;
+    height: 190px;
+    background-color: #E6E0CE;
+    border: 2.5px solid #1F2BE0;
+    background-image:
+      linear-gradient(rgba(31, 43, 224, 0.10) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(31, 43, 224, 0.10) 1px, transparent 1px);
+    background-size: 24px 24px;
+    padding: 22px 28px;
+    box-sizing: border-box;
+    z-index: 6;
+  }
+  .fa5-cA {
+    font-size: 24px;
+    line-height: 1.3;
+    letter-spacing: 0.18em;
+    color: #515CDB;
+  }
+  .fa5-cBrow {
+    display: flex;
+    align-items: baseline;
+    gap: 14px;
+    margin-top: 6px;
+  }
+  .fa5-c55 {
+    font-size: 48px;
+    line-height: 1.15;
+    color: #1F2BE0;
+    opacity: 0.62;
+    display: inline-block;
+  }
+  .fa5-carr {
+    font-size: 32px;
+    color: #1F2BE0;
+    display: inline-block;
+    transform-origin: center center;
+  }
+  .fa5-c37 {
+    font-size: 48px;
+    line-height: 1.15;
+    color: #1F2BE0;
+    display: inline-block;
+  }
+  .fa5-cCrow { margin-top: 8px; }
+  .fa5-cC {
+    position: relative;
+    display: inline-block;
+    font-size: 34px;
+    line-height: 1.12;
+    color: #1F2BE0;
+  }
+  .fa5-strike {
+    position: absolute;
+    left: -4%;
+    top: calc(50% - 7px);
+    width: 108%;
+    height: 14px;
+    background: repeating-linear-gradient(90deg, #1F2BE0 0 3px, transparent 3px 10px);
+    transform-origin: left center;
+  }
+  /* ---------- scene 4 · closing line (per-word entrance) ---------- */
+  .fa5-close {
+    position: absolute;
+    left: 0;
+    top: 734px;
+    width: 100%;
+    text-align: center;
+    font-size: 28px;
+    line-height: 1.05;
+    color: #1F2BE0;
+    z-index: 4;
+  }
+  .fa5-w {
+    display: inline-block;
+    margin: 0 9px;
+    font-family: "Noto Serif SC", "SimSun", serif;
+    font-weight: 400;
+  }
+  .fa5-warr {
+    display: inline-block;
+    margin: 0 9px;
+    font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    font-size: 24px;
+    color: #515CDB;
+  }
+</style>
+
+<div data-hf-id="hf-fvtk" id="root" data-composition-id="05-fourarm" data-start="0" data-duration="27.387" data-width="1920" data-height="1080">
+
+  <!-- track 0 · graph-paper ground -->
+  <div data-hf-id="hf-jnlp" class="clip fa5-bg" data-start="0" data-duration="27.387" data-track-index="0"></div>
+
+  <!-- track 1 · furniture -->
+  <div data-hf-id="hf-n6gg" class="clip" data-start="0" data-duration="27.387" data-track-index="1">
+    <div data-hf-id="hf-pl1q" class="fa5-hair-top" id="fa5-hair-top"></div>
+    <div data-hf-id="hf-e6io" class="fa5-hair-bottom" id="fa5-hair-bottom"></div>
+    <div data-hf-id="hf-x0wp" class="fa5-page" id="fa5-page">05 / 10</div>
+  </div>
+
+  <!-- track 2 · the whole chart plane, inside the camera -->
+  <div data-hf-id="hf-vucb" class="clip" data-start="0" data-duration="27.387" data-track-index="2">
+    <div data-hf-id="hf-19dl" id="fa5-camera">
+
+      <!-- topbar header -->
+      <div data-hf-id="hf-3uh3" class="fa5-kick" id="fa5-kick">四臂对照</div>
+      <div data-hf-id="hf-y67c" class="fa5-axtag" id="fa5-axtag">纵轴 · 成功率</div>
+      <div data-hf-id="hf-z6ra" class="fa5-toprule" id="fa5-toprule"></div>
+
+      <!-- ambient glow behind the D hero bar -->
+      <div data-hf-id="hf-juea" class="fa5-glow" id="fa5-glow"></div>
+
+      <!-- coordinate system: self-drawing axes / gridlines / baseline ticks / card link
+           (axis rescaled 96px->76px per 10% so the whole chart clears the caption card) -->
+      <svg data-hf-id="hf-adbg" class="fa5-svg" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+        <line data-hf-id="hf-2vl9" id="fa5-g10" x1="170" y1="614" x2="1810" y2="614" stroke="rgba(31,43,224,0.18)" stroke-width="1.5" />
+        <line data-hf-id="hf-issu" id="fa5-g20" x1="170" y1="538" x2="1810" y2="538" stroke="rgba(31,43,224,0.18)" stroke-width="1.5" />
+        <line data-hf-id="hf-tfal" id="fa5-g30" x1="170" y1="462" x2="1810" y2="462" stroke="rgba(31,43,224,0.18)" stroke-width="1.5" />
+        <line data-hf-id="hf-lyfm" id="fa5-g40" x1="170" y1="386" x2="1810" y2="386" stroke="rgba(31,43,224,0.18)" stroke-width="1.5" />
+        <line data-hf-id="hf-xzoj" id="fa5-g50" x1="170" y1="310" x2="1810" y2="310" stroke="rgba(31,43,224,0.18)" stroke-width="1.5" />
+        <line data-hf-id="hf-5pte" id="fa5-yaxis" x1="170" y1="300" x2="170" y2="690" stroke="#1F2BE0" stroke-width="3" />
+        <line data-hf-id="hf-td4h" id="fa5-baseline" x1="170" y1="690" x2="1810" y2="690" stroke="#1F2BE0" stroke-width="3" />
+        <line data-hf-id="hf-pkfd" id="fa5-tA" x1="334" y1="690" x2="334" y2="696" stroke="#1F2BE0" stroke-width="2.5" />
+        <line data-hf-id="hf-nftu" id="fa5-tB" x1="662" y1="690" x2="662" y2="696" stroke="#1F2BE0" stroke-width="2.5" />
+        <line data-hf-id="hf-xh4f" id="fa5-tC" x1="990" y1="690" x2="990" y2="696" stroke="#1F2BE0" stroke-width="2.5" />
+        <line data-hf-id="hf-wstg" id="fa5-tR" x1="1318" y1="690" x2="1318" y2="696" stroke="#1F2BE0" stroke-width="2.5" />
+        <line data-hf-id="hf-0a2i" id="fa5-tD" x1="1646" y1="690" x2="1646" y2="696" stroke="#1F2BE0" stroke-width="2.5" />
+        <line data-hf-id="hf-28m6" id="fa5-link" x1="1118" y1="600" x2="1068" y2="616" stroke="#515CDB" stroke-width="2" />
+      </svg>
+
+      <!-- y-axis tick digits -->
+      <div data-hf-id="hf-mbbo" class="fa5-ytick" id="fa5-y10" style="top: 601px;">10</div>
+      <div data-hf-id="hf-uys9" class="fa5-ytick" id="fa5-y20" style="top: 525px;">20</div>
+      <div data-hf-id="hf-yx26" class="fa5-ytick" id="fa5-y30" style="top: 449px;">30</div>
+      <div data-hf-id="hf-tfpw" class="fa5-ytick" id="fa5-y40" style="top: 373px;">40</div>
+      <div data-hf-id="hf-op4z" class="fa5-ytick" id="fa5-y50" style="top: 297px;">50</div>
+
+      <!-- growth bars (final heights authored in CSS-geometry, scaleY does the motion) -->
+      <div data-hf-id="hf-418b" class="fa5-bar" id="fa5-barA" style="left: 259px; top: 652px; height: 38px;"></div>
+      <div data-hf-id="hf-oeg0" class="fa5-bar" id="fa5-barB" style="left: 587px; top: 614px; height: 76px;"></div>
+      <div data-hf-id="hf-r4cc" class="fa5-bar" id="fa5-barC" style="left: 915px; top: 614px; height: 76px;"></div>
+      <div data-hf-id="hf-l2wq" class="fa5-bar" id="fa5-barR" style="left: 1243px; top: 652px; height: 38px;"></div>
+      <div data-hf-id="hf-m3y9" class="fa5-bar" id="fa5-barD" style="left: 1571px; top: 310px; height: 380px;">
+        <div data-hf-id="hf-44dm" class="fa5-dfill" id="fa5-dfill"></div>
+      </div>
+
+      <!-- value-scaled counters on the bar tops -->
+      <div data-hf-id="hf-t84w" class="fa5-val" id="fa5-valA" style="left: 214px; top: 567px;">
+        <span data-hf-id="hf-5yxy" class="fa5-num" id="fa5-numA">0</span><span data-hf-id="hf-fmdl" class="fa5-suf" id="fa5-sufA">%</span>
+      </div>
+      <div data-hf-id="hf-j6c9" class="fa5-val" id="fa5-valB" style="left: 542px; top: 529px;">
+        <span data-hf-id="hf-uo9v" class="fa5-num" id="fa5-numB">0</span><span data-hf-id="hf-0rb4" class="fa5-suf" id="fa5-sufB">%</span>
+      </div>
+      <div data-hf-id="hf-8kro" class="fa5-val" id="fa5-valC" style="left: 870px; top: 529px;">
+        <span data-hf-id="hf-jdi0" class="fa5-num" id="fa5-numC">0</span><span data-hf-id="hf-t0xn" class="fa5-suf" id="fa5-sufC">%</span>
+      </div>
+      <div data-hf-id="hf-6dqz" class="fa5-val" id="fa5-valR" style="left: 1198px; top: 567px;">
+        <span data-hf-id="hf-mjsj" class="fa5-num" id="fa5-numR">0</span><span data-hf-id="hf-2zu8" class="fa5-suf" id="fa5-sufR">%</span>
+      </div>
+      <div data-hf-id="hf-y3y8" class="fa5-val" id="fa5-valD" style="left: 1526px; top: 170px;">
+        <span data-hf-id="hf-s98a" class="fa5-num fa5-numD" id="fa5-numD">0</span><span data-hf-id="hf-f7kr" class="fa5-suf fa5-sufD" id="fa5-sufD">%</span>
+      </div>
+
+      <!-- column labels (mono tag first, ahead of the bars) -->
+      <div data-hf-id="hf-hlci" class="fa5-lab" id="fa5-labA" style="left: 170px;"><i data-hf-id="hf-wjt3">A</i>单动作</div>
+      <div data-hf-id="hf-57qg" class="fa5-lab" id="fa5-labB" style="left: 498px;"><i data-hf-id="hf-w5i2">B</i>排序</div>
+      <div data-hf-id="hf-m83m" class="fa5-lab" id="fa5-labC" style="left: 826px;"><i data-hf-id="hf-vr71">C</i>排序+治理器</div>
+      <div data-hf-id="hf-1xef" class="fa5-lab" id="fa5-labR" style="left: 1154px;"><span data-hf-id="hf-jr1n" class="fa5-labmono">Random</span></div>
+      <div data-hf-id="hf-w0jx" class="fa5-lab" id="fa5-labD" style="left: 1482px;"><i data-hf-id="hf-yjc8">D</i><span data-hf-id="hf-ksmh" class="fa5-labmono">Frontier</span></div>
+
+      <!-- annotation card beside bar C -->
+      <div data-hf-id="hf-5m2q" class="fa5-card" id="fa5-card">
+        <div data-hf-id="hf-plmq" class="fa5-cA" id="fa5-cA">重复访问率</div>
+        <div data-hf-id="hf-b22e" class="fa5-cBrow">
+          <span data-hf-id="hf-rb44" class="fa5-c55 fa5-numfont" id="fa5-c55">55.2%</span>
+          <span data-hf-id="hf-sliv" class="fa5-carr" id="fa5-carr">→</span>
+          <span data-hf-id="hf-b1nb" class="fa5-c37 fa5-numfont" id="fa5-c37">37.1%</span>
+        </div>
+        <div data-hf-id="hf-v5zp" class="fa5-cCrow">
+          <span data-hf-id="hf-f5m4" class="fa5-cC fa5-numfont" id="fa5-cC">SR 未涨<i data-hf-id="hf-7c4e" class="fa5-strike" id="fa5-strike"></i></span>
+        </div>
+      </div>
+
+      <!-- closing line, per-word entrance -->
+      <div data-hf-id="hf-1x8o" class="fa5-close" id="fa5-close">
+        <span data-hf-id="hf-5oq4" class="fa5-w" id="fa5-w1">云端</span>
+        <span data-hf-id="hf-etfl" class="fa5-w" id="fa5-w2">路线</span>
+        <span data-hf-id="hf-2ug4" class="fa5-w" id="fa5-w3">暂停</span>
+        <span data-hf-id="hf-6yhc" class="fa5-warr" id="fa5-w4">→</span>
+        <span data-hf-id="hf-xckq" class="fa5-w" id="fa5-w5">问题</span>
+        <span data-hf-id="hf-4ogw" class="fa5-w" id="fa5-w6">转向</span>
+        <span data-hf-id="hf-hd7e" class="fa5-w" id="fa5-w7">本地</span>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script>
+  (function () {
+    var tl = gsap.timeline({ paused: true });
+    window.__timelines = window.__timelines || {};
+    window.__timelines["05-fourarm"] = tl;
+
+    /* ---------- furniture ---------- */
+    tl.fromTo("#fa5-hair-top", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.inOut" }, 0.08);
+    tl.fromTo("#fa5-hair-bottom", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.inOut" }, 0.22);
+    tl.fromTo("#fa5-page", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 0.4);
+
+    /* ================= Scene 1 (0.0-3.7) · blank coordinate system self-draws ================= */
+    tl.fromTo("#fa5-kick", { opacity: 0, y: -20 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.10);
+    tl.fromTo("#fa5-axtag", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 0.30);
+    tl.fromTo("#fa5-toprule", { scaleX: 0 }, { scaleX: 1, duration: 0.6, ease: "power3.inOut" }, 0.35);
+
+    /* svg-path-draw setup: measured lengths, never guessed */
+    ["fa5-yaxis", "fa5-baseline", "fa5-g10", "fa5-g20", "fa5-g30", "fa5-g40", "fa5-g50",
+     "fa5-tA", "fa5-tB", "fa5-tC", "fa5-tR", "fa5-tD", "fa5-link"].forEach(function (id) {
+      var p = document.getElementById(id);
+      var L = p.getTotalLength() * 1.02;
+      p.style.strokeDasharray = L;
+      p.style.strokeDashoffset = L;
+    });
+
+    tl.to("#fa5-yaxis", { strokeDashoffset: 0, duration: 0.7, ease: "power2.out" }, 0.40);
+    tl.to("#fa5-baseline", { strokeDashoffset: 0, duration: 0.9, ease: "power2.out" }, 0.60);
+    ["fa5-g10", "fa5-g20", "fa5-g30", "fa5-g40", "fa5-g50"].forEach(function (id, i) {
+      tl.to("#" + id, { strokeDashoffset: 0, duration: 0.55, ease: "power2.out" }, 1.05 + i * 0.13);
+    });
+    ["fa5-tA", "fa5-tB", "fa5-tC", "fa5-tR", "fa5-tD"].forEach(function (id, i) {
+      tl.to("#" + id, { strokeDashoffset: 0, duration: 0.3, ease: "power2.out" }, 1.10 + i * 0.08);
+    });
+    ["fa5-y10", "fa5-y20", "fa5-y30", "fa5-y40", "fa5-y50"].forEach(function (id, i) {
+      tl.fromTo("#" + id, { opacity: 0 }, { opacity: 1, duration: 0.35, ease: "power1.out" }, 1.25 + i * 0.1);
+    });
+    /* mono labels land first — bars are still zero-height stubs on the baseline */
+    ["fa5-labA", "fa5-labB", "fa5-labC", "fa5-labR", "fa5-labD"].forEach(function (id, i) {
+      tl.fromTo("#" + id, { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 1.55 + i * 0.17);
+    });
+
+    /* ================= Scene 2 (3.6-16.9) · five bars grow in voice order ================= */
+    /* stat-bars-and-fills: scaleY from the baseline; counting-dynamic-scale:
+       value + transform scale share the SAME start, duration and ease so they land as one beat */
+    function count(numId, target, t, dur, fromScale) {
+      var el = document.getElementById(numId);
+      var st = { v: 0 };
+      tl.to(st, {
+        v: target, duration: dur, ease: "power3.out",
+        onUpdate: function () { el.textContent = String(Math.round(st.v)); }
+      }, t);
+      tl.fromTo(el, { scale: fromScale }, { scale: 1, duration: dur, ease: "power3.out" }, t);
+    }
+    function suffix(id, t) {
+      tl.fromTo("#" + id, { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.3, ease: "back.out(1.8)" }, t);
+    }
+    function bar(barId, valId, numId, sufId, target, t, dur, fromScale) {
+      tl.fromTo("#" + barId, { scaleY: 0 }, { scaleY: 1, duration: dur, ease: "power3.out" }, t);
+      tl.fromTo("#" + valId, { opacity: 0 }, { opacity: 1, duration: 0.25, ease: "power1.out" }, t);
+      count(numId, target, t, dur, fromScale);
+      suffix(sufId, t + dur);
+    }
+
+    bar("fa5-barA", "fa5-valA", "fa5-numA", "fa5-sufA", 5, 4.00, 1.05, 0.55);
+    bar("fa5-barB", "fa5-valB", "fa5-numB", "fa5-sufB", 10, 6.10, 1.05, 0.55);
+    bar("fa5-barC", "fa5-valC", "fa5-numC", "fa5-sufC", 10, 8.30, 1.05, 0.55);
+    bar("fa5-barR", "fa5-valR", "fa5-numR", "fa5-sufR", 5, 10.40, 1.05, 0.55);
+    /* D — the hero: longer growth, solid-ink flip + one glow bloom landing together (~14s) */
+    bar("fa5-barD", "fa5-valD", "fa5-numD", "fa5-sufD", 50, 12.40, 1.5, 0.5);
+    tl.fromTo("#fa5-dfill", { opacity: 0 }, { opacity: 1, duration: 0.5, ease: "power2.inOut" }, 13.90);
+
+    /* ambient-glow-bloom: hero bloom swells in behind D as it settles, then a bounded breathe */
+    var glow = document.getElementById("fa5-glow");
+    tl.fromTo(glow,
+      { opacity: 0, scale: 0.82 },
+      { opacity: 0.34, scale: 1, duration: 1.0, ease: "power2.out" }, 13.40);
+    var gp = { p: 0 };
+    tl.to(gp, {
+      p: Math.PI * 2 * 2.4, duration: 12.4, ease: "none",
+      onUpdate: function () {
+        var s = Math.sin(gp.p);
+        glow.style.opacity = String(0.34 + s * 0.04);
+        glow.style.transform = "scale(" + (1 + s * 0.018) + ")";
+      }
+    }, 14.40);
+
+    /* multi-phase-camera: one writer composes phase scale + sine drift; drift spans the whole shot */
+    var cam = document.getElementById("fa5-camera");
+    var phase = { scale: 1 };
+    tl.to(phase, { scale: 1.035, duration: 2.6, ease: "power2.inOut" }, 13.20);   /* climax push as D lands */
+    tl.to(phase, { scale: 0.965, duration: 2.3, ease: "power2.inOut" }, 21.90);   /* the closing pull-back */
+    var drift = { p: 0 };
+    tl.to(drift, {
+      p: Math.PI * 2 * 2, duration: 26.887, ease: "none",
+      onUpdate: function () {
+        var dx = Math.sin(drift.p) * 5;
+        var dy = Math.sin(drift.p * 1.31) * 2;
+        cam.style.transform = "scale(" + phase.scale + ") translate(" + dx + "px," + dy + "px)";
+      }
+    }, 0);
+
+    /* ================= Scene 3 (16.9-21.8) · annotation card beside bar C ================= */
+    tl.fromTo("#fa5-card", { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.7)" }, 17.30);
+    tl.to("#fa5-link", { strokeDashoffset: 0, duration: 0.35, ease: "power2.out" }, 17.75);
+    tl.fromTo("#fa5-cA", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" }, 17.55);
+    tl.fromTo("#fa5-c55", { opacity: 0, y: 20 }, { opacity: 0.62, y: 0, duration: 0.45, ease: "power2.out" }, 17.75);
+    tl.fromTo("#fa5-carr", { scaleX: 0, opacity: 0 }, { scaleX: 1, opacity: 1, duration: 0.35, ease: "power2.inOut" }, 18.05);
+    tl.fromTo("#fa5-c37", { scale: 0.78, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.5)" }, 18.20);
+    tl.fromTo("#fa5-cC", { opacity: 0, y: 22 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 19.10);
+    tl.fromTo("#fa5-strike", { scaleX: 0 }, { scaleX: 1, duration: 0.45, ease: "power3.inOut" }, 19.60);
+
+    /* ================= Scene 4 (21.8-26.9) · pull-back + per-word closing line ================= */
+    /* kinetic-beat-slam: one onset grid, a distinct entrance axis per word.
+       y-offsets capped at 10px: the line sits at 734-763, just above the caption
+       card (~770) — deeper dives would cross it or the column labels. */
+    var B = [22.30, 22.47, 22.64, 22.81, 22.98, 23.15, 23.32];
+    tl.fromTo("#fa5-w1", { y: 10, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power4.out" }, B[0]);
+    tl.fromTo("#fa5-w2", { y: 10, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "power3.out" }, B[1]);
+    tl.fromTo("#fa5-w3",
+      { scale: 1.45, filter: "blur(10px)", opacity: 0 },
+      { scale: 1, filter: "blur(0px)", opacity: 1, duration: 0.5, ease: "power4.out" }, B[2]);
+    tl.fromTo("#fa5-w4", { x: -90, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4, ease: "expo.out" }, B[3]);
+    tl.fromTo("#fa5-w5", { y: 10, opacity: 0 }, { y: 0, opacity: 1, duration: 0.45, ease: "circ.out" }, B[4]);
+    tl.fromTo("#fa5-w6", { x: 96, opacity: 0 }, { x: 0, opacity: 1, duration: 0.4, ease: "expo.out" }, B[5]);
+    tl.fromTo("#fa5-w7",
+      { y: 10, filter: "blur(6px)", opacity: 0 },
+      { y: 0, filter: "blur(0px)", opacity: 1, duration: 0.45, ease: "power4.out" }, B[6]);
+
+    /* hold to end — the pull-back settles, glow breathes, camera drifts on; no exit */
+  })();
+</script>
+</template>

@@ -1,0 +1,611 @@
+<template>
+<style>/*localfont-injected*/@font-face{font-family:'Noto Sans SC';src:local('Noto Sans SC');}@font-face{font-family:'Microsoft YaHei';src:local('Microsoft YaHei');}@font-face{font-family:'PingFang SC';src:local('PingFang SC');}@font-face{font-family:'Noto Serif SC';src:local('Noto Serif SC');}@font-face{font-family:'SimSun';src:local('SimSun');}@font-face{font-family:'Songti SC';src:local('Songti SC');}@font-face{font-family:'DM Mono';src:local('DM Mono');}@font-face{font-family:'Newsreader';src:local('Newsreader');}@font-face{font-family:'Hanken Grotesk';src:local('Hanken Grotesk');}
+  /* ============ Cobalt Grid — frame 07-gap (目标难题：模型没用目标图) ============ */
+  #root {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    container-type: size;
+    font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+    color: #1F2BE0;
+  }
+  #root .clip {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+  /* ---------- track 0 · permanent graph-paper ground ---------- */
+  .g7-bg {
+    background-color: #F0EBDE;
+    background-image:
+      linear-gradient(rgba(31, 43, 224, 0.10) 1.5px, transparent 1.5px),
+      linear-gradient(90deg, rgba(31, 43, 224, 0.10) 1.5px, transparent 1.5px);
+    background-size: 38.4px 38.4px;
+  }
+  /* ---------- track 1 · furniture ---------- */
+  .g7-hair-top {
+    position: absolute;
+    left: 77px;
+    right: 77px;
+    top: 58px;
+    height: 2.5px;
+    background: #1F2BE0;
+    transform-origin: left center;
+  }
+  .g7-hair-bot {
+    position: absolute;
+    left: 77px;
+    right: 77px;
+    top: 870px; /* kept above the 83% caption keep-out (y <= 896) */
+    height: 2.5px;
+    background: #1F2BE0;
+    transform-origin: right center;
+  }
+  .g7-page {
+    position: absolute;
+    right: 77px;
+    top: 18px;
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    color: #1F2BE0;
+    font-variant-numeric: tabular-nums;
+  }
+  /* ---------- track 2 · header chrome ---------- */
+  .g7-kick {
+    position: absolute;
+    left: 77px;
+    top: 86px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    color: #1F2BE0;
+  }
+  .g7-kick::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #1F2BE0;
+    margin-right: 16px;
+  }
+  .g7-kick-en {
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 17px;
+    letter-spacing: 0.18em;
+    color: #515CDB;
+    margin-left: 22px;
+  }
+  /* ---------- type helpers ---------- */
+  .g7-serif { font-family: "Noto Serif SC", "SimSun", "Songti SC", serif; font-weight: 400; }
+  .g7-numfont {
+    font-family: "Newsreader", "Noto Serif SC", "SimSun", serif;
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+  }
+  .g7-mono {
+    font-family: "DM Mono", "Consolas", "Courier New", "Noto Sans SC", "Microsoft YaHei", monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  .g7-micro {
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 16px;
+    letter-spacing: 0.2em;
+    color: #515CDB;
+  }
+  /* ---------- track 3 · scene 1+2 stage (question beat + evidence rig) ---------- */
+  .g7-stage {
+    position: absolute;
+    inset: 0;
+    transform-origin: 1500px 480px;
+  }
+  .g7-q {
+    position: absolute;
+    left: 0;
+    top: 352px;
+    width: 1520px;
+    text-align: center;
+    font-size: 116px;
+    line-height: 1.12;
+    letter-spacing: -0.005em;
+    color: #1F2BE0;
+    white-space: nowrap;
+  }
+  .g7-qc { display: inline-block; }
+  .g7-qrel { position: relative; }
+  .g7-qul {
+    position: absolute;
+    left: -4px;
+    right: -4px;
+    bottom: -14px;
+    display: block;
+    height: 7px;
+    background: #1F2BE0;
+    transform-origin: left center;
+  }
+  /* evidence rig: card + frozen success-rate readout */
+  .g7-rig {
+    position: absolute;
+    left: 1345px;
+    top: 190px;
+    width: 430px;
+    height: 600px;
+  }
+  .g7-cwA, .g7-cwB {
+    position: absolute;
+    left: 45px;
+    top: 0;
+    width: 340px;
+    height: 345px;
+  }
+  .g7-cwB { opacity: 0; }
+  .g7-card {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 340px;
+    height: 300px;
+    background-color: #E6E0CE;
+    background-image:
+      linear-gradient(rgba(31, 43, 224, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(31, 43, 224, 0.08) 1px, transparent 1px);
+    background-size: 28px 28px;
+    border: 2.5px solid #1F2BE0;
+    overflow: hidden;
+  }
+  .g7-ctag {
+    position: absolute;
+    left: -60px;
+    top: 312px;
+    width: 460px;
+    text-align: center;
+    font-size: 17px;
+    letter-spacing: 0.1em;
+    color: #515CDB;
+    white-space: nowrap;
+  }
+  .g7-mblob { position: absolute; }
+  /* stat block */
+  .g7-stat {
+    position: absolute;
+    left: 0;
+    top: 368px;
+    width: 430px;
+    height: 240px;
+  }
+  .g7-slab {
+    text-align: center;
+    font-size: 24px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    color: #1F2BE0;
+  }
+  .g7-slab .g7-micro { margin-left: 14px; }
+  .g7-snumwrap {
+    position: relative;
+    width: 370px;
+    height: 110px;
+    margin: 18px auto 0;
+  }
+  .g7-snum {
+    display: block;
+    text-align: center;
+    font-size: 92px;
+    line-height: 110px;
+    letter-spacing: -0.01em;
+    color: #1F2BE0;
+    white-space: nowrap;
+  }
+  .g7-sbox {
+    position: absolute;
+    left: -12px;
+    top: -12px;
+    width: 394px;
+    height: 134px;
+    overflow: visible;
+    pointer-events: none;
+  }
+  .g7-snote {
+    position: absolute;
+    left: 0;
+    top: 172px;
+    width: 430px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    color: #1F2BE0;
+  }
+  /* ---------- track 4 · scene 3 · 2x2 failure-card grid ---------- */
+  .g7-s3grp {
+    position: absolute;
+    inset: 0;
+    transform-origin: 960px 490px;
+  }
+  .g7-s3head {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 204px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+  }
+  .g7-s3head i { display: block; width: 64px; height: 2.5px; background: #1F2BE0; }
+  .g7-s3head b { font-size: 30px; font-weight: 600; letter-spacing: 0.2em; }
+  .g7-gcard {
+    position: absolute;
+    width: 700px;
+    height: 170px;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding: 0 30px;
+    box-sizing: border-box;
+    background: #E6E0CE;
+    border: 2px solid rgba(31, 43, 224, 0.4);
+  }
+  .g7-g1 { left: 238px; top: 296px; }
+  .g7-g2 { left: 982px; top: 296px; }
+  .g7-g3 { left: 238px; top: 510px; }
+  .g7-g4 { left: 982px; top: 510px; }
+  .g7-gnum {
+    font-size: 26px;
+    letter-spacing: 0.08em;
+    color: #515CDB;
+    font-variant-numeric: tabular-nums;
+  }
+  .g7-gdiv { width: 2px; height: 60px; background: rgba(31, 43, 224, 0.3); }
+  .g7-gncol { display: flex; flex-direction: column; gap: 7px; }
+  .g7-gname { font-size: 33px; font-weight: 600; letter-spacing: 0.04em; color: #1F2BE0; white-space: nowrap; }
+  .g7-glat { font-size: 16px; letter-spacing: 0.16em; color: #515CDB; white-space: nowrap; }
+  .g7-stamp {
+    position: absolute;
+    right: 20px;
+    top: 57px;
+    padding: 7px 16px;
+    border: 3.5px solid #1F2BE0;
+    background: rgba(240, 235, 222, 0.88);
+    font-size: 27px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #1F2BE0;
+    white-space: nowrap;
+    opacity: 0;
+  }
+  .g7-verdict {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 716px;
+    width: max-content;
+    margin: 0 auto;
+    padding: 13px 36px;
+    background: #1F2BE0;
+    color: #F0EBDE;
+    font-size: 33px;
+    font-weight: 600;
+    letter-spacing: 0.16em;
+    white-space: nowrap;
+    opacity: 0;
+  }
+  /* ---------- track 5 · scene 4 · one-line diagnosis ---------- */
+  .g7-s4in {
+    position: absolute;
+    inset: 0;
+    transform-origin: 960px 500px;
+  }
+  .g7-s4lock {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 22px;
+  }
+  .g7-s4lock i { display: block; width: 64px; height: 2.5px; background: #1F2BE0; }
+  .g7-s4lock b { font-size: 26px; font-weight: 600; letter-spacing: 0.3em; }
+  .g7-panel {
+    position: absolute;
+    left: 180px;
+    top: 296px;
+    width: 1560px;
+    height: 408px;
+    background: rgba(240, 235, 222, 0.93);
+    border: 2.5px solid #1F2BE0;
+    box-sizing: border-box;
+  }
+  .g7-wline {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    font-size: 118px;
+    line-height: 1.22;
+    letter-spacing: -0.005em;
+    color: #1F2BE0;
+    white-space: nowrap;
+  }
+  .g7-wl1 { top: 344px; }
+  .g7-wl2 { top: 488px; }
+  .g7-wc { display: inline-block; margin: 0 3px; }
+  .g7-wrel { position: relative; }
+  .g7-wbox {
+    position: absolute;
+    left: -18px;
+    top: -20px;
+    width: 396px;
+    height: 168px;
+    overflow: visible;
+    pointer-events: none;
+  }
+</style>
+
+<div data-hf-id="hf-pbft" id="root" data-composition-id="07-gap" data-start="0" data-duration="24.6" data-width="1920" data-height="1080">
+
+  <!-- track 0 · graph-paper ground -->
+  <div data-hf-id="hf-s5s2" class="clip g7-bg" data-start="0" data-duration="24.6" data-track-index="0"></div>
+
+  <!-- track 1 · furniture -->
+  <div data-hf-id="hf-5apl" class="clip" data-start="0" data-duration="24.6" data-track-index="1">
+    <div data-hf-id="hf-fi3k" class="g7-hair-top" id="g7-hair-top"></div>
+    <div data-hf-id="hf-3ctg" class="g7-hair-bot" id="g7-hair-bot"></div>
+    <div data-hf-id="hf-3e5r" class="g7-page" id="g7-page">07 / 10</div>
+  </div>
+
+  <!-- track 2 · header chrome -->
+  <div data-hf-id="hf-98tm" class="clip" data-start="0" data-duration="24.6" data-track-index="2">
+    <div data-hf-id="hf-11er" class="g7-kick" id="g7-kick">问题诊断 · 目标难题<span data-hf-id="hf-dbw8" class="g7-kick-en">GAP ANALYSIS</span></div>
+  </div>
+
+  <!-- track 3 · scene 1+2 stage -->
+  <div data-hf-id="hf-d6xn" class="clip" data-start="0" data-duration="24.6" data-track-index="3">
+    <div data-hf-id="hf-agyi" class="g7-stage" id="g7-stage">
+
+      <!-- scene 1 beat: the questioned question -->
+      <div data-hf-id="hf-ccy4" class="g7-q g7-serif" id="g7-q"><span data-hf-id="hf-ejgg" class="g7-qc" id="g7-q1">真的</span><span data-hf-id="hf-xggx" class="g7-qc" id="g7-q2">看懂</span><span data-hf-id="hf-541t" class="g7-qc g7-qrel" id="g7-q3">目标<i data-hf-id="hf-zl2a" class="g7-qul" id="g7-qul"></i></span><span data-hf-id="hf-x905" class="g7-qc" id="g7-q4">了吗</span><span data-hf-id="hf-wzyw" class="g7-qc" id="g7-q5">？</span></div>
+
+      <!-- evidence rig: target-map card <-> mean card swap + frozen 66.00% -->
+      <div data-hf-id="hf-alzy" class="g7-rig" id="g7-rig">
+
+        <!-- card A · abstract target-map texture -->
+        <div data-hf-id="hf-o1ua" class="g7-cwA" id="g7-cwA">
+          <div data-hf-id="hf-1py9" class="g7-card">
+            <svg data-hf-id="hf-k75a" width="340" height="300" viewBox="0 0 340 300" xmlns="http://www.w3.org/2000/svg">
+              <rect data-hf-id="hf-9t8i" x="60" y="40" width="220" height="220" fill="none" stroke="#1F2BE0" stroke-width="2.5" opacity="0.9" />
+              <rect data-hf-id="hf-eiir" x="90" y="70" width="160" height="160" fill="none" stroke="#1F2BE0" stroke-width="2" opacity="0.5" />
+              <rect data-hf-id="hf-zei6" x="118" y="98" width="104" height="104" fill="none" stroke="#1F2BE0" stroke-width="2" opacity="0.3" />
+              <rect data-hf-id="hf-150t" x="144" y="124" width="52" height="52" fill="none" stroke="#1F2BE0" stroke-width="2" opacity="0.85" />
+              <rect data-hf-id="hf-8e2n" x="161" y="141" width="18" height="18" fill="#1F2BE0" />
+              <path data-hf-id="hf-n05d" d="M170 8 V 34 M170 266 V 292 M8 150 H 34 M306 150 H 332" stroke="#1F2BE0" stroke-width="2.5" opacity="0.55" fill="none" />
+              <rect data-hf-id="hf-1e00" x="250" y="60" width="16" height="16" fill="#1F2BE0" opacity="0.75" />
+              <rect data-hf-id="hf-zc1e" x="66" y="216" width="16" height="16" fill="#1F2BE0" opacity="0.4" />
+              <rect data-hf-id="hf-e0l9" x="288" y="190" width="14" height="14" fill="#1F2BE0" opacity="0.55" />
+              <path data-hf-id="hf-2llh" d="M14 34 V 14 H 34 M306 14 H 326 V 34 M326 266 V 286 H 306 M34 286 H 14 V 266" fill="none" stroke="#1F2BE0" stroke-width="3" />
+            </svg>
+          </div>
+          <div data-hf-id="hf-8xhl" class="g7-ctag g7-mono">目标图 · TARGET MAP</div>
+        </div>
+
+        <!-- card B · training-set mean: texture degraded to blurred blobs -->
+        <div data-hf-id="hf-rb7u" class="g7-cwB" id="g7-cwB">
+          <div data-hf-id="hf-ulkl" class="g7-card">
+            <div data-hf-id="hf-alog" class="g7-mblob" style="left:30px; top:50px; width:190px; height:120px; background:rgba(31,43,224,0.20); filter:blur(14px);"></div>
+            <div data-hf-id="hf-41q7" class="g7-mblob" style="left:140px; top:130px; width:170px; height:120px; background:rgba(31,43,224,0.13); filter:blur(16px);"></div>
+            <div data-hf-id="hf-pxwb" class="g7-mblob" style="left:70px; top:170px; width:100px; height:90px; background:rgba(31,43,224,0.22); filter:blur(13px);"></div>
+            <div data-hf-id="hf-q1x0" class="g7-mblob" style="left:220px; top:40px; width:90px; height:80px; background:rgba(31,43,224,0.10); filter:blur(15px);"></div>
+          </div>
+          <div data-hf-id="hf-syzw" class="g7-ctag g7-mono">训练集均值 · TRAINING-SET MEAN</div>
+        </div>
+
+        <!-- the frozen readout: counts up once in scene 1, then never moves again -->
+        <div data-hf-id="hf-uzic" class="g7-stat" id="g7-stat">
+          <div data-hf-id="hf-ug6i" class="g7-slab" id="g7-slab">成功率<span data-hf-id="hf-j6rj" class="g7-micro">SUCCESS RATE</span></div>
+          <div data-hf-id="hf-abq6" class="g7-snumwrap">
+            <span data-hf-id="hf-vt8c" class="g7-snum g7-numfont" id="g7-snum">0.00%</span>
+            <svg data-hf-id="hf-ftpl" class="g7-sbox" viewBox="0 0 394 134" xmlns="http://www.w3.org/2000/svg">
+              <rect data-hf-id="hf-qbua" id="g7-sboxr" x="2.5" y="2.5" width="389" height="129" fill="none" stroke="#1F2BE0" stroke-width="3" />
+            </svg>
+          </div>
+          <div data-hf-id="hf-9lbe" class="g7-snote" id="g7-snote">
+            <svg data-hf-id="hf-lli8" width="120" height="34" viewBox="0 0 120 34" xmlns="http://www.w3.org/2000/svg">
+              <path data-hf-id="hf-xro1" d="M4 6 V 28 M116 6 V 28" stroke="rgba(31,43,224,0.35)" stroke-width="2" fill="none" />
+              <path data-hf-id="hf-990o" id="g7-flat" d="M4 17 H 116" stroke="#1F2BE0" stroke-width="3" fill="none" />
+            </svg>
+            <span data-hf-id="hf-j16d">几乎不掉</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <!-- track 4 · scene 3 · four failed experiments -->
+  <div data-hf-id="hf-ppg4" class="clip" data-start="0" data-duration="24.6" data-track-index="4">
+    <div data-hf-id="hf-l5xe" class="g7-s3grp" id="g7-s3grp">
+      <div data-hf-id="hf-nn6s" class="g7-s3head" id="g7-s3head"><i data-hf-id="hf-wt6k"></i><b data-hf-id="hf-fpyn">四轮诊断实验</b><span data-hf-id="hf-iego" class="g7-micro">DIAGNOSTIC ROUNDS 01–04</span><i data-hf-id="hf-zeb8"></i></div>
+
+      <div data-hf-id="hf-ocmk" class="g7-gcard g7-g1" id="g7-g1">
+        <span data-hf-id="hf-yfio" class="g7-gnum g7-mono">01</span>
+        <span data-hf-id="hf-2xo0" class="g7-gdiv"></span>
+        <div data-hf-id="hf-1kuq" class="g7-gncol">
+          <span data-hf-id="hf-hr6p" class="g7-gname">目标监督</span>
+          <span data-hf-id="hf-hywg" class="g7-glat g7-mono">GOAL SUPERVISION</span>
+        </div>
+        <div data-hf-id="hf-vk31" class="g7-stamp" id="g7-st1">负结果</div>
+      </div>
+
+      <div data-hf-id="hf-rjp6" class="g7-gcard g7-g2" id="g7-g2">
+        <span data-hf-id="hf-x8ll" class="g7-gnum g7-mono">02</span>
+        <span data-hf-id="hf-k98o" class="g7-gdiv"></span>
+        <div data-hf-id="hf-3kly" class="g7-gncol">
+          <span data-hf-id="hf-836i" class="g7-gname">源图留出诊断</span>
+          <span data-hf-id="hf-o1s2" class="g7-glat g7-mono">SOURCE HOLDOUT</span>
+        </div>
+        <div data-hf-id="hf-pzt4" class="g7-stamp" id="g7-st2">负结果</div>
+      </div>
+
+      <div data-hf-id="hf-k07k" class="g7-gcard g7-g3" id="g7-g3">
+        <span data-hf-id="hf-xmwm" class="g7-gnum g7-mono">03</span>
+        <span data-hf-id="hf-j2bl" class="g7-gdiv"></span>
+        <div data-hf-id="hf-3ywz" class="g7-gncol">
+          <span data-hf-id="hf-wq8b" class="g7-gname">五分类邻接头</span>
+          <span data-hf-id="hf-da5d" class="g7-glat g7-mono">5-WAY NEIGHBOR HEAD</span>
+        </div>
+        <div data-hf-id="hf-ae37" class="g7-stamp" id="g7-st3">负结果</div>
+      </div>
+
+      <div data-hf-id="hf-9322" class="g7-gcard g7-g4" id="g7-g4">
+        <span data-hf-id="hf-wfzj" class="g7-gnum g7-mono">04</span>
+        <span data-hf-id="hf-jgmm" class="g7-gdiv"></span>
+        <div data-hf-id="hf-4d80" class="g7-gncol">
+          <span data-hf-id="hf-0bt2" class="g7-gname">解耦线索头</span>
+          <span data-hf-id="hf-27u0" class="g7-glat g7-mono">DECOUPLED CUE HEAD</span>
+        </div>
+        <div data-hf-id="hf-enmm" class="g7-stamp" id="g7-st4">负结果</div>
+      </div>
+
+      <div data-hf-id="hf-m00o" class="g7-verdict" id="g7-verdict">全部负结果</div>
+    </div>
+  </div>
+
+  <!-- track 5 · scene 4 · the one-line diagnosis -->
+  <div data-hf-id="hf-qh3x" class="clip" data-start="0" data-duration="24.6" data-track-index="5">
+    <div data-hf-id="hf-lras" class="g7-s4in" id="g7-s4in">
+      <div data-hf-id="hf-d700" class="g7-s4lock" id="g7-s4lock"><i data-hf-id="hf-y7e5"></i><b data-hf-id="hf-850q">问题定位</b><span data-hf-id="hf-712o" class="g7-micro">ONE-LINE DIAGNOSIS</span><i data-hf-id="hf-ylp6"></i></div>
+      <div data-hf-id="hf-l5zm" class="g7-panel" id="g7-panel"></div>
+      <div data-hf-id="hf-scjf" class="g7-wline g7-wl1 g7-serif"><span data-hf-id="hf-m96b" class="g7-wc" id="g7-w1">模型</span><span data-hf-id="hf-lrtu" class="g7-wc" id="g7-w2">没有</span><span data-hf-id="hf-z0jz" class="g7-wc" id="g7-w3">真正</span></div>
+      <div data-hf-id="hf-amdq" class="g7-wline g7-wl2 g7-serif"><span data-hf-id="hf-2zbn" class="g7-wc" id="g7-w4">利用</span><span data-hf-id="hf-xy49" class="g7-wc g7-wrel" id="g7-w5">目标图<svg data-hf-id="hf-3ayu" class="g7-wbox" viewBox="0 0 396 168" xmlns="http://www.w3.org/2000/svg"><rect data-hf-id="hf-pltf" id="g7-wboxr" x="3" y="3" width="390" height="162" fill="none" stroke="#1F2BE0" stroke-width="3" /></svg></span><span data-hf-id="hf-r42w" class="g7-wc" id="g7-w6">的信息</span></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script>
+  (function () {
+    var tl = gsap.timeline({ paused: true });
+    window.__timelines = window.__timelines || {};
+    window.__timelines["07-gap"] = tl;
+
+    /* dash-draw prep (pure geometry, deterministic) */
+    ["#g7-sboxr", "#g7-wboxr", "#g7-flat"].forEach(function (sel) {
+      var el = document.querySelector(sel);
+      var L = el.getTotalLength ? el.getTotalLength() : 1000;
+      el.style.strokeDasharray = L;
+      el.style.strokeDashoffset = L;
+    });
+
+    /* ---------- furniture ---------- */
+    tl.fromTo("#g7-hair-top", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.inOut" }, 0.08);
+    tl.fromTo("#g7-hair-bot", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.inOut" }, 0.22);
+    tl.fromTo("#g7-page", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 0.4);
+    tl.fromTo("#g7-kick", { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.35);
+
+    /* one slow push under scene 1+2, toward the evidence rig */
+    tl.fromTo("#g7-stage", { scale: 1 }, { scale: 1.022, duration: 8.4, ease: "none", immediateRender: false }, 0);
+
+    /* ================= Scene 1 (0.0-4.0) · the question beat ================= */
+    /* evidence rig arrives first (VO: 百分之六十六的模型), number counts up once */
+    tl.fromTo("#g7-cwA",
+      { opacity: 0, y: -26, scale: 0.94 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: "back.out(1.25)" }, 0.4);
+    tl.fromTo("#g7-slab", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 0.55);
+    tl.fromTo("#g7-snum", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 0.62);
+    var numEl = document.getElementById("g7-snum");
+    var cv = { v: 0 };
+    tl.to(cv, {
+      v: 66, duration: 1.3, ease: "power2.out",
+      onUpdate: function () { numEl.textContent = cv.v.toFixed(2) + "%"; }
+    }, 0.7);
+
+    /* the question slam: per-word beats (VO: 真的看懂目标了吗) */
+    ["#g7-q1", "#g7-q2", "#g7-q3", "#g7-q4", "#g7-q5"].forEach(function (s, i) {
+      tl.fromTo(s,
+        { opacity: 0, y: 30, filter: "blur(8px)" },
+        { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.45, ease: "power3.out" }, 1.9 + i * 0.14);
+    });
+    tl.fromTo("#g7-qul", { scaleX: 0 }, { scaleX: 1, duration: 0.4, ease: "power2.inOut" }, 2.55);
+    tl.to("#g7-q5", { scale: 1.3, duration: 0.12, ease: "power2.out" }, 3.45);
+    tl.to("#g7-q5", { scale: 1, duration: 0.2, ease: "power2.in" }, 3.57);
+
+    /* ================= Scene 2 (4.0-8.5) · the card swap, the frozen number ================= */
+    tl.to("#g7-q", { opacity: 0.45, duration: 0.5, ease: "power2.inOut" }, 4.05);
+
+    /* hard-cut swap: target map -> training-set mean (zoom-through at card scale) */
+    tl.to("#g7-cwA", { scale: 1.14, filter: "blur(12px)", ease: "power3.in", duration: 0.18 }, 4.2);
+    tl.to("#g7-cwA", { opacity: 0.12, ease: "none", duration: 0.16 }, 4.22);
+    tl.set("#g7-cwA", { opacity: 0 }, 4.39);
+    tl.fromTo("#g7-cwB",
+      { opacity: 0.12, scale: 0.86, filter: "blur(12px)" },
+      { opacity: 1, scale: 1, filter: "blur(0px)", duration: 0.5, ease: "expo.out", immediateRender: false }, 4.39);
+
+    /* the number does NOT move — only a note and an evidence box arrive */
+    tl.fromTo("#g7-snote", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 5.8);
+    tl.to("#g7-flat", { strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut" }, 5.85);
+    tl.to("#g7-sboxr", { strokeDashoffset: 0, duration: 0.55, ease: "power2.inOut" }, 7.3);
+
+    /* seam 2->3 · cut-the-curve downward (outgoing falls, cards drop in same direction) */
+    tl.to("#g7-q", { y: 180, opacity: 0, ease: "power3.in", duration: 0.3 }, 8.45);
+    tl.to("#g7-rig", { y: 190, opacity: 0, ease: "power3.in", duration: 0.3 }, 8.55);
+
+    /* ================= Scene 3 (8.5-17.9) · four rounds, four stamps ================= */
+    tl.fromTo("#g7-s3head", { opacity: 0, y: -60 }, { opacity: 1, y: 0, duration: 0.45, ease: "power3.out" }, 8.65);
+
+    var cards = ["#g7-g1", "#g7-g2", "#g7-g3", "#g7-g4"];
+    var stamps = ["#g7-st1", "#g7-st2", "#g7-st3", "#g7-st4"];
+    var land = [8.95, 10.45, 11.95, 13.45];
+    cards.forEach(function (c, i) {
+      tl.fromTo(c,
+        { opacity: 0, y: -190 },
+        { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, land[i]);
+      /* press-release stamp on landing */
+      var st = stamps[i];
+      tl.fromTo(st,
+        { opacity: 0, scale: 2.2, rotation: -16 },
+        { opacity: 0.95, scale: 1, rotation: -8, duration: 0.26, ease: "power4.in" }, land[i] + 0.35);
+      tl.to(st, { scale: 1.09, duration: 0.07, ease: "power2.out" }, land[i] + 0.61);
+      tl.to(st, { scale: 1, duration: 0.12, ease: "power2.in" }, land[i] + 0.68);
+    });
+
+    /* VO: 四轮实验全部… — the four stamps re-press in a drumroll */
+    stamps.forEach(function (st, i) {
+      tl.to(st, { scale: 1.16, duration: 0.1, ease: "power2.out" }, 15.4 + i * 0.12);
+      tl.to(st, { scale: 1, duration: 0.16, ease: "power2.in" }, 15.5 + i * 0.12);
+    });
+    tl.fromTo("#g7-verdict",
+      { opacity: 0, scale: 0.7 },
+      { opacity: 1, scale: 1, duration: 0.45, ease: "back.out(1.7)" }, 16.6);
+
+    /* ================= Scene 4 (17.9-24.1) · one-line diagnosis ================= */
+    /* scene 3 cards + header + verdict fully exit BEFORE scene 4 text arrives:
+       17.4-17.9, done before #g7-w1 shows. autoAlpha => opacity 0 + visibility:hidden,
+       so scene-3 bounding boxes no longer intersect scene-4 ones at any sample time. */
+    tl.to("#g7-s3grp", { autoAlpha: 0, y: -46, scale: 0.96, duration: 0.5, ease: "power2.inOut" }, 17.4);
+
+    tl.fromTo("#g7-panel",
+      { opacity: 0, scale: 0.965 },
+      { opacity: 1, scale: 1, duration: 0.55, ease: "power3.out" }, 18.5);
+    tl.fromTo("#g7-s4lock", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 18.75);
+
+    /* per-word staggered reveal of the conclusion (VO: 模型没有真正利用目标图的信息) */
+    var words = ["#g7-w1", "#g7-w2", "#g7-w3", "#g7-w4", "#g7-w5", "#g7-w6"];
+    words.forEach(function (w, i) {
+      tl.fromTo(w,
+        { opacity: 0, y: 42, filter: "blur(9px)" },
+        { opacity: 1, y: 0, filter: "blur(0px)", duration: 0.55, ease: "power3.out" }, 19.6 + i * 0.26);
+    });
+    /* accent: the target map returns as the accused — box draws around 目标图 */
+    tl.to("#g7-wboxr", { strokeDashoffset: 0, duration: 0.5, ease: "power2.inOut" }, 22.5);
+    /* quiet settle, then hold to the end — no exit */
+    tl.fromTo("#g7-s4in", { scale: 1 }, { scale: 1.015, duration: 0.8, ease: "power1.out", immediateRender: false }, 23.2);
+  })();
+</script>
+</template>

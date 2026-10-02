@@ -1,0 +1,616 @@
+<template>
+<style>/*localfont-injected*/@font-face{font-family:'Noto Sans SC';src:local('Noto Sans SC');}@font-face{font-family:'Microsoft YaHei';src:local('Microsoft YaHei');}@font-face{font-family:'PingFang SC';src:local('PingFang SC');}@font-face{font-family:'Noto Serif SC';src:local('Noto Serif SC');}@font-face{font-family:'SimSun';src:local('SimSun');}@font-face{font-family:'Songti SC';src:local('Songti SC');}@font-face{font-family:'DM Mono';src:local('DM Mono');}@font-face{font-family:'Newsreader';src:local('Newsreader');}@font-face{font-family:'Hanken Grotesk';src:local('Hanken Grotesk');}
+  /* ============ Cobalt Grid — frame 06-local (本地重建：小策略网络 · 训练状态剧场) ============ */
+  #root {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    container-type: size;
+    font-family: "Noto Sans SC", "Microsoft YaHei", "PingFang SC", sans-serif;
+    color: #1F2BE0;
+  }
+  #root .clip {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+  /* ---------- track 0 · permanent graph-paper ground ---------- */
+  .loc6-bg {
+    background-color: #F0EBDE;
+    background-image:
+      linear-gradient(rgba(31, 43, 224, 0.10) 1.5px, transparent 1.5px),
+      linear-gradient(90deg, rgba(31, 43, 224, 0.10) 1.5px, transparent 1.5px);
+    background-size: 38.4px 38.4px;
+  }
+  /* ---------- track 1 · furniture ---------- */
+  .loc6-hair-top {
+    position: absolute;
+    left: 77px;
+    right: 77px;
+    top: 58px;
+    height: 2.5px;
+    background: #1F2BE0;
+    transform-origin: left center;
+  }
+  .loc6-hair-bottom {
+    position: absolute;
+    left: 77px;
+    right: 77px;
+    top: 870px; /* kept above the 83% caption keep-out (y <= 896) */
+    height: 2.5px;
+    background: #1F2BE0;
+    transform-origin: right center;
+  }
+  .loc6-page {
+    position: absolute;
+    right: 77px;
+    top: 18px;
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    color: #1F2BE0;
+    font-variant-numeric: tabular-nums;
+  }
+  /* ---------- track 2 · fixed header chrome ---------- */
+  .loc6-kick {
+    position: absolute;
+    left: 77px;
+    top: 86px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    color: #1F2BE0;
+  }
+  .loc6-kick::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #1F2BE0;
+    margin-right: 16px;
+  }
+  .loc6-badge {
+    position: absolute;
+    right: 77px;
+    top: 82px;
+    display: flex;
+    align-items: center;
+    padding: 10px 22px;
+    background: #E6E0CE;
+    border: 2px solid #1F2BE0;
+    font-family: "DM Mono", "Consolas", "Courier New", "Noto Sans SC", "Microsoft YaHei", monospace;
+    font-size: 24px;
+    letter-spacing: 0.06em;
+    color: #1F2BE0;
+    font-variant-numeric: tabular-nums;
+    white-space: nowrap;
+  }
+  /* ---------- type helpers ---------- */
+  .loc6-serif { font-family: "Noto Serif SC", "SimSun", "Songti SC", serif; font-weight: 400; }
+  .loc6-numfont {
+    font-family: "Newsreader", "Noto Serif SC", "SimSun", serif;
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+  }
+  .loc6-mono {
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  .loc6-micro {
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 15px;
+    letter-spacing: 0.2em;
+    color: #515CDB;
+  }
+  /* ---------- track 3 · the theater stage (one slow camera push lives here) ---------- */
+  .loc6-zoom {
+    position: absolute;
+    inset: 0;
+    transform-origin: 1450px 500px;
+  }
+  /* machine status band — the loader lockup */
+  .loc6-band {
+    position: absolute;
+    left: 650px;
+    top: 150px;
+    width: 620px;
+    height: 132px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    padding: 0 34px;
+    background: #E6E0CE;
+    border: 2.5px solid #1F2BE0;
+  }
+  .loc6-bandcol { display: flex; flex-direction: column; gap: 8px; }
+  .loc6-wordbox { position: relative; width: 158px; height: 50px; }
+  .loc6-word {
+    position: absolute;
+    left: 0;
+    top: 0;
+    font-size: 42px;
+    line-height: 50px;
+    letter-spacing: 0.06em;
+    color: #1F2BE0;
+    white-space: nowrap;
+  }
+  .loc6-divv { width: 2.5px; height: 68px; background: rgba(31, 43, 224, 0.3); }
+  .loc6-stepnum { font-size: 36px; letter-spacing: 0.05em; color: #1F2BE0; }
+  /* columns */
+  .loc6-chead {
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 18px;
+  }
+  .loc6-chead b { font-size: 26px; font-weight: 600; letter-spacing: 0.2em; }
+  .loc6-chead span { font-family: "DM Mono", "Consolas", "Courier New", monospace; font-size: 17px; letter-spacing: 0.14em; color: #515CDB; }
+  .loc6-coll { position: absolute; left: 77px; top: 348px; width: 606px; height: 320px; }
+  .loc6-colr { position: absolute; left: 960px; top: 348px; width: 883px; height: 300px; }
+  .loc6-row {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 112px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 0 26px;
+    background: #E6E0CE;
+    border: 2px solid rgba(31, 43, 224, 0.35);
+  }
+  .loc6-it1 { top: 58px; }
+  .loc6-it2 { top: 204px; }
+  .loc6-card {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 104px;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 0 26px;
+    background: #E6E0CE;
+    border: 2px solid rgba(31, 43, 224, 0.35);
+  }
+  .loc6-c1 { top: 58px; }
+  .loc6-c2 { top: 186px; }
+  .loc6-ncol { display: flex; flex-direction: column; gap: 6px; }
+  .loc6-nname { font-size: 30px; font-weight: 600; letter-spacing: 0.04em; color: #1F2BE0; white-space: nowrap; }
+  .loc6-nmeta { font-family: "DM Mono", "Consolas", "Courier New", monospace; font-size: 18px; letter-spacing: 0.1em; color: #515CDB; white-space: nowrap; }
+  .loc6-nmeta2 { font-size: 21px; letter-spacing: 0.06em; color: #515CDB; white-space: nowrap; font-variant-numeric: tabular-nums; }
+  /* sat2cap icon tile */
+  .loc6-icon {
+    flex: none;
+    width: 60px;
+    height: 60px;
+    border: 2.5px solid #1F2BE0;
+    display: block;
+  }
+  .loc6-tile {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 3px;
+    padding: 6px;
+    box-sizing: border-box;
+  }
+  .loc6-tc { background: rgba(31, 43, 224, 0.18); }
+  .loc6-tc-f { background: #1F2BE0; }
+  /* GRU icon svg */
+  .loc6-gru { width: 60px; height: 60px; flex: none; }
+  /* freeze stamp */
+  .loc6-stamp {
+    position: absolute;
+    right: 18px;
+    top: 29px;
+    padding: 6px 16px;
+    border: 3.5px solid #1F2BE0;
+    background: rgba(240, 235, 222, 0.85);
+    font-size: 26px;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    color: #1F2BE0;
+    white-space: nowrap;
+    opacity: 0;
+  }
+  /* live pulse dots */
+  .loc6-dots { display: flex; gap: 9px; margin-left: auto; }
+  .loc6-dot { width: 12px; height: 12px; background: #1F2BE0; opacity: 0.6; }
+  /* highlight outline drawn over item2 */
+  .loc6-hl {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: visible;
+  }
+  /* check slot (outline -> solid flip) */
+  .loc6-check { position: relative; flex: none; width: 44px; height: 44px; }
+  .loc6-check-big { width: 56px; height: 56px; }
+  .loc6-ck-out {
+    position: absolute;
+    inset: 0;
+    border: 2.5px solid #1F2BE0;
+    background: rgba(31, 43, 224, 0.06);
+  }
+  .loc6-ck-solid {
+    position: absolute;
+    inset: 0;
+    background: #1F2BE0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+  }
+  .loc6-ck-solid svg { width: 60%; height: 60%; }
+  /* plus badge on card2 */
+  .loc6-plus {
+    flex: none;
+    width: 44px;
+    height: 44px;
+    background: #1F2BE0;
+    color: #F0EBDE;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+  }
+  .loc6-chips { display: flex; gap: 12px; }
+  .loc6-chip {
+    padding: 5px 14px;
+    border: 2px solid #1F2BE0;
+    background: #F0EBDE;
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    color: #1F2BE0;
+    white-space: nowrap;
+  }
+  .loc6-val { margin-left: auto; font-size: 46px; letter-spacing: 0.02em; color: #1F2BE0; white-space: nowrap; }
+  /* ---------- the receipt / comparison strip (card 3) ---------- */
+  .loc6-strip {
+    position: absolute;
+    left: 77px;
+    top: 694px;
+    width: 1766px;
+    height: 152px;
+    display: flex;
+    align-items: center;
+    gap: 26px;
+    padding: 0 34px;
+    background: #E6E0CE;
+    border: 2.5px solid #1F2BE0;
+    box-sizing: border-box;
+  }
+  .loc6-smic { display: flex; flex-direction: column; gap: 8px; flex: none; }
+  .loc6-smic b { font-size: 24px; font-weight: 600; letter-spacing: 0.18em; white-space: nowrap; }
+  .loc6-smic span { font-family: "DM Mono", "Consolas", "Courier New", monospace; font-size: 17px; letter-spacing: 0.12em; color: #515CDB; white-space: nowrap; }
+  .loc6-echo { flex: none; font-size: 48px; letter-spacing: 0.02em; color: #1F2BE0; opacity: 0; white-space: nowrap; }
+  .loc6-arrow { flex: none; width: 130px; height: 44px; overflow: visible; }
+  .loc6-big {
+    flex: none;
+    min-width: 470px;
+    font-size: 148px;
+    line-height: 0.9;
+    letter-spacing: -0.015em;
+    color: #1F2BE0;
+    white-space: nowrap;
+  }
+  .loc6-badges { display: flex; flex-direction: column; gap: 12px; margin-left: auto; flex: none; }
+  .loc6-bd {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px 18px;
+    border: 2px solid #1F2BE0;
+    background: #F0EBDE;
+    font-size: 24px;
+    letter-spacing: 0.06em;
+    color: #1F2BE0;
+    white-space: nowrap;
+  }
+  .loc6-bd .loc6-mono { font-size: 26px; }
+  .loc6-bd-solid { background: #1F2BE0; color: #F0EBDE; }
+  .loc6-bd-solid .loc6-mono { color: #F0EBDE; }
+</style>
+
+<div data-hf-id="hf-e3oq" id="root" data-composition-id="06-local" data-start="0" data-duration="27.187" data-width="1920" data-height="1080">
+
+  <!-- track 0 · graph-paper ground -->
+  <div data-hf-id="hf-8xuz" class="clip loc6-bg" data-start="0" data-duration="27.187" data-track-index="0"></div>
+
+  <!-- track 1 · furniture -->
+  <div data-hf-id="hf-ux52" class="clip" data-start="0" data-duration="27.187" data-track-index="1">
+    <div data-hf-id="hf-8tu0" class="loc6-hair-top" id="loc6-hair-top"></div>
+    <div data-hf-id="hf-mfse" class="loc6-hair-bottom" id="loc6-hair-bottom"></div>
+    <div data-hf-id="hf-havq" class="loc6-page" id="loc6-page">06 / 10</div>
+  </div>
+
+  <!-- track 2 · header chrome (outside the camera push) -->
+  <div data-hf-id="hf-qz11" class="clip" data-start="0" data-duration="27.187" data-track-index="2">
+    <div data-hf-id="hf-zh93" class="loc6-kick" id="loc6-kick">本地重建 · 小策略网络</div>
+    <div data-hf-id="hf-ljr2" class="loc6-badge" id="loc6-badge">8GB 显存 · RTX 4060</div>
+  </div>
+
+  <!-- track 3 · training theater stage -->
+  <div data-hf-id="hf-nzrg" class="clip" data-start="0" data-duration="27.187" data-track-index="3">
+    <div data-hf-id="hf-24ci" class="loc6-zoom" id="loc6-zoom">
+
+      <!-- machine lockup: square spinner · status word · step counter -->
+      <div data-hf-id="hf-c1ha" class="loc6-band" id="loc6-band">
+        <svg data-hf-id="hf-z56y" width="84" height="84" viewBox="0 0 84 84" xmlns="http://www.w3.org/2000/svg">
+          <rect data-hf-id="hf-bs55" x="13" y="13" width="16" height="16" fill="rgba(31,43,224,0.16)" />
+          <rect data-hf-id="hf-5jer" x="55" y="13" width="16" height="16" fill="rgba(31,43,224,0.16)" />
+          <rect data-hf-id="hf-sup7" x="13" y="55" width="16" height="16" fill="rgba(31,43,224,0.16)" />
+          <rect data-hf-id="hf-e621" x="55" y="55" width="16" height="16" fill="rgba(31,43,224,0.16)" />
+          <rect data-hf-id="hf-cgu6" x="34" y="4" width="16" height="16" fill="rgba(31,43,224,0.16)" />
+          <rect data-hf-id="hf-53km" x="64" y="34" width="16" height="16" fill="rgba(31,43,224,0.16)" />
+          <rect data-hf-id="hf-kxbk" x="34" y="64" width="16" height="16" fill="rgba(31,43,224,0.16)" />
+          <rect data-hf-id="hf-hf3u" x="4" y="34" width="16" height="16" fill="rgba(31,43,224,0.16)" />
+          <g data-hf-id="hf-27b0" id="loc6-spin">
+            <rect data-hf-id="hf-kvyq" x="64" y="34" width="16" height="16" fill="#1F2BE0" />
+            <rect data-hf-id="hf-rkwu" x="55" y="13" width="16" height="16" fill="#1F2BE0" opacity="0.45" />
+          </g>
+        </svg>
+        <div data-hf-id="hf-hb6u" class="loc6-bandcol">
+          <span data-hf-id="hf-4mag" class="loc6-micro">STATUS</span>
+          <div data-hf-id="hf-b27w" class="loc6-wordbox">
+            <span data-hf-id="hf-ehew" class="loc6-word loc6-serif" id="loc6-w1">训练中</span>
+            <span data-hf-id="hf-e1tg" class="loc6-word loc6-serif" id="loc6-w2" style="opacity:0;">已完成</span>
+          </div>
+        </div>
+        <div data-hf-id="hf-uoz0" class="loc6-divv"></div>
+        <div data-hf-id="hf-uq96" class="loc6-bandcol">
+          <span data-hf-id="hf-yvl0" class="loc6-micro">STEP</span>
+          <span data-hf-id="hf-9qr9" class="loc6-stepnum loc6-mono" id="loc6-step">000000</span>
+        </div>
+      </div>
+
+      <!-- left · component checklist -->
+      <div data-hf-id="hf-venk" class="loc6-coll" id="loc6-coll">
+        <div data-hf-id="hf-g4kx" class="loc6-chead" id="loc6-lh"><b data-hf-id="hf-344h">组件清单</b><span data-hf-id="hf-dysd">COMPONENTS</span></div>
+
+        <div data-hf-id="hf-3onv" class="loc6-row loc6-it1" id="loc6-it1">
+          <div data-hf-id="hf-7kpe" class="loc6-icon" id="loc6-ic1">
+            <div data-hf-id="hf-gsd5" class="loc6-tile">
+              <i data-hf-id="hf-uda1" class="loc6-tc loc6-tc-f"></i><i data-hf-id="hf-quxi" class="loc6-tc"></i><i data-hf-id="hf-cjqy" class="loc6-tc"></i>
+              <i data-hf-id="hf-cy1z" class="loc6-tc"></i><i data-hf-id="hf-0nt9" class="loc6-tc loc6-tc-f"></i><i data-hf-id="hf-dcd0" class="loc6-tc"></i>
+              <i data-hf-id="hf-dqo1" class="loc6-tc"></i><i data-hf-id="hf-e4z2" class="loc6-tc"></i><i data-hf-id="hf-1uqc" class="loc6-tc loc6-tc-f"></i>
+            </div>
+          </div>
+          <div data-hf-id="hf-8kgh" class="loc6-ncol">
+            <span data-hf-id="hf-dbh0" class="loc6-nname" id="loc6-n1">Sat2Cap 编码器</span>
+            <span data-hf-id="hf-fjpw" class="loc6-nmeta">SATELLITE ENCODER</span>
+          </div>
+          <div data-hf-id="hf-0id4" class="loc6-stamp" id="loc6-stamp">冻结</div>
+        </div>
+
+        <div data-hf-id="hf-4fj3" class="loc6-row loc6-it2" id="loc6-it2">
+          <svg data-hf-id="hf-krup" class="loc6-gru" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+            <rect data-hf-id="hf-r9vq" x="7" y="20" width="13" height="13" fill="#1F2BE0" />
+            <rect data-hf-id="hf-5ih1" x="24" y="20" width="13" height="13" fill="rgba(31,43,224,0.18)" />
+            <rect data-hf-id="hf-5j3a" x="41" y="20" width="13" height="13" fill="#1F2BE0" />
+            <path data-hf-id="hf-qjt2" d="M 20 26.5 H 24 M 37 26.5 H 41" stroke="#1F2BE0" stroke-width="2.5" />
+            <path data-hf-id="hf-mg09" d="M 47.5 33 V 46 H 13.5 V 33" fill="none" stroke="#1F2BE0" stroke-width="2.5" />
+          </svg>
+          <div data-hf-id="hf-ca9x" class="loc6-ncol">
+            <span data-hf-id="hf-cwot" class="loc6-nname">策略网络</span>
+            <span data-hf-id="hf-0o7t" class="loc6-nmeta2">≈80万 参数 · GRU</span>
+          </div>
+          <div data-hf-id="hf-0fzd" class="loc6-dots">
+            <i data-hf-id="hf-wz1c" class="loc6-dot" id="loc6-d1"></i>
+            <i data-hf-id="hf-7uiz" class="loc6-dot" id="loc6-d2"></i>
+            <i data-hf-id="hf-3wey" class="loc6-dot" id="loc6-d3"></i>
+          </div>
+          <svg data-hf-id="hf-0z45" class="loc6-hl" viewBox="0 0 606 112" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
+            <rect data-hf-id="hf-8fb3" id="loc6-hlr" x="1.5" y="1.5" width="603" height="109" fill="none" stroke="#1F2BE0" stroke-width="3" />
+          </svg>
+        </div>
+      </div>
+
+      <!-- right · scorecard -->
+      <div data-hf-id="hf-59fw" class="loc6-colr" id="loc6-colr">
+        <div data-hf-id="hf-k6gf" class="loc6-chead" id="loc6-rh"><b data-hf-id="hf-iase">训练成绩</b><span data-hf-id="hf-vxjf">SCORECARD</span></div>
+
+        <div data-hf-id="hf-sifh" class="loc6-card loc6-c1" id="loc6-c1">
+          <div data-hf-id="hf-u2il" class="loc6-check" id="loc6-ck1">
+            <i data-hf-id="hf-g6q5" class="loc6-ck-out" id="loc6-ck1o"></i>
+            <div data-hf-id="hf-ttj6" class="loc6-ck-solid" id="loc6-ck1s">
+              <svg data-hf-id="hf-wgi3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path data-hf-id="hf-xvt7" id="loc6-ck1p" d="M5 12.5 L10.5 18 L19 7" fill="none" stroke="#F0EBDE" stroke-width="3.2" />
+              </svg>
+            </div>
+          </div>
+          <div data-hf-id="hf-dh70" class="loc6-ncol">
+            <span data-hf-id="hf-sq3i" class="loc6-nname">PBRS 奖励塑形</span>
+            <span data-hf-id="hf-biiv" class="loc6-nmeta">到达奖励修正</span>
+          </div>
+          <span data-hf-id="hf-w6g6" class="loc6-val loc6-mono" id="loc6-v1">0.00%</span>
+        </div>
+
+        <div data-hf-id="hf-gt3f" class="loc6-card loc6-c2" id="loc6-c2">
+          <div data-hf-id="hf-dq12" class="loc6-plus">+</div>
+          <div data-hf-id="hf-d2vz" class="loc6-ncol">
+            <span data-hf-id="hf-zile" class="loc6-nname">合法动作筛选</span>
+            <div data-hf-id="hf-j6um" class="loc6-chips">
+              <span data-hf-id="hf-8744" class="loc6-chip" id="loc6-ch1">禁越界</span>
+              <span data-hf-id="hf-mhyo" class="loc6-chip" id="loc6-ch2">无效动作</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- receipt strip: 44.33 -> 66.00, the final hold composition -->
+      <div data-hf-id="hf-q6sm" class="loc6-strip" id="loc6-strip">
+        <div data-hf-id="hf-botc" class="loc6-smic" id="loc6-smic">
+          <b data-hf-id="hf-tes3">平均成功率</b>
+          <span data-hf-id="hf-u9jq">AVG SUCCESS · 3 SEEDS</span>
+        </div>
+        <span data-hf-id="hf-8ks0" class="loc6-echo loc6-mono" id="loc6-echo">44.33%</span>
+        <svg data-hf-id="hf-kouk" class="loc6-arrow" viewBox="0 0 130 44" xmlns="http://www.w3.org/2000/svg">
+          <path data-hf-id="hf-uavm" id="loc6-arl" d="M4 22 H 110" fill="none" stroke="#1F2BE0" stroke-width="3" />
+          <path data-hf-id="hf-f93r" id="loc6-arh" d="M96 8 L110 22 L96 36" fill="none" stroke="#1F2BE0" stroke-width="3" />
+        </svg>
+        <span data-hf-id="hf-s9ws" class="loc6-big loc6-numfont" id="loc6-big">0.00%</span>
+        <div data-hf-id="hf-9dwu" class="loc6-check loc6-check-big" id="loc6-ck2">
+          <i data-hf-id="hf-f5gw" class="loc6-ck-out" id="loc6-ck2o"></i>
+          <div data-hf-id="hf-303v" class="loc6-ck-solid" id="loc6-ck2s">
+            <svg data-hf-id="hf-s357" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path data-hf-id="hf-kc06" id="loc6-ck2p" d="M5 12.5 L10.5 18 L19 7" fill="none" stroke="#F0EBDE" stroke-width="3.2" />
+            </svg>
+          </div>
+        </div>
+        <div data-hf-id="hf-eu3p" class="loc6-badges">
+          <div data-hf-id="hf-f61x" class="loc6-bd" id="loc6-b1"><span data-hf-id="hf-l9ga" class="loc6-mono">3/3</span><span data-hf-id="hf-i6wp">种子提升</span></div>
+          <div data-hf-id="hf-9qvh" class="loc6-bd loc6-bd-solid" id="loc6-b2"><span data-hf-id="hf-0dds">越界率</span><span data-hf-id="hf-j1gp" class="loc6-mono">0</span></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script>
+  (function () {
+    var tl = gsap.timeline({ paused: true });
+    window.__timelines = window.__timelines || {};
+    window.__timelines["06-local"] = tl;
+
+    /* ---------- furniture ---------- */
+    tl.fromTo("#loc6-hair-top", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.inOut" }, 0.08);
+    tl.fromTo("#loc6-hair-bottom", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.inOut" }, 0.22);
+    tl.fromTo("#loc6-page", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 0.4);
+    tl.fromTo("#loc6-kick", { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.35);
+
+    /* ================= Scene 1 (0.0-4.8) · the machine starts ================= */
+    /* central status band spring-pop, status word slams in, spinner + counter live */
+    tl.fromTo("#loc6-band",
+      { opacity: 0, y: -26, scale: 0.92 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: "back.out(1.3)" }, 0.4);
+    tl.fromTo("#loc6-w1", { opacity: 0, scale: 1.45 }, { opacity: 1, scale: 1, duration: 0.4, ease: "power4.out" }, 0.85);
+    tl.fromTo("#loc6-badge", { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(1.8)" }, 1.4);
+
+    /* step counter ticks for the whole working window (1.05 -> 25.4), pure fn of t */
+    var stepEl = document.getElementById("loc6-step");
+    var sv = { v: 0 };
+    tl.to(sv, {
+      v: 131072, duration: 24.35, ease: "none",
+      onUpdate: function () { stepEl.textContent = String(Math.floor(sv.v)).padStart(6, "0"); }
+    }, 1.05);
+    /* square spinner: internal SVG group rotates, finite, dies at the resolve */
+    tl.to("#loc6-spin", { rotation: 2730, duration: 24.35, ease: "none", svgOrigin: "42 42" }, 1.05);
+
+    /* ================= Scene 2 (4.8-10.4) · component checklist ================= */
+    tl.fromTo("#loc6-lh", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 5.0);
+    tl.fromTo("#loc6-it1", { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 5.5);
+    /* freeze: icon grays, name dims, 冻结 stamp slams down */
+    tl.fromTo("#loc6-ic1", { opacity: 1 }, { opacity: 0.35, duration: 0.4, ease: "power2.inOut" }, 6.4);
+    tl.fromTo("#loc6-n1", { opacity: 1 }, { opacity: 0.62, duration: 0.4, ease: "power2.inOut" }, 6.4);
+    tl.fromTo("#loc6-stamp",
+      { scale: 2.1, opacity: 0, rotation: -18 },
+      { scale: 1, opacity: 0.95, rotation: -8, duration: 0.3, ease: "power4.in" }, 6.5);
+    tl.fromTo("#loc6-stamp", { scale: 1 }, { scale: 1.07, duration: 0.09, ease: "power2.out" }, 6.82);
+    tl.fromTo("#loc6-stamp", { scale: 1.07 }, { scale: 1, duration: 0.14, ease: "power2.in" }, 6.91);
+
+    /* small policy net lands, highlight outline self-draws, live pulse dots */
+    tl.fromTo("#loc6-it2", { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: 0.5, ease: "power3.out" }, 7.8);
+    var hlr = document.getElementById("loc6-hlr");
+    var HL = hlr.getTotalLength ? hlr.getTotalLength() : 2 * (603 + 109);
+    hlr.style.strokeDasharray = HL;
+    hlr.style.strokeDashoffset = HL;
+    tl.to("#loc6-hlr", { strokeDashoffset: 0, duration: 0.7, ease: "power2.inOut" }, 8.6);
+    var dots = [document.getElementById("loc6-d1"), document.getElementById("loc6-d2"), document.getElementById("loc6-d3")];
+    var dv = { v: 0 };
+    tl.to(dv, {
+      v: 16.6, duration: 16.6, ease: "none",
+      onUpdate: function () {
+        var e = dv.v;
+        var blend = Math.min(1, Math.max(0, (e - 15.9) / 0.7)); /* settles to full at the resolve */
+        for (var i = 0; i < 3; i++) {
+          var w = 0.5 + 0.5 * Math.sin(e * 4.4 - i * 1.05);
+          var op = 0.35 + 0.65 * w;
+          dots[i].style.opacity = (op + (1 - op) * blend).toFixed(3);
+        }
+      }
+    }, 8.8);
+
+    /* ================= Scene 3 (10.4-26.7) · scorecard check-off =================
+       one camera move: slow steady push toward the score zone (10.4 -> 26.2) */
+    tl.fromTo("#loc6-zoom", { scale: 1 }, { scale: 1.045, duration: 15.8, ease: "none" }, 10.4);
+
+    tl.fromTo("#loc6-rh", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 10.9);
+
+    /* card 1 · PBRS reward shaping -> 44.33% */
+    tl.fromTo("#loc6-c1", { opacity: 0, y: -44 }, { opacity: 1, y: 0, duration: 0.55, ease: "back.out(1.2)" }, 13.2);
+    var v1El = document.getElementById("loc6-v1");
+    var c1v = { v: 0 };
+    tl.to(c1v, {
+      v: 44.33, duration: 1.7, ease: "power2.out",
+      onUpdate: function () { v1El.textContent = c1v.v.toFixed(2) + "%"; }
+    }, 15.3);
+    tl.fromTo("#loc6-ck1o", { opacity: 1 }, { opacity: 0, duration: 0.2, ease: "power1.out" }, 17.3);
+    tl.fromTo("#loc6-ck1s", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 17.3);
+    var p1 = document.getElementById("loc6-ck1p");
+    var P1 = p1.getTotalLength() * 1.02;
+    p1.style.strokeDasharray = P1;
+    p1.style.strokeDashoffset = P1;
+    tl.to("#loc6-ck1p", { strokeDashoffset: 0, duration: 0.3, ease: "power2.out" }, 17.42);
+
+    /* card 2 · legal-action filter slides in with its two chips */
+    tl.fromTo("#loc6-c2", { opacity: 0, x: -70 }, { opacity: 1, x: 0, duration: 0.55, ease: "power3.out" }, 17.45);
+    tl.fromTo("#loc6-ch1", { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }, 19.5);
+    tl.fromTo("#loc6-ch2", { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.4, ease: "back.out(1.8)" }, 19.95);
+
+    /* receipt strip builds: 44.33 -> 66.00 at 3:1 hierarchy + badges */
+    tl.fromTo("#loc6-strip", { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: 0.55, ease: "power3.out" }, 21.2);
+    tl.fromTo("#loc6-smic", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 21.4);
+    tl.fromTo("#loc6-echo", { opacity: 0 }, { opacity: 0.55, duration: 0.45, ease: "power1.out" }, 21.55);
+    tl.fromTo("#loc6-b1", { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(1.9)" }, 21.9);
+    var arl = document.getElementById("loc6-arl");
+    var AL = arl.getTotalLength() * 1.02;
+    arl.style.strokeDasharray = AL;
+    arl.style.strokeDashoffset = AL;
+    tl.to("#loc6-arl", { strokeDashoffset: 0, duration: 0.45, ease: "power2.inOut" }, 22.6);
+    tl.fromTo("#loc6-arh",
+      { opacity: 0, scale: 0.4, transformOrigin: "100% 50%" },
+      { opacity: 1, scale: 1, duration: 0.3, ease: "back.out(2)" }, 22.85);
+    var bigEl = document.getElementById("loc6-big");
+    var c3 = { v: 0 };
+    tl.to(c3, {
+      v: 66, duration: 1.75, ease: "power1.out",
+      onUpdate: function () { bigEl.textContent = c3.v.toFixed(2) + "%"; }
+    }, 23.6);
+
+    /* spotlight: everything above the receipt dims as the final figure counts up */
+    tl.fromTo("#loc6-band", { opacity: 1 }, { opacity: 0.45, duration: 0.8, ease: "power2.inOut", immediateRender: false }, 23.8);
+    tl.fromTo("#loc6-coll", { opacity: 1 }, { opacity: 0.45, duration: 0.8, ease: "power2.inOut", immediateRender: false }, 23.8);
+    tl.fromTo("#loc6-rh", { opacity: 1 }, { opacity: 0.45, duration: 0.8, ease: "power2.inOut", immediateRender: false }, 23.8);
+    tl.fromTo("#loc6-c1", { opacity: 1 }, { opacity: 0.45, duration: 0.8, ease: "power2.inOut", immediateRender: false }, 23.8);
+    tl.fromTo("#loc6-c2", { opacity: 1 }, { opacity: 0.45, duration: 0.8, ease: "power2.inOut", immediateRender: false }, 23.8);
+
+    /* resolve: 66.00 checks off, machine rests, second badge pops */
+    tl.fromTo("#loc6-ck2o", { opacity: 1 }, { opacity: 0, duration: 0.2, ease: "power1.out" }, 25.45);
+    tl.fromTo("#loc6-ck2s", { opacity: 0, scale: 0.5 }, { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)" }, 25.45);
+    var p2 = document.getElementById("loc6-ck2p");
+    var P2 = p2.getTotalLength() * 1.02;
+    p2.style.strokeDasharray = P2;
+    p2.style.strokeDashoffset = P2;
+    tl.to("#loc6-ck2p", { strokeDashoffset: 0, duration: 0.3, ease: "power2.out" }, 25.57);
+    tl.fromTo("#loc6-w1", { opacity: 1, y: 0 }, { opacity: 0, y: -14, duration: 0.3, ease: "power2.in", immediateRender: false }, 25.5);
+    tl.fromTo("#loc6-w2", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.35, ease: "power2.out" }, 25.52);
+    tl.fromTo("#loc6-spin", { opacity: 1 }, { opacity: 0.3, duration: 0.4, ease: "power1.out", immediateRender: false }, 25.5);
+    tl.fromTo("#loc6-b2", { scale: 0.7, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(1.9)" }, 25.75);
+    tl.fromTo("#loc6-big", { scale: 1 }, { scale: 1.04, duration: 0.5, ease: "power1.out", transformOrigin: "left center" }, 25.9);
+
+    /* hold to end — the receipt is the last image, no exit */
+  })();
+</script>
+</template>

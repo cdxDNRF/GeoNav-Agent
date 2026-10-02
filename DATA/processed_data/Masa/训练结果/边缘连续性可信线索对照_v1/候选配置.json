@@ -1,0 +1,80 @@
+{
+  "version": "edge-cue-candidate-v1",
+  "status": "audited_observational_candidate",
+  "active_default": false,
+  "formal_S2_passed": false,
+  "scope": "Known dev140/28 sources under contiguous same-image 300x300 crop protocol; not independent confirmation",
+  "architecture": "EdgeTargetCueHead",
+  "head_parameters": 136837,
+  "heads": [
+    {
+      "seed": 0,
+      "head_path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s0/head.pt",
+      "head_sha256": "2c2e4167b14a9a439b81efd78e80436ffde75d35d5c6d75274c3d60ecaa59b2c",
+      "explorer": {
+        "sha256": "b35b0f87865530e8965e561eeda450c481af9d87ba5ab0dcfb9a4932bf4179bd",
+        "source": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/Small256_NoTarget_s0/model.pt"
+      },
+      "threshold": 0.5
+    },
+    {
+      "seed": 1,
+      "head_path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s1/head.pt",
+      "head_sha256": "f37734c1d19b38a99b7d589eac004a801d1571ae46df55cbf8161d97ea3bbb53",
+      "explorer": {
+        "sha256": "d734ab8d9e755e697e7dd1cc8f8eb8b4055aae1780e1fc16d27749eab3115dfa",
+        "source": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/Small256_NoTarget_s1/model.pt"
+      },
+      "threshold": 0.5
+    },
+    {
+      "seed": 2,
+      "head_path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s2/head.pt",
+      "head_sha256": "045984f575be3e660f04c7237fc65a515abf6d2f1a0d660adb93a4e812925a53",
+      "explorer": {
+        "sha256": "8ca13f1829f35f2e18dd002c6f661129ccaaa2e11fc1bd72d8751819d14b999b",
+        "source": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/Small256_NoTarget_s2/model.pt"
+      },
+      "threshold": 0.5
+    }
+  ],
+  "means": {
+    "全局拟合均值.npy": {
+      "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/全局拟合均值.npy",
+      "sha256": "3bb5233fc6fbef7eece51ee78979b37dfaadfcb98d310e6f1b5de7b3d25a8158"
+    },
+    "头部拟合全局均值.npy": {
+      "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/头部拟合全局均值.npy",
+      "sha256": "3e1fb063c11ffef2c130f93f3288d3eb38ff219a21d7cfa9c3759f8623cc2cbd"
+    },
+    "头部拟合局部均值.npy": {
+      "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/头部拟合局部均值.npy",
+      "sha256": "5423d400987f35117d3835ab8ea9daf2153cdef03ab85ba6b6b0eda6f705978d"
+    },
+    "头部拟合边缘均值.npy": {
+      "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/头部拟合边缘均值.npy",
+      "sha256": "367e7499bfc6c5e71992042fac74507c5bcab9cd4de84f1f7482a35a2ab1ee62"
+    }
+  },
+  "reference_seed": 0,
+  "ensemble": false,
+  "protocol": {
+    "grid_size": 5,
+    "budget": 10,
+    "decode": "argmax",
+    "profile_widths": [
+      1,
+      4,
+      8
+    ],
+    "profile_bins": 64,
+    "raw_joint_probability": true,
+    "legal_and_unvisited_top_cue_only": true
+  },
+  "evidence": {
+    "audit_path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/独立复核.json",
+    "audit_sha256": "80f6c324df798b3b263dbf63d525d750316c770fa79f498266c3d71450cd72aa",
+    "registration_sha256": "b534d8a27cf7c795fc7fe5d2d947952c3e93b26a7e3950845b64bf5a4d7540ca"
+  },
+  "use": "Source manifest for a future frozen confirmation runner; current default is unchanged and this file is not auto-loaded"
+}

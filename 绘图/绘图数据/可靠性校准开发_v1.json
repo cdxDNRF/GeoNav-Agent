@@ -1,0 +1,65 @@
+{
+  "mode": "development",
+  "source_sha256": {
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/对照汇总.json": "5dafdb21a8dc29d75a4216fe6ea02f6a0f768d5975955c2c39fa87b84e7780e3",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/独立复核.json": "19943c92d0cc55527c3dc686c061b273949a08de9e84e85395c6c993615dc416",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/验收结论.json": "88d914b0b8982ecd59e9ab621b9e2a683cab5aa3a9b77826388d1df0dcf92410",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/预登记.json": "8644c0afa6d998af71f8e101e21054e61077d42ee0ce25619c2b737cce35a3d3",
+    "DATA/processed_data/Masa/评测结果/候选可靠性离线校准_v1/阈值冻结结束.json": "3eb5c08d029c6368d9d8173ea7477243f2922d3ac1db8b14778c07a3edda1556",
+    "DATA/processed_data/Masa/评测结果/候选可靠性离线校准_v1/独立复核.json": "bb0f27c08b4a6eaf18f7124e64cb76890cc176e085392b3d0e948bd186b65dbb",
+    "DATA/processed_data/Masa/评测结果/候选可靠性离线校准_v1/验收结论.json": "6d5e2bc4d2f32aefb109c2ddd3bfdf07e0739b194b2c3ba08fea4fb0d239fbaa",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/接受与失败诊断.json": "b5760935424db8b4d0c5bcbdb6969ac57431512c8d5e1ec2272b01389d1da1e6"
+  },
+  "script_sha256": "a229bae5bbf4fe308e66a7d367a72de869a69b850727db7e3c4beb170207ccad",
+  "style_helper_sha256": "6eeefaa84f1ce6a7e8701f2c725c45e055e8f0ff2460b27d0d0041e96777deab",
+  "report_sha256": "ba59d550ea1b9f33d9949195d303b1cbea9b364573b6f4b0e8ca7495cca0604d",
+  "figures": [
+    {
+      "id": "21_可靠性校准开发成功率与距离",
+      "caption": "只校准接受门槛后，本批干净/旋转题SR为86.19%，原干净为88.57%、未校准四方向为88.81%。每权重阈值仅由原22头部校准源图选择，模型、候选搜索、探索器及预算不变；无可用阈值时全弃权，不称视觉改善。Masa已知开发28图/140题×3；5×5/B10；白色标记：三权重，非CI。 SR为成功比例，SG为全部终点距离均值（图示两位小数，精确值见报告）；是否放行还检查干净保护、目标收益和区间。",
+      "protocol": "Masa已知开发28图/140题×3；5×5/B10；白色标记：三权重，非CI。",
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/对照汇总.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/21_可靠性校准开发成功率与距离.pdf",
+          "sha256": "420ab66a3897e07ac4406c44c0524cd052832c537bdd711a81429d0097092f4d"
+        },
+        {
+          "path": "绘图/数据结果图/21_可靠性校准开发成功率与距离.svg",
+          "sha256": "d234f670fc84cfb84df0e48cb44c5dbcc50df4039ec004564c13e4208b7d8949"
+        },
+        {
+          "path": "绘图/数据结果图/21_可靠性校准开发成功率与距离.png",
+          "sha256": "c61cf647b131b3a3741e593cd5659a6d36ad0ab61d1d9e7c1b012e94edc7426c"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_candidate_calibration.py"
+    },
+    {
+      "id": "22_可靠性校准开发配对收益与保护",
+      "caption": "离线校准的接受精度不能替代在线SR与干净保护。每源文件先平均三权重配对差，再2000次seed3031成组bootstrap，图示为逐项95%区间，不声称五项同时覆盖；第五项直接隔离阈值调整的导航改变量。橙短线为事前固定工程尺度，完整判定还包含SG、种子一致性和全量复核。",
+      "protocol": "Masa已知开发28图/140题×3；5×5/B10；白色标记：三权重，非CI。",
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/对照汇总.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/22_可靠性校准开发配对收益与保护.pdf",
+          "sha256": "0e0ab757ae7b3f298056225deb9465a16934378820af109a61aa13cbdf85c44a"
+        },
+        {
+          "path": "绘图/数据结果图/22_可靠性校准开发配对收益与保护.svg",
+          "sha256": "0ca7244fcde4ac6b4135196968e8058fdbeda126382b351ed7d2f6b83f4790eb"
+        },
+        {
+          "path": "绘图/数据结果图/22_可靠性校准开发配对收益与保护.png",
+          "sha256": "b100db14f7915c055d6ca24289076c135c5b11a39fe30857ec80ddb14715033a"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_candidate_calibration.py"
+    }
+  ],
+  "draft_visual_reflow": "SG labels rounded2 decimals to prevent horizontal overlap; all seed points included; audited data unchanged"
+}

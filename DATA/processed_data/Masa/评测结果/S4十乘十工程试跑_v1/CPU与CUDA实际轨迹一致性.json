@@ -1,0 +1,121 @@
+{
+  "CPU_policy_device": "cpu",
+  "CUDA_reference_device": "cuda",
+  "actions": 5491,
+  "episodes": 300,
+  "max_abs_logits_difference": 1.9073486328125e-06,
+  "max_abs_probability_difference": 4.172325134277344e-07,
+  "pilot_registration_sha256": "150e6fddbb26e2183922dbb190116b504b1c676a1b62cf11684da2348b4a4971",
+  "proof": [
+    {
+      "all_actions_gates_inputs_and_terminal_metrics_equal": true,
+      "arm": "Edge",
+      "condition": "Baseline",
+      "episodes": 20,
+      "seed": 0
+    },
+    {
+      "all_actions_gates_inputs_and_terminal_metrics_equal": true,
+      "arm": "Edge",
+      "condition": "CueFull",
+      "episodes": 20,
+      "seed": 0
+    },
+    {
+      "all_actions_gates_inputs_and_terminal_metrics_equal": true,
+      "arm": "Edge",
+      "condition": "CueMean",
+      "episodes": 20,
+      "seed": 0
+    },
+    {
+      "all_actions_gates_inputs_and_terminal_metrics_equal": true,
+      "arm": "Edge",
+      "condition": "CueWrong",
+      "episodes": 20,
+      "seed": 0
+    },
+    {
+      "all_actions_gates_inputs_and_terminal_metrics_equal": true,
+      "arm": "Edge",
+      "condition": "Baseline",
+      "episodes": 20,
+      "seed": 1
+    },
+    {
+      "all_actions_gates_inputs_and_terminal_metrics_equal": true,
+      "arm": "Edge",
+      "condition": "CueFull",
+      "episodes": 20,
+      "seed": 1
+    },
+    {
+      "all_actions_gates_inputs_and_terminal_metrics_equal": true,
+      "arm": "Edge",
+      "condition": "CueMean",
+      "episodes": 20,
+      "seed": 1
+    },
+    {
+      "all_actions_gates_inputs_and_terminal_metrics_equal": true,
+      "arm": "Edge",
+      "condition": "CueWrong",
+      "episodes": 20,
+      "seed": 1
+    },
+    {
+      "all_actions_gates_inputs_and_terminal_metrics_equal": true,
+      "arm": "Edge",
+      "condition": "Baseline",
+      "episodes": 20,
+      "seed": 2
+    },
+    {
+      "all_actions_gates_inputs_and_terminal_metrics_equal": true,
+      "arm": "Edge",
+      "condition": "CueFull",
+      "episodes": 20,
+      "seed": 2
+    },
+    {
+      "all_actions_gates_inputs_and_terminal_metrics_equal": true,
+      "arm": "Edge",
+      "condition": "CueMean",
+      "episodes": 20,
+      "seed": 2
+    },
+    {
+      "all_actions_gates_inputs_and_terminal_metrics_equal": true,
+      "arm": "Edge",
+      "condition": "CueWrong",
+      "episodes": 20,
+      "seed": 2
+    },
+    {
+      "all_actions_gates_inputs_and_terminal_metrics_equal": true,
+      "arm": "ZeroEdge",
+      "condition": "CueFull",
+      "episodes": 20,
+      "seed": 0
+    },
+    {
+      "all_actions_gates_inputs_and_terminal_metrics_equal": true,
+      "arm": "ZeroEdge",
+      "condition": "CueFull",
+      "episodes": 20,
+      "seed": 1
+    },
+    {
+      "all_actions_gates_inputs_and_terminal_metrics_equal": true,
+      "arm": "ZeroEdge",
+      "condition": "CueFull",
+      "episodes": 20,
+      "seed": 2
+    }
+  ],
+  "scope": "Existing20 engineering tasks only; runtime equivalence, not new SR evidence.",
+  "script_sha256": "aff55401cf4cbb4d92ea9aa4ecdcafc81590de86ac682dfef73ed84f187184d6",
+  "seconds": 93.33722650000709,
+  "status": "passed",
+  "trajectories_public_feature_hashes_gate_reasons_and_outcomes_equal": true
+}

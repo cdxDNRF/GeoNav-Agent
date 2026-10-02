@@ -1,0 +1,32 @@
+{
+  "audit_sha256": "74ad30fffdf433f436876e90d0adfe313ca735f7699292666c1c7346ccfc0dd8",
+  "figures": [
+    {
+      "caption": "公开新格动作保护单因素开发验证：原策略M0 SR77.13%/SG1.201，M1 78.40%/1.110，P 77.07%/1.199。保护因素未通过升级条件，收束该因素，默认保持。相同500题、20已见源文件、三冻结权重、10×10/B20；P新执行1500轨迹，旧M0/M1按已审计SHA复用。权重标记不是CI，SG为所有终局的曼哈顿距离；不代表独立新图确认。",
+      "files": [
+        {
+          "path": "绘图/数据结果图/31_账本探索保护规则成功率与距离.pdf",
+          "sha256": "7009345b4b886db9f715e8242b71cc83f59d60560cbfd94c72bb4c0667bdf294"
+        },
+        {
+          "path": "绘图/数据结果图/31_账本探索保护规则成功率与距离.svg",
+          "sha256": "93a1c2553a71cbc222eaac547dcb576236db0852887b3ce7e23c4739c67fd3d0"
+        },
+        {
+          "path": "绘图/数据结果图/31_账本探索保护规则成功率与距离.png",
+          "sha256": "c712f326e5cce6efe9c3436515d689841cf881a60333bec42e31664aff86dcf0"
+        }
+      ],
+      "id": "31_账本探索保护规则成功率与距离",
+      "protocol": "known-source protection development,500tasks/20sources/3frozen weights",
+      "reproduction_script": "project/src/documents/summarize_ledger_protection.py",
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1/主对照/对照汇总.json",
+        "DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1/独立复核.json"
+      ]
+    }
+  ],
+  "min_font_pt": 9,
+  "recommended_width_cm": 18,
+  "summary_sha256": "54090b296520927f3606bc0347b18e5dedae16c278a98ee09fa77fe7e231f883"
+}

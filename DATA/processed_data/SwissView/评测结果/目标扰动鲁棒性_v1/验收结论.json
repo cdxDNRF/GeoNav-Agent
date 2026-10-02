@@ -1,0 +1,65 @@
+{
+  "all_six_fixed_stresses_retained": false,
+  "audit_sha256": "f878fa01dd02cde5eb9f415a2c363ec1df0acf57f11d9c5b4b931ae3cf86275c",
+  "cloud_calls": 0,
+  "conditions": {
+    "Blur1": {
+      "SR_gain_CI95_positive": true,
+      "performance_retained": true,
+      "six_stress_adjusted_SR_positive": true,
+      "target_gain_retained": true
+    },
+    "Bright080": {
+      "SR_gain_CI95_positive": true,
+      "performance_retained": true,
+      "six_stress_adjusted_SR_positive": true,
+      "target_gain_retained": true
+    },
+    "Clean": {
+      "SR_gain_CI95_positive": true,
+      "performance_retained": true,
+      "six_stress_adjusted_SR_positive": null,
+      "target_gain_retained": true
+    },
+    "Crop8": {
+      "SR_gain_CI95_positive": true,
+      "performance_retained": false,
+      "six_stress_adjusted_SR_positive": true,
+      "target_gain_retained": false
+    },
+    "JPEG25": {
+      "SR_gain_CI95_positive": true,
+      "performance_retained": true,
+      "six_stress_adjusted_SR_positive": true,
+      "target_gain_retained": true
+    },
+    "Ring8": {
+      "SR_gain_CI95_positive": false,
+      "performance_retained": false,
+      "six_stress_adjusted_SR_positive": false,
+      "target_gain_retained": false
+    },
+    "Rot90CW": {
+      "SR_gain_CI95_positive": false,
+      "performance_retained": false,
+      "six_stress_adjusted_SR_positive": false,
+      "target_gain_retained": false
+    }
+  },
+  "default_changed": false,
+  "geographic_or_temporal_or_cross_view_generalization_claimed": false,
+  "new_unseen_source_files": 0,
+  "parent_clean_formal_pass_remains_unchanged": true,
+  "planned_tasks_each": 500,
+  "quality_and_replay_passed": true,
+  "robustness_confirmation_complete": true,
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "source_count": 20,
+  "status": "completed_and_audited",
+  "summary_sha256": "50f65cc2774b4900022b6c55b3ff7db4248b90b0dddc844e86a2172cbd33d3d6",
+  "training_steps": 0
+}

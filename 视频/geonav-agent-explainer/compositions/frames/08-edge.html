@@ -1,0 +1,740 @@
+<template>
+<style>/*localfont-injected*/@font-face{font-family:'Noto Sans SC';src:local('Noto Sans SC');}@font-face{font-family:'Microsoft YaHei';src:local('Microsoft YaHei');}@font-face{font-family:'PingFang SC';src:local('PingFang SC');}@font-face{font-family:'Noto Serif SC';src:local('Noto Serif SC');}@font-face{font-family:'SimSun';src:local('SimSun');}@font-face{font-family:'Songti SC';src:local('Songti SC');}@font-face{font-family:'DM Mono';src:local('DM Mono');}@font-face{font-family:'Newsreader';src:local('Newsreader');}@font-face{font-family:'Hanken Grotesk';src:local('Hanken Grotesk');}
+  /* ============ Cobalt Grid — frame 08-edge (边缘突破：接缝里的证据) ============ */
+  #root {
+    position: relative;
+    width: 1920px;
+    height: 1080px;
+    overflow: hidden;
+    container-type: size;
+    font-family: "Noto Sans SC", "Microsoft YaHei", sans-serif;
+    color: #1F2BE0;
+  }
+  #root .clip {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+  }
+  /* ---------- track 0 · permanent graph-paper ground ---------- */
+  .ed8-bg {
+    background-color: #F0EBDE;
+    background-image:
+      linear-gradient(rgba(31, 43, 224, 0.10) 1.5px, transparent 1.5px),
+      linear-gradient(90deg, rgba(31, 43, 224, 0.10) 1.5px, transparent 1.5px);
+    background-size: 38.4px 38.4px;
+  }
+  /* ---------- track 1 · furniture ---------- */
+  .ed8-hair-t {
+    position: absolute;
+    left: 77px;
+    right: 77px;
+    top: 58px;
+    height: 2.5px;
+    background: #1F2BE0;
+    transform-origin: left center;
+  }
+  .ed8-hair-b {
+    position: absolute;
+    left: 77px;
+    right: 77px;
+    top: 870px; /* kept above the 83% caption keep-out (y <= 896) */
+    height: 2.5px;
+    background: #1F2BE0;
+    transform-origin: right center;
+  }
+  .ed8-page {
+    position: absolute;
+    right: 77px;
+    top: 18px;
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 22px;
+    letter-spacing: 0.06em;
+    color: #1F2BE0;
+    font-variant-numeric: tabular-nums;
+  }
+  /* ---------- track 2 · header chrome ---------- */
+  .ed8-kick {
+    position: absolute;
+    left: 77px;
+    top: 86px;
+    font-size: 28px;
+    font-weight: 600;
+    letter-spacing: 0.24em;
+    color: #1F2BE0;
+  }
+  .ed8-kick::before {
+    content: "";
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: #1F2BE0;
+    margin-right: 16px;
+  }
+  /* ---------- type helpers ---------- */
+  .ed8-serif { font-family: "Noto Serif SC", "SimSun", serif; font-weight: 400; }
+  .ed8-num {
+    font-family: "Newsreader", "Noto Serif SC", "SimSun", serif;
+    font-weight: 400;
+    font-variant-numeric: tabular-nums;
+  }
+  .ed8-mono {
+    font-family: "DM Mono", "Consolas", "Courier New", "Noto Sans SC", "Microsoft YaHei", monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  .ed8-micro {
+    font-family: "DM Mono", "Consolas", "Courier New", "Noto Sans SC", "Microsoft YaHei", monospace;
+    font-size: 15px;
+    letter-spacing: 0.2em;
+    color: #515CDB;
+  }
+  /* ---------- Scene 1 · concept title (centered hero anchor ~0.42h) ---------- */
+  .ed8-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 287px; /* group center ~= 454 (0.42 x 1080) */
+    text-align: center;
+    will-change: transform;
+  }
+  .ed8-vline {
+    display: block;
+    width: 3px;
+    height: 88px;
+    margin: 0 auto 26px auto;
+    background: #1F2BE0;
+    transform-origin: 50% 0%;
+    will-change: transform;
+  }
+  .ed8-t1 {
+    font-size: 168px;
+    line-height: 1;
+    letter-spacing: -0.005em;
+    color: #1F2BE0;
+    white-space: nowrap;
+  }
+  .ed8-tsub {
+    margin-top: 120px; /* CJK fallback em-box can overflow ~0.43em (~72px at 168px) - double margin for safety */
+    font-family: "DM Mono", "Consolas", "Courier New", monospace;
+    font-size: 26px;
+    letter-spacing: 0.3em;
+    color: #515CDB;
+    font-variant-numeric: tabular-nums;
+  }
+  /* ---------- Scene 2 · seam diagram stage (perspective parent of the pair) ---------- */
+  .ed8-stage {
+    position: absolute;
+    inset: 0;
+    perspective: 1400px; /* REQUIRED for the mirrored book-open rotateY */
+    will-change: transform;
+  }
+  .ed8-glow {
+    position: absolute;
+    width: 640px;
+    height: 640px;
+    background: radial-gradient(closest-side, rgba(31, 43, 224, 0.38) 0%, rgba(31, 43, 224, 0.14) 46%, rgba(31, 43, 224, 0) 72%);
+    opacity: 0;
+    z-index: 1;
+    pointer-events: none;
+  }
+  .ed8-glow-l { left: 370px; top: 180px; }
+  .ed8-glow-r { left: 910px; top: 180px; }
+  .ed8-tile {
+    position: absolute;
+    top: 300px;
+    width: 400px;
+    height: 400px;
+    background: #F0EBDE;
+    border: 3px solid #1F2BE0;
+    box-sizing: border-box;
+    z-index: 2;
+    will-change: transform;
+  }
+  .ed8-tile-l { left: 490px; }
+  .ed8-tile-r { left: 1030px; }
+  .ed8-thd {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    padding: 0 16px;
+    box-sizing: border-box;
+  }
+  .ed8-tgrid {
+    position: absolute;
+    left: 16px;
+    right: 16px;
+    top: 54px;
+    bottom: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 6px;
+  }
+  .ed8-cell { background: #1F2BE0; }
+  .ed8-seam {
+    position: absolute;
+    inset: 0;
+    width: 1920px;
+    height: 1080px;
+    z-index: 3;
+    pointer-events: none;
+    overflow: visible;
+  }
+  .ed8-sg { stroke: #1F2BE0; stroke-linecap: butt; }
+  .ed8-w1 { stroke-width: 2.5; }
+  .ed8-w2 { stroke-width: 5; }
+  .ed8-w3 { stroke-width: 9; }
+  .ed8-conn { fill: none; stroke: #1F2BE0; stroke-width: 3; }
+  .ed8-chips {
+    position: absolute;
+    left: 960px;
+    top: 756px;
+    transform: translateX(-50%); /* static centering; container is never GSAP-animated */
+    display: flex;
+    gap: 22px;
+    z-index: 4;
+  }
+  .ed8-chip {
+    padding: 10px 26px;
+    background: #E6E0CE;
+    border: 2px solid #1F2BE0;
+    font-size: 27px;
+    font-weight: 600;
+    letter-spacing: 0.08em;
+    color: #1F2BE0;
+    white-space: nowrap;
+    will-change: transform;
+  }
+  .ed8-badge {
+    position: absolute;
+    left: 844px;
+    top: 464px;
+    width: 232px;
+    height: 72px;
+    background: #1F2BE0;
+    color: #F0EBDE;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    z-index: 5;
+    will-change: transform;
+  }
+  .ed8-badge .ed8-micro { color: rgba(240, 235, 222, 0.8); font-size: 13px; letter-spacing: 0.22em; }
+  .ed8-badge b { font-size: 30px; font-weight: 600; letter-spacing: 0.1em; white-space: nowrap; }
+  /* ---------- Scene 3 · asymmetric 55/45 judgment zone ---------- */
+  .ed8-jz {
+    position: absolute;
+    inset: 0;
+    z-index: 6;
+  }
+  .ed8-mcard {
+    position: absolute;
+    left: 1120px;
+    top: 300px;
+    width: 640px;
+    height: 76px;
+    background: #E6E0CE;
+    border: 2.5px solid #1F2BE0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    padding: 0 28px;
+    will-change: transform;
+  }
+  .ed8-mnum { font-size: 40px; letter-spacing: 0.02em; white-space: nowrap; }
+  .ed8-divv { width: 2.5px; height: 44px; background: rgba(31, 43, 224, 0.3); flex: none; }
+  .ed8-mcol { display: flex; flex-direction: column; gap: 4px; }
+  .ed8-mcol b { font-size: 27px; font-weight: 600; letter-spacing: 0.06em; white-space: nowrap; }
+  .ed8-jcard {
+    position: absolute;
+    left: 1120px;
+    width: 640px;
+    height: 116px;
+    background: #E6E0CE;
+    border: 2.5px solid #1F2BE0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 22px;
+    padding: 0 28px;
+    will-change: transform;
+  }
+  .ed8-jc1 { top: 408px; }
+  .ed8-jc2 { top: 552px; }
+  .ed8-jcol { display: flex; flex-direction: column; gap: 6px; }
+  .ed8-jcol b { font-size: 34px; font-weight: 600; letter-spacing: 0.04em; white-space: nowrap; }
+  /* check slot (outline -> solid flip + drawn tick) */
+  .ed8-ck { position: relative; flex: none; width: 54px; height: 54px; }
+  .ed8-cko {
+    position: absolute;
+    inset: 0;
+    border: 2.5px solid #1F2BE0;
+    background: rgba(31, 43, 224, 0.06);
+    box-sizing: border-box;
+  }
+  .ed8-cks {
+    position: absolute;
+    inset: 0;
+    background: #1F2BE0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+  }
+  .ed8-cks svg { width: 60%; height: 60%; }
+  /* ---------- Scene 4 · bottom collision band ---------- */
+  .ed8-band {
+    position: absolute;
+    left: 77px;
+    top: 724px;
+    width: 1766px;
+    height: 136px;
+    background: #E6E0CE;
+    border: 3px solid #1F2BE0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    gap: 34px;
+    padding: 0 44px;
+    z-index: 7;
+    will-change: transform;
+  }
+  .ed8-bl { display: flex; flex-direction: column; gap: 8px; flex: none; }
+  .ed8-bl b { font-size: 27px; font-weight: 600; letter-spacing: 0.1em; white-space: nowrap; }
+  .ed8-div { width: 2.5px; height: 72px; background: rgba(31, 43, 224, 0.3); flex: none; }
+  .ed8-slot {
+    position: relative;
+    width: 470px;
+    height: 100px;
+    flex: none;
+  }
+  .ed8-pct {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    font-size: 96px;
+    line-height: 1;
+    letter-spacing: -0.015em;
+    color: #1F2BE0;
+    white-space: nowrap;
+    transform-origin: 50% 50%;
+  }
+  .ed8-pb { z-index: 2; }
+  .ed8-delta {
+    flex: none;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    padding: 12px 26px;
+    background: #1F2BE0;
+    color: #F0EBDE;
+    will-change: transform;
+  }
+  .ed8-delta .ed8-mono { font-size: 42px; color: #F0EBDE; }
+  .ed8-delta span:last-child { font-size: 24px; font-weight: 600; }
+  .ed8-note {
+    margin-left: auto;
+    flex: none;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 20px;
+    border: 2px solid rgba(31, 43, 224, 0.35);
+    background: #F0EBDE;
+    font-size: 22px;
+    letter-spacing: 0.04em;
+    color: #1F2BE0;
+    white-space: nowrap;
+  }
+</style>
+
+<div data-hf-id="hf-q89c" id="root" data-composition-id="08-edge" data-start="0" data-duration="33.025" data-width="1920" data-height="1080">
+
+  <!-- track 0 · graph-paper ground -->
+  <div data-hf-id="hf-eo6g" class="clip ed8-bg" data-start="0" data-duration="33.025" data-track-index="0"></div>
+
+  <!-- track 1 · furniture -->
+  <div data-hf-id="hf-rtuo" class="clip" data-start="0" data-duration="33.025" data-track-index="1">
+    <div data-hf-id="hf-e18i" class="ed8-hair-t" id="ed8-hair-t"></div>
+    <div data-hf-id="hf-olo2" class="ed8-hair-b" id="ed8-hair-b"></div>
+    <div data-hf-id="hf-jf80" class="ed8-page" id="ed8-page">08 / 10</div>
+  </div>
+
+  <!-- track 2 · header chrome -->
+  <div data-hf-id="hf-2pcb" class="clip" data-start="0" data-duration="33.025" data-track-index="2">
+    <div data-hf-id="hf-egzw" class="ed8-kick" id="ed8-kick">边缘突破 · 接缝里的证据</div>
+  </div>
+
+  <!-- track 3 · the shot: title card -> seam diagram -> judgment zone -> collision band -->
+  <div data-hf-id="hf-yr8a" class="clip" data-start="0" data-duration="33.025" data-track-index="3">
+
+    <!-- Scene 1 · concept title (migrates up to a section lockup at 3.45s) -->
+    <div data-hf-id="hf-y9nm" class="ed8-title" id="ed8-title">
+      <i data-hf-id="hf-ilvy" class="ed8-vline" id="ed8-vline"></i>
+      <div data-hf-id="hf-iy98" class="ed8-t1 ed8-serif" id="ed8-t1">边缘接缝</div>
+      <div data-hf-id="hf-v9xz" class="ed8-tsub" id="ed8-tsub">seam features · 20-dim</div>
+    </div>
+
+    <!-- Scenes 2-3 · seam diagram (whole stage compresses to the left 55% at 13.7s) -->
+    <div data-hf-id="hf-u7aq" class="ed8-stage" id="ed8-stage">
+
+      <!-- dual side-glow ambient (one per wing, monochrome cobalt) -->
+      <div data-hf-id="hf-7oh1" class="ed8-glow ed8-glow-l" id="ed8-glow-l"></div>
+      <div data-hf-id="hf-sm2h" class="ed8-glow ed8-glow-r" id="ed8-glow-r"></div>
+
+      <!-- the mirrored book-open pair: 3x3 abstract texture tiles -->
+      <div data-hf-id="hf-y1f4" class="ed8-tile ed8-tile-l" id="ed8-tile-l">
+        <div data-hf-id="hf-9oyd" class="ed8-thd" id="ed8-thd-l"><span data-hf-id="hf-kk9a" class="ed8-micro">TILE A · 当前图块</span></div>
+        <div data-hf-id="hf-0fom" class="ed8-tgrid">
+          <i data-hf-id="hf-1ain" class="ed8-cell" style="opacity:0.9;"></i><i data-hf-id="hf-9iu3" class="ed8-cell" style="opacity:0.14;"></i><i data-hf-id="hf-6xsb" class="ed8-cell" style="opacity:0.5;"></i>
+          <i data-hf-id="hf-3hsr" class="ed8-cell" style="opacity:0.14;"></i><i data-hf-id="hf-krhx" class="ed8-cell" style="opacity:1;"></i><i data-hf-id="hf-kq0x" class="ed8-cell" style="opacity:0.3;"></i>
+          <i data-hf-id="hf-j9is" class="ed8-cell" style="opacity:0.55;"></i><i data-hf-id="hf-33hq" class="ed8-cell" style="opacity:0.14;"></i><i data-hf-id="hf-ktbz" class="ed8-cell" style="opacity:0.9;"></i>
+        </div>
+      </div>
+      <div data-hf-id="hf-ay8k" class="ed8-tile ed8-tile-r" id="ed8-tile-r">
+        <div data-hf-id="hf-nudn" class="ed8-thd" id="ed8-thd-r"><span data-hf-id="hf-4qae" class="ed8-micro">TILE B · 目标图块</span></div>
+        <div data-hf-id="hf-hxwq" class="ed8-tgrid">
+          <i data-hf-id="hf-2p6p" class="ed8-cell" style="opacity:0.14;"></i><i data-hf-id="hf-q0i4" class="ed8-cell" style="opacity:0.55;"></i><i data-hf-id="hf-kf0y" class="ed8-cell" style="opacity:0.9;"></i>
+          <i data-hf-id="hf-fh0r" class="ed8-cell" style="opacity:0.5;"></i><i data-hf-id="hf-txhx" class="ed8-cell" style="opacity:0.3;"></i><i data-hf-id="hf-2avo" class="ed8-cell" style="opacity:0.14;"></i>
+          <i data-hf-id="hf-k0px" class="ed8-cell" style="opacity:0.9;"></i><i data-hf-id="hf-f2pq" class="ed8-cell" style="opacity:0.5;"></i><i data-hf-id="hf-1wkn" class="ed8-cell" style="opacity:0.14;"></i>
+        </div>
+      </div>
+
+      <!-- seam: four segmented edge rulers + inter-tile error connectors (SVG self-draw) -->
+      <svg data-hf-id="hf-jpqn" class="ed8-seam" id="ed8-seam" viewBox="0 0 1920 1080" xmlns="http://www.w3.org/2000/svg">
+        <g data-hf-id="hf-vtfj" id="ed8-rt">
+          <line data-hf-id="hf-g440" class="ed8-sg ed8-w2" x1="884" y1="294" x2="916" y2="294" />
+          <line data-hf-id="hf-sire" class="ed8-sg ed8-w1" x1="924" y1="294" x2="956" y2="294" />
+          <line data-hf-id="hf-f600" class="ed8-sg ed8-w3" x1="964" y1="294" x2="996" y2="294" />
+          <line data-hf-id="hf-9rpi" class="ed8-sg ed8-w1" x1="1004" y1="294" x2="1036" y2="294" />
+        </g>
+        <g data-hf-id="hf-0j7d" id="ed8-rr">
+          <line data-hf-id="hf-o0bz" class="ed8-sg ed8-w1" x1="1036" y1="312" x2="1036" y2="352" />
+          <line data-hf-id="hf-b4xn" class="ed8-sg ed8-w2" x1="1036" y1="360" x2="1036" y2="400" />
+          <line data-hf-id="hf-9slt" class="ed8-sg ed8-w3" x1="1036" y1="408" x2="1036" y2="448" />
+          <line data-hf-id="hf-8045" class="ed8-sg ed8-w1" x1="1036" y1="456" x2="1036" y2="496" />
+          <line data-hf-id="hf-wdc6" class="ed8-sg ed8-w2" x1="1036" y1="504" x2="1036" y2="544" />
+          <line data-hf-id="hf-6put" class="ed8-sg ed8-w3" x1="1036" y1="552" x2="1036" y2="592" />
+          <line data-hf-id="hf-2v53" class="ed8-sg ed8-w1" x1="1036" y1="600" x2="1036" y2="640" />
+          <line data-hf-id="hf-n8jw" class="ed8-sg ed8-w2" x1="1036" y1="648" x2="1036" y2="688" />
+        </g>
+        <g data-hf-id="hf-lm09" id="ed8-rb">
+          <line data-hf-id="hf-w9u3" class="ed8-sg ed8-w1" x1="884" y1="706" x2="916" y2="706" />
+          <line data-hf-id="hf-3oyo" class="ed8-sg ed8-w3" x1="924" y1="706" x2="956" y2="706" />
+          <line data-hf-id="hf-t6ei" class="ed8-sg ed8-w1" x1="964" y1="706" x2="996" y2="706" />
+          <line data-hf-id="hf-phrx" class="ed8-sg ed8-w2" x1="1004" y1="706" x2="1036" y2="706" />
+        </g>
+        <g data-hf-id="hf-8btz" id="ed8-rl">
+          <line data-hf-id="hf-9ut3" class="ed8-sg ed8-w3" x1="884" y1="312" x2="884" y2="352" />
+          <line data-hf-id="hf-cp96" class="ed8-sg ed8-w1" x1="884" y1="360" x2="884" y2="400" />
+          <line data-hf-id="hf-ktce" class="ed8-sg ed8-w2" x1="884" y1="408" x2="884" y2="448" />
+          <line data-hf-id="hf-l38f" class="ed8-sg ed8-w1" x1="884" y1="456" x2="884" y2="496" />
+          <line data-hf-id="hf-avo1" class="ed8-sg ed8-w3" x1="884" y1="504" x2="884" y2="544" />
+          <line data-hf-id="hf-xyjy" class="ed8-sg ed8-w2" x1="884" y1="552" x2="884" y2="592" />
+          <line data-hf-id="hf-3qdl" class="ed8-sg ed8-w1" x1="884" y1="600" x2="884" y2="640" />
+          <line data-hf-id="hf-msra" class="ed8-sg ed8-w2" x1="884" y1="648" x2="884" y2="688" />
+        </g>
+        <path data-hf-id="hf-rde8" class="ed8-conn" id="ed8-cn1" d="M884 332 L934 326 L986 338 L1036 332" />
+        <path data-hf-id="hf-vp0p" class="ed8-conn" id="ed8-cn2" d="M884 380 L934 386 L986 374 L1036 380" />
+        <path data-hf-id="hf-kfrs" class="ed8-conn" id="ed8-cn3" d="M884 476 L934 470 L986 482 L1036 476" />
+        <path data-hf-id="hf-cgzj" class="ed8-conn" id="ed8-cn4" d="M884 572 L934 578 L986 566 L1036 572" />
+        <path data-hf-id="hf-uu1q" class="ed8-conn" id="ed8-cn5" d="M884 668 L934 662 L986 674 L1036 668" />
+      </svg>
+
+      <!-- per-segment comparison metrics, popping on the voice flow -->
+      <div data-hf-id="hf-uyk3" class="ed8-chips">
+        <div data-hf-id="hf-m477" class="ed8-chip" id="ed8-chip-1">颜色误差</div>
+        <div data-hf-id="hf-2l4f" class="ed8-chip" id="ed8-chip-2">梯度误差</div>
+        <div data-hf-id="hf-8hwg" class="ed8-chip" id="ed8-chip-3">相关性</div>
+      </div>
+
+      <!-- summary badge gathers at the seam center (the inner-edge punctuation) -->
+      <div data-hf-id="hf-3auw" class="ed8-badge" id="ed8-badge">
+        <span data-hf-id="hf-htow" class="ed8-micro">FEATURE VECTOR</span>
+        <b data-hf-id="hf-4vgl">20 维特征</b>
+      </div>
+
+    </div>
+
+    <!-- Scene 3 · judgment zone (right 45%) -->
+    <div data-hf-id="hf-zhsy" class="ed8-jz" id="ed8-jz">
+      <div data-hf-id="hf-9oyo" class="ed8-mcard" id="ed8-mcard">
+        <span data-hf-id="hf-no7j" class="ed8-mnum ed8-mono" id="ed8-mnum">+0 参数</span>
+        <i data-hf-id="hf-re4f" class="ed8-divv"></i>
+        <div data-hf-id="hf-ndi3" class="ed8-mcol">
+          <b data-hf-id="hf-pq0g">线索头</b>
+          <span data-hf-id="hf-12lq" class="ed8-micro">CLUE HEAD</span>
+        </div>
+      </div>
+
+      <div data-hf-id="hf-iwe8" class="ed8-jcard ed8-jc1" id="ed8-jc1">
+        <div data-hf-id="hf-vm0g" class="ed8-ck">
+          <i data-hf-id="hf-4ozt" class="ed8-cko" id="ed8-ck1o"></i>
+          <div data-hf-id="hf-wil9" class="ed8-cks" id="ed8-ck1s">
+            <svg data-hf-id="hf-wgi3" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path data-hf-id="hf-xjro" id="ed8-ck1p" d="M5 12.5 L10.5 18 L19 7" fill="none" stroke="#F0EBDE" stroke-width="3.2" />
+            </svg>
+          </div>
+        </div>
+        <div data-hf-id="hf-7m32" class="ed8-jcol">
+          <b data-hf-id="hf-gdem">目标在相邻格？</b>
+          <span data-hf-id="hf-j559" class="ed8-micro">邻接判断 · ADJACENCY</span>
+        </div>
+      </div>
+
+      <div data-hf-id="hf-ljm6" class="ed8-jcard ed8-jc2" id="ed8-jc2">
+        <div data-hf-id="hf-ls7c" class="ed8-ck">
+          <i data-hf-id="hf-3nqk" class="ed8-cko" id="ed8-ck2o"></i>
+          <div data-hf-id="hf-bxqg" class="ed8-cks" id="ed8-ck2s">
+            <svg data-hf-id="hf-s357" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path data-hf-id="hf-m5sl" id="ed8-ck2p" d="M5 12.5 L10.5 18 L19 7" fill="none" stroke="#F0EBDE" stroke-width="3.2" />
+            </svg>
+          </div>
+        </div>
+        <div data-hf-id="hf-om1e" class="ed8-jcol">
+          <b data-hf-id="hf-bb6v">朝哪个方向？</b>
+          <span data-hf-id="hf-oglc" class="ed8-micro">方向判断 · DIRECTION</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Scene 4 · bottom collision band: 72.62% knocked out by 88.57% -->
+    <div data-hf-id="hf-yep6" class="ed8-band" id="ed8-band">
+      <div data-hf-id="hf-gm1w" class="ed8-bl">
+        <b data-hf-id="hf-mgxm">开发集成功率</b>
+        <span data-hf-id="hf-fp5w" class="ed8-micro">DEV SPLIT · SUCCESS RATE</span>
+      </div>
+      <i data-hf-id="hf-q2mj" class="ed8-div"></i>
+      <div data-hf-id="hf-mmsq" class="ed8-slot">
+        <div data-hf-id="hf-z3v9" class="ed8-pct ed8-num" id="ed8-pa">0.00%</div>
+        <div data-hf-id="hf-fnlw" class="ed8-pct ed8-num ed8-pb" id="ed8-pb">88.57%</div>
+      </div>
+      <div data-hf-id="hf-dmrm" class="ed8-delta" id="ed8-delta">
+        <span data-hf-id="hf-gn0v" class="ed8-mono">+15.95</span>
+        <span data-hf-id="hf-3mmg">点</span>
+      </div>
+      <div data-hf-id="hf-xbwe" class="ed8-note" id="ed8-note">
+        <span data-hf-id="hf-sy4f" class="ed8-micro">C4/C5</span> 短距离档提升最大
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+<script>
+  (function () {
+    var tl = gsap.timeline({ paused: true });
+    window.__timelines = window.__timelines || {};
+    window.__timelines["08-edge"] = tl;
+
+    /* ---------- seam geometry: measured dash setup (never guessed) ---------- */
+    var strokes = document.querySelectorAll(".ed8-sg, .ed8-conn");
+    Array.prototype.forEach.call(strokes, function (p) {
+      var L = p.getTotalLength() * 1.02;
+      p.style.strokeDasharray = L;
+      p.style.strokeDashoffset = L;
+    });
+    /* check ticks: measured too */
+    ["ed8-ck1p", "ed8-ck2p"].forEach(function (id) {
+      var p = document.getElementById(id);
+      var L = p.getTotalLength() * 1.02;
+      p.style.strokeDasharray = L;
+      p.style.strokeDashoffset = L;
+    });
+
+    function fmtInt(v) {
+      var s = String(Math.round(v));
+      return s.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+    }
+
+    /* ---------- furniture ---------- */
+    tl.fromTo("#ed8-hair-t", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.inOut" }, 0.05);
+    tl.fromTo("#ed8-hair-b", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power3.inOut" }, 0.2);
+    tl.fromTo("#ed8-page", { opacity: 0, y: -10 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 0.3);
+    tl.fromTo("#ed8-kick", { opacity: 0, y: -14 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.12);
+
+    /* ================= Scene 1 (0.0-3.9) · concept title card =================
+       title slides DOWN into place from just above (the blueprint's T-setter),
+       a thin plumb line draws above it — "一个很细的表征" */
+    tl.fromTo("#ed8-title",
+      { opacity: 0, y: -46 },
+      { opacity: 1, y: 0, duration: 0.65, ease: "power3.out" }, 0.15);
+    tl.fromTo("#ed8-vline",
+      { scaleY: 0 },
+      { scaleY: 1, duration: 0.5, ease: "power3.out", transformOrigin: "50% 0%" }, 0.32);
+    tl.fromTo("#ed8-tsub", { opacity: 0, y: 16 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.62);
+
+    /* ================= Scene 2 (3.9-13.6) · the seam diagram ================= */
+
+    /* title migrates up + shrinks into the section lockup as the book opens —
+       one continuous arrival, no exit */
+    tl.fromTo("#ed8-title",
+      { y: 0, scale: 1 },
+      { y: -278, scale: 0.34, duration: 0.9, ease: "power3.inOut", immediateRender: false,
+        transformOrigin: "50% 50%" }, 3.45);
+
+    /* the split-tilt signature: two tiles from opposite wings, mirrored book-open rotateY,
+       settling into a held tilt */
+    tl.fromTo("#ed8-tile-l",
+      { x: -430, rotateY: 21, scale: 0.85, opacity: 0 },
+      { x: 0, rotateY: 10, scale: 1, opacity: 1, duration: 0.95, ease: "power3.out" }, 3.95);
+    tl.fromTo("#ed8-tile-r",
+      { x: 430, rotateY: -21, scale: 0.85, opacity: 0 },
+      { x: 0, rotateY: -10, scale: 1, opacity: 1, duration: 0.95, ease: "power3.out" }, 4.17);
+
+    /* dual side-glow ambient: bloom lands with the pair as ONE beat */
+    tl.fromTo("#ed8-glow-l",
+      { opacity: 0, scale: 0.85 },
+      { opacity: 0.2, scale: 1, duration: 1.1, ease: "power2.out", transformOrigin: "50% 50%" }, 4.05);
+    tl.fromTo("#ed8-glow-r",
+      { opacity: 0, scale: 0.85 },
+      { opacity: 0.22, scale: 1, duration: 1.1, ease: "power2.out", transformOrigin: "50% 50%" }, 4.25);
+
+    /* tile eyebrows rise during the settle */
+    tl.fromTo("#ed8-thd-l", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 4.75);
+    tl.fromTo("#ed8-thd-r", { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 4.85);
+
+    /* phase-opposed idle float (left sin / right sin+, never synchronized) —
+       finite: 6 half-cycles of 1.3s, ends where it started */
+    tl.to("#ed8-tile-l", { y: -4, duration: 1.3, ease: "sine.inOut", yoyo: true, repeat: 5 }, 5.9);
+    tl.to("#ed8-tile-r", { y: 4, duration: 1.3, ease: "sine.inOut", yoyo: true, repeat: 5 }, 5.9);
+
+    /* bounded glow breathe — finite phase proxies, counter-phase, end exactly at peak */
+    function glowBreathe(id, peak, start, dur, cycles, sign, opAmp, scAmp) {
+      var el = document.getElementById(id);
+      var ph = { p: 0 };
+      tl.to(ph, {
+        p: Math.PI * 2 * cycles, duration: dur, ease: "none",
+        onUpdate: function () {
+          var s = sign * Math.sin(ph.p);
+          el.style.opacity = String(peak + s * opAmp);
+          el.style.transform = "scale(" + (1 + s * scAmp) + ")";
+        }
+      }, start);
+    }
+    glowBreathe("ed8-glow-l", 0.20, 5.4, 7.0, 2, 1, 0.025, 0.012);
+    glowBreathe("ed8-glow-r", 0.22, 5.6, 6.6, 2, -1, 0.025, 0.012);
+
+    /* four seam edges light up ruler-by-ruler (three segment widths = the scale feel) */
+    function drawRuler(gid, at, stagger) {
+      var lines = document.getElementById(gid).querySelectorAll(".ed8-sg");
+      Array.prototype.forEach.call(lines, function (ln, i) {
+        tl.to(ln, { strokeDashoffset: 0, duration: 0.32, ease: "power2.out" }, at + i * stagger);
+      });
+    }
+    drawRuler("ed8-rt", 6.15, 0.09); /* top */
+    drawRuler("ed8-rr", 6.75, 0.055); /* right */
+    drawRuler("ed8-rb", 7.35, 0.09); /* bottom */
+    drawRuler("ed8-rl", 7.95, 0.055); /* left */
+
+    /* inter-tile error connectors self-draw across the seam */
+    ["ed8-cn1", "ed8-cn2", "ed8-cn3", "ed8-cn4", "ed8-cn5"].forEach(function (id, i) {
+      tl.to("#" + id, { strokeDashoffset: 0, duration: 0.45, ease: "power2.out" }, 8.6 + i * 0.3);
+    });
+
+    /* three metric labels pop on the voice flow */
+    tl.fromTo("#ed8-chip-1",
+      { scale: 0.6, opacity: 0, y: 14 },
+      { scale: 1, opacity: 1, y: 0, duration: 0.45, ease: "back.out(1.5)" }, 10.1);
+    tl.fromTo("#ed8-chip-2",
+      { scale: 0.6, opacity: 0, y: 14 },
+      { scale: 1, opacity: 1, y: 0, duration: 0.45, ease: "back.out(1.5)" }, 11.1);
+    tl.fromTo("#ed8-chip-3",
+      { scale: 0.6, opacity: 0, y: 14 },
+      { scale: 1, opacity: 1, y: 0, duration: 0.45, ease: "back.out(1.5)" }, 12.05);
+
+    /* the lone overshoot: 20-dim badge gathers at the seam center */
+    tl.fromTo("#ed8-badge",
+      { scale: 0.45, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.7)", transformOrigin: "50% 50%" }, 12.95);
+
+    /* ================= Scene 3 (13.6-23.3) · asymmetric 55/45 re-layout ================= */
+
+    /* the whole diagram compresses into the left 55% */
+    tl.fromTo("#ed8-stage",
+      { scale: 1, x: 0 },
+      { scale: 0.55, x: -430, duration: 0.95, ease: "power3.inOut", immediateRender: false,
+        transformOrigin: "960px 500px" }, 13.7);
+
+    /* mono param card + counted figure */
+    tl.fromTo("#ed8-mcard",
+      { opacity: 0, y: 40, scale: 0.95 },
+      { opacity: 1, y: 0, scale: 1, duration: 0.55, ease: "back.out(1.4)", transformOrigin: "50% 50%" }, 14.55);
+    var mnumEl = document.getElementById("ed8-mnum");
+    var mv = { v: 0 };
+    tl.to(mv, {
+      v: 2560, duration: 1.0, ease: "power2.out",
+      onUpdate: function () { mnumEl.textContent = "+" + fmtInt(mv.v) + " 参数"; }
+    }, 14.85);
+
+    /* judgment card 1: adjacency — pop, then the check flips solid and draws */
+    tl.fromTo("#ed8-jc1",
+      { opacity: 0, y: 46 },
+      { opacity: 1, y: 0, duration: 0.55, ease: "back.out(1.4)" }, 17.55);
+    tl.fromTo("#ed8-ck1o", { opacity: 1 }, { opacity: 0, duration: 0.2, ease: "power1.out", immediateRender: false }, 18.4);
+    tl.fromTo("#ed8-ck1s",
+      { opacity: 0, scale: 0.5 },
+      { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)", transformOrigin: "50% 50%" }, 18.4);
+    tl.to("#ed8-ck1p", { strokeDashoffset: 0, duration: 0.3, ease: "power2.out" }, 18.52);
+
+    /* judgment card 2: direction */
+    tl.fromTo("#ed8-jc2",
+      { opacity: 0, y: 46 },
+      { opacity: 1, y: 0, duration: 0.55, ease: "back.out(1.4)" }, 20.45);
+    tl.fromTo("#ed8-ck2o", { opacity: 1 }, { opacity: 0, duration: 0.2, ease: "power1.out", immediateRender: false }, 21.3);
+    tl.fromTo("#ed8-ck2s",
+      { opacity: 0, scale: 0.5 },
+      { opacity: 1, scale: 1, duration: 0.35, ease: "back.out(2)", transformOrigin: "50% 50%" }, 21.3);
+    tl.to("#ed8-ck2p", { strokeDashoffset: 0, duration: 0.3, ease: "power2.out" }, 21.42);
+
+    /* small beat before the numbers: the 20-dim badge pulses once */
+    tl.fromTo("#ed8-badge", { scale: 1 }, { scale: 1.06, duration: 0.18, ease: "power1.out", immediateRender: false }, 22.2);
+    tl.fromTo("#ed8-badge", { scale: 1.06 }, { scale: 1, duration: 0.28, ease: "power2.inOut", immediateRender: false }, 22.38);
+
+    /* ================= Scene 4 (23.3-32.5) · bottom number collision ================= */
+
+    /* the band rises; everything above it dims into the spotlight */
+    tl.fromTo("#ed8-band",
+      { opacity: 0, y: 48 },
+      { opacity: 1, y: 0, duration: 0.6, ease: "power3.out" }, 23.35);
+    tl.fromTo("#ed8-stage", { opacity: 1 }, { opacity: 0.5, duration: 0.8, ease: "power2.inOut", immediateRender: false }, 23.45);
+    tl.fromTo("#ed8-jz", { opacity: 1 }, { opacity: 0.5, duration: 0.8, ease: "power2.inOut", immediateRender: false }, 23.45);
+
+    /* the old figure counts up first */
+    var paEl = document.getElementById("ed8-pa");
+    var av = { v: 0 };
+    tl.to(av, {
+      v: 72.62, duration: 1.35, ease: "power1.out",
+      onUpdate: function () { paEl.textContent = av.v.toFixed(2) + "%"; }
+    }, 24.5);
+
+    /* scale-swap collision: 72.62% rushes away, 88.57% arrives with weight, overlapping mid-tween */
+    tl.to("#ed8-pa", { scale: 0.72, opacity: 0, duration: 0.35, ease: "power2.in", transformOrigin: "50% 50%" }, 26.9);
+    tl.fromTo("#ed8-pb",
+      { scale: 0.72, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 0.55, ease: "back.out(1.8)", transformOrigin: "50% 50%" }, 27.13);
+
+    /* delta badge pops after the new figure settles */
+    tl.fromTo("#ed8-delta",
+      { scale: 0.5, opacity: 0 },
+      { scale: 1, opacity: 1, duration: 0.5, ease: "back.out(1.7)", transformOrigin: "50% 50%" }, 28.9);
+
+    /* the footnote on the voice's last clause */
+    tl.fromTo("#ed8-note", { opacity: 0, y: 18 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 29.95);
+
+    /* one quiet emphasis pulse, then the frame holds to the end — no exit */
+    tl.fromTo("#ed8-pb", { scale: 1 }, { scale: 1.035, duration: 0.5, ease: "power1.out", immediateRender: false, transformOrigin: "50% 50%" }, 30.55);
+
+    /* hold 31.05 -> 32.525 · the collided figures are the last image */
+  })();
+</script>
+</template>

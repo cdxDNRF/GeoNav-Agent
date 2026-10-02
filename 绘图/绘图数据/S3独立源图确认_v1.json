@@ -1,0 +1,788 @@
+{
+  "data_scope": "audited frozen S3 independent source-file confirmation",
+  "source_sha256": {
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/对照汇总.json": "6cb563c30efec47d41a986901283f2dfc35de144e077b7d9c17cafd4d3a1b3d1",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/验收结论.json": "da4d5b62b71205edebfa4b78d5171ebfd053b84197eb10826b4ced0ebba3a958",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/独立复核.json": "d33c2ded9847bfcb7f93b0a7252c5f2da1aefe37e073bc72b04f969c5f3157a7",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/预登记.json": "08b236f239ba70c0a1e8a86dd75e1b1a17fc3af894470de0f40ca245ad7505f6",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/Edge_s0/导航_Baseline_结果.json": "ed72cd15abaa7970693535f2c7aedbcfaaabc479ed1fbfd785b71193e1f38ab4",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/Edge_s1/导航_Baseline_结果.json": "1e104563dbcb55ca4d3d0cddd446ba10743a056d321923dce97d88ec91371682",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/Edge_s2/导航_Baseline_结果.json": "50a8001d6cb15d151199521cbcb08a8539bb048cabe215ce1b5c04726ffb0de7",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/Edge_s0/导航_CueFull_结果.json": "b2125f92e703e6abc29e11b61464e441abed27d2cfb060e7b1b99ea8acd384bf",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/Edge_s1/导航_CueFull_结果.json": "08a216ee7c1a3a4881b41fb8f3cb3cd52e9631aa3811794eca5268bf74434a0c",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/Edge_s2/导航_CueFull_结果.json": "c6368b0141c8c01033a8adbc9064ac66a00de7922a255daa812a7357fcf9957c",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/Edge_s0/导航_CueMean_结果.json": "92351954afe3a628531c8f09c4ca522301354a0b3460190ce9e8649edef433db",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/Edge_s1/导航_CueMean_结果.json": "390dd69cb3c451a5afc601085188ac2b921f5b6aba1b65a2e606efacb3d79908",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/Edge_s2/导航_CueMean_结果.json": "64270db520572165f6a022e30a1a72d7a971e57000b3cdfb708ba4b596cb22a3",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/Edge_s0/导航_CueWrong_结果.json": "e366af088a6f5dd41113d3d3b25f5ebdbf0c414ed9c1625c873b5682f9add3ea",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/Edge_s1/导航_CueWrong_结果.json": "4e016d72d253d82d9ddcf28bbea8f6e1e56438e3598af58355140b9ffb40fad9",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/Edge_s2/导航_CueWrong_结果.json": "0a1f61178b6169232ade8d2ccf90ecfa4b8b3d5abada6970ee4a0bf9df914084"
+  },
+  "interpretation_sha256": "7fcda5c6dfe34d5774d201225c7b40ba33e2b17d03646b783635e64bcd7e2c5c",
+  "figures": [
+    {
+      "id": "09_S3独立源图结果",
+      "caption": "冻结边缘线索在独立源文件test250上将SR从73.60%提高至86.80%，SG从0.719降至0.300。SR为成功/计划，SG包含成功与失败终点；探索与置零轨迹一致，均值/错误目标干预所有目标通道。10源图、221不同路线、三个训练权重；白色圆/三角/方块分别为seed0/1/2而非CI，最强预登记规则Frontier只运行一轮。源文件隔离不等于地理绝无重叠，不能据此宣称跨数据集泛化。",
+      "protocol": "test250/10source files/3training seeds; frozen 5x5/B10",
+      "sources": [
+        "DATA\\processed_data\\Masa\\评测结果\\边缘线索S3独立源图确认_v1\\对照汇总.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/09_S3独立源图结果.pdf",
+          "sha256": "9fcb869c48ace27203ceed317388cfb58c66f903de4034f2cd4c39a5a03f66ab"
+        },
+        {
+          "path": "绘图/数据结果图/09_S3独立源图结果.svg",
+          "sha256": "46300a71ab2932833642df3512b16ee1723874cd893aa19062b71ebf741d6863"
+        },
+        {
+          "path": "绘图/数据结果图/09_S3独立源图结果.png",
+          "sha256": "d8c111cbe9f3b3f1f9156e64bc2154bf7095c46fa0512599b473abf1db7b125b"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_edge_s3.py"
+    },
+    {
+      "id": "10_S3分距离与源图增益",
+      "caption": "真实目标相对探索的test SR收益为+13.20点，源图成组95%区间[+11.20, +15.07]点。左图按初始距离等量分组，C档结构不同，曲线不表示连续难度变化；真距离不提供给Agent。右图为真实目标减各对照的配对SR差，先在每源图内平均三种子，再以10源图为簇作2000次bootstrap；规则仍是一次确定性运行，不把其复制当独立重复。区间仅覆盖本地源文件组，不覆盖尚未验证的异时、旋转、跨视角和地理分布。",
+      "protocol": "test250; source-file grouped paired bootstrap",
+      "sources": [
+        "DATA\\processed_data\\Masa\\评测结果\\边缘线索S3独立源图确认_v1\\对照汇总.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/10_S3分距离与源图增益.pdf",
+          "sha256": "a003ab0356e8e0341b687d694cdb81d8136cbe7e748fbbfd84bcdbf7e41e8020"
+        },
+        {
+          "path": "绘图/数据结果图/10_S3分距离与源图增益.svg",
+          "sha256": "f1e81e909863887c2f3dc13e074d064d6e1f920513955a325d112ba7db684bde"
+        },
+        {
+          "path": "绘图/数据结果图/10_S3分距离与源图增益.png",
+          "sha256": "fdcac211458de537b54e640e6a50b93c01892b030a2fc0ebf323231a6a225682"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_edge_s3.py"
+    }
+  ],
+  "script_sha256": "36c9acbcd65627fac1d1e600f8738e98506a3174afb143259ae85946740b354a",
+  "plot_style_helper_sha256": "6eeefaa84f1ce6a7e8701f2c725c45e055e8f0ff2460b27d0d0041e96777deab",
+  "measurements": {
+    "Edge": {
+      "Baseline": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 1.4000000000000001,
+            "sr": 0.5133333333333333
+          },
+          "5": {
+            "mean_sg_all_episodes": 1.2,
+            "sr": 0.5466666666666667
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.7999999999999999,
+            "sr": 0.7133333333333334
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.15333333333333335,
+            "sr": 0.9266666666666666
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.04,
+            "sr": 0.98
+          }
+        },
+        "by_source": {
+          "img_0": {
+            "mean_sg_all_episodes": 0.7466666666666667,
+            "sr": 0.6533333333333333
+          },
+          "img_1": {
+            "mean_sg_all_episodes": 0.8533333333333334,
+            "sr": 0.68
+          },
+          "img_2": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7333333333333334
+          },
+          "img_3": {
+            "mean_sg_all_episodes": 0.6533333333333333,
+            "sr": 0.7999999999999999
+          },
+          "img_4": {
+            "mean_sg_all_episodes": 0.7200000000000001,
+            "sr": 0.7466666666666667
+          },
+          "img_5": {
+            "mean_sg_all_episodes": 0.6533333333333333,
+            "sr": 0.6933333333333334
+          },
+          "img_6": {
+            "mean_sg_all_episodes": 0.5733333333333334,
+            "sr": 0.7333333333333334
+          },
+          "img_7": {
+            "mean_sg_all_episodes": 0.6266666666666666,
+            "sr": 0.7733333333333334
+          },
+          "img_8": {
+            "mean_sg_all_episodes": 0.7466666666666667,
+            "sr": 0.7733333333333334
+          },
+          "img_9": {
+            "mean_sg_all_episodes": 0.9333333333333332,
+            "sr": 0.7733333333333334
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 250,
+        "repeat_by_seed": [
+          0.047524752475247525,
+          0.0085,
+          0.04887780548628429
+        ],
+        "sg_mean": 0.7186666666666667,
+        "source_count": 10,
+        "sr_by_seed": [
+          0.716,
+          0.788,
+          0.704
+        ],
+        "sr_mean": 0.7360000000000001,
+        "successes_by_seed": [
+          179,
+          197,
+          176
+        ]
+      },
+      "CueFull": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 0.5733333333333334,
+            "sr": 0.7866666666666667
+          },
+          "5": {
+            "mean_sg_all_episodes": 0.46,
+            "sr": 0.7266666666666666
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.36000000000000004,
+            "sr": 0.9
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.06666666666666667,
+            "sr": 0.9466666666666667
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.04,
+            "sr": 0.98
+          }
+        },
+        "by_source": {
+          "img_0": {
+            "mean_sg_all_episodes": 0.29333333333333333,
+            "sr": 0.8133333333333335
+          },
+          "img_1": {
+            "mean_sg_all_episodes": 0.28,
+            "sr": 0.8266666666666667
+          },
+          "img_2": {
+            "mean_sg_all_episodes": 0.4000000000000001,
+            "sr": 0.84
+          },
+          "img_3": {
+            "mean_sg_all_episodes": 0.29333333333333333,
+            "sr": 0.88
+          },
+          "img_4": {
+            "mean_sg_all_episodes": 0.24,
+            "sr": 0.88
+          },
+          "img_5": {
+            "mean_sg_all_episodes": 0.3333333333333333,
+            "sr": 0.8266666666666667
+          },
+          "img_6": {
+            "mean_sg_all_episodes": 0.21333333333333335,
+            "sr": 0.88
+          },
+          "img_7": {
+            "mean_sg_all_episodes": 0.44,
+            "sr": 0.8533333333333334
+          },
+          "img_8": {
+            "mean_sg_all_episodes": 0.22666666666666668,
+            "sr": 0.9333333333333332
+          },
+          "img_9": {
+            "mean_sg_all_episodes": 0.27999999999999997,
+            "sr": 0.9466666666666667
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 250,
+        "repeat_by_seed": [
+          0.021287919105907396,
+          0.00672182006204757,
+          0.034501061571125265
+        ],
+        "sg_mean": 0.3,
+        "source_count": 10,
+        "sr_by_seed": [
+          0.864,
+          0.892,
+          0.848
+        ],
+        "sr_mean": 0.868,
+        "successes_by_seed": [
+          216,
+          223,
+          212
+        ]
+      },
+      "CueMean": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 1.36,
+            "sr": 0.52
+          },
+          "5": {
+            "mean_sg_all_episodes": 1.0533333333333335,
+            "sr": 0.5733333333333334
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.7600000000000001,
+            "sr": 0.7266666666666667
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.21333333333333335,
+            "sr": 0.8933333333333332
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.10666666666666667,
+            "sr": 0.9466666666666667
+          }
+        },
+        "by_source": {
+          "img_0": {
+            "mean_sg_all_episodes": 0.7466666666666667,
+            "sr": 0.6533333333333333
+          },
+          "img_1": {
+            "mean_sg_all_episodes": 0.8000000000000002,
+            "sr": 0.6933333333333334
+          },
+          "img_2": {
+            "mean_sg_all_episodes": 0.6933333333333334,
+            "sr": 0.7200000000000001
+          },
+          "img_3": {
+            "mean_sg_all_episodes": 0.5599999999999999,
+            "sr": 0.7866666666666666
+          },
+          "img_4": {
+            "mean_sg_all_episodes": 0.7200000000000001,
+            "sr": 0.7466666666666667
+          },
+          "img_5": {
+            "mean_sg_all_episodes": 0.6533333333333333,
+            "sr": 0.6933333333333334
+          },
+          "img_6": {
+            "mean_sg_all_episodes": 0.7066666666666667,
+            "sr": 0.68
+          },
+          "img_7": {
+            "mean_sg_all_episodes": 0.6266666666666666,
+            "sr": 0.7733333333333334
+          },
+          "img_8": {
+            "mean_sg_all_episodes": 0.7733333333333333,
+            "sr": 0.7600000000000001
+          },
+          "img_9": {
+            "mean_sg_all_episodes": 0.7066666666666667,
+            "sr": 0.8133333333333334
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 250,
+        "repeat_by_seed": [
+          0.04317617866004963,
+          0.019268774703557312,
+          0.05205751115518096
+        ],
+        "sg_mean": 0.6986666666666667,
+        "source_count": 10,
+        "sr_by_seed": [
+          0.72,
+          0.768,
+          0.708
+        ],
+        "sr_mean": 0.7319999999999999,
+        "successes_by_seed": [
+          180,
+          192,
+          177
+        ]
+      },
+      "CueWrong": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 1.5733333333333335,
+            "sr": 0.4466666666666666
+          },
+          "5": {
+            "mean_sg_all_episodes": 1.3133333333333335,
+            "sr": 0.5133333333333333
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.8533333333333334,
+            "sr": 0.7000000000000001
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.25333333333333335,
+            "sr": 0.8933333333333332
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.16,
+            "sr": 0.92
+          }
+        },
+        "by_source": {
+          "img_0": {
+            "mean_sg_all_episodes": 0.9733333333333333,
+            "sr": 0.5733333333333334
+          },
+          "img_1": {
+            "mean_sg_all_episodes": 0.9066666666666666,
+            "sr": 0.6533333333333333
+          },
+          "img_2": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7200000000000001
+          },
+          "img_3": {
+            "mean_sg_all_episodes": 0.6533333333333333,
+            "sr": 0.7999999999999999
+          },
+          "img_4": {
+            "mean_sg_all_episodes": 0.7600000000000001,
+            "sr": 0.6933333333333334
+          },
+          "img_5": {
+            "mean_sg_all_episodes": 0.7333333333333334,
+            "sr": 0.6666666666666666
+          },
+          "img_6": {
+            "mean_sg_all_episodes": 0.7866666666666667,
+            "sr": 0.6533333333333334
+          },
+          "img_7": {
+            "mean_sg_all_episodes": 0.7999999999999999,
+            "sr": 0.7200000000000001
+          },
+          "img_8": {
+            "mean_sg_all_episodes": 0.7999999999999999,
+            "sr": 0.7733333333333334
+          },
+          "img_9": {
+            "mean_sg_all_episodes": 1.2133333333333332,
+            "sr": 0.6933333333333334
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 250,
+        "repeat_by_seed": [
+          0.047619047619047616,
+          0.013228809407153356,
+          0.0474559686888454
+        ],
+        "sg_mean": 0.8306666666666667,
+        "source_count": 10,
+        "sr_by_seed": [
+          0.672,
+          0.74,
+          0.672
+        ],
+        "sr_mean": 0.6946666666666667,
+        "successes_by_seed": [
+          168,
+          185,
+          168
+        ]
+      }
+    },
+    "ZeroEdge": {
+      "CueFull": {
+        "by_distance": {
+          "4": {
+            "mean_sg_all_episodes": 1.4000000000000001,
+            "sr": 0.5133333333333333
+          },
+          "5": {
+            "mean_sg_all_episodes": 1.2,
+            "sr": 0.5466666666666667
+          },
+          "6": {
+            "mean_sg_all_episodes": 0.7999999999999999,
+            "sr": 0.7133333333333334
+          },
+          "7": {
+            "mean_sg_all_episodes": 0.15333333333333335,
+            "sr": 0.9266666666666666
+          },
+          "8": {
+            "mean_sg_all_episodes": 0.04,
+            "sr": 0.98
+          }
+        },
+        "by_source": {
+          "img_0": {
+            "mean_sg_all_episodes": 0.7466666666666667,
+            "sr": 0.6533333333333333
+          },
+          "img_1": {
+            "mean_sg_all_episodes": 0.8533333333333334,
+            "sr": 0.68
+          },
+          "img_2": {
+            "mean_sg_all_episodes": 0.68,
+            "sr": 0.7333333333333334
+          },
+          "img_3": {
+            "mean_sg_all_episodes": 0.6533333333333333,
+            "sr": 0.7999999999999999
+          },
+          "img_4": {
+            "mean_sg_all_episodes": 0.7200000000000001,
+            "sr": 0.7466666666666667
+          },
+          "img_5": {
+            "mean_sg_all_episodes": 0.6533333333333333,
+            "sr": 0.6933333333333334
+          },
+          "img_6": {
+            "mean_sg_all_episodes": 0.5733333333333334,
+            "sr": 0.7333333333333334
+          },
+          "img_7": {
+            "mean_sg_all_episodes": 0.6266666666666666,
+            "sr": 0.7733333333333334
+          },
+          "img_8": {
+            "mean_sg_all_episodes": 0.7466666666666667,
+            "sr": 0.7733333333333334
+          },
+          "img_9": {
+            "mean_sg_all_episodes": 0.9333333333333332,
+            "sr": 0.7733333333333334
+          }
+        },
+        "out_of_bounds_by_seed": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "planned_each": 250,
+        "repeat_by_seed": [
+          0.047524752475247525,
+          0.0085,
+          0.04887780548628429
+        ],
+        "sg_mean": 0.7186666666666667,
+        "source_count": 10,
+        "sr_by_seed": [
+          0.716,
+          0.788,
+          0.704
+        ],
+        "sr_mean": 0.7360000000000001,
+        "successes_by_seed": [
+          179,
+          197,
+          176
+        ]
+      }
+    }
+  },
+  "effects": {
+    "FixedRegion": {
+      "gain": 0.524,
+      "gains_by_seed": [
+        0.52,
+        0.548,
+        0.504
+      ],
+      "gains_by_source": {
+        "img_0": 0.41333333333333333,
+        "img_1": 0.5066666666666667,
+        "img_2": 0.5599999999999999,
+        "img_3": 0.68,
+        "img_4": 0.48,
+        "img_5": 0.5066666666666667,
+        "img_6": 0.6,
+        "img_7": 0.5333333333333333,
+        "img_8": 0.49333333333333335,
+        "img_9": 0.4666666666666666
+      },
+      "positive_seeds": 3,
+      "positive_sources": 10,
+      "sg_change": -1.78,
+      "sg_source_interval": {
+        "interval95": [
+          -1.9893666666666665,
+          -1.5853000000000002
+        ],
+        "mean": -1.78,
+        "resamples": 2000,
+        "scope": "test source-file groups; not verified geographic groups",
+        "source_count": 10
+      },
+      "source_interval": {
+        "interval95": [
+          0.48266666666666663,
+          0.5679999999999998
+        ],
+        "mean": 0.524,
+        "resamples": 2000,
+        "scope": "test source-file groups; not verified geographic groups",
+        "source_count": 10
+      }
+    },
+    "Frontier": {
+      "gain": 0.436,
+      "gains_by_seed": [
+        0.432,
+        0.46,
+        0.416
+      ],
+      "gains_by_source": {
+        "img_0": 0.45333333333333337,
+        "img_1": 0.46666666666666673,
+        "img_2": 0.43999999999999995,
+        "img_3": 0.4000000000000001,
+        "img_4": 0.44,
+        "img_5": 0.4266666666666666,
+        "img_6": 0.4000000000000001,
+        "img_7": 0.25333333333333335,
+        "img_8": 0.5733333333333334,
+        "img_9": 0.5066666666666667
+      },
+      "positive_seeds": 3,
+      "positive_sources": 10,
+      "sg_change": -2.2600000000000002,
+      "sg_source_interval": {
+        "interval95": [
+          -2.54,
+          -1.9786000000000006
+        ],
+        "mean": -2.2599999999999993,
+        "resamples": 2000,
+        "scope": "test source-file groups; not verified geographic groups",
+        "source_count": 10
+      },
+      "source_interval": {
+        "interval95": [
+          0.38533333333333336,
+          0.4813666666666666
+        ],
+        "mean": 0.43600000000000005,
+        "resamples": 2000,
+        "scope": "test source-file groups; not verified geographic groups",
+        "source_count": 10
+      }
+    },
+    "MeanCue": {
+      "gain": 0.136,
+      "gains_by_seed": [
+        0.14400000000000002,
+        0.124,
+        0.14
+      ],
+      "gains_by_source": {
+        "img_0": 0.16000000000000003,
+        "img_1": 0.1333333333333334,
+        "img_2": 0.12,
+        "img_3": 0.09333333333333334,
+        "img_4": 0.1333333333333333,
+        "img_5": 0.1333333333333333,
+        "img_6": 0.19999999999999996,
+        "img_7": 0.07999999999999996,
+        "img_8": 0.17333333333333334,
+        "img_9": 0.13333333333333333
+      },
+      "positive_seeds": 3,
+      "positive_sources": 10,
+      "sg_change": -0.39866666666666667,
+      "sg_source_interval": {
+        "interval95": [
+          -0.4706666666666667,
+          -0.324
+        ],
+        "mean": -0.3986666666666667,
+        "resamples": 2000,
+        "scope": "test source-file groups; not verified geographic groups",
+        "source_count": 10
+      },
+      "source_interval": {
+        "interval95": [
+          0.11466666666666665,
+          0.15736666666666654
+        ],
+        "mean": 0.13599999999999998,
+        "resamples": 2000,
+        "scope": "test source-file groups; not verified geographic groups",
+        "source_count": 10
+      }
+    },
+    "NoTargetBaseline": {
+      "gain": 0.132,
+      "gains_by_seed": [
+        0.14800000000000002,
+        0.10399999999999998,
+        0.14400000000000002
+      ],
+      "gains_by_source": {
+        "img_0": 0.16000000000000003,
+        "img_1": 0.14666666666666672,
+        "img_2": 0.10666666666666665,
+        "img_3": 0.08,
+        "img_4": 0.1333333333333333,
+        "img_5": 0.1333333333333333,
+        "img_6": 0.14666666666666664,
+        "img_7": 0.07999999999999996,
+        "img_8": 0.16000000000000003,
+        "img_9": 0.17333333333333334
+      },
+      "positive_seeds": 3,
+      "positive_sources": 10,
+      "sg_change": -0.4186666666666667,
+      "sg_source_interval": {
+        "interval95": [
+          -0.5066666666666666,
+          -0.3359666666666668
+        ],
+        "mean": -0.41866666666666674,
+        "resamples": 2000,
+        "scope": "test source-file groups; not verified geographic groups",
+        "source_count": 10
+      },
+      "source_interval": {
+        "interval95": [
+          0.11199999999999999,
+          0.15066666666666667
+        ],
+        "mean": 0.13199999999999998,
+        "resamples": 2000,
+        "scope": "test source-file groups; not verified geographic groups",
+        "source_count": 10
+      }
+    },
+    "WrongCue": {
+      "gain": 0.1733333333333333,
+      "gains_by_seed": [
+        0.19199999999999995,
+        0.15200000000000002,
+        0.17599999999999993
+      ],
+      "gains_by_source": {
+        "img_0": 0.24000000000000002,
+        "img_1": 0.17333333333333334,
+        "img_2": 0.11999999999999995,
+        "img_3": 0.08,
+        "img_4": 0.18666666666666668,
+        "img_5": 0.15999999999999995,
+        "img_6": 0.22666666666666666,
+        "img_7": 0.1333333333333333,
+        "img_8": 0.16000000000000003,
+        "img_9": 0.25333333333333335
+      },
+      "positive_seeds": 3,
+      "positive_sources": 10,
+      "sg_change": -0.5306666666666667,
+      "sg_source_interval": {
+        "interval95": [
+          -0.6546666666666666,
+          -0.42400000000000004
+        ],
+        "mean": -0.5306666666666666,
+        "resamples": 2000,
+        "scope": "test source-file groups; not verified geographic groups",
+        "source_count": 10
+      },
+      "source_interval": {
+        "interval95": [
+          0.1413333333333333,
+          0.20800000000000002
+        ],
+        "mean": 0.17333333333333334,
+        "resamples": 2000,
+        "scope": "test source-file groups; not verified geographic groups",
+        "source_count": 10
+      }
+    },
+    "ZeroEdgeFull": {
+      "gain": 0.132,
+      "gains_by_seed": [
+        0.14800000000000002,
+        0.10399999999999998,
+        0.14400000000000002
+      ],
+      "gains_by_source": {
+        "img_0": 0.16000000000000003,
+        "img_1": 0.14666666666666672,
+        "img_2": 0.10666666666666665,
+        "img_3": 0.08,
+        "img_4": 0.1333333333333333,
+        "img_5": 0.1333333333333333,
+        "img_6": 0.14666666666666664,
+        "img_7": 0.07999999999999996,
+        "img_8": 0.16000000000000003,
+        "img_9": 0.17333333333333334
+      },
+      "positive_seeds": 3,
+      "positive_sources": 10,
+      "sg_change": -0.4186666666666667,
+      "sg_source_interval": {
+        "interval95": [
+          -0.5066666666666666,
+          -0.3359666666666668
+        ],
+        "mean": -0.41866666666666674,
+        "resamples": 2000,
+        "scope": "test source-file groups; not verified geographic groups",
+        "source_count": 10
+      },
+      "source_interval": {
+        "interval95": [
+          0.11199999999999999,
+          0.15066666666666667
+        ],
+        "mean": 0.13199999999999998,
+        "resamples": 2000,
+        "scope": "test source-file groups; not verified geographic groups",
+        "source_count": 10
+      }
+    }
+  }
+}

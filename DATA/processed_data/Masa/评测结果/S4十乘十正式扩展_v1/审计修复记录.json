@@ -1,0 +1,16 @@
+{
+  "correction": "Bind the existing metadata-stripping image_payload helper in the frozen auditor namespace; all hashes/features/actions/gates remain checked.",
+  "evaluation_changed": false,
+  "frozen_original_source_changed": false,
+  "issue": "Frozen formal auditor omitted env.environment.image_payload import.",
+  "original_auditor_sha256": "52e4427a389e42962de0d092921349e3e45a3d955b90fd76231a89c3c66fea9c",
+  "registration_sha256": "23e2d00b9f41177129d8cb077ab217bbb68ec94e5025fd87ce7693a0d70c462f",
+  "repair_source_sha256": {
+    "eval/audit_scaled_edge_confirmation_repair.py": "8206cdccce9ba7816b799853c2074b1eced6bff2c82dbc98d4e6e7c8f060d0c5"
+  },
+  "summary_before_sha256": "4361a8de2169db926d48afd7dea457596ac0f3c7ae264a50cea59c1e5843f9b4",
+  "task_changed": false,
+  "threshold_changed": false,
+  "training_changed": false,
+  "verification": "Resume full image reconstruction,7500 neural episodes,1000 rules,43200 probe predictions and all source intervals."
+}

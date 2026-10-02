@@ -1,0 +1,76 @@
+{
+  "mode": "development",
+  "source_sha256": {
+    "DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1/对照汇总.json": "86f2d37bb2fb8ea60f3c547b877fdac1fdaed830d1c3bea1340f382f81dc2915",
+    "DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1/独立复核.json": "b88ed78332c12031d2443a2a6683bd978d2e16b6b47498a69cbd7bf9709bf2af",
+    "DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1/验收结论.json": "09c72374e98308f04749463b1e6616e02ecbb1d1cbb9435a5b42fef9b1af2102",
+    "DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1/预登记.json": "cf476fedffda8d8f5f00d4020076e1315fda40144fd6476f2a86636d7d48bf22",
+    "DATA/processed_data/Masa/训练结果/高分旋转负样本视觉头对照_v1/独立复核.json": "c1d16ff8d8844073ebcca89f6ed4f120929012c93811212198148fa6553a1676",
+    "DATA/processed_data/Masa/训练结果/高分旋转负样本视觉头对照_v1/诊断汇总.json": "7374d7adc184b19b8e14da0be0e98f28f2bcf4964183296510db03b4f1c86a6e",
+    "DATA/processed_data/Masa/训练结果/高分旋转负样本视觉头对照_v1/挖掘诊断.json": "645cb1defc365e050b10b9d6a8b3e41379ba911da7cd4638221b42982ed81b6f",
+    "DATA/processed_data/Masa/训练结果/高分旋转负样本视觉头对照_v1/验收结论.json": "3369b734e7ec56194d66d72464361696c71c3180208af34085f98a35ec9cf665",
+    "DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1/接受与失败诊断.json": "b00121f51b19c9da5aef15cab0e043f628a739fc87978a3173d366bb0e523bab"
+  },
+  "script_sha256": "cc3d0313ed1c5af8580de875d062301a8fe7622ef5645ba776e629f6c07a367a",
+  "style_helper_sha256": "6eeefaa84f1ce6a7e8701f2c725c45e055e8f0ff2460b27d0d0041e96777deab",
+  "report_sha256": "419a2340c5c568b278462cca104b227520ea383c5870a75cc77605c844e151be",
+  "figures": [
+    {
+      "id": "25_高分旋转负样本开发成功率与距离",
+      "caption": "高分负旋转头本批SR为88.81%，相同预算均匀负旋转为89.05%。只在拟合源图按原头高分选择相同槽位的旋转负视图，三角配额保持，正样本、探索器、encoder、接受阈值0.50与预算冻结；均匀对照逐参数复现上一轮权重。Masa已知开发28图/140题×3；5×5/B10；白点：三权重，非CI。 SR为成功比例，SG为所有终点平均曼哈顿距离；图示SG两位小数，精确值见报告。",
+      "protocol": "Masa已知开发28图/140题×3；5×5/B10；白点：三权重，非CI。",
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1/对照汇总.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/25_高分旋转负样本开发成功率与距离.pdf",
+          "sha256": "221f6d01b8f61a4a01316b26c57741fd15ab934adf8b90fa47cbb6bf31376476"
+        },
+        {
+          "path": "绘图/数据结果图/25_高分旋转负样本开发成功率与距离.svg",
+          "sha256": "e67348c96076d896ef73398c78a90f7f9f643a022a13d9a2f7126740e903c409"
+        },
+        {
+          "path": "绘图/数据结果图/25_高分旋转负样本开发成功率与距离.png",
+          "sha256": "d4d88302d905ef88fe6f6fbb231a072ef65cedd5ff8649202a57c5f034af2a8b"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_hard_rotation.py"
+    },
+    {
+      "id": "26_高分旋转负样本开发配对收益与保护",
+      "caption": "本批高分挖掘相对均匀负旋转SR变化-0.24点，源文件95%区间[-0.71,+0.00]点。每源文件先平均三权重配对差，再2000次seed3031成组bootstrap；全部六项区间均展示，不声称同时覆盖。开发源文件曾参与方法选择，区间不能当独立test保证；工程判定还检查种子一致性、SG、干净保护与全量重放。",
+      "protocol": "Masa已知开发28图/140题×3；5×5/B10；白点：三权重，非CI。",
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1/对照汇总.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/26_高分旋转负样本开发配对收益与保护.pdf",
+          "sha256": "fa85b9885bba03c84a5d13c1bee8694fae6c1c6cb5b183f51029966bc140aa8d"
+        },
+        {
+          "path": "绘图/数据结果图/26_高分旋转负样本开发配对收益与保护.svg",
+          "sha256": "76f68c3bae4a8f9ec94e6038725d788cf7529bd5dd38527d02ac1d37bce9fa7d"
+        },
+        {
+          "path": "绘图/数据结果图/26_高分旋转负样本开发配对收益与保护.png",
+          "sha256": "a58f507f6228668ce399ca345c93ffd3594f8cc6727b0b10132167287d968383"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_hard_rotation.py"
+    }
+  ],
+  "pre_delivery_QA_repair": {
+    "reason": "round tiny floating zero to +0.00 in annotation only; source evidence unchanged",
+    "first_draft_hashes": {
+      "绘图/数据结果图/25_高分旋转负样本开发成功率与距离.pdf": "a1be263a027b851262de3392a266e6304a0caa5dfe8d6672da8389b9421e7b57",
+      "绘图/数据结果图/25_高分旋转负样本开发成功率与距离.svg": "9924510479c5b787b0d72f8f5cb082931c7467daed46eaba5de9ed3f9faa2c57",
+      "绘图/数据结果图/25_高分旋转负样本开发成功率与距离.png": "d4d88302d905ef88fe6f6fbb231a072ef65cedd5ff8649202a57c5f034af2a8b",
+      "绘图/数据结果图/26_高分旋转负样本开发配对收益与保护.pdf": "0fec9ee01a3496786f7141acf110a9a25585cf108df22250d1134a840d3b7843",
+      "绘图/数据结果图/26_高分旋转负样本开发配对收益与保护.svg": "b4a6d089633d6109b906d3306d78dc5fd6ede57fe232fb71d47bd7ede6ddb526",
+      "绘图/数据结果图/26_高分旋转负样本开发配对收益与保护.png": "386c5f85e1c97c6397abea3895bf7caefcbb42f9141ff1192a71bdfbbb8742e2"
+    }
+  }
+}

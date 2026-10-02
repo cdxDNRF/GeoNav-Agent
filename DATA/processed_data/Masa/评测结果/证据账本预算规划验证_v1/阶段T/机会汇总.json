@@ -1,0 +1,100 @@
+{
+  "T_passed": true,
+  "checks": {
+    "four_diagnostic_states": true,
+    "nonfailure_protection": true,
+    "two_failure_sources": true
+  },
+  "diagnostic_states": [
+    {
+      "baseline_success": false,
+      "elapsed": 7,
+      "episode_id": "dev_img_30_d13_002",
+      "index": 7,
+      "kind": "T_failure",
+      "source_key": "dev_img_30"
+    },
+    {
+      "baseline_success": false,
+      "elapsed": 7,
+      "episode_id": "test_img_5_d13_000",
+      "index": 7,
+      "kind": "T_failure",
+      "source_key": "test_img_5"
+    },
+    {
+      "baseline_success": true,
+      "elapsed": 2,
+      "episode_id": "test_img_3_d13_002",
+      "index": 2,
+      "kind": "fixed2_success",
+      "source_key": "test_img_3"
+    },
+    {
+      "baseline_success": false,
+      "elapsed": 2,
+      "episode_id": "dev_img_64_d15_001",
+      "index": 2,
+      "kind": "fixed2_failure",
+      "source_key": "dev_img_64"
+    }
+  ],
+  "no_new_SR": true,
+  "per_checkpoint": {
+    "0": {
+      "earliest_elapsed": 2,
+      "new_failure_source_count": 20,
+      "new_failure_trigger_tasks": 111,
+      "new_success_trigger_tasks": 372,
+      "new_trigger_tasks": 483,
+      "old_failure_trigger_tasks": 12,
+      "old_trigger_tasks": 158,
+      "original_failures": 115,
+      "original_successes": 385,
+      "remaining_min": 13,
+      "tasks": 500,
+      "trigger_reason_counts": {
+        "checkpoint": 471,
+        "stagnation": 12
+      }
+    },
+    "1": {
+      "earliest_elapsed": 2,
+      "new_failure_source_count": 20,
+      "new_failure_trigger_tasks": 87,
+      "new_success_trigger_tasks": 388,
+      "new_trigger_tasks": 475,
+      "old_failure_trigger_tasks": 5,
+      "old_trigger_tasks": 122,
+      "original_failures": 93,
+      "original_successes": 407,
+      "remaining_min": 7,
+      "tasks": 500,
+      "trigger_reason_counts": {
+        "checkpoint": 467,
+        "stagnation": 8
+      }
+    },
+    "2": {
+      "earliest_elapsed": 2,
+      "new_failure_source_count": 20,
+      "new_failure_trigger_tasks": 129,
+      "new_success_trigger_tasks": 351,
+      "new_trigger_tasks": 480,
+      "old_failure_trigger_tasks": 12,
+      "old_trigger_tasks": 151,
+      "original_failures": 135,
+      "original_successes": 365,
+      "remaining_min": 5,
+      "tasks": 500,
+      "trigger_reason_counts": {
+        "checkpoint": 462,
+        "stagnation": 18
+      }
+    }
+  },
+  "protected_success_tasks": 361,
+  "truth_only_posthoc": true,
+  "zero_model_calls": true,
+  "zero_navigation_replay": true
+}

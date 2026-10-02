@@ -1,0 +1,14 @@
+{
+  "counterexample": "development Edge_s0 train_img_107_d5_002; four identical PNGs and identical probabilities",
+  "only_audit_label_reconstruction_changed": true,
+  "original_audit_sha256": "e25ebcde22971bee4597b527f4ab8fb9db038f90e1afa141502e8b4a7179a4f1",
+  "original_error": "all four pixel-derived candidates[0].relative_clockwise: expected 270, got 0",
+  "policy_or_results_or_original_audit_changed": false,
+  "reason": "Identical rotated PNGs have equal SHA; stable production sort preserves relative angle input order. Original audit assumed absolute angle order and falsely rejected labels. Pixel-derived scores and actions unchanged.",
+  "regression_tests_run": 2,
+  "repair_sha256": "eee777c2532d3d3e55050f00511dfc48f2351bae25650ba7628930d2f5629e8b",
+  "repaired_function_after_sha256": "32d89ddca46fb12fafabda0cae59ade7c9501d84327674c4e263b23823883d4f",
+  "repaired_function_before_sha256": "fe1e5edb69227175d7648efe151b3abe0329158ec8147d85602fd8383e05245c",
+  "rerun_saved_experiment": false,
+  "tests_passed": true
+}

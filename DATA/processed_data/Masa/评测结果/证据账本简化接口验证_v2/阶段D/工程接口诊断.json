@@ -1,0 +1,143 @@
+{
+  "passed": true,
+  "records": [
+    {
+      "all_responses_valid": true,
+      "arm": "M4",
+      "call_ids": [
+        1,
+        2
+      ],
+      "evidence": {
+        "normalization_receipt": [],
+        "ranked_candidates": [
+          "c03",
+          "c05",
+          "c02"
+        ],
+        "source_ids": [],
+        "visual_relation": "unknown"
+      },
+      "input_sha256": "9b8a32d1105b6a538c4dbdf6f8f2e3046eec62d2cca84a3f78ce26474090de72",
+      "phase": "engineering",
+      "plan": {
+        "candidate_id": "c03",
+        "consumed_message_id": "m0",
+        "evidence_ids": [
+          "g:c03",
+          "m0"
+        ],
+        "expected_new_cells": 2,
+        "normalization_receipt": [],
+        "proposal_type": "exploration_plan",
+        "stop_condition": "after_option_or_new_cue"
+      },
+      "repeat": null,
+      "state": 0,
+      "status": {
+        "candidate_id": "c03",
+        "executable": true,
+        "reason": "legal_exploration",
+        "score": [
+          2,
+          0,
+          3,
+          -2
+        ]
+      }
+    },
+    {
+      "all_responses_valid": true,
+      "arm": "M4",
+      "call_ids": [
+        3,
+        4
+      ],
+      "evidence": {
+        "normalization_receipt": [],
+        "ranked_candidates": [
+          "c06",
+          "c07",
+          "c08"
+        ],
+        "source_ids": [],
+        "visual_relation": "unknown"
+      },
+      "input_sha256": "3537035cf46c038ee447973b89ccacf4105ffc8d786dac1273b0f2b142ba025a",
+      "phase": "engineering",
+      "plan": {
+        "candidate_id": "c06",
+        "consumed_message_id": "m0",
+        "evidence_ids": [
+          "g:c06",
+          "m0"
+        ],
+        "expected_new_cells": 2,
+        "normalization_receipt": [],
+        "proposal_type": "exploration_plan",
+        "stop_condition": "after_option_or_new_cue"
+      },
+      "repeat": null,
+      "state": 1,
+      "status": {
+        "candidate_id": "c06",
+        "executable": true,
+        "reason": "legal_exploration",
+        "score": [
+          2,
+          0,
+          3,
+          -2
+        ]
+      }
+    },
+    {
+      "all_responses_valid": true,
+      "arm": "M4",
+      "call_ids": [
+        5,
+        6
+      ],
+      "evidence": {
+        "normalization_receipt": [],
+        "ranked_candidates": [
+          "c02",
+          "c04",
+          "c06"
+        ],
+        "source_ids": [
+          "target",
+          "current"
+        ],
+        "visual_relation": "different"
+      },
+      "input_sha256": "5b7703bb0d48edb1274193d3f3c5cc300d7962795e10f1c20a3c799a2ea8bc33",
+      "phase": "engineering",
+      "plan": {
+        "candidate_id": "c02",
+        "consumed_message_id": "m0",
+        "evidence_ids": [
+          "g:c02",
+          "m0"
+        ],
+        "expected_new_cells": 2,
+        "normalization_receipt": [],
+        "proposal_type": "exploration_plan",
+        "stop_condition": "after_option_or_new_cue"
+      },
+      "repeat": null,
+      "state": 2,
+      "status": {
+        "candidate_id": "c02",
+        "executable": true,
+        "reason": "legal_exploration",
+        "score": [
+          2,
+          0,
+          3,
+          -2
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,697 @@
+{
+  "code_sha256": {
+    "data/make_episodes.py": "2d82caf923a0073bdb111e0b673127a9fa4945ca281117d2d114dc1b4598420e",
+    "env/environment.py": "ad19a173945f86ed04b18c0f5365e543217688d124271f51bc05f2747af92b5b",
+    "env/episode.py": "3c85105ae7bf8efb90f1726e695c8db90e03544de342c874c08eb166e8019502",
+    "eval/evaluate.py": "c8ba4f434d0b3ed2bff24c09af368431b42d503e64233228e9d8c4fa42de7279"
+  },
+  "log_access": "仅评测端，包含目标坐标，不得传给策略",
+  "metric_definitions": {
+    "macro": "各episode重复访问率的算术平均",
+    "micro": "重复访问动作总数/已执行动作总数",
+    "repeat": "动作后落点曾被访问则记1，含越界原地；起始格不计分母",
+    "sg": "最终到目标曼哈顿距离，对全部episode平均，成功episode为0",
+    "sr": "首次到达目标的episode数/总episode数；最后一步到达算成功",
+    "steps": "全部执行动作，含越界；不包含reset"
+  },
+  "per_seed": {
+    "test/seed_0": {
+      "all": {
+        "episodes": 250,
+        "mean_sg_all_episodes": 4.132,
+        "mean_steps": 9.936,
+        "out_of_bounds_rate": 0.22020933977455717,
+        "repeat_visit_rate_macro": 0.4951777777777778,
+        "repeat_visit_rate_micro": 0.4975845410628019,
+        "sr": 0.032,
+        "successes": 8
+      },
+      "by_distance": {
+        "4": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 2.92,
+          "mean_steps": 9.8,
+          "out_of_bounds_rate": 0.19183673469387755,
+          "repeat_visit_rate_macro": 0.47088888888888886,
+          "repeat_visit_rate_micro": 0.47959183673469385,
+          "sr": 0.1,
+          "successes": 5
+        },
+        "5": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 3.54,
+          "mean_steps": 9.92,
+          "out_of_bounds_rate": 0.19959677419354838,
+          "repeat_visit_rate_macro": 0.46599999999999997,
+          "repeat_visit_rate_micro": 0.46774193548387094,
+          "sr": 0.04,
+          "successes": 2
+        },
+        "6": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 4.08,
+          "mean_steps": 9.96,
+          "out_of_bounds_rate": 0.2570281124497992,
+          "repeat_visit_rate_macro": 0.535,
+          "repeat_visit_rate_micro": 0.536144578313253,
+          "sr": 0.02,
+          "successes": 1
+        },
+        "7": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 4.96,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.216,
+          "repeat_visit_rate_macro": 0.514,
+          "repeat_visit_rate_micro": 0.514,
+          "sr": 0.0,
+          "successes": 0
+        },
+        "8": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 5.16,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.236,
+          "repeat_visit_rate_macro": 0.49,
+          "repeat_visit_rate_micro": 0.49,
+          "sr": 0.0,
+          "successes": 0
+        }
+      }
+    },
+    "test/seed_1": {
+      "all": {
+        "episodes": 250,
+        "mean_sg_all_episodes": 4.384,
+        "mean_steps": 9.944,
+        "out_of_bounds_rate": 0.24296057924376507,
+        "repeat_visit_rate_macro": 0.5243492063492063,
+        "repeat_visit_rate_micro": 0.5261464199517297,
+        "sr": 0.028,
+        "successes": 7
+      },
+      "by_distance": {
+        "4": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 3.58,
+          "mean_steps": 9.76,
+          "out_of_bounds_rate": 0.17827868852459017,
+          "repeat_visit_rate_macro": 0.5121904761904762,
+          "repeat_visit_rate_micro": 0.5204918032786885,
+          "sr": 0.06,
+          "successes": 3
+        },
+        "5": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 3.88,
+          "mean_steps": 9.98,
+          "out_of_bounds_rate": 0.22645290581162325,
+          "repeat_visit_rate_macro": 0.4888888888888889,
+          "repeat_visit_rate_micro": 0.48897795591182364,
+          "sr": 0.02,
+          "successes": 1
+        },
+        "6": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 4.16,
+          "mean_steps": 9.98,
+          "out_of_bounds_rate": 0.24248496993987975,
+          "repeat_visit_rate_macro": 0.5426666666666666,
+          "repeat_visit_rate_micro": 0.5430861723446894,
+          "sr": 0.06,
+          "successes": 3
+        },
+        "7": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 5.12,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.308,
+          "repeat_visit_rate_macro": 0.548,
+          "repeat_visit_rate_micro": 0.548,
+          "sr": 0.0,
+          "successes": 0
+        },
+        "8": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 5.18,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.258,
+          "repeat_visit_rate_macro": 0.53,
+          "repeat_visit_rate_micro": 0.53,
+          "sr": 0.0,
+          "successes": 0
+        }
+      }
+    },
+    "test/seed_2": {
+      "all": {
+        "episodes": 250,
+        "mean_sg_all_episodes": 4.548,
+        "mean_steps": 9.888,
+        "out_of_bounds_rate": 0.23179611650485438,
+        "repeat_visit_rate_macro": 0.5112126984126985,
+        "repeat_visit_rate_micro": 0.514967637540453,
+        "sr": 0.044,
+        "successes": 11
+      },
+      "by_distance": {
+        "4": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 3.28,
+          "mean_steps": 9.62,
+          "out_of_bounds_rate": 0.1600831600831601,
+          "repeat_visit_rate_macro": 0.4576825396825397,
+          "repeat_visit_rate_micro": 0.4677754677754678,
+          "sr": 0.16,
+          "successes": 8
+        },
+        "5": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 4.1,
+          "mean_steps": 9.84,
+          "out_of_bounds_rate": 0.21747967479674796,
+          "repeat_visit_rate_macro": 0.4757142857142857,
+          "repeat_visit_rate_micro": 0.4817073170731707,
+          "sr": 0.04,
+          "successes": 2
+        },
+        "6": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 4.28,
+          "mean_steps": 9.98,
+          "out_of_bounds_rate": 0.28256513026052105,
+          "repeat_visit_rate_macro": 0.5326666666666666,
+          "repeat_visit_rate_micro": 0.533066132264529,
+          "sr": 0.02,
+          "successes": 1
+        },
+        "7": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 5.52,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.22,
+          "repeat_visit_rate_macro": 0.526,
+          "repeat_visit_rate_micro": 0.526,
+          "sr": 0.0,
+          "successes": 0
+        },
+        "8": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 5.56,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.276,
+          "repeat_visit_rate_macro": 0.5640000000000001,
+          "repeat_visit_rate_micro": 0.564,
+          "sr": 0.0,
+          "successes": 0
+        }
+      }
+    },
+    "test/seed_3": {
+      "all": {
+        "episodes": 250,
+        "mean_sg_all_episodes": 4.5,
+        "mean_steps": 9.892,
+        "out_of_bounds_rate": 0.24585523655479175,
+        "repeat_visit_rate_macro": 0.5223444444444444,
+        "repeat_visit_rate_micro": 0.5272947836635665,
+        "sr": 0.044,
+        "successes": 11
+      },
+      "by_distance": {
+        "4": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 3.32,
+          "mean_steps": 9.62,
+          "out_of_bounds_rate": 0.23492723492723494,
+          "repeat_visit_rate_macro": 0.4995,
+          "repeat_visit_rate_micro": 0.5155925155925156,
+          "sr": 0.1,
+          "successes": 5
+        },
+        "5": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 4.04,
+          "mean_steps": 9.9,
+          "out_of_bounds_rate": 0.2080808080808081,
+          "repeat_visit_rate_macro": 0.488,
+          "repeat_visit_rate_micro": 0.49292929292929294,
+          "sr": 0.04,
+          "successes": 2
+        },
+        "6": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 4.26,
+          "mean_steps": 9.94,
+          "out_of_bounds_rate": 0.2535211267605634,
+          "repeat_visit_rate_macro": 0.5202222222222223,
+          "repeat_visit_rate_micro": 0.5231388329979879,
+          "sr": 0.06,
+          "successes": 3
+        },
+        "7": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 5.1,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.258,
+          "repeat_visit_rate_macro": 0.532,
+          "repeat_visit_rate_micro": 0.532,
+          "sr": 0.0,
+          "successes": 0
+        },
+        "8": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 5.78,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.274,
+          "repeat_visit_rate_macro": 0.572,
+          "repeat_visit_rate_micro": 0.572,
+          "sr": 0.02,
+          "successes": 1
+        }
+      }
+    },
+    "test/seed_4": {
+      "all": {
+        "episodes": 250,
+        "mean_sg_all_episodes": 4.448,
+        "mean_steps": 9.916,
+        "out_of_bounds_rate": 0.25131101250504234,
+        "repeat_visit_rate_macro": 0.5347047619047619,
+        "repeat_visit_rate_micro": 0.5381202097620008,
+        "sr": 0.032,
+        "successes": 8
+      },
+      "by_distance": {
+        "4": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 3.34,
+          "mean_steps": 9.76,
+          "out_of_bounds_rate": 0.2192622950819672,
+          "repeat_visit_rate_macro": 0.4881904761904762,
+          "repeat_visit_rate_micro": 0.4959016393442623,
+          "sr": 0.1,
+          "successes": 5
+        },
+        "5": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 3.88,
+          "mean_steps": 9.82,
+          "out_of_bounds_rate": 0.23014256619144602,
+          "repeat_visit_rate_macro": 0.5133333333333333,
+          "repeat_visit_rate_micro": 0.5213849287169042,
+          "sr": 0.04,
+          "successes": 2
+        },
+        "6": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 4.1,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.23,
+          "repeat_visit_rate_macro": 0.522,
+          "repeat_visit_rate_micro": 0.522,
+          "sr": 0.02,
+          "successes": 1
+        },
+        "7": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 5.38,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.27,
+          "repeat_visit_rate_macro": 0.572,
+          "repeat_visit_rate_micro": 0.572,
+          "sr": 0.0,
+          "successes": 0
+        },
+        "8": {
+          "episodes": 50,
+          "mean_sg_all_episodes": 5.54,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.306,
+          "repeat_visit_rate_macro": 0.578,
+          "repeat_visit_rate_micro": 0.578,
+          "sr": 0.0,
+          "successes": 0
+        }
+      }
+    },
+    "val/seed_0": {
+      "all": {
+        "episodes": 100,
+        "mean_sg_all_episodes": 4.03,
+        "mean_steps": 9.88,
+        "out_of_bounds_rate": 0.2074898785425101,
+        "repeat_visit_rate_macro": 0.5082222222222222,
+        "repeat_visit_rate_micro": 0.5131578947368421,
+        "sr": 0.06,
+        "successes": 6
+      },
+      "by_distance": {
+        "4": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 2.95,
+          "mean_steps": 9.65,
+          "out_of_bounds_rate": 0.19689119170984457,
+          "repeat_visit_rate_macro": 0.49166666666666664,
+          "repeat_visit_rate_micro": 0.5077720207253886,
+          "sr": 0.15,
+          "successes": 3
+        },
+        "5": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 3.45,
+          "mean_steps": 9.75,
+          "out_of_bounds_rate": 0.15384615384615385,
+          "repeat_visit_rate_macro": 0.4494444444444444,
+          "repeat_visit_rate_micro": 0.4564102564102564,
+          "sr": 0.1,
+          "successes": 2
+        },
+        "6": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 3.85,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.205,
+          "repeat_visit_rate_macro": 0.53,
+          "repeat_visit_rate_micro": 0.53,
+          "sr": 0.05,
+          "successes": 1
+        },
+        "7": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 5.05,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.205,
+          "repeat_visit_rate_macro": 0.54,
+          "repeat_visit_rate_micro": 0.54,
+          "sr": 0.0,
+          "successes": 0
+        },
+        "8": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 4.85,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.275,
+          "repeat_visit_rate_macro": 0.53,
+          "repeat_visit_rate_micro": 0.53,
+          "sr": 0.0,
+          "successes": 0
+        }
+      }
+    },
+    "val/seed_1": {
+      "all": {
+        "episodes": 100,
+        "mean_sg_all_episodes": 4.26,
+        "mean_steps": 9.9,
+        "out_of_bounds_rate": 0.22828282828282828,
+        "repeat_visit_rate_macro": 0.49533333333333335,
+        "repeat_visit_rate_micro": 0.49797979797979797,
+        "sr": 0.07,
+        "successes": 7
+      },
+      "by_distance": {
+        "4": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 3.7,
+          "mean_steps": 9.8,
+          "out_of_bounds_rate": 0.1836734693877551,
+          "repeat_visit_rate_macro": 0.4066666666666667,
+          "repeat_visit_rate_micro": 0.40816326530612246,
+          "sr": 0.15,
+          "successes": 3
+        },
+        "5": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 3.15,
+          "mean_steps": 9.8,
+          "out_of_bounds_rate": 0.1989795918367347,
+          "repeat_visit_rate_macro": 0.43,
+          "repeat_visit_rate_micro": 0.4336734693877551,
+          "sr": 0.15,
+          "successes": 3
+        },
+        "6": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 3.85,
+          "mean_steps": 9.9,
+          "out_of_bounds_rate": 0.2474747474747475,
+          "repeat_visit_rate_macro": 0.52,
+          "repeat_visit_rate_micro": 0.5252525252525253,
+          "sr": 0.05,
+          "successes": 1
+        },
+        "7": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 5.3,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.22,
+          "repeat_visit_rate_macro": 0.535,
+          "repeat_visit_rate_micro": 0.535,
+          "sr": 0.0,
+          "successes": 0
+        },
+        "8": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 5.3,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.29,
+          "repeat_visit_rate_macro": 0.585,
+          "repeat_visit_rate_micro": 0.585,
+          "sr": 0.0,
+          "successes": 0
+        }
+      }
+    },
+    "val/seed_2": {
+      "all": {
+        "episodes": 100,
+        "mean_sg_all_episodes": 4.39,
+        "mean_steps": 9.97,
+        "out_of_bounds_rate": 0.24473420260782347,
+        "repeat_visit_rate_macro": 0.5438571428571428,
+        "repeat_visit_rate_micro": 0.5446339017051154,
+        "sr": 0.03,
+        "successes": 3
+      },
+      "by_distance": {
+        "4": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 3.35,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.195,
+          "repeat_visit_rate_macro": 0.53,
+          "repeat_visit_rate_micro": 0.53,
+          "sr": 0.05,
+          "successes": 1
+        },
+        "5": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 3.35,
+          "mean_steps": 9.85,
+          "out_of_bounds_rate": 0.2131979695431472,
+          "repeat_visit_rate_macro": 0.4542857142857143,
+          "repeat_visit_rate_micro": 0.45685279187817257,
+          "sr": 0.1,
+          "successes": 2
+        },
+        "6": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 4.35,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.235,
+          "repeat_visit_rate_macro": 0.6,
+          "repeat_visit_rate_micro": 0.6,
+          "sr": 0.0,
+          "successes": 0
+        },
+        "7": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 5.25,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.285,
+          "repeat_visit_rate_macro": 0.5549999999999999,
+          "repeat_visit_rate_micro": 0.555,
+          "sr": 0.0,
+          "successes": 0
+        },
+        "8": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 5.65,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.295,
+          "repeat_visit_rate_macro": 0.58,
+          "repeat_visit_rate_micro": 0.58,
+          "sr": 0.0,
+          "successes": 0
+        }
+      }
+    },
+    "val/seed_3": {
+      "all": {
+        "episodes": 100,
+        "mean_sg_all_episodes": 4.13,
+        "mean_steps": 9.88,
+        "out_of_bounds_rate": 0.22975708502024292,
+        "repeat_visit_rate_macro": 0.5013611111111111,
+        "repeat_visit_rate_micro": 0.5050607287449392,
+        "sr": 0.09,
+        "successes": 9
+      },
+      "by_distance": {
+        "4": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 3.7,
+          "mean_steps": 9.7,
+          "out_of_bounds_rate": 0.2268041237113402,
+          "repeat_visit_rate_macro": 0.49722222222222223,
+          "repeat_visit_rate_micro": 0.5051546391752577,
+          "sr": 0.2,
+          "successes": 4
+        },
+        "5": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 3.45,
+          "mean_steps": 9.8,
+          "out_of_bounds_rate": 0.14795918367346939,
+          "repeat_visit_rate_macro": 0.47333333333333333,
+          "repeat_visit_rate_micro": 0.47959183673469385,
+          "sr": 0.1,
+          "successes": 2
+        },
+        "6": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 3.1,
+          "mean_steps": 9.9,
+          "out_of_bounds_rate": 0.21212121212121213,
+          "repeat_visit_rate_macro": 0.45125,
+          "repeat_visit_rate_micro": 0.45454545454545453,
+          "sr": 0.1,
+          "successes": 2
+        },
+        "7": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 5.1,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.28,
+          "repeat_visit_rate_macro": 0.535,
+          "repeat_visit_rate_micro": 0.535,
+          "sr": 0.0,
+          "successes": 0
+        },
+        "8": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 5.3,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.28,
+          "repeat_visit_rate_macro": 0.55,
+          "repeat_visit_rate_micro": 0.55,
+          "sr": 0.05,
+          "successes": 1
+        }
+      }
+    },
+    "val/seed_4": {
+      "all": {
+        "episodes": 100,
+        "mean_sg_all_episodes": 4.84,
+        "mean_steps": 10,
+        "out_of_bounds_rate": 0.26,
+        "repeat_visit_rate_macro": 0.5569999999999999,
+        "repeat_visit_rate_micro": 0.557,
+        "sr": 0.01,
+        "successes": 1
+      },
+      "by_distance": {
+        "4": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 4.4,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.18,
+          "repeat_visit_rate_macro": 0.485,
+          "repeat_visit_rate_micro": 0.485,
+          "sr": 0.0,
+          "successes": 0
+        },
+        "5": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 3.95,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.205,
+          "repeat_visit_rate_macro": 0.545,
+          "repeat_visit_rate_micro": 0.545,
+          "sr": 0.05,
+          "successes": 1
+        },
+        "6": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 4.35,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.275,
+          "repeat_visit_rate_macro": 0.58,
+          "repeat_visit_rate_micro": 0.58,
+          "sr": 0.0,
+          "successes": 0
+        },
+        "7": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 5.45,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.295,
+          "repeat_visit_rate_macro": 0.585,
+          "repeat_visit_rate_micro": 0.585,
+          "sr": 0.0,
+          "successes": 0
+        },
+        "8": {
+          "episodes": 20,
+          "mean_sg_all_episodes": 6.05,
+          "mean_steps": 10,
+          "out_of_bounds_rate": 0.345,
+          "repeat_visit_rate_macro": 0.59,
+          "repeat_visit_rate_micro": 0.59,
+          "sr": 0.0,
+          "successes": 0
+        }
+      }
+    }
+  },
+  "policy": "uniform_random_four_actions",
+  "protocol": "masa-local-grid5-v2",
+  "runtime": {
+    "pillow": "12.1.1",
+    "python": "3.13.12"
+  },
+  "scope": "基础回归验证；本地配置，非论文复现和模型效果结论",
+  "seed_stability": {
+    "test": {
+      "note": "跨随机种子的描述统计，不是置信区间或独立地图样本数",
+      "seeds": 5,
+      "sr_mean": 0.036,
+      "sr_population_std": 0.0066932802122726025
+    },
+    "val": {
+      "note": "跨随机种子的描述统计，不是置信区间或独立地图样本数",
+      "seeds": 5,
+      "sr_mean": 0.052,
+      "sr_population_std": 0.0285657137141714
+    }
+  },
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "task_manifest_sha256": {
+    "test": "0eb94408cf845c244ec835d54b54fa05de1e81abe462bf236e0c9e346c7b0f56",
+    "val": "668519ad518dbf8d564d1adc54b84e669430c43384672dd0100f02ab421cfee5"
+  },
+  "task_sha256": {
+    "test": "925cecefc32edecc4b5deb79a009a3c3d84cadfaded93ec91aed1ce6b8c485f8",
+    "val": "91bfe1bbda6ff775fe1bdf2d396191aa64fdfd1c8e0603086319e3317cfdb8be"
+  },
+  "tests_sha256": "491321aedb4a54eef88db00fb8a0dcdd5c3442793b8527b51a8585500f0ec1ba",
+  "trajectory_sha256": "1a12cabc023d17d14bb45bdd587cc36f422616799142297ae3740c4e17ddc656"
+}

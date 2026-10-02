@@ -1,0 +1,92 @@
+{
+  "checkpoint": "model.pt",
+  "config": {
+    "curiosity_lambda_min": 0.1,
+    "curiosity_weight": 0.1,
+    "device": "cuda",
+    "episodes_per_epoch": 1000,
+    "epochs": 4,
+    "gamma": 0.99,
+    "learning_rate": 0.0003,
+    "mode": "ppo_pbrs_curiosity",
+    "pbrs_beta": 0.5,
+    "seed": 0
+  },
+  "data": {
+    "train_embedding_sha256": "50ea69c4f6b98bf456163c2b37f9d7e83bd78180398f268e6ece5f3c2ecbdb67",
+    "train_episodes": 3425,
+    "train_task_sha256": "e8ac9ea43df601e76addefee80e5897870cf7e859aec184b8bb92d7cf22d2a1b",
+    "val_embedding_sha256": "2f156d63363a47f3e4e4e7fe6ee3e1ac9466526910f7c38a050dc0142099405f",
+    "val_episodes": 100,
+    "val_task_sha256": "91bfe1bbda6ff775fe1bdf2d396191aa64fdfd1c8e0603086319e3317cfdb8be"
+  },
+  "history": [
+    {
+      "epoch": 1,
+      "loss": 0.059046982513631094,
+      "successes": 0,
+      "transitions": 8581
+    },
+    {
+      "epoch": 2,
+      "loss": 0.04903496527934775,
+      "successes": 0,
+      "transitions": 8678
+    },
+    {
+      "epoch": 3,
+      "loss": 0.04347850924306032,
+      "successes": 0,
+      "transitions": 8756
+    },
+    {
+      "epoch": 4,
+      "loss": 0.061238064560004406,
+      "successes": 0,
+      "transitions": 8725
+    }
+  ],
+  "model": {
+    "class": "TinyPolicy",
+    "feature_dim": 1052,
+    "inference_goal_fields": false,
+    "parameters": 797701
+  },
+  "target_used_only_for_training": true,
+  "val": {
+    "by_distance": {
+      "4": {
+        "episodes": 20,
+        "sg": 3.05,
+        "sr": 0.1
+      },
+      "5": {
+        "episodes": 20,
+        "sg": 1.75,
+        "sr": 0.25
+      },
+      "6": {
+        "episodes": 20,
+        "sg": 1.9,
+        "sr": 0.1
+      },
+      "7": {
+        "episodes": 20,
+        "sg": 1.8,
+        "sr": 0.25
+      },
+      "8": {
+        "episodes": 20,
+        "sg": 0.85,
+        "sr": 0.45
+      }
+    },
+    "episodes": 100,
+    "repeat_visit_rate": 0.305952380952381,
+    "sg": 1.87,
+    "split": "val",
+    "sr": 0.23,
+    "successes": 23
+  },
+  "version": "tiny-dyncur-v1"
+}

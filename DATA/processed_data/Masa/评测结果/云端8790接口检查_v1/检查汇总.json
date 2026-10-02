@@ -1,0 +1,38 @@
+{
+  "default_changed": false,
+  "generation_requests": 9,
+  "model_list_requests": 1,
+  "models": {
+    "buddy/deepseek-v4.1-flash": {
+      "image_correct": 0,
+      "image_requests": 2,
+      "limited_visual_check_passed": false,
+      "returned_models": [
+        "buddy/deepseek-v4.1-flash"
+      ],
+      "text_passed": true
+    },
+    "buddy/glm-5.3-flash": {
+      "image_correct": 1,
+      "image_requests": 2,
+      "limited_visual_check_passed": false,
+      "returned_models": [
+        "buddy/glm-5.3-flash"
+      ],
+      "text_passed": true
+    },
+    "qoder/qfmodel": {
+      "image_correct": 0,
+      "image_requests": 2,
+      "limited_visual_check_passed": false,
+      "returned_models": [
+        "None",
+        "qoder/qfmodel"
+      ],
+      "text_passed": true
+    }
+  },
+  "new_navigation_episodes": 0,
+  "scope": "bounded text and synthetic counterfactual image diagnostics only; no navigation or collaboration gain claim",
+  "successful_http": 8
+}

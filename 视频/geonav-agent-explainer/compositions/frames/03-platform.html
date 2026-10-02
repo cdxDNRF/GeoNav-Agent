@@ -1,0 +1,537 @@
+<template>
+  <style>/*localfont-injected*/@font-face{font-family:'Noto Sans SC';src:local('Noto Sans SC');}@font-face{font-family:'Microsoft YaHei';src:local('Microsoft YaHei');}@font-face{font-family:'PingFang SC';src:local('PingFang SC');}@font-face{font-family:'Noto Serif SC';src:local('Noto Serif SC');}@font-face{font-family:'SimSun';src:local('SimSun');}@font-face{font-family:'Songti SC';src:local('Songti SC');}@font-face{font-family:'DM Mono';src:local('DM Mono');}@font-face{font-family:'Newsreader';src:local('Newsreader');}@font-face{font-family:'Hanken Grotesk';src:local('Hanken Grotesk');}
+    /* ============================================================
+       Frame 03 — 平台与评测：工程底线  (dataviz-countup, adapt)
+       Cobalt Grid frame layer: cream paper + cobalt ink only,
+       permanent graph grid, top/bottom hairlines, 0 radius.
+       Canvas 1920x1080 · duration 27.737s · captions keep-out y<=896.
+       ============================================================ */
+
+    #root {
+      position: relative;
+      width: 1920px;
+      height: 1080px;
+      overflow: hidden;
+      container-type: size;
+      color: #1F2BE0;
+      font-family: "Hanken Grotesk", "Noto Sans SC", "Microsoft YaHei", sans-serif;
+      font-weight: 400;
+    }
+
+    /* ---------- full-bleed ground (clip, track 0) ---------- */
+    #root .f03-bg {
+      position: absolute;
+      inset: 0;
+      background-color: #F0EBDE;
+      background-image:
+        linear-gradient(to right, rgba(31, 43, 224, 0.10) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(31, 43, 224, 0.10) 1px, transparent 1px);
+      background-size: 38.4px 38.4px;
+    }
+    .f03-hairline {
+      position: absolute;
+      left: 77px;
+      width: 1766px;
+      height: 2.5px;
+      background: #1F2BE0;
+    }
+    .f03-metaline {
+      position: absolute;
+      top: 842px;
+      font-family: "DM Mono", "Courier New", monospace;
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      opacity: 0.85;
+    }
+
+    /* ---------- camera stage (clip, track 1) ---------- */
+    .f03-stage { position: absolute; inset: 0; }
+    .f03-camera {
+      position: absolute;
+      inset: 0;
+      transform-origin: 50% 50%;
+      will-change: transform;
+    }
+    .f03-board { position: absolute; inset: 0; }
+
+    /* depth-of-field groups (blur driven by --dof, seek-safe) */
+    .f03-dof {
+      --dof: 0px;
+      filter: blur(var(--dof));
+      will-change: filter, opacity;
+    }
+
+    /* ---------- type roles ---------- */
+    .f03-serif { font-family: "Newsreader", "Noto Serif SC", "SimSun", serif; font-weight: 400; }
+    .f03-mono  { font-family: "DM Mono", "Courier New", monospace; letter-spacing: 0.12em; font-variant-numeric: tabular-nums; }
+    .f03-num   { font-variant-numeric: tabular-nums; }
+
+    /* ---------- topbar (header) ---------- */
+    .f03-topbar { position: absolute; left: 77px; top: 76px; width: 1766px; height: 82px; }
+    .f03-kicker {
+      position: absolute; left: 0; top: -6px;
+      font-size: 15px; letter-spacing: 0.16em;
+    }
+    .f03-title {
+      position: absolute; left: 0; top: 30px;
+      font-size: 46px; line-height: 1.05; letter-spacing: 0.01em;
+    }
+    .f03-fig {
+      position: absolute; right: 0; top: 26px;
+      font-size: 15px; letter-spacing: 0.14em; text-align: right;
+    }
+    .f03-toprule {
+      position: absolute; left: 77px; top: 158px;
+      width: 1766px; height: 2.5px; background: #1F2BE0;
+    }
+
+    /* ---------- flow line 预登记 → 冻结 → 审计 ---------- */
+    .f03-flow { position: absolute; left: 77px; top: 176px; width: 1766px; height: 62px; }
+    .f03-flowline {
+      position: absolute; left: 0; top: 14px;
+      width: 1766px; height: 2px; background: rgba(31, 43, 224, 0.18);
+    }
+    .f03-node {
+      position: absolute; top: 8px;
+      width: 14px; height: 14px; background: #1F2BE0;
+      outline: 3px solid #F0EBDE;
+    }
+    .f03-nodelabel { position: absolute; top: 30px; white-space: nowrap; }
+    .f03-nodelabel .f03-zh { font-size: 23px; font-weight: 600; margin-right: 10px; }
+    .f03-nodelabel .f03-mono { font-size: 13px; opacity: 0.75; }
+
+    /* ---------- zone A: dual-channel diagram ---------- */
+    .f03-zoneA { position: absolute; left: 0; top: 248px; width: 1920px; height: 264px; }
+    .f03-box {
+      position: absolute; top: 34px;
+      width: 600px; height: 180px;
+      border: 3px solid #1F2BE0; background: #E6E0CE;
+    }
+    .f03-boxL { left: 168px; }
+    .f03-boxR { left: 1152px; }
+    .f03-boxtag { position: absolute; left: 28px; top: 18px; font-size: 14px; letter-spacing: 0.16em; }
+    .f03-boxtitle { position: absolute; left: 28px; top: 42px; font-size: 48px; line-height: 1.1; }
+    .f03-boxsub { position: absolute; left: 28px; top: 110px; font-size: 29px; font-weight: 600; }
+    .f03-lock { position: absolute; right: 30px; top: 29px; width: 104px; height: 122px; overflow: visible; }
+    .f03-lock path { fill: none; stroke: #1F2BE0; stroke-width: 7; stroke-linecap: square; stroke-linejoin: miter; }
+
+    .f03-arrowlabel {
+      position: absolute; left: 768px; top: 52px; width: 384px;
+      text-align: center; white-space: nowrap;
+    }
+    .f03-arrowlabel .f03-zh { font-size: 26px; font-weight: 600; margin-right: 10px; }
+    .f03-arrowlabel .f03-mono { font-size: 20px; }
+    .f03-arrow { position: absolute; left: 768px; top: 104px; width: 384px; height: 40px; }
+    .f03-arrow path { fill: none; stroke: #1F2BE0; stroke-width: 2.5; }
+    .f03-ahead {
+      position: absolute; left: 340px; top: 6px; width: 0; height: 0;
+      border-top: 14px solid transparent;
+      border-bottom: 14px solid transparent;
+      border-left: 26px solid #1F2BE0;
+    }
+
+    /* ---------- zone B: metric cards ---------- */
+    .f03-zoneB { position: absolute; left: 0; top: 528px; width: 1920px; height: 184px; }
+    .f03-card {
+      position: absolute; top: 0;
+      width: 848px; height: 184px;
+      border: 3px solid #1F2BE0; background: #F0EBDE;
+    }
+    .f03-cardSR { left: 77px; }
+    .f03-cardSG { left: 995px; }
+    .f03-cardhead {
+      position: absolute; left: 26px; right: 26px; top: 18px;
+      display: flex; align-items: baseline; gap: 16px;
+    }
+    .f03-cardtag { font-size: 14px; letter-spacing: 0.16em; opacity: 0.85; }
+    .f03-cardtitle { font-size: 28px; font-weight: 600; letter-spacing: 0.02em; }
+    .f03-note { margin-left: auto; font-size: 22px; color: #515CDB; }
+
+    /* SR segmented bars C4–C8 (equal width, ink outline, fill scales in) */
+    .f03-segbar { position: absolute; left: 26px; top: 64px; display: flex; gap: 12px; }
+    .f03-seg { position: relative; width: 149px; height: 52px; border: 2.5px solid #1F2BE0; }
+    .f03-segfill {
+      position: absolute; inset: 0; width: 100%;
+      background: #1F2BE0;
+      transform-origin: left center;
+    }
+    .f03-seglabels { position: absolute; left: 26px; top: 124px; display: flex; gap: 12px; }
+    .f03-seglabel {
+      width: 149px; text-align: center;
+      font-family: "DM Mono", "Courier New", monospace;
+      font-size: 22px; letter-spacing: 0.08em;
+      font-variant-numeric: tabular-nums;
+    }
+
+    /* SG number line 0 → N */
+    .f03-axis {
+      position: absolute; left: 26px; top: 96px;
+      width: 712px; height: 2.5px; background: #1F2BE0;
+    }
+    .f03-axishead {
+      position: absolute; left: 740px; top: 89px; width: 0; height: 0;
+      border-top: 12px solid transparent;
+      border-bottom: 12px solid transparent;
+      border-left: 22px solid #1F2BE0;
+    }
+    .f03-tick { position: absolute; top: 88px; width: 2.5px; height: 18px; background: #1F2BE0; }
+    .f03-ticklab {
+      position: absolute; top: 114px;
+      font-family: "DM Mono", "Courier New", monospace;
+      font-size: 22px; letter-spacing: 0.06em;
+      font-variant-numeric: tabular-nums;
+    }
+    .f03-marker { position: absolute; left: 340px; top: 87px; width: 20px; height: 20px; background: #1F2BE0; }
+
+    /* ---------- zone C: Masa data strip ---------- */
+    .f03-zoneC { position: absolute; left: 0; top: 730px; width: 1920px; height: 96px; }
+    .f03-strip {
+      position: absolute; left: 77px; top: 0;
+      width: 1766px; height: 96px;
+      border: 3px solid #1F2BE0; background: #E6E0CE;
+    }
+    .f03-137wrap {
+      position: absolute; left: 36px; top: 0; width: 150px; height: 90px;
+      display: flex; align-items: center;
+    }
+    .f03-c137 {
+      font-size: 68px; line-height: 0.9; letter-spacing: -0.01em;
+      transform-origin: center center;
+    }
+    .f03-137labels { position: absolute; left: 202px; top: 17px; }
+    .f03-unlab { font-size: 25px; font-weight: 600; display: block; }
+    .f03-dslab { font-size: 20px; color: #1F2BE0; display: block; margin-top: 5px; }
+    .f03-cdivider { position: absolute; left: 384px; top: 17px; width: 2px; height: 56px; background: rgba(31, 43, 224, 0.18); }
+
+    .f03-ratiobar {
+      position: absolute; left: 400px; top: 36px;
+      width: 1324px; height: 30px;
+      border-bottom: 2.5px solid #1F2BE0;
+    }
+    .f03-rseg { position: absolute; top: 0; height: 30px; transform: scaleX(0); transform-origin: left center; }
+    .f03-rTrain { left: 0; width: 1196px; background: #1F2BE0; }
+    .f03-rVal { left: 1199px; width: 35px; background: #1F2BE0; }
+    .f03-rTest {
+      left: 1237px; width: 87px;
+      background: repeating-linear-gradient(90deg, #1F2BE0 0 3px, transparent 3px 8px);
+    }
+    .f03-rlab {
+      position: absolute; top: 36px; text-align: center; white-space: nowrap;
+      font-size: 20px; font-weight: 600;
+    }
+    .f03-rlab .f03-mono { font-size: 19px; margin-left: 6px; }
+    .f03-freezetag {
+      position: absolute; right: 0; top: -32px;
+      padding: 2px 10px;
+      border: 2px solid #1F2BE0; background: #F0EBDE;
+      font-size: 20px; font-weight: 600; white-space: nowrap;
+      transform-origin: center bottom;
+    }
+    .f03-freezeline { position: absolute; right: 41px; top: -6px; width: 2.5px; height: 6px; background: #1F2BE0; }
+
+    /* ---------- hero layer (Scene 4) ---------- */
+    .f03-heroLayer { position: absolute; inset: 0; z-index: 5; }
+    .f03-heroCard {
+      position: absolute; left: 575px; top: 262px;
+      width: 770px; height: 318px;
+      border: 3.5px solid #1F2BE0; background: #F0EBDE;
+      --dof: 0px;
+      filter: blur(var(--dof));
+      transform-origin: 50% 50%;
+      will-change: transform, filter;
+    }
+    .f03-heroTag { position: absolute; left: 26px; top: 18px; font-size: 14px; letter-spacing: 0.16em; opacity: 0.85; }
+    .f03-heroLock {
+      position: absolute; left: 0; right: 0; top: 78px;
+      display: flex; justify-content: center; align-items: baseline; gap: 30px;
+    }
+    .f03-196wrap { width: 430px; display: flex; justify-content: flex-start; }
+    .f03-c196 {
+      font-size: 218px; line-height: 0.9; letter-spacing: -0.015em;
+      transform-origin: center center;
+    }
+    .f03-heroStack .f03-zh { display: block; font-size: 40px; font-weight: 600; letter-spacing: 0.04em; }
+    .f03-heroStack .f03-mono { display: block; margin-top: 10px; font-size: 15px; opacity: 0.8; }
+    .f03-check { position: absolute; inset: 0; }
+    .f03-check polyline { fill: none; stroke: #1F2BE0; stroke-width: 14; opacity: 0.4; stroke-linecap: square; stroke-linejoin: miter; }
+  </style>
+
+  <div data-hf-id="hf-ml1u" id="root" data-composition-id="03-platform" data-start="0" data-duration="28.237" data-width="1920" data-height="1080">
+    <!-- track 0 — permanent ground: paper + graph grid + hairlines + page chrome -->
+    <div data-hf-id="hf-4qr7" class="clip f03-bg" data-start="0" data-duration="28.237" data-track-index="0">
+      <div data-hf-id="hf-966c" class="f03-hairline" style="top: 58px"></div>
+      <div data-hf-id="hf-fb09" class="f03-hairline" style="top: 888px"></div>
+      <div data-hf-id="hf-j2u7" class="f03-metaline f03-mono" style="left: 77px">GEONAV-AGENT · EVAL PLATFORM</div>
+      <div data-hf-id="hf-stjf" class="f03-metaline f03-mono" style="right: 77px; top: 860px; text-align: right">03 / 10</div>
+    </div>
+
+    <!-- track 1 — camera stage: board (DoF groups) + hero -->
+    <div data-hf-id="hf-v7f3" class="clip f03-stage" data-start="0" data-duration="28.237" data-track-index="1">
+      <div data-hf-id="hf-wujr" class="f03-camera">
+        <div data-hf-id="hf-cz5m" class="f03-board">
+          <!-- topbar -->
+          <div data-hf-id="hf-tcgz" class="f03-topbar f03-dof" id="f03-topbar">
+            <div data-hf-id="hf-ud0y" class="f03-kicker f03-mono" id="f03-kicker">SEC.03 — PLATFORM &amp; EVALUATION</div>
+            <div data-hf-id="hf-ct5h" class="f03-title f03-serif" id="f03-title">平台与评测：工程底线</div>
+            <div data-hf-id="hf-yjoq" class="f03-fig f03-mono" id="f03-fig">FIG.03 — PROTOCOL</div>
+          </div>
+          <div data-hf-id="hf-tjrc" class="f03-toprule" id="f03-toprule"></div>
+
+          <!-- flow line: 预登记 → 冻结 → 审计 -->
+          <div data-hf-id="hf-32ar" class="f03-flow f03-dof" id="f03-flow">
+            <div data-hf-id="hf-9tke" class="f03-flowline" id="f03-flowline"></div>
+            <div data-hf-id="hf-ppog" class="f03-node" id="f03-node1" style="left: 383px"></div>
+            <div data-hf-id="hf-v1io" class="f03-node" id="f03-node2" style="left: 883px"></div>
+            <div data-hf-id="hf-pzbt" class="f03-node" id="f03-node3" style="left: 1383px"></div>
+            <div data-hf-id="hf-h1ps" class="f03-nodelabel" id="f03-nodelabel1" style="left: 376px">
+              <span data-hf-id="hf-5ehw" class="f03-zh">预登记</span><span data-hf-id="hf-o33y" class="f03-mono">01 · PRE-REG</span>
+            </div>
+            <div data-hf-id="hf-c91c" class="f03-nodelabel" id="f03-nodelabel2" style="left: 876px">
+              <span data-hf-id="hf-1253" class="f03-zh">冻结</span><span data-hf-id="hf-g9bo" class="f03-mono">02 · FREEZE</span>
+            </div>
+            <div data-hf-id="hf-mtoh" class="f03-nodelabel" id="f03-nodelabel3" style="left: 1376px">
+              <span data-hf-id="hf-cvcz" class="f03-zh">审计</span><span data-hf-id="hf-400t" class="f03-mono">03 · AUDIT</span>
+            </div>
+          </div>
+
+          <!-- zone A: agent | public observation → evaluator(holds answers) -->
+          <div data-hf-id="hf-nxon" class="f03-zoneA f03-dof" id="f03-zoneA">
+            <div data-hf-id="hf-xi7u" class="f03-arrowlabel" id="f03-arrowlabel">
+              <span data-hf-id="hf-rnz9" class="f03-zh">公开</span><span data-hf-id="hf-1pq4" class="f03-mono">OBSERVATION</span>
+            </div>
+            <div data-hf-id="hf-c3pp" class="f03-box f03-boxL" id="f03-boxL">
+              <div data-hf-id="hf-fnro" class="f03-boxtag f03-mono f03-rise">AGENT · READ-ONLY</div>
+              <div data-hf-id="hf-w9p5" class="f03-boxtitle f03-serif f03-rise">智能体</div>
+              <div data-hf-id="hf-86zg" class="f03-boxsub f03-rise">只读公开状态</div>
+            </div>
+            <div data-hf-id="hf-d2zk" class="f03-arrow" id="f03-arrow">
+              <svg data-hf-id="hf-0sia" width="384" height="40" viewBox="0 0 384 40" xmlns="http://www.w3.org/2000/svg">
+                <path data-hf-id="hf-4lz6" id="f03-arrowline" class="f03-draw" d="M4 20 L344 20" />
+              </svg>
+              <div data-hf-id="hf-5fy8" class="f03-ahead" id="f03-ahead"></div>
+            </div>
+            <div data-hf-id="hf-v9dx" class="f03-box f03-boxR" id="f03-boxR">
+              <div data-hf-id="hf-q4vc" class="f03-boxtag f03-mono f03-rise">EVALUATOR</div>
+              <div data-hf-id="hf-rbc5" class="f03-boxtitle f03-serif f03-rise">评测端</div>
+              <div data-hf-id="hf-p27k" class="f03-boxsub f03-rise">持有答案</div>
+              <svg data-hf-id="hf-5k6j" class="f03-lock" viewBox="0 0 120 140" xmlns="http://www.w3.org/2000/svg">
+                <path data-hf-id="hf-6ku0" id="f03-lockShackle" class="f03-draw" d="M34 64 L34 42 L86 42 L86 64" />
+                <path data-hf-id="hf-zxxt" id="f03-lockBody" class="f03-draw" d="M22 64 L98 64 L98 122 L22 122 Z" />
+                <path data-hf-id="hf-6rv9" id="f03-lockSlot" class="f03-draw" d="M55 84 L65 84 L65 110 L55 110 Z" />
+              </svg>
+            </div>
+          </div>
+
+          <!-- zone B: SR stratified card + SG number line -->
+          <div data-hf-id="hf-7q25" class="f03-zoneB f03-dof" id="f03-zoneB">
+            <div data-hf-id="hf-aqoi" class="f03-card f03-cardSR" id="f03-cardSR">
+              <div data-hf-id="hf-naaq" class="f03-cardhead">
+                <span data-hf-id="hf-7iy0" class="f03-cardtag f03-mono">PRIMARY</span>
+                <span data-hf-id="hf-4zsw" class="f03-cardtitle">主指标 · 成功率 SR</span>
+                <span data-hf-id="hf-5jwl" class="f03-note" id="f03-srnote">按起始距离分层</span>
+              </div>
+              <div data-hf-id="hf-m1z8" class="f03-segbar">
+                <div data-hf-id="hf-kg7d" class="f03-seg"><div data-hf-id="hf-7zsu" class="f03-segfill"></div></div>
+                <div data-hf-id="hf-gfst" class="f03-seg"><div data-hf-id="hf-vlya" class="f03-segfill"></div></div>
+                <div data-hf-id="hf-hmpw" class="f03-seg"><div data-hf-id="hf-w09b" class="f03-segfill"></div></div>
+                <div data-hf-id="hf-h8ev" class="f03-seg"><div data-hf-id="hf-wekc" class="f03-segfill"></div></div>
+                <div data-hf-id="hf-ifby" class="f03-seg"><div data-hf-id="hf-wsvd" class="f03-segfill"></div></div>
+              </div>
+              <div data-hf-id="hf-ewfk" class="f03-seglabels">
+                <div data-hf-id="hf-4yee" class="f03-seglabel">C4</div>
+                <div data-hf-id="hf-4k3d" class="f03-seglabel">C5</div>
+                <div data-hf-id="hf-5r0g" class="f03-seglabel">C6</div>
+                <div data-hf-id="hf-5cpf" class="f03-seglabel">C7</div>
+                <div data-hf-id="hf-06q2" class="f03-seglabel">C8</div>
+              </div>
+            </div>
+            <div data-hf-id="hf-zc2u" class="f03-card f03-cardSG" id="f03-cardSG">
+              <div data-hf-id="hf-50hy" class="f03-cardhead">
+                <span data-hf-id="hf-20m0" class="f03-cardtag f03-mono">SECONDARY</span>
+                <span data-hf-id="hf-g91v" class="f03-cardtitle">辅助指标 · 终点距离 SG</span>
+              </div>
+              <div data-hf-id="hf-qjx6" class="f03-axis" id="f03-axis"></div>
+              <div data-hf-id="hf-mp46" class="f03-axishead" id="f03-axishead"></div>
+              <div data-hf-id="hf-u4i3" class="f03-tick" id="f03-tick0" style="left: 26px"></div>
+              <div data-hf-id="hf-bzob" class="f03-tick" id="f03-tickN" style="left: 686px"></div>
+              <div data-hf-id="hf-l3y4" class="f03-ticklab" id="f03-lab0" style="left: 20px">0</div>
+              <div data-hf-id="hf-ea7k" class="f03-ticklab" id="f03-labN" style="left: 680px">N</div>
+              <div data-hf-id="hf-kfnu" class="f03-marker" id="f03-marker"></div>
+            </div>
+          </div>
+
+          <!-- zone C: Masa dataset strip — 137 counter + 137/4/10 ratio bar -->
+          <div data-hf-id="hf-ed03" class="f03-zoneC f03-dof" id="f03-zoneC">
+            <div data-hf-id="hf-q38y" class="f03-strip" id="f03-strip">
+              <div data-hf-id="hf-74qd" class="f03-137wrap">
+                <span data-hf-id="hf-xiv8" class="f03-c137 f03-serif f03-num" id="f03-c137">0</span>
+              </div>
+              <div data-hf-id="hf-5sok" class="f03-137labels">
+                <span data-hf-id="hf-lgrv" class="f03-unlab" id="f03-unlab">张训练源图</span>
+                <span data-hf-id="hf-jl9y" class="f03-dslab" id="f03-dslab">Masa 航拍数据集</span>
+              </div>
+              <div data-hf-id="hf-un7w" class="f03-cdivider"></div>
+              <div data-hf-id="hf-du46" class="f03-ratiobar">
+                <div data-hf-id="hf-14rn" class="f03-rseg f03-rTrain" id="f03-rTrain"></div>
+                <div data-hf-id="hf-so9r" class="f03-rseg f03-rVal" id="f03-rVal"></div>
+                <div data-hf-id="hf-jjib" class="f03-rseg f03-rTest" id="f03-rTest"></div>
+                <div data-hf-id="hf-n3s8" class="f03-freezetag" id="f03-freezetag">冻结未用</div>
+                <div data-hf-id="hf-14ly" class="f03-freezeline" id="f03-freezeline"></div>
+                <div data-hf-id="hf-4xje" class="f03-rlab" id="f03-rlab1" style="left: 518px; width: 160px">训练<span data-hf-id="hf-98sj" class="f03-mono">137</span></div>
+                <div data-hf-id="hf-nxdg" class="f03-rlab" id="f03-rlab2" style="left: 1146px; width: 140px">验证<span data-hf-id="hf-nppm" class="f03-mono">4</span></div>
+                <div data-hf-id="hf-ef86" class="f03-rlab" id="f03-rlab3" style="left: 1210px; width: 140px">测试<span data-hf-id="hf-6103" class="f03-mono">10</span></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- hero: 196 项回归测试 (Scene 4 focus) -->
+        <div data-hf-id="hf-teex" class="f03-heroLayer">
+          <div data-hf-id="hf-8yha" class="f03-heroCard" id="f03-heroCard">
+            <div data-hf-id="hf-k4rn" class="f03-heroTag f03-mono" id="f03-heroTag" data-layout-allow-overlap="">PLATFORM AUDIT</div>
+            <svg data-hf-id="hf-1uak" class="f03-check" viewBox="0 0 770 318" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+              <polyline data-hf-id="hf-ag6g" id="f03-checkline" class="f03-draw" points="66,232 262,292 704,82" />
+            </svg>
+            <div data-hf-id="hf-lkab" class="f03-heroLock">
+              <div data-hf-id="hf-6nry" class="f03-196wrap">
+                <span data-hf-id="hf-1tdg" class="f03-c196 f03-serif f03-num" id="f03-c196" data-layout-allow-overlap="">0</span>
+              </div>
+              <div data-hf-id="hf-1m1e" class="f03-heroStack" id="f03-heroStack">
+                <span data-hf-id="hf-5hbg" class="f03-zh">项回归测试</span>
+                <span data-hf-id="hf-gidg" class="f03-mono" data-layout-allow-overlap="">REGRESSION TESTS</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/gsap@3.14.2/dist/gsap.min.js"></script>
+  <script>
+    (function () {
+      var tl = gsap.timeline({ paused: true });
+
+      /* ---------- svg-path-draw setup: measure, never guess ---------- */
+      var draws = document.querySelectorAll(".f03-draw");
+      for (var i = 0; i < draws.length; i++) {
+        var p = draws[i];
+        var len = p.getTotalLength() * 1.02;
+        p.style.strokeDasharray = String(len);
+        p.style.strokeDashoffset = String(len);
+      }
+
+      /* ---------- multi-phase camera (adapt: focus-in → one ending push → settle)
+                   + continuous sine micro-drift; ONE writer of camera transform ---------- */
+      var camera = document.querySelector(".f03-camera");
+      var phase = { scale: 0.985 };
+      var drift = { p: 0 };
+      var writeCamera = function () {
+        var dx = Math.sin(drift.p) * 3;
+        var dy = Math.sin(drift.p * 1.3) * 2;
+        camera.style.transform = "scale(" + phase.scale + ") translate(" + dx + "px," + dy + "px)";
+      };
+      tl.to(phase, { scale: 1, duration: 1.4, ease: "power2.out" }, 0.25);
+      tl.to(phase, { scale: 1.05, duration: 1.5, ease: "power2.inOut" }, 22.6);
+      tl.to(phase, { scale: 1.03, duration: 1.0, ease: "power2.out" }, 26.35);
+      tl.to(drift, { p: Math.PI * 2 * 1.2, duration: 27.737, ease: "none", onUpdate: writeCamera }, 0);
+      writeCamera(); /* seed frame 0 */
+
+      /* ---------- topbar ---------- */
+      tl.fromTo("#f03-title", { opacity: 0, y: 24 }, { opacity: 1, y: 0, duration: 0.7, ease: "power3.out" }, 0.15);
+      tl.fromTo("#f03-kicker", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, 0.3);
+      tl.fromTo("#f03-fig", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.6, ease: "power2.out" }, 0.4);
+      tl.fromTo("#f03-toprule", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power2.out", transformOrigin: "left center" }, 0.35);
+
+      /* ---------- flow line + nodes (预登记 @S1 · 冻结 @S3 · 审计 @S4) ---------- */
+      tl.fromTo("#f03-flowline", { scaleX: 0 }, { scaleX: 1, duration: 1.3, ease: "power2.inOut", transformOrigin: "left center" }, 0.55);
+      var nodeAt = [
+        ["1", 1.7],
+        ["2", 22.2],
+        ["3", 23.7]
+      ];
+      nodeAt.forEach(function (n) {
+        tl.fromTo("#f03-node" + n[0], { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(1.8)", transformOrigin: "center center" }, n[1]);
+        tl.fromTo("#f03-nodelabel" + n[0], { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, n[1] + 0.08);
+      });
+
+      /* ---------- Scene 1 (0–7.9s): split-screen protocol ---------- */
+      tl.fromTo("#f03-boxL", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 2.5);
+      tl.fromTo("#f03-boxL .f03-rise", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.55, ease: "power2.out", stagger: 0.12 }, 2.65);
+      tl.to("#f03-arrowline", { strokeDashoffset: 0, duration: 0.7, ease: "power2.out" }, 4.3);
+      tl.fromTo("#f03-arrowlabel", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 4.7);
+      tl.fromTo("#f03-ahead", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.35, ease: "back.out(2)", transformOrigin: "left center" }, 4.95);
+      tl.fromTo("#f03-boxR", { opacity: 0, y: 36 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 5.7);
+      tl.fromTo("#f03-boxR .f03-rise", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.55, ease: "power2.out", stagger: 0.12 }, 5.85);
+      /* lock self-draw (square-shackle, cobalt line) */
+      tl.to("#f03-lockShackle", { strokeDashoffset: 0, duration: 0.4, ease: "power2.out" }, 6.55);
+      tl.to("#f03-lockBody", { strokeDashoffset: 0, duration: 0.4, ease: "power2.out" }, 6.85);
+      tl.to("#f03-lockSlot", { strokeDashoffset: 0, duration: 0.3, ease: "power2.out" }, 7.2);
+
+      /* ---------- Scene 2 (7.9–15.2s): SR / SG metric cards ---------- */
+      tl.fromTo("#f03-cardSR", { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: 0.85, ease: "power3.out" }, 8.0);
+      tl.fromTo(".f03-seglabel", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out", stagger: 0.08 }, 9.8);
+      gsap.set(".f03-segfill", { scaleX: 0 });
+      tl.to(".f03-segfill", { scaleX: 1, duration: 0.75, ease: "power2.out", stagger: 0.3 }, 10.2);
+      tl.fromTo("#f03-srnote", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 11.9);
+
+      tl.fromTo("#f03-cardSG", { opacity: 0, y: 44 }, { opacity: 1, y: 0, duration: 0.85, ease: "power3.out" }, 12.9);
+      tl.fromTo("#f03-axis", { scaleX: 0 }, { scaleX: 1, duration: 0.7, ease: "power2.out", transformOrigin: "left center" }, 13.6);
+      tl.fromTo("#f03-axishead", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.3, ease: "back.out(2)", transformOrigin: "left center" }, 14.25);
+      tl.fromTo("#f03-tick0", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 14.0);
+      tl.fromTo("#f03-tickN", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 14.06);
+      tl.fromTo("#f03-lab0", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 14.12);
+      tl.fromTo("#f03-labN", { opacity: 0 }, { opacity: 1, duration: 0.4, ease: "power1.out" }, 14.18);
+      tl.fromTo("#f03-marker", { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 0.45, ease: "back.out(1.7)", transformOrigin: "center center" }, 14.5);
+
+      /* ---------- Scene 3 (15.2–22.6s): Masa strip + 137 value-scaled counter ---------- */
+      tl.fromTo("#f03-strip", { opacity: 0, y: 34 }, { opacity: 1, y: 0, duration: 0.8, ease: "power3.out" }, 15.4);
+      tl.fromTo("#f03-dslab", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 15.6);
+      tl.fromTo("#f03-unlab", { opacity: 0, y: 10 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 17.5);
+
+      var c137 = document.querySelector("#f03-c137");
+      var s137 = { v: 0 };
+      tl.to(s137, { v: 137, duration: 2.4, ease: "power3.out", onUpdate: function () { c137.textContent = String(Math.round(s137.v)); } }, 17.7);
+      tl.fromTo("#f03-c137", { scale: 0.55, opacity: 0 }, { scale: 1, opacity: 1, duration: 2.4, ease: "power3.out" }, 17.7);
+
+      tl.to("#f03-rTrain", { scaleX: 1, duration: 1.0, ease: "power2.out" }, 20.5);
+      tl.to("#f03-rVal", { scaleX: 1, duration: 0.3, ease: "power2.out" }, 21.5);
+      tl.to("#f03-rTest", { scaleX: 1, duration: 0.35, ease: "power2.out" }, 21.8);
+      tl.fromTo("#f03-rlab1", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 21.95);
+      tl.fromTo("#f03-rlab2", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 22.07);
+      tl.fromTo("#f03-rlab3", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 22.19);
+      tl.fromTo("#f03-freezetag", { opacity: 0, scale: 0.7 }, { opacity: 1, scale: 1, duration: 0.4, ease: "back.out(1.6)" }, 22.1);
+      tl.fromTo("#f03-freezeline", { opacity: 0 }, { opacity: 1, duration: 0.3, ease: "power1.out" }, 22.15);
+
+      /* ---------- Scene 4 (22.6–27.7s): push-in + DoF + hero 196 count ---------- */
+      /* depth-of-field: board groups defocus by depth while camera pushes in */
+      var dofSpec = [
+        ["#f03-topbar", 5, 0.8],
+        ["#f03-flow", 5, 0.8],
+        ["#f03-zoneA", 8, 0.8],
+        ["#f03-zoneB", 10, 0.8],
+        ["#f03-zoneC", 11, 0.8]
+      ];
+      dofSpec.forEach(function (d) {
+        tl.to(d[0], { "--dof": d[1] + "px", opacity: d[2], duration: 0.9, ease: "power2.inOut" }, 22.7);
+      });
+
+      /* hero scale-up-from-blur entrance (gauge-beat fake push-through form) */
+      tl.fromTo("#f03-heroCard", { opacity: 0, scale: 0.72, "--dof": "16px" }, { opacity: 1, scale: 1, "--dof": "0px", duration: 0.7, ease: "power3.out" }, 22.9);
+      tl.fromTo("#f03-heroTag", { opacity: 0, y: 8 }, { opacity: 1, y: 0, duration: 0.45, ease: "power2.out" }, 23.0);
+      tl.fromTo("#f03-heroStack", { opacity: 0, y: 14 }, { opacity: 1, y: 0, duration: 0.55, ease: "power2.out" }, 23.05);
+
+      var c196 = document.querySelector("#f03-c196");
+      var s196 = { v: 0 };
+      tl.to(s196, { v: 196, duration: 2.2, ease: "power3.out", onUpdate: function () { c196.textContent = String(Math.round(s196.v)); } }, 23.1);
+      tl.fromTo("#f03-c196", { scale: 0.58, opacity: 0 }, { scale: 1, opacity: 1, duration: 2.2, ease: "power3.out" }, 23.1);
+
+      /* ink check sweep across the hero card */
+      tl.to("#f03-checkline", { strokeDashoffset: 0, duration: 0.95, ease: "power2.out" }, 25.6);
+
+      /* register (no exits — non-final frame; root transition owns the out) */
+      (window.__timelines = window.__timelines || {})["03-platform"] = tl;
+      tl.seek(0);
+    })();
+  </script>
+</template>

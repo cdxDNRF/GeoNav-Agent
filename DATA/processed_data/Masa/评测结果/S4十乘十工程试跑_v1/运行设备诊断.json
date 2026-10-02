@@ -1,0 +1,22 @@
+{
+  "scope": "Synthetic fixed inputs, hardware dispatch diagnostic only; shared GPU load, not controlled algorithm speed benchmark.",
+  "results": {
+    "cpu": {
+      "steps": 100,
+      "seconds": 0.037095700012287125,
+      "ms_per_step": 0.37095700012287125
+    },
+    "cuda": {
+      "steps": 100,
+      "seconds": 1.7787400000088383,
+      "ms_per_step": 17.787400000088383
+    }
+  },
+  "cpu_cuda_max_abs_difference": 1.430511474609375e-06,
+  "models_sha256": {
+    "explorer": "b35b0f87865530e8965e561eeda450c481af9d87ba5ab0dcfb9a4932bf4179bd",
+    "head": "2c2e4167b14a9a439b81efd78e80436ffde75d35d5c6d75274c3d60ecaa59b2c"
+  },
+  "SR_evaluations": 0,
+  "first_attempt": "CUDA diagnostic rejected missing CUBLAS_WORKSPACE_CONFIG before CUDA measurements; pilot already has its required setting and is unaffected."
+}
