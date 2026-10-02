@@ -29,3 +29,9 @@ Thumbs.db
 *.pth
 *.ckpt
 *.safetensors
+
+# Local tool caches and derived image artifacts (same class as patches/ - regenerated locally).
+.mimosa/
+/DATA/processed_data/**/views/
+/DATA/processed_data/**/方向视图/
+/DATA/processed_data/**/targets/

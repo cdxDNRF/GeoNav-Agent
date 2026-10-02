@@ -1,0 +1,5582 @@
+{
+  "seed": {
+    "5": {
+      "M0": {
+        "0": {
+          "records": 500,
+          "successes": 431,
+          "sr": 0.862,
+          "sg": 0.33,
+          "failures": 69,
+          "failure_classes": {
+            "near_without_adjacency": 36,
+            "adjacent_only_at_terminal": 24,
+            "never_within_two": 9
+          },
+          "failure_sg": 2.391304347826087,
+          "failure_avoidable_revisit_records": 31,
+          "failure_false_accept_records": 14,
+          "failure_near_then_away_records": 28,
+          "failure_near_early_records": 27,
+          "mean_unique_cells": 8.45,
+          "mean_closed_neighborhood_cells": 16.418,
+          "action_counts": {
+            "revisits": 90,
+            "no_cue_steps": 3276,
+            "no_cue_revisits": 90,
+            "avoidable_revisits": 82,
+            "immediate_reverse": 81,
+            "no_cue_immediate_reverse": 81,
+            "accepted": 539,
+            "false_accepts": 117,
+            "false_overrides": 62
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 24,
+              "with_avoidable_revisit": 6
+            },
+            "near_without_adjacency": {
+              "records": 36,
+              "with_avoidable_revisit": 16
+            },
+            "never_within_two": {
+              "records": 9,
+              "with_avoidable_revisit": 9
+            }
+          }
+        },
+        "1": {
+          "records": 500,
+          "successes": 441,
+          "sr": 0.882,
+          "sg": 0.262,
+          "failures": 59,
+          "failure_classes": {
+            "adjacent_only_at_terminal": 21,
+            "near_without_adjacency": 32,
+            "never_within_two": 5,
+            "missed_actionable_adjacency": 1
+          },
+          "failure_sg": 2.2203389830508473,
+          "failure_avoidable_revisit_records": 15,
+          "failure_false_accept_records": 17,
+          "failure_near_then_away_records": 17,
+          "failure_near_early_records": 16,
+          "mean_unique_cells": 8.59,
+          "mean_closed_neighborhood_cells": 16.342,
+          "action_counts": {
+            "revisits": 32,
+            "no_cue_steps": 3212,
+            "no_cue_revisits": 32,
+            "avoidable_revisits": 30,
+            "immediate_reverse": 29,
+            "no_cue_immediate_reverse": 29,
+            "accepted": 615,
+            "false_accepts": 182,
+            "false_overrides": 93
+          },
+          "failed_opportunity_reasons": {
+            "low_confidence": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 21,
+              "with_avoidable_revisit": 2
+            },
+            "near_without_adjacency": {
+              "records": 32,
+              "with_avoidable_revisit": 9
+            },
+            "never_within_two": {
+              "records": 5,
+              "with_avoidable_revisit": 4
+            }
+          }
+        },
+        "2": {
+          "records": 500,
+          "successes": 429,
+          "sr": 0.858,
+          "sg": 0.41,
+          "failures": 71,
+          "failure_classes": {
+            "near_without_adjacency": 46,
+            "adjacent_only_at_terminal": 16,
+            "never_within_two": 7,
+            "missed_actionable_adjacency": 2
+          },
+          "failure_sg": 2.887323943661972,
+          "failure_avoidable_revisit_records": 40,
+          "failure_false_accept_records": 15,
+          "failure_near_then_away_records": 32,
+          "failure_near_early_records": 31,
+          "mean_unique_cells": 8.418,
+          "mean_closed_neighborhood_cells": 17.032,
+          "action_counts": {
+            "revisits": 94,
+            "no_cue_steps": 3217,
+            "no_cue_revisits": 94,
+            "avoidable_revisits": 85,
+            "immediate_reverse": 85,
+            "no_cue_immediate_reverse": 85,
+            "accepted": 586,
+            "false_accepts": 164,
+            "false_overrides": 84
+          },
+          "failed_opportunity_reasons": {
+            "low_confidence": 2
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 2,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 16,
+              "with_avoidable_revisit": 6
+            },
+            "near_without_adjacency": {
+              "records": 46,
+              "with_avoidable_revisit": 27
+            },
+            "never_within_two": {
+              "records": 7,
+              "with_avoidable_revisit": 7
+            }
+          }
+        }
+      },
+      "Continue5": {
+        "0": {
+          "records": 500,
+          "successes": 441,
+          "sr": 0.882,
+          "sg": 0.32,
+          "failures": 59,
+          "failure_classes": {
+            "near_without_adjacency": 33,
+            "adjacent_only_at_terminal": 20,
+            "never_within_two": 6
+          },
+          "failure_sg": 2.711864406779661,
+          "failure_avoidable_revisit_records": 9,
+          "failure_false_accept_records": 17,
+          "failure_near_then_away_records": 20,
+          "failure_near_early_records": 20,
+          "mean_unique_cells": 8.616,
+          "mean_closed_neighborhood_cells": 16.44,
+          "action_counts": {
+            "revisits": 24,
+            "no_cue_steps": 3286,
+            "no_cue_revisits": 24,
+            "avoidable_revisits": 23,
+            "immediate_reverse": 17,
+            "no_cue_immediate_reverse": 17,
+            "accepted": 546,
+            "false_accepts": 116,
+            "false_overrides": 53
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 20,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 33,
+              "with_avoidable_revisit": 2
+            },
+            "never_within_two": {
+              "records": 6,
+              "with_avoidable_revisit": 6
+            }
+          }
+        },
+        "1": {
+          "records": 500,
+          "successes": 436,
+          "sr": 0.872,
+          "sg": 0.302,
+          "failures": 64,
+          "failure_classes": {
+            "near_without_adjacency": 35,
+            "adjacent_only_at_terminal": 24,
+            "never_within_two": 5
+          },
+          "failure_sg": 2.359375,
+          "failure_avoidable_revisit_records": 8,
+          "failure_false_accept_records": 21,
+          "failure_near_then_away_records": 19,
+          "failure_near_early_records": 19,
+          "mean_unique_cells": 8.666,
+          "mean_closed_neighborhood_cells": 16.206,
+          "action_counts": {
+            "revisits": 18,
+            "no_cue_steps": 3248,
+            "no_cue_revisits": 18,
+            "avoidable_revisits": 17,
+            "immediate_reverse": 16,
+            "no_cue_immediate_reverse": 16,
+            "accepted": 603,
+            "false_accepts": 174,
+            "false_overrides": 92
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 24,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 35,
+              "with_avoidable_revisit": 4
+            },
+            "never_within_two": {
+              "records": 5,
+              "with_avoidable_revisit": 3
+            }
+          }
+        },
+        "2": {
+          "records": 500,
+          "successes": 434,
+          "sr": 0.868,
+          "sg": 0.308,
+          "failures": 66,
+          "failure_classes": {
+            "near_without_adjacency": 36,
+            "adjacent_only_at_terminal": 22,
+            "never_within_two": 6,
+            "missed_actionable_adjacency": 2
+          },
+          "failure_sg": 2.3333333333333335,
+          "failure_avoidable_revisit_records": 25,
+          "failure_false_accept_records": 22,
+          "failure_near_then_away_records": 19,
+          "failure_near_early_records": 19,
+          "mean_unique_cells": 8.484,
+          "mean_closed_neighborhood_cells": 16.53,
+          "action_counts": {
+            "revisits": 86,
+            "no_cue_steps": 3257,
+            "no_cue_revisits": 86,
+            "avoidable_revisits": 80,
+            "immediate_reverse": 73,
+            "no_cue_immediate_reverse": 73,
+            "accepted": 571,
+            "false_accepts": 149,
+            "false_overrides": 69
+          },
+          "failed_opportunity_reasons": {
+            "not_adjacent": 1,
+            "low_confidence": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 2,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 22,
+              "with_avoidable_revisit": 7
+            },
+            "near_without_adjacency": {
+              "records": 36,
+              "with_avoidable_revisit": 13
+            },
+            "never_within_two": {
+              "records": 6,
+              "with_avoidable_revisit": 5
+            }
+          }
+        }
+      }
+    },
+    "10": {
+      "M0": {
+        "0": {
+          "records": 500,
+          "successes": 367,
+          "sr": 0.734,
+          "sg": 1.376,
+          "failures": 133,
+          "failure_classes": {
+            "near_without_adjacency": 65,
+            "never_within_two": 43,
+            "adjacent_only_at_terminal": 22,
+            "missed_actionable_adjacency": 3
+          },
+          "failure_sg": 5.172932330827067,
+          "failure_avoidable_revisit_records": 47,
+          "failure_false_accept_records": 76,
+          "failure_near_then_away_records": 61,
+          "failure_near_early_records": 60,
+          "mean_unique_cells": 17.85,
+          "mean_closed_neighborhood_cells": 41.056,
+          "action_counts": {
+            "revisits": 123,
+            "no_cue_steps": 7728,
+            "no_cue_revisits": 123,
+            "avoidable_revisits": 115,
+            "immediate_reverse": 105,
+            "no_cue_immediate_reverse": 105,
+            "accepted": 820,
+            "false_accepts": 458,
+            "false_overrides": 280
+          },
+          "failed_opportunity_reasons": {
+            "accepted": 2,
+            "not_adjacent": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 22,
+              "with_avoidable_revisit": 4
+            },
+            "near_without_adjacency": {
+              "records": 65,
+              "with_avoidable_revisit": 23
+            },
+            "never_within_two": {
+              "records": 43,
+              "with_avoidable_revisit": 20
+            }
+          }
+        },
+        "1": {
+          "records": 500,
+          "successes": 375,
+          "sr": 0.75,
+          "sg": 0.672,
+          "failures": 125,
+          "failure_classes": {
+            "near_without_adjacency": 57,
+            "never_within_two": 34,
+            "adjacent_only_at_terminal": 34
+          },
+          "failure_sg": 2.688,
+          "failure_avoidable_revisit_records": 37,
+          "failure_false_accept_records": 76,
+          "failure_near_then_away_records": 34,
+          "failure_near_early_records": 32,
+          "mean_unique_cells": 18.166,
+          "mean_closed_neighborhood_cells": 38.992,
+          "action_counts": {
+            "revisits": 75,
+            "no_cue_steps": 7706,
+            "no_cue_revisits": 75,
+            "avoidable_revisits": 70,
+            "immediate_reverse": 72,
+            "no_cue_immediate_reverse": 72,
+            "accepted": 952,
+            "false_accepts": 584,
+            "false_overrides": 335
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 34,
+              "with_avoidable_revisit": 2
+            },
+            "near_without_adjacency": {
+              "records": 57,
+              "with_avoidable_revisit": 16
+            },
+            "never_within_two": {
+              "records": 34,
+              "with_avoidable_revisit": 19
+            }
+          }
+        },
+        "2": {
+          "records": 500,
+          "successes": 339,
+          "sr": 0.678,
+          "sg": 1.642,
+          "failures": 161,
+          "failure_classes": {
+            "near_without_adjacency": 68,
+            "never_within_two": 73,
+            "adjacent_only_at_terminal": 16,
+            "missed_actionable_adjacency": 4
+          },
+          "failure_sg": 5.099378881987578,
+          "failure_avoidable_revisit_records": 78,
+          "failure_false_accept_records": 95,
+          "failure_near_then_away_records": 59,
+          "failure_near_early_records": 58,
+          "mean_unique_cells": 18.006,
+          "mean_closed_neighborhood_cells": 42.218,
+          "action_counts": {
+            "revisits": 190,
+            "no_cue_steps": 7794,
+            "no_cue_revisits": 190,
+            "avoidable_revisits": 185,
+            "immediate_reverse": 132,
+            "no_cue_immediate_reverse": 132,
+            "accepted": 899,
+            "false_accepts": 568,
+            "false_overrides": 355
+          },
+          "failed_opportunity_reasons": {
+            "accepted": 1,
+            "low_confidence": 2,
+            "not_adjacent": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 4,
+              "with_avoidable_revisit": 1
+            },
+            "adjacent_only_at_terminal": {
+              "records": 16,
+              "with_avoidable_revisit": 3
+            },
+            "near_without_adjacency": {
+              "records": 68,
+              "with_avoidable_revisit": 37
+            },
+            "never_within_two": {
+              "records": 73,
+              "with_avoidable_revisit": 37
+            }
+          }
+        }
+      },
+      "Continue5": {
+        "0": {
+          "records": 500,
+          "successes": 367,
+          "sr": 0.734,
+          "sg": 0.72,
+          "failures": 133,
+          "failure_classes": {
+            "near_without_adjacency": 61,
+            "adjacent_only_at_terminal": 36,
+            "never_within_two": 36
+          },
+          "failure_sg": 2.706766917293233,
+          "failure_avoidable_revisit_records": 28,
+          "failure_false_accept_records": 60,
+          "failure_near_then_away_records": 38,
+          "failure_near_early_records": 37,
+          "mean_unique_cells": 18.324,
+          "mean_closed_neighborhood_cells": 38.886,
+          "action_counts": {
+            "revisits": 58,
+            "no_cue_steps": 7975,
+            "no_cue_revisits": 58,
+            "avoidable_revisits": 58,
+            "immediate_reverse": 51,
+            "no_cue_immediate_reverse": 51,
+            "accepted": 745,
+            "false_accepts": 382,
+            "false_overrides": 221
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 36,
+              "with_avoidable_revisit": 4
+            },
+            "near_without_adjacency": {
+              "records": 61,
+              "with_avoidable_revisit": 9
+            },
+            "never_within_two": {
+              "records": 36,
+              "with_avoidable_revisit": 15
+            }
+          }
+        },
+        "1": {
+          "records": 500,
+          "successes": 367,
+          "sr": 0.734,
+          "sg": 0.744,
+          "failures": 133,
+          "failure_classes": {
+            "near_without_adjacency": 51,
+            "never_within_two": 37,
+            "adjacent_only_at_terminal": 44,
+            "missed_actionable_adjacency": 1
+          },
+          "failure_sg": 2.7969924812030076,
+          "failure_avoidable_revisit_records": 22,
+          "failure_false_accept_records": 84,
+          "failure_near_then_away_records": 33,
+          "failure_near_early_records": 32,
+          "mean_unique_cells": 18.316,
+          "mean_closed_neighborhood_cells": 39.098,
+          "action_counts": {
+            "revisits": 50,
+            "no_cue_steps": 7748,
+            "no_cue_revisits": 50,
+            "avoidable_revisits": 48,
+            "immediate_reverse": 48,
+            "no_cue_immediate_reverse": 48,
+            "accepted": 960,
+            "false_accepts": 597,
+            "false_overrides": 345
+          },
+          "failed_opportunity_reasons": {
+            "not_adjacent": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 44,
+              "with_avoidable_revisit": 3
+            },
+            "near_without_adjacency": {
+              "records": 51,
+              "with_avoidable_revisit": 7
+            },
+            "never_within_two": {
+              "records": 37,
+              "with_avoidable_revisit": 12
+            }
+          }
+        },
+        "2": {
+          "records": 500,
+          "successes": 356,
+          "sr": 0.712,
+          "sg": 1.14,
+          "failures": 144,
+          "failure_classes": {
+            "near_without_adjacency": 72,
+            "never_within_two": 40,
+            "adjacent_only_at_terminal": 29,
+            "missed_actionable_adjacency": 3
+          },
+          "failure_sg": 3.9583333333333335,
+          "failure_avoidable_revisit_records": 48,
+          "failure_false_accept_records": 80,
+          "failure_near_then_away_records": 56,
+          "failure_near_early_records": 55,
+          "mean_unique_cells": 18.148,
+          "mean_closed_neighborhood_cells": 40.668,
+          "action_counts": {
+            "revisits": 130,
+            "no_cue_steps": 7756,
+            "no_cue_revisits": 130,
+            "avoidable_revisits": 124,
+            "immediate_reverse": 105,
+            "no_cue_immediate_reverse": 105,
+            "accepted": 948,
+            "false_accepts": 600,
+            "false_overrides": 351
+          },
+          "failed_opportunity_reasons": {
+            "accepted": 1,
+            "not_adjacent": 2
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 29,
+              "with_avoidable_revisit": 2
+            },
+            "near_without_adjacency": {
+              "records": 72,
+              "with_avoidable_revisit": 29
+            },
+            "never_within_two": {
+              "records": 40,
+              "with_avoidable_revisit": 17
+            }
+          }
+        }
+      }
+    }
+  },
+  "source": {
+    "5": {
+      "M0": {
+        "SwissView100/swisstopo_40.jpg": {
+          "records": 75,
+          "successes": 68,
+          "sr": 0.9066666666666666,
+          "sg": 0.2,
+          "failures": 7,
+          "failure_classes": {
+            "near_without_adjacency": 3,
+            "adjacent_only_at_terminal": 4
+          },
+          "failure_sg": 2.142857142857143,
+          "failure_avoidable_revisit_records": 4,
+          "failure_false_accept_records": 2,
+          "failure_near_then_away_records": 3,
+          "failure_near_early_records": 3,
+          "mean_unique_cells": 8.133333333333333,
+          "mean_closed_neighborhood_cells": 16.2,
+          "action_counts": {
+            "revisits": 10,
+            "no_cue_steps": 465,
+            "no_cue_revisits": 10,
+            "avoidable_revisits": 8,
+            "immediate_reverse": 9,
+            "no_cue_immediate_reverse": 9,
+            "accepted": 80,
+            "false_accepts": 12,
+            "false_overrides": 5
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 2
+            },
+            "near_without_adjacency": {
+              "records": 3,
+              "with_avoidable_revisit": 2
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_41.jpg": {
+          "records": 75,
+          "successes": 66,
+          "sr": 0.88,
+          "sg": 0.26666666666666666,
+          "failures": 9,
+          "failure_classes": {
+            "near_without_adjacency": 6,
+            "adjacent_only_at_terminal": 3
+          },
+          "failure_sg": 2.2222222222222223,
+          "failure_avoidable_revisit_records": 1,
+          "failure_false_accept_records": 1,
+          "failure_near_then_away_records": 2,
+          "failure_near_early_records": 1,
+          "mean_unique_cells": 8.506666666666666,
+          "mean_closed_neighborhood_cells": 16.24,
+          "action_counts": {
+            "revisits": 1,
+            "no_cue_steps": 496,
+            "no_cue_revisits": 1,
+            "avoidable_revisits": 1,
+            "immediate_reverse": 1,
+            "no_cue_immediate_reverse": 1,
+            "accepted": 68,
+            "false_accepts": 2,
+            "false_overrides": 0
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 6,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_42.jpg": {
+          "records": 75,
+          "successes": 63,
+          "sr": 0.84,
+          "sg": 0.38666666666666666,
+          "failures": 12,
+          "failure_classes": {
+            "near_without_adjacency": 7,
+            "adjacent_only_at_terminal": 3,
+            "never_within_two": 2
+          },
+          "failure_sg": 2.4166666666666665,
+          "failure_avoidable_revisit_records": 4,
+          "failure_false_accept_records": 1,
+          "failure_near_then_away_records": 2,
+          "failure_near_early_records": 2,
+          "mean_unique_cells": 8.586666666666666,
+          "mean_closed_neighborhood_cells": 16.36,
+          "action_counts": {
+            "revisits": 6,
+            "no_cue_steps": 504,
+            "no_cue_revisits": 6,
+            "avoidable_revisits": 4,
+            "immediate_reverse": 5,
+            "no_cue_immediate_reverse": 5,
+            "accepted": 71,
+            "false_accepts": 8,
+            "false_overrides": 2
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 3,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 7,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 2,
+              "with_avoidable_revisit": 2
+            }
+          }
+        },
+        "SwissView100/swisstopo_43.jpg": {
+          "records": 75,
+          "successes": 65,
+          "sr": 0.8666666666666667,
+          "sg": 0.36,
+          "failures": 10,
+          "failure_classes": {
+            "near_without_adjacency": 7,
+            "adjacent_only_at_terminal": 2,
+            "never_within_two": 1
+          },
+          "failure_sg": 2.7,
+          "failure_avoidable_revisit_records": 6,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 4,
+          "failure_near_early_records": 4,
+          "mean_unique_cells": 8.333333333333334,
+          "mean_closed_neighborhood_cells": 16.466666666666665,
+          "action_counts": {
+            "revisits": 15,
+            "no_cue_steps": 505,
+            "no_cue_revisits": 15,
+            "avoidable_revisits": 13,
+            "immediate_reverse": 15,
+            "no_cue_immediate_reverse": 15,
+            "accepted": 60,
+            "false_accepts": 0,
+            "false_overrides": 0
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 2,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 7,
+              "with_avoidable_revisit": 4
+            },
+            "never_within_two": {
+              "records": 1,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_44.jpg": {
+          "records": 75,
+          "successes": 67,
+          "sr": 0.8933333333333333,
+          "sg": 0.16,
+          "failures": 8,
+          "failure_classes": {
+            "near_without_adjacency": 3,
+            "adjacent_only_at_terminal": 5
+          },
+          "failure_sg": 1.5,
+          "failure_avoidable_revisit_records": 2,
+          "failure_false_accept_records": 5,
+          "failure_near_then_away_records": 1,
+          "failure_near_early_records": 0,
+          "mean_unique_cells": 9.173333333333334,
+          "mean_closed_neighborhood_cells": 17.16,
+          "action_counts": {
+            "revisits": 9,
+            "no_cue_steps": 470,
+            "no_cue_revisits": 9,
+            "avoidable_revisits": 9,
+            "immediate_reverse": 8,
+            "no_cue_immediate_reverse": 8,
+            "accepted": 152,
+            "false_accepts": 85,
+            "false_overrides": 47
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 5,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 3,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_45.jpg": {
+          "records": 75,
+          "successes": 62,
+          "sr": 0.8266666666666667,
+          "sg": 0.5333333333333333,
+          "failures": 13,
+          "failure_classes": {
+            "near_without_adjacency": 11,
+            "adjacent_only_at_terminal": 2
+          },
+          "failure_sg": 3.076923076923077,
+          "failure_avoidable_revisit_records": 8,
+          "failure_false_accept_records": 1,
+          "failure_near_then_away_records": 9,
+          "failure_near_early_records": 9,
+          "mean_unique_cells": 8.746666666666666,
+          "mean_closed_neighborhood_cells": 17.04,
+          "action_counts": {
+            "revisits": 19,
+            "no_cue_steps": 534,
+            "no_cue_revisits": 19,
+            "avoidable_revisits": 19,
+            "immediate_reverse": 19,
+            "no_cue_immediate_reverse": 19,
+            "accepted": 66,
+            "false_accepts": 4,
+            "false_overrides": 4
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 2,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 11,
+              "with_avoidable_revisit": 8
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_46.jpg": {
+          "records": 75,
+          "successes": 67,
+          "sr": 0.8933333333333333,
+          "sg": 0.25333333333333335,
+          "failures": 8,
+          "failure_classes": {
+            "adjacent_only_at_terminal": 3,
+            "near_without_adjacency": 5
+          },
+          "failure_sg": 2.375,
+          "failure_avoidable_revisit_records": 4,
+          "failure_false_accept_records": 3,
+          "failure_near_then_away_records": 2,
+          "failure_near_early_records": 2,
+          "mean_unique_cells": 8.746666666666666,
+          "mean_closed_neighborhood_cells": 16.6,
+          "action_counts": {
+            "revisits": 10,
+            "no_cue_steps": 521,
+            "no_cue_revisits": 10,
+            "avoidable_revisits": 8,
+            "immediate_reverse": 10,
+            "no_cue_immediate_reverse": 10,
+            "accepted": 70,
+            "false_accepts": 15,
+            "false_overrides": 7
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 3,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 5,
+              "with_avoidable_revisit": 3
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_47.jpg": {
+          "records": 75,
+          "successes": 68,
+          "sr": 0.9066666666666666,
+          "sg": 0.16,
+          "failures": 7,
+          "failure_classes": {
+            "never_within_two": 1,
+            "near_without_adjacency": 2,
+            "adjacent_only_at_terminal": 4
+          },
+          "failure_sg": 1.7142857142857142,
+          "failure_avoidable_revisit_records": 2,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 0,
+          "failure_near_early_records": 0,
+          "mean_unique_cells": 8.386666666666667,
+          "mean_closed_neighborhood_cells": 17.053333333333335,
+          "action_counts": {
+            "revisits": 6,
+            "no_cue_steps": 486,
+            "no_cue_revisits": 6,
+            "avoidable_revisits": 6,
+            "immediate_reverse": 6,
+            "no_cue_immediate_reverse": 6,
+            "accepted": 74,
+            "false_accepts": 6,
+            "false_overrides": 4
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 2,
+              "with_avoidable_revisit": 0
+            },
+            "never_within_two": {
+              "records": 1,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_48.jpg": {
+          "records": 75,
+          "successes": 68,
+          "sr": 0.9066666666666666,
+          "sg": 0.13333333333333333,
+          "failures": 7,
+          "failure_classes": {
+            "adjacent_only_at_terminal": 6,
+            "near_without_adjacency": 1
+          },
+          "failure_sg": 1.4285714285714286,
+          "failure_avoidable_revisit_records": 1,
+          "failure_false_accept_records": 3,
+          "failure_near_then_away_records": 1,
+          "failure_near_early_records": 1,
+          "mean_unique_cells": 8.28,
+          "mean_closed_neighborhood_cells": 15.946666666666667,
+          "action_counts": {
+            "revisits": 4,
+            "no_cue_steps": 471,
+            "no_cue_revisits": 4,
+            "avoidable_revisits": 4,
+            "immediate_reverse": 4,
+            "no_cue_immediate_reverse": 4,
+            "accepted": 79,
+            "false_accepts": 11,
+            "false_overrides": 5
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 6,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_49.jpg": {
+          "records": 75,
+          "successes": 67,
+          "sr": 0.8933333333333333,
+          "sg": 0.2,
+          "failures": 8,
+          "failure_classes": {
+            "near_without_adjacency": 5,
+            "adjacent_only_at_terminal": 3
+          },
+          "failure_sg": 1.875,
+          "failure_avoidable_revisit_records": 3,
+          "failure_false_accept_records": 2,
+          "failure_near_then_away_records": 4,
+          "failure_near_early_records": 3,
+          "mean_unique_cells": 8.32,
+          "mean_closed_neighborhood_cells": 17.186666666666667,
+          "action_counts": {
+            "revisits": 10,
+            "no_cue_steps": 487,
+            "no_cue_revisits": 10,
+            "avoidable_revisits": 10,
+            "immediate_reverse": 9,
+            "no_cue_immediate_reverse": 9,
+            "accepted": 72,
+            "false_accepts": 5,
+            "false_overrides": 3
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 3,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 5,
+              "with_avoidable_revisit": 2
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_50.jpg": {
+          "records": 75,
+          "successes": 69,
+          "sr": 0.92,
+          "sg": 0.13333333333333333,
+          "failures": 6,
+          "failure_classes": {
+            "near_without_adjacency": 1,
+            "adjacent_only_at_terminal": 4,
+            "never_within_two": 1
+          },
+          "failure_sg": 1.6666666666666667,
+          "failure_avoidable_revisit_records": 1,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 0,
+          "failure_near_early_records": 0,
+          "mean_unique_cells": 8.573333333333334,
+          "mean_closed_neighborhood_cells": 16.52,
+          "action_counts": {
+            "revisits": 6,
+            "no_cue_steps": 493,
+            "no_cue_revisits": 6,
+            "avoidable_revisits": 6,
+            "immediate_reverse": 6,
+            "no_cue_immediate_reverse": 6,
+            "accepted": 81,
+            "false_accepts": 12,
+            "false_overrides": 2
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "never_within_two": {
+              "records": 1,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_51.jpg": {
+          "records": 75,
+          "successes": 63,
+          "sr": 0.84,
+          "sg": 0.38666666666666666,
+          "failures": 12,
+          "failure_classes": {
+            "near_without_adjacency": 6,
+            "never_within_two": 2,
+            "adjacent_only_at_terminal": 4
+          },
+          "failure_sg": 2.4166666666666665,
+          "failure_avoidable_revisit_records": 7,
+          "failure_false_accept_records": 11,
+          "failure_near_then_away_records": 6,
+          "failure_near_early_records": 6,
+          "mean_unique_cells": 8.653333333333334,
+          "mean_closed_neighborhood_cells": 17.026666666666667,
+          "action_counts": {
+            "revisits": 25,
+            "no_cue_steps": 421,
+            "no_cue_revisits": 25,
+            "avoidable_revisits": 25,
+            "immediate_reverse": 25,
+            "no_cue_immediate_reverse": 25,
+            "accepted": 178,
+            "false_accepts": 115,
+            "false_overrides": 52
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 2
+            },
+            "near_without_adjacency": {
+              "records": 6,
+              "with_avoidable_revisit": 3
+            },
+            "never_within_two": {
+              "records": 2,
+              "with_avoidable_revisit": 2
+            }
+          }
+        },
+        "SwissView100/swisstopo_52.jpg": {
+          "records": 75,
+          "successes": 65,
+          "sr": 0.8666666666666667,
+          "sg": 0.5466666666666666,
+          "failures": 10,
+          "failure_classes": {
+            "near_without_adjacency": 6,
+            "never_within_two": 3,
+            "adjacent_only_at_terminal": 1
+          },
+          "failure_sg": 4.1,
+          "failure_avoidable_revisit_records": 6,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 3,
+          "failure_near_early_records": 3,
+          "mean_unique_cells": 7.706666666666667,
+          "mean_closed_neighborhood_cells": 16.013333333333332,
+          "action_counts": {
+            "revisits": 16,
+            "no_cue_steps": 452,
+            "no_cue_revisits": 16,
+            "avoidable_revisits": 13,
+            "immediate_reverse": 11,
+            "no_cue_immediate_reverse": 11,
+            "accepted": 67,
+            "false_accepts": 2,
+            "false_overrides": 0
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 6,
+              "with_avoidable_revisit": 3
+            },
+            "never_within_two": {
+              "records": 3,
+              "with_avoidable_revisit": 3
+            }
+          }
+        },
+        "SwissView100/swisstopo_53.jpg": {
+          "records": 75,
+          "successes": 60,
+          "sr": 0.8,
+          "sg": 0.64,
+          "failures": 15,
+          "failure_classes": {
+            "near_without_adjacency": 12,
+            "never_within_two": 3
+          },
+          "failure_sg": 3.2,
+          "failure_avoidable_revisit_records": 8,
+          "failure_false_accept_records": 1,
+          "failure_near_then_away_records": 9,
+          "failure_near_early_records": 9,
+          "mean_unique_cells": 8.52,
+          "mean_closed_neighborhood_cells": 16.64,
+          "action_counts": {
+            "revisits": 16,
+            "no_cue_steps": 510,
+            "no_cue_revisits": 16,
+            "avoidable_revisits": 16,
+            "immediate_reverse": 12,
+            "no_cue_immediate_reverse": 12,
+            "accepted": 70,
+            "false_accepts": 10,
+            "false_overrides": 6
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 12,
+              "with_avoidable_revisit": 5
+            },
+            "never_within_two": {
+              "records": 3,
+              "with_avoidable_revisit": 3
+            }
+          }
+        },
+        "SwissView100/swisstopo_54.jpg": {
+          "records": 75,
+          "successes": 58,
+          "sr": 0.7733333333333333,
+          "sg": 0.5066666666666667,
+          "failures": 17,
+          "failure_classes": {
+            "near_without_adjacency": 10,
+            "adjacent_only_at_terminal": 6,
+            "missed_actionable_adjacency": 1
+          },
+          "failure_sg": 2.235294117647059,
+          "failure_avoidable_revisit_records": 8,
+          "failure_false_accept_records": 12,
+          "failure_near_then_away_records": 9,
+          "failure_near_early_records": 10,
+          "mean_unique_cells": 8.64,
+          "mean_closed_neighborhood_cells": 16.773333333333333,
+          "action_counts": {
+            "revisits": 17,
+            "no_cue_steps": 423,
+            "no_cue_revisits": 17,
+            "avoidable_revisits": 13,
+            "immediate_reverse": 14,
+            "no_cue_immediate_reverse": 14,
+            "accepted": 167,
+            "false_accepts": 113,
+            "false_overrides": 68
+          },
+          "failed_opportunity_reasons": {
+            "low_confidence": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 6,
+              "with_avoidable_revisit": 2
+            },
+            "near_without_adjacency": {
+              "records": 10,
+              "with_avoidable_revisit": 6
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_55.jpg": {
+          "records": 75,
+          "successes": 70,
+          "sr": 0.9333333333333333,
+          "sg": 0.21333333333333335,
+          "failures": 5,
+          "failure_classes": {
+            "never_within_two": 1,
+            "near_without_adjacency": 4
+          },
+          "failure_sg": 3.2,
+          "failure_avoidable_revisit_records": 3,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 2,
+          "failure_near_early_records": 2,
+          "mean_unique_cells": 8.186666666666667,
+          "mean_closed_neighborhood_cells": 16.066666666666666,
+          "action_counts": {
+            "revisits": 9,
+            "no_cue_steps": 469,
+            "no_cue_revisits": 9,
+            "avoidable_revisits": 8,
+            "immediate_reverse": 7,
+            "no_cue_immediate_reverse": 7,
+            "accepted": 79,
+            "false_accepts": 9,
+            "false_overrides": 1
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 4,
+              "with_avoidable_revisit": 2
+            },
+            "never_within_two": {
+              "records": 1,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_56.jpg": {
+          "records": 75,
+          "successes": 67,
+          "sr": 0.8933333333333333,
+          "sg": 0.22666666666666666,
+          "failures": 8,
+          "failure_classes": {
+            "near_without_adjacency": 2,
+            "adjacent_only_at_terminal": 4,
+            "never_within_two": 2
+          },
+          "failure_sg": 2.125,
+          "failure_avoidable_revisit_records": 4,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 5,
+          "failure_near_early_records": 5,
+          "mean_unique_cells": 8.586666666666666,
+          "mean_closed_neighborhood_cells": 16.706666666666667,
+          "action_counts": {
+            "revisits": 8,
+            "no_cue_steps": 507,
+            "no_cue_revisits": 8,
+            "avoidable_revisits": 7,
+            "immediate_reverse": 8,
+            "no_cue_immediate_reverse": 8,
+            "accepted": 70,
+            "false_accepts": 3,
+            "false_overrides": 1
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 2,
+              "with_avoidable_revisit": 2
+            },
+            "never_within_two": {
+              "records": 2,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_57.jpg": {
+          "records": 75,
+          "successes": 64,
+          "sr": 0.8533333333333334,
+          "sg": 0.37333333333333335,
+          "failures": 11,
+          "failure_classes": {
+            "near_without_adjacency": 7,
+            "never_within_two": 1,
+            "adjacent_only_at_terminal": 3
+          },
+          "failure_sg": 2.5454545454545454,
+          "failure_avoidable_revisit_records": 4,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 7,
+          "failure_near_early_records": 7,
+          "mean_unique_cells": 8.373333333333333,
+          "mean_closed_neighborhood_cells": 16.506666666666668,
+          "action_counts": {
+            "revisits": 9,
+            "no_cue_steps": 496,
+            "no_cue_revisits": 9,
+            "avoidable_revisits": 8,
+            "immediate_reverse": 8,
+            "no_cue_immediate_reverse": 8,
+            "accepted": 66,
+            "false_accepts": 2,
+            "false_overrides": 1
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 7,
+              "with_avoidable_revisit": 3
+            },
+            "never_within_two": {
+              "records": 1,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_58.jpg": {
+          "records": 75,
+          "successes": 66,
+          "sr": 0.88,
+          "sg": 0.49333333333333335,
+          "failures": 9,
+          "failure_classes": {
+            "near_without_adjacency": 6,
+            "missed_actionable_adjacency": 2,
+            "never_within_two": 1
+          },
+          "failure_sg": 4.111111111111111,
+          "failure_avoidable_revisit_records": 5,
+          "failure_false_accept_records": 4,
+          "failure_near_then_away_records": 6,
+          "failure_near_early_records": 6,
+          "mean_unique_cells": 8.546666666666667,
+          "mean_closed_neighborhood_cells": 16.666666666666668,
+          "action_counts": {
+            "revisits": 9,
+            "no_cue_steps": 471,
+            "no_cue_revisits": 9,
+            "avoidable_revisits": 9,
+            "immediate_reverse": 8,
+            "no_cue_immediate_reverse": 8,
+            "accepted": 104,
+            "false_accepts": 41,
+            "false_overrides": 23
+          },
+          "failed_opportunity_reasons": {
+            "low_confidence": 2
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 2,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 6,
+              "with_avoidable_revisit": 4
+            },
+            "never_within_two": {
+              "records": 1,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_59.jpg": {
+          "records": 75,
+          "successes": 58,
+          "sr": 0.7733333333333333,
+          "sg": 0.5066666666666667,
+          "failures": 17,
+          "failure_classes": {
+            "near_without_adjacency": 10,
+            "adjacent_only_at_terminal": 4,
+            "never_within_two": 3
+          },
+          "failure_sg": 2.235294117647059,
+          "failure_avoidable_revisit_records": 5,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 2,
+          "failure_near_early_records": 1,
+          "mean_unique_cells": 8.72,
+          "mean_closed_neighborhood_cells": 16.773333333333333,
+          "action_counts": {
+            "revisits": 11,
+            "no_cue_steps": 524,
+            "no_cue_revisits": 11,
+            "avoidable_revisits": 10,
+            "immediate_reverse": 10,
+            "no_cue_immediate_reverse": 10,
+            "accepted": 66,
+            "false_accepts": 8,
+            "false_overrides": 8
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 10,
+              "with_avoidable_revisit": 2
+            },
+            "never_within_two": {
+              "records": 3,
+              "with_avoidable_revisit": 3
+            }
+          }
+        }
+      },
+      "Continue5": {
+        "SwissView100/swisstopo_40.jpg": {
+          "records": 75,
+          "successes": 68,
+          "sr": 0.9066666666666666,
+          "sg": 0.3466666666666667,
+          "failures": 7,
+          "failure_classes": {
+            "near_without_adjacency": 5,
+            "adjacent_only_at_terminal": 2
+          },
+          "failure_sg": 3.7142857142857144,
+          "failure_avoidable_revisit_records": 0,
+          "failure_false_accept_records": 5,
+          "failure_near_then_away_records": 3,
+          "failure_near_early_records": 3,
+          "mean_unique_cells": 8.426666666666666,
+          "mean_closed_neighborhood_cells": 16.14666666666667,
+          "action_counts": {
+            "revisits": 1,
+            "no_cue_steps": 478,
+            "no_cue_revisits": 1,
+            "avoidable_revisits": 1,
+            "immediate_reverse": 1,
+            "no_cue_immediate_reverse": 1,
+            "accepted": 80,
+            "false_accepts": 12,
+            "false_overrides": 6
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 2,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 5,
+              "with_avoidable_revisit": 0
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_41.jpg": {
+          "records": 75,
+          "successes": 63,
+          "sr": 0.84,
+          "sg": 0.44,
+          "failures": 12,
+          "failure_classes": {
+            "near_without_adjacency": 7,
+            "adjacent_only_at_terminal": 5
+          },
+          "failure_sg": 2.75,
+          "failure_avoidable_revisit_records": 0,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 3,
+          "failure_near_early_records": 3,
+          "mean_unique_cells": 8.613333333333333,
+          "mean_closed_neighborhood_cells": 16.173333333333332,
+          "action_counts": {
+            "revisits": 4,
+            "no_cue_steps": 510,
+            "no_cue_revisits": 4,
+            "avoidable_revisits": 4,
+            "immediate_reverse": 3,
+            "no_cue_immediate_reverse": 3,
+            "accepted": 65,
+            "false_accepts": 2,
+            "false_overrides": 1
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 5,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 7,
+              "with_avoidable_revisit": 0
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_42.jpg": {
+          "records": 75,
+          "successes": 65,
+          "sr": 0.8666666666666667,
+          "sg": 0.4266666666666667,
+          "failures": 10,
+          "failure_classes": {
+            "near_without_adjacency": 8,
+            "adjacent_only_at_terminal": 2
+          },
+          "failure_sg": 3.2,
+          "failure_avoidable_revisit_records": 0,
+          "failure_false_accept_records": 1,
+          "failure_near_then_away_records": 5,
+          "failure_near_early_records": 5,
+          "mean_unique_cells": 8.68,
+          "mean_closed_neighborhood_cells": 16.573333333333334,
+          "action_counts": {
+            "revisits": 0,
+            "no_cue_steps": 501,
+            "no_cue_revisits": 0,
+            "avoidable_revisits": 0,
+            "immediate_reverse": 0,
+            "no_cue_immediate_reverse": 0,
+            "accepted": 75,
+            "false_accepts": 10,
+            "false_overrides": 1
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 2,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 8,
+              "with_avoidable_revisit": 0
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_43.jpg": {
+          "records": 75,
+          "successes": 71,
+          "sr": 0.9466666666666667,
+          "sg": 0.18666666666666668,
+          "failures": 4,
+          "failure_classes": {
+            "never_within_two": 1,
+            "near_without_adjacency": 3
+          },
+          "failure_sg": 3.5,
+          "failure_avoidable_revisit_records": 1,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 1,
+          "failure_near_early_records": 1,
+          "mean_unique_cells": 8.32,
+          "mean_closed_neighborhood_cells": 16.026666666666667,
+          "action_counts": {
+            "revisits": 3,
+            "no_cue_steps": 487,
+            "no_cue_revisits": 3,
+            "avoidable_revisits": 2,
+            "immediate_reverse": 3,
+            "no_cue_immediate_reverse": 3,
+            "accepted": 65,
+            "false_accepts": 0,
+            "false_overrides": 0
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 3,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_44.jpg": {
+          "records": 75,
+          "successes": 62,
+          "sr": 0.8266666666666667,
+          "sg": 0.29333333333333333,
+          "failures": 13,
+          "failure_classes": {
+            "near_without_adjacency": 5,
+            "adjacent_only_at_terminal": 7,
+            "never_within_two": 1
+          },
+          "failure_sg": 1.6923076923076923,
+          "failure_avoidable_revisit_records": 5,
+          "failure_false_accept_records": 9,
+          "failure_near_then_away_records": 2,
+          "failure_near_early_records": 2,
+          "mean_unique_cells": 9.253333333333334,
+          "mean_closed_neighborhood_cells": 17.226666666666667,
+          "action_counts": {
+            "revisits": 11,
+            "no_cue_steps": 483,
+            "no_cue_revisits": 11,
+            "avoidable_revisits": 11,
+            "immediate_reverse": 11,
+            "no_cue_immediate_reverse": 11,
+            "accepted": 147,
+            "false_accepts": 85,
+            "false_overrides": 39
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 7,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 5,
+              "with_avoidable_revisit": 3
+            },
+            "never_within_two": {
+              "records": 1,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_45.jpg": {
+          "records": 75,
+          "successes": 61,
+          "sr": 0.8133333333333334,
+          "sg": 0.49333333333333335,
+          "failures": 14,
+          "failure_classes": {
+            "near_without_adjacency": 8,
+            "adjacent_only_at_terminal": 5,
+            "never_within_two": 1
+          },
+          "failure_sg": 2.642857142857143,
+          "failure_avoidable_revisit_records": 3,
+          "failure_false_accept_records": 3,
+          "failure_near_then_away_records": 5,
+          "failure_near_early_records": 5,
+          "mean_unique_cells": 8.653333333333334,
+          "mean_closed_neighborhood_cells": 16.32,
+          "action_counts": {
+            "revisits": 9,
+            "no_cue_steps": 514,
+            "no_cue_revisits": 9,
+            "avoidable_revisits": 8,
+            "immediate_reverse": 8,
+            "no_cue_immediate_reverse": 8,
+            "accepted": 69,
+            "false_accepts": 8,
+            "false_overrides": 7
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 5,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 8,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 1,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_46.jpg": {
+          "records": 75,
+          "successes": 62,
+          "sr": 0.8266666666666667,
+          "sg": 0.4666666666666667,
+          "failures": 13,
+          "failure_classes": {
+            "near_without_adjacency": 9,
+            "adjacent_only_at_terminal": 4
+          },
+          "failure_sg": 2.6923076923076925,
+          "failure_avoidable_revisit_records": 6,
+          "failure_false_accept_records": 3,
+          "failure_near_then_away_records": 3,
+          "failure_near_early_records": 3,
+          "mean_unique_cells": 8.746666666666666,
+          "mean_closed_neighborhood_cells": 16.2,
+          "action_counts": {
+            "revisits": 16,
+            "no_cue_steps": 539,
+            "no_cue_revisits": 16,
+            "avoidable_revisits": 15,
+            "immediate_reverse": 16,
+            "no_cue_immediate_reverse": 16,
+            "accepted": 58,
+            "false_accepts": 8,
+            "false_overrides": 3
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 2
+            },
+            "near_without_adjacency": {
+              "records": 9,
+              "with_avoidable_revisit": 4
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_47.jpg": {
+          "records": 75,
+          "successes": 69,
+          "sr": 0.92,
+          "sg": 0.14666666666666667,
+          "failures": 6,
+          "failure_classes": {
+            "near_without_adjacency": 3,
+            "adjacent_only_at_terminal": 3
+          },
+          "failure_sg": 1.8333333333333333,
+          "failure_avoidable_revisit_records": 1,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 1,
+          "failure_near_early_records": 1,
+          "mean_unique_cells": 8.64,
+          "mean_closed_neighborhood_cells": 16.56,
+          "action_counts": {
+            "revisits": 6,
+            "no_cue_steps": 506,
+            "no_cue_revisits": 6,
+            "avoidable_revisits": 6,
+            "immediate_reverse": 5,
+            "no_cue_immediate_reverse": 5,
+            "accepted": 73,
+            "false_accepts": 4,
+            "false_overrides": 2
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 3,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_48.jpg": {
+          "records": 75,
+          "successes": 67,
+          "sr": 0.8933333333333333,
+          "sg": 0.24,
+          "failures": 8,
+          "failure_classes": {
+            "adjacent_only_at_terminal": 3,
+            "never_within_two": 4,
+            "near_without_adjacency": 1
+          },
+          "failure_sg": 2.25,
+          "failure_avoidable_revisit_records": 5,
+          "failure_false_accept_records": 4,
+          "failure_near_then_away_records": 1,
+          "failure_near_early_records": 1,
+          "mean_unique_cells": 8.373333333333333,
+          "mean_closed_neighborhood_cells": 15.96,
+          "action_counts": {
+            "revisits": 15,
+            "no_cue_steps": 489,
+            "no_cue_revisits": 15,
+            "avoidable_revisits": 15,
+            "immediate_reverse": 9,
+            "no_cue_immediate_reverse": 9,
+            "accepted": 79,
+            "false_accepts": 12,
+            "false_overrides": 2
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 4,
+              "with_avoidable_revisit": 4
+            }
+          }
+        },
+        "SwissView100/swisstopo_49.jpg": {
+          "records": 75,
+          "successes": 70,
+          "sr": 0.9333333333333333,
+          "sg": 0.17333333333333334,
+          "failures": 5,
+          "failure_classes": {
+            "near_without_adjacency": 3,
+            "adjacent_only_at_terminal": 2
+          },
+          "failure_sg": 2.6,
+          "failure_avoidable_revisit_records": 0,
+          "failure_false_accept_records": 2,
+          "failure_near_then_away_records": 3,
+          "failure_near_early_records": 3,
+          "mean_unique_cells": 8.253333333333334,
+          "mean_closed_neighborhood_cells": 16.613333333333333,
+          "action_counts": {
+            "revisits": 1,
+            "no_cue_steps": 472,
+            "no_cue_revisits": 1,
+            "avoidable_revisits": 1,
+            "immediate_reverse": 1,
+            "no_cue_immediate_reverse": 1,
+            "accepted": 73,
+            "false_accepts": 3,
+            "false_overrides": 3
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 2,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_50.jpg": {
+          "records": 75,
+          "successes": 65,
+          "sr": 0.8666666666666667,
+          "sg": 0.3333333333333333,
+          "failures": 10,
+          "failure_classes": {
+            "near_without_adjacency": 5,
+            "adjacent_only_at_terminal": 4,
+            "never_within_two": 1
+          },
+          "failure_sg": 2.5,
+          "failure_avoidable_revisit_records": 2,
+          "failure_false_accept_records": 1,
+          "failure_near_then_away_records": 2,
+          "failure_near_early_records": 2,
+          "mean_unique_cells": 8.36,
+          "mean_closed_neighborhood_cells": 16.293333333333333,
+          "action_counts": {
+            "revisits": 7,
+            "no_cue_steps": 485,
+            "no_cue_revisits": 7,
+            "avoidable_revisits": 7,
+            "immediate_reverse": 4,
+            "no_cue_immediate_reverse": 4,
+            "accepted": 74,
+            "false_accepts": 9,
+            "false_overrides": 1
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 5,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 1,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_51.jpg": {
+          "records": 75,
+          "successes": 65,
+          "sr": 0.8666666666666667,
+          "sg": 0.29333333333333333,
+          "failures": 10,
+          "failure_classes": {
+            "near_without_adjacency": 5,
+            "adjacent_only_at_terminal": 2,
+            "never_within_two": 3
+          },
+          "failure_sg": 2.2,
+          "failure_avoidable_revisit_records": 3,
+          "failure_false_accept_records": 10,
+          "failure_near_then_away_records": 3,
+          "failure_near_early_records": 3,
+          "mean_unique_cells": 8.76,
+          "mean_closed_neighborhood_cells": 16.68,
+          "action_counts": {
+            "revisits": 10,
+            "no_cue_steps": 425,
+            "no_cue_revisits": 10,
+            "avoidable_revisits": 10,
+            "immediate_reverse": 9,
+            "no_cue_immediate_reverse": 9,
+            "accepted": 167,
+            "false_accepts": 102,
+            "false_overrides": 48
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 2,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 5,
+              "with_avoidable_revisit": 0
+            },
+            "never_within_two": {
+              "records": 3,
+              "with_avoidable_revisit": 3
+            }
+          }
+        },
+        "SwissView100/swisstopo_52.jpg": {
+          "records": 75,
+          "successes": 67,
+          "sr": 0.8933333333333333,
+          "sg": 0.2,
+          "failures": 8,
+          "failure_classes": {
+            "never_within_two": 1,
+            "near_without_adjacency": 4,
+            "adjacent_only_at_terminal": 3
+          },
+          "failure_sg": 1.875,
+          "failure_avoidable_revisit_records": 1,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 0,
+          "failure_near_early_records": 0,
+          "mean_unique_cells": 8.32,
+          "mean_closed_neighborhood_cells": 16.12,
+          "action_counts": {
+            "revisits": 2,
+            "no_cue_steps": 481,
+            "no_cue_revisits": 2,
+            "avoidable_revisits": 2,
+            "immediate_reverse": 2,
+            "no_cue_immediate_reverse": 2,
+            "accepted": 70,
+            "false_accepts": 3,
+            "false_overrides": 1
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 4,
+              "with_avoidable_revisit": 0
+            },
+            "never_within_two": {
+              "records": 1,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_53.jpg": {
+          "records": 75,
+          "successes": 65,
+          "sr": 0.8666666666666667,
+          "sg": 0.3466666666666667,
+          "failures": 10,
+          "failure_classes": {
+            "near_without_adjacency": 5,
+            "never_within_two": 1,
+            "adjacent_only_at_terminal": 4
+          },
+          "failure_sg": 2.6,
+          "failure_avoidable_revisit_records": 1,
+          "failure_false_accept_records": 1,
+          "failure_near_then_away_records": 6,
+          "failure_near_early_records": 6,
+          "mean_unique_cells": 8.56,
+          "mean_closed_neighborhood_cells": 16.28,
+          "action_counts": {
+            "revisits": 7,
+            "no_cue_steps": 497,
+            "no_cue_revisits": 7,
+            "avoidable_revisits": 7,
+            "immediate_reverse": 5,
+            "no_cue_immediate_reverse": 5,
+            "accepted": 77,
+            "false_accepts": 12,
+            "false_overrides": 3
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 5,
+              "with_avoidable_revisit": 0
+            },
+            "never_within_two": {
+              "records": 1,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_54.jpg": {
+          "records": 75,
+          "successes": 60,
+          "sr": 0.8,
+          "sg": 0.48,
+          "failures": 15,
+          "failure_classes": {
+            "never_within_two": 2,
+            "near_without_adjacency": 7,
+            "adjacent_only_at_terminal": 6
+          },
+          "failure_sg": 2.4,
+          "failure_avoidable_revisit_records": 8,
+          "failure_false_accept_records": 13,
+          "failure_near_then_away_records": 5,
+          "failure_near_early_records": 5,
+          "mean_unique_cells": 8.773333333333333,
+          "mean_closed_neighborhood_cells": 16.64,
+          "action_counts": {
+            "revisits": 19,
+            "no_cue_steps": 443,
+            "no_cue_revisits": 19,
+            "avoidable_revisits": 15,
+            "immediate_reverse": 15,
+            "no_cue_immediate_reverse": 15,
+            "accepted": 159,
+            "false_accepts": 106,
+            "false_overrides": 65
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 6,
+              "with_avoidable_revisit": 3
+            },
+            "near_without_adjacency": {
+              "records": 7,
+              "with_avoidable_revisit": 3
+            },
+            "never_within_two": {
+              "records": 2,
+              "with_avoidable_revisit": 2
+            }
+          }
+        },
+        "SwissView100/swisstopo_55.jpg": {
+          "records": 75,
+          "successes": 71,
+          "sr": 0.9466666666666667,
+          "sg": 0.18666666666666668,
+          "failures": 4,
+          "failure_classes": {
+            "near_without_adjacency": 4
+          },
+          "failure_sg": 3.5,
+          "failure_avoidable_revisit_records": 0,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 1,
+          "failure_near_early_records": 1,
+          "mean_unique_cells": 8.146666666666667,
+          "mean_closed_neighborhood_cells": 15.826666666666666,
+          "action_counts": {
+            "revisits": 0,
+            "no_cue_steps": 457,
+            "no_cue_revisits": 0,
+            "avoidable_revisits": 0,
+            "immediate_reverse": 0,
+            "no_cue_immediate_reverse": 0,
+            "accepted": 79,
+            "false_accepts": 8,
+            "false_overrides": 2
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 4,
+              "with_avoidable_revisit": 0
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_56.jpg": {
+          "records": 75,
+          "successes": 70,
+          "sr": 0.9333333333333333,
+          "sg": 0.13333333333333333,
+          "failures": 5,
+          "failure_classes": {
+            "near_without_adjacency": 2,
+            "adjacent_only_at_terminal": 3
+          },
+          "failure_sg": 2,
+          "failure_avoidable_revisit_records": 1,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 4,
+          "failure_near_early_records": 4,
+          "mean_unique_cells": 8.666666666666666,
+          "mean_closed_neighborhood_cells": 16.386666666666667,
+          "action_counts": {
+            "revisits": 5,
+            "no_cue_steps": 507,
+            "no_cue_revisits": 5,
+            "avoidable_revisits": 5,
+            "immediate_reverse": 3,
+            "no_cue_immediate_reverse": 3,
+            "accepted": 73,
+            "false_accepts": 3,
+            "false_overrides": 2
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 2,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_57.jpg": {
+          "records": 75,
+          "successes": 67,
+          "sr": 0.8933333333333333,
+          "sg": 0.26666666666666666,
+          "failures": 8,
+          "failure_classes": {
+            "near_without_adjacency": 5,
+            "adjacent_only_at_terminal": 2,
+            "missed_actionable_adjacency": 1
+          },
+          "failure_sg": 2.5,
+          "failure_avoidable_revisit_records": 1,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 6,
+          "failure_near_early_records": 6,
+          "mean_unique_cells": 8.4,
+          "mean_closed_neighborhood_cells": 16.253333333333334,
+          "action_counts": {
+            "revisits": 5,
+            "no_cue_steps": 491,
+            "no_cue_revisits": 5,
+            "avoidable_revisits": 5,
+            "immediate_reverse": 5,
+            "no_cue_immediate_reverse": 5,
+            "accepted": 69,
+            "false_accepts": 2,
+            "false_overrides": 0
+          },
+          "failed_opportunity_reasons": {
+            "not_adjacent": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 2,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 5,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_58.jpg": {
+          "records": 75,
+          "successes": 68,
+          "sr": 0.9066666666666666,
+          "sg": 0.29333333333333333,
+          "failures": 7,
+          "failure_classes": {
+            "near_without_adjacency": 3,
+            "adjacent_only_at_terminal": 1,
+            "never_within_two": 2,
+            "missed_actionable_adjacency": 1
+          },
+          "failure_sg": 3.142857142857143,
+          "failure_avoidable_revisit_records": 1,
+          "failure_false_accept_records": 5,
+          "failure_near_then_away_records": 2,
+          "failure_near_early_records": 2,
+          "mean_unique_cells": 8.64,
+          "mean_closed_neighborhood_cells": 16.546666666666667,
+          "action_counts": {
+            "revisits": 1,
+            "no_cue_steps": 470,
+            "no_cue_revisits": 1,
+            "avoidable_revisits": 1,
+            "immediate_reverse": 1,
+            "no_cue_immediate_reverse": 1,
+            "accepted": 104,
+            "false_accepts": 41,
+            "false_overrides": 20
+          },
+          "failed_opportunity_reasons": {
+            "low_confidence": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 3,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 2,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_59.jpg": {
+          "records": 75,
+          "successes": 55,
+          "sr": 0.7333333333333333,
+          "sg": 0.4533333333333333,
+          "failures": 20,
+          "failure_classes": {
+            "near_without_adjacency": 12,
+            "adjacent_only_at_terminal": 8
+          },
+          "failure_sg": 1.7,
+          "failure_avoidable_revisit_records": 3,
+          "failure_false_accept_records": 3,
+          "failure_near_then_away_records": 2,
+          "failure_near_early_records": 2,
+          "mean_unique_cells": 9.186666666666667,
+          "mean_closed_neighborhood_cells": 17.013333333333332,
+          "action_counts": {
+            "revisits": 6,
+            "no_cue_steps": 556,
+            "no_cue_revisits": 6,
+            "avoidable_revisits": 5,
+            "immediate_reverse": 5,
+            "no_cue_immediate_reverse": 5,
+            "accepted": 64,
+            "false_accepts": 9,
+            "false_overrides": 8
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 8,
+              "with_avoidable_revisit": 2
+            },
+            "near_without_adjacency": {
+              "records": 12,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        }
+      }
+    },
+    "10": {
+      "M0": {
+        "SwissView100/swisstopo_40.jpg": {
+          "records": 75,
+          "successes": 49,
+          "sr": 0.6533333333333333,
+          "sg": 1.3066666666666666,
+          "failures": 26,
+          "failure_classes": {
+            "near_without_adjacency": 14,
+            "never_within_two": 7,
+            "adjacent_only_at_terminal": 5
+          },
+          "failure_sg": 3.769230769230769,
+          "failure_avoidable_revisit_records": 13,
+          "failure_false_accept_records": 22,
+          "failure_near_then_away_records": 15,
+          "failure_near_early_records": 15,
+          "mean_unique_cells": 18.346666666666668,
+          "mean_closed_neighborhood_cells": 40.76,
+          "action_counts": {
+            "revisits": 35,
+            "no_cue_steps": 1170,
+            "no_cue_revisits": 35,
+            "avoidable_revisits": 35,
+            "immediate_reverse": 27,
+            "no_cue_immediate_reverse": 27,
+            "accepted": 166,
+            "false_accepts": 117,
+            "false_overrides": 79
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 5,
+              "with_avoidable_revisit": 2
+            },
+            "near_without_adjacency": {
+              "records": 14,
+              "with_avoidable_revisit": 6
+            },
+            "never_within_two": {
+              "records": 7,
+              "with_avoidable_revisit": 5
+            }
+          }
+        },
+        "SwissView100/swisstopo_41.jpg": {
+          "records": 75,
+          "successes": 58,
+          "sr": 0.7733333333333333,
+          "sg": 0.9333333333333333,
+          "failures": 17,
+          "failure_classes": {
+            "near_without_adjacency": 12,
+            "never_within_two": 4,
+            "adjacent_only_at_terminal": 1
+          },
+          "failure_sg": 4.117647058823529,
+          "failure_avoidable_revisit_records": 8,
+          "failure_false_accept_records": 7,
+          "failure_near_then_away_records": 8,
+          "failure_near_early_records": 8,
+          "mean_unique_cells": 17.093333333333334,
+          "mean_closed_neighborhood_cells": 39.16,
+          "action_counts": {
+            "revisits": 23,
+            "no_cue_steps": 1139,
+            "no_cue_revisits": 23,
+            "avoidable_revisits": 23,
+            "immediate_reverse": 16,
+            "no_cue_immediate_reverse": 16,
+            "accepted": 91,
+            "false_accepts": 33,
+            "false_overrides": 23
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 12,
+              "with_avoidable_revisit": 5
+            },
+            "never_within_two": {
+              "records": 4,
+              "with_avoidable_revisit": 3
+            }
+          }
+        },
+        "SwissView100/swisstopo_42.jpg": {
+          "records": 75,
+          "successes": 50,
+          "sr": 0.6666666666666666,
+          "sg": 1.1866666666666668,
+          "failures": 25,
+          "failure_classes": {
+            "near_without_adjacency": 11,
+            "never_within_two": 7,
+            "adjacent_only_at_terminal": 7
+          },
+          "failure_sg": 3.56,
+          "failure_avoidable_revisit_records": 5,
+          "failure_false_accept_records": 8,
+          "failure_near_then_away_records": 6,
+          "failure_near_early_records": 6,
+          "mean_unique_cells": 18.69333333333333,
+          "mean_closed_neighborhood_cells": 41.973333333333336,
+          "action_counts": {
+            "revisits": 14,
+            "no_cue_steps": 1270,
+            "no_cue_revisits": 14,
+            "avoidable_revisits": 14,
+            "immediate_reverse": 9,
+            "no_cue_immediate_reverse": 9,
+            "accepted": 71,
+            "false_accepts": 24,
+            "false_overrides": 18
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 7,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 11,
+              "with_avoidable_revisit": 3
+            },
+            "never_within_two": {
+              "records": 7,
+              "with_avoidable_revisit": 2
+            }
+          }
+        },
+        "SwissView100/swisstopo_43.jpg": {
+          "records": 75,
+          "successes": 56,
+          "sr": 0.7466666666666667,
+          "sg": 0.6933333333333334,
+          "failures": 19,
+          "failure_classes": {
+            "near_without_adjacency": 6,
+            "never_within_two": 4,
+            "adjacent_only_at_terminal": 9
+          },
+          "failure_sg": 2.736842105263158,
+          "failure_avoidable_revisit_records": 4,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 7,
+          "failure_near_early_records": 7,
+          "mean_unique_cells": 17.72,
+          "mean_closed_neighborhood_cells": 38.78666666666667,
+          "action_counts": {
+            "revisits": 16,
+            "no_cue_steps": 1215,
+            "no_cue_revisits": 16,
+            "avoidable_revisits": 16,
+            "immediate_reverse": 15,
+            "no_cue_immediate_reverse": 15,
+            "accepted": 55,
+            "false_accepts": 0,
+            "false_overrides": 0
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 9,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 6,
+              "with_avoidable_revisit": 2
+            },
+            "never_within_two": {
+              "records": 4,
+              "with_avoidable_revisit": 2
+            }
+          }
+        },
+        "SwissView100/swisstopo_44.jpg": {
+          "records": 75,
+          "successes": 51,
+          "sr": 0.68,
+          "sg": 1.3466666666666667,
+          "failures": 24,
+          "failure_classes": {
+            "never_within_two": 12,
+            "missed_actionable_adjacency": 2,
+            "adjacent_only_at_terminal": 4,
+            "near_without_adjacency": 6
+          },
+          "failure_sg": 4.208333333333333,
+          "failure_avoidable_revisit_records": 8,
+          "failure_false_accept_records": 23,
+          "failure_near_then_away_records": 8,
+          "failure_near_early_records": 8,
+          "mean_unique_cells": 18.333333333333332,
+          "mean_closed_neighborhood_cells": 40.986666666666665,
+          "action_counts": {
+            "revisits": 19,
+            "no_cue_steps": 1109,
+            "no_cue_revisits": 19,
+            "avoidable_revisits": 17,
+            "immediate_reverse": 19,
+            "no_cue_immediate_reverse": 19,
+            "accepted": 210,
+            "false_accepts": 159,
+            "false_overrides": 83
+          },
+          "failed_opportunity_reasons": {
+            "accepted": 2
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 2,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 6,
+              "with_avoidable_revisit": 4
+            },
+            "never_within_two": {
+              "records": 12,
+              "with_avoidable_revisit": 3
+            }
+          }
+        },
+        "SwissView100/swisstopo_45.jpg": {
+          "records": 75,
+          "successes": 65,
+          "sr": 0.8666666666666667,
+          "sg": 0.9466666666666667,
+          "failures": 10,
+          "failure_classes": {
+            "adjacent_only_at_terminal": 2,
+            "near_without_adjacency": 5,
+            "never_within_two": 3
+          },
+          "failure_sg": 7.1,
+          "failure_avoidable_revisit_records": 3,
+          "failure_false_accept_records": 1,
+          "failure_near_then_away_records": 4,
+          "failure_near_early_records": 4,
+          "mean_unique_cells": 17.626666666666665,
+          "mean_closed_neighborhood_cells": 40.973333333333336,
+          "action_counts": {
+            "revisits": 8,
+            "no_cue_steps": 1176,
+            "no_cue_revisits": 8,
+            "avoidable_revisits": 8,
+            "immediate_reverse": 4,
+            "no_cue_immediate_reverse": 4,
+            "accepted": 79,
+            "false_accepts": 14,
+            "false_overrides": 9
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 2,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 5,
+              "with_avoidable_revisit": 0
+            },
+            "never_within_two": {
+              "records": 3,
+              "with_avoidable_revisit": 3
+            }
+          }
+        },
+        "SwissView100/swisstopo_46.jpg": {
+          "records": 75,
+          "successes": 52,
+          "sr": 0.6933333333333334,
+          "sg": 1.6266666666666667,
+          "failures": 23,
+          "failure_classes": {
+            "never_within_two": 8,
+            "near_without_adjacency": 10,
+            "adjacent_only_at_terminal": 5
+          },
+          "failure_sg": 5.304347826086956,
+          "failure_avoidable_revisit_records": 8,
+          "failure_false_accept_records": 17,
+          "failure_near_then_away_records": 6,
+          "failure_near_early_records": 6,
+          "mean_unique_cells": 18.626666666666665,
+          "mean_closed_neighborhood_cells": 41.25333333333333,
+          "action_counts": {
+            "revisits": 20,
+            "no_cue_steps": 1197,
+            "no_cue_revisits": 20,
+            "avoidable_revisits": 17,
+            "immediate_reverse": 18,
+            "no_cue_immediate_reverse": 18,
+            "accepted": 145,
+            "false_accepts": 93,
+            "false_overrides": 62
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 5,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 10,
+              "with_avoidable_revisit": 2
+            },
+            "never_within_two": {
+              "records": 8,
+              "with_avoidable_revisit": 5
+            }
+          }
+        },
+        "SwissView100/swisstopo_47.jpg": {
+          "records": 75,
+          "successes": 58,
+          "sr": 0.7733333333333333,
+          "sg": 0.84,
+          "failures": 17,
+          "failure_classes": {
+            "near_without_adjacency": 9,
+            "adjacent_only_at_terminal": 4,
+            "never_within_two": 4
+          },
+          "failure_sg": 3.7058823529411766,
+          "failure_avoidable_revisit_records": 7,
+          "failure_false_accept_records": 9,
+          "failure_near_then_away_records": 8,
+          "failure_near_early_records": 8,
+          "mean_unique_cells": 17.48,
+          "mean_closed_neighborhood_cells": 39.88,
+          "action_counts": {
+            "revisits": 23,
+            "no_cue_steps": 1152,
+            "no_cue_revisits": 23,
+            "avoidable_revisits": 22,
+            "immediate_reverse": 12,
+            "no_cue_immediate_reverse": 12,
+            "accepted": 107,
+            "false_accepts": 49,
+            "false_overrides": 26
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 9,
+              "with_avoidable_revisit": 5
+            },
+            "never_within_two": {
+              "records": 4,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_48.jpg": {
+          "records": 75,
+          "successes": 55,
+          "sr": 0.7333333333333333,
+          "sg": 1.3733333333333333,
+          "failures": 20,
+          "failure_classes": {
+            "never_within_two": 10,
+            "near_without_adjacency": 7,
+            "adjacent_only_at_terminal": 3
+          },
+          "failure_sg": 5.15,
+          "failure_avoidable_revisit_records": 5,
+          "failure_false_accept_records": 16,
+          "failure_near_then_away_records": 6,
+          "failure_near_early_records": 5,
+          "mean_unique_cells": 18.266666666666666,
+          "mean_closed_neighborhood_cells": 40.50666666666667,
+          "action_counts": {
+            "revisits": 12,
+            "no_cue_steps": 1131,
+            "no_cue_revisits": 12,
+            "avoidable_revisits": 12,
+            "immediate_reverse": 10,
+            "no_cue_immediate_reverse": 10,
+            "accepted": 176,
+            "false_accepts": 121,
+            "false_overrides": 73
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 7,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 10,
+              "with_avoidable_revisit": 4
+            }
+          }
+        },
+        "SwissView100/swisstopo_49.jpg": {
+          "records": 75,
+          "successes": 60,
+          "sr": 0.8,
+          "sg": 1.3333333333333333,
+          "failures": 15,
+          "failure_classes": {
+            "near_without_adjacency": 7,
+            "never_within_two": 8
+          },
+          "failure_sg": 6.666666666666667,
+          "failure_avoidable_revisit_records": 8,
+          "failure_false_accept_records": 7,
+          "failure_near_then_away_records": 7,
+          "failure_near_early_records": 6,
+          "mean_unique_cells": 17.6,
+          "mean_closed_neighborhood_cells": 41.373333333333335,
+          "action_counts": {
+            "revisits": 11,
+            "no_cue_steps": 1158,
+            "no_cue_revisits": 11,
+            "avoidable_revisits": 9,
+            "immediate_reverse": 11,
+            "no_cue_immediate_reverse": 11,
+            "accepted": 98,
+            "false_accepts": 38,
+            "false_overrides": 20
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 7,
+              "with_avoidable_revisit": 2
+            },
+            "never_within_two": {
+              "records": 8,
+              "with_avoidable_revisit": 6
+            }
+          }
+        },
+        "SwissView100/swisstopo_50.jpg": {
+          "records": 75,
+          "successes": 56,
+          "sr": 0.7466666666666667,
+          "sg": 1.3866666666666667,
+          "failures": 19,
+          "failure_classes": {
+            "near_without_adjacency": 10,
+            "never_within_two": 8,
+            "adjacent_only_at_terminal": 1
+          },
+          "failure_sg": 5.473684210526316,
+          "failure_avoidable_revisit_records": 7,
+          "failure_false_accept_records": 13,
+          "failure_near_then_away_records": 6,
+          "failure_near_early_records": 6,
+          "mean_unique_cells": 17.826666666666668,
+          "mean_closed_neighborhood_cells": 41.42666666666667,
+          "action_counts": {
+            "revisits": 14,
+            "no_cue_steps": 1165,
+            "no_cue_revisits": 14,
+            "avoidable_revisits": 14,
+            "immediate_reverse": 14,
+            "no_cue_immediate_reverse": 14,
+            "accepted": 111,
+            "false_accepts": 55,
+            "false_overrides": 35
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 10,
+              "with_avoidable_revisit": 3
+            },
+            "never_within_two": {
+              "records": 8,
+              "with_avoidable_revisit": 4
+            }
+          }
+        },
+        "SwissView100/swisstopo_51.jpg": {
+          "records": 75,
+          "successes": 40,
+          "sr": 0.5333333333333333,
+          "sg": 1.52,
+          "failures": 35,
+          "failure_classes": {
+            "near_without_adjacency": 17,
+            "adjacent_only_at_terminal": 8,
+            "never_within_two": 10
+          },
+          "failure_sg": 3.257142857142857,
+          "failure_avoidable_revisit_records": 16,
+          "failure_false_accept_records": 33,
+          "failure_near_then_away_records": 7,
+          "failure_near_early_records": 6,
+          "mean_unique_cells": 18.92,
+          "mean_closed_neighborhood_cells": 40.84,
+          "action_counts": {
+            "revisits": 34,
+            "no_cue_steps": 1009,
+            "no_cue_revisits": 34,
+            "avoidable_revisits": 33,
+            "immediate_reverse": 27,
+            "no_cue_immediate_reverse": 27,
+            "accepted": 369,
+            "false_accepts": 329,
+            "false_overrides": 211
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 8,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 17,
+              "with_avoidable_revisit": 9
+            },
+            "never_within_two": {
+              "records": 10,
+              "with_avoidable_revisit": 6
+            }
+          }
+        },
+        "SwissView100/swisstopo_52.jpg": {
+          "records": 75,
+          "successes": 57,
+          "sr": 0.76,
+          "sg": 1.3733333333333333,
+          "failures": 18,
+          "failure_classes": {
+            "near_without_adjacency": 7,
+            "never_within_two": 7,
+            "adjacent_only_at_terminal": 4
+          },
+          "failure_sg": 5.722222222222222,
+          "failure_avoidable_revisit_records": 6,
+          "failure_false_accept_records": 6,
+          "failure_near_then_away_records": 9,
+          "failure_near_early_records": 9,
+          "mean_unique_cells": 17.72,
+          "mean_closed_neighborhood_cells": 40.82666666666667,
+          "action_counts": {
+            "revisits": 7,
+            "no_cue_steps": 1184,
+            "no_cue_revisits": 7,
+            "avoidable_revisits": 7,
+            "immediate_reverse": 7,
+            "no_cue_immediate_reverse": 7,
+            "accepted": 77,
+            "false_accepts": 20,
+            "false_overrides": 9
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 7,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 7,
+              "with_avoidable_revisit": 5
+            }
+          }
+        },
+        "SwissView100/swisstopo_53.jpg": {
+          "records": 75,
+          "successes": 52,
+          "sr": 0.6933333333333334,
+          "sg": 1.5066666666666666,
+          "failures": 23,
+          "failure_classes": {
+            "near_without_adjacency": 11,
+            "adjacent_only_at_terminal": 4,
+            "never_within_two": 8
+          },
+          "failure_sg": 4.913043478260869,
+          "failure_avoidable_revisit_records": 12,
+          "failure_false_accept_records": 15,
+          "failure_near_then_away_records": 8,
+          "failure_near_early_records": 7,
+          "mean_unique_cells": 17.64,
+          "mean_closed_neighborhood_cells": 41.413333333333334,
+          "action_counts": {
+            "revisits": 25,
+            "no_cue_steps": 1169,
+            "no_cue_revisits": 25,
+            "avoidable_revisits": 23,
+            "immediate_reverse": 18,
+            "no_cue_immediate_reverse": 18,
+            "accepted": 104,
+            "false_accepts": 52,
+            "false_overrides": 29
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 11,
+              "with_avoidable_revisit": 6
+            },
+            "never_within_two": {
+              "records": 8,
+              "with_avoidable_revisit": 6
+            }
+          }
+        },
+        "SwissView100/swisstopo_54.jpg": {
+          "records": 75,
+          "successes": 48,
+          "sr": 0.64,
+          "sg": 1.48,
+          "failures": 27,
+          "failure_classes": {
+            "never_within_two": 12,
+            "near_without_adjacency": 10,
+            "missed_actionable_adjacency": 3,
+            "adjacent_only_at_terminal": 2
+          },
+          "failure_sg": 4.111111111111111,
+          "failure_avoidable_revisit_records": 15,
+          "failure_false_accept_records": 24,
+          "failure_near_then_away_records": 13,
+          "failure_near_early_records": 13,
+          "mean_unique_cells": 18.14666666666667,
+          "mean_closed_neighborhood_cells": 41.18666666666667,
+          "action_counts": {
+            "revisits": 35,
+            "no_cue_steps": 1070,
+            "no_cue_revisits": 35,
+            "avoidable_revisits": 34,
+            "immediate_reverse": 31,
+            "no_cue_immediate_reverse": 31,
+            "accepted": 251,
+            "false_accepts": 212,
+            "false_overrides": 139
+          },
+          "failed_opportunity_reasons": {
+            "accepted": 1,
+            "low_confidence": 2
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 3,
+              "with_avoidable_revisit": 1
+            },
+            "adjacent_only_at_terminal": {
+              "records": 2,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 10,
+              "with_avoidable_revisit": 5
+            },
+            "never_within_two": {
+              "records": 12,
+              "with_avoidable_revisit": 9
+            }
+          }
+        },
+        "SwissView100/swisstopo_55.jpg": {
+          "records": 75,
+          "successes": 51,
+          "sr": 0.68,
+          "sg": 1.48,
+          "failures": 24,
+          "failure_classes": {
+            "never_within_two": 9,
+            "near_without_adjacency": 11,
+            "adjacent_only_at_terminal": 4
+          },
+          "failure_sg": 4.625,
+          "failure_avoidable_revisit_records": 13,
+          "failure_false_accept_records": 11,
+          "failure_near_then_away_records": 10,
+          "failure_near_early_records": 10,
+          "mean_unique_cells": 18.16,
+          "mean_closed_neighborhood_cells": 41.29333333333334,
+          "action_counts": {
+            "revisits": 28,
+            "no_cue_steps": 1216,
+            "no_cue_revisits": 28,
+            "avoidable_revisits": 27,
+            "immediate_reverse": 17,
+            "no_cue_immediate_reverse": 17,
+            "accepted": 99,
+            "false_accepts": 50,
+            "false_overrides": 24
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 11,
+              "with_avoidable_revisit": 6
+            },
+            "never_within_two": {
+              "records": 9,
+              "with_avoidable_revisit": 6
+            }
+          }
+        },
+        "SwissView100/swisstopo_56.jpg": {
+          "records": 75,
+          "successes": 49,
+          "sr": 0.6533333333333333,
+          "sg": 1.3733333333333333,
+          "failures": 26,
+          "failure_classes": {
+            "near_without_adjacency": 15,
+            "adjacent_only_at_terminal": 3,
+            "never_within_two": 8
+          },
+          "failure_sg": 3.9615384615384617,
+          "failure_avoidable_revisit_records": 6,
+          "failure_false_accept_records": 8,
+          "failure_near_then_away_records": 7,
+          "failure_near_early_records": 7,
+          "mean_unique_cells": 18.546666666666667,
+          "mean_closed_neighborhood_cells": 40.44,
+          "action_counts": {
+            "revisits": 15,
+            "no_cue_steps": 1257,
+            "no_cue_revisits": 15,
+            "avoidable_revisits": 15,
+            "immediate_reverse": 8,
+            "no_cue_immediate_reverse": 8,
+            "accepted": 74,
+            "false_accepts": 25,
+            "false_overrides": 17
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 15,
+              "with_avoidable_revisit": 5
+            },
+            "never_within_two": {
+              "records": 8,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_57.jpg": {
+          "records": 75,
+          "successes": 58,
+          "sr": 0.7733333333333333,
+          "sg": 1.24,
+          "failures": 17,
+          "failure_classes": {
+            "never_within_two": 9,
+            "near_without_adjacency": 5,
+            "adjacent_only_at_terminal": 2,
+            "missed_actionable_adjacency": 1
+          },
+          "failure_sg": 5.470588235294118,
+          "failure_avoidable_revisit_records": 5,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 5,
+          "failure_near_early_records": 5,
+          "mean_unique_cells": 17.413333333333334,
+          "mean_closed_neighborhood_cells": 40.053333333333335,
+          "action_counts": {
+            "revisits": 14,
+            "no_cue_steps": 1181,
+            "no_cue_revisits": 14,
+            "avoidable_revisits": 14,
+            "immediate_reverse": 12,
+            "no_cue_immediate_reverse": 12,
+            "accepted": 64,
+            "false_accepts": 6,
+            "false_overrides": 0
+          },
+          "failed_opportunity_reasons": {
+            "not_adjacent": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 2,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 5,
+              "with_avoidable_revisit": 3
+            },
+            "never_within_two": {
+              "records": 9,
+              "with_avoidable_revisit": 2
+            }
+          }
+        },
+        "SwissView100/swisstopo_58.jpg": {
+          "records": 75,
+          "successes": 57,
+          "sr": 0.76,
+          "sg": 0.8666666666666667,
+          "failures": 18,
+          "failure_classes": {
+            "near_without_adjacency": 11,
+            "missed_actionable_adjacency": 1,
+            "never_within_two": 6
+          },
+          "failure_sg": 3.611111111111111,
+          "failure_avoidable_revisit_records": 6,
+          "failure_false_accept_records": 12,
+          "failure_near_then_away_records": 9,
+          "failure_near_early_records": 9,
+          "mean_unique_cells": 18.12,
+          "mean_closed_neighborhood_cells": 41.346666666666664,
+          "action_counts": {
+            "revisits": 19,
+            "no_cue_steps": 1114,
+            "no_cue_revisits": 19,
+            "avoidable_revisits": 16,
+            "immediate_reverse": 19,
+            "no_cue_immediate_reverse": 19,
+            "accepted": 189,
+            "false_accepts": 137,
+            "false_overrides": 74
+          },
+          "failed_opportunity_reasons": {
+            "not_adjacent": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 11,
+              "with_avoidable_revisit": 5
+            },
+            "never_within_two": {
+              "records": 6,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_59.jpg": {
+          "records": 75,
+          "successes": 59,
+          "sr": 0.7866666666666666,
+          "sg": 0.7866666666666666,
+          "failures": 16,
+          "failure_classes": {
+            "never_within_two": 6,
+            "near_without_adjacency": 6,
+            "adjacent_only_at_terminal": 4
+          },
+          "failure_sg": 3.6875,
+          "failure_avoidable_revisit_records": 7,
+          "failure_false_accept_records": 15,
+          "failure_near_then_away_records": 5,
+          "failure_near_early_records": 5,
+          "mean_unique_cells": 17.866666666666667,
+          "mean_closed_neighborhood_cells": 40.626666666666665,
+          "action_counts": {
+            "revisits": 16,
+            "no_cue_steps": 1146,
+            "no_cue_revisits": 16,
+            "avoidable_revisits": 14,
+            "immediate_reverse": 15,
+            "no_cue_immediate_reverse": 15,
+            "accepted": 135,
+            "false_accepts": 76,
+            "false_overrides": 39
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 2
+            },
+            "near_without_adjacency": {
+              "records": 6,
+              "with_avoidable_revisit": 3
+            },
+            "never_within_two": {
+              "records": 6,
+              "with_avoidable_revisit": 2
+            }
+          }
+        }
+      },
+      "Continue5": {
+        "SwissView100/swisstopo_40.jpg": {
+          "records": 75,
+          "successes": 56,
+          "sr": 0.7466666666666667,
+          "sg": 0.8133333333333334,
+          "failures": 19,
+          "failure_classes": {
+            "near_without_adjacency": 11,
+            "adjacent_only_at_terminal": 5,
+            "never_within_two": 3
+          },
+          "failure_sg": 3.210526315789474,
+          "failure_avoidable_revisit_records": 6,
+          "failure_false_accept_records": 14,
+          "failure_near_then_away_records": 12,
+          "failure_near_early_records": 12,
+          "mean_unique_cells": 18.106666666666666,
+          "mean_closed_neighborhood_cells": 39.32,
+          "action_counts": {
+            "revisits": 18,
+            "no_cue_steps": 1138,
+            "no_cue_revisits": 18,
+            "avoidable_revisits": 18,
+            "immediate_reverse": 17,
+            "no_cue_immediate_reverse": 17,
+            "accepted": 163,
+            "false_accepts": 107,
+            "false_overrides": 68
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 5,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 11,
+              "with_avoidable_revisit": 3
+            },
+            "never_within_two": {
+              "records": 3,
+              "with_avoidable_revisit": 2
+            }
+          }
+        },
+        "SwissView100/swisstopo_41.jpg": {
+          "records": 75,
+          "successes": 54,
+          "sr": 0.72,
+          "sg": 0.8266666666666667,
+          "failures": 21,
+          "failure_classes": {
+            "near_without_adjacency": 16,
+            "adjacent_only_at_terminal": 3,
+            "never_within_two": 2
+          },
+          "failure_sg": 2.9523809523809526,
+          "failure_avoidable_revisit_records": 8,
+          "failure_false_accept_records": 11,
+          "failure_near_then_away_records": 7,
+          "failure_near_early_records": 7,
+          "mean_unique_cells": 17.493333333333332,
+          "mean_closed_neighborhood_cells": 38.49333333333333,
+          "action_counts": {
+            "revisits": 17,
+            "no_cue_steps": 1162,
+            "no_cue_revisits": 17,
+            "avoidable_revisits": 17,
+            "immediate_reverse": 15,
+            "no_cue_immediate_reverse": 15,
+            "accepted": 92,
+            "false_accepts": 38,
+            "false_overrides": 28
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 3,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 16,
+              "with_avoidable_revisit": 5
+            },
+            "never_within_two": {
+              "records": 2,
+              "with_avoidable_revisit": 2
+            }
+          }
+        },
+        "SwissView100/swisstopo_42.jpg": {
+          "records": 75,
+          "successes": 49,
+          "sr": 0.6533333333333333,
+          "sg": 0.88,
+          "failures": 26,
+          "failure_classes": {
+            "never_within_two": 7,
+            "near_without_adjacency": 9,
+            "adjacent_only_at_terminal": 10
+          },
+          "failure_sg": 2.5384615384615383,
+          "failure_avoidable_revisit_records": 4,
+          "failure_false_accept_records": 7,
+          "failure_near_then_away_records": 6,
+          "failure_near_early_records": 6,
+          "mean_unique_cells": 18.866666666666667,
+          "mean_closed_neighborhood_cells": 39.6,
+          "action_counts": {
+            "revisits": 4,
+            "no_cue_steps": 1274,
+            "no_cue_revisits": 4,
+            "avoidable_revisits": 4,
+            "immediate_reverse": 3,
+            "no_cue_immediate_reverse": 3,
+            "accepted": 70,
+            "false_accepts": 24,
+            "false_overrides": 16
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 10,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 9,
+              "with_avoidable_revisit": 2
+            },
+            "never_within_two": {
+              "records": 7,
+              "with_avoidable_revisit": 2
+            }
+          }
+        },
+        "SwissView100/swisstopo_43.jpg": {
+          "records": 75,
+          "successes": 57,
+          "sr": 0.76,
+          "sg": 0.5733333333333334,
+          "failures": 18,
+          "failure_classes": {
+            "near_without_adjacency": 7,
+            "never_within_two": 3,
+            "adjacent_only_at_terminal": 8
+          },
+          "failure_sg": 2.388888888888889,
+          "failure_avoidable_revisit_records": 0,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 10,
+          "failure_near_early_records": 10,
+          "mean_unique_cells": 17.706666666666667,
+          "mean_closed_neighborhood_cells": 36.733333333333334,
+          "action_counts": {
+            "revisits": 0,
+            "no_cue_steps": 1197,
+            "no_cue_revisits": 0,
+            "avoidable_revisits": 0,
+            "immediate_reverse": 0,
+            "no_cue_immediate_reverse": 0,
+            "accepted": 56,
+            "false_accepts": 0,
+            "false_overrides": 0
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 8,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 7,
+              "with_avoidable_revisit": 0
+            },
+            "never_within_two": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_44.jpg": {
+          "records": 75,
+          "successes": 53,
+          "sr": 0.7066666666666667,
+          "sg": 0.96,
+          "failures": 22,
+          "failure_classes": {
+            "never_within_two": 6,
+            "near_without_adjacency": 10,
+            "adjacent_only_at_terminal": 5,
+            "missed_actionable_adjacency": 1
+          },
+          "failure_sg": 3.272727272727273,
+          "failure_avoidable_revisit_records": 9,
+          "failure_false_accept_records": 18,
+          "failure_near_then_away_records": 11,
+          "failure_near_early_records": 10,
+          "mean_unique_cells": 18.533333333333335,
+          "mean_closed_neighborhood_cells": 39.61333333333334,
+          "action_counts": {
+            "revisits": 17,
+            "no_cue_steps": 1128,
+            "no_cue_revisits": 17,
+            "avoidable_revisits": 17,
+            "immediate_reverse": 17,
+            "no_cue_immediate_reverse": 17,
+            "accepted": 204,
+            "false_accepts": 151,
+            "false_overrides": 69
+          },
+          "failed_opportunity_reasons": {
+            "accepted": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 5,
+              "with_avoidable_revisit": 2
+            },
+            "near_without_adjacency": {
+              "records": 10,
+              "with_avoidable_revisit": 2
+            },
+            "never_within_two": {
+              "records": 6,
+              "with_avoidable_revisit": 5
+            }
+          }
+        },
+        "SwissView100/swisstopo_45.jpg": {
+          "records": 75,
+          "successes": 64,
+          "sr": 0.8533333333333334,
+          "sg": 0.4533333333333333,
+          "failures": 11,
+          "failure_classes": {
+            "near_without_adjacency": 5,
+            "adjacent_only_at_terminal": 3,
+            "never_within_two": 3
+          },
+          "failure_sg": 3.090909090909091,
+          "failure_avoidable_revisit_records": 2,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 3,
+          "failure_near_early_records": 2,
+          "mean_unique_cells": 18.32,
+          "mean_closed_neighborhood_cells": 39.81333333333333,
+          "action_counts": {
+            "revisits": 3,
+            "no_cue_steps": 1233,
+            "no_cue_revisits": 3,
+            "avoidable_revisits": 3,
+            "immediate_reverse": 2,
+            "no_cue_immediate_reverse": 2,
+            "accepted": 69,
+            "false_accepts": 5,
+            "false_overrides": 3
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 5,
+              "with_avoidable_revisit": 2
+            },
+            "never_within_two": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_46.jpg": {
+          "records": 75,
+          "successes": 54,
+          "sr": 0.72,
+          "sg": 0.96,
+          "failures": 21,
+          "failure_classes": {
+            "near_without_adjacency": 4,
+            "never_within_two": 12,
+            "adjacent_only_at_terminal": 5
+          },
+          "failure_sg": 3.4285714285714284,
+          "failure_avoidable_revisit_records": 10,
+          "failure_false_accept_records": 16,
+          "failure_near_then_away_records": 0,
+          "failure_near_early_records": 0,
+          "mean_unique_cells": 18.653333333333332,
+          "mean_closed_neighborhood_cells": 39.093333333333334,
+          "action_counts": {
+            "revisits": 28,
+            "no_cue_steps": 1202,
+            "no_cue_revisits": 28,
+            "avoidable_revisits": 23,
+            "immediate_reverse": 24,
+            "no_cue_immediate_reverse": 24,
+            "accepted": 150,
+            "false_accepts": 96,
+            "false_overrides": 66
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 5,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 4,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 12,
+              "with_avoidable_revisit": 9
+            }
+          }
+        },
+        "SwissView100/swisstopo_47.jpg": {
+          "records": 75,
+          "successes": 55,
+          "sr": 0.7333333333333333,
+          "sg": 0.8266666666666667,
+          "failures": 20,
+          "failure_classes": {
+            "near_without_adjacency": 12,
+            "adjacent_only_at_terminal": 5,
+            "never_within_two": 3
+          },
+          "failure_sg": 3.1,
+          "failure_avoidable_revisit_records": 5,
+          "failure_false_accept_records": 7,
+          "failure_near_then_away_records": 8,
+          "failure_near_early_records": 8,
+          "mean_unique_cells": 18.2,
+          "mean_closed_neighborhood_cells": 39.12,
+          "action_counts": {
+            "revisits": 18,
+            "no_cue_steps": 1213,
+            "no_cue_revisits": 18,
+            "avoidable_revisits": 18,
+            "immediate_reverse": 13,
+            "no_cue_immediate_reverse": 13,
+            "accepted": 95,
+            "false_accepts": 40,
+            "false_overrides": 18
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 5,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 12,
+              "with_avoidable_revisit": 4
+            },
+            "never_within_two": {
+              "records": 3,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_48.jpg": {
+          "records": 75,
+          "successes": 54,
+          "sr": 0.72,
+          "sg": 0.9066666666666666,
+          "failures": 21,
+          "failure_classes": {
+            "near_without_adjacency": 6,
+            "adjacent_only_at_terminal": 4,
+            "never_within_two": 11
+          },
+          "failure_sg": 3.238095238095238,
+          "failure_avoidable_revisit_records": 1,
+          "failure_false_accept_records": 18,
+          "failure_near_then_away_records": 3,
+          "failure_near_early_records": 3,
+          "mean_unique_cells": 18.426666666666666,
+          "mean_closed_neighborhood_cells": 39.78666666666667,
+          "action_counts": {
+            "revisits": 3,
+            "no_cue_steps": 1137,
+            "no_cue_revisits": 3,
+            "avoidable_revisits": 3,
+            "immediate_reverse": 3,
+            "no_cue_immediate_reverse": 3,
+            "accepted": 173,
+            "false_accepts": 119,
+            "false_overrides": 67
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 6,
+              "with_avoidable_revisit": 0
+            },
+            "never_within_two": {
+              "records": 11,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_49.jpg": {
+          "records": 75,
+          "successes": 58,
+          "sr": 0.7733333333333333,
+          "sg": 0.8666666666666667,
+          "failures": 17,
+          "failure_classes": {
+            "near_without_adjacency": 5,
+            "never_within_two": 8,
+            "adjacent_only_at_terminal": 4
+          },
+          "failure_sg": 3.823529411764706,
+          "failure_avoidable_revisit_records": 6,
+          "failure_false_accept_records": 8,
+          "failure_near_then_away_records": 6,
+          "failure_near_early_records": 6,
+          "mean_unique_cells": 18.293333333333333,
+          "mean_closed_neighborhood_cells": 39.413333333333334,
+          "action_counts": {
+            "revisits": 10,
+            "no_cue_steps": 1204,
+            "no_cue_revisits": 10,
+            "avoidable_revisits": 10,
+            "immediate_reverse": 9,
+            "no_cue_immediate_reverse": 9,
+            "accepted": 103,
+            "false_accepts": 45,
+            "false_overrides": 28
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 5,
+              "with_avoidable_revisit": 2
+            },
+            "never_within_two": {
+              "records": 8,
+              "with_avoidable_revisit": 4
+            }
+          }
+        },
+        "SwissView100/swisstopo_50.jpg": {
+          "records": 75,
+          "successes": 57,
+          "sr": 0.76,
+          "sg": 0.6933333333333334,
+          "failures": 18,
+          "failure_classes": {
+            "never_within_two": 5,
+            "adjacent_only_at_terminal": 6,
+            "near_without_adjacency": 7
+          },
+          "failure_sg": 2.888888888888889,
+          "failure_avoidable_revisit_records": 2,
+          "failure_false_accept_records": 17,
+          "failure_near_then_away_records": 2,
+          "failure_near_early_records": 2,
+          "mean_unique_cells": 18.32,
+          "mean_closed_neighborhood_cells": 40.25333333333333,
+          "action_counts": {
+            "revisits": 3,
+            "no_cue_steps": 1196,
+            "no_cue_revisits": 3,
+            "avoidable_revisits": 3,
+            "immediate_reverse": 3,
+            "no_cue_immediate_reverse": 3,
+            "accepted": 106,
+            "false_accepts": 49,
+            "false_overrides": 29
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 6,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 7,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 5,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_51.jpg": {
+          "records": 75,
+          "successes": 40,
+          "sr": 0.5333333333333333,
+          "sg": 1.2266666666666666,
+          "failures": 35,
+          "failure_classes": {
+            "near_without_adjacency": 17,
+            "adjacent_only_at_terminal": 11,
+            "never_within_two": 7
+          },
+          "failure_sg": 2.6285714285714286,
+          "failure_avoidable_revisit_records": 13,
+          "failure_false_accept_records": 33,
+          "failure_near_then_away_records": 6,
+          "failure_near_early_records": 6,
+          "mean_unique_cells": 18.946666666666665,
+          "mean_closed_neighborhood_cells": 40.32,
+          "action_counts": {
+            "revisits": 26,
+            "no_cue_steps": 995,
+            "no_cue_revisits": 26,
+            "avoidable_revisits": 25,
+            "immediate_reverse": 21,
+            "no_cue_immediate_reverse": 21,
+            "accepted": 377,
+            "false_accepts": 337,
+            "false_overrides": 205
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 11,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 17,
+              "with_avoidable_revisit": 6
+            },
+            "never_within_two": {
+              "records": 7,
+              "with_avoidable_revisit": 6
+            }
+          }
+        },
+        "SwissView100/swisstopo_52.jpg": {
+          "records": 75,
+          "successes": 59,
+          "sr": 0.7866666666666666,
+          "sg": 0.8,
+          "failures": 16,
+          "failure_classes": {
+            "never_within_two": 3,
+            "near_without_adjacency": 9,
+            "adjacent_only_at_terminal": 4
+          },
+          "failure_sg": 3.75,
+          "failure_avoidable_revisit_records": 2,
+          "failure_false_accept_records": 6,
+          "failure_near_then_away_records": 10,
+          "failure_near_early_records": 9,
+          "mean_unique_cells": 17.84,
+          "mean_closed_neighborhood_cells": 39.16,
+          "action_counts": {
+            "revisits": 5,
+            "no_cue_steps": 1185,
+            "no_cue_revisits": 5,
+            "avoidable_revisits": 5,
+            "immediate_reverse": 5,
+            "no_cue_immediate_reverse": 5,
+            "accepted": 83,
+            "false_accepts": 24,
+            "false_overrides": 12
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 9,
+              "with_avoidable_revisit": 2
+            },
+            "never_within_two": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_53.jpg": {
+          "records": 75,
+          "successes": 53,
+          "sr": 0.7066666666666667,
+          "sg": 1.1733333333333333,
+          "failures": 22,
+          "failure_classes": {
+            "near_without_adjacency": 9,
+            "never_within_two": 6,
+            "adjacent_only_at_terminal": 7
+          },
+          "failure_sg": 4,
+          "failure_avoidable_revisit_records": 2,
+          "failure_false_accept_records": 15,
+          "failure_near_then_away_records": 7,
+          "failure_near_early_records": 7,
+          "mean_unique_cells": 18.106666666666666,
+          "mean_closed_neighborhood_cells": 41.36,
+          "action_counts": {
+            "revisits": 9,
+            "no_cue_steps": 1182,
+            "no_cue_revisits": 9,
+            "avoidable_revisits": 9,
+            "immediate_reverse": 7,
+            "no_cue_immediate_reverse": 7,
+            "accepted": 110,
+            "false_accepts": 57,
+            "false_overrides": 30
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 7,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 9,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 6,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_54.jpg": {
+          "records": 75,
+          "successes": 50,
+          "sr": 0.6666666666666666,
+          "sg": 1.2666666666666666,
+          "failures": 25,
+          "failure_classes": {
+            "near_without_adjacency": 10,
+            "adjacent_only_at_terminal": 6,
+            "never_within_two": 7,
+            "missed_actionable_adjacency": 2
+          },
+          "failure_sg": 3.8,
+          "failure_avoidable_revisit_records": 6,
+          "failure_false_accept_records": 23,
+          "failure_near_then_away_records": 11,
+          "failure_near_early_records": 10,
+          "mean_unique_cells": 18.333333333333332,
+          "mean_closed_neighborhood_cells": 41.04,
+          "action_counts": {
+            "revisits": 13,
+            "no_cue_steps": 1067,
+            "no_cue_revisits": 13,
+            "avoidable_revisits": 13,
+            "immediate_reverse": 13,
+            "no_cue_immediate_reverse": 13,
+            "accepted": 246,
+            "false_accepts": 203,
+            "false_overrides": 137
+          },
+          "failed_opportunity_reasons": {
+            "not_adjacent": 2
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 2,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 6,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 10,
+              "with_avoidable_revisit": 2
+            },
+            "never_within_two": {
+              "records": 7,
+              "with_avoidable_revisit": 4
+            }
+          }
+        },
+        "SwissView100/swisstopo_55.jpg": {
+          "records": 75,
+          "successes": 51,
+          "sr": 0.68,
+          "sg": 0.96,
+          "failures": 24,
+          "failure_classes": {
+            "near_without_adjacency": 12,
+            "never_within_two": 6,
+            "adjacent_only_at_terminal": 6
+          },
+          "failure_sg": 3,
+          "failure_avoidable_revisit_records": 7,
+          "failure_false_accept_records": 4,
+          "failure_near_then_away_records": 9,
+          "failure_near_early_records": 9,
+          "mean_unique_cells": 18.56,
+          "mean_closed_neighborhood_cells": 39.81333333333333,
+          "action_counts": {
+            "revisits": 15,
+            "no_cue_steps": 1254,
+            "no_cue_revisits": 15,
+            "avoidable_revisits": 14,
+            "immediate_reverse": 10,
+            "no_cue_immediate_reverse": 10,
+            "accepted": 78,
+            "false_accepts": 32,
+            "false_overrides": 13
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 6,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 12,
+              "with_avoidable_revisit": 3
+            },
+            "never_within_two": {
+              "records": 6,
+              "with_avoidable_revisit": 3
+            }
+          }
+        },
+        "SwissView100/swisstopo_56.jpg": {
+          "records": 75,
+          "successes": 54,
+          "sr": 0.72,
+          "sg": 0.84,
+          "failures": 21,
+          "failure_classes": {
+            "near_without_adjacency": 12,
+            "adjacent_only_at_terminal": 4,
+            "never_within_two": 5
+          },
+          "failure_sg": 3,
+          "failure_avoidable_revisit_records": 3,
+          "failure_false_accept_records": 3,
+          "failure_near_then_away_records": 2,
+          "failure_near_early_records": 2,
+          "mean_unique_cells": 18.413333333333334,
+          "mean_closed_neighborhood_cells": 39.586666666666666,
+          "action_counts": {
+            "revisits": 7,
+            "no_cue_steps": 1234,
+            "no_cue_revisits": 7,
+            "avoidable_revisits": 7,
+            "immediate_reverse": 5,
+            "no_cue_immediate_reverse": 5,
+            "accepted": 79,
+            "false_accepts": 25,
+            "false_overrides": 13
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 4,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 12,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 5,
+              "with_avoidable_revisit": 2
+            }
+          }
+        },
+        "SwissView100/swisstopo_57.jpg": {
+          "records": 75,
+          "successes": 60,
+          "sr": 0.8,
+          "sg": 0.76,
+          "failures": 15,
+          "failure_classes": {
+            "never_within_two": 7,
+            "near_without_adjacency": 4,
+            "adjacent_only_at_terminal": 3,
+            "missed_actionable_adjacency": 1
+          },
+          "failure_sg": 3.8,
+          "failure_avoidable_revisit_records": 3,
+          "failure_false_accept_records": 2,
+          "failure_near_then_away_records": 1,
+          "failure_near_early_records": 2,
+          "mean_unique_cells": 17.466666666666665,
+          "mean_closed_neighborhood_cells": 37.93333333333333,
+          "action_counts": {
+            "revisits": 10,
+            "no_cue_steps": 1170,
+            "no_cue_revisits": 10,
+            "avoidable_revisits": 10,
+            "immediate_reverse": 8,
+            "no_cue_immediate_reverse": 8,
+            "accepted": 75,
+            "false_accepts": 15,
+            "false_overrides": 5
+          },
+          "failed_opportunity_reasons": {
+            "not_adjacent": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 3,
+              "with_avoidable_revisit": 1
+            },
+            "near_without_adjacency": {
+              "records": 4,
+              "with_avoidable_revisit": 1
+            },
+            "never_within_two": {
+              "records": 7,
+              "with_avoidable_revisit": 1
+            }
+          }
+        },
+        "SwissView100/swisstopo_58.jpg": {
+          "records": 75,
+          "successes": 54,
+          "sr": 0.72,
+          "sg": 0.7733333333333333,
+          "failures": 21,
+          "failure_classes": {
+            "near_without_adjacency": 9,
+            "never_within_two": 5,
+            "adjacent_only_at_terminal": 7
+          },
+          "failure_sg": 2.761904761904762,
+          "failure_avoidable_revisit_records": 4,
+          "failure_false_accept_records": 10,
+          "failure_near_then_away_records": 6,
+          "failure_near_early_records": 6,
+          "mean_unique_cells": 18.48,
+          "mean_closed_neighborhood_cells": 40.50666666666667,
+          "action_counts": {
+            "revisits": 9,
+            "no_cue_steps": 1124,
+            "no_cue_revisits": 9,
+            "avoidable_revisits": 8,
+            "immediate_reverse": 9,
+            "no_cue_immediate_reverse": 9,
+            "accepted": 196,
+            "false_accepts": 142,
+            "false_overrides": 80
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 7,
+              "with_avoidable_revisit": 2
+            },
+            "near_without_adjacency": {
+              "records": 9,
+              "with_avoidable_revisit": 2
+            },
+            "never_within_two": {
+              "records": 5,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "SwissView100/swisstopo_59.jpg": {
+          "records": 75,
+          "successes": 58,
+          "sr": 0.7733333333333333,
+          "sg": 0.8,
+          "failures": 17,
+          "failure_classes": {
+            "near_without_adjacency": 10,
+            "never_within_two": 4,
+            "adjacent_only_at_terminal": 3
+          },
+          "failure_sg": 3.5294117647058822,
+          "failure_avoidable_revisit_records": 5,
+          "failure_false_accept_records": 12,
+          "failure_near_then_away_records": 7,
+          "failure_near_early_records": 7,
+          "mean_unique_cells": 18.186666666666667,
+          "mean_closed_neighborhood_cells": 40.053333333333335,
+          "action_counts": {
+            "revisits": 23,
+            "no_cue_steps": 1184,
+            "no_cue_revisits": 23,
+            "avoidable_revisits": 23,
+            "immediate_reverse": 20,
+            "no_cue_immediate_reverse": 20,
+            "accepted": 128,
+            "false_accepts": 70,
+            "false_overrides": 30
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 10,
+              "with_avoidable_revisit": 5
+            },
+            "never_within_two": {
+              "records": 4,
+              "with_avoidable_revisit": 0
+            }
+          }
+        }
+      }
+    }
+  },
+  "distance": {
+    "5": {
+      "M0": {
+        "4": {
+          "records": 300,
+          "successes": 211,
+          "sr": 0.7033333333333334,
+          "sg": 0.8333333333333334,
+          "failures": 89,
+          "failure_classes": {
+            "near_without_adjacency": 77,
+            "never_within_two": 12
+          },
+          "failure_sg": 2.808988764044944,
+          "failure_avoidable_revisit_records": 29,
+          "failure_false_accept_records": 18,
+          "failure_near_then_away_records": 29,
+          "failure_near_early_records": 29,
+          "mean_unique_cells": 7.866666666666666,
+          "mean_closed_neighborhood_cells": 16.05,
+          "action_counts": {
+            "revisits": 76,
+            "no_cue_steps": 1849,
+            "no_cue_revisits": 76,
+            "avoidable_revisits": 70,
+            "immediate_reverse": 69,
+            "no_cue_immediate_reverse": 69,
+            "accepted": 287,
+            "false_accepts": 76,
+            "false_overrides": 40
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 77,
+              "with_avoidable_revisit": 18
+            },
+            "never_within_two": {
+              "records": 12,
+              "with_avoidable_revisit": 11
+            }
+          }
+        },
+        "5": {
+          "records": 300,
+          "successes": 215,
+          "sr": 0.7166666666666667,
+          "sg": 0.55,
+          "failures": 85,
+          "failure_classes": {
+            "adjacent_only_at_terminal": 56,
+            "near_without_adjacency": 23,
+            "never_within_two": 3,
+            "missed_actionable_adjacency": 3
+          },
+          "failure_sg": 1.9411764705882353,
+          "failure_avoidable_revisit_records": 36,
+          "failure_false_accept_records": 18,
+          "failure_near_then_away_records": 34,
+          "failure_near_early_records": 31,
+          "mean_unique_cells": 8.15,
+          "mean_closed_neighborhood_cells": 16.49,
+          "action_counts": {
+            "revisits": 72,
+            "no_cue_steps": 1898,
+            "no_cue_revisits": 72,
+            "avoidable_revisits": 70,
+            "immediate_reverse": 66,
+            "no_cue_immediate_reverse": 66,
+            "accepted": 319,
+            "false_accepts": 106,
+            "false_overrides": 56
+          },
+          "failed_opportunity_reasons": {
+            "low_confidence": 3
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 56,
+              "with_avoidable_revisit": 11
+            },
+            "near_without_adjacency": {
+              "records": 23,
+              "with_avoidable_revisit": 22
+            },
+            "never_within_two": {
+              "records": 3,
+              "with_avoidable_revisit": 3
+            }
+          }
+        },
+        "6": {
+          "records": 300,
+          "successes": 287,
+          "sr": 0.9566666666666667,
+          "sg": 0.17333333333333334,
+          "failures": 13,
+          "failure_classes": {
+            "near_without_adjacency": 10,
+            "never_within_two": 3
+          },
+          "failure_sg": 4,
+          "failure_avoidable_revisit_records": 11,
+          "failure_false_accept_records": 3,
+          "failure_near_then_away_records": 9,
+          "failure_near_early_records": 9,
+          "mean_unique_cells": 8.686666666666667,
+          "mean_closed_neighborhood_cells": 17.043333333333333,
+          "action_counts": {
+            "revisits": 34,
+            "no_cue_steps": 1949,
+            "no_cue_revisits": 34,
+            "avoidable_revisits": 30,
+            "immediate_reverse": 30,
+            "no_cue_immediate_reverse": 30,
+            "accepted": 391,
+            "false_accepts": 111,
+            "false_overrides": 51
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 10,
+              "with_avoidable_revisit": 8
+            },
+            "never_within_two": {
+              "records": 3,
+              "with_avoidable_revisit": 3
+            }
+          }
+        },
+        "7": {
+          "records": 300,
+          "successes": 288,
+          "sr": 0.96,
+          "sg": 0.11333333333333333,
+          "failures": 12,
+          "failure_classes": {
+            "adjacent_only_at_terminal": 5,
+            "near_without_adjacency": 4,
+            "never_within_two": 3
+          },
+          "failure_sg": 2.8333333333333335,
+          "failure_avoidable_revisit_records": 10,
+          "failure_false_accept_records": 7,
+          "failure_near_then_away_records": 5,
+          "failure_near_early_records": 5,
+          "mean_unique_cells": 8.68,
+          "mean_closed_neighborhood_cells": 16.75,
+          "action_counts": {
+            "revisits": 26,
+            "no_cue_steps": 1944,
+            "no_cue_revisits": 26,
+            "avoidable_revisits": 19,
+            "immediate_reverse": 22,
+            "no_cue_immediate_reverse": 22,
+            "accepted": 386,
+            "false_accepts": 102,
+            "false_overrides": 53
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 5,
+              "with_avoidable_revisit": 3
+            },
+            "near_without_adjacency": {
+              "records": 4,
+              "with_avoidable_revisit": 4
+            },
+            "never_within_two": {
+              "records": 3,
+              "with_avoidable_revisit": 3
+            }
+          }
+        },
+        "8": {
+          "records": 300,
+          "successes": 300,
+          "sr": 1.0,
+          "sg": 0,
+          "failures": 0,
+          "failure_classes": {},
+          "failure_sg": null,
+          "failure_avoidable_revisit_records": 0,
+          "failure_false_accept_records": 0,
+          "failure_near_then_away_records": 0,
+          "failure_near_early_records": 0,
+          "mean_unique_cells": 9.046666666666667,
+          "mean_closed_neighborhood_cells": 16.653333333333332,
+          "action_counts": {
+            "revisits": 8,
+            "no_cue_steps": 2065,
+            "no_cue_revisits": 8,
+            "avoidable_revisits": 8,
+            "immediate_reverse": 8,
+            "no_cue_immediate_reverse": 8,
+            "accepted": 357,
+            "false_accepts": 68,
+            "false_overrides": 39
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        }
+      },
+      "Continue5": {
+        "4": {
+          "records": 300,
+          "successes": 213,
+          "sr": 0.71,
+          "sg": 0.7533333333333333,
+          "failures": 87,
+          "failure_classes": {
+            "near_without_adjacency": 82,
+            "never_within_two": 4,
+            "missed_actionable_adjacency": 1
+          },
+          "failure_sg": 2.5977011494252875,
+          "failure_avoidable_revisit_records": 12,
+          "failure_false_accept_records": 27,
+          "failure_near_then_away_records": 25,
+          "failure_near_early_records": 25,
+          "mean_unique_cells": 8.033333333333333,
+          "mean_closed_neighborhood_cells": 16.173333333333332,
+          "action_counts": {
+            "revisits": 32,
+            "no_cue_steps": 1844,
+            "no_cue_revisits": 32,
+            "avoidable_revisits": 31,
+            "immediate_reverse": 25,
+            "no_cue_immediate_reverse": 25,
+            "accepted": 298,
+            "false_accepts": 85,
+            "false_overrides": 47
+          },
+          "failed_opportunity_reasons": {
+            "not_adjacent": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 82,
+              "with_avoidable_revisit": 8
+            },
+            "never_within_two": {
+              "records": 4,
+              "with_avoidable_revisit": 4
+            }
+          }
+        },
+        "5": {
+          "records": 300,
+          "successes": 224,
+          "sr": 0.7466666666666667,
+          "sg": 0.44666666666666666,
+          "failures": 76,
+          "failure_classes": {
+            "adjacent_only_at_terminal": 58,
+            "near_without_adjacency": 7,
+            "never_within_two": 10,
+            "missed_actionable_adjacency": 1
+          },
+          "failure_sg": 1.763157894736842,
+          "failure_avoidable_revisit_records": 15,
+          "failure_false_accept_records": 21,
+          "failure_near_then_away_records": 19,
+          "failure_near_early_records": 19,
+          "mean_unique_cells": 8.25,
+          "mean_closed_neighborhood_cells": 16.256666666666668,
+          "action_counts": {
+            "revisits": 39,
+            "no_cue_steps": 1907,
+            "no_cue_revisits": 39,
+            "avoidable_revisits": 36,
+            "immediate_reverse": 31,
+            "no_cue_immediate_reverse": 31,
+            "accepted": 307,
+            "false_accepts": 87,
+            "false_overrides": 48
+          },
+          "failed_opportunity_reasons": {
+            "low_confidence": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 58,
+              "with_avoidable_revisit": 3
+            },
+            "near_without_adjacency": {
+              "records": 7,
+              "with_avoidable_revisit": 5
+            },
+            "never_within_two": {
+              "records": 10,
+              "with_avoidable_revisit": 7
+            }
+          }
+        },
+        "6": {
+          "records": 300,
+          "successes": 286,
+          "sr": 0.9533333333333334,
+          "sg": 0.28,
+          "failures": 14,
+          "failure_classes": {
+            "near_without_adjacency": 11,
+            "never_within_two": 3
+          },
+          "failure_sg": 6,
+          "failure_avoidable_revisit_records": 6,
+          "failure_false_accept_records": 6,
+          "failure_near_then_away_records": 10,
+          "failure_near_early_records": 10,
+          "mean_unique_cells": 8.87,
+          "mean_closed_neighborhood_cells": 16.846666666666668,
+          "action_counts": {
+            "revisits": 21,
+            "no_cue_steps": 1993,
+            "no_cue_revisits": 21,
+            "avoidable_revisits": 21,
+            "immediate_reverse": 16,
+            "no_cue_immediate_reverse": 16,
+            "accepted": 389,
+            "false_accepts": 110,
+            "false_overrides": 50
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 11,
+              "with_avoidable_revisit": 3
+            },
+            "never_within_two": {
+              "records": 3,
+              "with_avoidable_revisit": 3
+            }
+          }
+        },
+        "7": {
+          "records": 300,
+          "successes": 291,
+          "sr": 0.97,
+          "sg": 0.05,
+          "failures": 9,
+          "failure_classes": {
+            "adjacent_only_at_terminal": 8,
+            "near_without_adjacency": 1
+          },
+          "failure_sg": 1.6666666666666667,
+          "failure_avoidable_revisit_records": 6,
+          "failure_false_accept_records": 5,
+          "failure_near_then_away_records": 3,
+          "failure_near_early_records": 3,
+          "mean_unique_cells": 8.746666666666666,
+          "mean_closed_neighborhood_cells": 16.44333333333333,
+          "action_counts": {
+            "revisits": 25,
+            "no_cue_steps": 1971,
+            "no_cue_revisits": 25,
+            "avoidable_revisits": 21,
+            "immediate_reverse": 23,
+            "no_cue_immediate_reverse": 23,
+            "accepted": 378,
+            "false_accepts": 94,
+            "false_overrides": 43
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 8,
+              "with_avoidable_revisit": 6
+            },
+            "near_without_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        },
+        "8": {
+          "records": 300,
+          "successes": 297,
+          "sr": 0.99,
+          "sg": 0.02,
+          "failures": 3,
+          "failure_classes": {
+            "near_without_adjacency": 3
+          },
+          "failure_sg": 2,
+          "failure_avoidable_revisit_records": 3,
+          "failure_false_accept_records": 1,
+          "failure_near_then_away_records": 1,
+          "failure_near_early_records": 1,
+          "mean_unique_cells": 9.043333333333333,
+          "mean_closed_neighborhood_cells": 16.24,
+          "action_counts": {
+            "revisits": 11,
+            "no_cue_steps": 2076,
+            "no_cue_revisits": 11,
+            "avoidable_revisits": 11,
+            "immediate_reverse": 11,
+            "no_cue_immediate_reverse": 11,
+            "accepted": 348,
+            "false_accepts": 63,
+            "false_overrides": 26
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 3,
+              "with_avoidable_revisit": 3
+            },
+            "never_within_two": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            }
+          }
+        }
+      }
+    },
+    "10": {
+      "M0": {
+        "12": {
+          "records": 300,
+          "successes": 177,
+          "sr": 0.59,
+          "sg": 1.9133333333333333,
+          "failures": 123,
+          "failure_classes": {
+            "near_without_adjacency": 72,
+            "never_within_two": 51
+          },
+          "failure_sg": 4.666666666666667,
+          "failure_avoidable_revisit_records": 50,
+          "failure_false_accept_records": 68,
+          "failure_near_then_away_records": 46,
+          "failure_near_early_records": 46,
+          "mean_unique_cells": 17.673333333333332,
+          "mean_closed_neighborhood_cells": 40.54,
+          "action_counts": {
+            "revisits": 102,
+            "no_cue_steps": 4555,
+            "no_cue_revisits": 102,
+            "avoidable_revisits": 98,
+            "immediate_reverse": 87,
+            "no_cue_immediate_reverse": 87,
+            "accepted": 549,
+            "false_accepts": 372,
+            "false_overrides": 232
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 72,
+              "with_avoidable_revisit": 24
+            },
+            "never_within_two": {
+              "records": 51,
+              "with_avoidable_revisit": 26
+            }
+          }
+        },
+        "13": {
+          "records": 300,
+          "successes": 194,
+          "sr": 0.6466666666666666,
+          "sg": 1.58,
+          "failures": 106,
+          "failure_classes": {
+            "adjacent_only_at_terminal": 34,
+            "never_within_two": 50,
+            "near_without_adjacency": 20,
+            "missed_actionable_adjacency": 2
+          },
+          "failure_sg": 4.471698113207547,
+          "failure_avoidable_revisit_records": 39,
+          "failure_false_accept_records": 58,
+          "failure_near_then_away_records": 29,
+          "failure_near_early_records": 28,
+          "mean_unique_cells": 17.77,
+          "mean_closed_neighborhood_cells": 40.92666666666667,
+          "action_counts": {
+            "revisits": 103,
+            "no_cue_steps": 4604,
+            "no_cue_revisits": 103,
+            "avoidable_revisits": 100,
+            "immediate_reverse": 75,
+            "no_cue_immediate_reverse": 75,
+            "accepted": 530,
+            "false_accepts": 337,
+            "false_overrides": 187
+          },
+          "failed_opportunity_reasons": {
+            "accepted": 1,
+            "low_confidence": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 2,
+              "with_avoidable_revisit": 1
+            },
+            "adjacent_only_at_terminal": {
+              "records": 34,
+              "with_avoidable_revisit": 5
+            },
+            "near_without_adjacency": {
+              "records": 20,
+              "with_avoidable_revisit": 9
+            },
+            "never_within_two": {
+              "records": 50,
+              "with_avoidable_revisit": 24
+            }
+          }
+        },
+        "14": {
+          "records": 300,
+          "successes": 224,
+          "sr": 0.7466666666666667,
+          "sg": 1.2133333333333334,
+          "failures": 76,
+          "failure_classes": {
+            "near_without_adjacency": 52,
+            "never_within_two": 24
+          },
+          "failure_sg": 4.7894736842105265,
+          "failure_avoidable_revisit_records": 33,
+          "failure_false_accept_records": 45,
+          "failure_near_then_away_records": 26,
+          "failure_near_early_records": 26,
+          "mean_unique_cells": 17.776666666666667,
+          "mean_closed_neighborhood_cells": 40.266666666666666,
+          "action_counts": {
+            "revisits": 85,
+            "no_cue_steps": 4571,
+            "no_cue_revisits": 85,
+            "avoidable_revisits": 78,
+            "immediate_reverse": 68,
+            "no_cue_immediate_reverse": 68,
+            "accepted": 547,
+            "false_accepts": 331,
+            "false_overrides": 192
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 52,
+              "with_avoidable_revisit": 19
+            },
+            "never_within_two": {
+              "records": 24,
+              "with_avoidable_revisit": 14
+            }
+          }
+        },
+        "15": {
+          "records": 300,
+          "successes": 227,
+          "sr": 0.7566666666666667,
+          "sg": 0.83,
+          "failures": 73,
+          "failure_classes": {
+            "adjacent_only_at_terminal": 38,
+            "never_within_two": 12,
+            "near_without_adjacency": 20,
+            "missed_actionable_adjacency": 3
+          },
+          "failure_sg": 3.410958904109589,
+          "failure_avoidable_revisit_records": 21,
+          "failure_false_accept_records": 47,
+          "failure_near_then_away_records": 36,
+          "failure_near_early_records": 33,
+          "mean_unique_cells": 18.266666666666666,
+          "mean_closed_neighborhood_cells": 41.123333333333335,
+          "action_counts": {
+            "revisits": 49,
+            "no_cue_steps": 4716,
+            "no_cue_revisits": 49,
+            "avoidable_revisits": 48,
+            "immediate_reverse": 38,
+            "no_cue_immediate_reverse": 38,
+            "accepted": 513,
+            "false_accepts": 289,
+            "false_overrides": 180
+          },
+          "failed_opportunity_reasons": {
+            "accepted": 2,
+            "low_confidence": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 38,
+              "with_avoidable_revisit": 4
+            },
+            "near_without_adjacency": {
+              "records": 20,
+              "with_avoidable_revisit": 10
+            },
+            "never_within_two": {
+              "records": 12,
+              "with_avoidable_revisit": 7
+            }
+          }
+        },
+        "16": {
+          "records": 300,
+          "successes": 259,
+          "sr": 0.8633333333333333,
+          "sg": 0.6133333333333333,
+          "failures": 41,
+          "failure_classes": {
+            "near_without_adjacency": 26,
+            "never_within_two": 13,
+            "missed_actionable_adjacency": 2
+          },
+          "failure_sg": 4.487804878048781,
+          "failure_avoidable_revisit_records": 19,
+          "failure_false_accept_records": 29,
+          "failure_near_then_away_records": 17,
+          "failure_near_early_records": 17,
+          "mean_unique_cells": 18.55,
+          "mean_closed_neighborhood_cells": 40.92,
+          "action_counts": {
+            "revisits": 49,
+            "no_cue_steps": 4782,
+            "no_cue_revisits": 49,
+            "avoidable_revisits": 46,
+            "immediate_reverse": 41,
+            "no_cue_immediate_reverse": 41,
+            "accepted": 532,
+            "false_accepts": 281,
+            "false_overrides": 179
+          },
+          "failed_opportunity_reasons": {
+            "not_adjacent": 2
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 2,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 26,
+              "with_avoidable_revisit": 14
+            },
+            "never_within_two": {
+              "records": 13,
+              "with_avoidable_revisit": 5
+            }
+          }
+        }
+      },
+      "Continue5": {
+        "12": {
+          "records": 300,
+          "successes": 179,
+          "sr": 0.5966666666666667,
+          "sg": 1.5733333333333333,
+          "failures": 121,
+          "failure_classes": {
+            "near_without_adjacency": 79,
+            "never_within_two": 42
+          },
+          "failure_sg": 3.9008264462809916,
+          "failure_avoidable_revisit_records": 30,
+          "failure_false_accept_records": 56,
+          "failure_near_then_away_records": 45,
+          "failure_near_early_records": 45,
+          "mean_unique_cells": 18.22,
+          "mean_closed_neighborhood_cells": 39.36666666666667,
+          "action_counts": {
+            "revisits": 68,
+            "no_cue_steps": 4676,
+            "no_cue_revisits": 68,
+            "avoidable_revisits": 66,
+            "immediate_reverse": 52,
+            "no_cue_immediate_reverse": 52,
+            "accepted": 558,
+            "false_accepts": 380,
+            "false_overrides": 234
+          },
+          "failed_opportunity_reasons": {},
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 79,
+              "with_avoidable_revisit": 15
+            },
+            "never_within_two": {
+              "records": 42,
+              "with_avoidable_revisit": 15
+            }
+          }
+        },
+        "13": {
+          "records": 300,
+          "successes": 196,
+          "sr": 0.6533333333333333,
+          "sg": 0.8866666666666667,
+          "failures": 104,
+          "failure_classes": {
+            "adjacent_only_at_terminal": 49,
+            "never_within_two": 41,
+            "near_without_adjacency": 13,
+            "missed_actionable_adjacency": 1
+          },
+          "failure_sg": 2.5576923076923075,
+          "failure_avoidable_revisit_records": 20,
+          "failure_false_accept_records": 54,
+          "failure_near_then_away_records": 25,
+          "failure_near_early_records": 23,
+          "mean_unique_cells": 17.756666666666668,
+          "mean_closed_neighborhood_cells": 39.04,
+          "action_counts": {
+            "revisits": 45,
+            "no_cue_steps": 4572,
+            "no_cue_revisits": 45,
+            "avoidable_revisits": 44,
+            "immediate_reverse": 41,
+            "no_cue_immediate_reverse": 41,
+            "accepted": 500,
+            "false_accepts": 305,
+            "false_overrides": 158
+          },
+          "failed_opportunity_reasons": {
+            "not_adjacent": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 49,
+              "with_avoidable_revisit": 5
+            },
+            "near_without_adjacency": {
+              "records": 13,
+              "with_avoidable_revisit": 4
+            },
+            "never_within_two": {
+              "records": 41,
+              "with_avoidable_revisit": 11
+            }
+          }
+        },
+        "14": {
+          "records": 300,
+          "successes": 231,
+          "sr": 0.77,
+          "sg": 0.8066666666666666,
+          "failures": 69,
+          "failure_classes": {
+            "near_without_adjacency": 56,
+            "never_within_two": 12,
+            "missed_actionable_adjacency": 1
+          },
+          "failure_sg": 3.5072463768115942,
+          "failure_avoidable_revisit_records": 16,
+          "failure_false_accept_records": 41,
+          "failure_near_then_away_records": 16,
+          "failure_near_early_records": 17,
+          "mean_unique_cells": 18.123333333333335,
+          "mean_closed_neighborhood_cells": 39.64333333333333,
+          "action_counts": {
+            "revisits": 41,
+            "no_cue_steps": 4637,
+            "no_cue_revisits": 41,
+            "avoidable_revisits": 41,
+            "immediate_reverse": 35,
+            "no_cue_immediate_reverse": 35,
+            "accepted": 541,
+            "false_accepts": 315,
+            "false_overrides": 186
+          },
+          "failed_opportunity_reasons": {
+            "not_adjacent": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 56,
+              "with_avoidable_revisit": 11
+            },
+            "never_within_two": {
+              "records": 12,
+              "with_avoidable_revisit": 5
+            }
+          }
+        },
+        "15": {
+          "records": 300,
+          "successes": 214,
+          "sr": 0.7133333333333334,
+          "sg": 0.7066666666666667,
+          "failures": 86,
+          "failure_classes": {
+            "adjacent_only_at_terminal": 60,
+            "never_within_two": 11,
+            "near_without_adjacency": 14,
+            "missed_actionable_adjacency": 1
+          },
+          "failure_sg": 2.4651162790697674,
+          "failure_avoidable_revisit_records": 20,
+          "failure_false_accept_records": 49,
+          "failure_near_then_away_records": 34,
+          "failure_near_early_records": 32,
+          "mean_unique_cells": 18.66,
+          "mean_closed_neighborhood_cells": 40.166666666666664,
+          "action_counts": {
+            "revisits": 36,
+            "no_cue_steps": 4835,
+            "no_cue_revisits": 36,
+            "avoidable_revisits": 36,
+            "immediate_reverse": 31,
+            "no_cue_immediate_reverse": 31,
+            "accepted": 499,
+            "false_accepts": 286,
+            "false_overrides": 167
+          },
+          "failed_opportunity_reasons": {
+            "accepted": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 60,
+              "with_avoidable_revisit": 4
+            },
+            "near_without_adjacency": {
+              "records": 14,
+              "with_avoidable_revisit": 6
+            },
+            "never_within_two": {
+              "records": 11,
+              "with_avoidable_revisit": 10
+            }
+          }
+        },
+        "16": {
+          "records": 300,
+          "successes": 270,
+          "sr": 0.9,
+          "sg": 0.36666666666666664,
+          "failures": 30,
+          "failure_classes": {
+            "near_without_adjacency": 22,
+            "never_within_two": 7,
+            "missed_actionable_adjacency": 1
+          },
+          "failure_sg": 3.6666666666666665,
+          "failure_avoidable_revisit_records": 12,
+          "failure_false_accept_records": 24,
+          "failure_near_then_away_records": 7,
+          "failure_near_early_records": 7,
+          "mean_unique_cells": 18.553333333333335,
+          "mean_closed_neighborhood_cells": 39.53666666666667,
+          "action_counts": {
+            "revisits": 48,
+            "no_cue_steps": 4759,
+            "no_cue_revisits": 48,
+            "avoidable_revisits": 43,
+            "immediate_reverse": 45,
+            "no_cue_immediate_reverse": 45,
+            "accepted": 555,
+            "false_accepts": 293,
+            "false_overrides": 172
+          },
+          "failed_opportunity_reasons": {
+            "not_adjacent": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 1,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 0,
+              "with_avoidable_revisit": 0
+            },
+            "near_without_adjacency": {
+              "records": 22,
+              "with_avoidable_revisit": 9
+            },
+            "never_within_two": {
+              "records": 7,
+              "with_avoidable_revisit": 3
+            }
+          }
+        }
+      }
+    }
+  }
+}
