@@ -2,6 +2,13 @@
 
 任务分工以[TASKS](TASKS.md)为准，当前研究事实以[PROJECT_STATE](../docs/PROJECT_STATE.md)为准。最新交接置顶；只追加或补充自己的记录，保留其它执行者历史。旧记录里的状态是交接当时的事实。
 
+## GIT-002 / Codex / ssh-push-20261003-current-chat / 2026-10-03（完成，已释放）
+
+- 用户授权：将当前main通过SSH推送GitHub；此授权晚于GIT-001的仅本地提交任务，旧交接原样保留。
+- 实际执行：使用`git@github.com:cdxDNRF/GeoNav-Agent.git`，执行`git push origin main`；远程main从`b39275f`更新至项目提交`6a9af5979d016d155371b3d49e0362d28954d543`。
+- 验证：通过SSH执行`git ls-remote origin refs/heads/main`，远程SHA与本地HEAD一致。没有强制推送、合并或修改代码、默认配置及冻结实验原件；既有GIT-001的119项单测结果沿用，不重复启动实验。
+- 本次协调记录单独提交并同步；最终同步状态以Git引用查询为准。没有剩余发布任务，GIT-002写入范围全部释放；研究任务仍按TASKS和PROJECT_STATE接手。
+
 ## GIT-001 / Codex / git-20261003-current-chat / 2026-10-03（完成，已释放）
 
 - 目标：按用户指令提交当前独立仓库更新；本次只创建本地提交，不推送。既有代码、默认配置、图表、实验记录和源码快照按现场状态提交，不改写冻结原件。
