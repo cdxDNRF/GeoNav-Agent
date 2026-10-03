@@ -1,0 +1,151 @@
+{
+  "version": "fresh-alternative-candidate-v1",
+  "status": "development_and_target_evidence_passed_only",
+  "grid_size": 10,
+  "budget": 20,
+  "rule": "agents.fresh_alternative.fresh_alternative",
+  "rule_sha256": "b61df6226df59cde30e140e5e35fa767a97791b8dd593c3f9bb6066f424554f6",
+  "frozen_default_sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b",
+  "original_default_configuration": {
+    "architecture": "Small256",
+    "checkpoints": [
+      {
+        "path": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/Small256_NoTarget_s0/model.pt",
+        "seed": 0,
+        "sha256": "b35b0f87865530e8965e561eeda450c481af9d87ba5ab0dcfb9a4932bf4179bd"
+      },
+      {
+        "path": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/Small256_NoTarget_s1/model.pt",
+        "seed": 1,
+        "sha256": "d734ab8d9e755e697e7dd1cc8f8eb8b4055aae1780e1fc16d27749eab3115dfa"
+      },
+      {
+        "path": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/Small256_NoTarget_s2/model.pt",
+        "seed": 2,
+        "sha256": "8ca13f1829f35f2e18dd002c6f661129ccaaa2e11fc1bd72d8751819d14b999b"
+      }
+    ],
+    "cue_architecture": "EdgeTargetCueHead",
+    "cue_heads": [
+      {
+        "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s0/head.pt",
+        "seed": 0,
+        "sha256": "2c2e4167b14a9a439b81efd78e80436ffde75d35d5c6d75274c3d60ecaa59b2c"
+      },
+      {
+        "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s1/head.pt",
+        "seed": 1,
+        "sha256": "f37734c1d19b38a99b7d589eac004a801d1571ae46df55cbf8161d97ea3bbb53"
+      },
+      {
+        "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s2/head.pt",
+        "seed": 2,
+        "sha256": "045984f575be3e660f04c7237fc65a515abf6d2f1a0d660adb93a4e812925a53"
+      }
+    ],
+    "ensemble": false,
+    "evidence": {
+      "audit_path": "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/独立复核.json",
+      "audit_sha256": "1b99142ff02a1cdc9a24aa0cdae8d9f43d951736e1ea8890321a50c69b08fd35",
+      "previous_default_path": "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/原默认配置.json",
+      "previous_default_sha256": "1158008e2896b6e1eadfcbb43f8bb1f0813f0fa379aa7b81f46f0ce0d9b24b52",
+      "registration_path": "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/预登记.json",
+      "registration_sha256": "9d371171213ec6bf55f5b0f821ca010b682df87caf77f8f3e510db68f1ad625e"
+    },
+    "formal_S2_passed": true,
+    "independent_map_confirmation_completed": false,
+    "inference_condition": "CueFull",
+    "loader": "agents.frozen_edge_navigator.load_frozen_edge_default",
+    "means": {
+      "全局拟合均值.npy": {
+        "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/全局拟合均值.npy",
+        "sha256": "3bb5233fc6fbef7eece51ee78979b37dfaadfcb98d310e6f1b5de7b3d25a8158"
+      },
+      "头部拟合全局均值.npy": {
+        "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/头部拟合全局均值.npy",
+        "sha256": "3e1fb063c11ffef2c130f93f3288d3eb38ff219a21d7cfa9c3759f8623cc2cbd"
+      },
+      "头部拟合局部均值.npy": {
+        "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/头部拟合局部均值.npy",
+        "sha256": "5423d400987f35117d3835ab8ea9daf2153cdef03ab85ba6b6b0eda6f705978d"
+      },
+      "头部拟合边缘均值.npy": {
+        "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/头部拟合边缘均值.npy",
+        "sha256": "367e7499bfc6c5e71992042fac74507c5bcab9cd4de84f1f7482a35a2ab1ee62"
+      }
+    },
+    "protocol": {
+      "actions": [
+        "up",
+        "right",
+        "down",
+        "left"
+      ],
+      "boundary_filter": true,
+      "budget": 10,
+      "decode": "argmax",
+      "grid_size": 5,
+      "legal_and_unvisited_top_cue_only": true,
+      "memory": "episode_isolated",
+      "profile_bins": 64,
+      "profile_widths": [
+        1,
+        4,
+        8
+      ],
+      "raw_joint_probability": true
+    },
+    "reference_seed": 0,
+    "scope": "Formal localS2 passed on known val100/4source maps; independent S3 confirmation pending.",
+    "selected_arm": "EdgeTargetCue",
+    "selected_by_best_seed": false,
+    "thresholds": {
+      "0": 0.5,
+      "1": 0.5,
+      "2": 0.5
+    },
+    "trained_condition": "NoTargetExplorer_plus_EdgeCue",
+    "version": "local-policy-default-v2",
+    "vision_target_contribution_proven_in_local_S2": true
+  },
+  "actual_evaluation_models": [
+    {
+      "seed": 0,
+      "explorer": "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/Edge_s0/explorer.pt",
+      "head": "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/Edge_s0/head.pt",
+      "explorer_sha256": "b35b0f87865530e8965e561eeda450c481af9d87ba5ab0dcfb9a4932bf4179bd",
+      "head_sha256": "2c2e4167b14a9a439b81efd78e80436ffde75d35d5c6d75274c3d60ecaa59b2c"
+    },
+    {
+      "seed": 1,
+      "explorer": "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/Edge_s1/explorer.pt",
+      "head": "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/Edge_s1/head.pt",
+      "explorer_sha256": "d734ab8d9e755e697e7dd1cc8f8eb8b4055aae1780e1fc16d27749eab3115dfa",
+      "head_sha256": "f37734c1d19b38a99b7d589eac004a801d1571ae46df55cbf8161d97ea3bbb53"
+    },
+    {
+      "seed": 2,
+      "explorer": "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/Edge_s2/explorer.pt",
+      "head": "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/Edge_s2/head.pt",
+      "explorer_sha256": "8ca13f1829f35f2e18dd002c6f661129ccaaa2e11fc1bd72d8751819d14b999b",
+      "head_sha256": "045984f575be3e660f04c7237fc65a515abf6d2f1a0d660adb93a4e812925a53"
+    }
+  ],
+  "threshold": 0.5,
+  "ensemble": false,
+  "reference_seed": 0,
+  "all_evaluated_seeds": [
+    0,
+    1,
+    2
+  ],
+  "independent_confirmation_passed": false,
+  "default_replacement_allowed": false,
+  "source_sha256": {
+    "agents/fresh_alternative.py": "b61df6226df59cde30e140e5e35fa767a97791b8dd593c3f9bb6066f424554f6",
+    "eval/audit_fresh_alternative.py": "5eced6ea5b9f9ef764c8d7cb0736cabaf1cc28a62e2a6b98b8ff74d93b66c5e7",
+    "eval/fresh_alternative_validation.py": "afd41b451471970336aac2d6661945448fab9f74a3e7157a705185d30131bbc4",
+    "tests/test_fresh_alternative.py": "c9f858b5f3043ffc08c32357d0b9a1809dcf6f87950f700890615cdcd996d0fc"
+  },
+  "evaluation_verdict_sha256": "916f9406f82e0ba3f8be21be0a3e289a59997b72b6979dd2009e56a73bd1f6c1"
+}

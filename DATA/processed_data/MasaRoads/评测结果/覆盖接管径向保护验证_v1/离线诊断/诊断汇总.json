@@ -1,0 +1,314 @@
+{
+  "causal_claim": false,
+  "cloud_calls": 0,
+  "new_navigation": 0,
+  "outcomes": {
+    "both_failure": {
+      "candidate_mean_final_radius": 8.128,
+      "candidate_mean_max_radius": 12.332,
+      "changed_steps": 3615,
+      "contraction_steps": 2270,
+      "episodes_with_contraction": 484,
+      "first_change_contraction": 160,
+      "original_mean_final_radius": 11.268,
+      "original_mean_max_radius": 14.476,
+      "outcomes": {
+        "both_failure": 500
+      },
+      "records": 500
+    },
+    "both_success": {
+      "candidate_mean_final_radius": 11.664750957854405,
+      "candidate_mean_max_radius": 12.10727969348659,
+      "changed_steps": 2724,
+      "contraction_steps": 608,
+      "episodes_with_contraction": 311,
+      "first_change_contraction": 114,
+      "original_mean_final_radius": 11.664750957854405,
+      "original_mean_max_radius": 12.675287356321839,
+      "outcomes": {
+        "both_success": 1044
+      },
+      "records": 1044
+    },
+    "harmed": {
+      "candidate_mean_final_radius": 7.228464419475656,
+      "candidate_mean_max_radius": 11.352059925093632,
+      "changed_steps": 2252,
+      "contraction_steps": 1242,
+      "episodes_with_contraction": 255,
+      "first_change_contraction": 59,
+      "original_mean_final_radius": 12.565543071161049,
+      "original_mean_max_radius": 13.082397003745319,
+      "outcomes": {
+        "harmed": 267
+      },
+      "records": 267
+    },
+    "recovered": {
+      "candidate_mean_final_radius": 10.61503416856492,
+      "candidate_mean_max_radius": 12.703872437357631,
+      "changed_steps": 2241,
+      "contraction_steps": 815,
+      "episodes_with_contraction": 284,
+      "first_change_contraction": 38,
+      "original_mean_final_radius": 12.660592255125284,
+      "original_mean_max_radius": 15.382687927107062,
+      "outcomes": {
+        "recovered": 439
+      },
+      "records": 439
+    }
+  },
+  "overall": {
+    "candidate_mean_final_radius": 10.147555555555556,
+    "candidate_mean_max_radius": 12.184,
+    "changed_steps": 10832,
+    "contraction_steps": 4935,
+    "episodes_with_contraction": 1334,
+    "first_change_contraction": 371,
+    "original_mean_final_radius": 11.877777777777778,
+    "original_mean_max_radius": 13.652,
+    "outcomes": {
+      "both_failure": 500,
+      "both_success": 1044,
+      "harmed": 267,
+      "recovered": 439
+    },
+    "records": 2250
+  },
+  "paired_episodes": 2250,
+  "rechecked_actions": 74189,
+  "records": 4500,
+  "signal": "Coverage3 next radius < original explorer next radius from public start",
+  "strata": {
+    "interior_target": {
+      "candidate_mean_final_radius": 8.885333333333334,
+      "candidate_mean_max_radius": 11.069333333333333,
+      "changed_steps": 3791,
+      "contraction_steps": 1823,
+      "episodes_with_contraction": 484,
+      "first_change_contraction": 160,
+      "original_mean_final_radius": 10.526666666666667,
+      "original_mean_max_radius": 12.592,
+      "outcomes": {
+        "both_failure": 237,
+        "both_success": 293,
+        "harmed": 91,
+        "recovered": 129
+      },
+      "records": 750
+    },
+    "long_distance": {
+      "candidate_mean_final_radius": 11.778666666666666,
+      "candidate_mean_max_radius": 13.536,
+      "changed_steps": 3580,
+      "contraction_steps": 1493,
+      "episodes_with_contraction": 381,
+      "first_change_contraction": 101,
+      "original_mean_final_radius": 13.766666666666667,
+      "original_mean_max_radius": 14.829333333333333,
+      "outcomes": {
+        "both_failure": 115,
+        "both_success": 399,
+        "harmed": 147,
+        "recovered": 89
+      },
+      "records": 750
+    },
+    "seam_target": {
+      "candidate_mean_final_radius": 9.778666666666666,
+      "candidate_mean_max_radius": 11.946666666666667,
+      "changed_steps": 3461,
+      "contraction_steps": 1619,
+      "episodes_with_contraction": 469,
+      "first_change_contraction": 110,
+      "original_mean_final_radius": 11.34,
+      "original_mean_max_radius": 13.534666666666666,
+      "outcomes": {
+        "both_failure": 148,
+        "both_success": 352,
+        "harmed": 29,
+        "recovered": 221
+      },
+      "records": 750
+    }
+  },
+  "strata_outcomes": {
+    "interior_target": {
+      "both_failure": {
+        "candidate_mean_final_radius": 7.746835443037975,
+        "candidate_mean_max_radius": 11.848101265822784,
+        "changed_steps": 1670,
+        "contraction_steps": 1036,
+        "episodes_with_contraction": 227,
+        "first_change_contraction": 76,
+        "original_mean_final_radius": 10.413502109704641,
+        "original_mean_max_radius": 13.949367088607595,
+        "outcomes": {
+          "both_failure": 237
+        },
+        "records": 237
+      },
+      "both_success": {
+        "candidate_mean_final_radius": 10.197952218430034,
+        "candidate_mean_max_radius": 10.532423208191126,
+        "changed_steps": 667,
+        "contraction_steps": 189,
+        "episodes_with_contraction": 104,
+        "first_change_contraction": 53,
+        "original_mean_final_radius": 10.197952218430034,
+        "original_mean_max_radius": 11.10580204778157,
+        "outcomes": {
+          "both_success": 293
+        },
+        "records": 293
+      },
+      "harmed": {
+        "candidate_mean_final_radius": 6.0,
+        "candidate_mean_max_radius": 9.648351648351648,
+        "changed_steps": 819,
+        "contraction_steps": 369,
+        "episodes_with_contraction": 81,
+        "first_change_contraction": 22,
+        "original_mean_final_radius": 10.142857142857142,
+        "original_mean_max_radius": 10.868131868131869,
+        "outcomes": {
+          "harmed": 91
+        },
+        "records": 91
+      },
+      "recovered": {
+        "candidate_mean_final_radius": 10.031007751937985,
+        "candidate_mean_max_radius": 11.86046511627907,
+        "changed_steps": 635,
+        "contraction_steps": 229,
+        "episodes_with_contraction": 72,
+        "first_change_contraction": 9,
+        "original_mean_final_radius": 11.751937984496124,
+        "original_mean_max_radius": 14.689922480620154,
+        "outcomes": {
+          "recovered": 129
+        },
+        "records": 129
+      }
+    },
+    "long_distance": {
+      "both_failure": {
+        "candidate_mean_final_radius": 7.6869565217391305,
+        "candidate_mean_max_radius": 12.269565217391305,
+        "changed_steps": 817,
+        "contraction_steps": 549,
+        "episodes_with_contraction": 113,
+        "first_change_contraction": 48,
+        "original_mean_final_radius": 11.339130434782609,
+        "original_mean_max_radius": 14.339130434782609,
+        "outcomes": {
+          "both_failure": 115
+        },
+        "records": 115
+      },
+      "both_success": {
+        "candidate_mean_final_radius": 14.0,
+        "candidate_mean_max_radius": 14.12280701754386,
+        "changed_steps": 1137,
+        "contraction_steps": 94,
+        "episodes_with_contraction": 73,
+        "first_change_contraction": 16,
+        "original_mean_final_radius": 14.0,
+        "original_mean_max_radius": 14.593984962406015,
+        "outcomes": {
+          "both_success": 399
+        },
+        "records": 399
+      },
+      "harmed": {
+        "candidate_mean_final_radius": 8.040816326530612,
+        "candidate_mean_max_radius": 12.346938775510203,
+        "changed_steps": 1179,
+        "contraction_steps": 734,
+        "episodes_with_contraction": 146,
+        "first_change_contraction": 34,
+        "original_mean_final_radius": 14.605442176870747,
+        "original_mean_max_radius": 14.857142857142858,
+        "outcomes": {
+          "harmed": 147
+        },
+        "records": 147
+      },
+      "recovered": {
+        "candidate_mean_final_radius": 13.280898876404494,
+        "candidate_mean_max_radius": 14.50561797752809,
+        "changed_steps": 447,
+        "contraction_steps": 116,
+        "episodes_with_contraction": 49,
+        "first_change_contraction": 3,
+        "original_mean_final_radius": 14.47191011235955,
+        "original_mean_max_radius": 16.471910112359552,
+        "outcomes": {
+          "recovered": 89
+        },
+        "records": 89
+      }
+    },
+    "seam_target": {
+      "both_failure": {
+        "candidate_mean_final_radius": 9.08108108108108,
+        "candidate_mean_max_radius": 13.155405405405405,
+        "changed_steps": 1128,
+        "contraction_steps": 685,
+        "episodes_with_contraction": 144,
+        "first_change_contraction": 36,
+        "original_mean_final_radius": 12.58108108108108,
+        "original_mean_max_radius": 15.425675675675675,
+        "outcomes": {
+          "both_failure": 148
+        },
+        "records": 148
+      },
+      "both_success": {
+        "candidate_mean_final_radius": 10.238636363636363,
+        "candidate_mean_max_radius": 11.133522727272727,
+        "changed_steps": 920,
+        "contraction_steps": 325,
+        "episodes_with_contraction": 134,
+        "first_change_contraction": 45,
+        "original_mean_final_radius": 10.238636363636363,
+        "original_mean_max_radius": 11.806818181818182,
+        "outcomes": {
+          "both_success": 352
+        },
+        "records": 352
+      },
+      "harmed": {
+        "candidate_mean_final_radius": 6.9655172413793105,
+        "candidate_mean_max_radius": 11.655172413793103,
+        "changed_steps": 254,
+        "contraction_steps": 139,
+        "episodes_with_contraction": 28,
+        "first_change_contraction": 3,
+        "original_mean_final_radius": 9.827586206896552,
+        "original_mean_max_radius": 11.03448275862069,
+        "outcomes": {
+          "harmed": 29
+        },
+        "records": 29
+      },
+      "recovered": {
+        "candidate_mean_final_radius": 9.882352941176471,
+        "candidate_mean_max_radius": 12.470588235294118,
+        "changed_steps": 1159,
+        "contraction_steps": 470,
+        "episodes_with_contraction": 163,
+        "first_change_contraction": 26,
+        "original_mean_final_radius": 12.461538461538462,
+        "original_mean_max_radius": 15.34841628959276,
+        "outcomes": {
+          "recovered": 221
+        },
+        "records": 221
+      }
+    }
+  },
+  "training_steps": 0
+}

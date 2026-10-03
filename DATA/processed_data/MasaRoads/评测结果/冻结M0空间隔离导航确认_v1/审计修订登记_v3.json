@@ -1,0 +1,26 @@
+{
+  "audit_only": true,
+  "difference_diagnostic_sha256": "eeb6092461e372bf8209c7db38dd955ad614f86ec7f466b0ad6225fa78a88f98",
+  "input_sha256": {
+    "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/审计修订封存_v2.json": "4b0fd5f075966eaf14af3565e49d0174c724a9bb7a2d2afef1c9b92544b64fa2",
+    "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/审计修订登记_v2.json": "ff0974fd7dcffe94c56ab458ced71544a6bf462423c4691007746d23b1ef71fe",
+    "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/原独立复核失败_v2.json": "c32a7ff9518dfb6ea2f99155c87782d34f900375f920f96854db969de3ab8d9b",
+    "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/对照汇总.json": "46142964bc43121b90a60bbdfbe717354964af89c95db72520e2e73bc545ba52",
+    "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/汇总差异诊断_v2.json": "eeb6092461e372bf8209c7db38dd955ad614f86ec7f466b0ad6225fa78a88f98",
+    "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/预登记.json": "3e3108e7d7d93a141eafc7e2d0406001ec6890b837689fc4e4062e90d4db5866",
+    "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/预登记封存.json": "079811d1729a8db86237314015e8d79e1972c8b5bd8e03cb711db3679057ed1b"
+  },
+  "model_threshold_or_gate_changed": false,
+  "neural_rule_actions_or_results_changed": false,
+  "original_navigation_records_reused": 4200,
+  "original_probe_records_reused": 4320,
+  "prior_revision_receipt_sha256": "ff0974fd7dcffe94c56ab458ced71544a6bf462423c4691007746d23b1ef71fe",
+  "reason": "only nonreproducible navigation-summary seconds field; validate finite positive and compare all statistics",
+  "revision": 3,
+  "source_sha256": {
+    "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/源码快照/eval/audit_spatial_area_confirmation_v3.py": "1f1be235da7bb229c3c57db8ca995c6455afea5eaabcf60f3c1c29cf3b481e90",
+    "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/源码快照/tests/test_spatial_area_confirmation_audit_v3.py": "e43acd69f6e7304f7173ef722389548ebea6d814060010624cce1e4a8ac25837",
+    "project/src/eval/audit_spatial_area_confirmation_v3.py": "1f1be235da7bb229c3c57db8ca995c6455afea5eaabcf60f3c1c29cf3b481e90",
+    "project/src/tests/test_spatial_area_confirmation_audit_v3.py": "e43acd69f6e7304f7173ef722389548ebea6d814060010624cce1e4a8ac25837"
+  }
+}

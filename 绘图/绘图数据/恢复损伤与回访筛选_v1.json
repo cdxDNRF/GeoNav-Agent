@@ -1,0 +1,1548 @@
+{
+  "date": "2026-10-02",
+  "script_sha256": "736036f94ace47af442a4021a7cf3538bac4dea00190c9ddde05270179a74cfb",
+  "figures": [
+    {
+      "id": "36_恢复损伤与失败阶段",
+      "caption": "Continue5的410条失败中406条未在预算内获得可行动的目标邻接机会；109条仅在预算耗尽后邻接。其185条恢复被176条损伤抵消，净增9/1500。左图四类互斥，包含原M0的全部419条失败和Continue5的全部410条失败；方形/圆形区分方法。20已消费SwissView源文件、500题×3训练权重、10×10/B20；无新增导航，事后真值分类不构成因果或策略输入。",
+      "protocol": {
+        "sources": 20,
+        "planned_each_weight": 500,
+        "weights": 3,
+        "grid": 10,
+        "budget": 20,
+        "posthoc": true
+      },
+      "sources": [
+        "DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1/诊断汇总.json",
+        "DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1/独立复核.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/36_恢复损伤与失败阶段.pdf",
+          "sha256": "bc42020db79df83c21a88374609bbfa80d2db4e80c301a6d55f24416f95cdb94"
+        },
+        {
+          "path": "绘图/数据结果图/36_恢复损伤与失败阶段.svg",
+          "sha256": "06f2eee8011f11f1bd159bf136ee6747fe792b3a99ee1d1c2bb0e26715754d76"
+        },
+        {
+          "path": "绘图/数据结果图/36_恢复损伤与失败阶段.png",
+          "sha256": "dccfde3863207001a91decaef4c44a7e1956cfc5c8f16f1fc936146f75b2fc1d"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_fresh_alternative.py"
+    },
+    {
+      "id": "37_回访新格筛选与目标对照",
+      "caption": "回访新格筛选F在同题开发子集把SR从77.87%提高到79.87%，SG从1.321降到1.188；恢复18条、损伤3条，三权重均有SR正收益。Full对禁用、均值、错误目标均通过预定证据门槛。Masa原S4完整dev子集10源文件、250题×3权重、10×10/B20，未纳入原test子集；圆/三角/方形为seed0/1/2而非CI。按源文件成组的SR增益95%区间[+0.80,+3.60]点，仅描述已知开发队列；原默认未替换。",
+      "protocol": {
+        "sources": 10,
+        "split": "dev",
+        "planned_each_weight": 250,
+        "weights": 3,
+        "grid": 10,
+        "budget": 20,
+        "independent_confirmation": false
+      },
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/主对照/对照汇总.json",
+        "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/目标对照/目标证据汇总.json",
+        "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/验收结论.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/37_回访新格筛选与目标对照.pdf",
+          "sha256": "49b1278a008e9894cd04285d399af3fa537d50d7ea9db16cee7382b756335a4d"
+        },
+        {
+          "path": "绘图/数据结果图/37_回访新格筛选与目标对照.svg",
+          "sha256": "430490745e368305a316d9df7b3b46b56681cf9f8d3db413119c1050ef2dfad8"
+        },
+        {
+          "path": "绘图/数据结果图/37_回访新格筛选与目标对照.png",
+          "sha256": "6924bb784aca4e83a23ba9cf4eac4404ef2dffdb9845340de1547cb2c1d4dbc7"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_fresh_alternative.py"
+    }
+  ],
+  "source_sha256": {
+    "DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1/诊断汇总.json": "0d2dec9db26805c8bcdac598ad3df3723a68d0749e007833f22334e4ef6e7251",
+    "DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1/独立复核.json": "1b857e30ba3428e2bee36b19ee2e1ce7d8fdf71b4a02be3d98028c8d07dfb6ee",
+    "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/主对照/对照汇总.json": "38d35965980b976163e284fd74caf700878e830f93df34577a7b55047be43164",
+    "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/目标对照/目标证据汇总.json": "6365af591d616093c33564e567d1e1078da12b1468d1850b4973e01935bb5d8b",
+    "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/验收结论.json": "916f9406f82e0ba3f8be21be0a3e289a59997b72b6979dd2009e56a73bd1f6c1"
+  },
+  "diagnosis_summary": {
+    "date": "2026-10-02",
+    "records": 6000,
+    "actions": 74987,
+    "paired_records": 3000,
+    "source_files": 20,
+    "averages": {
+      "5": {
+        "M0": {
+          "records": 1500,
+          "successes": 1301,
+          "sr": 0.8673333333333333,
+          "sg": 0.334,
+          "failures": 199,
+          "failure_classes": {
+            "near_without_adjacency": 114,
+            "adjacent_only_at_terminal": 61,
+            "never_within_two": 21,
+            "missed_actionable_adjacency": 3
+          },
+          "failure_sg": 2.5175879396984926,
+          "failure_avoidable_revisit_records": 86,
+          "failure_false_accept_records": 46,
+          "failure_near_then_away_records": 77,
+          "failure_near_early_records": 74,
+          "mean_unique_cells": 8.486,
+          "mean_closed_neighborhood_cells": 16.597333333333335,
+          "action_counts": {
+            "revisits": 216,
+            "no_cue_steps": 9705,
+            "no_cue_revisits": 216,
+            "avoidable_revisits": 197,
+            "immediate_reverse": 195,
+            "no_cue_immediate_reverse": 195,
+            "accepted": 1740,
+            "false_accepts": 463,
+            "false_overrides": 239
+          },
+          "failed_opportunity_reasons": {
+            "low_confidence": 3
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 3,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 61,
+              "with_avoidable_revisit": 14
+            },
+            "near_without_adjacency": {
+              "records": 114,
+              "with_avoidable_revisit": 52
+            },
+            "never_within_two": {
+              "records": 21,
+              "with_avoidable_revisit": 20
+            }
+          }
+        },
+        "Continue5": {
+          "records": 1500,
+          "successes": 1311,
+          "sr": 0.874,
+          "sg": 0.31,
+          "failures": 189,
+          "failure_classes": {
+            "near_without_adjacency": 104,
+            "adjacent_only_at_terminal": 66,
+            "never_within_two": 17,
+            "missed_actionable_adjacency": 2
+          },
+          "failure_sg": 2.4603174603174605,
+          "failure_avoidable_revisit_records": 42,
+          "failure_false_accept_records": 60,
+          "failure_near_then_away_records": 58,
+          "failure_near_early_records": 58,
+          "mean_unique_cells": 8.588666666666667,
+          "mean_closed_neighborhood_cells": 16.392,
+          "action_counts": {
+            "revisits": 128,
+            "no_cue_steps": 9791,
+            "no_cue_revisits": 128,
+            "avoidable_revisits": 120,
+            "immediate_reverse": 106,
+            "no_cue_immediate_reverse": 106,
+            "accepted": 1720,
+            "false_accepts": 439,
+            "false_overrides": 214
+          },
+          "failed_opportunity_reasons": {
+            "not_adjacent": 1,
+            "low_confidence": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 2,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 66,
+              "with_avoidable_revisit": 9
+            },
+            "near_without_adjacency": {
+              "records": 104,
+              "with_avoidable_revisit": 19
+            },
+            "never_within_two": {
+              "records": 17,
+              "with_avoidable_revisit": 14
+            }
+          }
+        }
+      },
+      "10": {
+        "M0": {
+          "records": 1500,
+          "successes": 1081,
+          "sr": 0.7206666666666667,
+          "sg": 1.23,
+          "failures": 419,
+          "failure_classes": {
+            "near_without_adjacency": 190,
+            "never_within_two": 150,
+            "adjacent_only_at_terminal": 72,
+            "missed_actionable_adjacency": 7
+          },
+          "failure_sg": 4.4033412887828165,
+          "failure_avoidable_revisit_records": 162,
+          "failure_false_accept_records": 247,
+          "failure_near_then_away_records": 154,
+          "failure_near_early_records": 150,
+          "mean_unique_cells": 18.00733333333333,
+          "mean_closed_neighborhood_cells": 40.75533333333333,
+          "action_counts": {
+            "revisits": 388,
+            "no_cue_steps": 23228,
+            "no_cue_revisits": 388,
+            "avoidable_revisits": 370,
+            "immediate_reverse": 309,
+            "no_cue_immediate_reverse": 309,
+            "accepted": 2671,
+            "false_accepts": 1610,
+            "false_overrides": 970
+          },
+          "failed_opportunity_reasons": {
+            "accepted": 3,
+            "not_adjacent": 2,
+            "low_confidence": 2
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 7,
+              "with_avoidable_revisit": 1
+            },
+            "adjacent_only_at_terminal": {
+              "records": 72,
+              "with_avoidable_revisit": 9
+            },
+            "near_without_adjacency": {
+              "records": 190,
+              "with_avoidable_revisit": 76
+            },
+            "never_within_two": {
+              "records": 150,
+              "with_avoidable_revisit": 76
+            }
+          }
+        },
+        "Continue5": {
+          "records": 1500,
+          "successes": 1090,
+          "sr": 0.7266666666666667,
+          "sg": 0.868,
+          "failures": 410,
+          "failure_classes": {
+            "near_without_adjacency": 184,
+            "adjacent_only_at_terminal": 109,
+            "never_within_two": 113,
+            "missed_actionable_adjacency": 4
+          },
+          "failure_sg": 3.175609756097561,
+          "failure_avoidable_revisit_records": 98,
+          "failure_false_accept_records": 224,
+          "failure_near_then_away_records": 127,
+          "failure_near_early_records": 124,
+          "mean_unique_cells": 18.262666666666668,
+          "mean_closed_neighborhood_cells": 39.550666666666665,
+          "action_counts": {
+            "revisits": 238,
+            "no_cue_steps": 23479,
+            "no_cue_revisits": 238,
+            "avoidable_revisits": 230,
+            "immediate_reverse": 204,
+            "no_cue_immediate_reverse": 204,
+            "accepted": 2653,
+            "false_accepts": 1579,
+            "false_overrides": 917
+          },
+          "failed_opportunity_reasons": {
+            "not_adjacent": 3,
+            "accepted": 1
+          },
+          "by_failure_class_avoidable": {
+            "missed_actionable_adjacency": {
+              "records": 4,
+              "with_avoidable_revisit": 0
+            },
+            "adjacent_only_at_terminal": {
+              "records": 109,
+              "with_avoidable_revisit": 9
+            },
+            "near_without_adjacency": {
+              "records": 184,
+              "with_avoidable_revisit": 45
+            },
+            "never_within_two": {
+              "records": 113,
+              "with_avoidable_revisit": 44
+            }
+          }
+        }
+      }
+    },
+    "paired": {
+      "5": {
+        "both_success": 1243,
+        "both_fail": 131,
+        "harmed": 58,
+        "recovered": 68
+      },
+      "10": {
+        "both_fail": 234,
+        "both_success": 905,
+        "harmed": 176,
+        "recovered": 185
+      }
+    },
+    "subgroup": {
+      "5": {
+        "both_success": {
+          "M0": {
+            "records": 1243,
+            "successes": 1243,
+            "sr": 1.0,
+            "sg": 0,
+            "failures": 0,
+            "failure_classes": {},
+            "failure_sg": null,
+            "failure_avoidable_revisit_records": 0,
+            "failure_false_accept_records": 0,
+            "failure_near_then_away_records": 0,
+            "failure_near_early_records": 0,
+            "mean_unique_cells": 8.22767497988737,
+            "mean_closed_neighborhood_cells": 16.210780370072406,
+            "action_counts": {
+              "revisits": 52,
+              "no_cue_steps": 7480,
+              "no_cue_revisits": 52,
+              "avoidable_revisits": 48,
+              "immediate_reverse": 49,
+              "no_cue_immediate_reverse": 49,
+              "accepted": 1556,
+              "false_accepts": 337,
+              "false_overrides": 164
+            },
+            "failed_opportunity_reasons": {},
+            "by_failure_class_avoidable": {
+              "missed_actionable_adjacency": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "adjacent_only_at_terminal": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "near_without_adjacency": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "never_within_two": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              }
+            }
+          },
+          "Continue5": {
+            "records": 1243,
+            "successes": 1243,
+            "sr": 1.0,
+            "sg": 0,
+            "failures": 0,
+            "failure_classes": {},
+            "failure_sg": null,
+            "failure_avoidable_revisit_records": 0,
+            "failure_false_accept_records": 0,
+            "failure_near_then_away_records": 0,
+            "failure_near_early_records": 0,
+            "mean_unique_cells": 8.33065164923572,
+            "mean_closed_neighborhood_cells": 16.0402252614642,
+            "action_counts": {
+              "revisits": 42,
+              "no_cue_steps": 7625,
+              "no_cue_revisits": 42,
+              "avoidable_revisits": 39,
+              "immediate_reverse": 41,
+              "no_cue_immediate_reverse": 41,
+              "accepted": 1529,
+              "false_accepts": 313,
+              "false_overrides": 142
+            },
+            "failed_opportunity_reasons": {},
+            "by_failure_class_avoidable": {
+              "missed_actionable_adjacency": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "adjacent_only_at_terminal": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "near_without_adjacency": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "never_within_two": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              }
+            }
+          }
+        },
+        "recovered": {
+          "M0": {
+            "records": 68,
+            "successes": 0,
+            "sr": 0.0,
+            "sg": 3.014705882352941,
+            "failures": 68,
+            "failure_classes": {
+              "near_without_adjacency": 39,
+              "adjacent_only_at_terminal": 16,
+              "never_within_two": 11,
+              "missed_actionable_adjacency": 2
+            },
+            "failure_sg": 3.014705882352941,
+            "failure_avoidable_revisit_records": 47,
+            "failure_false_accept_records": 11,
+            "failure_near_then_away_records": 35,
+            "failure_near_early_records": 35,
+            "mean_unique_cells": 9.632352941176471,
+            "mean_closed_neighborhood_cells": 18.5,
+            "action_counts": {
+              "revisits": 93,
+              "no_cue_steps": 657,
+              "no_cue_revisits": 93,
+              "avoidable_revisits": 85,
+              "immediate_reverse": 81,
+              "no_cue_immediate_reverse": 81,
+              "accepted": 23,
+              "false_accepts": 23,
+              "false_overrides": 12
+            },
+            "failed_opportunity_reasons": {
+              "low_confidence": 2
+            },
+            "by_failure_class_avoidable": {
+              "missed_actionable_adjacency": {
+                "records": 2,
+                "with_avoidable_revisit": 0
+              },
+              "adjacent_only_at_terminal": {
+                "records": 16,
+                "with_avoidable_revisit": 10
+              },
+              "near_without_adjacency": {
+                "records": 39,
+                "with_avoidable_revisit": 27
+              },
+              "never_within_two": {
+                "records": 11,
+                "with_avoidable_revisit": 10
+              }
+            }
+          },
+          "Continue5": {
+            "records": 68,
+            "successes": 68,
+            "sr": 1.0,
+            "sg": 0,
+            "failures": 0,
+            "failure_classes": {},
+            "failure_sg": null,
+            "failure_avoidable_revisit_records": 0,
+            "failure_false_accept_records": 0,
+            "failure_near_then_away_records": 0,
+            "failure_near_early_records": 0,
+            "mean_unique_cells": 7.720588235294118,
+            "mean_closed_neighborhood_cells": 15.882352941176471,
+            "action_counts": {
+              "revisits": 10,
+              "no_cue_steps": 384,
+              "no_cue_revisits": 10,
+              "avoidable_revisits": 10,
+              "immediate_reverse": 9,
+              "no_cue_immediate_reverse": 9,
+              "accepted": 83,
+              "false_accepts": 18,
+              "false_overrides": 9
+            },
+            "failed_opportunity_reasons": {},
+            "by_failure_class_avoidable": {
+              "missed_actionable_adjacency": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "adjacent_only_at_terminal": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "near_without_adjacency": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "never_within_two": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              }
+            }
+          }
+        },
+        "harmed": {
+          "M0": {
+            "records": 58,
+            "successes": 58,
+            "sr": 1.0,
+            "sg": 0,
+            "failures": 0,
+            "failure_classes": {},
+            "failure_sg": null,
+            "failure_avoidable_revisit_records": 0,
+            "failure_false_accept_records": 0,
+            "failure_near_then_away_records": 0,
+            "failure_near_early_records": 0,
+            "mean_unique_cells": 8.051724137931034,
+            "mean_closed_neighborhood_cells": 17.20689655172414,
+            "action_counts": {
+              "revisits": 10,
+              "no_cue_steps": 328,
+              "no_cue_revisits": 10,
+              "avoidable_revisits": 10,
+              "immediate_reverse": 10,
+              "no_cue_immediate_reverse": 10,
+              "accepted": 91,
+              "false_accepts": 33,
+              "false_overrides": 24
+            },
+            "failed_opportunity_reasons": {},
+            "by_failure_class_avoidable": {
+              "missed_actionable_adjacency": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "adjacent_only_at_terminal": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "near_without_adjacency": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "never_within_two": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              }
+            }
+          },
+          "Continue5": {
+            "records": 58,
+            "successes": 0,
+            "sr": 0.0,
+            "sg": 3.0172413793103448,
+            "failures": 58,
+            "failure_classes": {
+              "near_without_adjacency": 31,
+              "adjacent_only_at_terminal": 16,
+              "never_within_two": 10,
+              "missed_actionable_adjacency": 1
+            },
+            "failure_sg": 3.0172413793103448,
+            "failure_avoidable_revisit_records": 22,
+            "failure_false_accept_records": 24,
+            "failure_near_then_away_records": 20,
+            "failure_near_early_records": 20,
+            "mean_unique_cells": 10.293103448275861,
+            "mean_closed_neighborhood_cells": 18.56896551724138,
+            "action_counts": {
+              "revisits": 41,
+              "no_cue_steps": 545,
+              "no_cue_revisits": 41,
+              "avoidable_revisits": 40,
+              "immediate_reverse": 32,
+              "no_cue_immediate_reverse": 32,
+              "accepted": 35,
+              "false_accepts": 35,
+              "false_overrides": 21
+            },
+            "failed_opportunity_reasons": {
+              "not_adjacent": 1
+            },
+            "by_failure_class_avoidable": {
+              "missed_actionable_adjacency": {
+                "records": 1,
+                "with_avoidable_revisit": 0
+              },
+              "adjacent_only_at_terminal": {
+                "records": 16,
+                "with_avoidable_revisit": 5
+              },
+              "near_without_adjacency": {
+                "records": 31,
+                "with_avoidable_revisit": 8
+              },
+              "never_within_two": {
+                "records": 10,
+                "with_avoidable_revisit": 9
+              }
+            }
+          }
+        },
+        "both_fail": {
+          "M0": {
+            "records": 131,
+            "successes": 0,
+            "sr": 0.0,
+            "sg": 2.2595419847328246,
+            "failures": 131,
+            "failure_classes": {
+              "near_without_adjacency": 75,
+              "adjacent_only_at_terminal": 45,
+              "never_within_two": 10,
+              "missed_actionable_adjacency": 1
+            },
+            "failure_sg": 2.2595419847328246,
+            "failure_avoidable_revisit_records": 39,
+            "failure_false_accept_records": 35,
+            "failure_near_then_away_records": 42,
+            "failure_near_early_records": 39,
+            "mean_unique_cells": 10.534351145038167,
+            "mean_closed_neighborhood_cells": 19.00763358778626,
+            "action_counts": {
+              "revisits": 61,
+              "no_cue_steps": 1240,
+              "no_cue_revisits": 61,
+              "avoidable_revisits": 54,
+              "immediate_reverse": 55,
+              "no_cue_immediate_reverse": 55,
+              "accepted": 70,
+              "false_accepts": 70,
+              "false_overrides": 39
+            },
+            "failed_opportunity_reasons": {
+              "low_confidence": 1
+            },
+            "by_failure_class_avoidable": {
+              "missed_actionable_adjacency": {
+                "records": 1,
+                "with_avoidable_revisit": 0
+              },
+              "adjacent_only_at_terminal": {
+                "records": 45,
+                "with_avoidable_revisit": 4
+              },
+              "near_without_adjacency": {
+                "records": 75,
+                "with_avoidable_revisit": 25
+              },
+              "never_within_two": {
+                "records": 10,
+                "with_avoidable_revisit": 10
+              }
+            }
+          },
+          "Continue5": {
+            "records": 131,
+            "successes": 0,
+            "sr": 0.0,
+            "sg": 2.213740458015267,
+            "failures": 131,
+            "failure_classes": {
+              "near_without_adjacency": 73,
+              "adjacent_only_at_terminal": 50,
+              "never_within_two": 7,
+              "missed_actionable_adjacency": 1
+            },
+            "failure_sg": 2.213740458015267,
+            "failure_avoidable_revisit_records": 20,
+            "failure_false_accept_records": 36,
+            "failure_near_then_away_records": 38,
+            "failure_near_early_records": 38,
+            "mean_unique_cells": 10.732824427480915,
+            "mean_closed_neighborhood_cells": 19.03053435114504,
+            "action_counts": {
+              "revisits": 35,
+              "no_cue_steps": 1237,
+              "no_cue_revisits": 35,
+              "avoidable_revisits": 31,
+              "immediate_reverse": 24,
+              "no_cue_immediate_reverse": 24,
+              "accepted": 73,
+              "false_accepts": 73,
+              "false_overrides": 42
+            },
+            "failed_opportunity_reasons": {
+              "low_confidence": 1
+            },
+            "by_failure_class_avoidable": {
+              "missed_actionable_adjacency": {
+                "records": 1,
+                "with_avoidable_revisit": 0
+              },
+              "adjacent_only_at_terminal": {
+                "records": 50,
+                "with_avoidable_revisit": 4
+              },
+              "near_without_adjacency": {
+                "records": 73,
+                "with_avoidable_revisit": 11
+              },
+              "never_within_two": {
+                "records": 7,
+                "with_avoidable_revisit": 5
+              }
+            }
+          }
+        }
+      },
+      "10": {
+        "both_success": {
+          "M0": {
+            "records": 905,
+            "successes": 905,
+            "sr": 1.0,
+            "sg": 0,
+            "failures": 0,
+            "failure_classes": {},
+            "failure_sg": null,
+            "failure_avoidable_revisit_records": 0,
+            "failure_false_accept_records": 0,
+            "failure_near_then_away_records": 0,
+            "failure_near_early_records": 0,
+            "mean_unique_cells": 17.172375690607733,
+            "mean_closed_neighborhood_cells": 39.22983425414365,
+            "action_counts": {
+              "revisits": 67,
+              "no_cue_steps": 13079,
+              "no_cue_revisits": 67,
+              "avoidable_revisits": 67,
+              "immediate_reverse": 62,
+              "no_cue_immediate_reverse": 62,
+              "accepted": 1624,
+              "false_accepts": 735,
+              "false_overrides": 415
+            },
+            "failed_opportunity_reasons": {},
+            "by_failure_class_avoidable": {
+              "missed_actionable_adjacency": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "adjacent_only_at_terminal": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "near_without_adjacency": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "never_within_two": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              }
+            }
+          },
+          "Continue5": {
+            "records": 905,
+            "successes": 905,
+            "sr": 1.0,
+            "sg": 0,
+            "failures": 0,
+            "failure_classes": {},
+            "failure_sg": null,
+            "failure_avoidable_revisit_records": 0,
+            "failure_false_accept_records": 0,
+            "failure_near_then_away_records": 0,
+            "failure_near_early_records": 0,
+            "mean_unique_cells": 17.58011049723757,
+            "mean_closed_neighborhood_cells": 38.822099447513814,
+            "action_counts": {
+              "revisits": 60,
+              "no_cue_steps": 13458,
+              "no_cue_revisits": 60,
+              "avoidable_revisits": 60,
+              "immediate_reverse": 58,
+              "no_cue_immediate_reverse": 58,
+              "accepted": 1607,
+              "false_accepts": 717,
+              "false_overrides": 369
+            },
+            "failed_opportunity_reasons": {},
+            "by_failure_class_avoidable": {
+              "missed_actionable_adjacency": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "adjacent_only_at_terminal": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "near_without_adjacency": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "never_within_two": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              }
+            }
+          }
+        },
+        "recovered": {
+          "M0": {
+            "records": 185,
+            "successes": 0,
+            "sr": 0.0,
+            "sg": 5.994594594594594,
+            "failures": 185,
+            "failure_classes": {
+              "adjacent_only_at_terminal": 13,
+              "never_within_two": 79,
+              "near_without_adjacency": 88,
+              "missed_actionable_adjacency": 5
+            },
+            "failure_sg": 5.994594594594594,
+            "failure_avoidable_revisit_records": 92,
+            "failure_false_accept_records": 105,
+            "failure_near_then_away_records": 81,
+            "failure_near_early_records": 79,
+            "mean_unique_cells": 19.91891891891892,
+            "mean_closed_neighborhood_cells": 46.064864864864866,
+            "action_counts": {
+              "revisits": 200,
+              "no_cue_steps": 3446,
+              "no_cue_revisits": 200,
+              "avoidable_revisits": 187,
+              "immediate_reverse": 141,
+              "no_cue_immediate_reverse": 141,
+              "accepted": 254,
+              "false_accepts": 254,
+              "false_overrides": 171
+            },
+            "failed_opportunity_reasons": {
+              "accepted": 1,
+              "not_adjacent": 2,
+              "low_confidence": 2
+            },
+            "by_failure_class_avoidable": {
+              "missed_actionable_adjacency": {
+                "records": 5,
+                "with_avoidable_revisit": 1
+              },
+              "adjacent_only_at_terminal": {
+                "records": 13,
+                "with_avoidable_revisit": 4
+              },
+              "near_without_adjacency": {
+                "records": 88,
+                "with_avoidable_revisit": 44
+              },
+              "never_within_two": {
+                "records": 79,
+                "with_avoidable_revisit": 43
+              }
+            }
+          },
+          "Continue5": {
+            "records": 185,
+            "successes": 185,
+            "sr": 1.0,
+            "sg": 0,
+            "failures": 0,
+            "failure_classes": {},
+            "failure_sg": null,
+            "failure_avoidable_revisit_records": 0,
+            "failure_false_accept_records": 0,
+            "failure_near_then_away_records": 0,
+            "failure_near_early_records": 0,
+            "mean_unique_cells": 16.454054054054055,
+            "mean_closed_neighborhood_cells": 37.04864864864865,
+            "action_counts": {
+              "revisits": 8,
+              "no_cue_steps": 2503,
+              "no_cue_revisits": 8,
+              "avoidable_revisits": 8,
+              "immediate_reverse": 7,
+              "no_cue_immediate_reverse": 7,
+              "accepted": 364,
+              "false_accepts": 180,
+              "false_overrides": 102
+            },
+            "failed_opportunity_reasons": {},
+            "by_failure_class_avoidable": {
+              "missed_actionable_adjacency": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "adjacent_only_at_terminal": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "near_without_adjacency": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "never_within_two": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              }
+            }
+          }
+        },
+        "harmed": {
+          "M0": {
+            "records": 176,
+            "successes": 176,
+            "sr": 1.0,
+            "sg": 0,
+            "failures": 0,
+            "failure_classes": {},
+            "failure_sg": null,
+            "failure_avoidable_revisit_records": 0,
+            "failure_false_accept_records": 0,
+            "failure_near_then_away_records": 0,
+            "failure_near_early_records": 0,
+            "mean_unique_cells": 16.886363636363637,
+            "mean_closed_neighborhood_cells": 40.4375,
+            "action_counts": {
+              "revisits": 20,
+              "no_cue_steps": 2471,
+              "no_cue_revisits": 20,
+              "avoidable_revisits": 20,
+              "immediate_reverse": 17,
+              "no_cue_immediate_reverse": 17,
+              "accepted": 345,
+              "false_accepts": 173,
+              "false_overrides": 93
+            },
+            "failed_opportunity_reasons": {},
+            "by_failure_class_avoidable": {
+              "missed_actionable_adjacency": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "adjacent_only_at_terminal": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "near_without_adjacency": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              },
+              "never_within_two": {
+                "records": 0,
+                "with_avoidable_revisit": 0
+              }
+            }
+          },
+          "Continue5": {
+            "records": 176,
+            "successes": 0,
+            "sr": 0.0,
+            "sg": 3.647727272727273,
+            "failures": 176,
+            "failure_classes": {
+              "adjacent_only_at_terminal": 47,
+              "near_without_adjacency": 82,
+              "never_within_two": 44,
+              "missed_actionable_adjacency": 3
+            },
+            "failure_sg": 3.647727272727273,
+            "failure_avoidable_revisit_records": 52,
+            "failure_false_accept_records": 86,
+            "failure_near_then_away_records": 56,
+            "failure_near_early_records": 55,
+            "mean_unique_cells": 20.448863636363637,
+            "mean_closed_neighborhood_cells": 42.8125,
+            "action_counts": {
+              "revisits": 97,
+              "no_cue_steps": 3288,
+              "no_cue_revisits": 97,
+              "avoidable_revisits": 93,
+              "immediate_reverse": 72,
+              "no_cue_immediate_reverse": 72,
+              "accepted": 232,
+              "false_accepts": 232,
+              "false_overrides": 164
+            },
+            "failed_opportunity_reasons": {
+              "not_adjacent": 3
+            },
+            "by_failure_class_avoidable": {
+              "missed_actionable_adjacency": {
+                "records": 3,
+                "with_avoidable_revisit": 0
+              },
+              "adjacent_only_at_terminal": {
+                "records": 47,
+                "with_avoidable_revisit": 3
+              },
+              "near_without_adjacency": {
+                "records": 82,
+                "with_avoidable_revisit": 24
+              },
+              "never_within_two": {
+                "records": 44,
+                "with_avoidable_revisit": 25
+              }
+            }
+          }
+        },
+        "both_fail": {
+          "M0": {
+            "records": 234,
+            "successes": 0,
+            "sr": 0.0,
+            "sg": 3.1452991452991452,
+            "failures": 234,
+            "failure_classes": {
+              "near_without_adjacency": 102,
+              "never_within_two": 71,
+              "adjacent_only_at_terminal": 59,
+              "missed_actionable_adjacency": 2
+            },
+            "failure_sg": 3.1452991452991452,
+            "failure_avoidable_revisit_records": 70,
+            "failure_false_accept_records": 142,
+            "failure_near_then_away_records": 73,
+            "failure_near_early_records": 71,
+            "mean_unique_cells": 20.568376068376068,
+            "mean_closed_neighborhood_cells": 42.6965811965812,
+            "action_counts": {
+              "revisits": 101,
+              "no_cue_steps": 4232,
+              "no_cue_revisits": 101,
+              "avoidable_revisits": 96,
+              "immediate_reverse": 89,
+              "no_cue_immediate_reverse": 89,
+              "accepted": 448,
+              "false_accepts": 448,
+              "false_overrides": 291
+            },
+            "failed_opportunity_reasons": {
+              "accepted": 2
+            },
+            "by_failure_class_avoidable": {
+              "missed_actionable_adjacency": {
+                "records": 2,
+                "with_avoidable_revisit": 0
+              },
+              "adjacent_only_at_terminal": {
+                "records": 59,
+                "with_avoidable_revisit": 5
+              },
+              "near_without_adjacency": {
+                "records": 102,
+                "with_avoidable_revisit": 32
+              },
+              "never_within_two": {
+                "records": 71,
+                "with_avoidable_revisit": 33
+              }
+            }
+          },
+          "Continue5": {
+            "records": 234,
+            "successes": 0,
+            "sr": 0.0,
+            "sg": 2.8205128205128207,
+            "failures": 234,
+            "failure_classes": {
+              "near_without_adjacency": 102,
+              "adjacent_only_at_terminal": 62,
+              "never_within_two": 69,
+              "missed_actionable_adjacency": 1
+            },
+            "failure_sg": 2.8205128205128207,
+            "failure_avoidable_revisit_records": 46,
+            "failure_false_accept_records": 138,
+            "failure_near_then_away_records": 71,
+            "failure_near_early_records": 69,
+            "mean_unique_cells": 20.688034188034187,
+            "mean_closed_neighborhood_cells": 41.89316239316239,
+            "action_counts": {
+              "revisits": 73,
+              "no_cue_steps": 4230,
+              "no_cue_revisits": 73,
+              "avoidable_revisits": 69,
+              "immediate_reverse": 67,
+              "no_cue_immediate_reverse": 67,
+              "accepted": 450,
+              "false_accepts": 450,
+              "false_overrides": 282
+            },
+            "failed_opportunity_reasons": {
+              "accepted": 1
+            },
+            "by_failure_class_avoidable": {
+              "missed_actionable_adjacency": {
+                "records": 1,
+                "with_avoidable_revisit": 0
+              },
+              "adjacent_only_at_terminal": {
+                "records": 62,
+                "with_avoidable_revisit": 6
+              },
+              "near_without_adjacency": {
+                "records": 102,
+                "with_avoidable_revisit": 21
+              },
+              "never_within_two": {
+                "records": 69,
+                "with_avoidable_revisit": 19
+              }
+            }
+          }
+        }
+      }
+    },
+    "divergence": {
+      "5": {
+        "both_success": {
+          "identical": 803,
+          "M0_fresh_Continue5_fresh": 416,
+          "M0_fresh_Continue5_revisit": 17,
+          "M0_revisit_Continue5_fresh": 7
+        },
+        "recovered": {
+          "M0_fresh_Continue5_fresh": 59,
+          "M0_revisit_Continue5_fresh": 6,
+          "M0_fresh_Continue5_revisit": 3
+        },
+        "harmed": {
+          "M0_fresh_Continue5_fresh": 49,
+          "M0_revisit_Continue5_fresh": 3,
+          "M0_revisit_Continue5_revisit": 1,
+          "M0_fresh_Continue5_revisit": 5
+        },
+        "both_fail": {
+          "M0_revisit_Continue5_fresh": 15,
+          "identical": 86,
+          "M0_fresh_Continue5_revisit": 2,
+          "M0_fresh_Continue5_fresh": 26,
+          "M0_revisit_Continue5_revisit": 2
+        }
+      },
+      "10": {
+        "both_success": {
+          "M0_fresh_Continue5_fresh": 499,
+          "identical": 395,
+          "M0_revisit_Continue5_fresh": 7,
+          "M0_fresh_Continue5_revisit": 4
+        },
+        "recovered": {
+          "M0_fresh_Continue5_fresh": 175,
+          "M0_revisit_Continue5_fresh": 10
+        },
+        "harmed": {
+          "M0_fresh_Continue5_fresh": 167,
+          "M0_fresh_Continue5_revisit": 6,
+          "M0_revisit_Continue5_fresh": 3
+        },
+        "both_fail": {
+          "M0_fresh_Continue5_fresh": 80,
+          "identical": 132,
+          "M0_revisit_Continue5_fresh": 15,
+          "M0_fresh_Continue5_revisit": 7
+        }
+      }
+    },
+    "zero_new_navigation": true,
+    "candidate_selected": false
+  },
+  "primary_summary": {
+    "arms": {
+      "F": {
+        "planned_each": 250,
+        "sg_by_seed": [
+          1.628,
+          0.636,
+          1.3
+        ],
+        "sg_mean": 1.188,
+        "sources": 10,
+        "sr_by_seed": [
+          0.78,
+          0.852,
+          0.764
+        ],
+        "sr_mean": 0.7986666666666666
+      },
+      "M0": {
+        "planned_each": 250,
+        "sg_by_seed": [
+          1.836,
+          0.66,
+          1.468
+        ],
+        "sg_mean": 1.3213333333333332,
+        "sources": 10,
+        "sr_by_seed": [
+          0.744,
+          0.844,
+          0.748
+        ],
+        "sr_mean": 0.7786666666666667
+      }
+    },
+    "changed_actions": 140,
+    "checks": {
+      "SG_no_worse": true,
+      "SR_gain": true,
+      "two_positive_weights": true
+    },
+    "cloud_calls": 0,
+    "effect": {
+      "bootstrap_resamples": 4000,
+      "bootstrap_seed": 5251,
+      "positive_seeds": 3,
+      "sg_change": -0.1333333333333334,
+      "source95_SG": [
+        -0.21333333333333337,
+        -0.045333333333333316
+      ],
+      "source95_SR": [
+        0.008,
+        0.03599999999999999
+      ],
+      "source_count": 10,
+      "source_effects": {
+        "22678975_15.png": {
+          "sg": -0.25333333333333335,
+          "sr": 0.013333333333333345
+        },
+        "22678990_15.png": {
+          "sg": 0.1200000000000001,
+          "sr": -3.700743415417188e-17
+        },
+        "22679035_15.png": {
+          "sg": -0.05333333333333331,
+          "sr": 0.0
+        },
+        "22828960_15.png": {
+          "sg": -0.18666666666666668,
+          "sr": 0.026666666666666655
+        },
+        "22828975_15.png": {
+          "sg": -0.36000000000000004,
+          "sr": 0.07999999999999996
+        },
+        "22829035_15.png": {
+          "sg": -0.25333333333333335,
+          "sr": 0.02666666666666669
+        },
+        "22978915_15.png": {
+          "sg": -0.14666666666666664,
+          "sr": 0.02666666666666669
+        },
+        "23128870_15.png": {
+          "sg": -0.06666666666666671,
+          "sr": 0.013333333333333345
+        },
+        "23128900_15.png": {
+          "sg": 0.0,
+          "sr": 0.0
+        },
+        "23279170_15.png": {
+          "sg": -0.1333333333333334,
+          "sr": 0.013333333333333345
+        }
+      },
+      "sr_gain": 0.020000000000000018,
+      "sr_gain_by_seed": [
+        0.03600000000000003,
+        0.008000000000000007,
+        0.016000000000000014
+      ]
+    },
+    "new_primary_records": 750,
+    "new_source_files": 0,
+    "new_training_steps": 0,
+    "primary_numeric_passed": true,
+    "recovery": {
+      "harmed": 3,
+      "recovered": 18
+    },
+    "recovery_by_seed": {
+      "0": {
+        "harmed": 2,
+        "recovered": 11
+      },
+      "1": {
+        "harmed": 0,
+        "recovered": 2
+      },
+      "2": {
+        "harmed": 1,
+        "recovered": 5
+      }
+    },
+    "reused_primary_records": 750,
+    "triggered_records": 70
+  },
+  "target_summary": {
+    "arms": {
+      "Baseline": {
+        "planned_each": 250,
+        "sg_by_seed": [
+          3.116,
+          1.608,
+          2.256
+        ],
+        "sg_mean": 2.3266666666666667,
+        "sources": 10,
+        "sr_by_seed": [
+          0.524,
+          0.64,
+          0.564
+        ],
+        "sr_mean": 0.5760000000000001
+      },
+      "CueMean": {
+        "planned_each": 250,
+        "sg_by_seed": [
+          2.964,
+          1.9,
+          2.292
+        ],
+        "sg_mean": 2.385333333333333,
+        "sources": 10,
+        "sr_by_seed": [
+          0.488,
+          0.524,
+          0.5
+        ],
+        "sr_mean": 0.504
+      },
+      "CueWrong": {
+        "planned_each": 250,
+        "sg_by_seed": [
+          3.14,
+          1.684,
+          2.216
+        ],
+        "sg_mean": 2.3466666666666667,
+        "sources": 10,
+        "sr_by_seed": [
+          0.488,
+          0.608,
+          0.544
+        ],
+        "sr_mean": 0.5466666666666667
+      }
+    },
+    "checks": {
+      "Baseline": true,
+      "CueMean": true,
+      "CueWrong": true
+    },
+    "effects": {
+      "Baseline": {
+        "bootstrap_resamples": 4000,
+        "bootstrap_seed": 5251,
+        "positive_seeds": 3,
+        "sg_change": -1.1386666666666667,
+        "source95_SG": [
+          -1.2786666666666666,
+          -1.0080000000000002
+        ],
+        "source95_SR": [
+          0.19466666666666668,
+          0.24933333333333335
+        ],
+        "source_count": 10,
+        "source_effects": {
+          "22678975_15.png": {
+            "sg": -1.28,
+            "sr": 0.22666666666666666
+          },
+          "22678990_15.png": {
+            "sg": -1.0266666666666666,
+            "sr": 0.30666666666666664
+          },
+          "22679035_15.png": {
+            "sg": -0.8666666666666667,
+            "sr": 0.16
+          },
+          "22828960_15.png": {
+            "sg": -0.9333333333333335,
+            "sr": 0.24
+          },
+          "22828975_15.png": {
+            "sg": -1.0933333333333333,
+            "sr": 0.22666666666666666
+          },
+          "22829035_15.png": {
+            "sg": -0.8266666666666668,
+            "sr": 0.14666666666666664
+          },
+          "22978915_15.png": {
+            "sg": -1.2000000000000002,
+            "sr": 0.20000000000000004
+          },
+          "23128870_15.png": {
+            "sg": -1.3866666666666667,
+            "sr": 0.2533333333333333
+          },
+          "23128900_15.png": {
+            "sg": -1.5066666666666666,
+            "sr": 0.25333333333333335
+          },
+          "23279170_15.png": {
+            "sg": -1.2666666666666668,
+            "sr": 0.21333333333333335
+          }
+        },
+        "sr_gain": 0.22266666666666668,
+        "sr_gain_by_seed": [
+          0.256,
+          0.21199999999999997,
+          0.20000000000000007
+        ]
+      },
+      "CueMean": {
+        "bootstrap_resamples": 4000,
+        "bootstrap_seed": 5251,
+        "positive_seeds": 3,
+        "sg_change": -1.1973333333333331,
+        "source95_SG": [
+          -1.4067,
+          -0.9693333333333335
+        ],
+        "source95_SR": [
+          0.23199999999999998,
+          0.36133333333333334
+        ],
+        "source_count": 10,
+        "source_effects": {
+          "22678975_15.png": {
+            "sg": -1.6266666666666667,
+            "sr": 0.29333333333333333
+          },
+          "22678990_15.png": {
+            "sg": -1.0933333333333335,
+            "sr": 0.3333333333333333
+          },
+          "22679035_15.png": {
+            "sg": -0.7866666666666666,
+            "sr": 0.16
+          },
+          "22828960_15.png": {
+            "sg": -1.7066666666666668,
+            "sr": 0.52
+          },
+          "22828975_15.png": {
+            "sg": -1.3199999999999998,
+            "sr": 0.39999999999999997
+          },
+          "22829035_15.png": {
+            "sg": -0.48,
+            "sr": 0.14666666666666664
+          },
+          "22978915_15.png": {
+            "sg": -1.0533333333333335,
+            "sr": 0.3066666666666667
+          },
+          "23128870_15.png": {
+            "sg": -1.4666666666666668,
+            "sr": 0.2933333333333333
+          },
+          "23128900_15.png": {
+            "sg": -1.1466666666666665,
+            "sr": 0.22666666666666668
+          },
+          "23279170_15.png": {
+            "sg": -1.2933333333333332,
+            "sr": 0.26666666666666666
+          }
+        },
+        "sr_gain": 0.2946666666666667,
+        "sr_gain_by_seed": [
+          0.29200000000000004,
+          0.32799999999999996,
+          0.264
+        ]
+      },
+      "CueWrong": {
+        "bootstrap_resamples": 4000,
+        "bootstrap_seed": 5251,
+        "positive_seeds": 3,
+        "sg_change": -1.158666666666667,
+        "source95_SG": [
+          -1.353333333333333,
+          -1.0066666666666666
+        ],
+        "source95_SR": [
+          0.22400000000000003,
+          0.2786666666666667
+        ],
+        "source_count": 10,
+        "source_effects": {
+          "22678975_15.png": {
+            "sg": -1.5066666666666666,
+            "sr": 0.26666666666666666
+          },
+          "22678990_15.png": {
+            "sg": -0.9466666666666667,
+            "sr": 0.31999999999999995
+          },
+          "22679035_15.png": {
+            "sg": -0.8933333333333332,
+            "sr": 0.17333333333333334
+          },
+          "22828960_15.png": {
+            "sg": -1.0266666666666666,
+            "sr": 0.2933333333333334
+          },
+          "22828975_15.png": {
+            "sg": -1.0000000000000002,
+            "sr": 0.2533333333333333
+          },
+          "22829035_15.png": {
+            "sg": -1.04,
+            "sr": 0.19999999999999998
+          },
+          "22978915_15.png": {
+            "sg": -1.12,
+            "sr": 0.25333333333333335
+          },
+          "23128870_15.png": {
+            "sg": -1.1733333333333331,
+            "sr": 0.26666666666666666
+          },
+          "23128900_15.png": {
+            "sg": -1.8666666666666665,
+            "sr": 0.2933333333333334
+          },
+          "23279170_15.png": {
+            "sg": -1.0133333333333332,
+            "sr": 0.19999999999999998
+          }
+        },
+        "sr_gain": 0.252,
+        "sr_gain_by_seed": [
+          0.29200000000000004,
+          0.244,
+          0.21999999999999997
+        ]
+      }
+    },
+    "passed": true
+  }
+}

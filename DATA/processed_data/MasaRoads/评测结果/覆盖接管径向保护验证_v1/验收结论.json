@@ -1,0 +1,299 @@
+{
+  "SR": 0.6755555555555556,
+  "candidate": "Coverage3Radial",
+  "checks": {
+    "mixed_SG_no_worse": true,
+    "mixed_SR_gain2pp": true,
+    "strata": {
+      "interior_target": {
+        "SG_no_worse": true,
+        "SR_loss_at_most2pp": true
+      },
+      "long_distance": {
+        "SG_no_worse": true,
+        "SR_loss_at_most2pp": true
+      },
+      "seam_target": {
+        "SG_no_worse": true,
+        "SR_loss_at_most2pp": true
+      }
+    },
+    "two_positive_weights": true
+  },
+  "cloud_calls": 0,
+  "completed": true,
+  "controls_started": true,
+  "default_changed": false,
+  "default_sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b",
+  "development_main_passed": true,
+  "development_target_evidence_passed": true,
+  "effects": {
+    "all": {
+      "bootstrap_resamples": 4000,
+      "bootstrap_seed": 7317,
+      "interpretation": "paired whole-region uncertainty; weights are not independent source maps",
+      "positive_seeds": 3,
+      "sg_change": -0.3226666666666665,
+      "source95_SG": [
+        -0.43245555555555565,
+        -0.21644444444444444
+      ],
+      "source95_SR": [
+        0.0791111111111111,
+        0.10533333333333335
+      ],
+      "source_count": 10,
+      "source_effects": {
+        "MasaRoadsArea/test_00": {
+          "sg": -0.5822222222222222,
+          "sr": 0.11111111111111112
+        },
+        "MasaRoadsArea/test_01": {
+          "sg": -0.568888888888889,
+          "sr": 0.1111111111111111
+        },
+        "MasaRoadsArea/test_02": {
+          "sg": -0.3555555555555556,
+          "sr": 0.09333333333333334
+        },
+        "MasaRoadsArea/test_03": {
+          "sg": -0.26222222222222213,
+          "sr": 0.057777777777777706
+        },
+        "MasaRoadsArea/test_04": {
+          "sg": -0.05777777777777778,
+          "sr": 0.05333333333333331
+        },
+        "MasaRoadsArea/test_05": {
+          "sg": -0.2222222222222221,
+          "sr": 0.11111111111111112
+        },
+        "MasaRoadsArea/test_06": {
+          "sg": -0.07555555555555556,
+          "sr": 0.08888888888888886
+        },
+        "MasaRoadsArea/test_07": {
+          "sg": -0.41777777777777775,
+          "sr": 0.08888888888888886
+        },
+        "MasaRoadsArea/test_08": {
+          "sg": -0.24000000000000007,
+          "sr": 0.09333333333333338
+        },
+        "MasaRoadsArea/test_09": {
+          "sg": -0.4444444444444444,
+          "sr": 0.12000000000000004
+        }
+      },
+      "sr_gain": 0.09288888888888887,
+      "sr_gain_by_seed": [
+        0.046666666666666745,
+        0.1373333333333333,
+        0.09466666666666657
+      ]
+    },
+    "interior_target": {
+      "bootstrap_resamples": 4000,
+      "bootstrap_seed": 7317,
+      "interpretation": "paired whole-region uncertainty; weights are not independent source maps",
+      "positive_seeds": 3,
+      "sg_change": -0.23466666666666658,
+      "source95_SG": [
+        -0.48666666666666664,
+        0.03866666666666667
+      ],
+      "source95_SR": [
+        0.03599999999999999,
+        0.0893666666666668
+      ],
+      "source_count": 10,
+      "source_effects": {
+        "MasaRoadsArea/test_00": {
+          "sg": -0.7466666666666666,
+          "sr": 0.09333333333333334
+        },
+        "MasaRoadsArea/test_01": {
+          "sg": -0.49333333333333323,
+          "sr": 0.05333333333333331
+        },
+        "MasaRoadsArea/test_02": {
+          "sg": -0.10666666666666647,
+          "sr": 0.026666666666666616
+        },
+        "MasaRoadsArea/test_03": {
+          "sg": -0.3466666666666665,
+          "sr": 0.053333333333333344
+        },
+        "MasaRoadsArea/test_04": {
+          "sg": 0.5066666666666667,
+          "sr": 0.026666666666666672
+        },
+        "MasaRoadsArea/test_05": {
+          "sg": 0.46666666666666673,
+          "sr": -0.026666666666666616
+        },
+        "MasaRoadsArea/test_06": {
+          "sg": 0.013333333333333197,
+          "sr": 0.10666666666666667
+        },
+        "MasaRoadsArea/test_07": {
+          "sg": -0.5733333333333334,
+          "sr": 0.09333333333333331
+        },
+        "MasaRoadsArea/test_08": {
+          "sg": -0.6400000000000001,
+          "sr": 0.1333333333333333
+        },
+        "MasaRoadsArea/test_09": {
+          "sg": -0.4266666666666666,
+          "sr": 0.08
+        }
+      },
+      "sr_gain": 0.06399999999999996,
+      "sr_gain_by_seed": [
+        0.051999999999999935,
+        0.08799999999999997,
+        0.05199999999999999
+      ]
+    },
+    "long_distance": {
+      "bootstrap_resamples": 4000,
+      "bootstrap_seed": 7317,
+      "interpretation": "paired whole-region uncertainty; weights are not independent source maps",
+      "positive_seeds": 3,
+      "sg_change": -0.3133333333333334,
+      "source95_SG": [
+        -0.41066666666666657,
+        -0.2186666666666667
+      ],
+      "source95_SR": [
+        0.07599999999999998,
+        0.13466666666666666
+      ],
+      "source_count": 10,
+      "source_effects": {
+        "MasaRoadsArea/test_00": {
+          "sg": -0.3333333333333331,
+          "sr": 0.09333333333333334
+        },
+        "MasaRoadsArea/test_01": {
+          "sg": -0.5333333333333332,
+          "sr": 0.14666666666666664
+        },
+        "MasaRoadsArea/test_02": {
+          "sg": -0.48,
+          "sr": 0.13333333333333333
+        },
+        "MasaRoadsArea/test_03": {
+          "sg": -0.16,
+          "sr": 0.026666666666666655
+        },
+        "MasaRoadsArea/test_04": {
+          "sg": -0.09333333333333332,
+          "sr": 0.053333333333333344
+        },
+        "MasaRoadsArea/test_05": {
+          "sg": -0.5333333333333332,
+          "sr": 0.17333333333333334
+        },
+        "MasaRoadsArea/test_06": {
+          "sg": -0.12000000000000004,
+          "sr": 0.05333333333333331
+        },
+        "MasaRoadsArea/test_07": {
+          "sg": -0.32,
+          "sr": 0.09333333333333334
+        },
+        "MasaRoadsArea/test_08": {
+          "sg": -0.32,
+          "sr": 0.10666666666666665
+        },
+        "MasaRoadsArea/test_09": {
+          "sg": -0.24000000000000007,
+          "sr": 0.1733333333333333
+        }
+      },
+      "sr_gain": 0.10533333333333335,
+      "sr_gain_by_seed": [
+        0.06400000000000006,
+        0.15200000000000002,
+        0.09999999999999998
+      ]
+    },
+    "seam_target": {
+      "bootstrap_resamples": 4000,
+      "bootstrap_seed": 7317,
+      "interpretation": "paired whole-region uncertainty; weights are not independent source maps",
+      "positive_seeds": 3,
+      "sg_change": -0.4200000000000001,
+      "source95_SG": [
+        -0.5799999999999998,
+        -0.2346333333333332
+      ],
+      "source95_SR": [
+        0.08533333333333336,
+        0.13333333333333336
+      ],
+      "source_count": 10,
+      "source_effects": {
+        "MasaRoadsArea/test_00": {
+          "sg": -0.6666666666666666,
+          "sr": 0.14666666666666667
+        },
+        "MasaRoadsArea/test_01": {
+          "sg": -0.68,
+          "sr": 0.1333333333333333
+        },
+        "MasaRoadsArea/test_02": {
+          "sg": -0.4799999999999998,
+          "sr": 0.12000000000000004
+        },
+        "MasaRoadsArea/test_03": {
+          "sg": -0.27999999999999997,
+          "sr": 0.09333333333333332
+        },
+        "MasaRoadsArea/test_04": {
+          "sg": -0.5866666666666668,
+          "sr": 0.08
+        },
+        "MasaRoadsArea/test_05": {
+          "sg": -0.6000000000000001,
+          "sr": 0.18666666666666668
+        },
+        "MasaRoadsArea/test_06": {
+          "sg": -0.12000000000000004,
+          "sr": 0.10666666666666665
+        },
+        "MasaRoadsArea/test_07": {
+          "sg": -0.3599999999999998,
+          "sr": 0.08000000000000007
+        },
+        "MasaRoadsArea/test_08": {
+          "sg": 0.24000000000000007,
+          "sr": 0.03999999999999998
+        },
+        "MasaRoadsArea/test_09": {
+          "sg": -0.6666666666666665,
+          "sr": 0.10666666666666669
+        }
+      },
+      "sr_gain": 0.10933333333333334,
+      "sr_gain_by_seed": [
+        0.02400000000000002,
+        0.172,
+        0.132
+      ]
+    }
+  },
+  "eligible_for_new_area_confirmation": true,
+  "harmed": 89,
+  "independent_audit_passed": true,
+  "main_audit_sha256": "4fa625541402810e60337e399b2cc1ad539bdbefac03620d6805d3ce2d1be23c",
+  "main_summary_sha256": "0f847402b28576bd66564bce1ac029de266825d5e47dcaede980358fbddab79d",
+  "new_training_steps": 0,
+  "original_SR": 0.5826666666666667,
+  "records": 9000,
+  "recovered": 298,
+  "source_scope": "posthoc_development; prior test labels retained, all10regions already consumed",
+  "stop_after_one_frozen_candidate": true
+}

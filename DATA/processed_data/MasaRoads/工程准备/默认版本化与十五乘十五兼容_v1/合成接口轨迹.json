@@ -1,0 +1,6938 @@
+[
+  {
+    "cell_size_m": 300,
+    "counts_as_navigation_SR": false,
+    "decisions": [
+      {
+        "action": "down",
+        "base_action": "down",
+        "coverage": {
+          "action": "down",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 1,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "right",
+                "right"
+              ],
+              "cells": [
+                15,
+                16,
+                17
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                1,
+                16,
+                31
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "down",
+          "unprotected_next_radius": 1
+        },
+        "cue_action": null,
+        "cue_features_sha256": "2ced1f27e73e3d55861453c0c2804096699b2daa5afbeb2ac9878365b9974f9b",
+        "current_image_sha256": "36cd882e00470539f9f44afa89f4eadde09d95463ed493980dc75b6fa8d956f3",
+        "explorer_action": "down",
+        "explorer_features_sha256": "f9d737e7de5f4348e3a957b866b6fc8eddbc101ace33215b664ace0171cf25a3",
+        "explorer_logits": [
+          -3.4028234663852886e+38,
+          -0.35357895493507385,
+          0.6143298745155334,
+          -3.4028234663852886e+38
+        ],
+        "probabilities": [
+          0.008324007503688335,
+          0.00012461154256016016,
+          5.80867435928667e-07,
+          0.00015442466246895492,
+          0.9913963675498962
+        ],
+        "public_position": [
+          0,
+          0
+        ],
+        "public_visited": [
+          0
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 20,
+        "step": 1,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "right",
+        "base_action": "right",
+        "coverage": {
+          "action": "right",
+          "baseline_gain": null,
+          "changed": false,
+          "control": "accepted_cue",
+          "horizon": 0,
+          "opportunity_gain": 0,
+          "original_next_radius": null,
+          "paths_by_first": {},
+          "radial_guard_blocked": false,
+          "selected_gain": null,
+          "unprotected_action": "right",
+          "unprotected_next_radius": null
+        },
+        "cue_action": "right",
+        "cue_features_sha256": "bb0924f17bb483706e00542caee1cf62c6ac487449e7ba488496cac56405122a",
+        "current_image_sha256": "7505727e7b6a27d7b99b0425376aa1f320e2ffe69fc89ea5148b7c86ae5f69a2",
+        "explorer_action": "down",
+        "explorer_features_sha256": "8440e93bf22892897aff9d46956e761763aed6d5ed825db53f6043a5eddec35d",
+        "explorer_logits": [
+          -1.8937735557556152,
+          -0.7829879522323608,
+          1.9922220706939697,
+          -3.4028234663852886e+38
+        ],
+        "probabilities": [
+          0.0006018002168275416,
+          0.5157855749130249,
+          0.00019265153969172388,
+          0.4551194906234741,
+          0.028300441801548004
+        ],
+        "public_position": [
+          1,
+          0
+        ],
+        "public_visited": [
+          0,
+          15
+        ],
+        "reason": "accepted",
+        "remaining_budget": 19,
+        "step": 2,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      }
+    ],
+    "episode_id": "synthetic_0_0",
+    "goal": 16,
+    "map_projected_area_km2": 20.25,
+    "out_of_bounds": 0,
+    "protocol": "masa-roads-grid15-area-v1",
+    "repeat_visit_rate": 0.0,
+    "revisits": 0,
+    "seed": 0,
+    "sg": 0,
+    "sg_m": 0,
+    "start": 0,
+    "steps": 2,
+    "success": true,
+    "synthetic": true,
+    "termination": "goal_reached",
+    "trajectory": [
+      {
+        "action": null,
+        "out_of_bounds": false,
+        "patch_id": 0,
+        "revisited": false,
+        "step": 0
+      },
+      {
+        "action": "down",
+        "out_of_bounds": false,
+        "patch_id": 15,
+        "revisited": false,
+        "step": 1
+      },
+      {
+        "action": "right",
+        "out_of_bounds": false,
+        "patch_id": 16,
+        "revisited": false,
+        "step": 2
+      }
+    ],
+    "valid_travel_m": 600
+  },
+  {
+    "cell_size_m": 300,
+    "counts_as_navigation_SR": false,
+    "decisions": [
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 1,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                223,
+                208,
+                193
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "up": {
+              "actions": [
+                "up",
+                "left",
+                "left"
+              ],
+              "cells": [
+                209,
+                208,
+                207
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 1
+        },
+        "cue_action": null,
+        "cue_features_sha256": "f48e1d750e03d750d34ee3524768a73f71e9f6d65cb89436f4027b27af519ccb",
+        "current_image_sha256": "54c6626ff76696ca76d882b4bbe983a25440238976b84abf39f1edab132f4986",
+        "explorer_action": "left",
+        "explorer_features_sha256": "43b3c9394a7cacf02b0ac3c0a0f1efd9562e8f332075765d2b7b3e98908c7b16",
+        "explorer_logits": [
+          -2.188142776489258,
+          -3.4028234663852886e+38,
+          -3.4028234663852886e+38,
+          -0.37064653635025024
+        ],
+        "probabilities": [
+          0.0013591782189905643,
+          2.7170499379280955e-06,
+          0.011257199570536613,
+          6.478540308307856e-05,
+          0.9873161315917969
+        ],
+        "public_position": [
+          14,
+          14
+        ],
+        "public_visited": [
+          224
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 20,
+        "step": 1,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 2,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                222,
+                207,
+                192
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                224,
+                209,
+                194
+              ],
+              "gain": 3,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                208,
+                193,
+                178
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 2
+        },
+        "cue_action": null,
+        "cue_features_sha256": "f9115386ed933b81c3caf5b249220d6264f8c3ea3086cfc43c37caf6a1e019c2",
+        "current_image_sha256": "d43dd041612275647e430e06de4191b26bf514722e51364cb33d95a083cb99f8",
+        "explorer_action": "left",
+        "explorer_features_sha256": "a5d720ce6c184b461f130630e5c79edc4f4acd98f027f5d25b52e83dee34e860",
+        "explorer_logits": [
+          -2.4923598766326904,
+          -0.7179378271102905,
+          -3.4028234663852886e+38,
+          0.7879164218902588
+        ],
+        "probabilities": [
+          0.0011129407212138176,
+          6.9349343903013505e-06,
+          0.011587484739720821,
+          3.602241486078128e-05,
+          0.987256646156311
+        ],
+        "public_position": [
+          14,
+          13
+        ],
+        "public_visited": [
+          224,
+          223
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 19,
+        "step": 2,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 3,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                221,
+                206,
+                191
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                223,
+                208,
+                193
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                207,
+                192,
+                177
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 3
+        },
+        "cue_action": null,
+        "cue_features_sha256": "5638dd414bbf38c8b76d4625b52ed3cdad210a11151f70b2f3a44a47c2c40269",
+        "current_image_sha256": "6bf2c6715d48c2c6a7cf4086ad50d2c49cd9942b2d531d154ab14eed1b3cba7c",
+        "explorer_action": "left",
+        "explorer_features_sha256": "adfc7842af233e4a0db8a49e5028b9bf519b8476c6fe78d4e9b03b857f0c360a",
+        "explorer_logits": [
+          -3.494023561477661,
+          -0.9971207976341248,
+          -3.4028234663852886e+38,
+          1.3605502843856812
+        ],
+        "probabilities": [
+          0.005365949124097824,
+          1.647556564421393e-05,
+          0.02411438710987568,
+          4.747853017761372e-05,
+          0.9704556465148926
+        ],
+        "public_position": [
+          14,
+          12
+        ],
+        "public_visited": [
+          224,
+          223,
+          222
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 18,
+        "step": 3,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 4,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                220,
+                205,
+                190
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                222,
+                207,
+                192
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                206,
+                191,
+                176
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 4
+        },
+        "cue_action": null,
+        "cue_features_sha256": "036ad99c8800343f2900900138bc21adb087ebc32afc710730a518ef890f9618",
+        "current_image_sha256": "105a26dea1349870a5251f6a6167d94c505e18e16a0e4599f8caf71904e42d90",
+        "explorer_action": "left",
+        "explorer_features_sha256": "3a4996ab28177e59c0aeb9c9f6878c142d3ce3de5721002e370039c353582dcd",
+        "explorer_logits": [
+          -3.866704225540161,
+          -2.044290065765381,
+          -3.4028234663852886e+38,
+          2.5638508796691895
+        ],
+        "probabilities": [
+          0.0009601125493645668,
+          2.120513454428874e-05,
+          0.06980903446674347,
+          0.00014982449647504836,
+          0.9290598034858704
+        ],
+        "public_position": [
+          14,
+          11
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 17,
+        "step": 4,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 5,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                219,
+                204,
+                189
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                221,
+                206,
+                191
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                205,
+                190,
+                175
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 5
+        },
+        "cue_action": null,
+        "cue_features_sha256": "2d933ebae36b548997af6d9aaaa394b0d56c552a35c754f03a6e39000ef95632",
+        "current_image_sha256": "d2d48dec0e3b33f29e794967649df6fae8a6ae6fbfb01500e6fcd686c2da116b",
+        "explorer_action": "left",
+        "explorer_features_sha256": "1d95a1d8527e1202ce4b1ab63096b0b9aa23e05318bdab95e01b91af717ebd7f",
+        "explorer_logits": [
+          -3.857959032058716,
+          -2.78994083404541,
+          -3.4028234663852886e+38,
+          3.0444698333740234
+        ],
+        "probabilities": [
+          0.00025355644174851477,
+          1.7510699763079174e-05,
+          0.00777114974334836,
+          3.843633021460846e-05,
+          0.9919192790985107
+        ],
+        "public_position": [
+          14,
+          10
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 16,
+        "step": 5,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 6,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                218,
+                203,
+                188
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                220,
+                205,
+                190
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                204,
+                189,
+                174
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 6
+        },
+        "cue_action": null,
+        "cue_features_sha256": "9001150bdac29912fd7247726ea34fd3b133810eb8a5c42f2e895feed21f8123",
+        "current_image_sha256": "5e845e000c84b40f57f53e3415b81451e3b087f488f11918ad2e68e9d1dbaed3",
+        "explorer_action": "left",
+        "explorer_features_sha256": "c370df727900512f958618a7f1b8e59746f850f8019ff8523986614049536efa",
+        "explorer_logits": [
+          -3.2400317192077637,
+          -3.1097943782806396,
+          -3.4028234663852886e+38,
+          2.9927520751953125
+        ],
+        "probabilities": [
+          0.0006441365694627166,
+          3.0485540264635347e-05,
+          0.013459610752761364,
+          0.00014409946743398905,
+          0.9857217073440552
+        ],
+        "public_position": [
+          14,
+          9
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 15,
+        "step": 6,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 7,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                217,
+                202,
+                187
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                219,
+                204,
+                189
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                203,
+                188,
+                173
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 7
+        },
+        "cue_action": null,
+        "cue_features_sha256": "df833006cfd831515d1e012cb654d400530f3712fe766ac0b361c557730f8b55",
+        "current_image_sha256": "ba013f949f9bc9507ee71a067d6b370a465dc203ef9215b4adc60f71ee213872",
+        "explorer_action": "left",
+        "explorer_features_sha256": "58ca733f64d39b991d3eb7b25ed88074fe4417831c42897b9c540c95e784b936",
+        "explorer_logits": [
+          -2.5213751792907715,
+          -4.034967422485352,
+          -3.4028234663852886e+38,
+          4.089155673980713
+        ],
+        "probabilities": [
+          0.0015062747988849878,
+          0.00014179773279465735,
+          0.06148002669215202,
+          0.00035451308940537274,
+          0.9365173578262329
+        ],
+        "public_position": [
+          14,
+          8
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 14,
+        "step": 7,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 8,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                216,
+                201,
+                186
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                218,
+                203,
+                188
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                202,
+                187,
+                172
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 8
+        },
+        "cue_action": null,
+        "cue_features_sha256": "ddda75baa1000d8bce85392333f2455f5f84794ef65d54de4f02b001919c3008",
+        "current_image_sha256": "9be3294517af353c20e44e7638409309882ee9e94fdb777d8f4d17c0aa0f3871",
+        "explorer_action": "left",
+        "explorer_features_sha256": "03345c8c1905aa1140f73553f2c9d12b060aadb4731b4fd1d73907e18d9ef694",
+        "explorer_logits": [
+          -2.7192223072052,
+          -4.545745849609375,
+          -3.4028234663852886e+38,
+          4.904932498931885
+        ],
+        "probabilities": [
+          0.00021738217037636787,
+          7.325465412577614e-05,
+          0.03133165463805199,
+          0.00043808293412439525,
+          0.9679396152496338
+        ],
+        "public_position": [
+          14,
+          7
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 13,
+        "step": 8,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 9,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                215,
+                200,
+                185
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                217,
+                202,
+                187
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                201,
+                186,
+                171
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 9
+        },
+        "cue_action": null,
+        "cue_features_sha256": "0b0f7e2c2828431d749589ad21d4acde7d535c7377f74fed44aa3e5cc4f0f4ea",
+        "current_image_sha256": "47201bef42e8e1f89f9a33135a0a4f86cfdb95625c1477315371e2e2d2916a39",
+        "explorer_action": "left",
+        "explorer_features_sha256": "5ec75a1de8e15bd415f30cffdb46c784dbcb6b1d69c5159676c690c13d3ebfea",
+        "explorer_logits": [
+          -1.0127276182174683,
+          -4.562719345092773,
+          -3.4028234663852886e+38,
+          5.572589874267578
+        ],
+        "probabilities": [
+          0.004962168633937836,
+          8.266811346402392e-05,
+          0.029024885967373848,
+          0.0020478523802012205,
+          0.9638824462890625
+        ],
+        "public_position": [
+          14,
+          6
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 12,
+        "step": 9,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 10,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                214,
+                199,
+                184
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                216,
+                201,
+                186
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                200,
+                185,
+                170
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 10
+        },
+        "cue_action": null,
+        "cue_features_sha256": "9fa93296d779184ea5b6a4e65d869b5efb126440ac0d5d79577bf99f12421085",
+        "current_image_sha256": "1e1a0b18f303b64c220195bc3d418c37c367a395bc24948b1c2e484a098bc6e4",
+        "explorer_action": "left",
+        "explorer_features_sha256": "3b9c897297d350f842bd8c252290ece342ebbe502a0490910b0225675aaa0074",
+        "explorer_logits": [
+          -0.4571903347969055,
+          -4.668278217315674,
+          -3.4028234663852886e+38,
+          6.335279941558838
+        ],
+        "probabilities": [
+          0.0032431764993816614,
+          0.014376903884112835,
+          0.0004396120784804225,
+          0.4670684337615967,
+          0.5148718357086182
+        ],
+        "public_position": [
+          14,
+          5
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 11,
+        "step": 10,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 11,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                213,
+                198,
+                183
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                215,
+                200,
+                185
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                199,
+                184,
+                169
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 11
+        },
+        "cue_action": null,
+        "cue_features_sha256": "33b4e6bdb479cbba4f29cc23987209b5ccb1e1a373a66b56f7c0bdb81b03338c",
+        "current_image_sha256": "59d2b7441b90512081585da474039956d50c7987e43f6d79efa0fea3a02f1062",
+        "explorer_action": "left",
+        "explorer_features_sha256": "656d5f8df3e30d4a733bea2add9d0ba12469e7c7d352d39d9c3ac30f2e8b11e5",
+        "explorer_logits": [
+          0.9928715229034424,
+          -4.954751968383789,
+          -3.4028234663852886e+38,
+          7.270599365234375
+        ],
+        "probabilities": [
+          0.002929963171482086,
+          0.0152051392942667,
+          0.0003724941343534738,
+          0.07072955369949341,
+          0.9107627868652344
+        ],
+        "public_position": [
+          14,
+          4
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 10,
+        "step": 11,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 12,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                212,
+                197,
+                182
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                214,
+                199,
+                184
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                198,
+                183,
+                168
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 12
+        },
+        "cue_action": null,
+        "cue_features_sha256": "751b401d7984f6a485366db0737e73b9f04efca7eb01fe81d36599ea838712d5",
+        "current_image_sha256": "3477279b508b99e57710d36cf1619b1dbac20d7295f5c7aea5e9a55c36e30acb",
+        "explorer_action": "left",
+        "explorer_features_sha256": "41758d96b94705cae6cb194470b60552fd27455bf4e2cfb1a489d4ffb08a1e5e",
+        "explorer_logits": [
+          2.52524733543396,
+          -4.477238178253174,
+          -3.4028234663852886e+38,
+          7.387187480926514
+        ],
+        "probabilities": [
+          0.0010713794035837054,
+          0.016569316387176514,
+          0.00012892213999293745,
+          0.02737027406692505,
+          0.9548600912094116
+        ],
+        "public_position": [
+          14,
+          3
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214,
+          213
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 9,
+        "step": 12,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": null,
+          "changed": false,
+          "control": "accepted_cue",
+          "horizon": 0,
+          "opportunity_gain": 0,
+          "original_next_radius": null,
+          "paths_by_first": {},
+          "radial_guard_blocked": false,
+          "selected_gain": null,
+          "unprotected_action": "left",
+          "unprotected_next_radius": null
+        },
+        "cue_action": "left",
+        "cue_features_sha256": "f31ce65c813efc1140f54680edfb050de61b20ca772806ae8011330267bdcbe2",
+        "current_image_sha256": "b3d8baef1f8876355c0dceeaf4e949015aa1c75fde7a022c21548b90603b0c17",
+        "explorer_action": "left",
+        "explorer_features_sha256": "68cfe2fe966daca5c96e748e11924804752667bb01dbb620299ab500c4cdf8e9",
+        "explorer_logits": [
+          3.824744939804077,
+          -3.0990898609161377,
+          -3.4028234663852886e+38,
+          6.090165138244629
+        ],
+        "probabilities": [
+          0.003104369854554534,
+          0.1365150660276413,
+          9.658079216023907e-05,
+          0.8556454181671143,
+          0.004638630896806717
+        ],
+        "public_position": [
+          14,
+          2
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214,
+          213,
+          212
+        ],
+        "reason": "accepted",
+        "remaining_budget": 8,
+        "step": 13,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": null,
+          "changed": false,
+          "control": "accepted_cue",
+          "horizon": 0,
+          "opportunity_gain": 0,
+          "original_next_radius": null,
+          "paths_by_first": {},
+          "radial_guard_blocked": false,
+          "selected_gain": null,
+          "unprotected_action": "left",
+          "unprotected_next_radius": null
+        },
+        "cue_action": "left",
+        "cue_features_sha256": "06393bcd8d150af13bf5aa88ae57a9eb39c2667c85883029d453516343171be9",
+        "current_image_sha256": "96ba565c615838eeeadb1047d3d7158d882137acea5a428209a87381b90cedee",
+        "explorer_action": "left",
+        "explorer_features_sha256": "fc8dbb455a0653c23198bbf7742d8dfba7b6b68b3036711779e45dffe10fbcf0",
+        "explorer_logits": [
+          4.7156291007995605,
+          -2.633942127227783,
+          -3.4028234663852886e+38,
+          5.817951679229736
+        ],
+        "probabilities": [
+          0.003790672868490219,
+          0.2918257415294647,
+          5.505083026946522e-05,
+          0.6537392735481262,
+          0.0505891889333725
+        ],
+        "public_position": [
+          14,
+          1
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214,
+          213,
+          212,
+          211
+        ],
+        "reason": "accepted",
+        "remaining_budget": 7,
+        "step": 14,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "up",
+        "base_action": "up",
+        "coverage": {
+          "action": "up",
+          "baseline_gain": 5,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 15,
+          "paths_by_first": {
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                211,
+                196,
+                181
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                195,
+                180,
+                165
+              ],
+              "gain": 5,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 5,
+          "unprotected_action": "up",
+          "unprotected_next_radius": 15
+        },
+        "cue_action": null,
+        "cue_features_sha256": "f164fafe91af7cb3c082b441de3628861476738d021d9029e8ef241b77b9735e",
+        "current_image_sha256": "f92ecb47a637f682e92452a3924464d32b9f32399e6b348656403a1839666664",
+        "explorer_action": "up",
+        "explorer_features_sha256": "a02a0902cee21a97ed78da9e4591dcbe966c36b51f3b286d6e787498b05fdee7",
+        "explorer_logits": [
+          5.2911763191223145,
+          -2.470602512359619,
+          -3.4028234663852886e+38,
+          -3.4028234663852886e+38
+        ],
+        "probabilities": [
+          0.006120339967310429,
+          0.24519480764865875,
+          5.310127744451165e-05,
+          0.7237335443496704,
+          0.024898195639252663
+        ],
+        "public_position": [
+          14,
+          0
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214,
+          213,
+          212,
+          211,
+          210
+        ],
+        "reason": "illegal_top_direction",
+        "remaining_budget": 6,
+        "step": 15,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "up",
+        "base_action": "up",
+        "coverage": {
+          "action": "up",
+          "baseline_gain": 6,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 16,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "up",
+                "up"
+              ],
+              "cells": [
+                210,
+                195,
+                180
+              ],
+              "gain": 2,
+              "revisit_moves": 2
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                196,
+                181,
+                166
+              ],
+              "gain": 6,
+              "revisit_moves": 0
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                180,
+                165,
+                150
+              ],
+              "gain": 6,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 6,
+          "unprotected_action": "up",
+          "unprotected_next_radius": 16
+        },
+        "cue_action": null,
+        "cue_features_sha256": "ed370aea5ab46ee2021cc2ee5276d57129f2e54a44a388ad4822b3796454c372",
+        "current_image_sha256": "8cefcf790914422410376ae825a1c26cd28345d661a3dc7a0c0d3f23f126c1a8",
+        "explorer_action": "up",
+        "explorer_features_sha256": "8e2b7f01812e280061c2ff2d170b9a78c74fe874295a33fe939a05c2e5b3e595",
+        "explorer_logits": [
+          6.038729190826416,
+          -1.92112135887146,
+          -6.187771320343018,
+          -3.4028234663852886e+38
+        ],
+        "probabilities": [
+          0.023672349750995636,
+          0.01037477795034647,
+          0.13029643893241882,
+          0.05677963048219681,
+          0.7788768410682678
+        ],
+        "public_position": [
+          13,
+          0
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214,
+          213,
+          212,
+          211,
+          210,
+          195
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 5,
+        "step": 16,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "up",
+        "base_action": "up",
+        "coverage": {
+          "action": "up",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 17,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "right",
+                "up"
+              ],
+              "cells": [
+                195,
+                196,
+                181
+              ],
+              "gain": 2,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                181,
+                166,
+                151
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "up": {
+              "actions": [
+                "up",
+                "right",
+                "right"
+              ],
+              "cells": [
+                165,
+                166,
+                167
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "up",
+          "unprotected_next_radius": 17
+        },
+        "cue_action": null,
+        "cue_features_sha256": "5d0400ec8124dc7e2a790ac48d47d16774b0744578b197de87ac90e86c2e95fd",
+        "current_image_sha256": "5408c3288f7f43f4eb3323067cc22e71fe91183e5fb94dd3f5b2652f31a69286",
+        "explorer_action": "up",
+        "explorer_features_sha256": "cd8e169b714d4967cca63768388a511ab7e270ae35b0d30252db0ccd82cb16c0",
+        "explorer_logits": [
+          5.997199535369873,
+          -1.6723403930664062,
+          -6.149667263031006,
+          -3.4028234663852886e+38
+        ],
+        "probabilities": [
+          0.006943878717720509,
+          8.1283287727274e-06,
+          0.01455795019865036,
+          4.24304416810628e-05,
+          0.9784476161003113
+        ],
+        "public_position": [
+          12,
+          0
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214,
+          213,
+          212,
+          211,
+          210,
+          195,
+          180
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 4,
+        "step": 17,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "up",
+        "base_action": "up",
+        "coverage": {
+          "action": "up",
+          "baseline_gain": 4,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 18,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "right",
+                "up"
+              ],
+              "cells": [
+                180,
+                181,
+                166
+              ],
+              "gain": 1,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "right",
+                "up"
+              ],
+              "cells": [
+                166,
+                167,
+                152
+              ],
+              "gain": 5,
+              "revisit_moves": 0
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                150,
+                135,
+                120
+              ],
+              "gain": 4,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 4,
+          "unprotected_action": "up",
+          "unprotected_next_radius": 18
+        },
+        "cue_action": null,
+        "cue_features_sha256": "5fd535977314ac4333c46d5a3346420d267018b5de006371398950ea9d2b8a3b",
+        "current_image_sha256": "1895224377e6d9cea6213afe7196d205e8119f3e8a2a1d05503706fcd6b051fc",
+        "explorer_action": "up",
+        "explorer_features_sha256": "234331301a04872dce1bd8ac167a7aab2e9458469956c111129b98b805124866",
+        "explorer_logits": [
+          6.2938008308410645,
+          -1.4817521572113037,
+          -6.162054538726807,
+          -3.4028234663852886e+38
+        ],
+        "probabilities": [
+          0.0026146352756768465,
+          0.20905642211437225,
+          0.00010191279579885304,
+          0.7714300751686096,
+          0.01679694838821888
+        ],
+        "public_position": [
+          11,
+          0
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214,
+          213,
+          212,
+          211,
+          210,
+          195,
+          180,
+          165
+        ],
+        "reason": "illegal_top_direction",
+        "remaining_budget": 3,
+        "step": 18,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "up",
+        "base_action": "up",
+        "coverage": {
+          "action": "up",
+          "baseline_gain": 2,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 2,
+          "opportunity_gain": 0,
+          "original_next_radius": 19,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "right"
+              ],
+              "cells": [
+                165,
+                166
+              ],
+              "gain": 0,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up"
+              ],
+              "cells": [
+                151,
+                136
+              ],
+              "gain": 2,
+              "revisit_moves": 0
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up"
+              ],
+              "cells": [
+                135,
+                120
+              ],
+              "gain": 2,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 2,
+          "unprotected_action": "up",
+          "unprotected_next_radius": 19
+        },
+        "cue_action": null,
+        "cue_features_sha256": "b820c5d2de5652b19eebd0af5e6eeefbce01aff7c0610bcfed31cf76ed018408",
+        "current_image_sha256": "f81990bebedecd204b1a84bfb53ef03c3a70ae7d03471eba64b7a1b947a00892",
+        "explorer_action": "up",
+        "explorer_features_sha256": "c2e0d0d4a9c86a2a3c00bd134f74e2d3e11eb9e33151ae25200315ea385bfd38",
+        "explorer_logits": [
+          6.34553337097168,
+          -0.7543280124664307,
+          -6.013144493103027,
+          -3.4028234663852886e+38
+        ],
+        "probabilities": [
+          0.0008917408413253725,
+          0.39145731925964355,
+          0.0003086836077272892,
+          0.6028658747673035,
+          0.004476362373679876
+        ],
+        "public_position": [
+          10,
+          0
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214,
+          213,
+          212,
+          211,
+          210,
+          195,
+          180,
+          165,
+          150
+        ],
+        "reason": "illegal_top_direction",
+        "remaining_budget": 2,
+        "step": 19,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "up",
+        "base_action": "up",
+        "coverage": {
+          "action": "up",
+          "baseline_gain": 0,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 1,
+          "opportunity_gain": 0,
+          "original_next_radius": 20,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down"
+              ],
+              "cells": [
+                150
+              ],
+              "gain": 0,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right"
+              ],
+              "cells": [
+                136
+              ],
+              "gain": 0,
+              "revisit_moves": 0
+            },
+            "up": {
+              "actions": [
+                "up"
+              ],
+              "cells": [
+                120
+              ],
+              "gain": 0,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 0,
+          "unprotected_action": "up",
+          "unprotected_next_radius": 20
+        },
+        "cue_action": null,
+        "cue_features_sha256": "57685b5c764a0b7ae74877f2fd2d71f0bebc35d2768ab43a2d7c7de012373672",
+        "current_image_sha256": "688975ca71d4479504660bbe515efe70874da84ac2eedf236d8bdc6fce457fa5",
+        "explorer_action": "up",
+        "explorer_features_sha256": "fe6a3c4b2e1b7cf9183a0cb137461b6a3252e0539b2e6e65af8e666138f13b09",
+        "explorer_logits": [
+          6.636459827423096,
+          -0.11283411830663681,
+          -5.9257426261901855,
+          -3.4028234663852886e+38
+        ],
+        "probabilities": [
+          0.014554222114384174,
+          0.0629381611943245,
+          0.00013159636000636965,
+          0.13634508848190308,
+          0.7860309481620789
+        ],
+        "public_position": [
+          9,
+          0
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214,
+          213,
+          212,
+          211,
+          210,
+          195,
+          180,
+          165,
+          150,
+          135
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 1,
+        "step": 20,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      }
+    ],
+    "episode_id": "synthetic_0_1",
+    "goal": 192,
+    "map_projected_area_km2": 20.25,
+    "out_of_bounds": 0,
+    "protocol": "masa-roads-grid15-area-v1",
+    "repeat_visit_rate": 0.0,
+    "revisits": 0,
+    "seed": 0,
+    "sg": 16,
+    "sg_m": 4800,
+    "start": 224,
+    "steps": 20,
+    "success": false,
+    "synthetic": true,
+    "termination": "budget_exhausted",
+    "trajectory": [
+      {
+        "action": null,
+        "out_of_bounds": false,
+        "patch_id": 224,
+        "revisited": false,
+        "step": 0
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 223,
+        "revisited": false,
+        "step": 1
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 222,
+        "revisited": false,
+        "step": 2
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 221,
+        "revisited": false,
+        "step": 3
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 220,
+        "revisited": false,
+        "step": 4
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 219,
+        "revisited": false,
+        "step": 5
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 218,
+        "revisited": false,
+        "step": 6
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 217,
+        "revisited": false,
+        "step": 7
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 216,
+        "revisited": false,
+        "step": 8
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 215,
+        "revisited": false,
+        "step": 9
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 214,
+        "revisited": false,
+        "step": 10
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 213,
+        "revisited": false,
+        "step": 11
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 212,
+        "revisited": false,
+        "step": 12
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 211,
+        "revisited": false,
+        "step": 13
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 210,
+        "revisited": false,
+        "step": 14
+      },
+      {
+        "action": "up",
+        "out_of_bounds": false,
+        "patch_id": 195,
+        "revisited": false,
+        "step": 15
+      },
+      {
+        "action": "up",
+        "out_of_bounds": false,
+        "patch_id": 180,
+        "revisited": false,
+        "step": 16
+      },
+      {
+        "action": "up",
+        "out_of_bounds": false,
+        "patch_id": 165,
+        "revisited": false,
+        "step": 17
+      },
+      {
+        "action": "up",
+        "out_of_bounds": false,
+        "patch_id": 150,
+        "revisited": false,
+        "step": 18
+      },
+      {
+        "action": "up",
+        "out_of_bounds": false,
+        "patch_id": 135,
+        "revisited": false,
+        "step": 19
+      },
+      {
+        "action": "up",
+        "out_of_bounds": false,
+        "patch_id": 120,
+        "revisited": false,
+        "step": 20
+      }
+    ],
+    "valid_travel_m": 6000
+  },
+  {
+    "cell_size_m": 300,
+    "counts_as_navigation_SR": false,
+    "decisions": [
+      {
+        "action": "right",
+        "base_action": "right",
+        "coverage": {
+          "action": "right",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 1,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "right",
+                "right"
+              ],
+              "cells": [
+                15,
+                16,
+                17
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                1,
+                16,
+                31
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "right",
+          "unprotected_next_radius": 1
+        },
+        "cue_action": null,
+        "cue_features_sha256": "2ced1f27e73e3d55861453c0c2804096699b2daa5afbeb2ac9878365b9974f9b",
+        "current_image_sha256": "36cd882e00470539f9f44afa89f4eadde09d95463ed493980dc75b6fa8d956f3",
+        "explorer_action": "right",
+        "explorer_features_sha256": "f9d737e7de5f4348e3a957b866b6fc8eddbc101ace33215b664ace0171cf25a3",
+        "explorer_logits": [
+          -3.4028234663852886e+38,
+          0.3550769090652466,
+          -0.40645235776901245,
+          -3.4028234663852886e+38
+        ],
+        "probabilities": [
+          0.0024281886871904135,
+          0.00010333184036426246,
+          1.9011697816040396e-07,
+          0.00010771970119094476,
+          0.9973605275154114
+        ],
+        "public_position": [
+          0,
+          0
+        ],
+        "public_visited": [
+          0
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 20,
+        "step": 1,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "right",
+        "base_action": "right",
+        "coverage": {
+          "action": "right",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 2,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "down",
+                "down"
+              ],
+              "cells": [
+                16,
+                31,
+                46
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left",
+                "down",
+                "right"
+              ],
+              "cells": [
+                0,
+                15,
+                16
+              ],
+              "gain": 3,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                2,
+                17,
+                32
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "right",
+          "unprotected_next_radius": 2
+        },
+        "cue_action": null,
+        "cue_features_sha256": "e091e5c1b76dd5cd15d8dec0b871540ada13f2d43b938fe48100921194f25f0e",
+        "current_image_sha256": "63fa93be2e9e25aa32a335d1f34f33bb706bd27642751e421bdf355a66f8f518",
+        "explorer_action": "right",
+        "explorer_features_sha256": "79c6d370f778da2f8d22161821647ca0d7c0c252937368f0648869c03e60da48",
+        "explorer_logits": [
+          -3.4028234663852886e+38,
+          2.320614814758301,
+          -1.1663480997085571,
+          -2.3378818035125732
+        ],
+        "probabilities": [
+          0.004099895246326923,
+          9.836068784352392e-05,
+          4.147797199038905e-07,
+          0.000212525759707205,
+          0.9955887794494629
+        ],
+        "public_position": [
+          0,
+          1
+        ],
+        "public_visited": [
+          0,
+          1
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 19,
+        "step": 2,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "right",
+        "base_action": "right",
+        "coverage": {
+          "action": "right",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 3,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "down",
+                "down"
+              ],
+              "cells": [
+                17,
+                32,
+                47
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left",
+                "down",
+                "down"
+              ],
+              "cells": [
+                1,
+                16,
+                31
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                3,
+                18,
+                33
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "right",
+          "unprotected_next_radius": 3
+        },
+        "cue_action": null,
+        "cue_features_sha256": "d820557b9f17db69d3028b8eb297c53f3f6237366fee06095db71eaa943aa92a",
+        "current_image_sha256": "8223e780cf8063289f7e3989d9dda45f1609e73f666ecc9ee43148dcfb5f0b32",
+        "explorer_action": "right",
+        "explorer_features_sha256": "755054c37e074dd7d4528762c1e164652b0fe30de9bcbf6182768ad0012a01c7",
+        "explorer_logits": [
+          -3.4028234663852886e+38,
+          2.7542550563812256,
+          -1.865163803100586,
+          -2.852839708328247
+        ],
+        "probabilities": [
+          0.03787221014499664,
+          0.0013805391499772668,
+          3.0272037747636205e-06,
+          0.007556842640042305,
+          0.9531873464584351
+        ],
+        "public_position": [
+          0,
+          2
+        ],
+        "public_visited": [
+          0,
+          1,
+          2
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 18,
+        "step": 3,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "right",
+        "base_action": "right",
+        "coverage": {
+          "action": "right",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 4,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "down",
+                "down"
+              ],
+              "cells": [
+                18,
+                33,
+                48
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left",
+                "down",
+                "down"
+              ],
+              "cells": [
+                2,
+                17,
+                32
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                4,
+                19,
+                34
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "right",
+          "unprotected_next_radius": 4
+        },
+        "cue_action": null,
+        "cue_features_sha256": "bf4ee7cbf281cb5fcf9a7b6c5080d315f8d307510def1feb0dcc324897b538f3",
+        "current_image_sha256": "c024a9557a0451f3f14ee069f865782b8c05e9fa42f670badb8ab697be5827a4",
+        "explorer_action": "right",
+        "explorer_features_sha256": "1cdd7e3634654dab5ac913288e03c419dfaa5c1ab34d5a1e35705e55a2c9238b",
+        "explorer_logits": [
+          -3.4028234663852886e+38,
+          3.849046468734741,
+          -1.2893152236938477,
+          -3.9953958988189697
+        ],
+        "probabilities": [
+          0.02627568133175373,
+          0.006343670655041933,
+          3.872248271363787e-06,
+          0.024612141773104668,
+          0.9427645802497864
+        ],
+        "public_position": [
+          0,
+          3
+        ],
+        "public_visited": [
+          0,
+          1,
+          2,
+          3
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 17,
+        "step": 4,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "right",
+        "base_action": "right",
+        "coverage": {
+          "action": "right",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 5,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "down",
+                "down"
+              ],
+              "cells": [
+                19,
+                34,
+                49
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left",
+                "down",
+                "down"
+              ],
+              "cells": [
+                3,
+                18,
+                33
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                5,
+                20,
+                35
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "right",
+          "unprotected_next_radius": 5
+        },
+        "cue_action": null,
+        "cue_features_sha256": "aa6ea40041e19060f14f14f784809a6dea0ba8010b48df0d56245e80e38e761a",
+        "current_image_sha256": "24da1840bae602fe53a2123b682d72ffbf1f406f0723043bd7641c5cb34d5f82",
+        "explorer_action": "right",
+        "explorer_features_sha256": "6d72ce10deda9ea11c44c6967d6e32338ed2b1bc14f0acbee659abe9ad9899a3",
+        "explorer_logits": [
+          -3.4028234663852886e+38,
+          5.110226154327393,
+          -0.4178078770637512,
+          -4.92567777633667
+        ],
+        "probabilities": [
+          0.015709782019257545,
+          0.003540284000337124,
+          3.4309516649955185e-06,
+          0.005043444689363241,
+          0.9757030606269836
+        ],
+        "public_position": [
+          0,
+          4
+        ],
+        "public_visited": [
+          0,
+          1,
+          2,
+          3,
+          4
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 16,
+        "step": 5,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "right",
+        "base_action": "right",
+        "coverage": {
+          "action": "right",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 6,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "down",
+                "down"
+              ],
+              "cells": [
+                20,
+                35,
+                50
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left",
+                "down",
+                "down"
+              ],
+              "cells": [
+                4,
+                19,
+                34
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                6,
+                21,
+                36
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "right",
+          "unprotected_next_radius": 6
+        },
+        "cue_action": null,
+        "cue_features_sha256": "07bed94c61f29c4d69c3c8a442b11d202578275a6b214dad769378fe51d9ecad",
+        "current_image_sha256": "88515b055ba45fcdea130a9044762b36856ab1c760d19bc651e1354b038ddbd3",
+        "explorer_action": "right",
+        "explorer_features_sha256": "3b119d41d5ddace16b92d4148db18f8fdd9b08a347787be613d45b8425d4a3a0",
+        "explorer_logits": [
+          -3.4028234663852886e+38,
+          5.453662395477295,
+          0.6121625900268555,
+          -5.277853012084961
+        ],
+        "probabilities": [
+          0.011398126371204853,
+          0.07229217886924744,
+          1.2026793228869792e-05,
+          0.15266633033752441,
+          0.7636313438415527
+        ],
+        "public_position": [
+          0,
+          5
+        ],
+        "public_visited": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 15,
+        "step": 6,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "right",
+        "base_action": "right",
+        "coverage": {
+          "action": "right",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 7,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "down",
+                "down"
+              ],
+              "cells": [
+                21,
+                36,
+                51
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left",
+                "down",
+                "down"
+              ],
+              "cells": [
+                5,
+                20,
+                35
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                7,
+                22,
+                37
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "right",
+          "unprotected_next_radius": 7
+        },
+        "cue_action": null,
+        "cue_features_sha256": "30fe00a1b7ac53fbd45ccd2e53c81b1200193b8254d053ffe4492d499d62524a",
+        "current_image_sha256": "2896c16eb8f40ce91675079ca96c63b34e89ad901009a232906604a8d0c5a192",
+        "explorer_action": "right",
+        "explorer_features_sha256": "d99b96193c30ffed59835ab83e642a26c6e2f95cccd1c9c5a958e83b49ecb940",
+        "explorer_logits": [
+          -3.4028234663852886e+38,
+          6.006495952606201,
+          1.1397993564605713,
+          -5.5270538330078125
+        ],
+        "probabilities": [
+          0.019600437954068184,
+          0.12245217710733414,
+          4.831723344977945e-05,
+          0.33911576867103577,
+          0.5187832713127136
+        ],
+        "public_position": [
+          0,
+          6
+        ],
+        "public_visited": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 14,
+        "step": 7,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "right",
+        "base_action": "right",
+        "coverage": {
+          "action": "right",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 8,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "down",
+                "down"
+              ],
+              "cells": [
+                22,
+                37,
+                52
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left",
+                "down",
+                "down"
+              ],
+              "cells": [
+                6,
+                21,
+                36
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                8,
+                23,
+                38
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "right",
+          "unprotected_next_radius": 8
+        },
+        "cue_action": null,
+        "cue_features_sha256": "365ffa720d91d1768d694ba2e8c64cbfac51d0d1574bba6f35e82a64abadcd5f",
+        "current_image_sha256": "2a8a97dd741d396a152acaeb1a715b0bcd21070b220c197ccb1a55350f0387c3",
+        "explorer_action": "right",
+        "explorer_features_sha256": "cdbb66841172342f614bacccdd8d00a5dd59b3f79f5e046ec5e6322b6a374932",
+        "explorer_logits": [
+          -3.4028234663852886e+38,
+          6.10998010635376,
+          2.0153703689575195,
+          -5.589781284332275
+        ],
+        "probabilities": [
+          0.0014726571971550584,
+          0.09599588066339493,
+          2.416192728560418e-05,
+          0.43149521946907043,
+          0.4710121750831604
+        ],
+        "public_position": [
+          0,
+          7
+        ],
+        "public_visited": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 13,
+        "step": 8,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "right",
+        "base_action": "right",
+        "coverage": {
+          "action": "right",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 9,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "down",
+                "down"
+              ],
+              "cells": [
+                23,
+                38,
+                53
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left",
+                "down",
+                "down"
+              ],
+              "cells": [
+                7,
+                22,
+                37
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                9,
+                24,
+                39
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "right",
+          "unprotected_next_radius": 9
+        },
+        "cue_action": null,
+        "cue_features_sha256": "9dee4b491e01ad420a45353dd8bbbe0912620f70fada7c4a4c553a9448f0c01a",
+        "current_image_sha256": "9f528c4c6c5787ee0213a49ee331815b9876e57f418f986796f2d4da9a479aed",
+        "explorer_action": "right",
+        "explorer_features_sha256": "74f79a6daf6318e92750900a3dd6bbe7180dfe227b27c109c17c0e6d0e0ebc8f",
+        "explorer_logits": [
+          -3.4028234663852886e+38,
+          5.739853382110596,
+          2.213940143585205,
+          -5.21480131149292
+        ],
+        "probabilities": [
+          0.003002230077981949,
+          0.26401495933532715,
+          5.439883534563705e-05,
+          0.5209728479385376,
+          0.2119554728269577
+        ],
+        "public_position": [
+          0,
+          8
+        ],
+        "public_visited": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8
+        ],
+        "reason": "visited_top_destination",
+        "remaining_budget": 12,
+        "step": 9,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "right",
+        "base_action": "right",
+        "coverage": {
+          "action": "right",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 10,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "down",
+                "down"
+              ],
+              "cells": [
+                24,
+                39,
+                54
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left",
+                "down",
+                "down"
+              ],
+              "cells": [
+                8,
+                23,
+                38
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                10,
+                25,
+                40
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "right",
+          "unprotected_next_radius": 10
+        },
+        "cue_action": null,
+        "cue_features_sha256": "c55dccb1922d3cc6d95b474ad0bc2ff5b35dae158f5c9f01a00032867a83d352",
+        "current_image_sha256": "c4e562032feeb2d763c7c1d6a304f8ce10ad38570721d0e6ad0f7aee4ec1d639",
+        "explorer_action": "right",
+        "explorer_features_sha256": "cdcd572ea66f2c50889079e67a1db425c945ed0ab83b65fba2ee7520d480b66b",
+        "explorer_logits": [
+          -3.4028234663852886e+38,
+          6.103662490844727,
+          3.0251007080078125,
+          -5.416722774505615
+        ],
+        "probabilities": [
+          0.0020993773359805346,
+          0.2776510417461395,
+          6.10466959187761e-05,
+          0.6493704319000244,
+          0.07081814855337143
+        ],
+        "public_position": [
+          0,
+          9
+        ],
+        "public_visited": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9
+        ],
+        "reason": "visited_top_destination",
+        "remaining_budget": 11,
+        "step": 10,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "right",
+        "base_action": "right",
+        "coverage": {
+          "action": "right",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 11,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "down",
+                "down"
+              ],
+              "cells": [
+                25,
+                40,
+                55
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left",
+                "down",
+                "down"
+              ],
+              "cells": [
+                9,
+                24,
+                39
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                11,
+                26,
+                41
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "right",
+          "unprotected_next_radius": 11
+        },
+        "cue_action": null,
+        "cue_features_sha256": "65990d84fea878886c184a6cbf6ffaed1c71ab88a7fcf7dd45319dac564e00f6",
+        "current_image_sha256": "07b25378983f11c0a87eb560f95d104cca8598fef480e570b567ba582ae2b31b",
+        "explorer_action": "right",
+        "explorer_features_sha256": "63f5b8c67a2d299f23b6b64b053442aa6cfa076b901730f7e3f049752c7bfba1",
+        "explorer_logits": [
+          -3.4028234663852886e+38,
+          6.097586631774902,
+          3.322632312774658,
+          -5.280381679534912
+        ],
+        "probabilities": [
+          0.0011158244451507926,
+          0.32395970821380615,
+          7.310525688808411e-05,
+          0.6030531525611877,
+          0.07179825007915497
+        ],
+        "public_position": [
+          0,
+          10
+        ],
+        "public_visited": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10
+        ],
+        "reason": "visited_top_destination",
+        "remaining_budget": 10,
+        "step": 11,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "right",
+        "base_action": "right",
+        "coverage": {
+          "action": "right",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 12,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "down",
+                "down"
+              ],
+              "cells": [
+                26,
+                41,
+                56
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left",
+                "down",
+                "down"
+              ],
+              "cells": [
+                10,
+                25,
+                40
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                12,
+                27,
+                42
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "right",
+          "unprotected_next_radius": 12
+        },
+        "cue_action": null,
+        "cue_features_sha256": "5f99741ad084a0f7fa79f5f01f0800c825adc6be5ad062c4656d5ca4483c7b48",
+        "current_image_sha256": "13d07ec73e3d498975e313d03464b5e6562b31fc7a282c3e8b388a98bfb6c7a0",
+        "explorer_action": "right",
+        "explorer_features_sha256": "7ffcfe403f417a92bcee3322493ccf2e5014829fcf373b15e58ded210d4b0172",
+        "explorer_logits": [
+          -3.4028234663852886e+38,
+          5.748237609863281,
+          3.7827064990997314,
+          -4.8166937828063965
+        ],
+        "probabilities": [
+          0.000590057868976146,
+          0.21874040365219116,
+          0.00010806194040924311,
+          0.7294697165489197,
+          0.05109170824289322
+        ],
+        "public_position": [
+          0,
+          11
+        ],
+        "public_visited": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11
+        ],
+        "reason": "visited_top_destination",
+        "remaining_budget": 9,
+        "step": 12,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "right",
+        "base_action": "right",
+        "coverage": {
+          "action": "right",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 13,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "down",
+                "down"
+              ],
+              "cells": [
+                27,
+                42,
+                57
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left",
+                "down",
+                "down"
+              ],
+              "cells": [
+                11,
+                26,
+                41
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                13,
+                28,
+                43
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "right",
+          "unprotected_next_radius": 13
+        },
+        "cue_action": null,
+        "cue_features_sha256": "18367a9707da7d3c0062c9235f542f7ca22037f1af9bc9a0d5bd4c81362b5251",
+        "current_image_sha256": "252fc81bd170cee96b4d2938195f8ad2375b063d791313abc6c70814b5386d5e",
+        "explorer_action": "right",
+        "explorer_features_sha256": "599b79ddec0c13ab7f2ccd7a004ef25e408d0fbcf2ac03bcdc371eb86bfc04e1",
+        "explorer_logits": [
+          -3.4028234663852886e+38,
+          5.729677200317383,
+          3.832552909851074,
+          -4.8495612144470215
+        ],
+        "probabilities": [
+          0.0009123051422648132,
+          0.21232281625270844,
+          6.550361285917461e-05,
+          0.7503455877304077,
+          0.03635383024811745
+        ],
+        "public_position": [
+          0,
+          12
+        ],
+        "public_visited": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12
+        ],
+        "reason": "visited_top_destination",
+        "remaining_budget": 8,
+        "step": 13,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "down",
+        "base_action": "right",
+        "coverage": {
+          "action": "down",
+          "baseline_gain": 4,
+          "changed": true,
+          "control": "coverage_lookahead",
+          "horizon": 3,
+          "opportunity_gain": 4,
+          "original_next_radius": 14,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "down",
+                "down"
+              ],
+              "cells": [
+                28,
+                43,
+                58
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left",
+                "down",
+                "down"
+              ],
+              "cells": [
+                12,
+                27,
+                42
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                14,
+                29,
+                44
+              ],
+              "gain": 4,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 8,
+          "unprotected_action": "down",
+          "unprotected_next_radius": 14
+        },
+        "cue_action": null,
+        "cue_features_sha256": "4141e1b6711720ee92f121765ad28d228304921c70ce2249f1e1897a2d0b7d88",
+        "current_image_sha256": "4f93b93985a8a3414f3246490b752fb0ac9b60e5896fc3e4857f55df8d6e3400",
+        "explorer_action": "right",
+        "explorer_features_sha256": "3a5ef04f34155f691b14df1e7745965dcc4745917a7ff321f5ee3a800484a741",
+        "explorer_logits": [
+          -3.4028234663852886e+38,
+          5.40951681137085,
+          3.933600902557373,
+          -4.670959949493408
+        ],
+        "probabilities": [
+          0.0008513283682987094,
+          0.33651039004325867,
+          9.248157584806904e-05,
+          0.6021003127098083,
+          0.06044548377394676
+        ],
+        "public_position": [
+          0,
+          13
+        ],
+        "public_visited": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13
+        ],
+        "reason": "visited_top_destination",
+        "remaining_budget": 7,
+        "step": 14,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "down",
+        "base_action": "right",
+        "coverage": {
+          "action": "down",
+          "baseline_gain": 4,
+          "changed": true,
+          "control": "coverage_lookahead",
+          "horizon": 3,
+          "opportunity_gain": 5,
+          "original_next_radius": 15,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "down",
+                "down"
+              ],
+              "cells": [
+                43,
+                58,
+                73
+              ],
+              "gain": 9,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left",
+                "down",
+                "down"
+              ],
+              "cells": [
+                27,
+                42,
+                57
+              ],
+              "gain": 6,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                29,
+                44,
+                59
+              ],
+              "gain": 4,
+              "revisit_moves": 0
+            },
+            "up": {
+              "actions": [
+                "up",
+                "down",
+                "down"
+              ],
+              "cells": [
+                13,
+                28,
+                43
+              ],
+              "gain": 3,
+              "revisit_moves": 2
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 9,
+          "unprotected_action": "down",
+          "unprotected_next_radius": 15
+        },
+        "cue_action": null,
+        "cue_features_sha256": "206022157767d9509f691eabca3c2568dd269e4c6e0c4d6d96c67dfd84636c50",
+        "current_image_sha256": "c4d3a5978051532013f0a306c7575dadc7c9bd5d426b3f5961c796f662bbfd1b",
+        "explorer_action": "right",
+        "explorer_features_sha256": "30ef11e11edccfddf286e6976b38c404ef26fc3fa7a52eabbfb37cf36cac457c",
+        "explorer_logits": [
+          -5.03927755355835,
+          5.048820495605469,
+          4.027069568634033,
+          -4.362278938293457
+        ],
+        "probabilities": [
+          0.007983142510056496,
+          0.07541523873806,
+          1.1115498637082055e-05,
+          0.1515626609325409,
+          0.7650278210639954
+        ],
+        "public_position": [
+          1,
+          13
+        ],
+        "public_visited": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          28
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 6,
+        "step": 15,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "down",
+        "base_action": "down",
+        "coverage": {
+          "action": "down",
+          "baseline_gain": 9,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 16,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "down",
+                "down"
+              ],
+              "cells": [
+                58,
+                73,
+                88
+              ],
+              "gain": 9,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left",
+                "down",
+                "down"
+              ],
+              "cells": [
+                42,
+                57,
+                72
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                44,
+                59,
+                74
+              ],
+              "gain": 4,
+              "revisit_moves": 0
+            },
+            "up": {
+              "actions": [
+                "up",
+                "down",
+                "down"
+              ],
+              "cells": [
+                28,
+                43,
+                58
+              ],
+              "gain": 3,
+              "revisit_moves": 2
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 9,
+          "unprotected_action": "down",
+          "unprotected_next_radius": 16
+        },
+        "cue_action": null,
+        "cue_features_sha256": "ec7c750724d1be7e27eb34acffebd9781be143dc623cf3274955f44dad3889b1",
+        "current_image_sha256": "8be5330908251a666c6c4b00547e5de3346668a792c0c5e5954c0a4c05672ea6",
+        "explorer_action": "down",
+        "explorer_features_sha256": "368161c52d6c66322287644f85f73b8b180c9fd6e779e3bcbd9d40f7752cece8",
+        "explorer_logits": [
+          -5.423620223999023,
+          4.121156215667725,
+          4.5563154220581055,
+          -3.383005380630493
+        ],
+        "probabilities": [
+          0.0005719923065043986,
+          0.006116582080721855,
+          1.0021707566920668e-05,
+          0.02532786689698696,
+          0.9679735898971558
+        ],
+        "public_position": [
+          2,
+          13
+        ],
+        "public_visited": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          28,
+          43
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 5,
+        "step": 16,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "down",
+        "base_action": "down",
+        "coverage": {
+          "action": "down",
+          "baseline_gain": 9,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 17,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "down",
+                "down"
+              ],
+              "cells": [
+                73,
+                88,
+                103
+              ],
+              "gain": 9,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left",
+                "left",
+                "left"
+              ],
+              "cells": [
+                57,
+                56,
+                55
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                59,
+                74,
+                89
+              ],
+              "gain": 4,
+              "revisit_moves": 0
+            },
+            "up": {
+              "actions": [
+                "up",
+                "left",
+                "down"
+              ],
+              "cells": [
+                43,
+                42,
+                57
+              ],
+              "gain": 3,
+              "revisit_moves": 1
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 9,
+          "unprotected_action": "down",
+          "unprotected_next_radius": 17
+        },
+        "cue_action": null,
+        "cue_features_sha256": "257b99d8151d67cbb3598ca7e9c42bafed27c08a59bd054153df2140d543c04b",
+        "current_image_sha256": "8890f44f9383635598f3c00fd26bf109e21cc74f9a8f4766f7dcb30ee6b55e26",
+        "explorer_action": "down",
+        "explorer_features_sha256": "441b0843896fa3d85671cb75867efde4eabfe3a6474817c67f753c13479776e7",
+        "explorer_logits": [
+          -5.596268177032471,
+          4.436567306518555,
+          4.628231048583984,
+          -3.7056665420532227
+        ],
+        "probabilities": [
+          0.007270685397088528,
+          0.0001750026422087103,
+          2.539669594625593e-06,
+          0.0008335448801517487,
+          0.9917181730270386
+        ],
+        "public_position": [
+          3,
+          13
+        ],
+        "public_visited": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          28,
+          43,
+          58
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 4,
+        "step": 17,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "down",
+        "base_action": "down",
+        "coverage": {
+          "action": "down",
+          "baseline_gain": 6,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 18,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "down",
+                "right"
+              ],
+              "cells": [
+                88,
+                103,
+                104
+              ],
+              "gain": 6,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left",
+                "left",
+                "up"
+              ],
+              "cells": [
+                72,
+                71,
+                56
+              ],
+              "gain": 5,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                74,
+                89,
+                104
+              ],
+              "gain": 2,
+              "revisit_moves": 0
+            },
+            "up": {
+              "actions": [
+                "up",
+                "left",
+                "up"
+              ],
+              "cells": [
+                58,
+                57,
+                42
+              ],
+              "gain": 1,
+              "revisit_moves": 1
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 6,
+          "unprotected_action": "down",
+          "unprotected_next_radius": 18
+        },
+        "cue_action": null,
+        "cue_features_sha256": "4dfb4f19711fa04db264a9818fba6b0c3e27178c2f717a2419c347f1563ed080",
+        "current_image_sha256": "769de526d8275f4e56848a4a3e25579633d9e1be13d775ede678d445458e3053",
+        "explorer_action": "down",
+        "explorer_features_sha256": "ea52c11184371eebbf36f35e8a468e2223bd2f59b17b6fafb8b6a625aa3b312f",
+        "explorer_logits": [
+          -5.001574993133545,
+          2.9866559505462646,
+          4.667742729187012,
+          -2.4770216941833496
+        ],
+        "probabilities": [
+          0.0006162869976833463,
+          0.07480594515800476,
+          2.167004822695162e-05,
+          0.07468483597040176,
+          0.8498712182044983
+        ],
+        "public_position": [
+          4,
+          13
+        ],
+        "public_visited": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          28,
+          43,
+          58,
+          73
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 3,
+        "step": 18,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": null,
+          "changed": false,
+          "control": "accepted_cue",
+          "horizon": 0,
+          "opportunity_gain": 0,
+          "original_next_radius": null,
+          "paths_by_first": {},
+          "radial_guard_blocked": false,
+          "selected_gain": null,
+          "unprotected_action": "left",
+          "unprotected_next_radius": null
+        },
+        "cue_action": "left",
+        "cue_features_sha256": "36667e5fd3b3e498afaa7ebdaeb9ef9a216b0601768dca5179e93ca68f576bd6",
+        "current_image_sha256": "42a8a875be184d85af282709e2d2d26737df1682d00492f1c16800d87b5bfef8",
+        "explorer_action": "down",
+        "explorer_features_sha256": "fed674db3f9ea5b30ab0250bc78986b6d13efd5fd2a67f69a11bc7d4e5688d31",
+        "explorer_logits": [
+          -4.919203758239746,
+          4.142505168914795,
+          4.424091815948486,
+          -3.653784990310669
+        ],
+        "probabilities": [
+          0.0006455163820646703,
+          0.2696583569049835,
+          0.00015113154950086027,
+          0.6966251134872437,
+          0.03291983902454376
+        ],
+        "public_position": [
+          5,
+          13
+        ],
+        "public_visited": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          28,
+          43,
+          58,
+          73,
+          88
+        ],
+        "reason": "accepted",
+        "remaining_budget": 2,
+        "step": 19,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "right",
+        "base_action": "right",
+        "coverage": {
+          "action": "right",
+          "baseline_gain": 0,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 1,
+          "opportunity_gain": 0,
+          "original_next_radius": 18,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down"
+              ],
+              "cells": [
+                102
+              ],
+              "gain": 0,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left"
+              ],
+              "cells": [
+                86
+              ],
+              "gain": 0,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right"
+              ],
+              "cells": [
+                88
+              ],
+              "gain": 0,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up"
+              ],
+              "cells": [
+                72
+              ],
+              "gain": 0,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 0,
+          "unprotected_action": "right",
+          "unprotected_next_radius": 18
+        },
+        "cue_action": null,
+        "cue_features_sha256": "6cfd9d22cf933965d8ccef497d2077f953913c2eed67e793a34436466135de4d",
+        "current_image_sha256": "2c3612f3328de24827cdb0f8c7154fc129ae0fc1317c453914661c9825c0221b",
+        "explorer_action": "right",
+        "explorer_features_sha256": "0a9f2ea3445f34f402e14544e5f99e5a4b9182128b3081fc5325c32487677a18",
+        "explorer_logits": [
+          -4.952273845672607,
+          5.155711650848389,
+          4.270759582519531,
+          -4.601197242736816
+        ],
+        "probabilities": [
+          0.0007286635809578001,
+          0.39782336354255676,
+          0.0001559578231535852,
+          0.465228408575058,
+          0.1360636055469513
+        ],
+        "public_position": [
+          5,
+          12
+        ],
+        "public_visited": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7,
+          8,
+          9,
+          10,
+          11,
+          12,
+          13,
+          28,
+          43,
+          58,
+          73,
+          88,
+          87
+        ],
+        "reason": "low_confidence",
+        "remaining_budget": 1,
+        "step": 20,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      }
+    ],
+    "episode_id": "synthetic_1_0",
+    "goal": 16,
+    "map_projected_area_km2": 20.25,
+    "out_of_bounds": 0,
+    "protocol": "masa-roads-grid15-area-v1",
+    "repeat_visit_rate": 0.05,
+    "revisits": 1,
+    "seed": 1,
+    "sg": 16,
+    "sg_m": 4800,
+    "start": 0,
+    "steps": 20,
+    "success": false,
+    "synthetic": true,
+    "termination": "budget_exhausted",
+    "trajectory": [
+      {
+        "action": null,
+        "out_of_bounds": false,
+        "patch_id": 0,
+        "revisited": false,
+        "step": 0
+      },
+      {
+        "action": "right",
+        "out_of_bounds": false,
+        "patch_id": 1,
+        "revisited": false,
+        "step": 1
+      },
+      {
+        "action": "right",
+        "out_of_bounds": false,
+        "patch_id": 2,
+        "revisited": false,
+        "step": 2
+      },
+      {
+        "action": "right",
+        "out_of_bounds": false,
+        "patch_id": 3,
+        "revisited": false,
+        "step": 3
+      },
+      {
+        "action": "right",
+        "out_of_bounds": false,
+        "patch_id": 4,
+        "revisited": false,
+        "step": 4
+      },
+      {
+        "action": "right",
+        "out_of_bounds": false,
+        "patch_id": 5,
+        "revisited": false,
+        "step": 5
+      },
+      {
+        "action": "right",
+        "out_of_bounds": false,
+        "patch_id": 6,
+        "revisited": false,
+        "step": 6
+      },
+      {
+        "action": "right",
+        "out_of_bounds": false,
+        "patch_id": 7,
+        "revisited": false,
+        "step": 7
+      },
+      {
+        "action": "right",
+        "out_of_bounds": false,
+        "patch_id": 8,
+        "revisited": false,
+        "step": 8
+      },
+      {
+        "action": "right",
+        "out_of_bounds": false,
+        "patch_id": 9,
+        "revisited": false,
+        "step": 9
+      },
+      {
+        "action": "right",
+        "out_of_bounds": false,
+        "patch_id": 10,
+        "revisited": false,
+        "step": 10
+      },
+      {
+        "action": "right",
+        "out_of_bounds": false,
+        "patch_id": 11,
+        "revisited": false,
+        "step": 11
+      },
+      {
+        "action": "right",
+        "out_of_bounds": false,
+        "patch_id": 12,
+        "revisited": false,
+        "step": 12
+      },
+      {
+        "action": "right",
+        "out_of_bounds": false,
+        "patch_id": 13,
+        "revisited": false,
+        "step": 13
+      },
+      {
+        "action": "down",
+        "out_of_bounds": false,
+        "patch_id": 28,
+        "revisited": false,
+        "step": 14
+      },
+      {
+        "action": "down",
+        "out_of_bounds": false,
+        "patch_id": 43,
+        "revisited": false,
+        "step": 15
+      },
+      {
+        "action": "down",
+        "out_of_bounds": false,
+        "patch_id": 58,
+        "revisited": false,
+        "step": 16
+      },
+      {
+        "action": "down",
+        "out_of_bounds": false,
+        "patch_id": 73,
+        "revisited": false,
+        "step": 17
+      },
+      {
+        "action": "down",
+        "out_of_bounds": false,
+        "patch_id": 88,
+        "revisited": false,
+        "step": 18
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 87,
+        "revisited": false,
+        "step": 19
+      },
+      {
+        "action": "right",
+        "out_of_bounds": false,
+        "patch_id": 88,
+        "revisited": true,
+        "step": 20
+      }
+    ],
+    "valid_travel_m": 6000
+  },
+  {
+    "cell_size_m": 300,
+    "counts_as_navigation_SR": false,
+    "decisions": [
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 1,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                223,
+                208,
+                193
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "up": {
+              "actions": [
+                "up",
+                "left",
+                "left"
+              ],
+              "cells": [
+                209,
+                208,
+                207
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 1
+        },
+        "cue_action": null,
+        "cue_features_sha256": "f48e1d750e03d750d34ee3524768a73f71e9f6d65cb89436f4027b27af519ccb",
+        "current_image_sha256": "54c6626ff76696ca76d882b4bbe983a25440238976b84abf39f1edab132f4986",
+        "explorer_action": "left",
+        "explorer_features_sha256": "43b3c9394a7cacf02b0ac3c0a0f1efd9562e8f332075765d2b7b3e98908c7b16",
+        "explorer_logits": [
+          -1.5822498798370361,
+          -3.4028234663852886e+38,
+          -3.4028234663852886e+38,
+          -0.06363193690776825
+        ],
+        "probabilities": [
+          0.0003319538081996143,
+          3.843572812911589e-06,
+          0.00734290573745966,
+          6.489844508905662e-06,
+          0.992314875125885
+        ],
+        "public_position": [
+          14,
+          14
+        ],
+        "public_visited": [
+          224
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 20,
+        "step": 1,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 2,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                222,
+                207,
+                192
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                224,
+                209,
+                194
+              ],
+              "gain": 3,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                208,
+                193,
+                178
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 2
+        },
+        "cue_action": null,
+        "cue_features_sha256": "f9115386ed933b81c3caf5b249220d6264f8c3ea3086cfc43c37caf6a1e019c2",
+        "current_image_sha256": "d43dd041612275647e430e06de4191b26bf514722e51364cb33d95a083cb99f8",
+        "explorer_action": "left",
+        "explorer_features_sha256": "a5d720ce6c184b461f130630e5c79edc4f4acd98f027f5d25b52e83dee34e860",
+        "explorer_logits": [
+          -2.3647708892822266,
+          -3.020561456680298,
+          -3.4028234663852886e+38,
+          2.984187364578247
+        ],
+        "probabilities": [
+          0.00019605422858148813,
+          6.119036697782576e-06,
+          0.007079257629811764,
+          7.8829143603798e-06,
+          0.9927107095718384
+        ],
+        "public_position": [
+          14,
+          13
+        ],
+        "public_visited": [
+          224,
+          223
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 19,
+        "step": 2,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 3,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                221,
+                206,
+                191
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                223,
+                208,
+                193
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                207,
+                192,
+                177
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 3
+        },
+        "cue_action": null,
+        "cue_features_sha256": "5638dd414bbf38c8b76d4625b52ed3cdad210a11151f70b2f3a44a47c2c40269",
+        "current_image_sha256": "6bf2c6715d48c2c6a7cf4086ad50d2c49cd9942b2d531d154ab14eed1b3cba7c",
+        "explorer_action": "left",
+        "explorer_features_sha256": "adfc7842af233e4a0db8a49e5028b9bf519b8476c6fe78d4e9b03b857f0c360a",
+        "explorer_logits": [
+          -3.3748347759246826,
+          -3.8040788173675537,
+          -3.4028234663852886e+38,
+          3.7493503093719482
+        ],
+        "probabilities": [
+          0.0024948108475655317,
+          2.3213997337734327e-05,
+          0.039491619914770126,
+          6.983809726079926e-05,
+          0.9579205513000488
+        ],
+        "public_position": [
+          14,
+          12
+        ],
+        "public_visited": [
+          224,
+          223,
+          222
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 18,
+        "step": 3,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 4,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                220,
+                205,
+                190
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                222,
+                207,
+                192
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                206,
+                191,
+                176
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 4
+        },
+        "cue_action": null,
+        "cue_features_sha256": "036ad99c8800343f2900900138bc21adb087ebc32afc710730a518ef890f9618",
+        "current_image_sha256": "105a26dea1349870a5251f6a6167d94c505e18e16a0e4599f8caf71904e42d90",
+        "explorer_action": "left",
+        "explorer_features_sha256": "3a4996ab28177e59c0aeb9c9f6878c142d3ce3de5721002e370039c353582dcd",
+        "explorer_logits": [
+          -3.203964948654175,
+          -4.133697032928467,
+          -3.4028234663852886e+38,
+          3.9650332927703857
+        ],
+        "probabilities": [
+          0.0011862998362630606,
+          0.00010476529860170558,
+          0.2294076830148697,
+          0.00036185275530442595,
+          0.7689393758773804
+        ],
+        "public_position": [
+          14,
+          11
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 17,
+        "step": 4,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 5,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                219,
+                204,
+                189
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                221,
+                206,
+                191
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                205,
+                190,
+                175
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 5
+        },
+        "cue_action": null,
+        "cue_features_sha256": "2d933ebae36b548997af6d9aaaa394b0d56c552a35c754f03a6e39000ef95632",
+        "current_image_sha256": "d2d48dec0e3b33f29e794967649df6fae8a6ae6fbfb01500e6fcd686c2da116b",
+        "explorer_action": "left",
+        "explorer_features_sha256": "1d95a1d8527e1202ce4b1ab63096b0b9aa23e05318bdab95e01b91af717ebd7f",
+        "explorer_logits": [
+          -3.0721232891082764,
+          -4.898900985717773,
+          -3.4028234663852886e+38,
+          4.494073390960693
+        ],
+        "probabilities": [
+          0.0003202652733307332,
+          4.360351522336714e-05,
+          0.008599276654422283,
+          0.00010022895003203303,
+          0.9909366965293884
+        ],
+        "public_position": [
+          14,
+          10
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 16,
+        "step": 5,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 6,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                218,
+                203,
+                188
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                220,
+                205,
+                190
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                204,
+                189,
+                174
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 6
+        },
+        "cue_action": null,
+        "cue_features_sha256": "9001150bdac29912fd7247726ea34fd3b133810eb8a5c42f2e895feed21f8123",
+        "current_image_sha256": "5e845e000c84b40f57f53e3415b81451e3b087f488f11918ad2e68e9d1dbaed3",
+        "explorer_action": "left",
+        "explorer_features_sha256": "c370df727900512f958618a7f1b8e59746f850f8019ff8523986614049536efa",
+        "explorer_logits": [
+          -3.1327879428863525,
+          -3.6866180896759033,
+          -3.4028234663852886e+38,
+          3.393737316131592
+        ],
+        "probabilities": [
+          0.0001081741793313995,
+          9.378391041536815e-06,
+          0.0046123624779284,
+          5.2415929530980065e-05,
+          0.9952176809310913
+        ],
+        "public_position": [
+          14,
+          9
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 15,
+        "step": 6,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 7,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                217,
+                202,
+                187
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                219,
+                204,
+                189
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                203,
+                188,
+                173
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 7
+        },
+        "cue_action": null,
+        "cue_features_sha256": "df833006cfd831515d1e012cb654d400530f3712fe766ac0b361c557730f8b55",
+        "current_image_sha256": "ba013f949f9bc9507ee71a067d6b370a465dc203ef9215b4adc60f71ee213872",
+        "explorer_action": "left",
+        "explorer_features_sha256": "58ca733f64d39b991d3eb7b25ed88074fe4417831c42897b9c540c95e784b936",
+        "explorer_logits": [
+          -2.690873861312866,
+          -4.023528099060059,
+          -3.4028234663852886e+38,
+          3.7307379245758057
+        ],
+        "probabilities": [
+          0.001238888711668551,
+          0.0005436169449239969,
+          0.04349232092499733,
+          0.00020669412333518267,
+          0.9545184373855591
+        ],
+        "public_position": [
+          14,
+          8
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 14,
+        "step": 7,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 8,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                216,
+                201,
+                186
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                218,
+                203,
+                188
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                202,
+                187,
+                172
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 8
+        },
+        "cue_action": null,
+        "cue_features_sha256": "ddda75baa1000d8bce85392333f2455f5f84794ef65d54de4f02b001919c3008",
+        "current_image_sha256": "9be3294517af353c20e44e7638409309882ee9e94fdb777d8f4d17c0aa0f3871",
+        "explorer_action": "left",
+        "explorer_features_sha256": "03345c8c1905aa1140f73553f2c9d12b060aadb4731b4fd1d73907e18d9ef694",
+        "explorer_logits": [
+          -1.4161994457244873,
+          -4.678369045257568,
+          -3.4028234663852886e+38,
+          4.389533042907715
+        ],
+        "probabilities": [
+          0.00014808133710175753,
+          0.00023841398069635034,
+          0.0632842555642128,
+          0.0007961894734762609,
+          0.9355331063270569
+        ],
+        "public_position": [
+          14,
+          7
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 13,
+        "step": 8,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 9,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                215,
+                200,
+                185
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                217,
+                202,
+                187
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                201,
+                186,
+                171
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 9
+        },
+        "cue_action": null,
+        "cue_features_sha256": "0b0f7e2c2828431d749589ad21d4acde7d535c7377f74fed44aa3e5cc4f0f4ea",
+        "current_image_sha256": "47201bef42e8e1f89f9a33135a0a4f86cfdb95625c1477315371e2e2d2916a39",
+        "explorer_action": "left",
+        "explorer_features_sha256": "5ec75a1de8e15bd415f30cffdb46c784dbcb6b1d69c5159676c690c13d3ebfea",
+        "explorer_logits": [
+          0.3788641691207886,
+          -5.546666622161865,
+          -3.4028234663852886e+38,
+          5.599208354949951
+        ],
+        "probabilities": [
+          0.003079988993704319,
+          0.0002600892912596464,
+          0.036788567900657654,
+          0.0012477466370910406,
+          0.9586235880851746
+        ],
+        "public_position": [
+          14,
+          6
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 12,
+        "step": 9,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 10,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                214,
+                199,
+                184
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                216,
+                201,
+                186
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                200,
+                185,
+                170
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 10
+        },
+        "cue_action": null,
+        "cue_features_sha256": "9fa93296d779184ea5b6a4e65d869b5efb126440ac0d5d79577bf99f12421085",
+        "current_image_sha256": "1e1a0b18f303b64c220195bc3d418c37c367a395bc24948b1c2e484a098bc6e4",
+        "explorer_action": "left",
+        "explorer_features_sha256": "3b9c897297d350f842bd8c252290ece342ebbe502a0490910b0225675aaa0074",
+        "explorer_logits": [
+          1.0219439268112183,
+          -5.061171054840088,
+          -3.4028234663852886e+38,
+          5.191756248474121
+        ],
+        "probabilities": [
+          0.0014682309702038765,
+          0.059024397283792496,
+          0.0007801091996952891,
+          0.19651898741722107,
+          0.7422082424163818
+        ],
+        "public_position": [
+          14,
+          5
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 11,
+        "step": 10,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 11,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                213,
+                198,
+                183
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                215,
+                200,
+                185
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                199,
+                184,
+                169
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 11
+        },
+        "cue_action": null,
+        "cue_features_sha256": "33b4e6bdb479cbba4f29cc23987209b5ccb1e1a373a66b56f7c0bdb81b03338c",
+        "current_image_sha256": "59d2b7441b90512081585da474039956d50c7987e43f6d79efa0fea3a02f1062",
+        "explorer_action": "left",
+        "explorer_features_sha256": "656d5f8df3e30d4a733bea2add9d0ba12469e7c7d352d39d9c3ac30f2e8b11e5",
+        "explorer_logits": [
+          2.26951265335083,
+          -5.216764450073242,
+          -3.4028234663852886e+38,
+          5.6283440589904785
+        ],
+        "probabilities": [
+          0.0011163826566189528,
+          0.011726856231689453,
+          0.0007717065163888037,
+          0.03659201040863991,
+          0.9497930407524109
+        ],
+        "public_position": [
+          14,
+          4
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 10,
+        "step": 11,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 12,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                212,
+                197,
+                182
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                214,
+                199,
+                184
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                198,
+                183,
+                168
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 12
+        },
+        "cue_action": null,
+        "cue_features_sha256": "751b401d7984f6a485366db0737e73b9f04efca7eb01fe81d36599ea838712d5",
+        "current_image_sha256": "3477279b508b99e57710d36cf1619b1dbac20d7295f5c7aea5e9a55c36e30acb",
+        "explorer_action": "left",
+        "explorer_features_sha256": "41758d96b94705cae6cb194470b60552fd27455bf4e2cfb1a489d4ffb08a1e5e",
+        "explorer_logits": [
+          2.4388797283172607,
+          -5.6275410652160645,
+          -3.4028234663852886e+38,
+          6.346075534820557
+        ],
+        "probabilities": [
+          0.0010945942485705018,
+          0.032556306570768356,
+          0.000743208744097501,
+          0.06997184455394745,
+          0.8956340551376343
+        ],
+        "public_position": [
+          14,
+          3
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214,
+          213
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 9,
+        "step": 12,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": null,
+          "changed": false,
+          "control": "accepted_cue",
+          "horizon": 0,
+          "opportunity_gain": 0,
+          "original_next_radius": null,
+          "paths_by_first": {},
+          "radial_guard_blocked": false,
+          "selected_gain": null,
+          "unprotected_action": "left",
+          "unprotected_next_radius": null
+        },
+        "cue_action": "left",
+        "cue_features_sha256": "f31ce65c813efc1140f54680edfb050de61b20ca772806ae8011330267bdcbe2",
+        "current_image_sha256": "b3d8baef1f8876355c0dceeaf4e949015aa1c75fde7a022c21548b90603b0c17",
+        "explorer_action": "left",
+        "explorer_features_sha256": "68cfe2fe966daca5c96e748e11924804752667bb01dbb620299ab500c4cdf8e9",
+        "explorer_logits": [
+          3.1791141033172607,
+          -5.3625593185424805,
+          -3.4028234663852886e+38,
+          6.2245330810546875
+        ],
+        "probabilities": [
+          0.002577141160145402,
+          0.22861336171627045,
+          0.00013554429460782558,
+          0.7606987953186035,
+          0.007975111715495586
+        ],
+        "public_position": [
+          14,
+          2
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214,
+          213,
+          212
+        ],
+        "reason": "accepted",
+        "remaining_budget": 8,
+        "step": 13,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": null,
+          "changed": false,
+          "control": "accepted_cue",
+          "horizon": 0,
+          "opportunity_gain": 0,
+          "original_next_radius": null,
+          "paths_by_first": {},
+          "radial_guard_blocked": false,
+          "selected_gain": null,
+          "unprotected_action": "left",
+          "unprotected_next_radius": null
+        },
+        "cue_action": "left",
+        "cue_features_sha256": "06393bcd8d150af13bf5aa88ae57a9eb39c2667c85883029d453516343171be9",
+        "current_image_sha256": "96ba565c615838eeeadb1047d3d7158d882137acea5a428209a87381b90cedee",
+        "explorer_action": "left",
+        "explorer_features_sha256": "fc8dbb455a0653c23198bbf7742d8dfba7b6b68b3036711779e45dffe10fbcf0",
+        "explorer_logits": [
+          4.224331378936768,
+          -4.521144390106201,
+          -3.4028234663852886e+38,
+          5.052149295806885
+        ],
+        "probabilities": [
+          0.0036099269054830074,
+          0.30312877893447876,
+          7.688741607125849e-05,
+          0.5987096428871155,
+          0.09447479248046875
+        ],
+        "public_position": [
+          14,
+          1
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214,
+          213,
+          212,
+          211
+        ],
+        "reason": "accepted",
+        "remaining_budget": 7,
+        "step": 14,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "up",
+        "base_action": "up",
+        "coverage": {
+          "action": "up",
+          "baseline_gain": 5,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 15,
+          "paths_by_first": {
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                211,
+                196,
+                181
+              ],
+              "gain": 4,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                195,
+                180,
+                165
+              ],
+              "gain": 5,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 5,
+          "unprotected_action": "up",
+          "unprotected_next_radius": 15
+        },
+        "cue_action": null,
+        "cue_features_sha256": "f164fafe91af7cb3c082b441de3628861476738d021d9029e8ef241b77b9735e",
+        "current_image_sha256": "f92ecb47a637f682e92452a3924464d32b9f32399e6b348656403a1839666664",
+        "explorer_action": "up",
+        "explorer_features_sha256": "a02a0902cee21a97ed78da9e4591dcbe966c36b51f3b286d6e787498b05fdee7",
+        "explorer_logits": [
+          4.3956522941589355,
+          -4.520256519317627,
+          -3.4028234663852886e+38,
+          -3.4028234663852886e+38
+        ],
+        "probabilities": [
+          0.007838797755539417,
+          0.5182344913482666,
+          5.910864638281055e-05,
+          0.43946102261543274,
+          0.03440654277801514
+        ],
+        "public_position": [
+          14,
+          0
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214,
+          213,
+          212,
+          211,
+          210
+        ],
+        "reason": "visited_top_destination",
+        "remaining_budget": 6,
+        "step": 15,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "up",
+        "base_action": "up",
+        "coverage": {
+          "action": "up",
+          "baseline_gain": 6,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 16,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "up",
+                "up"
+              ],
+              "cells": [
+                210,
+                195,
+                180
+              ],
+              "gain": 2,
+              "revisit_moves": 2
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                196,
+                181,
+                166
+              ],
+              "gain": 6,
+              "revisit_moves": 0
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                180,
+                165,
+                150
+              ],
+              "gain": 6,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 6,
+          "unprotected_action": "up",
+          "unprotected_next_radius": 16
+        },
+        "cue_action": null,
+        "cue_features_sha256": "ed370aea5ab46ee2021cc2ee5276d57129f2e54a44a388ad4822b3796454c372",
+        "current_image_sha256": "8cefcf790914422410376ae825a1c26cd28345d661a3dc7a0c0d3f23f126c1a8",
+        "explorer_action": "up",
+        "explorer_features_sha256": "8e2b7f01812e280061c2ff2d170b9a78c74fe874295a33fe939a05c2e5b3e595",
+        "explorer_logits": [
+          5.524334907531738,
+          -3.6809639930725098,
+          -5.500631809234619,
+          -3.4028234663852886e+38
+        ],
+        "probabilities": [
+          0.00654729176312685,
+          0.007313883863389492,
+          0.24410180747509003,
+          0.024425063282251358,
+          0.7176119089126587
+        ],
+        "public_position": [
+          13,
+          0
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214,
+          213,
+          212,
+          211,
+          210,
+          195
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 5,
+        "step": 16,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "up",
+        "base_action": "up",
+        "coverage": {
+          "action": "up",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 17,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "right",
+                "up"
+              ],
+              "cells": [
+                195,
+                196,
+                181
+              ],
+              "gain": 2,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                181,
+                166,
+                151
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "up": {
+              "actions": [
+                "up",
+                "right",
+                "right"
+              ],
+              "cells": [
+                165,
+                166,
+                167
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "up",
+          "unprotected_next_radius": 17
+        },
+        "cue_action": null,
+        "cue_features_sha256": "5d0400ec8124dc7e2a790ac48d47d16774b0744578b197de87ac90e86c2e95fd",
+        "current_image_sha256": "5408c3288f7f43f4eb3323067cc22e71fe91183e5fb94dd3f5b2652f31a69286",
+        "explorer_action": "up",
+        "explorer_features_sha256": "cd8e169b714d4967cca63768388a511ab7e270ae35b0d30252db0ccd82cb16c0",
+        "explorer_logits": [
+          5.058047771453857,
+          -4.53922176361084,
+          -4.965852737426758,
+          -3.4028234663852886e+38
+        ],
+        "probabilities": [
+          0.0026980540715157986,
+          4.493922915571602e-06,
+          0.006066582165658474,
+          1.4930423276382498e-05,
+          0.9912159442901611
+        ],
+        "public_position": [
+          12,
+          0
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214,
+          213,
+          212,
+          211,
+          210,
+          195,
+          180
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 4,
+        "step": 17,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "up",
+        "base_action": "up",
+        "coverage": {
+          "action": "up",
+          "baseline_gain": 4,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 18,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "right",
+                "up"
+              ],
+              "cells": [
+                180,
+                181,
+                166
+              ],
+              "gain": 1,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "right",
+                "up"
+              ],
+              "cells": [
+                166,
+                167,
+                152
+              ],
+              "gain": 5,
+              "revisit_moves": 0
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                150,
+                135,
+                120
+              ],
+              "gain": 4,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 4,
+          "unprotected_action": "up",
+          "unprotected_next_radius": 18
+        },
+        "cue_action": null,
+        "cue_features_sha256": "5fd535977314ac4333c46d5a3346420d267018b5de006371398950ea9d2b8a3b",
+        "current_image_sha256": "1895224377e6d9cea6213afe7196d205e8119f3e8a2a1d05503706fcd6b051fc",
+        "explorer_action": "up",
+        "explorer_features_sha256": "234331301a04872dce1bd8ac167a7aab2e9458469956c111129b98b805124866",
+        "explorer_logits": [
+          5.1197896003723145,
+          -4.668038368225098,
+          -5.0220866203308105,
+          -3.4028234663852886e+38
+        ],
+        "probabilities": [
+          0.002966859843581915,
+          0.4331415891647339,
+          0.00017316403682343662,
+          0.5411325097084045,
+          0.022585878148674965
+        ],
+        "public_position": [
+          11,
+          0
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214,
+          213,
+          212,
+          211,
+          210,
+          195,
+          180,
+          165
+        ],
+        "reason": "illegal_top_direction",
+        "remaining_budget": 3,
+        "step": 18,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "up",
+        "base_action": "up",
+        "coverage": {
+          "action": "up",
+          "baseline_gain": 2,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 2,
+          "opportunity_gain": 0,
+          "original_next_radius": 19,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "right"
+              ],
+              "cells": [
+                165,
+                166
+              ],
+              "gain": 0,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up"
+              ],
+              "cells": [
+                151,
+                136
+              ],
+              "gain": 2,
+              "revisit_moves": 0
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up"
+              ],
+              "cells": [
+                135,
+                120
+              ],
+              "gain": 2,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 2,
+          "unprotected_action": "up",
+          "unprotected_next_radius": 19
+        },
+        "cue_action": null,
+        "cue_features_sha256": "b820c5d2de5652b19eebd0af5e6eeefbce01aff7c0610bcfed31cf76ed018408",
+        "current_image_sha256": "f81990bebedecd204b1a84bfb53ef03c3a70ae7d03471eba64b7a1b947a00892",
+        "explorer_action": "up",
+        "explorer_features_sha256": "c2e0d0d4a9c86a2a3c00bd134f74e2d3e11eb9e33151ae25200315ea385bfd38",
+        "explorer_logits": [
+          4.900472164154053,
+          -4.441413402557373,
+          -5.002560615539551,
+          -3.4028234663852886e+38
+        ],
+        "probabilities": [
+          0.0006956077413633466,
+          0.35802626609802246,
+          0.0006252364255487919,
+          0.6336236596107483,
+          0.007029297295957804
+        ],
+        "public_position": [
+          10,
+          0
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214,
+          213,
+          212,
+          211,
+          210,
+          195,
+          180,
+          165,
+          150
+        ],
+        "reason": "illegal_top_direction",
+        "remaining_budget": 2,
+        "step": 19,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "up",
+        "base_action": "up",
+        "coverage": {
+          "action": "up",
+          "baseline_gain": 0,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 1,
+          "opportunity_gain": 0,
+          "original_next_radius": 20,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down"
+              ],
+              "cells": [
+                150
+              ],
+              "gain": 0,
+              "revisit_moves": 1
+            },
+            "right": {
+              "actions": [
+                "right"
+              ],
+              "cells": [
+                136
+              ],
+              "gain": 0,
+              "revisit_moves": 0
+            },
+            "up": {
+              "actions": [
+                "up"
+              ],
+              "cells": [
+                120
+              ],
+              "gain": 0,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 0,
+          "unprotected_action": "up",
+          "unprotected_next_radius": 20
+        },
+        "cue_action": null,
+        "cue_features_sha256": "57685b5c764a0b7ae74877f2fd2d71f0bebc35d2768ab43a2d7c7de012373672",
+        "current_image_sha256": "688975ca71d4479504660bbe515efe70874da84ac2eedf236d8bdc6fce457fa5",
+        "explorer_action": "up",
+        "explorer_features_sha256": "fe6a3c4b2e1b7cf9183a0cb137461b6a3252e0539b2e6e65af8e666138f13b09",
+        "explorer_logits": [
+          5.221924304962158,
+          -4.489964962005615,
+          -5.078574180603027,
+          -3.4028234663852886e+38
+        ],
+        "probabilities": [
+          0.02722865715622902,
+          0.09729204326868057,
+          0.0003447245981078595,
+          0.17135661840438843,
+          0.7037779688835144
+        ],
+        "public_position": [
+          9,
+          0
+        ],
+        "public_visited": [
+          224,
+          223,
+          222,
+          221,
+          220,
+          219,
+          218,
+          217,
+          216,
+          215,
+          214,
+          213,
+          212,
+          211,
+          210,
+          195,
+          180,
+          165,
+          150,
+          135
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 1,
+        "step": 20,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      }
+    ],
+    "episode_id": "synthetic_1_1",
+    "goal": 192,
+    "map_projected_area_km2": 20.25,
+    "out_of_bounds": 0,
+    "protocol": "masa-roads-grid15-area-v1",
+    "repeat_visit_rate": 0.0,
+    "revisits": 0,
+    "seed": 1,
+    "sg": 16,
+    "sg_m": 4800,
+    "start": 224,
+    "steps": 20,
+    "success": false,
+    "synthetic": true,
+    "termination": "budget_exhausted",
+    "trajectory": [
+      {
+        "action": null,
+        "out_of_bounds": false,
+        "patch_id": 224,
+        "revisited": false,
+        "step": 0
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 223,
+        "revisited": false,
+        "step": 1
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 222,
+        "revisited": false,
+        "step": 2
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 221,
+        "revisited": false,
+        "step": 3
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 220,
+        "revisited": false,
+        "step": 4
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 219,
+        "revisited": false,
+        "step": 5
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 218,
+        "revisited": false,
+        "step": 6
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 217,
+        "revisited": false,
+        "step": 7
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 216,
+        "revisited": false,
+        "step": 8
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 215,
+        "revisited": false,
+        "step": 9
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 214,
+        "revisited": false,
+        "step": 10
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 213,
+        "revisited": false,
+        "step": 11
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 212,
+        "revisited": false,
+        "step": 12
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 211,
+        "revisited": false,
+        "step": 13
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 210,
+        "revisited": false,
+        "step": 14
+      },
+      {
+        "action": "up",
+        "out_of_bounds": false,
+        "patch_id": 195,
+        "revisited": false,
+        "step": 15
+      },
+      {
+        "action": "up",
+        "out_of_bounds": false,
+        "patch_id": 180,
+        "revisited": false,
+        "step": 16
+      },
+      {
+        "action": "up",
+        "out_of_bounds": false,
+        "patch_id": 165,
+        "revisited": false,
+        "step": 17
+      },
+      {
+        "action": "up",
+        "out_of_bounds": false,
+        "patch_id": 150,
+        "revisited": false,
+        "step": 18
+      },
+      {
+        "action": "up",
+        "out_of_bounds": false,
+        "patch_id": 135,
+        "revisited": false,
+        "step": 19
+      },
+      {
+        "action": "up",
+        "out_of_bounds": false,
+        "patch_id": 120,
+        "revisited": false,
+        "step": 20
+      }
+    ],
+    "valid_travel_m": 6000
+  },
+  {
+    "cell_size_m": 300,
+    "counts_as_navigation_SR": false,
+    "decisions": [
+      {
+        "action": "down",
+        "base_action": "down",
+        "coverage": {
+          "action": "down",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 1,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "right",
+                "right"
+              ],
+              "cells": [
+                15,
+                16,
+                17
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "down",
+                "down"
+              ],
+              "cells": [
+                1,
+                16,
+                31
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "down",
+          "unprotected_next_radius": 1
+        },
+        "cue_action": null,
+        "cue_features_sha256": "2ced1f27e73e3d55861453c0c2804096699b2daa5afbeb2ac9878365b9974f9b",
+        "current_image_sha256": "36cd882e00470539f9f44afa89f4eadde09d95463ed493980dc75b6fa8d956f3",
+        "explorer_action": "down",
+        "explorer_features_sha256": "f9d737e7de5f4348e3a957b866b6fc8eddbc101ace33215b664ace0171cf25a3",
+        "explorer_logits": [
+          -3.4028234663852886e+38,
+          0.869712233543396,
+          2.030120372772217,
+          -3.4028234663852886e+38
+        ],
+        "probabilities": [
+          0.0008239303133450449,
+          4.417583113536239e-05,
+          9.227765218611239e-08,
+          4.3539337639231235e-05,
+          0.9990882873535156
+        ],
+        "public_position": [
+          0,
+          0
+        ],
+        "public_visited": [
+          0
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 20,
+        "step": 1,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      },
+      {
+        "action": "right",
+        "base_action": "right",
+        "coverage": {
+          "action": "right",
+          "baseline_gain": null,
+          "changed": false,
+          "control": "accepted_cue",
+          "horizon": 0,
+          "opportunity_gain": 0,
+          "original_next_radius": null,
+          "paths_by_first": {},
+          "radial_guard_blocked": false,
+          "selected_gain": null,
+          "unprotected_action": "right",
+          "unprotected_next_radius": null
+        },
+        "cue_action": "right",
+        "cue_features_sha256": "bb0924f17bb483706e00542caee1cf62c6ac487449e7ba488496cac56405122a",
+        "current_image_sha256": "7505727e7b6a27d7b99b0425376aa1f320e2ffe69fc89ea5148b7c86ae5f69a2",
+        "explorer_action": "down",
+        "explorer_features_sha256": "8440e93bf22892897aff9d46956e761763aed6d5ed825db53f6043a5eddec35d",
+        "explorer_logits": [
+          -3.7609190940856934,
+          1.6466046571731567,
+          3.5238304138183594,
+          -3.4028234663852886e+38
+        ],
+        "probabilities": [
+          0.0003097939188592136,
+          0.5082955956459045,
+          0.00019627483561635017,
+          0.4011729657649994,
+          0.09002531319856644
+        ],
+        "public_position": [
+          1,
+          0
+        ],
+        "public_visited": [
+          0,
+          15
+        ],
+        "reason": "accepted",
+        "remaining_budget": 19,
+        "step": 2,
+        "target_image_sha256": "ff91c55d770d82b54c3326f531c2da29be10402a0e1c5d4261e13195060169f7"
+      }
+    ],
+    "episode_id": "synthetic_2_0",
+    "goal": 16,
+    "map_projected_area_km2": 20.25,
+    "out_of_bounds": 0,
+    "protocol": "masa-roads-grid15-area-v1",
+    "repeat_visit_rate": 0.0,
+    "revisits": 0,
+    "seed": 2,
+    "sg": 0,
+    "sg_m": 0,
+    "start": 0,
+    "steps": 2,
+    "success": true,
+    "synthetic": true,
+    "termination": "goal_reached",
+    "trajectory": [
+      {
+        "action": null,
+        "out_of_bounds": false,
+        "patch_id": 0,
+        "revisited": false,
+        "step": 0
+      },
+      {
+        "action": "down",
+        "out_of_bounds": false,
+        "patch_id": 15,
+        "revisited": false,
+        "step": 1
+      },
+      {
+        "action": "right",
+        "out_of_bounds": false,
+        "patch_id": 16,
+        "revisited": false,
+        "step": 2
+      }
+    ],
+    "valid_travel_m": 600
+  },
+  {
+    "cell_size_m": 300,
+    "counts_as_navigation_SR": false,
+    "decisions": [
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": 7,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 1,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                223,
+                208,
+                193
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "up": {
+              "actions": [
+                "up",
+                "left",
+                "left"
+              ],
+              "cells": [
+                209,
+                208,
+                207
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 7,
+          "unprotected_action": "left",
+          "unprotected_next_radius": 1
+        },
+        "cue_action": null,
+        "cue_features_sha256": "f48e1d750e03d750d34ee3524768a73f71e9f6d65cb89436f4027b27af519ccb",
+        "current_image_sha256": "54c6626ff76696ca76d882b4bbe983a25440238976b84abf39f1edab132f4986",
+        "explorer_action": "left",
+        "explorer_features_sha256": "43b3c9394a7cacf02b0ac3c0a0f1efd9562e8f332075765d2b7b3e98908c7b16",
+        "explorer_logits": [
+          0.3313866853713989,
+          -3.4028234663852886e+38,
+          -3.4028234663852886e+38,
+          0.5627114772796631
+        ],
+        "probabilities": [
+          0.0007505806861445308,
+          2.630284598126309e-06,
+          0.009545971639454365,
+          2.443188350298442e-05,
+          0.9896764159202576
+        ],
+        "public_position": [
+          14,
+          14
+        ],
+        "public_visited": [
+          224
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 20,
+        "step": 1,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "up",
+        "base_action": "up",
+        "coverage": {
+          "action": "up",
+          "baseline_gain": 8,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 2,
+          "paths_by_first": {
+            "left": {
+              "actions": [
+                "left",
+                "up",
+                "up"
+              ],
+              "cells": [
+                222,
+                207,
+                192
+              ],
+              "gain": 7,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                224,
+                209,
+                194
+              ],
+              "gain": 3,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                208,
+                193,
+                178
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 8,
+          "unprotected_action": "up",
+          "unprotected_next_radius": 2
+        },
+        "cue_action": null,
+        "cue_features_sha256": "f9115386ed933b81c3caf5b249220d6264f8c3ea3086cfc43c37caf6a1e019c2",
+        "current_image_sha256": "d43dd041612275647e430e06de4191b26bf514722e51364cb33d95a083cb99f8",
+        "explorer_action": "up",
+        "explorer_features_sha256": "a5d720ce6c184b461f130630e5c79edc4f4acd98f027f5d25b52e83dee34e860",
+        "explorer_logits": [
+          2.918788194656372,
+          -0.9172176122665405,
+          -3.4028234663852886e+38,
+          0.2966896891593933
+        ],
+        "probabilities": [
+          0.0008468599407933652,
+          4.885639100393746e-06,
+          0.010726702399551868,
+          1.5947947758832015e-05,
+          0.9884055852890015
+        ],
+        "public_position": [
+          14,
+          13
+        ],
+        "public_visited": [
+          224,
+          223
+        ],
+        "reason": "not_adjacent",
+        "remaining_budget": 19,
+        "step": 2,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "left",
+        "base_action": "left",
+        "coverage": {
+          "action": "left",
+          "baseline_gain": null,
+          "changed": false,
+          "control": "accepted_cue",
+          "horizon": 0,
+          "opportunity_gain": 0,
+          "original_next_radius": null,
+          "paths_by_first": {},
+          "radial_guard_blocked": false,
+          "selected_gain": null,
+          "unprotected_action": "left",
+          "unprotected_next_radius": null
+        },
+        "cue_action": "left",
+        "cue_features_sha256": "5a56f2d682aed75ad6959520910186651d629f9b7da8be908728d527417ff1eb",
+        "current_image_sha256": "abf0149417caa505f1d73a5b2ef2b1e405e21e482ac741b3bdcfc30f216402cc",
+        "explorer_action": "up",
+        "explorer_features_sha256": "906b0e6f8dbdebd440714296e505fd96805b65dd167d0def1caa0166315f5391",
+        "explorer_logits": [
+          3.2529125213623047,
+          -2.7226157188415527,
+          -2.6065986156463623,
+          2.198974609375
+        ],
+        "probabilities": [
+          0.007019044365733862,
+          0.308406263589859,
+          6.373391806846485e-05,
+          0.657740592956543,
+          0.02677031233906746
+        ],
+        "public_position": [
+          13,
+          13
+        ],
+        "public_visited": [
+          224,
+          223,
+          208
+        ],
+        "reason": "accepted",
+        "remaining_budget": 18,
+        "step": 3,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      },
+      {
+        "action": "up",
+        "base_action": "up",
+        "coverage": {
+          "action": "up",
+          "baseline_gain": 8,
+          "changed": false,
+          "control": "original_edge",
+          "horizon": 3,
+          "opportunity_gain": 0,
+          "original_next_radius": 4,
+          "paths_by_first": {
+            "down": {
+              "actions": [
+                "down",
+                "left",
+                "up"
+              ],
+              "cells": [
+                222,
+                221,
+                206
+              ],
+              "gain": 4,
+              "revisit_moves": 0
+            },
+            "left": {
+              "actions": [
+                "left",
+                "left",
+                "left"
+              ],
+              "cells": [
+                206,
+                205,
+                204
+              ],
+              "gain": 9,
+              "revisit_moves": 0
+            },
+            "right": {
+              "actions": [
+                "right",
+                "up",
+                "up"
+              ],
+              "cells": [
+                208,
+                193,
+                178
+              ],
+              "gain": 5,
+              "revisit_moves": 1
+            },
+            "up": {
+              "actions": [
+                "up",
+                "up",
+                "up"
+              ],
+              "cells": [
+                192,
+                177,
+                162
+              ],
+              "gain": 8,
+              "revisit_moves": 0
+            }
+          },
+          "radial_guard_blocked": false,
+          "selected_gain": 8,
+          "unprotected_action": "up",
+          "unprotected_next_radius": 4
+        },
+        "cue_action": null,
+        "cue_features_sha256": "161c1d5c483f09c2c1e81b784dd4f1d9bfc9223e098957ca0832ac5ed3de4b4f",
+        "current_image_sha256": "1d55dcce688aef4b0f833e787f3f55bbcd92f74e47a27dae7c3bc38b53d85e65",
+        "explorer_action": "up",
+        "explorer_features_sha256": "dfb4b2b4b520adf3c0dd01b3f515bdbdf09e677a67212d9f96b8227893014e54",
+        "explorer_logits": [
+          2.805382251739502,
+          -2.732424259185791,
+          -2.3763461112976074,
+          1.9963916540145874
+        ],
+        "probabilities": [
+          0.008731575682759285,
+          0.40996691584587097,
+          7.982615352375433e-05,
+          0.4946347773075104,
+          0.08658691495656967
+        ],
+        "public_position": [
+          13,
+          12
+        ],
+        "public_visited": [
+          224,
+          223,
+          208,
+          207
+        ],
+        "reason": "low_confidence",
+        "remaining_budget": 17,
+        "step": 4,
+        "target_image_sha256": "d8002f9994beb64d947f3e1676ef7f1906bb4ae27e473d60248c23c60f9d3fa9"
+      }
+    ],
+    "episode_id": "synthetic_2_1",
+    "goal": 192,
+    "map_projected_area_km2": 20.25,
+    "out_of_bounds": 0,
+    "protocol": "masa-roads-grid15-area-v1",
+    "repeat_visit_rate": 0.0,
+    "revisits": 0,
+    "seed": 2,
+    "sg": 0,
+    "sg_m": 0,
+    "start": 224,
+    "steps": 4,
+    "success": true,
+    "synthetic": true,
+    "termination": "goal_reached",
+    "trajectory": [
+      {
+        "action": null,
+        "out_of_bounds": false,
+        "patch_id": 224,
+        "revisited": false,
+        "step": 0
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 223,
+        "revisited": false,
+        "step": 1
+      },
+      {
+        "action": "up",
+        "out_of_bounds": false,
+        "patch_id": 208,
+        "revisited": false,
+        "step": 2
+      },
+      {
+        "action": "left",
+        "out_of_bounds": false,
+        "patch_id": 207,
+        "revisited": false,
+        "step": 3
+      },
+      {
+        "action": "up",
+        "out_of_bounds": false,
+        "patch_id": 192,
+        "revisited": false,
+        "step": 4
+      }
+    ],
+    "valid_travel_m": 1200
+  }
+]

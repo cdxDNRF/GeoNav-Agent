@@ -1,0 +1,4482 @@
+{
+  "checks": {
+    "Baseline": {
+      "SG_no_worse": true,
+      "SR_gain5pp": true,
+      "source95_SR_lower_positive": true,
+      "two_positive_weights": true
+    },
+    "CueMean": {
+      "SG_no_worse": true,
+      "SR_gain5pp": true,
+      "source95_SR_lower_positive": true,
+      "two_positive_weights": true
+    },
+    "CueWrong": {
+      "SG_no_worse": true,
+      "SR_gain5pp": true,
+      "source95_SR_lower_positive": true,
+      "two_positive_weights": true
+    }
+  },
+  "comparisons": {
+    "Baseline": {
+      "candidate": {
+        "by_distance": {
+          "10": {
+            "episodes": 300,
+            "failed_episodes": 133,
+            "last_step_successes": 18,
+            "mean_failed_sg": 6.2105263157894735,
+            "mean_failed_sg_m": 1863.157894736842,
+            "mean_sg_all_episodes": 2.7533333333333334,
+            "mean_sg_m": 826.0,
+            "mean_steps": 16.226666666666667,
+            "mean_valid_travel_m": 4868.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.015597222222222222,
+            "repeat_visit_rate_micro": 0.019104354971240755,
+            "sr": 0.5566666666666666,
+            "successes": 167,
+            "terminations": {
+              "budget_exhausted": 133,
+              "goal_reached": 167
+            },
+            "total_oob": 0,
+            "total_revisits": 93,
+            "total_steps": 4868,
+            "total_valid_travel_m": 1460400
+          },
+          "11": {
+            "episodes": 300,
+            "failed_episodes": 105,
+            "last_step_successes": 0,
+            "mean_failed_sg": 6.980952380952381,
+            "mean_failed_sg_m": 2094.285714285714,
+            "mean_sg_all_episodes": 2.4433333333333334,
+            "mean_sg_m": 733.0,
+            "mean_steps": 15.783333333333333,
+            "mean_valid_travel_m": 4735.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.013809941520467836,
+            "repeat_visit_rate_micro": 0.017317845828933476,
+            "sr": 0.65,
+            "successes": 195,
+            "terminations": {
+              "budget_exhausted": 105,
+              "goal_reached": 195
+            },
+            "total_oob": 0,
+            "total_revisits": 82,
+            "total_steps": 4735,
+            "total_valid_travel_m": 1420500
+          },
+          "12": {
+            "episodes": 450,
+            "failed_episodes": 119,
+            "last_step_successes": 36,
+            "mean_failed_sg": 7.07563025210084,
+            "mean_failed_sg_m": 2122.6890756302523,
+            "mean_sg_all_episodes": 1.8711111111111112,
+            "mean_sg_m": 561.3333333333334,
+            "mean_steps": 15.875555555555556,
+            "mean_valid_travel_m": 4762.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.010882716049382716,
+            "repeat_visit_rate_micro": 0.013577827547592385,
+            "sr": 0.7355555555555555,
+            "successes": 331,
+            "terminations": {
+              "budget_exhausted": 119,
+              "goal_reached": 331
+            },
+            "total_oob": 0,
+            "total_revisits": 97,
+            "total_steps": 7144,
+            "total_valid_travel_m": 2143200
+          },
+          "13": {
+            "episodes": 150,
+            "failed_episodes": 27,
+            "last_step_successes": 0,
+            "mean_failed_sg": 6.2592592592592595,
+            "mean_failed_sg_m": 1877.7777777777778,
+            "mean_sg_all_episodes": 1.1266666666666667,
+            "mean_sg_m": 338.0,
+            "mean_steps": 15.526666666666667,
+            "mean_valid_travel_m": 4658.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.011000000000000001,
+            "repeat_visit_rate_micro": 0.014169171318162302,
+            "sr": 0.82,
+            "successes": 123,
+            "terminations": {
+              "budget_exhausted": 27,
+              "goal_reached": 123
+            },
+            "total_oob": 0,
+            "total_revisits": 33,
+            "total_steps": 2329,
+            "total_valid_travel_m": 698700
+          },
+          "14": {
+            "episodes": 150,
+            "failed_episodes": 17,
+            "last_step_successes": 17,
+            "mean_failed_sg": 6.705882352941177,
+            "mean_failed_sg_m": 2011.764705882353,
+            "mean_sg_all_episodes": 0.76,
+            "mean_sg_m": 228.0,
+            "mean_steps": 15.946666666666667,
+            "mean_valid_travel_m": 4784.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.008333333333333333,
+            "repeat_visit_rate_micro": 0.010451505016722408,
+            "sr": 0.8866666666666667,
+            "successes": 133,
+            "terminations": {
+              "budget_exhausted": 17,
+              "goal_reached": 133
+            },
+            "total_oob": 0,
+            "total_revisits": 25,
+            "total_steps": 2392,
+            "total_valid_travel_m": 717600
+          },
+          "15": {
+            "episodes": 150,
+            "failed_episodes": 18,
+            "last_step_successes": 0,
+            "mean_failed_sg": 6.777777777777778,
+            "mean_failed_sg_m": 2033.3333333333333,
+            "mean_sg_all_episodes": 0.8133333333333334,
+            "mean_sg_m": 244.0,
+            "mean_steps": 16.106666666666666,
+            "mean_valid_travel_m": 4832.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.0033333333333333335,
+            "repeat_visit_rate_micro": 0.0041390728476821195,
+            "sr": 0.88,
+            "successes": 132,
+            "terminations": {
+              "budget_exhausted": 18,
+              "goal_reached": 132
+            },
+            "total_oob": 0,
+            "total_revisits": 10,
+            "total_steps": 2416,
+            "total_valid_travel_m": 724800
+          },
+          "16": {
+            "episodes": 150,
+            "failed_episodes": 14,
+            "last_step_successes": 1,
+            "mean_failed_sg": 6.0,
+            "mean_failed_sg_m": 1800.0,
+            "mean_sg_all_episodes": 0.56,
+            "mean_sg_m": 168.0,
+            "mean_steps": 16.72,
+            "mean_valid_travel_m": 5016.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.0023333333333333335,
+            "repeat_visit_rate_micro": 0.0027910685805422647,
+            "sr": 0.9066666666666666,
+            "successes": 136,
+            "terminations": {
+              "budget_exhausted": 14,
+              "goal_reached": 136
+            },
+            "total_oob": 0,
+            "total_revisits": 7,
+            "total_steps": 2508,
+            "total_valid_travel_m": 752400
+          },
+          "8": {
+            "episodes": 300,
+            "failed_episodes": 142,
+            "last_step_successes": 15,
+            "mean_failed_sg": 6.774647887323944,
+            "mean_failed_sg_m": 2032.394366197183,
+            "mean_sg_all_episodes": 3.2066666666666666,
+            "mean_sg_m": 962.0,
+            "mean_steps": 15.366666666666667,
+            "mean_valid_travel_m": 4610.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.011152777777777779,
+            "repeat_visit_rate_micro": 0.014316702819956615,
+            "sr": 0.5266666666666666,
+            "successes": 158,
+            "terminations": {
+              "budget_exhausted": 142,
+              "goal_reached": 158
+            },
+            "total_oob": 0,
+            "total_revisits": 66,
+            "total_steps": 4610,
+            "total_valid_travel_m": 1383000
+          },
+          "9": {
+            "episodes": 300,
+            "failed_episodes": 144,
+            "last_step_successes": 0,
+            "mean_failed_sg": 7.027777777777778,
+            "mean_failed_sg_m": 2108.3333333333335,
+            "mean_sg_all_episodes": 3.3733333333333335,
+            "mean_sg_m": 1012.0,
+            "mean_steps": 15.893333333333333,
+            "mean_valid_travel_m": 4768.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.014786721706226351,
+            "repeat_visit_rate_micro": 0.018456375838926176,
+            "sr": 0.52,
+            "successes": 156,
+            "terminations": {
+              "budget_exhausted": 144,
+              "goal_reached": 156
+            },
+            "total_oob": 0,
+            "total_revisits": 88,
+            "total_steps": 4768,
+            "total_valid_travel_m": 1430400
+          }
+        },
+        "by_source": {
+          "MasaRoadsFresh/test_00": {
+            "episodes": 225,
+            "failed_episodes": 60,
+            "last_step_successes": 7,
+            "mean_failed_sg": 7.016666666666667,
+            "mean_failed_sg_m": 2105.0,
+            "mean_sg_all_episodes": 1.8711111111111112,
+            "mean_sg_m": 561.3333333333334,
+            "mean_steps": 15.444444444444445,
+            "mean_valid_travel_m": 4633.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.01287037037037037,
+            "repeat_visit_rate_micro": 0.016402877697841725,
+            "sr": 0.7333333333333333,
+            "successes": 165,
+            "terminations": {
+              "budget_exhausted": 60,
+              "goal_reached": 165
+            },
+            "total_oob": 0,
+            "total_revisits": 57,
+            "total_steps": 3475,
+            "total_valid_travel_m": 1042500
+          },
+          "MasaRoadsFresh/test_01": {
+            "episodes": 225,
+            "failed_episodes": 76,
+            "last_step_successes": 9,
+            "mean_failed_sg": 6.855263157894737,
+            "mean_failed_sg_m": 2056.5789473684213,
+            "mean_sg_all_episodes": 2.3155555555555556,
+            "mean_sg_m": 694.6666666666666,
+            "mean_steps": 15.684444444444445,
+            "mean_valid_travel_m": 4705.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.014154320987654321,
+            "repeat_visit_rate_micro": 0.01785208274298668,
+            "sr": 0.6622222222222223,
+            "successes": 149,
+            "terminations": {
+              "budget_exhausted": 76,
+              "goal_reached": 149
+            },
+            "total_oob": 0,
+            "total_revisits": 63,
+            "total_steps": 3529,
+            "total_valid_travel_m": 1058700
+          },
+          "MasaRoadsFresh/test_02": {
+            "episodes": 225,
+            "failed_episodes": 66,
+            "last_step_successes": 13,
+            "mean_failed_sg": 6.9393939393939394,
+            "mean_failed_sg_m": 2081.818181818182,
+            "mean_sg_all_episodes": 2.0355555555555553,
+            "mean_sg_m": 610.6666666666666,
+            "mean_steps": 15.795555555555556,
+            "mean_valid_travel_m": 4738.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.007615334632878492,
+            "repeat_visit_rate_micro": 0.009566685424873381,
+            "sr": 0.7066666666666667,
+            "successes": 159,
+            "terminations": {
+              "budget_exhausted": 66,
+              "goal_reached": 159
+            },
+            "total_oob": 0,
+            "total_revisits": 34,
+            "total_steps": 3554,
+            "total_valid_travel_m": 1066200
+          },
+          "MasaRoadsFresh/test_03": {
+            "episodes": 225,
+            "failed_episodes": 72,
+            "last_step_successes": 11,
+            "mean_failed_sg": 6.361111111111111,
+            "mean_failed_sg_m": 1908.3333333333333,
+            "mean_sg_all_episodes": 2.0355555555555553,
+            "mean_sg_m": 610.6666666666666,
+            "mean_steps": 16.017777777777777,
+            "mean_valid_travel_m": 4805.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.01077313381492948,
+            "repeat_visit_rate_micro": 0.013318534961154272,
+            "sr": 0.68,
+            "successes": 153,
+            "terminations": {
+              "budget_exhausted": 72,
+              "goal_reached": 153
+            },
+            "total_oob": 0,
+            "total_revisits": 48,
+            "total_steps": 3604,
+            "total_valid_travel_m": 1081200
+          },
+          "MasaRoadsFresh/test_04": {
+            "episodes": 225,
+            "failed_episodes": 73,
+            "last_step_successes": 12,
+            "mean_failed_sg": 7.027397260273973,
+            "mean_failed_sg_m": 2108.219178082192,
+            "mean_sg_all_episodes": 2.28,
+            "mean_sg_m": 684.0,
+            "mean_steps": 15.80888888888889,
+            "mean_valid_travel_m": 4742.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.01,
+            "repeat_visit_rate_micro": 0.012651110486364914,
+            "sr": 0.6755555555555556,
+            "successes": 152,
+            "terminations": {
+              "budget_exhausted": 73,
+              "goal_reached": 152
+            },
+            "total_oob": 0,
+            "total_revisits": 45,
+            "total_steps": 3557,
+            "total_valid_travel_m": 1067100
+          },
+          "MasaRoadsFresh/test_05": {
+            "episodes": 225,
+            "failed_episodes": 78,
+            "last_step_successes": 10,
+            "mean_failed_sg": 7.166666666666667,
+            "mean_failed_sg_m": 2150.0,
+            "mean_sg_all_episodes": 2.4844444444444442,
+            "mean_sg_m": 745.3333333333334,
+            "mean_steps": 16.244444444444444,
+            "mean_valid_travel_m": 4873.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.010888888888888889,
+            "repeat_visit_rate_micro": 0.013406292749658003,
+            "sr": 0.6533333333333333,
+            "successes": 147,
+            "terminations": {
+              "budget_exhausted": 78,
+              "goal_reached": 147
+            },
+            "total_oob": 0,
+            "total_revisits": 49,
+            "total_steps": 3655,
+            "total_valid_travel_m": 1096500
+          },
+          "MasaRoadsFresh/test_06": {
+            "episodes": 225,
+            "failed_episodes": 69,
+            "last_step_successes": 2,
+            "mean_failed_sg": 6.884057971014493,
+            "mean_failed_sg_m": 2065.217391304348,
+            "mean_sg_all_episodes": 2.111111111111111,
+            "mean_sg_m": 633.3333333333334,
+            "mean_steps": 15.675555555555556,
+            "mean_valid_travel_m": 4702.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.0138635477582846,
+            "repeat_visit_rate_micro": 0.017578678763821944,
+            "sr": 0.6933333333333334,
+            "successes": 156,
+            "terminations": {
+              "budget_exhausted": 69,
+              "goal_reached": 156
+            },
+            "total_oob": 0,
+            "total_revisits": 62,
+            "total_steps": 3527,
+            "total_valid_travel_m": 1058100
+          },
+          "MasaRoadsFresh/test_07": {
+            "episodes": 225,
+            "failed_episodes": 71,
+            "last_step_successes": 12,
+            "mean_failed_sg": 7.394366197183099,
+            "mean_failed_sg_m": 2218.3098591549297,
+            "mean_sg_all_episodes": 2.3333333333333335,
+            "mean_sg_m": 700.0,
+            "mean_steps": 16.066666666666666,
+            "mean_valid_travel_m": 4820.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.014131254061078622,
+            "repeat_visit_rate_micro": 0.017427385892116183,
+            "sr": 0.6844444444444444,
+            "successes": 154,
+            "terminations": {
+              "budget_exhausted": 71,
+              "goal_reached": 154
+            },
+            "total_oob": 0,
+            "total_revisits": 63,
+            "total_steps": 3615,
+            "total_valid_travel_m": 1084500
+          },
+          "MasaRoadsFresh/test_08": {
+            "episodes": 225,
+            "failed_episodes": 86,
+            "last_step_successes": 6,
+            "mean_failed_sg": 6.290697674418604,
+            "mean_failed_sg_m": 1887.2093023255813,
+            "mean_sg_all_episodes": 2.4044444444444446,
+            "mean_sg_m": 721.3333333333334,
+            "mean_steps": 16.395555555555557,
+            "mean_valid_travel_m": 4918.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.009827160493827161,
+            "repeat_visit_rate_micro": 0.01192735158579561,
+            "sr": 0.6177777777777778,
+            "successes": 139,
+            "terminations": {
+              "budget_exhausted": 86,
+              "goal_reached": 139
+            },
+            "total_oob": 0,
+            "total_revisits": 44,
+            "total_steps": 3689,
+            "total_valid_travel_m": 1106700
+          },
+          "MasaRoadsFresh/test_09": {
+            "episodes": 225,
+            "failed_episodes": 68,
+            "last_step_successes": 5,
+            "mean_failed_sg": 5.779411764705882,
+            "mean_failed_sg_m": 1733.8235294117646,
+            "mean_sg_all_episodes": 1.7466666666666666,
+            "mean_sg_m": 524.0,
+            "mean_steps": 15.844444444444445,
+            "mean_valid_travel_m": 4753.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.008103638726445744,
+            "repeat_visit_rate_micro": 0.010098176718092567,
+            "sr": 0.6977777777777778,
+            "successes": 157,
+            "terminations": {
+              "budget_exhausted": 68,
+              "goal_reached": 157
+            },
+            "total_oob": 0,
+            "total_revisits": 36,
+            "total_steps": 3565,
+            "total_valid_travel_m": 1069500
+          }
+        },
+        "by_stratum": {
+          "interior_target": {
+            "episodes": 750,
+            "failed_episodes": 321,
+            "last_step_successes": 29,
+            "mean_failed_sg": 7.881619937694704,
+            "mean_failed_sg_m": 2364.4859813084113,
+            "mean_sg_all_episodes": 3.3733333333333335,
+            "mean_sg_m": 1012.0,
+            "mean_steps": 15.933333333333334,
+            "mean_valid_travel_m": 4780.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.013346003898635477,
+            "repeat_visit_rate_micro": 0.016569037656903766,
+            "sr": 0.572,
+            "successes": 429,
+            "terminations": {
+              "budget_exhausted": 321,
+              "goal_reached": 429
+            },
+            "total_oob": 0,
+            "total_revisits": 198,
+            "total_steps": 11950,
+            "total_valid_travel_m": 3585000
+          },
+          "long_distance": {
+            "episodes": 750,
+            "failed_episodes": 116,
+            "last_step_successes": 26,
+            "mean_failed_sg": 6.767241379310345,
+            "mean_failed_sg_m": 2030.1724137931035,
+            "mean_sg_all_episodes": 1.0466666666666666,
+            "mean_sg_m": 314.0,
+            "mean_steps": 15.998666666666667,
+            "mean_valid_travel_m": 4799.6,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.007231481481481482,
+            "repeat_visit_rate_micro": 0.00900075006250521,
+            "sr": 0.8453333333333334,
+            "successes": 634,
+            "terminations": {
+              "budget_exhausted": 116,
+              "goal_reached": 634
+            },
+            "total_oob": 0,
+            "total_revisits": 108,
+            "total_steps": 11999,
+            "total_valid_travel_m": 3599700
+          },
+          "seam_target": {
+            "episodes": 750,
+            "failed_episodes": 282,
+            "last_step_successes": 32,
+            "mean_failed_sg": 5.49290780141844,
+            "mean_failed_sg_m": 1647.872340425532,
+            "mean_sg_all_episodes": 2.0653333333333332,
+            "mean_sg_m": 619.6,
+            "mean_steps": 15.761333333333333,
+            "mean_valid_travel_m": 4728.4,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.013090809540190346,
+            "repeat_visit_rate_micro": 0.01649606632264614,
+            "sr": 0.624,
+            "successes": 468,
+            "terminations": {
+              "budget_exhausted": 282,
+              "goal_reached": 468
+            },
+            "total_oob": 0,
+            "total_revisits": 195,
+            "total_steps": 11821,
+            "total_valid_travel_m": 3546300
+          }
+        },
+        "diagnostics": {
+          "accepted_given_hits": 1500,
+          "accepted_not_true_hit": 134,
+          "accepted_true_hit_rate": 0.9179926560587516,
+          "accepted_true_hits": 1500,
+          "action_count": 35770,
+          "actionable_adjacency_records": 1551,
+          "adjacency": {
+            "cross_source": {
+              "acceptance_rate": 0.9847328244274809,
+              "accepted": 129,
+              "accepted_correct": 129,
+              "correct_acceptance_rate": 0.9847328244274809,
+              "opportunities": 131
+            },
+            "same_source": {
+              "acceptance_rate": 0.9648135116115412,
+              "accepted": 1371,
+              "accepted_correct": 1371,
+              "correct_acceptance_rate": 0.9648135116115412,
+              "opportunities": 1421
+            }
+          },
+          "crossing_records": 2248,
+          "crossings": 4773,
+          "cue_accepts": 1634,
+          "failure_categories": {
+            "adjacent_only_terminal": 40,
+            "missed_actionable_adjacency": 20,
+            "never_within2": 332,
+            "within2_never_adjacent": 327
+          },
+          "reasons": {
+            "accepted": 1634,
+            "illegal_top_direction": 11,
+            "low_confidence": 19,
+            "not_adjacent": 34063,
+            "visited_top_destination": 43
+          }
+        },
+        "metrics": {
+          "episodes": 2250,
+          "failed_episodes": 719,
+          "last_step_successes": 87,
+          "mean_failed_sg": 6.764951321279555,
+          "mean_failed_sg_m": 2029.4853963838664,
+          "mean_sg_all_episodes": 2.1617777777777776,
+          "mean_sg_m": 648.5333333333333,
+          "mean_steps": 15.897777777777778,
+          "mean_valid_travel_m": 4769.333333333333,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.01122276497343577,
+          "repeat_visit_rate_micro": 0.014006150405367627,
+          "sr": 0.6804444444444444,
+          "successes": 1531,
+          "terminations": {
+            "budget_exhausted": 719,
+            "goal_reached": 1531
+          },
+          "total_oob": 0,
+          "total_revisits": 501,
+          "total_steps": 35770,
+          "total_valid_travel_m": 10731000
+        }
+      },
+      "checks": {
+        "mixed_SG_no_worse": true,
+        "mixed_SR_gain2pp": true,
+        "source95_SR_lower_positive": true,
+        "strata": {
+          "interior_target": {
+            "SG_no_worse": true,
+            "SR_loss_at_most2pp": true
+          },
+          "long_distance": {
+            "SG_no_worse": true,
+            "SR_loss_at_most2pp": true
+          },
+          "seam_target": {
+            "SG_no_worse": true,
+            "SR_loss_at_most2pp": true
+          }
+        },
+        "two_positive_weights": true
+      },
+      "effects": {
+        "all": {
+          "bootstrap_resamples": 4000,
+          "bootstrap_seed": 7317,
+          "interpretation": "paired whole-region uncertainty; weights are not independent source maps",
+          "positive_seeds": 3,
+          "sg_change": -2.457333333333334,
+          "source95_SG": [
+            -2.636922222222222,
+            -2.296877777777778
+          ],
+          "source95_SR": [
+            0.3244444444444445,
+            0.36266666666666664
+          ],
+          "source_count": 10,
+          "source_effects": {
+            "MasaRoadsFresh/test_00": {
+              "sg": -3.0,
+              "sr": 0.4088888888888889
+            },
+            "MasaRoadsFresh/test_01": {
+              "sg": -2.395555555555555,
+              "sr": 0.3333333333333333
+            },
+            "MasaRoadsFresh/test_02": {
+              "sg": -2.4266666666666663,
+              "sr": 0.3022222222222222
+            },
+            "MasaRoadsFresh/test_03": {
+              "sg": -2.151111111111111,
+              "sr": 0.32000000000000006
+            },
+            "MasaRoadsFresh/test_04": {
+              "sg": -2.1733333333333333,
+              "sr": 0.3244444444444444
+            },
+            "MasaRoadsFresh/test_05": {
+              "sg": -2.266666666666667,
+              "sr": 0.3377777777777778
+            },
+            "MasaRoadsFresh/test_06": {
+              "sg": -2.831111111111111,
+              "sr": 0.37777777777777777
+            },
+            "MasaRoadsFresh/test_07": {
+              "sg": -2.444444444444444,
+              "sr": 0.3333333333333333
+            },
+            "MasaRoadsFresh/test_08": {
+              "sg": -2.2133333333333334,
+              "sr": 0.32
+            },
+            "MasaRoadsFresh/test_09": {
+              "sg": -2.671111111111111,
+              "sr": 0.3688888888888889
+            }
+          },
+          "sr_gain": 0.3426666666666667,
+          "sr_gain_by_seed": [
+            0.3186666666666667,
+            0.35866666666666663,
+            0.3506666666666667
+          ]
+        },
+        "interior_target": {
+          "bootstrap_resamples": 4000,
+          "bootstrap_seed": 7317,
+          "interpretation": "paired whole-region uncertainty; weights are not independent source maps",
+          "positive_seeds": 3,
+          "sg_change": -2.6013333333333333,
+          "source95_SG": [
+            -3.056033333333333,
+            -2.155933333333333
+          ],
+          "source95_SR": [
+            0.292,
+            0.3773333333333333
+          ],
+          "source_count": 10,
+          "source_effects": {
+            "MasaRoadsFresh/test_00": {
+              "sg": -2.9066666666666663,
+              "sr": 0.37333333333333335
+            },
+            "MasaRoadsFresh/test_01": {
+              "sg": -2.72,
+              "sr": 0.3066666666666667
+            },
+            "MasaRoadsFresh/test_02": {
+              "sg": -2.7866666666666666,
+              "sr": 0.3333333333333333
+            },
+            "MasaRoadsFresh/test_03": {
+              "sg": -1.8,
+              "sr": 0.27999999999999997
+            },
+            "MasaRoadsFresh/test_04": {
+              "sg": -1.906666666666667,
+              "sr": 0.24
+            },
+            "MasaRoadsFresh/test_05": {
+              "sg": -1.8800000000000001,
+              "sr": 0.26666666666666666
+            },
+            "MasaRoadsFresh/test_06": {
+              "sg": -4.026666666666666,
+              "sr": 0.48000000000000004
+            },
+            "MasaRoadsFresh/test_07": {
+              "sg": -2.8000000000000003,
+              "sr": 0.3733333333333333
+            },
+            "MasaRoadsFresh/test_08": {
+              "sg": -1.7066666666666668,
+              "sr": 0.28
+            },
+            "MasaRoadsFresh/test_09": {
+              "sg": -3.48,
+              "sr": 0.39999999999999997
+            }
+          },
+          "sr_gain": 0.3333333333333333,
+          "sr_gain_by_seed": [
+            0.32800000000000007,
+            0.364,
+            0.30800000000000005
+          ]
+        },
+        "long_distance": {
+          "bootstrap_resamples": 4000,
+          "bootstrap_seed": 7317,
+          "interpretation": "paired whole-region uncertainty; weights are not independent source maps",
+          "positive_seeds": 3,
+          "sg_change": -2.416,
+          "source95_SG": [
+            -2.6453333333333338,
+            -2.158666666666667
+          ],
+          "source95_SR": [
+            0.34400000000000003,
+            0.42266666666666663
+          ],
+          "source_count": 10,
+          "source_effects": {
+            "MasaRoadsFresh/test_00": {
+              "sg": -2.7066666666666666,
+              "sr": 0.39999999999999997
+            },
+            "MasaRoadsFresh/test_01": {
+              "sg": -2.2933333333333334,
+              "sr": 0.3733333333333333
+            },
+            "MasaRoadsFresh/test_02": {
+              "sg": -1.5066666666666666,
+              "sr": 0.24000000000000002
+            },
+            "MasaRoadsFresh/test_03": {
+              "sg": -2.6133333333333333,
+              "sr": 0.4133333333333333
+            },
+            "MasaRoadsFresh/test_04": {
+              "sg": -2.3866666666666667,
+              "sr": 0.37333333333333335
+            },
+            "MasaRoadsFresh/test_05": {
+              "sg": -3.0533333333333332,
+              "sr": 0.49333333333333335
+            },
+            "MasaRoadsFresh/test_06": {
+              "sg": -2.0400000000000005,
+              "sr": 0.37333333333333335
+            },
+            "MasaRoadsFresh/test_07": {
+              "sg": -2.466666666666667,
+              "sr": 0.3466666666666667
+            },
+            "MasaRoadsFresh/test_08": {
+              "sg": -2.533333333333333,
+              "sr": 0.3866666666666667
+            },
+            "MasaRoadsFresh/test_09": {
+              "sg": -2.56,
+              "sr": 0.4533333333333333
+            }
+          },
+          "sr_gain": 0.3853333333333333,
+          "sr_gain_by_seed": [
+            0.36400000000000005,
+            0.392,
+            0.39999999999999997
+          ]
+        },
+        "seam_target": {
+          "bootstrap_resamples": 4000,
+          "bootstrap_seed": 7317,
+          "interpretation": "paired whole-region uncertainty; weights are not independent source maps",
+          "positive_seeds": 3,
+          "sg_change": -2.354666666666667,
+          "source95_SG": [
+            -2.6706666666666665,
+            -2.102633333333333
+          ],
+          "source95_SR": [
+            0.2773333333333333,
+            0.34933333333333333
+          ],
+          "source_count": 10,
+          "source_effects": {
+            "MasaRoadsFresh/test_00": {
+              "sg": -3.3866666666666667,
+              "sr": 0.4533333333333333
+            },
+            "MasaRoadsFresh/test_01": {
+              "sg": -2.1733333333333333,
+              "sr": 0.32
+            },
+            "MasaRoadsFresh/test_02": {
+              "sg": -2.986666666666667,
+              "sr": 0.3333333333333333
+            },
+            "MasaRoadsFresh/test_03": {
+              "sg": -2.0399999999999996,
+              "sr": 0.26666666666666666
+            },
+            "MasaRoadsFresh/test_04": {
+              "sg": -2.226666666666667,
+              "sr": 0.36000000000000004
+            },
+            "MasaRoadsFresh/test_05": {
+              "sg": -1.8666666666666665,
+              "sr": 0.25333333333333335
+            },
+            "MasaRoadsFresh/test_06": {
+              "sg": -2.4266666666666663,
+              "sr": 0.28
+            },
+            "MasaRoadsFresh/test_07": {
+              "sg": -2.066666666666667,
+              "sr": 0.27999999999999997
+            },
+            "MasaRoadsFresh/test_08": {
+              "sg": -2.4,
+              "sr": 0.29333333333333333
+            },
+            "MasaRoadsFresh/test_09": {
+              "sg": -1.9733333333333334,
+              "sr": 0.25333333333333335
+            }
+          },
+          "sr_gain": 0.3093333333333333,
+          "sr_gain_by_seed": [
+            0.26399999999999996,
+            0.32,
+            0.344
+          ]
+        }
+      },
+      "harmed": 5,
+      "main_numeric_passed": true,
+      "recovered": 776,
+      "reference": {
+        "by_distance": {
+          "10": {
+            "episodes": 300,
+            "failed_episodes": 218,
+            "last_step_successes": 7,
+            "mean_failed_sg": 6.5504587155963305,
+            "mean_failed_sg_m": 1965.1376146788991,
+            "mean_sg_all_episodes": 4.76,
+            "mean_sg_m": 1428.0,
+            "mean_steps": 18.213333333333335,
+            "mean_valid_travel_m": 5464.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.022185185185185186,
+            "repeat_visit_rate_micro": 0.024341142020497804,
+            "sr": 0.2733333333333333,
+            "successes": 82,
+            "terminations": {
+              "budget_exhausted": 218,
+              "goal_reached": 82
+            },
+            "total_oob": 0,
+            "total_revisits": 133,
+            "total_steps": 5464,
+            "total_valid_travel_m": 1639200
+          },
+          "11": {
+            "episodes": 300,
+            "failed_episodes": 202,
+            "last_step_successes": 0,
+            "mean_failed_sg": 7.158415841584159,
+            "mean_failed_sg_m": 2147.5247524752476,
+            "mean_sg_all_episodes": 4.82,
+            "mean_sg_m": 1446.0,
+            "mean_steps": 17.886666666666667,
+            "mean_valid_travel_m": 5366.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.01800877192982456,
+            "repeat_visit_rate_micro": 0.02012672381662318,
+            "sr": 0.32666666666666666,
+            "successes": 98,
+            "terminations": {
+              "budget_exhausted": 202,
+              "goal_reached": 98
+            },
+            "total_oob": 0,
+            "total_revisits": 108,
+            "total_steps": 5366,
+            "total_valid_travel_m": 1609800
+          },
+          "12": {
+            "episodes": 450,
+            "failed_episodes": 290,
+            "last_step_successes": 23,
+            "mean_failed_sg": 6.979310344827586,
+            "mean_failed_sg_m": 2093.793103448276,
+            "mean_sg_all_episodes": 4.497777777777777,
+            "mean_sg_m": 1349.3333333333333,
+            "mean_steps": 18.284444444444443,
+            "mean_valid_travel_m": 5485.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.01872530864197531,
+            "repeat_visit_rate_micro": 0.02029654837141468,
+            "sr": 0.35555555555555557,
+            "successes": 160,
+            "terminations": {
+              "budget_exhausted": 290,
+              "goal_reached": 160
+            },
+            "total_oob": 0,
+            "total_revisits": 167,
+            "total_steps": 8228,
+            "total_valid_travel_m": 2468400
+          },
+          "13": {
+            "episodes": 150,
+            "failed_episodes": 86,
+            "last_step_successes": 0,
+            "mean_failed_sg": 6.72093023255814,
+            "mean_failed_sg_m": 2016.2790697674418,
+            "mean_sg_all_episodes": 3.8533333333333335,
+            "mean_sg_m": 1156.0,
+            "mean_steps": 17.946666666666665,
+            "mean_valid_travel_m": 5384.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.020117647058823532,
+            "repeat_visit_rate_micro": 0.022288261515601784,
+            "sr": 0.4266666666666667,
+            "successes": 64,
+            "terminations": {
+              "budget_exhausted": 86,
+              "goal_reached": 64
+            },
+            "total_oob": 0,
+            "total_revisits": 60,
+            "total_steps": 2692,
+            "total_valid_travel_m": 807600
+          },
+          "14": {
+            "episodes": 150,
+            "failed_episodes": 78,
+            "last_step_successes": 14,
+            "mean_failed_sg": 6.589743589743589,
+            "mean_failed_sg_m": 1976.923076923077,
+            "mean_sg_all_episodes": 3.4266666666666667,
+            "mean_sg_m": 1028.0,
+            "mean_steps": 18.026666666666667,
+            "mean_valid_travel_m": 5408.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.012703703703703705,
+            "repeat_visit_rate_micro": 0.014053254437869823,
+            "sr": 0.48,
+            "successes": 72,
+            "terminations": {
+              "budget_exhausted": 78,
+              "goal_reached": 72
+            },
+            "total_oob": 0,
+            "total_revisits": 38,
+            "total_steps": 2704,
+            "total_valid_travel_m": 811200
+          },
+          "15": {
+            "episodes": 150,
+            "failed_episodes": 85,
+            "last_step_successes": 0,
+            "mean_failed_sg": 5.823529411764706,
+            "mean_failed_sg_m": 1747.0588235294117,
+            "mean_sg_all_episodes": 3.3,
+            "mean_sg_m": 990.0,
+            "mean_steps": 18.14,
+            "mean_valid_travel_m": 5442.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.015000000000000001,
+            "repeat_visit_rate_micro": 0.016538037486218304,
+            "sr": 0.43333333333333335,
+            "successes": 65,
+            "terminations": {
+              "budget_exhausted": 85,
+              "goal_reached": 65
+            },
+            "total_oob": 0,
+            "total_revisits": 45,
+            "total_steps": 2721,
+            "total_valid_travel_m": 816300
+          },
+          "16": {
+            "episodes": 150,
+            "failed_episodes": 60,
+            "last_step_successes": 1,
+            "mean_failed_sg": 5.666666666666667,
+            "mean_failed_sg_m": 1700.0,
+            "mean_sg_all_episodes": 2.2666666666666666,
+            "mean_sg_m": 680.0,
+            "mean_steps": 17.88,
+            "mean_valid_travel_m": 5364.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.006666666666666667,
+            "repeat_visit_rate_micro": 0.007457121551081283,
+            "sr": 0.6,
+            "successes": 90,
+            "terminations": {
+              "budget_exhausted": 60,
+              "goal_reached": 90
+            },
+            "total_oob": 0,
+            "total_revisits": 20,
+            "total_steps": 2682,
+            "total_valid_travel_m": 804600
+          },
+          "8": {
+            "episodes": 300,
+            "failed_episodes": 233,
+            "last_step_successes": 8,
+            "mean_failed_sg": 7.579399141630901,
+            "mean_failed_sg_m": 2273.8197424892705,
+            "mean_sg_all_episodes": 5.886666666666667,
+            "mean_sg_m": 1766.0,
+            "mean_steps": 18.026666666666667,
+            "mean_valid_travel_m": 5408.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.015000000000000001,
+            "repeat_visit_rate_micro": 0.01664201183431953,
+            "sr": 0.22333333333333333,
+            "successes": 67,
+            "terminations": {
+              "budget_exhausted": 233,
+              "goal_reached": 67
+            },
+            "total_oob": 0,
+            "total_revisits": 90,
+            "total_steps": 5408,
+            "total_valid_travel_m": 1622400
+          },
+          "9": {
+            "episodes": 300,
+            "failed_episodes": 238,
+            "last_step_successes": 0,
+            "mean_failed_sg": 7.571428571428571,
+            "mean_failed_sg_m": 2271.4285714285716,
+            "mean_sg_all_episodes": 6.006666666666667,
+            "mean_sg_m": 1802.0,
+            "mean_steps": 18.426666666666666,
+            "mean_valid_travel_m": 5528.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.018909700722394222,
+            "repeat_visit_rate_micro": 0.020441389290882777,
+            "sr": 0.20666666666666667,
+            "successes": 62,
+            "terminations": {
+              "budget_exhausted": 238,
+              "goal_reached": 62
+            },
+            "total_oob": 0,
+            "total_revisits": 113,
+            "total_steps": 5528,
+            "total_valid_travel_m": 1658400
+          }
+        },
+        "by_source": {
+          "MasaRoadsFresh/test_00": {
+            "episodes": 225,
+            "failed_episodes": 152,
+            "last_step_successes": 4,
+            "mean_failed_sg": 7.2105263157894735,
+            "mean_failed_sg_m": 2163.157894736842,
+            "mean_sg_all_episodes": 4.871111111111111,
+            "mean_sg_m": 1461.3333333333333,
+            "mean_steps": 18.177777777777777,
+            "mean_valid_travel_m": 5453.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.019333333333333334,
+            "repeat_visit_rate_micro": 0.021271393643031784,
+            "sr": 0.3244444444444444,
+            "successes": 73,
+            "terminations": {
+              "budget_exhausted": 152,
+              "goal_reached": 73
+            },
+            "total_oob": 0,
+            "total_revisits": 87,
+            "total_steps": 4090,
+            "total_valid_travel_m": 1227000
+          },
+          "MasaRoadsFresh/test_01": {
+            "episodes": 225,
+            "failed_episodes": 151,
+            "last_step_successes": 4,
+            "mean_failed_sg": 7.0198675496688745,
+            "mean_failed_sg_m": 2105.9602649006624,
+            "mean_sg_all_episodes": 4.711111111111111,
+            "mean_sg_m": 1413.3333333333333,
+            "mean_steps": 17.857777777777777,
+            "mean_valid_travel_m": 5357.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.020286129266521423,
+            "repeat_visit_rate_micro": 0.02264808362369338,
+            "sr": 0.3288888888888889,
+            "successes": 74,
+            "terminations": {
+              "budget_exhausted": 151,
+              "goal_reached": 74
+            },
+            "total_oob": 0,
+            "total_revisits": 91,
+            "total_steps": 4018,
+            "total_valid_travel_m": 1205400
+          },
+          "MasaRoadsFresh/test_02": {
+            "episodes": 225,
+            "failed_episodes": 134,
+            "last_step_successes": 13,
+            "mean_failed_sg": 7.492537313432836,
+            "mean_failed_sg_m": 2247.7611940298507,
+            "mean_sg_all_episodes": 4.4622222222222225,
+            "mean_sg_m": 1338.6666666666667,
+            "mean_steps": 17.90222222222222,
+            "mean_valid_travel_m": 5370.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.010049382716049384,
+            "repeat_visit_rate_micro": 0.011171797418073486,
+            "sr": 0.40444444444444444,
+            "successes": 91,
+            "terminations": {
+              "budget_exhausted": 134,
+              "goal_reached": 91
+            },
+            "total_oob": 0,
+            "total_revisits": 45,
+            "total_steps": 4028,
+            "total_valid_travel_m": 1208400
+          },
+          "MasaRoadsFresh/test_03": {
+            "episodes": 225,
+            "failed_episodes": 144,
+            "last_step_successes": 6,
+            "mean_failed_sg": 6.541666666666667,
+            "mean_failed_sg_m": 1962.5,
+            "mean_sg_all_episodes": 4.1866666666666665,
+            "mean_sg_m": 1256.0,
+            "mean_steps": 17.90222222222222,
+            "mean_valid_travel_m": 5370.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.017333333333333333,
+            "repeat_visit_rate_micro": 0.019364448857994043,
+            "sr": 0.36,
+            "successes": 81,
+            "terminations": {
+              "budget_exhausted": 144,
+              "goal_reached": 81
+            },
+            "total_oob": 0,
+            "total_revisits": 78,
+            "total_steps": 4028,
+            "total_valid_travel_m": 1208400
+          },
+          "MasaRoadsFresh/test_04": {
+            "episodes": 225,
+            "failed_episodes": 146,
+            "last_step_successes": 3,
+            "mean_failed_sg": 6.863013698630137,
+            "mean_failed_sg_m": 2058.904109589041,
+            "mean_sg_all_episodes": 4.453333333333333,
+            "mean_sg_m": 1336.0,
+            "mean_steps": 17.724444444444444,
+            "mean_valid_travel_m": 5317.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.013816993464052288,
+            "repeat_visit_rate_micro": 0.015546639919759278,
+            "sr": 0.3511111111111111,
+            "successes": 79,
+            "terminations": {
+              "budget_exhausted": 146,
+              "goal_reached": 79
+            },
+            "total_oob": 0,
+            "total_revisits": 62,
+            "total_steps": 3988,
+            "total_valid_travel_m": 1196400
+          },
+          "MasaRoadsFresh/test_05": {
+            "episodes": 225,
+            "failed_episodes": 154,
+            "last_step_successes": 5,
+            "mean_failed_sg": 6.941558441558442,
+            "mean_failed_sg_m": 2082.4675324675327,
+            "mean_sg_all_episodes": 4.751111111111111,
+            "mean_sg_m": 1425.3333333333333,
+            "mean_steps": 18.315555555555555,
+            "mean_valid_travel_m": 5494.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.018522875816993464,
+            "repeat_visit_rate_micro": 0.02014074253821888,
+            "sr": 0.31555555555555553,
+            "successes": 71,
+            "terminations": {
+              "budget_exhausted": 154,
+              "goal_reached": 71
+            },
+            "total_oob": 0,
+            "total_revisits": 83,
+            "total_steps": 4121,
+            "total_valid_travel_m": 1236300
+          },
+          "MasaRoadsFresh/test_06": {
+            "episodes": 225,
+            "failed_episodes": 154,
+            "last_step_successes": 0,
+            "mean_failed_sg": 7.220779220779221,
+            "mean_failed_sg_m": 2166.2337662337663,
+            "mean_sg_all_episodes": 4.942222222222222,
+            "mean_sg_m": 1482.6666666666667,
+            "mean_steps": 18.302222222222223,
+            "mean_valid_travel_m": 5490.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.01912280701754386,
+            "repeat_visit_rate_micro": 0.020883924235065566,
+            "sr": 0.31555555555555553,
+            "successes": 71,
+            "terminations": {
+              "budget_exhausted": 154,
+              "goal_reached": 71
+            },
+            "total_oob": 0,
+            "total_revisits": 86,
+            "total_steps": 4118,
+            "total_valid_travel_m": 1235400
+          },
+          "MasaRoadsFresh/test_07": {
+            "episodes": 225,
+            "failed_episodes": 146,
+            "last_step_successes": 11,
+            "mean_failed_sg": 7.363013698630137,
+            "mean_failed_sg_m": 2208.904109589041,
+            "mean_sg_all_episodes": 4.777777777777778,
+            "mean_sg_m": 1433.3333333333333,
+            "mean_steps": 18.386666666666667,
+            "mean_valid_travel_m": 5516.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.022714749837556857,
+            "repeat_visit_rate_micro": 0.024655547498187092,
+            "sr": 0.3511111111111111,
+            "successes": 79,
+            "terminations": {
+              "budget_exhausted": 146,
+              "goal_reached": 79
+            },
+            "total_oob": 0,
+            "total_revisits": 102,
+            "total_steps": 4137,
+            "total_valid_travel_m": 1241100
+          },
+          "MasaRoadsFresh/test_08": {
+            "episodes": 225,
+            "failed_episodes": 158,
+            "last_step_successes": 3,
+            "mean_failed_sg": 6.575949367088608,
+            "mean_failed_sg_m": 1972.7848101265822,
+            "mean_sg_all_episodes": 4.6177777777777775,
+            "mean_sg_m": 1385.3333333333333,
+            "mean_steps": 18.324444444444445,
+            "mean_valid_travel_m": 5497.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.01491358024691358,
+            "repeat_visit_rate_micro": 0.016250303177298083,
+            "sr": 0.29777777777777775,
+            "successes": 67,
+            "terminations": {
+              "budget_exhausted": 158,
+              "goal_reached": 67
+            },
+            "total_oob": 0,
+            "total_revisits": 67,
+            "total_steps": 4123,
+            "total_valid_travel_m": 1236900
+          },
+          "MasaRoadsFresh/test_09": {
+            "episodes": 225,
+            "failed_episodes": 151,
+            "last_step_successes": 4,
+            "mean_failed_sg": 6.582781456953643,
+            "mean_failed_sg_m": 1974.8344370860927,
+            "mean_sg_all_episodes": 4.417777777777777,
+            "mean_sg_m": 1325.3333333333333,
+            "mean_steps": 18.40888888888889,
+            "mean_valid_travel_m": 5522.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.016487654320987654,
+            "repeat_visit_rate_micro": 0.017624336069531628,
+            "sr": 0.3288888888888889,
+            "successes": 74,
+            "terminations": {
+              "budget_exhausted": 151,
+              "goal_reached": 74
+            },
+            "total_oob": 0,
+            "total_revisits": 73,
+            "total_steps": 4142,
+            "total_valid_travel_m": 1242600
+          }
+        },
+        "by_stratum": {
+          "interior_target": {
+            "episodes": 750,
+            "failed_episodes": 571,
+            "last_step_successes": 17,
+            "mean_failed_sg": 7.8476357267950965,
+            "mean_failed_sg_m": 2354.290718038529,
+            "mean_sg_all_episodes": 5.974666666666667,
+            "mean_sg_m": 1792.4,
+            "mean_steps": 18.444,
+            "mean_valid_travel_m": 5533.2,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.018201112257768604,
+            "repeat_visit_rate_micro": 0.01966312441263645,
+            "sr": 0.23866666666666667,
+            "successes": 179,
+            "terminations": {
+              "budget_exhausted": 571,
+              "goal_reached": 179
+            },
+            "total_oob": 0,
+            "total_revisits": 272,
+            "total_steps": 13833,
+            "total_valid_travel_m": 4149900
+          },
+          "long_distance": {
+            "episodes": 750,
+            "failed_episodes": 405,
+            "last_step_successes": 21,
+            "mean_failed_sg": 6.412345679012346,
+            "mean_failed_sg_m": 1923.7037037037037,
+            "mean_sg_all_episodes": 3.462666666666667,
+            "mean_sg_m": 1038.8,
+            "mean_steps": 18.025333333333332,
+            "mean_valid_travel_m": 5407.6,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.015351307189542484,
+            "repeat_visit_rate_micro": 0.016939122716177233,
+            "sr": 0.46,
+            "successes": 345,
+            "terminations": {
+              "budget_exhausted": 405,
+              "goal_reached": 345
+            },
+            "total_oob": 0,
+            "total_revisits": 229,
+            "total_steps": 13519,
+            "total_valid_travel_m": 4055700
+          },
+          "seam_target": {
+            "episodes": 750,
+            "failed_episodes": 514,
+            "last_step_successes": 15,
+            "mean_failed_sg": 6.4494163424124515,
+            "mean_failed_sg_m": 1934.8249027237355,
+            "mean_sg_all_episodes": 4.42,
+            "mean_sg_m": 1326.0,
+            "mean_steps": 17.921333333333333,
+            "mean_valid_travel_m": 5376.4,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.018221832358674465,
+            "repeat_visit_rate_micro": 0.020310988765716836,
+            "sr": 0.31466666666666665,
+            "successes": 236,
+            "terminations": {
+              "budget_exhausted": 514,
+              "goal_reached": 236
+            },
+            "total_oob": 0,
+            "total_revisits": 273,
+            "total_steps": 13441,
+            "total_valid_travel_m": 4032300
+          }
+        },
+        "diagnostics": {
+          "accepted_given_hits": 0,
+          "accepted_not_true_hit": 0,
+          "accepted_true_hit_rate": null,
+          "accepted_true_hits": 0,
+          "action_count": 40793,
+          "actionable_adjacency_records": 1563,
+          "adjacency": {
+            "cross_source": {
+              "acceptance_rate": 0.0,
+              "accepted": 0,
+              "accepted_correct": 0,
+              "correct_acceptance_rate": 0.0,
+              "opportunities": 133
+            },
+            "same_source": {
+              "acceptance_rate": 0.0,
+              "accepted": 0,
+              "accepted_correct": 0,
+              "correct_acceptance_rate": 0.0,
+              "opportunities": 1566
+            }
+          },
+          "crossing_records": 2250,
+          "crossings": 5442,
+          "cue_accepts": 0,
+          "failure_categories": {
+            "adjacent_only_terminal": 39,
+            "missed_actionable_adjacency": 803,
+            "never_within2": 327,
+            "within2_never_adjacent": 321
+          },
+          "reasons": {
+            "uncalibrated_abstain": 40793
+          }
+        },
+        "metrics": {
+          "episodes": 2250,
+          "failed_episodes": 1490,
+          "last_step_successes": 53,
+          "mean_failed_sg": 6.975167785234899,
+          "mean_failed_sg_m": 2092.55033557047,
+          "mean_sg_all_episodes": 4.619111111111111,
+          "mean_sg_m": 1385.7333333333333,
+          "mean_steps": 18.130222222222223,
+          "mean_valid_travel_m": 5439.066666666667,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.017258083935328516,
+          "repeat_visit_rate_micro": 0.018973843551589733,
+          "sr": 0.3377777777777778,
+          "successes": 760,
+          "terminations": {
+            "budget_exhausted": 1490,
+            "goal_reached": 760
+          },
+          "total_oob": 0,
+          "total_revisits": 774,
+          "total_steps": 40793,
+          "total_valid_travel_m": 12237900
+        }
+      },
+      "scope": "frozen independent new geographic region confirmation",
+      "source_regions": 10,
+      "unique_tasks": 750,
+      "weights": 3
+    },
+    "CueMean": {
+      "candidate": {
+        "by_distance": {
+          "10": {
+            "episodes": 300,
+            "failed_episodes": 133,
+            "last_step_successes": 18,
+            "mean_failed_sg": 6.2105263157894735,
+            "mean_failed_sg_m": 1863.157894736842,
+            "mean_sg_all_episodes": 2.7533333333333334,
+            "mean_sg_m": 826.0,
+            "mean_steps": 16.226666666666667,
+            "mean_valid_travel_m": 4868.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.015597222222222222,
+            "repeat_visit_rate_micro": 0.019104354971240755,
+            "sr": 0.5566666666666666,
+            "successes": 167,
+            "terminations": {
+              "budget_exhausted": 133,
+              "goal_reached": 167
+            },
+            "total_oob": 0,
+            "total_revisits": 93,
+            "total_steps": 4868,
+            "total_valid_travel_m": 1460400
+          },
+          "11": {
+            "episodes": 300,
+            "failed_episodes": 105,
+            "last_step_successes": 0,
+            "mean_failed_sg": 6.980952380952381,
+            "mean_failed_sg_m": 2094.285714285714,
+            "mean_sg_all_episodes": 2.4433333333333334,
+            "mean_sg_m": 733.0,
+            "mean_steps": 15.783333333333333,
+            "mean_valid_travel_m": 4735.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.013809941520467836,
+            "repeat_visit_rate_micro": 0.017317845828933476,
+            "sr": 0.65,
+            "successes": 195,
+            "terminations": {
+              "budget_exhausted": 105,
+              "goal_reached": 195
+            },
+            "total_oob": 0,
+            "total_revisits": 82,
+            "total_steps": 4735,
+            "total_valid_travel_m": 1420500
+          },
+          "12": {
+            "episodes": 450,
+            "failed_episodes": 119,
+            "last_step_successes": 36,
+            "mean_failed_sg": 7.07563025210084,
+            "mean_failed_sg_m": 2122.6890756302523,
+            "mean_sg_all_episodes": 1.8711111111111112,
+            "mean_sg_m": 561.3333333333334,
+            "mean_steps": 15.875555555555556,
+            "mean_valid_travel_m": 4762.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.010882716049382716,
+            "repeat_visit_rate_micro": 0.013577827547592385,
+            "sr": 0.7355555555555555,
+            "successes": 331,
+            "terminations": {
+              "budget_exhausted": 119,
+              "goal_reached": 331
+            },
+            "total_oob": 0,
+            "total_revisits": 97,
+            "total_steps": 7144,
+            "total_valid_travel_m": 2143200
+          },
+          "13": {
+            "episodes": 150,
+            "failed_episodes": 27,
+            "last_step_successes": 0,
+            "mean_failed_sg": 6.2592592592592595,
+            "mean_failed_sg_m": 1877.7777777777778,
+            "mean_sg_all_episodes": 1.1266666666666667,
+            "mean_sg_m": 338.0,
+            "mean_steps": 15.526666666666667,
+            "mean_valid_travel_m": 4658.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.011000000000000001,
+            "repeat_visit_rate_micro": 0.014169171318162302,
+            "sr": 0.82,
+            "successes": 123,
+            "terminations": {
+              "budget_exhausted": 27,
+              "goal_reached": 123
+            },
+            "total_oob": 0,
+            "total_revisits": 33,
+            "total_steps": 2329,
+            "total_valid_travel_m": 698700
+          },
+          "14": {
+            "episodes": 150,
+            "failed_episodes": 17,
+            "last_step_successes": 17,
+            "mean_failed_sg": 6.705882352941177,
+            "mean_failed_sg_m": 2011.764705882353,
+            "mean_sg_all_episodes": 0.76,
+            "mean_sg_m": 228.0,
+            "mean_steps": 15.946666666666667,
+            "mean_valid_travel_m": 4784.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.008333333333333333,
+            "repeat_visit_rate_micro": 0.010451505016722408,
+            "sr": 0.8866666666666667,
+            "successes": 133,
+            "terminations": {
+              "budget_exhausted": 17,
+              "goal_reached": 133
+            },
+            "total_oob": 0,
+            "total_revisits": 25,
+            "total_steps": 2392,
+            "total_valid_travel_m": 717600
+          },
+          "15": {
+            "episodes": 150,
+            "failed_episodes": 18,
+            "last_step_successes": 0,
+            "mean_failed_sg": 6.777777777777778,
+            "mean_failed_sg_m": 2033.3333333333333,
+            "mean_sg_all_episodes": 0.8133333333333334,
+            "mean_sg_m": 244.0,
+            "mean_steps": 16.106666666666666,
+            "mean_valid_travel_m": 4832.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.0033333333333333335,
+            "repeat_visit_rate_micro": 0.0041390728476821195,
+            "sr": 0.88,
+            "successes": 132,
+            "terminations": {
+              "budget_exhausted": 18,
+              "goal_reached": 132
+            },
+            "total_oob": 0,
+            "total_revisits": 10,
+            "total_steps": 2416,
+            "total_valid_travel_m": 724800
+          },
+          "16": {
+            "episodes": 150,
+            "failed_episodes": 14,
+            "last_step_successes": 1,
+            "mean_failed_sg": 6.0,
+            "mean_failed_sg_m": 1800.0,
+            "mean_sg_all_episodes": 0.56,
+            "mean_sg_m": 168.0,
+            "mean_steps": 16.72,
+            "mean_valid_travel_m": 5016.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.0023333333333333335,
+            "repeat_visit_rate_micro": 0.0027910685805422647,
+            "sr": 0.9066666666666666,
+            "successes": 136,
+            "terminations": {
+              "budget_exhausted": 14,
+              "goal_reached": 136
+            },
+            "total_oob": 0,
+            "total_revisits": 7,
+            "total_steps": 2508,
+            "total_valid_travel_m": 752400
+          },
+          "8": {
+            "episodes": 300,
+            "failed_episodes": 142,
+            "last_step_successes": 15,
+            "mean_failed_sg": 6.774647887323944,
+            "mean_failed_sg_m": 2032.394366197183,
+            "mean_sg_all_episodes": 3.2066666666666666,
+            "mean_sg_m": 962.0,
+            "mean_steps": 15.366666666666667,
+            "mean_valid_travel_m": 4610.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.011152777777777779,
+            "repeat_visit_rate_micro": 0.014316702819956615,
+            "sr": 0.5266666666666666,
+            "successes": 158,
+            "terminations": {
+              "budget_exhausted": 142,
+              "goal_reached": 158
+            },
+            "total_oob": 0,
+            "total_revisits": 66,
+            "total_steps": 4610,
+            "total_valid_travel_m": 1383000
+          },
+          "9": {
+            "episodes": 300,
+            "failed_episodes": 144,
+            "last_step_successes": 0,
+            "mean_failed_sg": 7.027777777777778,
+            "mean_failed_sg_m": 2108.3333333333335,
+            "mean_sg_all_episodes": 3.3733333333333335,
+            "mean_sg_m": 1012.0,
+            "mean_steps": 15.893333333333333,
+            "mean_valid_travel_m": 4768.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.014786721706226351,
+            "repeat_visit_rate_micro": 0.018456375838926176,
+            "sr": 0.52,
+            "successes": 156,
+            "terminations": {
+              "budget_exhausted": 144,
+              "goal_reached": 156
+            },
+            "total_oob": 0,
+            "total_revisits": 88,
+            "total_steps": 4768,
+            "total_valid_travel_m": 1430400
+          }
+        },
+        "by_source": {
+          "MasaRoadsFresh/test_00": {
+            "episodes": 225,
+            "failed_episodes": 60,
+            "last_step_successes": 7,
+            "mean_failed_sg": 7.016666666666667,
+            "mean_failed_sg_m": 2105.0,
+            "mean_sg_all_episodes": 1.8711111111111112,
+            "mean_sg_m": 561.3333333333334,
+            "mean_steps": 15.444444444444445,
+            "mean_valid_travel_m": 4633.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.01287037037037037,
+            "repeat_visit_rate_micro": 0.016402877697841725,
+            "sr": 0.7333333333333333,
+            "successes": 165,
+            "terminations": {
+              "budget_exhausted": 60,
+              "goal_reached": 165
+            },
+            "total_oob": 0,
+            "total_revisits": 57,
+            "total_steps": 3475,
+            "total_valid_travel_m": 1042500
+          },
+          "MasaRoadsFresh/test_01": {
+            "episodes": 225,
+            "failed_episodes": 76,
+            "last_step_successes": 9,
+            "mean_failed_sg": 6.855263157894737,
+            "mean_failed_sg_m": 2056.5789473684213,
+            "mean_sg_all_episodes": 2.3155555555555556,
+            "mean_sg_m": 694.6666666666666,
+            "mean_steps": 15.684444444444445,
+            "mean_valid_travel_m": 4705.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.014154320987654321,
+            "repeat_visit_rate_micro": 0.01785208274298668,
+            "sr": 0.6622222222222223,
+            "successes": 149,
+            "terminations": {
+              "budget_exhausted": 76,
+              "goal_reached": 149
+            },
+            "total_oob": 0,
+            "total_revisits": 63,
+            "total_steps": 3529,
+            "total_valid_travel_m": 1058700
+          },
+          "MasaRoadsFresh/test_02": {
+            "episodes": 225,
+            "failed_episodes": 66,
+            "last_step_successes": 13,
+            "mean_failed_sg": 6.9393939393939394,
+            "mean_failed_sg_m": 2081.818181818182,
+            "mean_sg_all_episodes": 2.0355555555555553,
+            "mean_sg_m": 610.6666666666666,
+            "mean_steps": 15.795555555555556,
+            "mean_valid_travel_m": 4738.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.007615334632878492,
+            "repeat_visit_rate_micro": 0.009566685424873381,
+            "sr": 0.7066666666666667,
+            "successes": 159,
+            "terminations": {
+              "budget_exhausted": 66,
+              "goal_reached": 159
+            },
+            "total_oob": 0,
+            "total_revisits": 34,
+            "total_steps": 3554,
+            "total_valid_travel_m": 1066200
+          },
+          "MasaRoadsFresh/test_03": {
+            "episodes": 225,
+            "failed_episodes": 72,
+            "last_step_successes": 11,
+            "mean_failed_sg": 6.361111111111111,
+            "mean_failed_sg_m": 1908.3333333333333,
+            "mean_sg_all_episodes": 2.0355555555555553,
+            "mean_sg_m": 610.6666666666666,
+            "mean_steps": 16.017777777777777,
+            "mean_valid_travel_m": 4805.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.01077313381492948,
+            "repeat_visit_rate_micro": 0.013318534961154272,
+            "sr": 0.68,
+            "successes": 153,
+            "terminations": {
+              "budget_exhausted": 72,
+              "goal_reached": 153
+            },
+            "total_oob": 0,
+            "total_revisits": 48,
+            "total_steps": 3604,
+            "total_valid_travel_m": 1081200
+          },
+          "MasaRoadsFresh/test_04": {
+            "episodes": 225,
+            "failed_episodes": 73,
+            "last_step_successes": 12,
+            "mean_failed_sg": 7.027397260273973,
+            "mean_failed_sg_m": 2108.219178082192,
+            "mean_sg_all_episodes": 2.28,
+            "mean_sg_m": 684.0,
+            "mean_steps": 15.80888888888889,
+            "mean_valid_travel_m": 4742.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.01,
+            "repeat_visit_rate_micro": 0.012651110486364914,
+            "sr": 0.6755555555555556,
+            "successes": 152,
+            "terminations": {
+              "budget_exhausted": 73,
+              "goal_reached": 152
+            },
+            "total_oob": 0,
+            "total_revisits": 45,
+            "total_steps": 3557,
+            "total_valid_travel_m": 1067100
+          },
+          "MasaRoadsFresh/test_05": {
+            "episodes": 225,
+            "failed_episodes": 78,
+            "last_step_successes": 10,
+            "mean_failed_sg": 7.166666666666667,
+            "mean_failed_sg_m": 2150.0,
+            "mean_sg_all_episodes": 2.4844444444444442,
+            "mean_sg_m": 745.3333333333334,
+            "mean_steps": 16.244444444444444,
+            "mean_valid_travel_m": 4873.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.010888888888888889,
+            "repeat_visit_rate_micro": 0.013406292749658003,
+            "sr": 0.6533333333333333,
+            "successes": 147,
+            "terminations": {
+              "budget_exhausted": 78,
+              "goal_reached": 147
+            },
+            "total_oob": 0,
+            "total_revisits": 49,
+            "total_steps": 3655,
+            "total_valid_travel_m": 1096500
+          },
+          "MasaRoadsFresh/test_06": {
+            "episodes": 225,
+            "failed_episodes": 69,
+            "last_step_successes": 2,
+            "mean_failed_sg": 6.884057971014493,
+            "mean_failed_sg_m": 2065.217391304348,
+            "mean_sg_all_episodes": 2.111111111111111,
+            "mean_sg_m": 633.3333333333334,
+            "mean_steps": 15.675555555555556,
+            "mean_valid_travel_m": 4702.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.0138635477582846,
+            "repeat_visit_rate_micro": 0.017578678763821944,
+            "sr": 0.6933333333333334,
+            "successes": 156,
+            "terminations": {
+              "budget_exhausted": 69,
+              "goal_reached": 156
+            },
+            "total_oob": 0,
+            "total_revisits": 62,
+            "total_steps": 3527,
+            "total_valid_travel_m": 1058100
+          },
+          "MasaRoadsFresh/test_07": {
+            "episodes": 225,
+            "failed_episodes": 71,
+            "last_step_successes": 12,
+            "mean_failed_sg": 7.394366197183099,
+            "mean_failed_sg_m": 2218.3098591549297,
+            "mean_sg_all_episodes": 2.3333333333333335,
+            "mean_sg_m": 700.0,
+            "mean_steps": 16.066666666666666,
+            "mean_valid_travel_m": 4820.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.014131254061078622,
+            "repeat_visit_rate_micro": 0.017427385892116183,
+            "sr": 0.6844444444444444,
+            "successes": 154,
+            "terminations": {
+              "budget_exhausted": 71,
+              "goal_reached": 154
+            },
+            "total_oob": 0,
+            "total_revisits": 63,
+            "total_steps": 3615,
+            "total_valid_travel_m": 1084500
+          },
+          "MasaRoadsFresh/test_08": {
+            "episodes": 225,
+            "failed_episodes": 86,
+            "last_step_successes": 6,
+            "mean_failed_sg": 6.290697674418604,
+            "mean_failed_sg_m": 1887.2093023255813,
+            "mean_sg_all_episodes": 2.4044444444444446,
+            "mean_sg_m": 721.3333333333334,
+            "mean_steps": 16.395555555555557,
+            "mean_valid_travel_m": 4918.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.009827160493827161,
+            "repeat_visit_rate_micro": 0.01192735158579561,
+            "sr": 0.6177777777777778,
+            "successes": 139,
+            "terminations": {
+              "budget_exhausted": 86,
+              "goal_reached": 139
+            },
+            "total_oob": 0,
+            "total_revisits": 44,
+            "total_steps": 3689,
+            "total_valid_travel_m": 1106700
+          },
+          "MasaRoadsFresh/test_09": {
+            "episodes": 225,
+            "failed_episodes": 68,
+            "last_step_successes": 5,
+            "mean_failed_sg": 5.779411764705882,
+            "mean_failed_sg_m": 1733.8235294117646,
+            "mean_sg_all_episodes": 1.7466666666666666,
+            "mean_sg_m": 524.0,
+            "mean_steps": 15.844444444444445,
+            "mean_valid_travel_m": 4753.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.008103638726445744,
+            "repeat_visit_rate_micro": 0.010098176718092567,
+            "sr": 0.6977777777777778,
+            "successes": 157,
+            "terminations": {
+              "budget_exhausted": 68,
+              "goal_reached": 157
+            },
+            "total_oob": 0,
+            "total_revisits": 36,
+            "total_steps": 3565,
+            "total_valid_travel_m": 1069500
+          }
+        },
+        "by_stratum": {
+          "interior_target": {
+            "episodes": 750,
+            "failed_episodes": 321,
+            "last_step_successes": 29,
+            "mean_failed_sg": 7.881619937694704,
+            "mean_failed_sg_m": 2364.4859813084113,
+            "mean_sg_all_episodes": 3.3733333333333335,
+            "mean_sg_m": 1012.0,
+            "mean_steps": 15.933333333333334,
+            "mean_valid_travel_m": 4780.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.013346003898635477,
+            "repeat_visit_rate_micro": 0.016569037656903766,
+            "sr": 0.572,
+            "successes": 429,
+            "terminations": {
+              "budget_exhausted": 321,
+              "goal_reached": 429
+            },
+            "total_oob": 0,
+            "total_revisits": 198,
+            "total_steps": 11950,
+            "total_valid_travel_m": 3585000
+          },
+          "long_distance": {
+            "episodes": 750,
+            "failed_episodes": 116,
+            "last_step_successes": 26,
+            "mean_failed_sg": 6.767241379310345,
+            "mean_failed_sg_m": 2030.1724137931035,
+            "mean_sg_all_episodes": 1.0466666666666666,
+            "mean_sg_m": 314.0,
+            "mean_steps": 15.998666666666667,
+            "mean_valid_travel_m": 4799.6,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.007231481481481482,
+            "repeat_visit_rate_micro": 0.00900075006250521,
+            "sr": 0.8453333333333334,
+            "successes": 634,
+            "terminations": {
+              "budget_exhausted": 116,
+              "goal_reached": 634
+            },
+            "total_oob": 0,
+            "total_revisits": 108,
+            "total_steps": 11999,
+            "total_valid_travel_m": 3599700
+          },
+          "seam_target": {
+            "episodes": 750,
+            "failed_episodes": 282,
+            "last_step_successes": 32,
+            "mean_failed_sg": 5.49290780141844,
+            "mean_failed_sg_m": 1647.872340425532,
+            "mean_sg_all_episodes": 2.0653333333333332,
+            "mean_sg_m": 619.6,
+            "mean_steps": 15.761333333333333,
+            "mean_valid_travel_m": 4728.4,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.013090809540190346,
+            "repeat_visit_rate_micro": 0.01649606632264614,
+            "sr": 0.624,
+            "successes": 468,
+            "terminations": {
+              "budget_exhausted": 282,
+              "goal_reached": 468
+            },
+            "total_oob": 0,
+            "total_revisits": 195,
+            "total_steps": 11821,
+            "total_valid_travel_m": 3546300
+          }
+        },
+        "diagnostics": {
+          "accepted_given_hits": 1500,
+          "accepted_not_true_hit": 134,
+          "accepted_true_hit_rate": 0.9179926560587516,
+          "accepted_true_hits": 1500,
+          "action_count": 35770,
+          "actionable_adjacency_records": 1551,
+          "adjacency": {
+            "cross_source": {
+              "acceptance_rate": 0.9847328244274809,
+              "accepted": 129,
+              "accepted_correct": 129,
+              "correct_acceptance_rate": 0.9847328244274809,
+              "opportunities": 131
+            },
+            "same_source": {
+              "acceptance_rate": 0.9648135116115412,
+              "accepted": 1371,
+              "accepted_correct": 1371,
+              "correct_acceptance_rate": 0.9648135116115412,
+              "opportunities": 1421
+            }
+          },
+          "crossing_records": 2248,
+          "crossings": 4773,
+          "cue_accepts": 1634,
+          "failure_categories": {
+            "adjacent_only_terminal": 40,
+            "missed_actionable_adjacency": 20,
+            "never_within2": 332,
+            "within2_never_adjacent": 327
+          },
+          "reasons": {
+            "accepted": 1634,
+            "illegal_top_direction": 11,
+            "low_confidence": 19,
+            "not_adjacent": 34063,
+            "visited_top_destination": 43
+          }
+        },
+        "metrics": {
+          "episodes": 2250,
+          "failed_episodes": 719,
+          "last_step_successes": 87,
+          "mean_failed_sg": 6.764951321279555,
+          "mean_failed_sg_m": 2029.4853963838664,
+          "mean_sg_all_episodes": 2.1617777777777776,
+          "mean_sg_m": 648.5333333333333,
+          "mean_steps": 15.897777777777778,
+          "mean_valid_travel_m": 4769.333333333333,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.01122276497343577,
+          "repeat_visit_rate_micro": 0.014006150405367627,
+          "sr": 0.6804444444444444,
+          "successes": 1531,
+          "terminations": {
+            "budget_exhausted": 719,
+            "goal_reached": 1531
+          },
+          "total_oob": 0,
+          "total_revisits": 501,
+          "total_steps": 35770,
+          "total_valid_travel_m": 10731000
+        }
+      },
+      "checks": {
+        "mixed_SG_no_worse": true,
+        "mixed_SR_gain2pp": true,
+        "source95_SR_lower_positive": true,
+        "strata": {
+          "interior_target": {
+            "SG_no_worse": true,
+            "SR_loss_at_most2pp": true
+          },
+          "long_distance": {
+            "SG_no_worse": true,
+            "SR_loss_at_most2pp": true
+          },
+          "seam_target": {
+            "SG_no_worse": true,
+            "SR_loss_at_most2pp": true
+          }
+        },
+        "two_positive_weights": true
+      },
+      "effects": {
+        "all": {
+          "bootstrap_resamples": 4000,
+          "bootstrap_seed": 7317,
+          "interpretation": "paired whole-region uncertainty; weights are not independent source maps",
+          "positive_seeds": 3,
+          "sg_change": -2.1355555555555554,
+          "source95_SG": [
+            -2.3440000000000003,
+            -1.9275444444444445
+          ],
+          "source95_SR": [
+            0.3408888888888889,
+            0.3808888888888889
+          ],
+          "source_count": 10,
+          "source_effects": {
+            "MasaRoadsFresh/test_00": {
+              "sg": -2.6,
+              "sr": 0.43555555555555553
+            },
+            "MasaRoadsFresh/test_01": {
+              "sg": -2.151111111111111,
+              "sr": 0.35555555555555557
+            },
+            "MasaRoadsFresh/test_02": {
+              "sg": -1.888888888888889,
+              "sr": 0.3422222222222222
+            },
+            "MasaRoadsFresh/test_03": {
+              "sg": -1.6533333333333333,
+              "sr": 0.34222222222222226
+            },
+            "MasaRoadsFresh/test_04": {
+              "sg": -2.5733333333333337,
+              "sr": 0.39111111111111113
+            },
+            "MasaRoadsFresh/test_05": {
+              "sg": -1.7822222222222222,
+              "sr": 0.3466666666666667
+            },
+            "MasaRoadsFresh/test_06": {
+              "sg": -1.7955555555555556,
+              "sr": 0.3333333333333333
+            },
+            "MasaRoadsFresh/test_07": {
+              "sg": -2.1199999999999997,
+              "sr": 0.3466666666666667
+            },
+            "MasaRoadsFresh/test_08": {
+              "sg": -2.2355555555555555,
+              "sr": 0.32
+            },
+            "MasaRoadsFresh/test_09": {
+              "sg": -2.5555555555555554,
+              "sr": 0.37333333333333335
+            }
+          },
+          "sr_gain": 0.35866666666666663,
+          "sr_gain_by_seed": [
+            0.33466666666666667,
+            0.39599999999999996,
+            0.3453333333333333
+          ]
+        },
+        "interior_target": {
+          "bootstrap_resamples": 4000,
+          "bootstrap_seed": 7317,
+          "interpretation": "paired whole-region uncertainty; weights are not independent source maps",
+          "positive_seeds": 3,
+          "sg_change": -2.3013333333333335,
+          "source95_SG": [
+            -2.6600333333333332,
+            -1.9786666666666668
+          ],
+          "source95_SR": [
+            0.30533333333333335,
+            0.37333333333333335
+          ],
+          "source_count": 10,
+          "source_effects": {
+            "MasaRoadsFresh/test_00": {
+              "sg": -2.6,
+              "sr": 0.41333333333333333
+            },
+            "MasaRoadsFresh/test_01": {
+              "sg": -2.4133333333333336,
+              "sr": 0.32
+            },
+            "MasaRoadsFresh/test_02": {
+              "sg": -2.36,
+              "sr": 0.4000000000000001
+            },
+            "MasaRoadsFresh/test_03": {
+              "sg": -1.9333333333333336,
+              "sr": 0.30666666666666664
+            },
+            "MasaRoadsFresh/test_04": {
+              "sg": -2.1333333333333337,
+              "sr": 0.3066666666666667
+            },
+            "MasaRoadsFresh/test_05": {
+              "sg": -1.4799999999999998,
+              "sr": 0.26666666666666666
+            },
+            "MasaRoadsFresh/test_06": {
+              "sg": -2.3866666666666667,
+              "sr": 0.3466666666666667
+            },
+            "MasaRoadsFresh/test_07": {
+              "sg": -2.4,
+              "sr": 0.3466666666666667
+            },
+            "MasaRoadsFresh/test_08": {
+              "sg": -1.6533333333333333,
+              "sr": 0.25333333333333335
+            },
+            "MasaRoadsFresh/test_09": {
+              "sg": -3.6533333333333338,
+              "sr": 0.4266666666666667
+            }
+          },
+          "sr_gain": 0.33866666666666667,
+          "sr_gain_by_seed": [
+            0.3320000000000001,
+            0.376,
+            0.30800000000000005
+          ]
+        },
+        "long_distance": {
+          "bootstrap_resamples": 4000,
+          "bootstrap_seed": 7317,
+          "interpretation": "paired whole-region uncertainty; weights are not independent source maps",
+          "positive_seeds": 3,
+          "sg_change": -2.092,
+          "source95_SG": [
+            -2.3747000000000003,
+            -1.8172666666666664
+          ],
+          "source95_SR": [
+            0.3866666666666666,
+            0.4426666666666666
+          ],
+          "source_count": 10,
+          "source_effects": {
+            "MasaRoadsFresh/test_00": {
+              "sg": -2.2133333333333334,
+              "sr": 0.43999999999999995
+            },
+            "MasaRoadsFresh/test_01": {
+              "sg": -2.213333333333333,
+              "sr": 0.4533333333333333
+            },
+            "MasaRoadsFresh/test_02": {
+              "sg": -1.28,
+              "sr": 0.2933333333333334
+            },
+            "MasaRoadsFresh/test_03": {
+              "sg": -1.96,
+              "sr": 0.4533333333333333
+            },
+            "MasaRoadsFresh/test_04": {
+              "sg": -2.92,
+              "sr": 0.4533333333333333
+            },
+            "MasaRoadsFresh/test_05": {
+              "sg": -2.013333333333333,
+              "sr": 0.44
+            },
+            "MasaRoadsFresh/test_06": {
+              "sg": -1.4800000000000002,
+              "sr": 0.38666666666666666
+            },
+            "MasaRoadsFresh/test_07": {
+              "sg": -2.2266666666666666,
+              "sr": 0.43999999999999995
+            },
+            "MasaRoadsFresh/test_08": {
+              "sg": -2.6266666666666665,
+              "sr": 0.41333333333333333
+            },
+            "MasaRoadsFresh/test_09": {
+              "sg": -1.9866666666666666,
+              "sr": 0.41333333333333333
+            }
+          },
+          "sr_gain": 0.4186666666666667,
+          "sr_gain_by_seed": [
+            0.36000000000000004,
+            0.49200000000000005,
+            0.40399999999999997
+          ]
+        },
+        "seam_target": {
+          "bootstrap_resamples": 4000,
+          "bootstrap_seed": 7317,
+          "interpretation": "paired whole-region uncertainty; weights are not independent source maps",
+          "positive_seeds": 3,
+          "sg_change": -2.013333333333333,
+          "source95_SG": [
+            -2.3520333333333334,
+            -1.6946666666666665
+          ],
+          "source95_SR": [
+            0.2826666666666667,
+            0.36133333333333334
+          ],
+          "source_count": 10,
+          "source_effects": {
+            "MasaRoadsFresh/test_00": {
+              "sg": -2.986666666666667,
+              "sr": 0.4533333333333333
+            },
+            "MasaRoadsFresh/test_01": {
+              "sg": -1.8266666666666669,
+              "sr": 0.2933333333333334
+            },
+            "MasaRoadsFresh/test_02": {
+              "sg": -2.026666666666667,
+              "sr": 0.3333333333333333
+            },
+            "MasaRoadsFresh/test_03": {
+              "sg": -1.0666666666666667,
+              "sr": 0.26666666666666666
+            },
+            "MasaRoadsFresh/test_04": {
+              "sg": -2.6666666666666665,
+              "sr": 0.41333333333333333
+            },
+            "MasaRoadsFresh/test_05": {
+              "sg": -1.8533333333333335,
+              "sr": 0.3333333333333333
+            },
+            "MasaRoadsFresh/test_06": {
+              "sg": -1.5200000000000002,
+              "sr": 0.26666666666666666
+            },
+            "MasaRoadsFresh/test_07": {
+              "sg": -1.7333333333333334,
+              "sr": 0.25333333333333335
+            },
+            "MasaRoadsFresh/test_08": {
+              "sg": -2.4266666666666667,
+              "sr": 0.29333333333333333
+            },
+            "MasaRoadsFresh/test_09": {
+              "sg": -2.026666666666667,
+              "sr": 0.28
+            }
+          },
+          "sr_gain": 0.31866666666666665,
+          "sr_gain_by_seed": [
+            0.312,
+            0.32,
+            0.324
+          ]
+        }
+      },
+      "harmed": 23,
+      "main_numeric_passed": true,
+      "recovered": 830,
+      "reference": {
+        "by_distance": {
+          "10": {
+            "episodes": 300,
+            "failed_episodes": 226,
+            "last_step_successes": 9,
+            "mean_failed_sg": 6.3097345132743365,
+            "mean_failed_sg_m": 1892.9203539823009,
+            "mean_sg_all_episodes": 4.753333333333333,
+            "mean_sg_m": 1426.0,
+            "mean_steps": 18.553333333333335,
+            "mean_valid_travel_m": 5566.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.024386243386243386,
+            "repeat_visit_rate_micro": 0.02605102407473949,
+            "sr": 0.24666666666666667,
+            "successes": 74,
+            "terminations": {
+              "budget_exhausted": 226,
+              "goal_reached": 74
+            },
+            "total_oob": 0,
+            "total_revisits": 145,
+            "total_steps": 5566,
+            "total_valid_travel_m": 1669800
+          },
+          "11": {
+            "episodes": 300,
+            "failed_episodes": 210,
+            "last_step_successes": 0,
+            "mean_failed_sg": 6.3619047619047615,
+            "mean_failed_sg_m": 1908.5714285714287,
+            "mean_sg_all_episodes": 4.453333333333333,
+            "mean_sg_m": 1336.0,
+            "mean_steps": 18.086666666666666,
+            "mean_valid_travel_m": 5426.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.021935897435897436,
+            "repeat_visit_rate_micro": 0.02395871728713601,
+            "sr": 0.3,
+            "successes": 90,
+            "terminations": {
+              "budget_exhausted": 210,
+              "goal_reached": 90
+            },
+            "total_oob": 0,
+            "total_revisits": 130,
+            "total_steps": 5426,
+            "total_valid_travel_m": 1627800
+          },
+          "12": {
+            "episodes": 450,
+            "failed_episodes": 294,
+            "last_step_successes": 24,
+            "mean_failed_sg": 6.068027210884353,
+            "mean_failed_sg_m": 1820.408163265306,
+            "mean_sg_all_episodes": 3.9644444444444447,
+            "mean_sg_m": 1189.3333333333333,
+            "mean_steps": 18.355555555555554,
+            "mean_valid_travel_m": 5506.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.025596560846560847,
+            "repeat_visit_rate_micro": 0.0274818401937046,
+            "sr": 0.3466666666666667,
+            "successes": 156,
+            "terminations": {
+              "budget_exhausted": 294,
+              "goal_reached": 156
+            },
+            "total_oob": 0,
+            "total_revisits": 227,
+            "total_steps": 8260,
+            "total_valid_travel_m": 2478000
+          },
+          "13": {
+            "episodes": 150,
+            "failed_episodes": 96,
+            "last_step_successes": 0,
+            "mean_failed_sg": 6.041666666666667,
+            "mean_failed_sg_m": 1812.5,
+            "mean_sg_all_episodes": 3.8666666666666667,
+            "mean_sg_m": 1160.0,
+            "mean_steps": 18.4,
+            "mean_valid_travel_m": 5520.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.02262091503267974,
+            "repeat_visit_rate_micro": 0.02427536231884058,
+            "sr": 0.36,
+            "successes": 54,
+            "terminations": {
+              "budget_exhausted": 96,
+              "goal_reached": 54
+            },
+            "total_oob": 0,
+            "total_revisits": 67,
+            "total_steps": 2760,
+            "total_valid_travel_m": 828000
+          },
+          "14": {
+            "episodes": 150,
+            "failed_episodes": 92,
+            "last_step_successes": 12,
+            "mean_failed_sg": 5.456521739130435,
+            "mean_failed_sg_m": 1636.9565217391305,
+            "mean_sg_all_episodes": 3.3466666666666667,
+            "mean_sg_m": 1004.0,
+            "mean_steps": 18.6,
+            "mean_valid_travel_m": 5580.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.02,
+            "repeat_visit_rate_micro": 0.021505376344086023,
+            "sr": 0.38666666666666666,
+            "successes": 58,
+            "terminations": {
+              "budget_exhausted": 92,
+              "goal_reached": 58
+            },
+            "total_oob": 0,
+            "total_revisits": 60,
+            "total_steps": 2790,
+            "total_valid_travel_m": 837000
+          },
+          "15": {
+            "episodes": 150,
+            "failed_episodes": 82,
+            "last_step_successes": 0,
+            "mean_failed_sg": 4.7560975609756095,
+            "mean_failed_sg_m": 1426.8292682926829,
+            "mean_sg_all_episodes": 2.6,
+            "mean_sg_m": 780.0,
+            "mean_steps": 18.333333333333332,
+            "mean_valid_travel_m": 5500.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.01709391124871001,
+            "repeat_visit_rate_micro": 0.018545454545454546,
+            "sr": 0.4533333333333333,
+            "successes": 68,
+            "terminations": {
+              "budget_exhausted": 82,
+              "goal_reached": 68
+            },
+            "total_oob": 0,
+            "total_revisits": 51,
+            "total_steps": 2750,
+            "total_valid_travel_m": 825000
+          },
+          "16": {
+            "episodes": 150,
+            "failed_episodes": 63,
+            "last_step_successes": 6,
+            "mean_failed_sg": 4.888888888888889,
+            "mean_failed_sg_m": 1466.6666666666667,
+            "mean_sg_all_episodes": 2.0533333333333332,
+            "mean_sg_m": 616.0,
+            "mean_steps": 18.32,
+            "mean_valid_travel_m": 5496.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.008222222222222223,
+            "repeat_visit_rate_micro": 0.008733624454148471,
+            "sr": 0.58,
+            "successes": 87,
+            "terminations": {
+              "budget_exhausted": 63,
+              "goal_reached": 87
+            },
+            "total_oob": 0,
+            "total_revisits": 24,
+            "total_steps": 2748,
+            "total_valid_travel_m": 824400
+          },
+          "8": {
+            "episodes": 300,
+            "failed_episodes": 234,
+            "last_step_successes": 5,
+            "mean_failed_sg": 7.188034188034188,
+            "mean_failed_sg_m": 2156.4102564102564,
+            "mean_sg_all_episodes": 5.6066666666666665,
+            "mean_sg_m": 1682.0,
+            "mean_steps": 18.02,
+            "mean_valid_travel_m": 5406.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.018685185185185187,
+            "repeat_visit_rate_micro": 0.020347761746207917,
+            "sr": 0.22,
+            "successes": 66,
+            "terminations": {
+              "budget_exhausted": 234,
+              "goal_reached": 66
+            },
+            "total_oob": 0,
+            "total_revisits": 110,
+            "total_steps": 5406,
+            "total_valid_travel_m": 1621800
+          },
+          "9": {
+            "episodes": 300,
+            "failed_episodes": 229,
+            "last_step_successes": 0,
+            "mean_failed_sg": 7.253275109170306,
+            "mean_failed_sg_m": 2175.9825327510916,
+            "mean_sg_all_episodes": 5.536666666666667,
+            "mean_sg_m": 1661.0,
+            "mean_steps": 18.303333333333335,
+            "mean_valid_travel_m": 5491.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.018841549575295706,
+            "repeat_visit_rate_micro": 0.02039701329448188,
+            "sr": 0.23666666666666666,
+            "successes": 71,
+            "terminations": {
+              "budget_exhausted": 229,
+              "goal_reached": 71
+            },
+            "total_oob": 0,
+            "total_revisits": 112,
+            "total_steps": 5491,
+            "total_valid_travel_m": 1647300
+          }
+        },
+        "by_source": {
+          "MasaRoadsFresh/test_00": {
+            "episodes": 225,
+            "failed_episodes": 158,
+            "last_step_successes": 3,
+            "mean_failed_sg": 6.367088607594937,
+            "mean_failed_sg_m": 1910.126582278481,
+            "mean_sg_all_episodes": 4.471111111111111,
+            "mean_sg_m": 1341.3333333333333,
+            "mean_steps": 18.4,
+            "mean_valid_travel_m": 5520.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.02873057371096587,
+            "repeat_visit_rate_micro": 0.031159420289855074,
+            "sr": 0.29777777777777775,
+            "successes": 67,
+            "terminations": {
+              "budget_exhausted": 158,
+              "goal_reached": 67
+            },
+            "total_oob": 0,
+            "total_revisits": 129,
+            "total_steps": 4140,
+            "total_valid_travel_m": 1242000
+          },
+          "MasaRoadsFresh/test_01": {
+            "episodes": 225,
+            "failed_episodes": 156,
+            "last_step_successes": 5,
+            "mean_failed_sg": 6.4423076923076925,
+            "mean_failed_sg_m": 1932.6923076923076,
+            "mean_sg_all_episodes": 4.466666666666667,
+            "mean_sg_m": 1340.0,
+            "mean_steps": 18.182222222222222,
+            "mean_valid_travel_m": 5454.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.024265807807603474,
+            "repeat_visit_rate_micro": 0.026399413346370082,
+            "sr": 0.30666666666666664,
+            "successes": 69,
+            "terminations": {
+              "budget_exhausted": 156,
+              "goal_reached": 69
+            },
+            "total_oob": 0,
+            "total_revisits": 108,
+            "total_steps": 4091,
+            "total_valid_travel_m": 1227300
+          },
+          "MasaRoadsFresh/test_02": {
+            "episodes": 225,
+            "failed_episodes": 143,
+            "last_step_successes": 7,
+            "mean_failed_sg": 6.174825174825175,
+            "mean_failed_sg_m": 1852.4475524475524,
+            "mean_sg_all_episodes": 3.9244444444444446,
+            "mean_sg_m": 1177.3333333333333,
+            "mean_steps": 18.164444444444445,
+            "mean_valid_travel_m": 5449.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.014530214424951268,
+            "repeat_visit_rate_micro": 0.015904086126743332,
+            "sr": 0.36444444444444446,
+            "successes": 82,
+            "terminations": {
+              "budget_exhausted": 143,
+              "goal_reached": 82
+            },
+            "total_oob": 0,
+            "total_revisits": 65,
+            "total_steps": 4087,
+            "total_valid_travel_m": 1226100
+          },
+          "MasaRoadsFresh/test_03": {
+            "episodes": 225,
+            "failed_episodes": 149,
+            "last_step_successes": 5,
+            "mean_failed_sg": 5.570469798657718,
+            "mean_failed_sg_m": 1671.1409395973155,
+            "mean_sg_all_episodes": 3.688888888888889,
+            "mean_sg_m": 1106.6666666666667,
+            "mean_steps": 18.142222222222223,
+            "mean_valid_travel_m": 5442.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.022916225749559083,
+            "repeat_visit_rate_micro": 0.024987751102400785,
+            "sr": 0.3377777777777778,
+            "successes": 76,
+            "terminations": {
+              "budget_exhausted": 149,
+              "goal_reached": 76
+            },
+            "total_oob": 0,
+            "total_revisits": 102,
+            "total_steps": 4082,
+            "total_valid_travel_m": 1224600
+          },
+          "MasaRoadsFresh/test_04": {
+            "episodes": 225,
+            "failed_episodes": 161,
+            "last_step_successes": 5,
+            "mean_failed_sg": 6.782608695652174,
+            "mean_failed_sg_m": 2034.7826086956522,
+            "mean_sg_all_episodes": 4.8533333333333335,
+            "mean_sg_m": 1456.0,
+            "mean_steps": 18.31111111111111,
+            "mean_valid_travel_m": 5493.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.016483660130718954,
+            "repeat_visit_rate_micro": 0.017961165048543688,
+            "sr": 0.28444444444444444,
+            "successes": 64,
+            "terminations": {
+              "budget_exhausted": 161,
+              "goal_reached": 64
+            },
+            "total_oob": 0,
+            "total_revisits": 74,
+            "total_steps": 4120,
+            "total_valid_travel_m": 1236000
+          },
+          "MasaRoadsFresh/test_05": {
+            "episodes": 225,
+            "failed_episodes": 156,
+            "last_step_successes": 7,
+            "mean_failed_sg": 6.153846153846154,
+            "mean_failed_sg_m": 1846.1538461538462,
+            "mean_sg_all_episodes": 4.266666666666667,
+            "mean_sg_m": 1280.0,
+            "mean_steps": 18.453333333333333,
+            "mean_valid_travel_m": 5536.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.02615210642661623,
+            "repeat_visit_rate_micro": 0.02697495183044316,
+            "sr": 0.30666666666666664,
+            "successes": 69,
+            "terminations": {
+              "budget_exhausted": 156,
+              "goal_reached": 69
+            },
+            "total_oob": 0,
+            "total_revisits": 112,
+            "total_steps": 4152,
+            "total_valid_travel_m": 1245600
+          },
+          "MasaRoadsFresh/test_06": {
+            "episodes": 225,
+            "failed_episodes": 144,
+            "last_step_successes": 5,
+            "mean_failed_sg": 6.104166666666667,
+            "mean_failed_sg_m": 1831.25,
+            "mean_sg_all_episodes": 3.9066666666666667,
+            "mean_sg_m": 1172.0,
+            "mean_steps": 18.075555555555557,
+            "mean_valid_travel_m": 5422.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.020678362573099417,
+            "repeat_visit_rate_micro": 0.022866978116547823,
+            "sr": 0.36,
+            "successes": 81,
+            "terminations": {
+              "budget_exhausted": 144,
+              "goal_reached": 81
+            },
+            "total_oob": 0,
+            "total_revisits": 93,
+            "total_steps": 4067,
+            "total_valid_travel_m": 1220100
+          },
+          "MasaRoadsFresh/test_07": {
+            "episodes": 225,
+            "failed_episodes": 149,
+            "last_step_successes": 9,
+            "mean_failed_sg": 6.724832214765101,
+            "mean_failed_sg_m": 2017.4496644295302,
+            "mean_sg_all_episodes": 4.453333333333333,
+            "mean_sg_m": 1336.0,
+            "mean_steps": 18.426666666666666,
+            "mean_valid_travel_m": 5528.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.022838206627680314,
+            "repeat_visit_rate_micro": 0.024602026049204053,
+            "sr": 0.3377777777777778,
+            "successes": 76,
+            "terminations": {
+              "budget_exhausted": 149,
+              "goal_reached": 76
+            },
+            "total_oob": 0,
+            "total_revisits": 102,
+            "total_steps": 4146,
+            "total_valid_travel_m": 1243800
+          },
+          "MasaRoadsFresh/test_08": {
+            "episodes": 225,
+            "failed_episodes": 158,
+            "last_step_successes": 5,
+            "mean_failed_sg": 6.6075949367088604,
+            "mean_failed_sg_m": 1982.2784810126582,
+            "mean_sg_all_episodes": 4.64,
+            "mean_sg_m": 1392.0,
+            "mean_steps": 18.391111111111112,
+            "mean_valid_travel_m": 5517.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.015358024691358024,
+            "repeat_visit_rate_micro": 0.0166747220879652,
+            "sr": 0.29777777777777775,
+            "successes": 67,
+            "terminations": {
+              "budget_exhausted": 158,
+              "goal_reached": 67
+            },
+            "total_oob": 0,
+            "total_revisits": 69,
+            "total_steps": 4138,
+            "total_valid_travel_m": 1241400
+          },
+          "MasaRoadsFresh/test_09": {
+            "episodes": 225,
+            "failed_episodes": 152,
+            "last_step_successes": 5,
+            "mean_failed_sg": 6.368421052631579,
+            "mean_failed_sg_m": 1910.5263157894738,
+            "mean_sg_all_episodes": 4.302222222222222,
+            "mean_sg_m": 1290.6666666666667,
+            "mean_steps": 18.551111111111112,
+            "mean_valid_travel_m": 5565.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.016329805996472664,
+            "repeat_visit_rate_micro": 0.017249640632486823,
+            "sr": 0.3244444444444444,
+            "successes": 73,
+            "terminations": {
+              "budget_exhausted": 152,
+              "goal_reached": 73
+            },
+            "total_oob": 0,
+            "total_revisits": 72,
+            "total_steps": 4174,
+            "total_valid_travel_m": 1252200
+          }
+        },
+        "by_stratum": {
+          "interior_target": {
+            "episodes": 750,
+            "failed_episodes": 575,
+            "last_step_successes": 15,
+            "mean_failed_sg": 7.401739130434783,
+            "mean_failed_sg_m": 2220.521739130435,
+            "mean_sg_all_episodes": 5.674666666666667,
+            "mean_sg_m": 1702.4,
+            "mean_steps": 18.506666666666668,
+            "mean_valid_travel_m": 5552.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.021828625485281833,
+            "repeat_visit_rate_micro": 0.023270893371757924,
+            "sr": 0.23333333333333334,
+            "successes": 175,
+            "terminations": {
+              "budget_exhausted": 575,
+              "goal_reached": 175
+            },
+            "total_oob": 0,
+            "total_revisits": 323,
+            "total_steps": 13880,
+            "total_valid_travel_m": 4164000
+          },
+          "long_distance": {
+            "episodes": 750,
+            "failed_episodes": 430,
+            "last_step_successes": 24,
+            "mean_failed_sg": 5.474418604651163,
+            "mean_failed_sg_m": 1642.3255813953488,
+            "mean_sg_all_episodes": 3.1386666666666665,
+            "mean_sg_m": 941.6,
+            "mean_steps": 18.370666666666665,
+            "mean_valid_travel_m": 5511.2,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.019536351499664192,
+            "repeat_visit_rate_micro": 0.021048047612135287,
+            "sr": 0.4266666666666667,
+            "successes": 320,
+            "terminations": {
+              "budget_exhausted": 430,
+              "goal_reached": 320
+            },
+            "total_oob": 0,
+            "total_revisits": 290,
+            "total_steps": 13778,
+            "total_valid_travel_m": 4133400
+          },
+          "seam_target": {
+            "episodes": 750,
+            "failed_episodes": 521,
+            "last_step_successes": 17,
+            "mean_failed_sg": 5.871401151631478,
+            "mean_failed_sg_m": 1761.4203454894434,
+            "mean_sg_all_episodes": 4.078666666666667,
+            "mean_sg_m": 1223.6,
+            "mean_steps": 18.052,
+            "mean_valid_travel_m": 5415.6,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.021119919456761563,
+            "repeat_visit_rate_micro": 0.023118398700051702,
+            "sr": 0.30533333333333335,
+            "successes": 229,
+            "terminations": {
+              "budget_exhausted": 521,
+              "goal_reached": 229
+            },
+            "total_oob": 0,
+            "total_revisits": 313,
+            "total_steps": 13539,
+            "total_valid_travel_m": 4061700
+          }
+        },
+        "diagnostics": {
+          "accepted_given_hits": 44,
+          "accepted_not_true_hit": 3239,
+          "accepted_true_hit_rate": 0.013402375875723424,
+          "accepted_true_hits": 44,
+          "action_count": 41197,
+          "actionable_adjacency_records": 1430,
+          "adjacency": {
+            "cross_source": {
+              "acceptance_rate": 0.058394160583941604,
+              "accepted": 8,
+              "accepted_correct": 8,
+              "correct_acceptance_rate": 0.058394160583941604,
+              "opportunities": 137
+            },
+            "same_source": {
+              "acceptance_rate": 0.08548168249660787,
+              "accepted": 126,
+              "accepted_correct": 36,
+              "correct_acceptance_rate": 0.024423337856173677,
+              "opportunities": 1474
+            }
+          },
+          "crossing_records": 2250,
+          "crossings": 5201,
+          "cue_accepts": 3283,
+          "failure_categories": {
+            "adjacent_only_terminal": 48,
+            "missed_actionable_adjacency": 706,
+            "never_within2": 422,
+            "within2_never_adjacent": 350
+          },
+          "reasons": {
+            "accepted": 3283,
+            "illegal_top_direction": 371,
+            "low_confidence": 593,
+            "not_adjacent": 35029,
+            "visited_top_destination": 1921
+          }
+        },
+        "metrics": {
+          "episodes": 2250,
+          "failed_episodes": 1526,
+          "last_step_successes": 56,
+          "mean_failed_sg": 6.336173001310616,
+          "mean_failed_sg_m": 1900.851900393185,
+          "mean_sg_all_episodes": 4.2973333333333334,
+          "mean_sg_m": 1289.2,
+          "mean_steps": 18.30977777777778,
+          "mean_valid_travel_m": 5492.933333333333,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.02082829881390253,
+          "repeat_visit_rate_micro": 0.02247736485666432,
+          "sr": 0.3217777777777778,
+          "successes": 724,
+          "terminations": {
+            "budget_exhausted": 1526,
+            "goal_reached": 724
+          },
+          "total_oob": 0,
+          "total_revisits": 926,
+          "total_steps": 41197,
+          "total_valid_travel_m": 12359100
+        }
+      },
+      "scope": "frozen independent new geographic region confirmation",
+      "source_regions": 10,
+      "unique_tasks": 750,
+      "weights": 3
+    },
+    "CueWrong": {
+      "candidate": {
+        "by_distance": {
+          "10": {
+            "episodes": 300,
+            "failed_episodes": 133,
+            "last_step_successes": 18,
+            "mean_failed_sg": 6.2105263157894735,
+            "mean_failed_sg_m": 1863.157894736842,
+            "mean_sg_all_episodes": 2.7533333333333334,
+            "mean_sg_m": 826.0,
+            "mean_steps": 16.226666666666667,
+            "mean_valid_travel_m": 4868.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.015597222222222222,
+            "repeat_visit_rate_micro": 0.019104354971240755,
+            "sr": 0.5566666666666666,
+            "successes": 167,
+            "terminations": {
+              "budget_exhausted": 133,
+              "goal_reached": 167
+            },
+            "total_oob": 0,
+            "total_revisits": 93,
+            "total_steps": 4868,
+            "total_valid_travel_m": 1460400
+          },
+          "11": {
+            "episodes": 300,
+            "failed_episodes": 105,
+            "last_step_successes": 0,
+            "mean_failed_sg": 6.980952380952381,
+            "mean_failed_sg_m": 2094.285714285714,
+            "mean_sg_all_episodes": 2.4433333333333334,
+            "mean_sg_m": 733.0,
+            "mean_steps": 15.783333333333333,
+            "mean_valid_travel_m": 4735.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.013809941520467836,
+            "repeat_visit_rate_micro": 0.017317845828933476,
+            "sr": 0.65,
+            "successes": 195,
+            "terminations": {
+              "budget_exhausted": 105,
+              "goal_reached": 195
+            },
+            "total_oob": 0,
+            "total_revisits": 82,
+            "total_steps": 4735,
+            "total_valid_travel_m": 1420500
+          },
+          "12": {
+            "episodes": 450,
+            "failed_episodes": 119,
+            "last_step_successes": 36,
+            "mean_failed_sg": 7.07563025210084,
+            "mean_failed_sg_m": 2122.6890756302523,
+            "mean_sg_all_episodes": 1.8711111111111112,
+            "mean_sg_m": 561.3333333333334,
+            "mean_steps": 15.875555555555556,
+            "mean_valid_travel_m": 4762.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.010882716049382716,
+            "repeat_visit_rate_micro": 0.013577827547592385,
+            "sr": 0.7355555555555555,
+            "successes": 331,
+            "terminations": {
+              "budget_exhausted": 119,
+              "goal_reached": 331
+            },
+            "total_oob": 0,
+            "total_revisits": 97,
+            "total_steps": 7144,
+            "total_valid_travel_m": 2143200
+          },
+          "13": {
+            "episodes": 150,
+            "failed_episodes": 27,
+            "last_step_successes": 0,
+            "mean_failed_sg": 6.2592592592592595,
+            "mean_failed_sg_m": 1877.7777777777778,
+            "mean_sg_all_episodes": 1.1266666666666667,
+            "mean_sg_m": 338.0,
+            "mean_steps": 15.526666666666667,
+            "mean_valid_travel_m": 4658.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.011000000000000001,
+            "repeat_visit_rate_micro": 0.014169171318162302,
+            "sr": 0.82,
+            "successes": 123,
+            "terminations": {
+              "budget_exhausted": 27,
+              "goal_reached": 123
+            },
+            "total_oob": 0,
+            "total_revisits": 33,
+            "total_steps": 2329,
+            "total_valid_travel_m": 698700
+          },
+          "14": {
+            "episodes": 150,
+            "failed_episodes": 17,
+            "last_step_successes": 17,
+            "mean_failed_sg": 6.705882352941177,
+            "mean_failed_sg_m": 2011.764705882353,
+            "mean_sg_all_episodes": 0.76,
+            "mean_sg_m": 228.0,
+            "mean_steps": 15.946666666666667,
+            "mean_valid_travel_m": 4784.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.008333333333333333,
+            "repeat_visit_rate_micro": 0.010451505016722408,
+            "sr": 0.8866666666666667,
+            "successes": 133,
+            "terminations": {
+              "budget_exhausted": 17,
+              "goal_reached": 133
+            },
+            "total_oob": 0,
+            "total_revisits": 25,
+            "total_steps": 2392,
+            "total_valid_travel_m": 717600
+          },
+          "15": {
+            "episodes": 150,
+            "failed_episodes": 18,
+            "last_step_successes": 0,
+            "mean_failed_sg": 6.777777777777778,
+            "mean_failed_sg_m": 2033.3333333333333,
+            "mean_sg_all_episodes": 0.8133333333333334,
+            "mean_sg_m": 244.0,
+            "mean_steps": 16.106666666666666,
+            "mean_valid_travel_m": 4832.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.0033333333333333335,
+            "repeat_visit_rate_micro": 0.0041390728476821195,
+            "sr": 0.88,
+            "successes": 132,
+            "terminations": {
+              "budget_exhausted": 18,
+              "goal_reached": 132
+            },
+            "total_oob": 0,
+            "total_revisits": 10,
+            "total_steps": 2416,
+            "total_valid_travel_m": 724800
+          },
+          "16": {
+            "episodes": 150,
+            "failed_episodes": 14,
+            "last_step_successes": 1,
+            "mean_failed_sg": 6.0,
+            "mean_failed_sg_m": 1800.0,
+            "mean_sg_all_episodes": 0.56,
+            "mean_sg_m": 168.0,
+            "mean_steps": 16.72,
+            "mean_valid_travel_m": 5016.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.0023333333333333335,
+            "repeat_visit_rate_micro": 0.0027910685805422647,
+            "sr": 0.9066666666666666,
+            "successes": 136,
+            "terminations": {
+              "budget_exhausted": 14,
+              "goal_reached": 136
+            },
+            "total_oob": 0,
+            "total_revisits": 7,
+            "total_steps": 2508,
+            "total_valid_travel_m": 752400
+          },
+          "8": {
+            "episodes": 300,
+            "failed_episodes": 142,
+            "last_step_successes": 15,
+            "mean_failed_sg": 6.774647887323944,
+            "mean_failed_sg_m": 2032.394366197183,
+            "mean_sg_all_episodes": 3.2066666666666666,
+            "mean_sg_m": 962.0,
+            "mean_steps": 15.366666666666667,
+            "mean_valid_travel_m": 4610.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.011152777777777779,
+            "repeat_visit_rate_micro": 0.014316702819956615,
+            "sr": 0.5266666666666666,
+            "successes": 158,
+            "terminations": {
+              "budget_exhausted": 142,
+              "goal_reached": 158
+            },
+            "total_oob": 0,
+            "total_revisits": 66,
+            "total_steps": 4610,
+            "total_valid_travel_m": 1383000
+          },
+          "9": {
+            "episodes": 300,
+            "failed_episodes": 144,
+            "last_step_successes": 0,
+            "mean_failed_sg": 7.027777777777778,
+            "mean_failed_sg_m": 2108.3333333333335,
+            "mean_sg_all_episodes": 3.3733333333333335,
+            "mean_sg_m": 1012.0,
+            "mean_steps": 15.893333333333333,
+            "mean_valid_travel_m": 4768.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.014786721706226351,
+            "repeat_visit_rate_micro": 0.018456375838926176,
+            "sr": 0.52,
+            "successes": 156,
+            "terminations": {
+              "budget_exhausted": 144,
+              "goal_reached": 156
+            },
+            "total_oob": 0,
+            "total_revisits": 88,
+            "total_steps": 4768,
+            "total_valid_travel_m": 1430400
+          }
+        },
+        "by_source": {
+          "MasaRoadsFresh/test_00": {
+            "episodes": 225,
+            "failed_episodes": 60,
+            "last_step_successes": 7,
+            "mean_failed_sg": 7.016666666666667,
+            "mean_failed_sg_m": 2105.0,
+            "mean_sg_all_episodes": 1.8711111111111112,
+            "mean_sg_m": 561.3333333333334,
+            "mean_steps": 15.444444444444445,
+            "mean_valid_travel_m": 4633.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.01287037037037037,
+            "repeat_visit_rate_micro": 0.016402877697841725,
+            "sr": 0.7333333333333333,
+            "successes": 165,
+            "terminations": {
+              "budget_exhausted": 60,
+              "goal_reached": 165
+            },
+            "total_oob": 0,
+            "total_revisits": 57,
+            "total_steps": 3475,
+            "total_valid_travel_m": 1042500
+          },
+          "MasaRoadsFresh/test_01": {
+            "episodes": 225,
+            "failed_episodes": 76,
+            "last_step_successes": 9,
+            "mean_failed_sg": 6.855263157894737,
+            "mean_failed_sg_m": 2056.5789473684213,
+            "mean_sg_all_episodes": 2.3155555555555556,
+            "mean_sg_m": 694.6666666666666,
+            "mean_steps": 15.684444444444445,
+            "mean_valid_travel_m": 4705.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.014154320987654321,
+            "repeat_visit_rate_micro": 0.01785208274298668,
+            "sr": 0.6622222222222223,
+            "successes": 149,
+            "terminations": {
+              "budget_exhausted": 76,
+              "goal_reached": 149
+            },
+            "total_oob": 0,
+            "total_revisits": 63,
+            "total_steps": 3529,
+            "total_valid_travel_m": 1058700
+          },
+          "MasaRoadsFresh/test_02": {
+            "episodes": 225,
+            "failed_episodes": 66,
+            "last_step_successes": 13,
+            "mean_failed_sg": 6.9393939393939394,
+            "mean_failed_sg_m": 2081.818181818182,
+            "mean_sg_all_episodes": 2.0355555555555553,
+            "mean_sg_m": 610.6666666666666,
+            "mean_steps": 15.795555555555556,
+            "mean_valid_travel_m": 4738.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.007615334632878492,
+            "repeat_visit_rate_micro": 0.009566685424873381,
+            "sr": 0.7066666666666667,
+            "successes": 159,
+            "terminations": {
+              "budget_exhausted": 66,
+              "goal_reached": 159
+            },
+            "total_oob": 0,
+            "total_revisits": 34,
+            "total_steps": 3554,
+            "total_valid_travel_m": 1066200
+          },
+          "MasaRoadsFresh/test_03": {
+            "episodes": 225,
+            "failed_episodes": 72,
+            "last_step_successes": 11,
+            "mean_failed_sg": 6.361111111111111,
+            "mean_failed_sg_m": 1908.3333333333333,
+            "mean_sg_all_episodes": 2.0355555555555553,
+            "mean_sg_m": 610.6666666666666,
+            "mean_steps": 16.017777777777777,
+            "mean_valid_travel_m": 4805.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.01077313381492948,
+            "repeat_visit_rate_micro": 0.013318534961154272,
+            "sr": 0.68,
+            "successes": 153,
+            "terminations": {
+              "budget_exhausted": 72,
+              "goal_reached": 153
+            },
+            "total_oob": 0,
+            "total_revisits": 48,
+            "total_steps": 3604,
+            "total_valid_travel_m": 1081200
+          },
+          "MasaRoadsFresh/test_04": {
+            "episodes": 225,
+            "failed_episodes": 73,
+            "last_step_successes": 12,
+            "mean_failed_sg": 7.027397260273973,
+            "mean_failed_sg_m": 2108.219178082192,
+            "mean_sg_all_episodes": 2.28,
+            "mean_sg_m": 684.0,
+            "mean_steps": 15.80888888888889,
+            "mean_valid_travel_m": 4742.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.01,
+            "repeat_visit_rate_micro": 0.012651110486364914,
+            "sr": 0.6755555555555556,
+            "successes": 152,
+            "terminations": {
+              "budget_exhausted": 73,
+              "goal_reached": 152
+            },
+            "total_oob": 0,
+            "total_revisits": 45,
+            "total_steps": 3557,
+            "total_valid_travel_m": 1067100
+          },
+          "MasaRoadsFresh/test_05": {
+            "episodes": 225,
+            "failed_episodes": 78,
+            "last_step_successes": 10,
+            "mean_failed_sg": 7.166666666666667,
+            "mean_failed_sg_m": 2150.0,
+            "mean_sg_all_episodes": 2.4844444444444442,
+            "mean_sg_m": 745.3333333333334,
+            "mean_steps": 16.244444444444444,
+            "mean_valid_travel_m": 4873.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.010888888888888889,
+            "repeat_visit_rate_micro": 0.013406292749658003,
+            "sr": 0.6533333333333333,
+            "successes": 147,
+            "terminations": {
+              "budget_exhausted": 78,
+              "goal_reached": 147
+            },
+            "total_oob": 0,
+            "total_revisits": 49,
+            "total_steps": 3655,
+            "total_valid_travel_m": 1096500
+          },
+          "MasaRoadsFresh/test_06": {
+            "episodes": 225,
+            "failed_episodes": 69,
+            "last_step_successes": 2,
+            "mean_failed_sg": 6.884057971014493,
+            "mean_failed_sg_m": 2065.217391304348,
+            "mean_sg_all_episodes": 2.111111111111111,
+            "mean_sg_m": 633.3333333333334,
+            "mean_steps": 15.675555555555556,
+            "mean_valid_travel_m": 4702.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.0138635477582846,
+            "repeat_visit_rate_micro": 0.017578678763821944,
+            "sr": 0.6933333333333334,
+            "successes": 156,
+            "terminations": {
+              "budget_exhausted": 69,
+              "goal_reached": 156
+            },
+            "total_oob": 0,
+            "total_revisits": 62,
+            "total_steps": 3527,
+            "total_valid_travel_m": 1058100
+          },
+          "MasaRoadsFresh/test_07": {
+            "episodes": 225,
+            "failed_episodes": 71,
+            "last_step_successes": 12,
+            "mean_failed_sg": 7.394366197183099,
+            "mean_failed_sg_m": 2218.3098591549297,
+            "mean_sg_all_episodes": 2.3333333333333335,
+            "mean_sg_m": 700.0,
+            "mean_steps": 16.066666666666666,
+            "mean_valid_travel_m": 4820.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.014131254061078622,
+            "repeat_visit_rate_micro": 0.017427385892116183,
+            "sr": 0.6844444444444444,
+            "successes": 154,
+            "terminations": {
+              "budget_exhausted": 71,
+              "goal_reached": 154
+            },
+            "total_oob": 0,
+            "total_revisits": 63,
+            "total_steps": 3615,
+            "total_valid_travel_m": 1084500
+          },
+          "MasaRoadsFresh/test_08": {
+            "episodes": 225,
+            "failed_episodes": 86,
+            "last_step_successes": 6,
+            "mean_failed_sg": 6.290697674418604,
+            "mean_failed_sg_m": 1887.2093023255813,
+            "mean_sg_all_episodes": 2.4044444444444446,
+            "mean_sg_m": 721.3333333333334,
+            "mean_steps": 16.395555555555557,
+            "mean_valid_travel_m": 4918.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.009827160493827161,
+            "repeat_visit_rate_micro": 0.01192735158579561,
+            "sr": 0.6177777777777778,
+            "successes": 139,
+            "terminations": {
+              "budget_exhausted": 86,
+              "goal_reached": 139
+            },
+            "total_oob": 0,
+            "total_revisits": 44,
+            "total_steps": 3689,
+            "total_valid_travel_m": 1106700
+          },
+          "MasaRoadsFresh/test_09": {
+            "episodes": 225,
+            "failed_episodes": 68,
+            "last_step_successes": 5,
+            "mean_failed_sg": 5.779411764705882,
+            "mean_failed_sg_m": 1733.8235294117646,
+            "mean_sg_all_episodes": 1.7466666666666666,
+            "mean_sg_m": 524.0,
+            "mean_steps": 15.844444444444445,
+            "mean_valid_travel_m": 4753.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.008103638726445744,
+            "repeat_visit_rate_micro": 0.010098176718092567,
+            "sr": 0.6977777777777778,
+            "successes": 157,
+            "terminations": {
+              "budget_exhausted": 68,
+              "goal_reached": 157
+            },
+            "total_oob": 0,
+            "total_revisits": 36,
+            "total_steps": 3565,
+            "total_valid_travel_m": 1069500
+          }
+        },
+        "by_stratum": {
+          "interior_target": {
+            "episodes": 750,
+            "failed_episodes": 321,
+            "last_step_successes": 29,
+            "mean_failed_sg": 7.881619937694704,
+            "mean_failed_sg_m": 2364.4859813084113,
+            "mean_sg_all_episodes": 3.3733333333333335,
+            "mean_sg_m": 1012.0,
+            "mean_steps": 15.933333333333334,
+            "mean_valid_travel_m": 4780.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.013346003898635477,
+            "repeat_visit_rate_micro": 0.016569037656903766,
+            "sr": 0.572,
+            "successes": 429,
+            "terminations": {
+              "budget_exhausted": 321,
+              "goal_reached": 429
+            },
+            "total_oob": 0,
+            "total_revisits": 198,
+            "total_steps": 11950,
+            "total_valid_travel_m": 3585000
+          },
+          "long_distance": {
+            "episodes": 750,
+            "failed_episodes": 116,
+            "last_step_successes": 26,
+            "mean_failed_sg": 6.767241379310345,
+            "mean_failed_sg_m": 2030.1724137931035,
+            "mean_sg_all_episodes": 1.0466666666666666,
+            "mean_sg_m": 314.0,
+            "mean_steps": 15.998666666666667,
+            "mean_valid_travel_m": 4799.6,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.007231481481481482,
+            "repeat_visit_rate_micro": 0.00900075006250521,
+            "sr": 0.8453333333333334,
+            "successes": 634,
+            "terminations": {
+              "budget_exhausted": 116,
+              "goal_reached": 634
+            },
+            "total_oob": 0,
+            "total_revisits": 108,
+            "total_steps": 11999,
+            "total_valid_travel_m": 3599700
+          },
+          "seam_target": {
+            "episodes": 750,
+            "failed_episodes": 282,
+            "last_step_successes": 32,
+            "mean_failed_sg": 5.49290780141844,
+            "mean_failed_sg_m": 1647.872340425532,
+            "mean_sg_all_episodes": 2.0653333333333332,
+            "mean_sg_m": 619.6,
+            "mean_steps": 15.761333333333333,
+            "mean_valid_travel_m": 4728.4,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.013090809540190346,
+            "repeat_visit_rate_micro": 0.01649606632264614,
+            "sr": 0.624,
+            "successes": 468,
+            "terminations": {
+              "budget_exhausted": 282,
+              "goal_reached": 468
+            },
+            "total_oob": 0,
+            "total_revisits": 195,
+            "total_steps": 11821,
+            "total_valid_travel_m": 3546300
+          }
+        },
+        "diagnostics": {
+          "accepted_given_hits": 1500,
+          "accepted_not_true_hit": 134,
+          "accepted_true_hit_rate": 0.9179926560587516,
+          "accepted_true_hits": 1500,
+          "action_count": 35770,
+          "actionable_adjacency_records": 1551,
+          "adjacency": {
+            "cross_source": {
+              "acceptance_rate": 0.9847328244274809,
+              "accepted": 129,
+              "accepted_correct": 129,
+              "correct_acceptance_rate": 0.9847328244274809,
+              "opportunities": 131
+            },
+            "same_source": {
+              "acceptance_rate": 0.9648135116115412,
+              "accepted": 1371,
+              "accepted_correct": 1371,
+              "correct_acceptance_rate": 0.9648135116115412,
+              "opportunities": 1421
+            }
+          },
+          "crossing_records": 2248,
+          "crossings": 4773,
+          "cue_accepts": 1634,
+          "failure_categories": {
+            "adjacent_only_terminal": 40,
+            "missed_actionable_adjacency": 20,
+            "never_within2": 332,
+            "within2_never_adjacent": 327
+          },
+          "reasons": {
+            "accepted": 1634,
+            "illegal_top_direction": 11,
+            "low_confidence": 19,
+            "not_adjacent": 34063,
+            "visited_top_destination": 43
+          }
+        },
+        "metrics": {
+          "episodes": 2250,
+          "failed_episodes": 719,
+          "last_step_successes": 87,
+          "mean_failed_sg": 6.764951321279555,
+          "mean_failed_sg_m": 2029.4853963838664,
+          "mean_sg_all_episodes": 2.1617777777777776,
+          "mean_sg_m": 648.5333333333333,
+          "mean_steps": 15.897777777777778,
+          "mean_valid_travel_m": 4769.333333333333,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.01122276497343577,
+          "repeat_visit_rate_micro": 0.014006150405367627,
+          "sr": 0.6804444444444444,
+          "successes": 1531,
+          "terminations": {
+            "budget_exhausted": 719,
+            "goal_reached": 1531
+          },
+          "total_oob": 0,
+          "total_revisits": 501,
+          "total_steps": 35770,
+          "total_valid_travel_m": 10731000
+        }
+      },
+      "checks": {
+        "mixed_SG_no_worse": true,
+        "mixed_SR_gain2pp": true,
+        "source95_SR_lower_positive": true,
+        "strata": {
+          "interior_target": {
+            "SG_no_worse": true,
+            "SR_loss_at_most2pp": true
+          },
+          "long_distance": {
+            "SG_no_worse": true,
+            "SR_loss_at_most2pp": true
+          },
+          "seam_target": {
+            "SG_no_worse": true,
+            "SR_loss_at_most2pp": true
+          }
+        },
+        "two_positive_weights": true
+      },
+      "effects": {
+        "all": {
+          "bootstrap_resamples": 4000,
+          "bootstrap_seed": 7317,
+          "interpretation": "paired whole-region uncertainty; weights are not independent source maps",
+          "positive_seeds": 3,
+          "sg_change": -2.5164444444444443,
+          "source95_SG": [
+            -2.6826666666666665,
+            -2.3626555555555555
+          ],
+          "source95_SR": [
+            0.3675555555555555,
+            0.40311111111111114
+          ],
+          "source_count": 10,
+          "source_effects": {
+            "MasaRoadsFresh/test_00": {
+              "sg": -3.031111111111111,
+              "sr": 0.45333333333333337
+            },
+            "MasaRoadsFresh/test_01": {
+              "sg": -2.4977777777777774,
+              "sr": 0.3688888888888888
+            },
+            "MasaRoadsFresh/test_02": {
+              "sg": -2.288888888888889,
+              "sr": 0.33777777777777773
+            },
+            "MasaRoadsFresh/test_03": {
+              "sg": -2.328888888888889,
+              "sr": 0.37777777777777777
+            },
+            "MasaRoadsFresh/test_04": {
+              "sg": -2.2,
+              "sr": 0.3644444444444444
+            },
+            "MasaRoadsFresh/test_05": {
+              "sg": -2.2355555555555555,
+              "sr": 0.37777777777777777
+            },
+            "MasaRoadsFresh/test_06": {
+              "sg": -2.7999999999999994,
+              "sr": 0.39999999999999997
+            },
+            "MasaRoadsFresh/test_07": {
+              "sg": -2.5866666666666664,
+              "sr": 0.38222222222222224
+            },
+            "MasaRoadsFresh/test_08": {
+              "sg": -2.4311111111111114,
+              "sr": 0.37777777777777777
+            },
+            "MasaRoadsFresh/test_09": {
+              "sg": -2.7644444444444445,
+              "sr": 0.40444444444444444
+            }
+          },
+          "sr_gain": 0.3844444444444444,
+          "sr_gain_by_seed": [
+            0.36000000000000004,
+            0.40399999999999997,
+            0.3893333333333333
+          ]
+        },
+        "interior_target": {
+          "bootstrap_resamples": 4000,
+          "bootstrap_seed": 7317,
+          "interpretation": "paired whole-region uncertainty; weights are not independent source maps",
+          "positive_seeds": 3,
+          "sg_change": -2.5,
+          "source95_SG": [
+            -2.9267,
+            -2.076
+          ],
+          "source95_SR": [
+            0.30933333333333335,
+            0.38803333333333345
+          ],
+          "source_count": 10,
+          "source_effects": {
+            "MasaRoadsFresh/test_00": {
+              "sg": -2.72,
+              "sr": 0.38666666666666666
+            },
+            "MasaRoadsFresh/test_01": {
+              "sg": -2.5866666666666664,
+              "sr": 0.2933333333333334
+            },
+            "MasaRoadsFresh/test_02": {
+              "sg": -2.56,
+              "sr": 0.3333333333333333
+            },
+            "MasaRoadsFresh/test_03": {
+              "sg": -1.8533333333333335,
+              "sr": 0.30666666666666664
+            },
+            "MasaRoadsFresh/test_04": {
+              "sg": -1.626666666666667,
+              "sr": 0.25333333333333335
+            },
+            "MasaRoadsFresh/test_05": {
+              "sg": -1.6533333333333335,
+              "sr": 0.2933333333333334
+            },
+            "MasaRoadsFresh/test_06": {
+              "sg": -3.7466666666666666,
+              "sr": 0.48
+            },
+            "MasaRoadsFresh/test_07": {
+              "sg": -2.986666666666667,
+              "sr": 0.39999999999999997
+            },
+            "MasaRoadsFresh/test_08": {
+              "sg": -1.8933333333333333,
+              "sr": 0.3333333333333333
+            },
+            "MasaRoadsFresh/test_09": {
+              "sg": -3.3733333333333335,
+              "sr": 0.39999999999999997
+            }
+          },
+          "sr_gain": 0.34800000000000003,
+          "sr_gain_by_seed": [
+            0.3400000000000001,
+            0.372,
+            0.332
+          ]
+        },
+        "long_distance": {
+          "bootstrap_resamples": 4000,
+          "bootstrap_seed": 7317,
+          "interpretation": "paired whole-region uncertainty; weights are not independent source maps",
+          "positive_seeds": 3,
+          "sg_change": -2.544,
+          "source95_SG": [
+            -2.7640333333333333,
+            -2.2599666666666667
+          ],
+          "source95_SR": [
+            0.4106666666666666,
+            0.49066666666666664
+          ],
+          "source_count": 10,
+          "source_effects": {
+            "MasaRoadsFresh/test_00": {
+              "sg": -2.8266666666666667,
+              "sr": 0.49333333333333335
+            },
+            "MasaRoadsFresh/test_01": {
+              "sg": -2.5733333333333333,
+              "sr": 0.48
+            },
+            "MasaRoadsFresh/test_02": {
+              "sg": -1.4400000000000002,
+              "sr": 0.2933333333333334
+            },
+            "MasaRoadsFresh/test_03": {
+              "sg": -2.6799999999999997,
+              "sr": 0.4533333333333333
+            },
+            "MasaRoadsFresh/test_04": {
+              "sg": -2.72,
+              "sr": 0.4666666666666666
+            },
+            "MasaRoadsFresh/test_05": {
+              "sg": -2.8800000000000003,
+              "sr": 0.5333333333333333
+            },
+            "MasaRoadsFresh/test_06": {
+              "sg": -2.2133333333333334,
+              "sr": 0.4266666666666667
+            },
+            "MasaRoadsFresh/test_07": {
+              "sg": -2.4533333333333336,
+              "sr": 0.4133333333333334
+            },
+            "MasaRoadsFresh/test_08": {
+              "sg": -2.9466666666666668,
+              "sr": 0.44
+            },
+            "MasaRoadsFresh/test_09": {
+              "sg": -2.706666666666667,
+              "sr": 0.5333333333333333
+            }
+          },
+          "sr_gain": 0.45333333333333337,
+          "sr_gain_by_seed": [
+            0.41600000000000004,
+            0.47200000000000003,
+            0.472
+          ]
+        },
+        "seam_target": {
+          "bootstrap_resamples": 4000,
+          "bootstrap_seed": 7317,
+          "interpretation": "paired whole-region uncertainty; weights are not independent source maps",
+          "positive_seeds": 3,
+          "sg_change": -2.5053333333333336,
+          "source95_SG": [
+            -2.7866666666666666,
+            -2.306666666666667
+          ],
+          "source95_SR": [
+            0.3213333333333333,
+            0.3893333333333333
+          ],
+          "source_count": 10,
+          "source_effects": {
+            "MasaRoadsFresh/test_00": {
+              "sg": -3.546666666666667,
+              "sr": 0.48
+            },
+            "MasaRoadsFresh/test_01": {
+              "sg": -2.3333333333333335,
+              "sr": 0.3333333333333333
+            },
+            "MasaRoadsFresh/test_02": {
+              "sg": -2.8666666666666667,
+              "sr": 0.3866666666666667
+            },
+            "MasaRoadsFresh/test_03": {
+              "sg": -2.453333333333333,
+              "sr": 0.3733333333333333
+            },
+            "MasaRoadsFresh/test_04": {
+              "sg": -2.2533333333333334,
+              "sr": 0.37333333333333335
+            },
+            "MasaRoadsFresh/test_05": {
+              "sg": -2.1733333333333333,
+              "sr": 0.3066666666666667
+            },
+            "MasaRoadsFresh/test_06": {
+              "sg": -2.44,
+              "sr": 0.2933333333333334
+            },
+            "MasaRoadsFresh/test_07": {
+              "sg": -2.32,
+              "sr": 0.3333333333333333
+            },
+            "MasaRoadsFresh/test_08": {
+              "sg": -2.453333333333333,
+              "sr": 0.36000000000000004
+            },
+            "MasaRoadsFresh/test_09": {
+              "sg": -2.2133333333333334,
+              "sr": 0.27999999999999997
+            }
+          },
+          "sr_gain": 0.35200000000000004,
+          "sr_gain_by_seed": [
+            0.32399999999999995,
+            0.36800000000000005,
+            0.364
+          ]
+        }
+      },
+      "harmed": 12,
+      "main_numeric_passed": true,
+      "recovered": 877,
+      "reference": {
+        "by_distance": {
+          "10": {
+            "episodes": 300,
+            "failed_episodes": 228,
+            "last_step_successes": 4,
+            "mean_failed_sg": 6.315789473684211,
+            "mean_failed_sg_m": 1894.7368421052631,
+            "mean_sg_all_episodes": 4.8,
+            "mean_sg_m": 1440.0,
+            "mean_steps": 18.373333333333335,
+            "mean_valid_travel_m": 5512.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.022518518518518518,
+            "repeat_visit_rate_micro": 0.02449201741654572,
+            "sr": 0.24,
+            "successes": 72,
+            "terminations": {
+              "budget_exhausted": 228,
+              "goal_reached": 72
+            },
+            "total_oob": 0,
+            "total_revisits": 135,
+            "total_steps": 5512,
+            "total_valid_travel_m": 1653600
+          },
+          "11": {
+            "episodes": 300,
+            "failed_episodes": 209,
+            "last_step_successes": 0,
+            "mean_failed_sg": 6.751196172248804,
+            "mean_failed_sg_m": 2025.358851674641,
+            "mean_sg_all_episodes": 4.703333333333333,
+            "mean_sg_m": 1411.0,
+            "mean_steps": 17.97,
+            "mean_valid_travel_m": 5391.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.018535087719298245,
+            "repeat_visit_rate_micro": 0.020589872008903727,
+            "sr": 0.30333333333333334,
+            "successes": 91,
+            "terminations": {
+              "budget_exhausted": 209,
+              "goal_reached": 91
+            },
+            "total_oob": 0,
+            "total_revisits": 111,
+            "total_steps": 5391,
+            "total_valid_travel_m": 1617300
+          },
+          "12": {
+            "episodes": 450,
+            "failed_episodes": 315,
+            "last_step_successes": 24,
+            "mean_failed_sg": 6.546031746031746,
+            "mean_failed_sg_m": 1963.8095238095239,
+            "mean_sg_all_episodes": 4.582222222222223,
+            "mean_sg_m": 1374.6666666666667,
+            "mean_steps": 18.715555555555557,
+            "mean_valid_travel_m": 5614.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.018808641975308644,
+            "repeat_visit_rate_micro": 0.019947755877463787,
+            "sr": 0.3,
+            "successes": 135,
+            "terminations": {
+              "budget_exhausted": 315,
+              "goal_reached": 135
+            },
+            "total_oob": 0,
+            "total_revisits": 168,
+            "total_steps": 8422,
+            "total_valid_travel_m": 2526600
+          },
+          "13": {
+            "episodes": 150,
+            "failed_episodes": 101,
+            "last_step_successes": 0,
+            "mean_failed_sg": 6.188118811881188,
+            "mean_failed_sg_m": 1856.4356435643565,
+            "mean_sg_all_episodes": 4.166666666666667,
+            "mean_sg_m": 1250.0,
+            "mean_steps": 18.62,
+            "mean_valid_travel_m": 5586.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.022392156862745097,
+            "repeat_visit_rate_micro": 0.023988542785535267,
+            "sr": 0.32666666666666666,
+            "successes": 49,
+            "terminations": {
+              "budget_exhausted": 101,
+              "goal_reached": 49
+            },
+            "total_oob": 0,
+            "total_revisits": 67,
+            "total_steps": 2793,
+            "total_valid_travel_m": 837900
+          },
+          "14": {
+            "episodes": 150,
+            "failed_episodes": 94,
+            "last_step_successes": 14,
+            "mean_failed_sg": 5.723404255319149,
+            "mean_failed_sg_m": 1717.0212765957447,
+            "mean_sg_all_episodes": 3.5866666666666664,
+            "mean_sg_m": 1076.0,
+            "mean_steps": 18.72,
+            "mean_valid_travel_m": 5616.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.012203703703703704,
+            "repeat_visit_rate_micro": 0.01282051282051282,
+            "sr": 0.37333333333333335,
+            "successes": 56,
+            "terminations": {
+              "budget_exhausted": 94,
+              "goal_reached": 56
+            },
+            "total_oob": 0,
+            "total_revisits": 36,
+            "total_steps": 2808,
+            "total_valid_travel_m": 842400
+          },
+          "15": {
+            "episodes": 150,
+            "failed_episodes": 88,
+            "last_step_successes": 0,
+            "mean_failed_sg": 5.545454545454546,
+            "mean_failed_sg_m": 1663.6363636363637,
+            "mean_sg_all_episodes": 3.2533333333333334,
+            "mean_sg_m": 976.0,
+            "mean_steps": 18.573333333333334,
+            "mean_valid_travel_m": 5572.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.018409700722394222,
+            "repeat_visit_rate_micro": 0.01974156496769562,
+            "sr": 0.41333333333333333,
+            "successes": 62,
+            "terminations": {
+              "budget_exhausted": 88,
+              "goal_reached": 62
+            },
+            "total_oob": 0,
+            "total_revisits": 55,
+            "total_steps": 2786,
+            "total_valid_travel_m": 835800
+          },
+          "16": {
+            "episodes": 150,
+            "failed_episodes": 66,
+            "last_step_successes": 3,
+            "mean_failed_sg": 5.0606060606060606,
+            "mean_failed_sg_m": 1518.1818181818182,
+            "mean_sg_all_episodes": 2.2266666666666666,
+            "mean_sg_m": 668.0,
+            "mean_steps": 18.64,
+            "mean_valid_travel_m": 5592.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.007333333333333334,
+            "repeat_visit_rate_micro": 0.007868383404864092,
+            "sr": 0.56,
+            "successes": 84,
+            "terminations": {
+              "budget_exhausted": 66,
+              "goal_reached": 84
+            },
+            "total_oob": 0,
+            "total_revisits": 22,
+            "total_steps": 2796,
+            "total_valid_travel_m": 838800
+          },
+          "8": {
+            "episodes": 300,
+            "failed_episodes": 239,
+            "last_step_successes": 9,
+            "mean_failed_sg": 7.481171548117155,
+            "mean_failed_sg_m": 2244.351464435146,
+            "mean_sg_all_episodes": 5.96,
+            "mean_sg_m": 1788.0,
+            "mean_steps": 18.313333333333333,
+            "mean_valid_travel_m": 5494.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.016333333333333335,
+            "repeat_visit_rate_micro": 0.017837641062977794,
+            "sr": 0.20333333333333334,
+            "successes": 61,
+            "terminations": {
+              "budget_exhausted": 239,
+              "goal_reached": 61
+            },
+            "total_oob": 0,
+            "total_revisits": 98,
+            "total_steps": 5494,
+            "total_valid_travel_m": 1648200
+          },
+          "9": {
+            "episodes": 300,
+            "failed_episodes": 244,
+            "last_step_successes": 0,
+            "mean_failed_sg": 7.540983606557377,
+            "mean_failed_sg_m": 2262.2950819672133,
+            "mean_sg_all_episodes": 6.133333333333334,
+            "mean_sg_m": 1840.0,
+            "mean_steps": 18.613333333333333,
+            "mean_valid_travel_m": 5584.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.02040970072239422,
+            "repeat_visit_rate_micro": 0.02184813753581662,
+            "sr": 0.18666666666666668,
+            "successes": 56,
+            "terminations": {
+              "budget_exhausted": 244,
+              "goal_reached": 56
+            },
+            "total_oob": 0,
+            "total_revisits": 122,
+            "total_steps": 5584,
+            "total_valid_travel_m": 1675200
+          }
+        },
+        "by_source": {
+          "MasaRoadsFresh/test_00": {
+            "episodes": 225,
+            "failed_episodes": 162,
+            "last_step_successes": 1,
+            "mean_failed_sg": 6.808641975308642,
+            "mean_failed_sg_m": 2042.5925925925926,
+            "mean_sg_all_episodes": 4.902222222222222,
+            "mean_sg_m": 1470.6666666666667,
+            "mean_steps": 18.59111111111111,
+            "mean_valid_travel_m": 5577.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.022717578259373927,
+            "repeat_visit_rate_micro": 0.02438441310064547,
+            "sr": 0.28,
+            "successes": 63,
+            "terminations": {
+              "budget_exhausted": 162,
+              "goal_reached": 63
+            },
+            "total_oob": 0,
+            "total_revisits": 102,
+            "total_steps": 4183,
+            "total_valid_travel_m": 1254900
+          },
+          "MasaRoadsFresh/test_01": {
+            "episodes": 225,
+            "failed_episodes": 159,
+            "last_step_successes": 7,
+            "mean_failed_sg": 6.811320754716981,
+            "mean_failed_sg_m": 2043.3962264150944,
+            "mean_sg_all_episodes": 4.8133333333333335,
+            "mean_sg_m": 1444.0,
+            "mean_steps": 18.253333333333334,
+            "mean_valid_travel_m": 5476.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.020444444444444446,
+            "repeat_visit_rate_micro": 0.022400779157535914,
+            "sr": 0.29333333333333333,
+            "successes": 66,
+            "terminations": {
+              "budget_exhausted": 159,
+              "goal_reached": 66
+            },
+            "total_oob": 0,
+            "total_revisits": 92,
+            "total_steps": 4107,
+            "total_valid_travel_m": 1232100
+          },
+          "MasaRoadsFresh/test_02": {
+            "episodes": 225,
+            "failed_episodes": 142,
+            "last_step_successes": 8,
+            "mean_failed_sg": 6.852112676056338,
+            "mean_failed_sg_m": 2055.6338028169016,
+            "mean_sg_all_episodes": 4.3244444444444445,
+            "mean_sg_m": 1297.3333333333333,
+            "mean_steps": 18.066666666666666,
+            "mean_valid_travel_m": 5420.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.011160493827160493,
+            "repeat_visit_rate_micro": 0.012300123001230012,
+            "sr": 0.3688888888888889,
+            "successes": 83,
+            "terminations": {
+              "budget_exhausted": 142,
+              "goal_reached": 83
+            },
+            "total_oob": 0,
+            "total_revisits": 50,
+            "total_steps": 4065,
+            "total_valid_travel_m": 1219500
+          },
+          "MasaRoadsFresh/test_03": {
+            "episodes": 225,
+            "failed_episodes": 157,
+            "last_step_successes": 6,
+            "mean_failed_sg": 6.254777070063694,
+            "mean_failed_sg_m": 1876.4331210191083,
+            "mean_sg_all_episodes": 4.364444444444445,
+            "mean_sg_m": 1309.3333333333333,
+            "mean_steps": 18.48,
+            "mean_valid_travel_m": 5544.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.018678362573099416,
+            "repeat_visit_rate_micro": 0.020202020202020204,
+            "sr": 0.3022222222222222,
+            "successes": 68,
+            "terminations": {
+              "budget_exhausted": 157,
+              "goal_reached": 68
+            },
+            "total_oob": 0,
+            "total_revisits": 84,
+            "total_steps": 4158,
+            "total_valid_travel_m": 1247400
+          },
+          "MasaRoadsFresh/test_04": {
+            "episodes": 225,
+            "failed_episodes": 155,
+            "last_step_successes": 2,
+            "mean_failed_sg": 6.503225806451613,
+            "mean_failed_sg_m": 1950.967741935484,
+            "mean_sg_all_episodes": 4.48,
+            "mean_sg_m": 1344.0,
+            "mean_steps": 18.026666666666667,
+            "mean_valid_travel_m": 5408.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.014705882352941176,
+            "repeat_visit_rate_micro": 0.016272189349112426,
+            "sr": 0.3111111111111111,
+            "successes": 70,
+            "terminations": {
+              "budget_exhausted": 155,
+              "goal_reached": 70
+            },
+            "total_oob": 0,
+            "total_revisits": 66,
+            "total_steps": 4056,
+            "total_valid_travel_m": 1216800
+          },
+          "MasaRoadsFresh/test_05": {
+            "episodes": 225,
+            "failed_episodes": 163,
+            "last_step_successes": 6,
+            "mean_failed_sg": 6.515337423312883,
+            "mean_failed_sg_m": 1954.601226993865,
+            "mean_sg_all_episodes": 4.72,
+            "mean_sg_m": 1416.0,
+            "mean_steps": 18.64,
+            "mean_valid_travel_m": 5592.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.01889259641478424,
+            "repeat_visit_rate_micro": 0.020028612303290415,
+            "sr": 0.27555555555555555,
+            "successes": 62,
+            "terminations": {
+              "budget_exhausted": 163,
+              "goal_reached": 62
+            },
+            "total_oob": 0,
+            "total_revisits": 84,
+            "total_steps": 4194,
+            "total_valid_travel_m": 1258200
+          },
+          "MasaRoadsFresh/test_06": {
+            "episodes": 225,
+            "failed_episodes": 159,
+            "last_step_successes": 1,
+            "mean_failed_sg": 6.949685534591195,
+            "mean_failed_sg_m": 2084.9056603773583,
+            "mean_sg_all_episodes": 4.911111111111111,
+            "mean_sg_m": 1473.3333333333333,
+            "mean_steps": 18.52888888888889,
+            "mean_valid_travel_m": 5558.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.01801169590643275,
+            "repeat_visit_rate_micro": 0.019429119692971935,
+            "sr": 0.29333333333333333,
+            "successes": 66,
+            "terminations": {
+              "budget_exhausted": 159,
+              "goal_reached": 66
+            },
+            "total_oob": 0,
+            "total_revisits": 81,
+            "total_steps": 4169,
+            "total_valid_travel_m": 1250700
+          },
+          "MasaRoadsFresh/test_07": {
+            "episodes": 225,
+            "failed_episodes": 157,
+            "last_step_successes": 14,
+            "mean_failed_sg": 7.050955414012739,
+            "mean_failed_sg_m": 2115.2866242038217,
+            "mean_sg_all_episodes": 4.92,
+            "mean_sg_m": 1476.0,
+            "mean_steps": 18.91111111111111,
+            "mean_valid_travel_m": 5673.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.022726445743989604,
+            "repeat_visit_rate_micro": 0.023971797884841363,
+            "sr": 0.3022222222222222,
+            "successes": 68,
+            "terminations": {
+              "budget_exhausted": 157,
+              "goal_reached": 68
+            },
+            "total_oob": 0,
+            "total_revisits": 102,
+            "total_steps": 4255,
+            "total_valid_travel_m": 1276500
+          },
+          "MasaRoadsFresh/test_08": {
+            "episodes": 225,
+            "failed_episodes": 171,
+            "last_step_successes": 2,
+            "mean_failed_sg": 6.362573099415204,
+            "mean_failed_sg_m": 1908.7719298245613,
+            "mean_sg_all_episodes": 4.835555555555556,
+            "mean_sg_m": 1450.6666666666667,
+            "mean_steps": 18.675555555555555,
+            "mean_valid_travel_m": 5602.666666666667,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.016246913580246915,
+            "repeat_visit_rate_micro": 0.017372679676344597,
+            "sr": 0.24,
+            "successes": 54,
+            "terminations": {
+              "budget_exhausted": 171,
+              "goal_reached": 54
+            },
+            "total_oob": 0,
+            "total_revisits": 73,
+            "total_steps": 4202,
+            "total_valid_travel_m": 1260600
+          },
+          "MasaRoadsFresh/test_09": {
+            "episodes": 225,
+            "failed_episodes": 159,
+            "last_step_successes": 7,
+            "mean_failed_sg": 6.383647798742138,
+            "mean_failed_sg_m": 1915.0943396226414,
+            "mean_sg_all_episodes": 4.511111111111111,
+            "mean_sg_m": 1353.3333333333333,
+            "mean_steps": 18.653333333333332,
+            "mean_valid_travel_m": 5596.0,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.017987654320987655,
+            "repeat_visit_rate_micro": 0.019061234214915415,
+            "sr": 0.29333333333333333,
+            "successes": 66,
+            "terminations": {
+              "budget_exhausted": 159,
+              "goal_reached": 66
+            },
+            "total_oob": 0,
+            "total_revisits": 80,
+            "total_steps": 4197,
+            "total_valid_travel_m": 1259100
+          }
+        },
+        "by_stratum": {
+          "interior_target": {
+            "episodes": 750,
+            "failed_episodes": 582,
+            "last_step_successes": 13,
+            "mean_failed_sg": 7.5687285223367695,
+            "mean_failed_sg_m": 2270.618556701031,
+            "mean_sg_all_episodes": 5.873333333333333,
+            "mean_sg_m": 1762.0,
+            "mean_steps": 18.550666666666668,
+            "mean_valid_travel_m": 5565.2,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.018791852998509346,
+            "repeat_visit_rate_micro": 0.02019693811543161,
+            "sr": 0.224,
+            "successes": 168,
+            "terminations": {
+              "budget_exhausted": 582,
+              "goal_reached": 168
+            },
+            "total_oob": 0,
+            "total_revisits": 281,
+            "total_steps": 13913,
+            "total_valid_travel_m": 4173900
+          },
+          "long_distance": {
+            "episodes": 750,
+            "failed_episodes": 456,
+            "last_step_successes": 23,
+            "mean_failed_sg": 5.905701754385965,
+            "mean_failed_sg_m": 1771.7105263157894,
+            "mean_sg_all_episodes": 3.5906666666666665,
+            "mean_sg_m": 1077.2,
+            "mean_steps": 18.649333333333335,
+            "mean_valid_travel_m": 5594.8,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.016447408554064902,
+            "repeat_visit_rate_micro": 0.017516265103310218,
+            "sr": 0.392,
+            "successes": 294,
+            "terminations": {
+              "budget_exhausted": 456,
+              "goal_reached": 294
+            },
+            "total_oob": 0,
+            "total_revisits": 245,
+            "total_steps": 13987,
+            "total_valid_travel_m": 4196100
+          },
+          "seam_target": {
+            "episodes": 750,
+            "failed_episodes": 546,
+            "last_step_successes": 18,
+            "mean_failed_sg": 6.278388278388278,
+            "mean_failed_sg_m": 1883.5164835164835,
+            "mean_sg_all_episodes": 4.570666666666667,
+            "mean_sg_m": 1371.2,
+            "mean_steps": 18.248,
+            "mean_valid_travel_m": 5474.4,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.019232358674463938,
+            "repeat_visit_rate_micro": 0.02104340201665936,
+            "sr": 0.272,
+            "successes": 204,
+            "terminations": {
+              "budget_exhausted": 546,
+              "goal_reached": 204
+            },
+            "total_oob": 0,
+            "total_revisits": 288,
+            "total_steps": 13686,
+            "total_valid_travel_m": 4105800
+          }
+        },
+        "diagnostics": {
+          "accepted_given_hits": 1233,
+          "accepted_not_true_hit": 1409,
+          "accepted_true_hit_rate": 0.004240282685512367,
+          "accepted_true_hits": 6,
+          "action_count": 41586,
+          "actionable_adjacency_records": 1533,
+          "adjacency": {
+            "cross_source": {
+              "acceptance_rate": 0.15267175572519084,
+              "accepted": 20,
+              "accepted_correct": 0,
+              "correct_acceptance_rate": 0.0,
+              "opportunities": 131
+            },
+            "same_source": {
+              "acceptance_rate": 0.1861793260993718,
+              "accepted": 326,
+              "accepted_correct": 6,
+              "correct_acceptance_rate": 0.0034266133637921186,
+              "opportunities": 1751
+            }
+          },
+          "crossing_records": 2250,
+          "crossings": 5389,
+          "cue_accepts": 1415,
+          "failure_categories": {
+            "adjacent_only_terminal": 48,
+            "missed_actionable_adjacency": 867,
+            "never_within2": 342,
+            "within2_never_adjacent": 327
+          },
+          "reasons": {
+            "accepted": 1415,
+            "illegal_top_direction": 36,
+            "low_confidence": 77,
+            "not_adjacent": 38824,
+            "visited_top_destination": 1234
+          }
+        },
+        "metrics": {
+          "episodes": 2250,
+          "failed_episodes": 1584,
+          "last_step_successes": 54,
+          "mean_failed_sg": 6.64520202020202,
+          "mean_failed_sg_m": 1993.560606060606,
+          "mean_sg_all_episodes": 4.678222222222222,
+          "mean_sg_m": 1403.4666666666667,
+          "mean_steps": 18.482666666666667,
+          "mean_valid_travel_m": 5544.8,
+          "out_of_bounds_rate": 0.0,
+          "repeat_visit_rate_macro": 0.018157206742346062,
+          "repeat_visit_rate_micro": 0.019573895060837784,
+          "sr": 0.296,
+          "successes": 666,
+          "terminations": {
+            "budget_exhausted": 1584,
+            "goal_reached": 666
+          },
+          "total_oob": 0,
+          "total_revisits": 814,
+          "total_steps": 41586,
+          "total_valid_travel_m": 12475800
+        }
+      },
+      "scope": "frozen independent new geographic region confirmation",
+      "source_regions": 10,
+      "unique_tasks": 750,
+      "weights": 3
+    }
+  },
+  "target_numeric_passed": true
+}

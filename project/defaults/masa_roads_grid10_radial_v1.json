@@ -1,0 +1,108 @@
+{
+  "checkpoints": [
+    {
+      "path": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/Small256_NoTarget_s0/model.pt",
+      "seed": 0,
+      "sha256": "b35b0f87865530e8965e561eeda450c481af9d87ba5ab0dcfb9a4932bf4179bd"
+    },
+    {
+      "path": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/Small256_NoTarget_s1/model.pt",
+      "seed": 1,
+      "sha256": "d734ab8d9e755e697e7dd1cc8f8eb8b4055aae1780e1fc16d27749eab3115dfa"
+    },
+    {
+      "path": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/Small256_NoTarget_s2/model.pt",
+      "seed": 2,
+      "sha256": "8ca13f1829f35f2e18dd002c6f661129ccaaa2e11fc1bd72d8751819d14b999b"
+    }
+  ],
+  "controller": {
+    "accepted_cue_priority": true,
+    "guard": "one_step_radius_not_less_than_original",
+    "horizon": 3,
+    "minimum_gain": 2,
+    "no_second_candidate_selection": true,
+    "radius_reference": "public_visited_first_cell",
+    "replan_each_observation": true
+  },
+  "cue_heads": [
+    {
+      "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s0/head.pt",
+      "seed": 0,
+      "sha256": "2c2e4167b14a9a439b81efd78e80436ffde75d35d5c6d75274c3d60ecaa59b2c"
+    },
+    {
+      "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s1/head.pt",
+      "seed": 1,
+      "sha256": "f37734c1d19b38a99b7d589eac004a801d1571ae46df55cbf8161d97ea3bbb53"
+    },
+    {
+      "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s2/head.pt",
+      "seed": 2,
+      "sha256": "045984f575be3e660f04c7237fc65a515abf6d2f1a0d660adb93a4e812925a53"
+    }
+  ],
+  "empirical_confirmation_protocol": "masa-roads-grid10-spatial-v1",
+  "evidence": {
+    "confirmation_verdict": {
+      "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/验收结论.json",
+      "sha256": "6a0c03af26fd3a4d07de29d9013e56b4efbcfc59fef79cc66e4c8f8885458e9d"
+    },
+    "first_action_input_seal": {
+      "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/首动作前输入封存.json",
+      "sha256": "8145a17d504530ab4c7ccb32b551a1eed6b9e11cea9224371eb5e572ed89712c"
+    },
+    "main_audit": {
+      "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/主对照/独立复核.json",
+      "sha256": "00181742dcd7333d32b30e4709d530a02fece8016c36fed24949a30541bf81fd"
+    },
+    "target_audit": {
+      "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/目标对照/独立复核.json",
+      "sha256": "592f882910b2ea67ac534d3470f3c970f73085b5ad91084832f63267842025aa"
+    }
+  },
+  "grid15_real_navigation_confirmed": false,
+  "means": {
+    "全局拟合均值.npy": {
+      "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/全局拟合均值.npy",
+      "sha256": "3bb5233fc6fbef7eece51ee78979b37dfaadfcb98d310e6f1b5de7b3d25a8158"
+    },
+    "头部拟合全局均值.npy": {
+      "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/头部拟合全局均值.npy",
+      "sha256": "3e1fb063c11ffef2c130f93f3288d3eb38ff219a21d7cfa9c3759f8623cc2cbd"
+    },
+    "头部拟合局部均值.npy": {
+      "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/头部拟合局部均值.npy",
+      "sha256": "5423d400987f35117d3835ab8ea9daf2153cdef03ab85ba6b6b0eda6f705978d"
+    },
+    "头部拟合边缘均值.npy": {
+      "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/头部拟合边缘均值.npy",
+      "sha256": "367e7499bfc6c5e71992042fac74507c5bcab9cd4de84f1f7482a35a2ab1ee62"
+    }
+  },
+  "parent_M0": {
+    "path": "project/local_policy_default.json",
+    "sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b"
+  },
+  "policy": "Coverage3Radial",
+  "protocol": {
+    "budget": 20,
+    "cell_size_m": 300,
+    "epsg": 26986,
+    "grid_size": 10,
+    "name": "masa-roads-grid10-spatial-v1",
+    "native_cell_pixels": 300,
+    "pixel_size_m": 1,
+    "source_family": "MassachusettsRoads"
+  },
+  "reference_seed": 0,
+  "selected_by_best_seed": false,
+  "source_geography_pretrained_encoder_unknown": true,
+  "status": "confirmed_default",
+  "thresholds": {
+    "0": 0.5,
+    "1": 0.5,
+    "2": 0.5
+  },
+  "version": "area-policy-v1"
+}

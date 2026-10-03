@@ -1,5 +1,5 @@
 {
-  "date": "2026-10-02",
+  "date": "2026-10-03",
   "batches": [
     {
       "dataset": "Masa",
@@ -844,6 +844,228 @@
         "DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/独立复核.json",
         "DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/最终状态.json",
         "DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/README.md"
+      ]
+    },
+    {
+      "dataset": "SwissView",
+      "kind": "评测结果",
+      "name": "继续训练恢复损伤诊断_v1",
+      "category": "离线诊断",
+      "status": "诊断与复核完成",
+      "scope": "6000既有轨迹；无新增导航，分解恢复/损伤与邻接时机",
+      "path": "DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1",
+      "reports": [
+        "DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1/恢复损伤诊断报告.md"
+      ],
+      "evidence": [
+        "DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1/独立复核.json",
+        "DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1/最终状态.json"
+      ]
+    },
+    {
+      "dataset": "Masa",
+      "kind": "评测结果",
+      "name": "回访新格筛选冻结验证_v1",
+      "category": "单因素开发",
+      "status": "开发候选与目标证据通过",
+      "scope": "dev250×3；SR+2.00点、3/3正；原默认保持，尚未独立确认",
+      "path": "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1",
+      "reports": [
+        "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/回访新格筛选验证报告.md"
+      ],
+      "evidence": [
+        "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/独立复核.json",
+        "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/最终状态.json",
+        "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/验收结论.json"
+      ]
+    },
+    {
+      "dataset": "SwissView",
+      "kind": "评测结果",
+      "name": "回访新格筛选独立源图确认_v1",
+      "category": "独立源文件确认",
+      "status": "新源升级未通过，原M0保持",
+      "scope": "20新源/500×3/10×10B20；零训练和云端",
+      "path": "DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1",
+      "reports": [
+        "DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1/独立源图确认报告.md"
+      ],
+      "evidence": [
+        "DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1/验收结论.json",
+        "DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1/独立复核.json",
+        "DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1/最终状态.json"
+      ]
+    },
+    {
+      "dataset": "Masa",
+      "kind": "数据准备",
+      "name": "实际区域扩展_v1",
+      "category": "实际面积工程",
+      "status": "数据/协议通过；导航未启动",
+      "scope": "3已知train连续地图/12源/9km²各图；300格/75题；无新SR",
+      "path": "DATA/processed_data/Masa/实际区域扩展_v1",
+      "reports": [
+        "DATA/processed_data/Masa/实际区域扩展_v1/实际区域扩展数据准备报告.md"
+      ],
+      "evidence": [
+        "DATA/processed_data/Masa/实际区域扩展_v1/核验/验收结论.json",
+        "DATA/processed_data/Masa/实际区域扩展_v1/核验/独立复核.json",
+        "DATA/processed_data/Masa/实际区域扩展_v1/核验/最终状态.json"
+      ]
+    },
+    {
+      "dataset": "Masa",
+      "kind": "评测结果",
+      "name": "实际区域M0兼容试跑_v1",
+      "category": "实际面积兼容试跑",
+      "status": "工程通过；目标控制通过；已知训练地区",
+      "scope": "3已知地图/75×3/9km²各图；SR78.22%/SG316.00m；1050全重放",
+      "path": "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1",
+      "reports": [
+        "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/实际区域M0兼容试跑报告.md"
+      ],
+      "evidence": [
+        "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/验收结论.json",
+        "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/独立复核.json",
+        "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/最终状态.json"
+      ]
+    },
+    {
+      "dataset": "MasaRoads",
+      "kind": "数据准备",
+      "name": "空间隔离连续区域_v1",
+      "category": "空间隔离数据",
+      "status": "资源上限停止；未通过",
+      "scope": "120源/12合格区域；无导航SR",
+      "path": "DATA/processed_data/MasaRoads/空间隔离连续区域_v1",
+      "reports": [
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v1/资源上限停止报告.md"
+      ],
+      "evidence": [
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v1/核验/验收结论.json",
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v1/核验/停止状态.json"
+      ]
+    },
+    {
+      "dataset": "MasaRoads",
+      "kind": "数据准备",
+      "name": "空间隔离连续区域_v2",
+      "category": "空间隔离数据",
+      "status": "数据/协议与空间隔离通过；导航未启动",
+      "scope": "14区域/56选定源/1050任务/1680探针；无新SR",
+      "path": "DATA/processed_data/MasaRoads/空间隔离连续区域_v2",
+      "reports": [
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/空间隔离连续区域数据准备报告.md"
+      ],
+      "evidence": [
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/核验/验收结论.json",
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/核验/独立复核.json"
+      ]
+    },
+    {
+      "dataset": "MasaRoads",
+      "kind": "评测",
+      "name": "冻结M0空间隔离导航确认_v1",
+      "category": "实际区域独立确认",
+      "status": "导航通过；接缝头部通过；组合通过",
+      "scope": "4工程/10确认，9km²每区；14700导航/15120探针；本地M0足迹空间隔离，Sat2Cap预训练地理覆盖未知；原模型与默认保持",
+      "path": "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1",
+      "reports": [
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/新空间隔离区域M0导航确认报告_v2.md"
+      ],
+      "evidence": [
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/验收结论.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/独立复核.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/独立复核.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/审计修订登记_v3.json"
+      ]
+    },
+    {
+      "dataset": "MasaRoads",
+      "kind": "评测",
+      "name": "空间覆盖与误触发单因素验证_v1",
+      "category": "覆盖与误触发后验开发",
+      "status": "SR收益；长距离/SG保护未通过",
+      "scope": "10已消费区域/750任务/3权重；0训练/0云端；无新源确认，Sat2Cap预训练地理未知",
+      "path": "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1",
+      "reports": [
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/三步覆盖接管开发验证报告.md"
+      ],
+      "evidence": [
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/验收结论.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/独立复核.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/离线诊断/独立算术复核.json"
+      ]
+    },
+    {
+      "dataset": "MasaRoads",
+      "kind": "评测",
+      "name": "覆盖接管径向保护验证_v1",
+      "category": "公开径向保护后验开发",
+      "status": "开发通过待独立确认",
+      "scope": "10已消费区域/750任务/3权重；无训练/云端/新区域确认",
+      "path": "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1",
+      "reports": [
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/径向保护开发验证报告.md"
+      ],
+      "evidence": [
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/验收结论.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/独立复核.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/离线诊断/独立算术复核.json"
+      ]
+    },
+    {
+      "dataset": "MasaRoads",
+      "kind": "数据",
+      "name": "径向保护新区域确认_v1",
+      "category": "径向保护独立新区域准备",
+      "status": "数据/空间通过；未导航、无新SR",
+      "scope": "10预留新区/40源/1000图块/750路线/1200几何探针；预训练地理未知",
+      "path": "DATA/processed_data/MasaRoads/径向保护新区域确认_v1",
+      "reports": [
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/新区域确认数据准备报告.md",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/科研图排版修订_v2.md",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/下一项冻结径向保护新区域导航确认方案_v1.md"
+      ],
+      "evidence": [
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/核验/验收结论.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/核验/独立复核.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/核验/输入冻结结束.json"
+      ]
+    },
+    {
+      "dataset": "MasaRoads",
+      "kind": "评测结果",
+      "name": "径向保护独立新区域导航确认_v1",
+      "category": "径向保护独立新区域导航确认",
+      "status": "升级证据通过",
+      "scope": "10 new footprints;750routes/3weights;300m/grid10/B20;frozen single candidate",
+      "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1",
+      "reports": [
+        "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/径向保护独立新区域导航确认报告.md"
+      ],
+      "evidence": [
+        "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/验收结论.json",
+        "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/主对照/独立复核.json",
+        "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/首动作前输入封存.json"
+      ]
+    },
+    {
+      "dataset": "MasaRoads",
+      "kind": "工程准备",
+      "name": "默认版本化与十五乘十五兼容_v1",
+      "category": "协议默认版本化与15×15兼容",
+      "status": "默认登记/兼容通过；未进行真实15×15评测",
+      "scope": "900old regressions;6synthetic cases;no new realSR;physical15x15 data pending",
+      "path": "DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1",
+      "reports": [
+        "DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1/默认版本化与十五乘十五兼容报告.md",
+        "DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1/下一项真实十五乘十五数据准备草案.md"
+      ],
+      "evidence": [
+        "DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1/验收结论.json",
+        "DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1/独立工程复核.json",
+        "DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1/回归/完整核验.json"
       ]
     }
   ],

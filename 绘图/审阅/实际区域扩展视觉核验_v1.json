@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "date": "2026-10-02",
+  "method": "assistant native vision on three region previews, two PNG figures and two independently rendered PDF pages",
+  "inspected_sha256": {
+    "DATA/processed_data/Masa/实际区域扩展_v1/工程数据/previews/img_1000.jpg": "80edfe4c88f330f91d2c59060cec9d6a0389e1936bd4467a1d484c4c7cf8a274",
+    "DATA/processed_data/Masa/实际区域扩展_v1/工程数据/previews/img_1001.jpg": "0664b3ac8da2d9fbaed83e1333e5a3951d33fc338ddc702e97f638ff82c80b47",
+    "DATA/processed_data/Masa/实际区域扩展_v1/工程数据/previews/img_1002.jpg": "a2d652cdf444437d4fbc9b86f59bff0db8c1973435df9c864d0e15c83d4a9cfe",
+    "绘图/数据结果图/39_实际面积与图块尺度.png": "cc7585748cfc0a71fcc9f1e966dccc71481148a9334bc7cbdfae5ca77a813941",
+    "绘图/数据结果图/40_连续区域与跨图接缝.png": "7a1ffe95093098dbc01cf42785cd4c680c87dd65f94d954ec2871a272c12396d",
+    "绘图/审阅/39_实际面积与图块尺度_PDF核验.png": "8b2e7b6d3872771fb2039eef588406ca9a081a79147eb5ba5a06f717bd869466",
+    "绘图/审阅/40_连续区域与跨图接缝_PDF核验.png": "f7a9cac0670a2969e08233debfd66fcf1fd7d3d487e238a124645c8c813f0535"
+  },
+  "checks": {
+    "previews_no_obvious_missing_quadrant_rotation_or_blank_band": true,
+    "scope_and_known_training_status_explicit": true,
+    "native_vs_density_ground_scale_visible": true,
+    "physical_budget_difference_visible": true,
+    "no_clipped_or_overlapping_text": true,
+    "legible_Chinese_and_numeric_labels": true,
+    "no_new_SR_claimed": true
+  },
+  "file_validation_sha256": "71d1016d50eb4f14f695329a1970430e64fb556318a773b75748fa7cc1c13130",
+  "recommended_width_cm": 18,
+  "caution": "visual continuity is qualitative; does not prove navigation cue reliability"
+}

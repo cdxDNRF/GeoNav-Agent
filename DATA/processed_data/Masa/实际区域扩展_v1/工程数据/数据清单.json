@@ -1,0 +1,449 @@
+{
+  "protocol": "masa-local-grid10-area-v1",
+  "epsg": 26986,
+  "pixel_size_m": 1,
+  "cell_size_m": 300,
+  "native_cell_pixels": 300,
+  "mosaic_pixels": 3000,
+  "grid_size": 10,
+  "budget": 20,
+  "regions": [
+    {
+      "area": "img_1000",
+      "split": "dev",
+      "source_tile": "MasaArea/region_00",
+      "sources": [
+        {
+          "id": "22678960_15",
+          "split": "train",
+          "raw_path": "DATA/raw_data/Masa/tiff/train/22678960_15.tiff",
+          "png_path": "DATA/raw_data/Masa/png/train/22678960_15.png",
+          "raw_sha256": "9e765d439680d9347ce4a5824b815f16a09bfa9cb6be966145c820b4d51cd58d",
+          "x": 225986.4361739957,
+          "y": 896771.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            225986.4361739957,
+            895271.0247782533,
+            227486.43617399572,
+            896771.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea",
+          "col": 0,
+          "north_row": 8,
+          "global_lattice_residual_m": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "22828960_15",
+          "split": "train",
+          "raw_path": "DATA/raw_data/Masa/tiff/train/22828960_15.tiff",
+          "png_path": "DATA/raw_data/Masa/png/train/22828960_15.png",
+          "raw_sha256": "c471844175ddc09b243e5da08d1c07c3f873704e094fb3dab3705c36feeb1a9f",
+          "x": 227486.4361739957,
+          "y": 896771.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            227486.4361739957,
+            895271.0247782533,
+            228986.43617399572,
+            896771.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea",
+          "col": 1,
+          "north_row": 8,
+          "global_lattice_residual_m": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "22678945_15",
+          "split": "train",
+          "raw_path": "DATA/raw_data/Masa/tiff/train/22678945_15.tiff",
+          "png_path": "DATA/raw_data/Masa/png/train/22678945_15.png",
+          "raw_sha256": "e7755bb7c7deae16aceb87c8521f767c08ecfcc12d6a6fa470412393551172e5",
+          "x": 225986.4361739957,
+          "y": 895271.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            225986.4361739957,
+            893771.0247782533,
+            227486.43617399572,
+            895271.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea",
+          "col": 0,
+          "north_row": 7,
+          "global_lattice_residual_m": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "22828945_15",
+          "split": "train",
+          "raw_path": "DATA/raw_data/Masa/tiff/train/22828945_15.tiff",
+          "png_path": "DATA/raw_data/Masa/png/train/22828945_15.png",
+          "raw_sha256": "4bd59209c7d76bb06d18ab74bee0882a6d6874dad2743a3c8f4f8bc7f580c9e0",
+          "x": 227486.4361739957,
+          "y": 895271.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            227486.4361739957,
+            893771.0247782533,
+            228986.43617399572,
+            895271.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea",
+          "col": 1,
+          "north_row": 7,
+          "global_lattice_residual_m": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "x": 225986.4361739957,
+      "y": 896771.0247782532,
+      "placement_residuals_m": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bounds_m": [
+        225986.4361739957,
+        893771.0247782532,
+        228986.4361739957,
+        896771.0247782532
+      ],
+      "projected_area_km2": 9,
+      "pixel_size_m": 1,
+      "cell_size_m": 300,
+      "scope": "known original-training footprints; engineering pilot, not independent confirmation",
+      "mosaic_sha256": "7b279b90c6b50a56ba33a191aade122681997a1aadcc27c085f63792cc6ed80b",
+      "native_mosaic_rgb_sha256": "ac9a91e28f3bb919b010ccaa755d842797af3354caec10a661c91a6cfbf9381f"
+    },
+    {
+      "area": "img_1001",
+      "split": "dev",
+      "source_tile": "MasaArea/region_01",
+      "sources": [
+        {
+          "id": "22679020_15",
+          "split": "train",
+          "raw_path": "DATA/raw_data/Masa/tiff/train/22679020_15.tiff",
+          "png_path": "DATA/raw_data/Masa/png/train/22679020_15.png",
+          "raw_sha256": "5830966dec7bb3f8bbe459ac20fb12d8bf19641ab48e0e2003bdf960d636cfa9",
+          "x": 225986.4361739957,
+          "y": 902771.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            225986.4361739957,
+            901271.0247782533,
+            227486.43617399572,
+            902771.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea",
+          "col": 0,
+          "north_row": 12,
+          "global_lattice_residual_m": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "22829020_15",
+          "split": "train",
+          "raw_path": "DATA/raw_data/Masa/tiff/train/22829020_15.tiff",
+          "png_path": "DATA/raw_data/Masa/png/train/22829020_15.png",
+          "raw_sha256": "07e3555acc3eecabfdf436d17c187ab3c4568c671faf4b847afd6ef304b019db",
+          "x": 227486.4361739957,
+          "y": 902771.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            227486.4361739957,
+            901271.0247782533,
+            228986.43617399572,
+            902771.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea",
+          "col": 1,
+          "north_row": 12,
+          "global_lattice_residual_m": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "22679005_15",
+          "split": "train",
+          "raw_path": "DATA/raw_data/Masa/tiff/train/22679005_15.tiff",
+          "png_path": "DATA/raw_data/Masa/png/train/22679005_15.png",
+          "raw_sha256": "7a421a02ce774bd1dc817780f20aeca093df2fc599bc526c1ee60e33f89fe32b",
+          "x": 225986.4361739957,
+          "y": 901271.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            225986.4361739957,
+            899771.0247782533,
+            227486.43617399572,
+            901271.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea",
+          "col": 0,
+          "north_row": 11,
+          "global_lattice_residual_m": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "22829005_15",
+          "split": "train",
+          "raw_path": "DATA/raw_data/Masa/tiff/train/22829005_15.tiff",
+          "png_path": "DATA/raw_data/Masa/png/train/22829005_15.png",
+          "raw_sha256": "8730ebc6515db8eff763e5744e5b6e7e2d096d5f0d7b6f35d46afdbddf21adb2",
+          "x": 227486.4361739957,
+          "y": 901271.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            227486.4361739957,
+            899771.0247782533,
+            228986.43617399572,
+            901271.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea",
+          "col": 1,
+          "north_row": 11,
+          "global_lattice_residual_m": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "x": 225986.4361739957,
+      "y": 902771.0247782532,
+      "placement_residuals_m": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bounds_m": [
+        225986.4361739957,
+        899771.0247782532,
+        228986.4361739957,
+        902771.0247782532
+      ],
+      "projected_area_km2": 9,
+      "pixel_size_m": 1,
+      "cell_size_m": 300,
+      "scope": "known original-training footprints; engineering pilot, not independent confirmation",
+      "mosaic_sha256": "067ff85bd96cec3613a972c468990b2ab3dae59e9eb938fecc592cb0bb40fd36",
+      "native_mosaic_rgb_sha256": "775dd4c3c26b46199432ff4250024c1b47a543455b273595ab34ade164202338"
+    },
+    {
+      "area": "img_1002",
+      "split": "dev",
+      "source_tile": "MasaArea/region_02",
+      "sources": [
+        {
+          "id": "22978900_15",
+          "split": "train",
+          "raw_path": "DATA/raw_data/Masa/tiff/train/22978900_15.tiff",
+          "png_path": "DATA/raw_data/Masa/png/train/22978900_15.png",
+          "raw_sha256": "d61c39d52b8d3f10a5e09e503cd3f8580d3a66b0ab9fe3abd5b71369b3bbd309",
+          "x": 228986.4361739957,
+          "y": 890771.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            228986.4361739957,
+            889271.0247782533,
+            230486.43617399572,
+            890771.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea",
+          "col": 2,
+          "north_row": 4,
+          "global_lattice_residual_m": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "23128900_15",
+          "split": "train",
+          "raw_path": "DATA/raw_data/Masa/tiff/train/23128900_15.tiff",
+          "png_path": "DATA/raw_data/Masa/png/train/23128900_15.png",
+          "raw_sha256": "7d75cc42ea6dff32d91a604900a719cd2be834d405aba9e1e247fa8a9125e74a",
+          "x": 230486.4361739957,
+          "y": 890771.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            230486.4361739957,
+            889271.0247782533,
+            231986.43617399572,
+            890771.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea",
+          "col": 3,
+          "north_row": 4,
+          "global_lattice_residual_m": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "22978885_15",
+          "split": "train",
+          "raw_path": "DATA/raw_data/Masa/tiff/train/22978885_15.tiff",
+          "png_path": "DATA/raw_data/Masa/png/train/22978885_15.png",
+          "raw_sha256": "b507b735284caed39ca8cde3b84ecf7087ec1f6021903a8ee1c71699d9684a08",
+          "x": 228986.4361739957,
+          "y": 889271.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            228986.4361739957,
+            887771.0247782533,
+            230486.43617399572,
+            889271.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea",
+          "col": 2,
+          "north_row": 3,
+          "global_lattice_residual_m": [
+            0.0,
+            0.0
+          ]
+        },
+        {
+          "id": "23128885_15",
+          "split": "train",
+          "raw_path": "DATA/raw_data/Masa/tiff/train/23128885_15.tiff",
+          "png_path": "DATA/raw_data/Masa/png/train/23128885_15.png",
+          "raw_sha256": "7097a078004c6838c85ef3de7d55276df781f487ab26080bfd5acb5bdd5be0c5",
+          "x": 230486.4361739957,
+          "y": 889271.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            230486.4361739957,
+            887771.0247782533,
+            231986.43617399572,
+            889271.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea",
+          "col": 3,
+          "north_row": 3,
+          "global_lattice_residual_m": [
+            0.0,
+            0.0
+          ]
+        }
+      ],
+      "x": 228986.4361739957,
+      "y": 890771.0247782532,
+      "placement_residuals_m": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "bounds_m": [
+        228986.4361739957,
+        887771.0247782532,
+        231986.4361739957,
+        890771.0247782532
+      ],
+      "projected_area_km2": 9,
+      "pixel_size_m": 1,
+      "cell_size_m": 300,
+      "scope": "known original-training footprints; engineering pilot, not independent confirmation",
+      "mosaic_sha256": "18c85fe8a630784e98fb3206800ac10b7b067fe923a4c0b7e1a108675efa868a",
+      "native_mosaic_rgb_sha256": "f763bd7d41cc4980d3f0f15cba1633e5b78af4061876d218594ce7eb69023a87"
+    }
+  ],
+  "source_count": 12,
+  "region_count": 3,
+  "patch_count": 300,
+  "scope": "known-training-footprint engineering data; actual area4x, no new generalization evidence",
+  "resampling": false,
+  "blending": false,
+  "jpeg_quality": 75,
+  "Pillow": "12.1.1"
+}

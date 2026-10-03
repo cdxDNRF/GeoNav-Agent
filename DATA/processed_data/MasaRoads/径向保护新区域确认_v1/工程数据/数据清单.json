@@ -1,0 +1,1632 @@
+{
+  "protocol": "masa-roads-grid10-spatial-v1",
+  "epsg": 26986,
+  "pixel_size_m": 1,
+  "cell_size_m": 300,
+  "native_cell_pixels": 300,
+  "mosaic_pixels": 3000,
+  "grid_size": 10,
+  "budget": 20,
+  "regions": [
+    {
+      "area": "img_3000",
+      "split": "test",
+      "source_tile": "MasaRoadsFresh/test_00",
+      "sources": [
+        {
+          "id": "17728915_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/17728915_15.tiff",
+          "raw_sha256": "0e052f4a0a99273969fe78403c80fdfcdcad12f3bb1f89d68fbfcb9c429beccd",
+          "rgb_sha256": "d4c4c74cf15670e32c0c0afc234f912417ffc9abdc64e8b80d289b514b372477",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/17728915_15.tiff",
+          "bytes": 6765892,
+          "quality": {
+            "source_blank_fraction": 3.3333333333333335e-05,
+            "max_cell_blank_fraction": 0.00012222222222222221,
+            "passed": true
+          },
+          "col": 51,
+          "north_row": 61,
+          "x": 176486.43617400527,
+          "y": 892271.024778001,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            176486.43617400527,
+            890771.0247780011,
+            177986.4361740053,
+            892271.024778001
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "17878915_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/17878915_15.tiff",
+          "raw_sha256": "c50a43915a14844ae388438f06cc5c42d1ce0184d64e30bd683f2988f3791ebf",
+          "rgb_sha256": "e3e54f79c9f748aa93a1751f2b5db39c8b74768fa8843946d6ec15d9f095d9a3",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/17878915_15.tiff",
+          "bytes": 6765892,
+          "quality": {
+            "source_blank_fraction": 9.155555555555555e-05,
+            "max_cell_blank_fraction": 0.0010888888888888888,
+            "passed": true
+          },
+          "col": 52,
+          "north_row": 61,
+          "x": 177986.43617399782,
+          "y": 892271.024778001,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            177986.43617399782,
+            890771.0247780011,
+            179486.43617399785,
+            892271.024778001
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "17728900_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/17728900_15.tiff",
+          "raw_sha256": "bac4923741eaf6e72d39e5f2eff9446fc5e39bb2e9f186b8616ebc39b8563acf",
+          "rgb_sha256": "3e14ca7b0fb297db0b13e55bdbbcaa762c045c40da08925a56ff4ff2b62186d5",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/17728900_15.tiff",
+          "bytes": 6765892,
+          "quality": {
+            "source_blank_fraction": 3.155555555555556e-05,
+            "max_cell_blank_fraction": 0.0001,
+            "passed": true
+          },
+          "col": 51,
+          "north_row": 60,
+          "x": 176486.43617400527,
+          "y": 890771.0247780196,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            176486.43617400527,
+            889271.0247780198,
+            177986.4361740053,
+            890771.0247780196
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "17878900_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/17878900_15.tiff",
+          "raw_sha256": "3de1c96e47c1fb4e1d91c74914bd989f203ef43a6fd770fee6c8523e9563e376",
+          "rgb_sha256": "d0c8f5b7c390b8647f36e59bb6a428ad8eb285bcf4d63fdd3573dd6f7ab5f114",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/17878900_15.tiff",
+          "bytes": 6765892,
+          "quality": {
+            "source_blank_fraction": 2.2666666666666668e-05,
+            "max_cell_blank_fraction": 0.00017777777777777779,
+            "passed": true
+          },
+          "col": 52,
+          "north_row": 60,
+          "x": 177986.43617399782,
+          "y": 890771.0247780196,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            177986.43617399782,
+            889271.0247780198,
+            179486.43617399785,
+            890771.0247780196
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        }
+      ],
+      "x": 176486.43617400527,
+      "y": 892271.024778001,
+      "bounds_m": [
+        176486.43617400527,
+        889271.024778001,
+        179486.43617400527,
+        892271.024778001
+      ],
+      "placement_residuals_m": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -7.450580596923828e-09,
+          0.0
+        ],
+        [
+          0.0,
+          1.862645149230957e-08
+        ],
+        [
+          -7.450580596923828e-09,
+          1.862645149230957e-08
+        ]
+      ],
+      "projected_area_km2": 9,
+      "pixel_size_m": 1,
+      "cell_size_m": 300,
+      "min_old_gap_m": 46499.999999990425,
+      "min_consumed_region_gap_m": 3000.0000000074506,
+      "project_role": "frozen_fresh_confirmation",
+      "mosaic_sha256": "dd8be11157fc2762995bbdbf5fcab26ad0611960550d031cd45999fdd9040cd1",
+      "published_mosaic_rgb_sha256": "c6903a2a17219b45621600310e360f0ae0fabbea517b2d82a0547edc69c4fad3"
+    },
+    {
+      "area": "img_3001",
+      "split": "test",
+      "source_tile": "MasaRoadsFresh/test_01",
+      "sources": [
+        {
+          "id": "18178765_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/18178765_15.tiff",
+          "raw_sha256": "9ad8f71ee0123be63da72aa68cd416ee086ec99ea0531e6d2ec36fe3d8fdad4d",
+          "rgb_sha256": "3490e9eaa4c54cd13dcae0669a0f7c9ae8cc71f60917ff231a76191f4711d56a",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/18178765_15.tiff",
+          "bytes": 6765892,
+          "quality": {
+            "source_blank_fraction": 0.0,
+            "max_cell_blank_fraction": 0.0,
+            "passed": true
+          },
+          "col": 54,
+          "north_row": 51,
+          "x": 180986.43617402017,
+          "y": 877271.0247780122,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            180986.43617402017,
+            875771.0247780123,
+            182486.4361740202,
+            877271.0247780122
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "18328765_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/18328765_15.tiff",
+          "raw_sha256": "ae5abd94abda31e67310e95768b5ddf1f5a9201217407d6d73277df831714608",
+          "rgb_sha256": "59a88bf095e0e36a7ba73a57a6995fc3bafd2c90bb5e34fd25a133ee065060e0",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/18328765_15.tiff",
+          "bytes": 6765892,
+          "quality": {
+            "source_blank_fraction": 4.4444444444444444e-07,
+            "max_cell_blank_fraction": 1.1111111111111112e-05,
+            "passed": true
+          },
+          "col": 55,
+          "north_row": 51,
+          "x": 182486.43617401272,
+          "y": 877271.0247780122,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            182486.43617401272,
+            875771.0247780123,
+            183986.43617401275,
+            877271.0247780122
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "18178750_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/18178750_15.tiff",
+          "raw_sha256": "4eb2c33bda22ca42559355ebcd967a05f345d6ac48d52d3784acc7f7be12adef",
+          "rgb_sha256": "8c7f621d5109888149a588ffebcf4bad720d4997f347bc82f10bb5115a420feb",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/18178750_15.tiff",
+          "bytes": 6765892,
+          "quality": {
+            "source_blank_fraction": 1.7777777777777777e-06,
+            "max_cell_blank_fraction": 4.4444444444444447e-05,
+            "passed": true
+          },
+          "col": 54,
+          "north_row": 50,
+          "x": 180986.43617402017,
+          "y": 875771.0247780122,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            180986.43617402017,
+            874271.0247780123,
+            182486.4361740202,
+            875771.0247780122
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "18328750_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/18328750_15.tiff",
+          "raw_sha256": "3151e90ca5ef8edc60092d443e3b0bff45d11f2e04c6d9c78aa33e0e06d78bac",
+          "rgb_sha256": "6266aa4a6050553a4d196c666afd05b3cf2a1c2870fb75188c9182c50f66ba31",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/18328750_15.tiff",
+          "bytes": 6765892,
+          "quality": {
+            "source_blank_fraction": 0.0,
+            "max_cell_blank_fraction": 0.0,
+            "passed": true
+          },
+          "col": 55,
+          "north_row": 50,
+          "x": 182486.43617401272,
+          "y": 875771.0247780122,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            182486.43617401272,
+            874271.0247780123,
+            183986.43617401275,
+            875771.0247780122
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        }
+      ],
+      "x": 180986.43617402017,
+      "y": 877271.0247780122,
+      "bounds_m": [
+        180986.43617402017,
+        874271.0247780122,
+        183986.43617402017,
+        877271.0247780122
+      ],
+      "placement_residuals_m": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -7.450580596923828e-09,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -7.450580596923828e-09,
+          0.0
+        ]
+      ],
+      "projected_area_km2": 9,
+      "pixel_size_m": 1,
+      "cell_size_m": 300,
+      "min_old_gap_m": 44116.3235096087,
+      "min_consumed_region_gap_m": 3000.000000014901,
+      "project_role": "frozen_fresh_confirmation",
+      "mosaic_sha256": "3ec1073bfbebed0306a7fd2f60e70deee0f6b8fb675d69a06fd7d4ee65ed5da1",
+      "published_mosaic_rgb_sha256": "b32cdbe1de22e8a3eca2e11115f2f4ae2a2329d4b6f1f74ccfa9e50eee534d17"
+    },
+    {
+      "area": "img_3002",
+      "split": "test",
+      "source_tile": "MasaRoadsFresh/test_02",
+      "sources": [
+        {
+          "id": "18778750_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/18778750_15.tiff",
+          "raw_sha256": "b78eedb83f4e1c415c14f7e04b940069e9adbcf55f8f67fb9514281db15d6df8",
+          "rgb_sha256": "bbfe8c31dbfe49f1c3ce31bb46531dda81d3fd726c828b6e5b39e609444dbf67",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/18778750_15.tiff",
+          "bytes": 6765892,
+          "quality": {
+            "source_blank_fraction": 1.3777777777777778e-05,
+            "max_cell_blank_fraction": 0.0001,
+            "passed": true
+          },
+          "col": 58,
+          "north_row": 50,
+          "x": 186986.43617400527,
+          "y": 875771.0247780122,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            186986.43617400527,
+            874271.0247780123,
+            188486.4361740053,
+            875771.0247780122
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "18928750_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/18928750_15.tiff",
+          "raw_sha256": "05bdf7796f88f10ce12db456f998d39c0b882330c9f124e4580f7f9b8b6b490e",
+          "rgb_sha256": "5e56f40ebd143885b2cdeda02a61e067bbece1d34f356da932a42640097c7465",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/18928750_15.tiff",
+          "bytes": 6765892,
+          "quality": {
+            "source_blank_fraction": 6.222222222222222e-06,
+            "max_cell_blank_fraction": 8.888888888888889e-05,
+            "passed": true
+          },
+          "col": 59,
+          "north_row": 50,
+          "x": 188486.43617920578,
+          "y": 875771.024782408,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            188486.43617920578,
+            874271.0247824081,
+            189986.4361792058,
+            875771.024782408
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "18778735_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/18778735_15.tiff",
+          "raw_sha256": "4ab3ca4ec458eeb048f93f87100a708493e354b09b3791eaa10ae49db5258ba6",
+          "rgb_sha256": "a653284766f6749d36388d0b1e80ddaf4bba2bcb08240225dca0d88bc8b12443",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/18778735_15.tiff",
+          "bytes": 6765892,
+          "quality": {
+            "source_blank_fraction": 1.7333333333333332e-05,
+            "max_cell_blank_fraction": 0.0003333333333333333,
+            "passed": true
+          },
+          "col": 58,
+          "north_row": 49,
+          "x": 186986.43617400527,
+          "y": 874271.0247780122,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            186986.43617400527,
+            872771.0247780123,
+            188486.4361740053,
+            874271.0247780122
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "18928735_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/18928735_15.tiff",
+          "raw_sha256": "9c63fa4a85b7f579bdbf7ff911e4c6389c7b7f05443b812f79c84ee17f96b462",
+          "rgb_sha256": "d5ab7769a5405bf932a0717f362d2fce27d9350ff52321b108dd457bb14e08fc",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/18928735_15.tiff",
+          "bytes": 6765892,
+          "quality": {
+            "source_blank_fraction": 1.7777777777777777e-06,
+            "max_cell_blank_fraction": 2.2222222222222223e-05,
+            "passed": true
+          },
+          "col": 59,
+          "north_row": 49,
+          "x": 188486.43617399782,
+          "y": 874271.0247780122,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            188486.43617399782,
+            872771.0247780123,
+            189986.43617399785,
+            874271.0247780122
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        }
+      ],
+      "x": 186986.43617400527,
+      "y": 875771.0247780122,
+      "bounds_m": [
+        186986.43617400527,
+        872771.0247780122,
+        189986.43617400527,
+        875771.0247780122
+      ],
+      "placement_residuals_m": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          5.200505256652832e-06,
+          4.395842552185059e-06
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -7.450580596923828e-09,
+          0.0
+        ]
+      ],
+      "projected_area_km2": 9,
+      "pixel_size_m": 1,
+      "cell_size_m": 300,
+      "min_old_gap_m": 39000.00000008389,
+      "min_consumed_region_gap_m": 9000.0,
+      "project_role": "frozen_fresh_confirmation",
+      "mosaic_sha256": "625e81cb2cc7320d316cd2889a6564a41b2bc198284683424bda3bfce473a896",
+      "published_mosaic_rgb_sha256": "c867c7dbc07fd63eab44ce174bc8a811d261454cf3a15c38e2fe113529a0ac06"
+    },
+    {
+      "area": "img_3003",
+      "split": "test",
+      "source_tile": "MasaRoadsFresh/test_03",
+      "sources": [
+        {
+          "id": "19678660_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/19678660_15.tiff",
+          "raw_sha256": "5fb84500b7ea7c6555a3b8b0ebe94a97d69013c760eba7c9d7b91251bfe1825f",
+          "rgb_sha256": "417239b063520d1345378fa73663816f0f61ea96f626dd4af7b8336eccac8fdf",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/19678660_15.tiff",
+          "bytes": 6765892,
+          "quality": {
+            "source_blank_fraction": 1.3333333333333334e-06,
+            "max_cell_blank_fraction": 1.1111111111111112e-05,
+            "passed": true
+          },
+          "col": 64,
+          "north_row": 44,
+          "x": 195986.43617400527,
+          "y": 866771.0247780159,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            195986.43617400527,
+            865271.024778016,
+            197486.4361740053,
+            866771.0247780159
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "19828660_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/19828660_15.tiff",
+          "raw_sha256": "944c4e57ebac0f8e8c2898b0002649f3b9df07e24a776fbb26f2c741a83d894c",
+          "rgb_sha256": "973ade3ef1248c6bce19d74a2fad10a1baae849360ba1f1c136533d1621eb1bd",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/19828660_15.tiff",
+          "bytes": 6765892,
+          "quality": {
+            "source_blank_fraction": 1.3333333333333334e-06,
+            "max_cell_blank_fraction": 2.2222222222222223e-05,
+            "passed": true
+          },
+          "col": 65,
+          "north_row": 44,
+          "x": 197486.43617399782,
+          "y": 866771.0247780159,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            197486.43617399782,
+            865271.024778016,
+            198986.43617399785,
+            866771.0247780159
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "19678645_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/19678645_15.tiff",
+          "raw_sha256": "ae164ac83e4aff19acf247a95a063e7cd77e98199a5112a9edbe8331067c3804",
+          "rgb_sha256": "438c21f0d1769a05e345d5efc70d6aeb27e901169476824ebe798e9059f36b98",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/19678645_15.tiff",
+          "bytes": 6765892,
+          "quality": {
+            "source_blank_fraction": 1.2e-05,
+            "max_cell_blank_fraction": 7.777777777777778e-05,
+            "passed": true
+          },
+          "col": 64,
+          "north_row": 43,
+          "x": 195986.43617400527,
+          "y": 865271.0247780159,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            195986.43617400527,
+            863771.024778016,
+            197486.4361740053,
+            865271.0247780159
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "19828645_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/19828645_15.tiff",
+          "raw_sha256": "e228a13ecac8fae3df6c30d017b2542361bc496b68a30b80cf1242417fd313f5",
+          "rgb_sha256": "95a7b58db503dc20dbf6f2c337626655822660631648cd224005995b70f9f892",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/19828645_15.tiff",
+          "bytes": 6765892,
+          "quality": {
+            "source_blank_fraction": 2.222222222222222e-06,
+            "max_cell_blank_fraction": 2.2222222222222223e-05,
+            "passed": true
+          },
+          "col": 65,
+          "north_row": 43,
+          "x": 197486.43617399782,
+          "y": 865271.0247780159,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            197486.43617399782,
+            863771.024778016,
+            198986.43617399785,
+            865271.0247780159
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        }
+      ],
+      "x": 195986.43617400527,
+      "y": 866771.0247780159,
+      "bounds_m": [
+        195986.43617400527,
+        863771.0247780159,
+        198986.43617400527,
+        866771.0247780159
+      ],
+      "placement_residuals_m": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -7.450580596923828e-09,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -7.450580596923828e-09,
+          0.0
+        ]
+      ],
+      "projected_area_km2": 9,
+      "pixel_size_m": 1,
+      "cell_size_m": 300,
+      "min_old_gap_m": 35780.58132575102,
+      "min_consumed_region_gap_m": 18973.665961009097,
+      "project_role": "frozen_fresh_confirmation",
+      "mosaic_sha256": "a4698a9ef190b43e93ea1ef6b5ab8ec2ad507a4d2731b6b4fa2377f3f277972a",
+      "published_mosaic_rgb_sha256": "09e4fe0c07540b076be4ed4e79007c1454045f06299083da04ff166b75f6b9a4"
+    },
+    {
+      "area": "img_3004",
+      "split": "test",
+      "source_tile": "MasaRoadsFresh/test_04",
+      "sources": [
+        {
+          "id": "19978915_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/19978915_15.tiff",
+          "raw_sha256": "ccb5c2617cb9e3eea1c5693a907e91c5cb9c81dda8dd9bf4939fc4b8026cfe27",
+          "rgb_sha256": "e80e6d67bef4f9dbee4c829bbf85bde45ce5770a4a4c51f3083b3498f9c668f8",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/19978915_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 0.00011866666666666667,
+            "max_cell_blank_fraction": 0.0006222222222222223,
+            "passed": true
+          },
+          "col": 66,
+          "north_row": 61,
+          "x": 198986.43617399567,
+          "y": 892271.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            198986.43617399567,
+            890771.0247782533,
+            200486.4361739957,
+            892271.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "20128915_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/20128915_15.tiff",
+          "raw_sha256": "fe1fd60da028291c88bab5e3fe952deadd681681337107d9ed03275c898ef0e2",
+          "rgb_sha256": "0992880ca902b9657ca10f0f8d7e92c21cbf7b5138685193e46b50ab4e80c676",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/20128915_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 8.4e-05,
+            "max_cell_blank_fraction": 0.0006888888888888888,
+            "passed": true
+          },
+          "col": 67,
+          "north_row": 61,
+          "x": 200486.43617399567,
+          "y": 892271.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            200486.43617399567,
+            890771.0247782533,
+            201986.4361739957,
+            892271.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "19978900_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/19978900_15.tiff",
+          "raw_sha256": "0faacbe18157d75b9aa7bdd553f3fc3bf6354e61b7b54cc286ef13c3029b7bc0",
+          "rgb_sha256": "cfbd3ad7735dd41115d4ee343f9be798be3ed0a6a52a2f00b632909536a147e0",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/19978900_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 4.266666666666667e-05,
+            "max_cell_blank_fraction": 0.0002,
+            "passed": true
+          },
+          "col": 66,
+          "north_row": 60,
+          "x": 198986.43617399567,
+          "y": 890771.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            198986.43617399567,
+            889271.0247782533,
+            200486.4361739957,
+            890771.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "20128900_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/20128900_15.tiff",
+          "raw_sha256": "9fc26794259a00b6f45147546d366c844532f7d966c669f138c82b34b014b1d5",
+          "rgb_sha256": "5471bfb1b0c0796723bdb61013d0bcc6cb82370e8a982b547ad13e3c4e7094f2",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/20128900_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 0.00012933333333333332,
+            "max_cell_blank_fraction": 0.00045555555555555556,
+            "passed": true
+          },
+          "col": 67,
+          "north_row": 60,
+          "x": 200486.43617399567,
+          "y": 890771.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            200486.43617399567,
+            889271.0247782533,
+            201986.4361739957,
+            890771.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        }
+      ],
+      "x": 198986.43617399567,
+      "y": 892271.0247782532,
+      "bounds_m": [
+        198986.43617399567,
+        889271.0247782532,
+        201986.43617399567,
+        892271.0247782532
+      ],
+      "placement_residuals_m": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "projected_area_km2": 9,
+      "pixel_size_m": 1,
+      "cell_size_m": 300,
+      "min_old_gap_m": 24000.00000000003,
+      "min_consumed_region_gap_m": 24964.97546576209,
+      "project_role": "frozen_fresh_confirmation",
+      "mosaic_sha256": "8d919e9f0943e31211b47179bc25b30318da74446d4f1c1aec351dcee4fd6d61",
+      "published_mosaic_rgb_sha256": "7f376f48d0611e585b6f9bfdf4832043c0f7bc4d0f55c7115fbf4d15c45140db"
+    },
+    {
+      "area": "img_3005",
+      "split": "test",
+      "source_tile": "MasaRoadsFresh/test_05",
+      "sources": [
+        {
+          "id": "20128975_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/20128975_15.tiff",
+          "raw_sha256": "911b2972d819604160438365141fd49d2d78297447c127547896f529d7f29383",
+          "rgb_sha256": "3d84a85adae29b5c08a0f3101e0a96ae7e7b44527f21521d8b5a146b8d967843",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/20128975_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 5.2e-05,
+            "max_cell_blank_fraction": 0.0002111111111111111,
+            "passed": true
+          },
+          "col": 67,
+          "north_row": 65,
+          "x": 200486.43617399567,
+          "y": 898271.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            200486.43617399567,
+            896771.0247782533,
+            201986.4361739957,
+            898271.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "20278975_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/20278975_15.tiff",
+          "raw_sha256": "bab1045721000072d56f0156815d923bc5e4077f63effed9f1fd700d59b9df58",
+          "rgb_sha256": "fd848fd71c63662b34753b89084cf375934b56848e17fdee50a7b78cea028ba5",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/20278975_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 1.511111111111111e-05,
+            "max_cell_blank_fraction": 0.00016666666666666666,
+            "passed": true
+          },
+          "col": 68,
+          "north_row": 65,
+          "x": 201986.43617399572,
+          "y": 898271.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            201986.43617399572,
+            896771.0247782533,
+            203486.43617399575,
+            898271.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "20128960_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/20128960_15.tiff",
+          "raw_sha256": "110050891860ffdb8908895db8f2cd116275b41c0420e782a5e06e7f666e7eef",
+          "rgb_sha256": "867b328b57418fb5758b7021b112af5c2cd6a40731bee67bcb556a7ef5c463c0",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/20128960_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 0.00020755555555555555,
+            "max_cell_blank_fraction": 0.0010333333333333334,
+            "passed": true
+          },
+          "col": 67,
+          "north_row": 64,
+          "x": 200486.43617399567,
+          "y": 896771.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            200486.43617399567,
+            895271.0247782533,
+            201986.4361739957,
+            896771.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "20278960_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/20278960_15.tiff",
+          "raw_sha256": "eddd46654072be34ccdf0eac8cab8e90322a1d35a72c9a99d1add44b3fdac964",
+          "rgb_sha256": "58c87edad07665a99c0419139ce9e573fb5e0acfffebe7d2aac384465fb11f13",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/20278960_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 3.4666666666666665e-05,
+            "max_cell_blank_fraction": 0.0002666666666666667,
+            "passed": true
+          },
+          "col": 68,
+          "north_row": 64,
+          "x": 201986.43617399572,
+          "y": 896771.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            201986.43617399572,
+            895271.0247782533,
+            203486.43617399575,
+            896771.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        }
+      ],
+      "x": 200486.43617399567,
+      "y": 898271.0247782532,
+      "bounds_m": [
+        200486.43617399567,
+        895271.0247782532,
+        203486.43617399567,
+        898271.0247782532
+      ],
+      "placement_residuals_m": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          5.820766091346741e-11,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          5.820766091346741e-11,
+          0.0
+        ]
+      ],
+      "projected_area_km2": 9,
+      "pixel_size_m": 1,
+      "cell_size_m": 300,
+      "min_old_gap_m": 22500.00000000003,
+      "min_consumed_region_gap_m": 27372.431386378255,
+      "project_role": "frozen_fresh_confirmation",
+      "mosaic_sha256": "ee7b8efa2ebdaffdf97526acf3d18d0d0ebd51d15a99b88512af24d17568ce63",
+      "published_mosaic_rgb_sha256": "7fc856b2a785707e0c75f6089a2b19bb4dd2de8c97dc05d090cca43f84e5d71d"
+    },
+    {
+      "area": "img_3006",
+      "split": "test",
+      "source_tile": "MasaRoadsFresh/test_06",
+      "sources": [
+        {
+          "id": "20578915_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/20578915_15.tiff",
+          "raw_sha256": "849a38b7b0136d8806af57b46eaeff8f5960b1bcd4670ea3fb23377e1350bc1c",
+          "rgb_sha256": "c6030232348f293b099807c5b9c5ac664ce77e433fd06d8cc68de926182764fa",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/20578915_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 0.0003097777777777778,
+            "max_cell_blank_fraction": 0.0025444444444444447,
+            "passed": true
+          },
+          "col": 70,
+          "north_row": 61,
+          "x": 204986.4361739958,
+          "y": 892271.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            204986.4361739958,
+            890771.0247782533,
+            206486.43617399584,
+            892271.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "20728915_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/20728915_15.tiff",
+          "raw_sha256": "0d02fb6aaa2587141d3e54a043ee21a1180d407443292caec6dd0e90adfad8ef",
+          "rgb_sha256": "92da112270224de781a1dc5c4895cc24267991ccb1afeeb8f67479988ee5ab17",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/20728915_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 0.00022044444444444444,
+            "max_cell_blank_fraction": 0.0006777777777777778,
+            "passed": true
+          },
+          "col": 71,
+          "north_row": 61,
+          "x": 206486.43617399572,
+          "y": 892271.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            206486.43617399572,
+            890771.0247782533,
+            207986.43617399575,
+            892271.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "20578900_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/20578900_15.tiff",
+          "raw_sha256": "67379c49074977487b8f15b07254fe89a01a4217248a61d215b42b93959a8e4d",
+          "rgb_sha256": "56de21b676e5f7dcf133f08ab77d2cedc04264fac5c5dfdb9f850284f190e7e8",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/20578900_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 0.0001231111111111111,
+            "max_cell_blank_fraction": 0.0004333333333333333,
+            "passed": true
+          },
+          "col": 70,
+          "north_row": 60,
+          "x": 204986.4361739958,
+          "y": 890771.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            204986.4361739958,
+            889271.0247782533,
+            206486.43617399584,
+            890771.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "20728900_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/20728900_15.tiff",
+          "raw_sha256": "022596f920dbed41db2bc3a1aa505fed10ad0b2d85eaf0730a1552cb0665f530",
+          "rgb_sha256": "ff2a9107bd3c691706819813f8e3393a5330f910a0aeb9ace8e261d735c57270",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/20728900_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 0.00012666666666666666,
+            "max_cell_blank_fraction": 0.0005555555555555556,
+            "passed": true
+          },
+          "col": 71,
+          "north_row": 60,
+          "x": 206486.43617399572,
+          "y": 890771.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            206486.43617399572,
+            889271.0247782533,
+            207986.43617399575,
+            890771.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        }
+      ],
+      "x": 204986.4361739958,
+      "y": 892271.0247782532,
+      "bounds_m": [
+        204986.4361739958,
+        889271.0247782532,
+        207986.4361739958,
+        892271.0247782532
+      ],
+      "placement_residuals_m": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -8.731149137020111e-11,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -8.731149137020111e-11,
+          0.0
+        ]
+      ],
+      "projected_area_km2": 9,
+      "pixel_size_m": 1,
+      "cell_size_m": 300,
+      "min_old_gap_m": 17999.999999999884,
+      "min_consumed_region_gap_m": 30186.91769634647,
+      "project_role": "frozen_fresh_confirmation",
+      "mosaic_sha256": "925e0d3c002d38123ad742adf1aa6bf29ca7c61967ed87733f26ce459f33f449",
+      "published_mosaic_rgb_sha256": "2c02d8d4a460b135c578823c40616e53d8b211143a0f0be13174aefb7e4e5fa4"
+    },
+    {
+      "area": "img_3007",
+      "split": "test",
+      "source_tile": "MasaRoadsFresh/test_07",
+      "sources": [
+        {
+          "id": "21178915_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/21178915_15.tiff",
+          "raw_sha256": "323c2f053b82b897f2465d31008771213763082d9de5b7b5a236e0b7a408af5f",
+          "rgb_sha256": "274b896f40a035df60855778b2eaba75e7728ae8534dd794d6d8d20a95f1a957",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/21178915_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 8.533333333333334e-05,
+            "max_cell_blank_fraction": 0.0004111111111111111,
+            "passed": true
+          },
+          "col": 74,
+          "north_row": 61,
+          "x": 210986.4361739958,
+          "y": 892271.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            210986.4361739958,
+            890771.0247782533,
+            212486.43617399584,
+            892271.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "21328915_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/21328915_15.tiff",
+          "raw_sha256": "af9268df1fd0b5566a1ffa3fa83210fcc48e6d650aca83cd71f582e7ea1aa3b9",
+          "rgb_sha256": "4096d82402a58a56cf64f6263d6a5c86c22ea16f68addd02aff469fdc1a2947d",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/21328915_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 0.000156,
+            "max_cell_blank_fraction": 0.0005,
+            "passed": true
+          },
+          "col": 75,
+          "north_row": 61,
+          "x": 212486.43617399572,
+          "y": 892271.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            212486.43617399572,
+            890771.0247782533,
+            213986.43617399575,
+            892271.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "21178900_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/21178900_15.tiff",
+          "raw_sha256": "24256fff25fd00ea556eb75c92e5b61a5960f5329c09334007b2a43752215d78",
+          "rgb_sha256": "0adff19296beeb9258d41630cb8af0498982aa02020cfeb46650507d5a5cbbfe",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/21178900_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 2.9777777777777777e-05,
+            "max_cell_blank_fraction": 0.00017777777777777779,
+            "passed": true
+          },
+          "col": 74,
+          "north_row": 60,
+          "x": 210986.4361739958,
+          "y": 890771.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            210986.4361739958,
+            889271.0247782533,
+            212486.43617399584,
+            890771.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "21328900_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/21328900_15.tiff",
+          "raw_sha256": "813f38a8dd5117eaf66ebbaf2149d6ebb144f9f9c329b11cd529dff9a49e69a8",
+          "rgb_sha256": "4813407c3c3cff638f7918a3e211f29a9722ea06b1a8ebcce5c3f84c9d8a9304",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/21328900_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 5.688888888888889e-05,
+            "max_cell_blank_fraction": 0.0002555555555555556,
+            "passed": true
+          },
+          "col": 75,
+          "north_row": 60,
+          "x": 212486.43617399572,
+          "y": 890771.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            212486.43617399572,
+            889271.0247782533,
+            213986.43617399575,
+            890771.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        }
+      ],
+      "x": 210986.4361739958,
+      "y": 892271.0247782532,
+      "bounds_m": [
+        210986.4361739958,
+        889271.0247782532,
+        213986.4361739958,
+        892271.0247782532
+      ],
+      "placement_residuals_m": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -8.731149137020111e-11,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -8.731149137020111e-11,
+          0.0
+        ]
+      ],
+      "projected_area_km2": 9,
+      "pixel_size_m": 1,
+      "cell_size_m": 300,
+      "min_old_gap_m": 11999.999999999884,
+      "min_consumed_region_gap_m": 35654.59297209662,
+      "project_role": "frozen_fresh_confirmation",
+      "mosaic_sha256": "8935e2032325344748e6ba329811e714aa1b7cebf4578ae5c7eb2da049c1856d",
+      "published_mosaic_rgb_sha256": "806244db09bed8b096b1c8a479187b458dbee9670f88ed8c46d1363cd769bbcf"
+    },
+    {
+      "area": "img_3008",
+      "split": "test",
+      "source_tile": "MasaRoadsFresh/test_08",
+      "sources": [
+        {
+          "id": "21478990_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/21478990_15.tiff",
+          "raw_sha256": "422c7961e61b43dce260af18ad4516de4f9c7b23cd8d5a26a3348330339957c5",
+          "rgb_sha256": "ca8441ab91609301bec52c9c9ad342fe5513b57aa7d8338183b36156f56a6aa2",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/21478990_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 6.977777777777778e-05,
+            "max_cell_blank_fraction": 0.0003111111111111111,
+            "passed": true
+          },
+          "col": 76,
+          "north_row": 66,
+          "x": 213986.43617399572,
+          "y": 899771.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            213986.43617399572,
+            898271.0247782533,
+            215486.43617399575,
+            899771.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "21628990_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/21628990_15.tiff",
+          "raw_sha256": "97bf2d57d60af3a9223884d6d133d9cf38535c35607952a04ac81178f59deea6",
+          "rgb_sha256": "2eb7478f4f19de5f0e7e6f12fb06fae6aec624f38d264ba41c6f4b248579da9f",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/21628990_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 8.533333333333334e-05,
+            "max_cell_blank_fraction": 0.00038888888888888887,
+            "passed": true
+          },
+          "col": 77,
+          "north_row": 66,
+          "x": 215486.43617399572,
+          "y": 899771.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            215486.43617399572,
+            898271.0247782533,
+            216986.43617399575,
+            899771.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "21478975_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/21478975_15.tiff",
+          "raw_sha256": "f677a3d105bf1a7e90b9c6d4c8c15f405eb68562434f114a21579152095721b1",
+          "rgb_sha256": "5bdfb41d990114386fd832c67a3cde574b31f907272ca716c0d7f06db6577724",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/21478975_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 9.11111111111111e-05,
+            "max_cell_blank_fraction": 0.0008222222222222222,
+            "passed": true
+          },
+          "col": 76,
+          "north_row": 65,
+          "x": 213986.43617399572,
+          "y": 898271.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            213986.43617399572,
+            896771.0247782533,
+            215486.43617399575,
+            898271.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "21628975_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/21628975_15.tiff",
+          "raw_sha256": "6e623845d749f71ad9f4b2137c9781c1c0c4fd90e22084097a907d4e2bd6d5d0",
+          "rgb_sha256": "5ed71fd16b0771b8a4d328d53bc65b19a04ab45fb6df12e87456b58d4c658d3a",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/21628975_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 0.00011822222222222223,
+            "max_cell_blank_fraction": 0.0005666666666666667,
+            "passed": true
+          },
+          "col": 77,
+          "north_row": 65,
+          "x": 215486.43617399572,
+          "y": 898271.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            215486.43617399572,
+            896771.0247782533,
+            216986.43617399575,
+            898271.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        }
+      ],
+      "x": 213986.43617399572,
+      "y": 899771.0247782532,
+      "bounds_m": [
+        213986.43617399572,
+        896771.0247782532,
+        216986.43617399572,
+        899771.0247782532
+      ],
+      "placement_residuals_m": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ]
+      ],
+      "projected_area_km2": 9,
+      "pixel_size_m": 1,
+      "cell_size_m": 300,
+      "min_old_gap_m": 8999.99999999997,
+      "min_consumed_region_gap_m": 40942.03219190069,
+      "project_role": "frozen_fresh_confirmation",
+      "mosaic_sha256": "e073b714f576933c994cba092eded4c36e5c9ae79c5cd146577e65e701a84930",
+      "published_mosaic_rgb_sha256": "4558ff284d925b88e6726fcc714fd6ee8bd8a4fa7208b51d4241399e5662a88a"
+    },
+    {
+      "area": "img_3009",
+      "split": "test",
+      "source_tile": "MasaRoadsFresh/test_09",
+      "sources": [
+        {
+          "id": "21629050_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/21629050_15.tiff",
+          "raw_sha256": "183460b34826d0400e1039695addff8bc138d119b295412e679c961e0042f519",
+          "rgb_sha256": "6a31132259cfb9e57ba7432e1c3643e064e358c9baba55385962f65267e6da6f",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/21629050_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 5.511111111111111e-05,
+            "max_cell_blank_fraction": 0.00022222222222222223,
+            "passed": true
+          },
+          "col": 77,
+          "north_row": 70,
+          "x": 215486.43617399572,
+          "y": 905771.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            215486.43617399572,
+            904271.0247782533,
+            216986.43617399575,
+            905771.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "21779050_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/21779050_15.tiff",
+          "raw_sha256": "487234a70b82b5a009b317f0ab3468c41e5089cf12a36fa7c732a3ba56ed2700",
+          "rgb_sha256": "b50ab579ec6848fc72f1b27f71dd1aed8e1ed52f8cbbf0875cb5829675768ef5",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/21779050_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 0.00011644444444444445,
+            "max_cell_blank_fraction": 0.0006111111111111111,
+            "passed": true
+          },
+          "col": 78,
+          "north_row": 70,
+          "x": 216986.43617399564,
+          "y": 905771.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            216986.43617399564,
+            904271.0247782533,
+            218486.43617399567,
+            905771.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "21629035_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/21629035_15.tiff",
+          "raw_sha256": "933128a61d7795dd2750aaf2540287c2a80488d2d57632bfe5bc112aa6ca5a7e",
+          "rgb_sha256": "24049ab0dc819230cc4c197536aae4621395855c86f6ba17e07dfb8869eb0d73",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/21629035_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 9.911111111111111e-05,
+            "max_cell_blank_fraction": 0.0003222222222222222,
+            "passed": true
+          },
+          "col": 77,
+          "north_row": 69,
+          "x": 215486.43617399572,
+          "y": 904271.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            215486.43617399572,
+            902771.0247782533,
+            216986.43617399575,
+            904271.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        },
+        {
+          "id": "21779035_15",
+          "split": "train",
+          "upstream_split": "train",
+          "raw_path": "DATA/raw_data/MasaRoads/径向保护新区域确认_v1/tiff/21779035_15.tiff",
+          "raw_sha256": "8172b988898461b9fe60d37142bec181a5359ce542f58342575c97590d7e0188",
+          "rgb_sha256": "97b71394d476f38cd1e52bc05c0f7c1cf9c669ce319f37a0f6344e12bf027943",
+          "url": "https://www.cs.toronto.edu/~vmnih/data/mass_roads/train/sat/21779035_15.tiff",
+          "bytes": 6765878,
+          "quality": {
+            "source_blank_fraction": 3.555555555555555e-05,
+            "max_cell_blank_fraction": 0.00018888888888888888,
+            "passed": true
+          },
+          "col": 78,
+          "north_row": 69,
+          "x": 216986.43617399564,
+          "y": 904271.0247782532,
+          "pixel_size_x": 1.0000000000000195,
+          "pixel_size_y": 0.9999999999999225,
+          "bounds_m": [
+            216986.43617399564,
+            902771.0247782533,
+            218486.43617399567,
+            904271.0247782532
+          ],
+          "epsg": 26986,
+          "linear_unit": "metre",
+          "raster_type": "PixelIsArea"
+        }
+      ],
+      "x": 215486.43617399572,
+      "y": 905771.0247782532,
+      "bounds_m": [
+        215486.43617399572,
+        902771.0247782532,
+        218486.43617399572,
+        905771.0247782532
+      ],
+      "placement_residuals_m": [
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -8.731149137020111e-11,
+          0.0
+        ],
+        [
+          0.0,
+          0.0
+        ],
+        [
+          -8.731149137020111e-11,
+          0.0
+        ]
+      ],
+      "projected_area_km2": 9,
+      "pixel_size_m": 1,
+      "cell_size_m": 300,
+      "min_old_gap_m": 7499.999999999971,
+      "min_consumed_region_gap_m": 43680.65933574525,
+      "project_role": "frozen_fresh_confirmation",
+      "mosaic_sha256": "374a229eb125f36afa3f7a58c1e37e98769db0175e09b1a9629e335ad9d3109f",
+      "published_mosaic_rgb_sha256": "4db825932fc0945ca5a41fbce6e0c352da8dbb628674d5de4fb1ad091638bf77"
+    }
+  ],
+  "region_count": 10,
+  "source_count": 40,
+  "patch_count": 1000,
+  "scope": "spatially isolated from localM0Masa151; pretraining footprint unknown",
+  "resampling": false,
+  "blending": false,
+  "upstream_preprocessing": "author reports rescaling released dataset to1pixel per square metre",
+  "jpeg_quality": 75,
+  "navigation_model_calls": 0,
+  "new_navigation_records": 0
+}

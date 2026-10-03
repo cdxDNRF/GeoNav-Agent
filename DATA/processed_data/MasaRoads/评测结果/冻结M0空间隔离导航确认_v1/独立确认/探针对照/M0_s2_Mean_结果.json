@@ -1,0 +1,359 @@
+{
+  "by_direction": {
+    "down": {
+      "adjacent_denominator": 200,
+      "given_target_correct_accepts": 16,
+      "nonadjacent_denominator": 0,
+      "raw_accepted": 26,
+      "raw_correct_acceptance": 0.08,
+      "raw_correct_accepts": 16,
+      "raw_false_accepts": 0,
+      "raw_nonadjacent_false_acceptance": null,
+      "raw_wrong_direction_accepts": 10,
+      "reasons": {
+        "accepted": 26,
+        "low_confidence": 3,
+        "not_adjacent": 171
+      },
+      "records": 200,
+      "usable_accepted": 26
+    },
+    "left": {
+      "adjacent_denominator": 200,
+      "given_target_correct_accepts": 1,
+      "nonadjacent_denominator": 0,
+      "raw_accepted": 26,
+      "raw_correct_acceptance": 0.005,
+      "raw_correct_accepts": 1,
+      "raw_false_accepts": 0,
+      "raw_nonadjacent_false_acceptance": null,
+      "raw_wrong_direction_accepts": 25,
+      "reasons": {
+        "accepted": 22,
+        "illegal_top_direction": 4,
+        "low_confidence": 2,
+        "not_adjacent": 172
+      },
+      "records": 200,
+      "usable_accepted": 22
+    },
+    "not_adjacent": {
+      "adjacent_denominator": 0,
+      "given_target_correct_accepts": 0,
+      "nonadjacent_denominator": 400,
+      "raw_accepted": 51,
+      "raw_correct_acceptance": null,
+      "raw_correct_accepts": 0,
+      "raw_false_accepts": 51,
+      "raw_nonadjacent_false_acceptance": 0.1275,
+      "raw_wrong_direction_accepts": 0,
+      "reasons": {
+        "accepted": 46,
+        "illegal_top_direction": 5,
+        "low_confidence": 3,
+        "not_adjacent": 346
+      },
+      "records": 400,
+      "usable_accepted": 46
+    },
+    "right": {
+      "adjacent_denominator": 200,
+      "given_target_correct_accepts": 0,
+      "nonadjacent_denominator": 0,
+      "raw_accepted": 25,
+      "raw_correct_acceptance": 0.0,
+      "raw_correct_accepts": 0,
+      "raw_false_accepts": 0,
+      "raw_nonadjacent_false_acceptance": null,
+      "raw_wrong_direction_accepts": 25,
+      "reasons": {
+        "accepted": 23,
+        "illegal_top_direction": 2,
+        "low_confidence": 2,
+        "not_adjacent": 173
+      },
+      "records": 200,
+      "usable_accepted": 23
+    },
+    "up": {
+      "adjacent_denominator": 200,
+      "given_target_correct_accepts": 10,
+      "nonadjacent_denominator": 0,
+      "raw_accepted": 21,
+      "raw_correct_acceptance": 0.05,
+      "raw_correct_accepts": 10,
+      "raw_false_accepts": 0,
+      "raw_nonadjacent_false_acceptance": null,
+      "raw_wrong_direction_accepts": 11,
+      "reasons": {
+        "accepted": 21,
+        "low_confidence": 2,
+        "not_adjacent": 177
+      },
+      "records": 200,
+      "usable_accepted": 21
+    }
+  },
+  "by_kind": {
+    "cross_source_adjacent": {
+      "adjacent_denominator": 400,
+      "given_target_correct_accepts": 11,
+      "nonadjacent_denominator": 0,
+      "raw_accepted": 47,
+      "raw_correct_acceptance": 0.0275,
+      "raw_correct_accepts": 11,
+      "raw_false_accepts": 0,
+      "raw_nonadjacent_false_acceptance": null,
+      "raw_wrong_direction_accepts": 36,
+      "reasons": {
+        "accepted": 46,
+        "illegal_top_direction": 1,
+        "low_confidence": 6,
+        "not_adjacent": 347
+      },
+      "records": 400,
+      "usable_accepted": 46
+    },
+    "nonadjacent_matched_target": {
+      "adjacent_denominator": 0,
+      "given_target_correct_accepts": 0,
+      "nonadjacent_denominator": 400,
+      "raw_accepted": 51,
+      "raw_correct_acceptance": null,
+      "raw_correct_accepts": 0,
+      "raw_false_accepts": 51,
+      "raw_nonadjacent_false_acceptance": 0.1275,
+      "raw_wrong_direction_accepts": 0,
+      "reasons": {
+        "accepted": 46,
+        "illegal_top_direction": 5,
+        "low_confidence": 3,
+        "not_adjacent": 346
+      },
+      "records": 400,
+      "usable_accepted": 46
+    },
+    "same_source_adjacent": {
+      "adjacent_denominator": 400,
+      "given_target_correct_accepts": 16,
+      "nonadjacent_denominator": 0,
+      "raw_accepted": 51,
+      "raw_correct_acceptance": 0.04,
+      "raw_correct_accepts": 16,
+      "raw_false_accepts": 0,
+      "raw_nonadjacent_false_acceptance": null,
+      "raw_wrong_direction_accepts": 35,
+      "reasons": {
+        "accepted": 46,
+        "illegal_top_direction": 5,
+        "low_confidence": 3,
+        "not_adjacent": 346
+      },
+      "records": 400,
+      "usable_accepted": 46
+    }
+  },
+  "by_source": {
+    "MasaRoadsArea/test_00": {
+      "adjacent_denominator": 80,
+      "given_target_correct_accepts": 1,
+      "nonadjacent_denominator": 40,
+      "raw_accepted": 8,
+      "raw_correct_acceptance": 0.0125,
+      "raw_correct_accepts": 1,
+      "raw_false_accepts": 3,
+      "raw_nonadjacent_false_acceptance": 0.075,
+      "raw_wrong_direction_accepts": 4,
+      "reasons": {
+        "accepted": 8,
+        "low_confidence": 1,
+        "not_adjacent": 111
+      },
+      "records": 120,
+      "usable_accepted": 8
+    },
+    "MasaRoadsArea/test_01": {
+      "adjacent_denominator": 80,
+      "given_target_correct_accepts": 0,
+      "nonadjacent_denominator": 40,
+      "raw_accepted": 15,
+      "raw_correct_acceptance": 0.0,
+      "raw_correct_accepts": 0,
+      "raw_false_accepts": 5,
+      "raw_nonadjacent_false_acceptance": 0.125,
+      "raw_wrong_direction_accepts": 10,
+      "reasons": {
+        "accepted": 15,
+        "not_adjacent": 105
+      },
+      "records": 120,
+      "usable_accepted": 15
+    },
+    "MasaRoadsArea/test_02": {
+      "adjacent_denominator": 80,
+      "given_target_correct_accepts": 3,
+      "nonadjacent_denominator": 40,
+      "raw_accepted": 26,
+      "raw_correct_acceptance": 0.0375,
+      "raw_correct_accepts": 3,
+      "raw_false_accepts": 10,
+      "raw_nonadjacent_false_acceptance": 0.25,
+      "raw_wrong_direction_accepts": 13,
+      "reasons": {
+        "accepted": 22,
+        "illegal_top_direction": 4,
+        "low_confidence": 4,
+        "not_adjacent": 90
+      },
+      "records": 120,
+      "usable_accepted": 22
+    },
+    "MasaRoadsArea/test_03": {
+      "adjacent_denominator": 80,
+      "given_target_correct_accepts": 2,
+      "nonadjacent_denominator": 40,
+      "raw_accepted": 12,
+      "raw_correct_acceptance": 0.025,
+      "raw_correct_accepts": 2,
+      "raw_false_accepts": 5,
+      "raw_nonadjacent_false_acceptance": 0.125,
+      "raw_wrong_direction_accepts": 5,
+      "reasons": {
+        "accepted": 10,
+        "illegal_top_direction": 2,
+        "low_confidence": 2,
+        "not_adjacent": 106
+      },
+      "records": 120,
+      "usable_accepted": 10
+    },
+    "MasaRoadsArea/test_04": {
+      "adjacent_denominator": 80,
+      "given_target_correct_accepts": 7,
+      "nonadjacent_denominator": 40,
+      "raw_accepted": 23,
+      "raw_correct_acceptance": 0.0875,
+      "raw_correct_accepts": 7,
+      "raw_false_accepts": 8,
+      "raw_nonadjacent_false_acceptance": 0.2,
+      "raw_wrong_direction_accepts": 8,
+      "reasons": {
+        "accepted": 23,
+        "low_confidence": 1,
+        "not_adjacent": 96
+      },
+      "records": 120,
+      "usable_accepted": 23
+    },
+    "MasaRoadsArea/test_05": {
+      "adjacent_denominator": 80,
+      "given_target_correct_accepts": 3,
+      "nonadjacent_denominator": 40,
+      "raw_accepted": 16,
+      "raw_correct_acceptance": 0.0375,
+      "raw_correct_accepts": 3,
+      "raw_false_accepts": 7,
+      "raw_nonadjacent_false_acceptance": 0.175,
+      "raw_wrong_direction_accepts": 6,
+      "reasons": {
+        "accepted": 14,
+        "illegal_top_direction": 2,
+        "not_adjacent": 104
+      },
+      "records": 120,
+      "usable_accepted": 14
+    },
+    "MasaRoadsArea/test_06": {
+      "adjacent_denominator": 80,
+      "given_target_correct_accepts": 1,
+      "nonadjacent_denominator": 40,
+      "raw_accepted": 8,
+      "raw_correct_acceptance": 0.0125,
+      "raw_correct_accepts": 1,
+      "raw_false_accepts": 2,
+      "raw_nonadjacent_false_acceptance": 0.05,
+      "raw_wrong_direction_accepts": 5,
+      "reasons": {
+        "accepted": 7,
+        "illegal_top_direction": 1,
+        "not_adjacent": 112
+      },
+      "records": 120,
+      "usable_accepted": 7
+    },
+    "MasaRoadsArea/test_07": {
+      "adjacent_denominator": 80,
+      "given_target_correct_accepts": 2,
+      "nonadjacent_denominator": 40,
+      "raw_accepted": 6,
+      "raw_correct_acceptance": 0.025,
+      "raw_correct_accepts": 2,
+      "raw_false_accepts": 2,
+      "raw_nonadjacent_false_acceptance": 0.05,
+      "raw_wrong_direction_accepts": 2,
+      "reasons": {
+        "accepted": 6,
+        "not_adjacent": 114
+      },
+      "records": 120,
+      "usable_accepted": 6
+    },
+    "MasaRoadsArea/test_08": {
+      "adjacent_denominator": 80,
+      "given_target_correct_accepts": 2,
+      "nonadjacent_denominator": 40,
+      "raw_accepted": 15,
+      "raw_correct_acceptance": 0.025,
+      "raw_correct_accepts": 2,
+      "raw_false_accepts": 5,
+      "raw_nonadjacent_false_acceptance": 0.125,
+      "raw_wrong_direction_accepts": 8,
+      "reasons": {
+        "accepted": 15,
+        "low_confidence": 3,
+        "not_adjacent": 102
+      },
+      "records": 120,
+      "usable_accepted": 15
+    },
+    "MasaRoadsArea/test_09": {
+      "adjacent_denominator": 80,
+      "given_target_correct_accepts": 6,
+      "nonadjacent_denominator": 40,
+      "raw_accepted": 20,
+      "raw_correct_acceptance": 0.075,
+      "raw_correct_accepts": 6,
+      "raw_false_accepts": 4,
+      "raw_nonadjacent_false_acceptance": 0.1,
+      "raw_wrong_direction_accepts": 10,
+      "reasons": {
+        "accepted": 18,
+        "illegal_top_direction": 2,
+        "low_confidence": 1,
+        "not_adjacent": 99
+      },
+      "records": 120,
+      "usable_accepted": 18
+    }
+  },
+  "judgments_sha256": "9960f0d3eb86992a5f9697279d73006813b0826c17d5297a37ed21b885db9b8b",
+  "metrics": {
+    "adjacent_denominator": 800,
+    "given_target_correct_accepts": 27,
+    "nonadjacent_denominator": 400,
+    "raw_accepted": 149,
+    "raw_correct_acceptance": 0.03375,
+    "raw_correct_accepts": 27,
+    "raw_false_accepts": 51,
+    "raw_nonadjacent_false_acceptance": 0.1275,
+    "raw_wrong_direction_accepts": 71,
+    "reasons": {
+      "accepted": 138,
+      "illegal_top_direction": 11,
+      "low_confidence": 12,
+      "not_adjacent": 1039
+    },
+    "records": 1200,
+    "usable_accepted": 138
+  }
+}

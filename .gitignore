@@ -35,3 +35,14 @@ Thumbs.db
 /DATA/processed_data/**/views/
 /DATA/processed_data/**/方向视图/
 /DATA/processed_data/**/targets/
+
+# Native georeferenced mosaics and large frozen traces stay local.
+# Keep reports, manifests, source snapshots, and audit results versioned.
+/DATA/processed_data/**/工程数据/mosaics/*.tif
+/DATA/processed_data/**/工程数据/mosaics/*.tiff
+/DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/*_轨迹.jsonl
+/DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/主对照/*_轨迹.jsonl
+/DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/目标对照/*_轨迹.jsonl
+/DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/*_轨迹.jsonl
+/DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/*_轨迹.jsonl
+/DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/*_轨迹.jsonl

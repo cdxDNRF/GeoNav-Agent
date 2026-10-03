@@ -1,0 +1,39 @@
+{
+  "candidate": "Coverage3Radial",
+  "cloud_calls": 0,
+  "completed": true,
+  "controls_started": true,
+  "default_changed": false,
+  "default_sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b",
+  "eligible_for_default_upgrade": true,
+  "harmed": 88,
+  "independent_audit_passed": true,
+  "independent_main_passed": true,
+  "independent_target_evidence_passed": true,
+  "limitation": "same Massachusetts imagery family; pretrained geography unknown; frozen cohort, not real-flight validation",
+  "main_audit_sha256": "00181742dcd7333d32b30e4709d530a02fece8016c36fed24949a30541bf81fd",
+  "main_checks": {
+    "mixed_SG_no_worse": true,
+    "mixed_SR_gain2pp": true,
+    "source95_SR_lower_positive": true,
+    "strata": {
+      "interior_target": {
+        "SG_no_worse": true,
+        "SR_loss_at_most2pp": true
+      },
+      "long_distance": {
+        "SG_no_worse": true,
+        "SR_loss_at_most2pp": true
+      },
+      "seam_target": {
+        "SG_no_worse": true,
+        "SR_loss_at_most2pp": true
+      }
+    },
+    "two_positive_weights": true
+  },
+  "main_summary_sha256": "8604190f266df130869a2b25e5c81f9a8dadd2736b4206f816b87e97d08fd3db",
+  "new_training_steps": 0,
+  "records": 11250,
+  "recovered": 295
+}

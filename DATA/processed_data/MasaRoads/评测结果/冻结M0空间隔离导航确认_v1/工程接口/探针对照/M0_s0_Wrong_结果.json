@@ -1,0 +1,238 @@
+{
+  "by_direction": {
+    "down": {
+      "adjacent_denominator": 80,
+      "given_target_correct_accepts": 0,
+      "nonadjacent_denominator": 0,
+      "raw_accepted": 1,
+      "raw_correct_acceptance": 0.0125,
+      "raw_correct_accepts": 1,
+      "raw_false_accepts": 0,
+      "raw_nonadjacent_false_acceptance": null,
+      "raw_wrong_direction_accepts": 0,
+      "reasons": {
+        "accepted": 1,
+        "not_adjacent": 79
+      },
+      "records": 80,
+      "usable_accepted": 1
+    },
+    "left": {
+      "adjacent_denominator": 80,
+      "given_target_correct_accepts": 2,
+      "nonadjacent_denominator": 0,
+      "raw_accepted": 2,
+      "raw_correct_acceptance": 0.0,
+      "raw_correct_accepts": 0,
+      "raw_false_accepts": 0,
+      "raw_nonadjacent_false_acceptance": null,
+      "raw_wrong_direction_accepts": 2,
+      "reasons": {
+        "accepted": 2,
+        "not_adjacent": 78
+      },
+      "records": 80,
+      "usable_accepted": 2
+    },
+    "not_adjacent": {
+      "adjacent_denominator": 0,
+      "given_target_correct_accepts": 6,
+      "nonadjacent_denominator": 160,
+      "raw_accepted": 10,
+      "raw_correct_acceptance": null,
+      "raw_correct_accepts": 0,
+      "raw_false_accepts": 10,
+      "raw_nonadjacent_false_acceptance": 0.0625,
+      "raw_wrong_direction_accepts": 0,
+      "reasons": {
+        "accepted": 10,
+        "low_confidence": 1,
+        "not_adjacent": 149
+      },
+      "records": 160,
+      "usable_accepted": 10
+    },
+    "right": {
+      "adjacent_denominator": 80,
+      "given_target_correct_accepts": 3,
+      "nonadjacent_denominator": 0,
+      "raw_accepted": 5,
+      "raw_correct_acceptance": 0.0,
+      "raw_correct_accepts": 0,
+      "raw_false_accepts": 0,
+      "raw_nonadjacent_false_acceptance": null,
+      "raw_wrong_direction_accepts": 5,
+      "reasons": {
+        "accepted": 4,
+        "illegal_top_direction": 1,
+        "not_adjacent": 75
+      },
+      "records": 80,
+      "usable_accepted": 4
+    },
+    "up": {
+      "adjacent_denominator": 80,
+      "given_target_correct_accepts": 5,
+      "nonadjacent_denominator": 0,
+      "raw_accepted": 8,
+      "raw_correct_acceptance": 0.0,
+      "raw_correct_accepts": 0,
+      "raw_false_accepts": 0,
+      "raw_nonadjacent_false_acceptance": null,
+      "raw_wrong_direction_accepts": 8,
+      "reasons": {
+        "accepted": 8,
+        "not_adjacent": 72
+      },
+      "records": 80,
+      "usable_accepted": 8
+    }
+  },
+  "by_kind": {
+    "cross_source_adjacent": {
+      "adjacent_denominator": 160,
+      "given_target_correct_accepts": 4,
+      "nonadjacent_denominator": 0,
+      "raw_accepted": 8,
+      "raw_correct_acceptance": 0.0,
+      "raw_correct_accepts": 0,
+      "raw_false_accepts": 0,
+      "raw_nonadjacent_false_acceptance": null,
+      "raw_wrong_direction_accepts": 8,
+      "reasons": {
+        "accepted": 8,
+        "not_adjacent": 152
+      },
+      "records": 160,
+      "usable_accepted": 8
+    },
+    "nonadjacent_matched_target": {
+      "adjacent_denominator": 0,
+      "given_target_correct_accepts": 6,
+      "nonadjacent_denominator": 160,
+      "raw_accepted": 10,
+      "raw_correct_acceptance": null,
+      "raw_correct_accepts": 0,
+      "raw_false_accepts": 10,
+      "raw_nonadjacent_false_acceptance": 0.0625,
+      "raw_wrong_direction_accepts": 0,
+      "reasons": {
+        "accepted": 10,
+        "low_confidence": 1,
+        "not_adjacent": 149
+      },
+      "records": 160,
+      "usable_accepted": 10
+    },
+    "same_source_adjacent": {
+      "adjacent_denominator": 160,
+      "given_target_correct_accepts": 6,
+      "nonadjacent_denominator": 0,
+      "raw_accepted": 8,
+      "raw_correct_acceptance": 0.00625,
+      "raw_correct_accepts": 1,
+      "raw_false_accepts": 0,
+      "raw_nonadjacent_false_acceptance": null,
+      "raw_wrong_direction_accepts": 7,
+      "reasons": {
+        "accepted": 7,
+        "illegal_top_direction": 1,
+        "not_adjacent": 152
+      },
+      "records": 160,
+      "usable_accepted": 7
+    }
+  },
+  "by_source": {
+    "MasaRoadsArea/dev_00": {
+      "adjacent_denominator": 80,
+      "given_target_correct_accepts": 4,
+      "nonadjacent_denominator": 40,
+      "raw_accepted": 5,
+      "raw_correct_acceptance": 0.0,
+      "raw_correct_accepts": 0,
+      "raw_false_accepts": 3,
+      "raw_nonadjacent_false_acceptance": 0.075,
+      "raw_wrong_direction_accepts": 2,
+      "reasons": {
+        "accepted": 5,
+        "not_adjacent": 115
+      },
+      "records": 120,
+      "usable_accepted": 5
+    },
+    "MasaRoadsArea/dev_01": {
+      "adjacent_denominator": 80,
+      "given_target_correct_accepts": 3,
+      "nonadjacent_denominator": 40,
+      "raw_accepted": 3,
+      "raw_correct_acceptance": 0.0,
+      "raw_correct_accepts": 0,
+      "raw_false_accepts": 3,
+      "raw_nonadjacent_false_acceptance": 0.075,
+      "raw_wrong_direction_accepts": 0,
+      "reasons": {
+        "accepted": 3,
+        "not_adjacent": 117
+      },
+      "records": 120,
+      "usable_accepted": 3
+    },
+    "MasaRoadsArea/dev_02": {
+      "adjacent_denominator": 80,
+      "given_target_correct_accepts": 7,
+      "nonadjacent_denominator": 40,
+      "raw_accepted": 15,
+      "raw_correct_acceptance": 0.0125,
+      "raw_correct_accepts": 1,
+      "raw_false_accepts": 3,
+      "raw_nonadjacent_false_acceptance": 0.075,
+      "raw_wrong_direction_accepts": 11,
+      "reasons": {
+        "accepted": 14,
+        "illegal_top_direction": 1,
+        "low_confidence": 1,
+        "not_adjacent": 104
+      },
+      "records": 120,
+      "usable_accepted": 14
+    },
+    "MasaRoadsArea/dev_03": {
+      "adjacent_denominator": 80,
+      "given_target_correct_accepts": 2,
+      "nonadjacent_denominator": 40,
+      "raw_accepted": 3,
+      "raw_correct_acceptance": 0.0,
+      "raw_correct_accepts": 0,
+      "raw_false_accepts": 1,
+      "raw_nonadjacent_false_acceptance": 0.025,
+      "raw_wrong_direction_accepts": 2,
+      "reasons": {
+        "accepted": 3,
+        "not_adjacent": 117
+      },
+      "records": 120,
+      "usable_accepted": 3
+    }
+  },
+  "judgments_sha256": "fd27de5b8d9eac84b9ee33b3bb59d9272a97e8bcfa999105bdbef10dc7f42125",
+  "metrics": {
+    "adjacent_denominator": 320,
+    "given_target_correct_accepts": 16,
+    "nonadjacent_denominator": 160,
+    "raw_accepted": 26,
+    "raw_correct_acceptance": 0.003125,
+    "raw_correct_accepts": 1,
+    "raw_false_accepts": 10,
+    "raw_nonadjacent_false_acceptance": 0.0625,
+    "raw_wrong_direction_accepts": 15,
+    "reasons": {
+      "accepted": 25,
+      "illegal_top_direction": 1,
+      "low_confidence": 1,
+      "not_adjacent": 453
+    },
+    "records": 480,
+    "usable_accepted": 25
+  }
+}

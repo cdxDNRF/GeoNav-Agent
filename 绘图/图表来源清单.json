@@ -494,6 +494,796 @@
         }
       ],
       "reproduction_script": "project/src/documents/refine_continued_source_figure.py"
+    },
+    {
+      "id": "36_恢复损伤与失败阶段",
+      "caption": "Continue5的410条失败中406条未在预算内获得可行动的目标邻接机会；109条仅在预算耗尽后邻接。其185条恢复被176条损伤抵消，净增9/1500。左图四类互斥，包含原M0的全部419条失败和Continue5的全部410条失败；方形/圆形区分方法。20已消费SwissView源文件、500题×3训练权重、10×10/B20；无新增导航，事后真值分类不构成因果或策略输入。",
+      "protocol": {
+        "sources": 20,
+        "planned_each_weight": 500,
+        "weights": 3,
+        "grid": 10,
+        "budget": 20,
+        "posthoc": true
+      },
+      "sources": [
+        "DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1/诊断汇总.json",
+        "DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1/独立复核.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/36_恢复损伤与失败阶段.pdf",
+          "sha256": "bc42020db79df83c21a88374609bbfa80d2db4e80c301a6d55f24416f95cdb94"
+        },
+        {
+          "path": "绘图/数据结果图/36_恢复损伤与失败阶段.svg",
+          "sha256": "06f2eee8011f11f1bd159bf136ee6747fe792b3a99ee1d1c2bb0e26715754d76"
+        },
+        {
+          "path": "绘图/数据结果图/36_恢复损伤与失败阶段.png",
+          "sha256": "dccfde3863207001a91decaef4c44a7e1956cfc5c8f16f1fc936146f75b2fc1d"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_fresh_alternative.py"
+    },
+    {
+      "id": "37_回访新格筛选与目标对照",
+      "caption": "回访新格筛选F在同题开发子集把SR从77.87%提高到79.87%，SG从1.321降到1.188；恢复18条、损伤3条，三权重均有SR正收益。Full对禁用、均值、错误目标均通过预定证据门槛。Masa原S4完整dev子集10源文件、250题×3权重、10×10/B20，未纳入原test子集；圆/三角/方形为seed0/1/2而非CI。按源文件成组的SR增益95%区间[+0.80,+3.60]点，仅描述已知开发队列；原默认未替换。",
+      "protocol": {
+        "sources": 10,
+        "split": "dev",
+        "planned_each_weight": 250,
+        "weights": 3,
+        "grid": 10,
+        "budget": 20,
+        "independent_confirmation": false
+      },
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/主对照/对照汇总.json",
+        "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/目标对照/目标证据汇总.json",
+        "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/验收结论.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/37_回访新格筛选与目标对照.pdf",
+          "sha256": "49b1278a008e9894cd04285d399af3fa537d50d7ea9db16cee7382b756335a4d"
+        },
+        {
+          "path": "绘图/数据结果图/37_回访新格筛选与目标对照.svg",
+          "sha256": "430490745e368305a316d9df7b3b46b56681cf9f8d3db413119c1050ef2dfad8"
+        },
+        {
+          "path": "绘图/数据结果图/37_回访新格筛选与目标对照.png",
+          "sha256": "6924bb784aca4e83a23ba9cf4eac4404ef2dffdb9845340de1547cb2c1d4dbc7"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_fresh_alternative.py"
+    },
+    {
+      "id": "38_回访新格筛选新源确认",
+      "caption": "固定20新SwissView源文件的同题对照：M0 SR76.13%/SG1.237，F SR76.73%/SG1.220。SR差+0.60点，1/3权重正；源文件配对95%区间[-0.20,+1.33]点。未过升级门槛；原默认保持。500题×3冻结权重、10×10/B20；圆/三角/方形为seed0/1/2，非CI；SG包括成功的0，网格密度增加不代表实际面积扩展。",
+      "protocol": {
+        "sources": 20,
+        "planned_each_weight": 500,
+        "weights": 3,
+        "grid": 10,
+        "budget": 20,
+        "source_files_independent": true,
+        "geographic_area_expanded": false
+      },
+      "sources": [
+        "DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1/主对照汇总.json",
+        "DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1/验收结论.json",
+        "DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1/独立复核.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/38_回访新格筛选新源确认.pdf",
+          "sha256": "2c20dc08b2674bf236279941c64d8e1df4f824cf55d6f933d20955de9a6b9ed4"
+        },
+        {
+          "path": "绘图/数据结果图/38_回访新格筛选新源确认.svg",
+          "sha256": "0658b442a313669e862154f740bb43a3a35c5b067690e576719c92b56681dde1"
+        },
+        {
+          "path": "绘图/数据结果图/38_回访新格筛选新源确认.png",
+          "sha256": "9c8c7cf2f046bcaba3dacf6146f72a67178f3fc8bf0aeba990d5424bfc039101"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_fresh_source.py"
+    },
+    {
+      "id": "39_实际面积与图块尺度",
+      "caption": "协议尺度对比：原5×5为1.5km边长/300m每格/2.25km²/B10；旧10×10只提高密度，为1.5km边长/150m每格/2.25km²/B20；新10×10用四张坐标相邻原图，为3km边长/原生300m每格/9km²/B20。坐标轴相同，面积为投影面积；合法移动上限分别3、3、6km，不能称物理预算相同。三张已知训练区域只完成数据工程，未产生新SR。",
+      "protocol": {
+        "pixel_size_m": 1,
+        "native_cell_m": 300,
+        "new_area_km2": 9,
+        "previous_area_km2": 2.25,
+        "new_SR": false
+      },
+      "sources": [
+        "DATA/processed_data/Masa/实际区域扩展_v1/工程数据/数据清单.json",
+        "DATA/processed_data/Masa/实际区域扩展_v1/核验/独立复核.json",
+        "选题报告相关/实际区域扩展数据准备方案_v1.md"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/39_实际面积与图块尺度.pdf",
+          "sha256": "8223ed54b5c5ecfc9b14700458f5caa8cdc75e232473c2fea9051f7ffe8698c4"
+        },
+        {
+          "path": "绘图/数据结果图/39_实际面积与图块尺度.svg",
+          "sha256": "a50ec59b056690ff9dbc3ec17860dc2721c279d5d5578499b9fb3a9ca03c4a57"
+        },
+        {
+          "path": "绘图/数据结果图/39_实际面积与图块尺度.png",
+          "sha256": "cc7585748cfc0a71fcc9f1e966dccc71481148a9334bc7cbdfae5ca77a813941"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_area_data.py"
+    },
+    {
+      "id": "40_连续区域与跨图接缝",
+      "caption": "三张连续区域的展示缩略图；原始数据为有坐标的3000×3000无损GeoTIFF，原生1m/像素，每格300m。白细线表示10×10网格，蓝虚线表示四个1500源图边界；四图次序由投影坐标确定，不对像素做融合或补洞。十二原源来自已知train，三组不复用源文件且不覆盖原val/test内部足迹，不能据此声称地理独立。影像仅作为展示栅格嵌入，SVG文字/网格可编辑。",
+      "protocol": {
+        "regions": 3,
+        "source_rasters": 12,
+        "scope": "known training engineering",
+        "navigation_SR": null
+      },
+      "sources": [
+        "DATA/processed_data/Masa/实际区域扩展_v1/工程数据/数据清单.json",
+        "DATA/processed_data/Masa/实际区域扩展_v1/工程数据/图块来源.json",
+        "DATA/processed_data/Masa/实际区域扩展_v1/核验/独立复核.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/40_连续区域与跨图接缝.pdf",
+          "sha256": "d65fa11236dc9223185d51e447e1449ef311a38bae99cd683ed494f15541feb8"
+        },
+        {
+          "path": "绘图/数据结果图/40_连续区域与跨图接缝.svg",
+          "sha256": "87c01c07fc8399338033b9e2d911be47b470e9e2a6fc449668d40e068f7154c8"
+        },
+        {
+          "path": "绘图/数据结果图/40_连续区域与跨图接缝.png",
+          "sha256": "7a1ffe95093098dbc01cf42785cd4c680c87dd65f94d954ec2871a272c12396d"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_area_data.py"
+    },
+    {
+      "id": "41_实际区域M0成功率与米制距离",
+      "caption": "冻结M0在三已知Masa训练区域上的实际面积兼容试跑；每图3000×3000原生像素、9km²、300m/格，原75题/73不同路线。四神经条件各75×3=225，Frontier与原FixedRegion各75条，全部1050题完成。柱为同队列平均，白色圆/三角/方形为seed0/1/2；规则无权重点，不表示三重复。SG为所有终局的网格曼哈顿距离乘300米，并非直线定位误差；平均有效移动包含所有题，越界耗步但移动0米。已知区域工程和目标证据判定见报告，不能称未知地区正式泛化，也不与历史不同队列SR相减。",
+      "protocol": {
+        "maps": 3,
+        "known_train": true,
+        "neural_records": 900,
+        "rule_records": 150,
+        "cell_size_m": 300,
+        "area_km2_each": 9
+      },
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/对照汇总.json",
+        "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/验收结论.json",
+        "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/独立复核.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/41_实际区域M0成功率与米制距离_v2.pdf",
+          "sha256": "2af943a3737b9fd489df23476f20a17e6280204e81ee4a3b1d370dbebf8d3a9c"
+        },
+        {
+          "path": "绘图/数据结果图/41_实际区域M0成功率与米制距离_v2.svg",
+          "sha256": "22fa2e7a23cc79f5625133421c11cd6cdbc7c661cdd29b8221e4d797764d261b"
+        },
+        {
+          "path": "绘图/数据结果图/41_实际区域M0成功率与米制距离_v2.png",
+          "sha256": "eade444173289db55fce67c18fde4418a4ac1dfc733be9bdd96ee1eda7644d18"
+        }
+      ],
+      "reproduction_script": "project/src/documents/refine_actual_area_figure.py",
+      "revision": "v2: mean labels beyond weight markers; explicitly75total tasks; initial exports retained"
+    },
+    {
+      "id": "42_实际区域接缝线索与失败阶段",
+      "caption": "真实目标M0的事后接缝和失败诊断。左图按当前/目标是否来自同1500源图划分真邻接机会，只有行动前距目标1格且有预算才纳入；柱为接受并一步命中/机会数，标明分子/分母；同轨迹可能重复机会，零机会记NA。右图失败互斥分组，优先判有预算邻接，再终局才邻接、两格内、从未两格内。跨源机会仅同1题的3权重，不能支持可靠性普遍确认。225记录来自75题×3权重而非225独立地区；真实位置/距离/源身份未进入Agent，跨接缝分组不是随机干预，不能推断接缝因果效应。",
+      "protocol": {
+        "maps": 3,
+        "tasks": 75,
+        "weights": 3,
+        "condition": "CueFull",
+        "posthoc_only": true,
+        "causal_seam_claim": false
+      },
+      "sources": [
+        "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/对照汇总.json",
+        "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/验收结论.json",
+        "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/独立复核.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/42_实际区域接缝线索与失败阶段.pdf",
+          "sha256": "60f45724a65c1f13d3795d8d2b8eeed50c64093bb66c705f2e20116d3242a431"
+        },
+        {
+          "path": "绘图/数据结果图/42_实际区域接缝线索与失败阶段.svg",
+          "sha256": "4d0b2fb15c518faf72153c147d3f442d569f81ad18d04b28ab06bbbccf1af51b"
+        },
+        {
+          "path": "绘图/数据结果图/42_实际区域接缝线索与失败阶段.png",
+          "sha256": "0b97fedfb1455108996e8fec05260983435132d31c8b7af06c8dfc059dbaf7ce"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_actual_area_pilot.py"
+    },
+    {
+      "id": "43_新连续区域空间隔离与角色",
+      "caption": "新增14个单区9km²区域与本地M0所用151旧足迹最短间隔50.289km，新区域两两间隔至少3km（坐标舍入容差1mm）。左图和右图按EPSG26986实测标签绘制，真实纵横比、不同视域；D表示4工程区，T表示10确认区，并使用实/虚线辅助颜色区分。单区由四相邻发布影像组成；14区不是一张连续126km²地图，空间隔离也不证明预训练编码器未见。",
+      "protocol": {
+        "regions": 14,
+        "engineering": 4,
+        "confirmation": 10,
+        "old_footprints": 151,
+        "min_gap_m": 3000,
+        "navigation_SR": null
+      },
+      "sources": [
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/工程数据/数据清单.json",
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/元数据/旧151足迹.json",
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/核验/独立复核.json",
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/核验/验收结论.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/43_新连续区域空间隔离与角色.pdf",
+          "sha256": "3bfb2c1973e717757f58ca928a16b832c1857d383b6d8f5df4cda7fb3fdd8d9e"
+        },
+        {
+          "path": "绘图/数据结果图/43_新连续区域空间隔离与角色.svg",
+          "sha256": "889eafb726d9abd2243ae64bd72669b02fcf722c9130710cca66e0ae39852b9d"
+        },
+        {
+          "path": "绘图/数据结果图/43_新连续区域空间隔离与角色.png",
+          "sha256": "965c02e381639efe6495f1be235fedd86f694826df166937234b6ad00ace66d4"
+        }
+      ],
+      "reproduction_script": "project/src/documents/summarize_spatial_area_data.py"
+    },
+    {
+      "id": "44_接缝目标分层与诊断探针覆盖",
+      "caption": "确认10区已准备250道边界目标任务和400个不同跨源有向邻接对，覆盖不再只依赖同一题的三权重机会。每区75不同路线由25长距离C12—16、25边界目标C8—12、25非边界C8—12组成；左图为首工程区实际冻结目标位置的纯几何示意，重复目标去重，虚线表示原源边界。右图显示三类探针各560对，其中工程160/确认400，每一跨源对配相同目标的同源邻接和两格非邻接；图表示准备样本数，不是导航SR、模型接受率或识别验收。",
+      "protocol": {
+        "tasks": 1050,
+        "probes": 1680,
+        "confirm_seam_targets": 250,
+        "confirm_cross_pairs": 400,
+        "neural_inference": false
+      },
+      "sources": [
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/工程数据/导航任务.json",
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/工程数据/任务分层.json",
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/工程数据/邻接诊断探针.json",
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/核验/独立复核.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/44_接缝目标分层与诊断探针覆盖_标注修订.pdf",
+          "sha256": "75dfe51e1848b3ec611cef995617406481990a21b9388538378884c06781970f"
+        },
+        {
+          "path": "绘图/数据结果图/44_接缝目标分层与诊断探针覆盖_标注修订.svg",
+          "sha256": "7759ee63f9a52bebce93ffb3b352b1632bc44c10a8951bb8e1d4298105252f4d"
+        },
+        {
+          "path": "绘图/数据结果图/44_接缝目标分层与诊断探针覆盖_标注修订.png",
+          "sha256": "bce37d64c007134ffb9e33596a643de3f532e34337ba563a7eec8630d5e5cab2"
+        }
+      ],
+      "reproduction_script": "project/src/documents/refine_spatial_coverage_figure.py",
+      "revision": "bar roles written explicitly; initial exports retained; same data and coordinates"
+    },
+    {
+      "id": "45_空间隔离区域三分层M0导航结果",
+      "caption": "预登记的空间未知区域导航门槛全部通过，CueFull长距离主队列SR为72.80%；这一结论只针对本轮10个空间隔离区域与冻结M0闭环。长距离主队列为250道C12–C16任务×3个冻结权重（546/750）；另外分别展示250道接缝目标和250道内部目标任务，三类目标都在10个确认区取样。六种条件为完整目标图像、Baseline（禁用cue）、均值目标图像、错误目标图像、Frontier规则和FixedRegion规则；柱为全部区域及全部权重的均值，彩色小点为各确认区，空心圆/三角/方块分别为权重0/1/2的结果，区域点和权重点都不是置信区间。SR为导航成功率；SG为含成功记零的平均终点曼哈顿距离，单位米。60%门槛只用于完整目标图像的长距离队列；其余预登记配对SR、SG及区域bootstrap门槛见报告。",
+      "protocol": "冻结M0独立确认：10个区域；250长距离C12–C16 + 250接缝目标C8–C12 + 250内部目标C8–C12；三份冻结权重和两条规则按预登记执行。",
+      "sources": [
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/元数据/连续区域选择.json",
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/工程数据/任务分层.json",
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/工程数据/数据清单.json",
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/工程数据/邻接诊断探针.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/README.md",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/审计修订封存_v2.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/审计修订封存_v3.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/审计修订登记_v2.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/审计修订登记_v3.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/导航任务.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/原独立复核失败_v1.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/原独立复核失败_v2.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/对照汇总.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/执行状态.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s0_Full_判断.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s0_Full_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s0_Mean_判断.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s0_Mean_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s0_Wrong_判断.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s0_Wrong_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s1_Full_判断.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s1_Full_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s1_Mean_判断.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s1_Mean_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s1_Wrong_判断.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s1_Wrong_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s2_Full_判断.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s2_Full_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s2_Mean_判断.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s2_Mean_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s2_Wrong_判断.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s2_Wrong_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/探针汇总.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/汇总差异诊断_v2.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/特征/全局特征.npz",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/特征/局部特征.npz",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/特征/边缘profile.npz",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/特征冻结结束.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/独立复核.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s0_Baseline_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s0_Baseline_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s0_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s0_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s0_CueMean_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s0_CueMean_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s0_CueWrong_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s0_CueWrong_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s1_Baseline_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s1_Baseline_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s1_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s1_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s1_CueMean_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s1_CueMean_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s1_CueWrong_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s1_CueWrong_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s2_Baseline_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s2_Baseline_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s2_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s2_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s2_CueMean_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s2_CueMean_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s2_CueWrong_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s2_CueWrong_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/规则基线/FixedRegion_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/规则基线/FixedRegion_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/规则基线/Frontier_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/规则基线/Frontier_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/逐题配对.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/执行协议.md",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/探针错误目标计划.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/新空间隔离区域M0导航确认报告.md",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/源码快照/eval/audit_spatial_area_confirmation_v2.py",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/源码快照/eval/audit_spatial_area_confirmation_v3.py",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/源码快照/tests/test_spatial_area_confirmation_audit_v2.py",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/源码快照/tests/test_spatial_area_confirmation_audit_v3.py",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/对照汇总.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/执行状态.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/探针对照/探针汇总.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/独立复核.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s0_Baseline_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s0_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s0_CueMean_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s0_CueWrong_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s1_Baseline_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s1_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s1_CueMean_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s1_CueWrong_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s2_Baseline_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s2_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s2_CueMean_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s2_CueWrong_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/规则基线/FixedRegion_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/规则基线/Frontier_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/错误目标计划.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/预登记.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/预登记封存.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/验收结论.json",
+        "project/local_policy_default.json",
+        "project/src/documents/stage_figures.py",
+        "project/src/eval/audit_spatial_area_confirmation.py",
+        "project/src/eval/audit_spatial_area_confirmation_v2.py",
+        "project/src/eval/audit_spatial_area_confirmation_v3.py",
+        "project/src/eval/spatial_area_confirmation.py",
+        "project/src/tests/test_spatial_area_confirmation_audit_v2.py",
+        "project/src/tests/test_spatial_area_confirmation_audit_v3.py",
+        "绘图/审阅/45_空间隔离区域三分层M0导航结果_PDF校样.png",
+        "绘图/审阅/46_跨源接缝原始头部接受率_PDF校样.png",
+        "绘图/审阅/冻结M0空间隔离导航确认视觉核验_v1.json",
+        "绘图/数据结果图/45_空间隔离区域三分层M0导航结果.png",
+        "绘图/数据结果图/46_跨源接缝原始头部接受率.png",
+        "绘图/绘图数据/冻结M0空间隔离导航确认_v1.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/45_空间隔离区域三分层M0导航结果_v2.pdf",
+          "sha256": "6853911fb0b8113e04ed57c2d999734de96f89998f0a2d4bf2c19a4a2d1d8ef0",
+          "format": "pdf"
+        },
+        {
+          "path": "绘图/数据结果图/45_空间隔离区域三分层M0导航结果_v2.svg",
+          "sha256": "01fec1d9e02e3aa0ce5e541cf6652cf0d195a3c0c12e86f9bb77ac7437720000",
+          "format": "svg"
+        },
+        {
+          "path": "绘图/数据结果图/45_空间隔离区域三分层M0导航结果_v2.png",
+          "sha256": "82a2f2c27164c3da34cf0668ba998d631aa84d18d505621c5bcafe8d7be4505e",
+          "format": "png"
+        }
+      ],
+      "reproduction_script": "project/src/documents/refine_spatial_confirmation_figures.py",
+      "layout_revision": 2
+    },
+    {
+      "id": "46_跨源接缝原始头部接受率",
+      "caption": "Full原始头部接缝可靠性门槛通过：跨源正确接受率为98.67%，两格非邻接误接受率为3.92%。Full在400个不同跨源有向对×3权重上正确接受1184/1200，400个同源邻接对×3权重正确接受1189/1200；在400个不同两格非邻接对×3权重上误接受47/1200。三个率使用分开的0–100%坐标；虚线90%和5%是预登记要求，只判定Full跨源正确接受、Full非邻接误接受及至少2/3权重同时满足，同源邻接正确接受率只作对照诊断。不是Mean/Wrong的新门槛。点列逐一显示完整目标、均值目标和错误目标三种原始头部判断；空心圆/三角/方块表示全部三个冻结权重，大菱形是三权重合并计数。raw指0.50五类头部阈值、合法动作与访问过滤前的接受；此图不是闭环SR或闭环成功路线识别率。",
+      "protocol": "冻结接缝探针：400跨源相邻、400同源相邻、400两格非邻接不同探针对；每类×3权重；仅原始头部可靠性。",
+      "sources": [
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/元数据/连续区域选择.json",
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/工程数据/任务分层.json",
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/工程数据/数据清单.json",
+        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/工程数据/邻接诊断探针.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/README.md",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/审计修订封存_v2.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/审计修订封存_v3.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/审计修订登记_v2.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/审计修订登记_v3.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/导航任务.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/原独立复核失败_v1.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/原独立复核失败_v2.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/对照汇总.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/执行状态.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s0_Full_判断.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s0_Full_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s0_Mean_判断.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s0_Mean_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s0_Wrong_判断.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s0_Wrong_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s1_Full_判断.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s1_Full_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s1_Mean_判断.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s1_Mean_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s1_Wrong_判断.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s1_Wrong_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s2_Full_判断.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s2_Full_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s2_Mean_判断.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s2_Mean_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s2_Wrong_判断.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/M0_s2_Wrong_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/探针对照/探针汇总.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/汇总差异诊断_v2.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/特征/全局特征.npz",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/特征/局部特征.npz",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/特征/边缘profile.npz",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/特征冻结结束.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/独立复核.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s0_Baseline_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s0_Baseline_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s0_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s0_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s0_CueMean_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s0_CueMean_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s0_CueWrong_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s0_CueWrong_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s1_Baseline_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s1_Baseline_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s1_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s1_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s1_CueMean_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s1_CueMean_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s1_CueWrong_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s1_CueWrong_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s2_Baseline_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s2_Baseline_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s2_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s2_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s2_CueMean_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s2_CueMean_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s2_CueWrong_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/神经对照/M0_s2_CueWrong_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/规则基线/FixedRegion_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/规则基线/FixedRegion_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/规则基线/Frontier_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/规则基线/Frontier_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/逐题配对.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/执行协议.md",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/探针错误目标计划.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/新空间隔离区域M0导航确认报告.md",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/源码快照/eval/audit_spatial_area_confirmation_v2.py",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/源码快照/eval/audit_spatial_area_confirmation_v3.py",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/源码快照/tests/test_spatial_area_confirmation_audit_v2.py",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/源码快照/tests/test_spatial_area_confirmation_audit_v3.py",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/对照汇总.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/执行状态.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/探针对照/探针汇总.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/独立复核.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s0_Baseline_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s0_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s0_CueMean_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s0_CueWrong_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s1_Baseline_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s1_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s1_CueMean_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s1_CueWrong_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s2_Baseline_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s2_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s2_CueMean_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s2_CueWrong_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/规则基线/FixedRegion_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/规则基线/Frontier_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/错误目标计划.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/预登记.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/预登记封存.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/验收结论.json",
+        "project/local_policy_default.json",
+        "project/src/documents/stage_figures.py",
+        "project/src/eval/audit_spatial_area_confirmation.py",
+        "project/src/eval/audit_spatial_area_confirmation_v2.py",
+        "project/src/eval/audit_spatial_area_confirmation_v3.py",
+        "project/src/eval/spatial_area_confirmation.py",
+        "project/src/tests/test_spatial_area_confirmation_audit_v2.py",
+        "project/src/tests/test_spatial_area_confirmation_audit_v3.py",
+        "绘图/审阅/45_空间隔离区域三分层M0导航结果_PDF校样.png",
+        "绘图/审阅/46_跨源接缝原始头部接受率_PDF校样.png",
+        "绘图/审阅/冻结M0空间隔离导航确认视觉核验_v1.json",
+        "绘图/数据结果图/45_空间隔离区域三分层M0导航结果.png",
+        "绘图/数据结果图/46_跨源接缝原始头部接受率.png",
+        "绘图/绘图数据/冻结M0空间隔离导航确认_v1.json"
+      ],
+      "files": [
+        {
+          "path": "绘图/数据结果图/46_跨源接缝原始头部接受率_v2.pdf",
+          "sha256": "cea18327752d32d41820cab9db8b856922b61bcc9cd3e426dc115047f91e3440",
+          "format": "pdf"
+        },
+        {
+          "path": "绘图/数据结果图/46_跨源接缝原始头部接受率_v2.svg",
+          "sha256": "e56b7c0cc9839338c1abfaff56e670f1c22ef535dee119ac17eb565afe86dded",
+          "format": "svg"
+        },
+        {
+          "path": "绘图/数据结果图/46_跨源接缝原始头部接受率_v2.png",
+          "sha256": "9af98ab524d0fbf96c4f1ae26321c17df9b4df7fc0aea67cfcb55ce531c280c6",
+          "format": "png"
+        }
+      ],
+      "reproduction_script": "project/src/documents/refine_spatial_confirmation_figures.py",
+      "layout_revision": 2
+    },
+    {
+      "id": "47_三步覆盖接管的成功率与距离权衡",
+      "files": [
+        {
+          "path": "绘图/数据结果图/47_三步覆盖接管的成功率与距离权衡.png",
+          "sha256": "a677b95f9fe82d4ac892bf35d4be71f67ccc26391684e899b3090c6b33bf96e1"
+        },
+        {
+          "path": "绘图/数据结果图/47_三步覆盖接管的成功率与距离权衡.pdf",
+          "sha256": "c0a18a02918216f231cd66bc4e6c55698b44b3f07b6c5b28322e648af04be39c"
+        },
+        {
+          "path": "绘图/数据结果图/47_三步覆盖接管的成功率与距离权衡.svg",
+          "sha256": "a0607e062e3ae45ab2d61f21c0a1e7287c6fac148cbeb8fd6cb3102262ed03a4"
+        }
+      ],
+      "caption": "同10个已消费空间区域、750个固定任务×3冻结权重的后验开发对照。混合队列及三分层分别展示，每份权重混合750题、每层250题。柱为全部三权重合并值；空心符号为各权重结果，不是置信区间。SG是成功记0的终点曼哈顿距离，米制，较低为好。控制器只改变无已接受cue时的公开几何仲裁；模型、目标头、0.50、输入权限与B20保持。开发门槛按混合增益、分层损伤和SG共同判定，图中SR改善不能独自代表通过，也不是未见区域的独立确认。",
+      "protocol": "consumed10regions/750tasks/3weights; grid10/B20/300m; posthoc development",
+      "sources": [
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/验收结论.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/最终状态.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/预登记.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/预登记封存.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/候选配置.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/执行协议.md",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/离线诊断/输入登记.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/离线诊断/诊断汇总.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/离线诊断/逐题诊断.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/离线诊断/逐题配对.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/离线诊断/独立算术复核.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/对照汇总.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/逐题配对.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/独立复核.json",
+        "project/local_policy_default.json",
+        "选题报告相关/三步覆盖接管测试_v1.json",
+        "选题报告相关/三步覆盖接管测试_v2.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s0_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s0_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/Coverage3_s0_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/Coverage3_s0_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s1_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s1_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/Coverage3_s1_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/Coverage3_s1_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s2_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s2_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/Coverage3_s2_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/Coverage3_s2_CueFull_轨迹.jsonl",
+        "project/src/documents/summarize_coverage_lookahead.py",
+        "project/src/documents/stage_figures.py"
+      ]
+    },
+    {
+      "id": "48_覆盖接管径向保护的分层结果",
+      "files": [
+        {
+          "path": "绘图/数据结果图/48_覆盖接管径向保护的分层结果.png",
+          "sha256": "ac38fb8143f320e505272944c77cc5065111e3672ec89be2ee0ad38189367293"
+        },
+        {
+          "path": "绘图/数据结果图/48_覆盖接管径向保护的分层结果.pdf",
+          "sha256": "1cdcc630bed47dc9c0dd47aa9dedba73fa652cf545ef4bd965856d1203995ac6"
+        },
+        {
+          "path": "绘图/数据结果图/48_覆盖接管径向保护的分层结果.svg",
+          "sha256": "e49b74996c922e39463f89e8ccc055be7cf2f70325e15ecb1fea112d0b0dbcc6"
+        }
+      ],
+      "caption": "同10个已消费区域、750题×3冻结权重的后验开发。每份权重混合750题、各层250题，柱为合并均值，空心标记为各权重，不是置信区间。原M0及Coverage3按封存哈希复用，仅新增Coverage3Radial。唯一新增因素为无已接受cue时保护相对原探索动作的起点径向延伸，已接受cue始终优先。SG为成功记0的终点曼哈顿距离；不是路径长度。开发证据不替代新区域确认。",
+      "protocol": "consumed10regions/750tasks/3weights; grid10/B20/300m; one radial guard; posthoc development",
+      "sources": [
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/下一项空间隔离新区域确认草案.md",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/候选配置.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/执行协议.md",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/最终状态.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/预登记.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/预登记封存.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/验收结论.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/离线诊断/独立算术复核.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/离线诊断/诊断汇总.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/离线诊断/输入封存.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/离线诊断/输入登记.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/离线诊断/逐题诊断.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/Coverage3Radial_s0_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/Coverage3Radial_s0_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/Coverage3Radial_s1_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/Coverage3Radial_s1_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/Coverage3Radial_s2_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/Coverage3Radial_s2_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/Coverage3机制对照汇总.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/对照汇总.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/执行状态.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/独立复核.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/逐题配对.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/逐题配对_Coverage3.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/Coverage3Radial_s0_Baseline_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/Coverage3Radial_s0_Baseline_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/Coverage3Radial_s0_CueMean_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/Coverage3Radial_s0_CueMean_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/Coverage3Radial_s0_CueWrong_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/Coverage3Radial_s0_CueWrong_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/Coverage3Radial_s1_Baseline_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/Coverage3Radial_s1_Baseline_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/Coverage3Radial_s1_CueMean_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/Coverage3Radial_s1_CueMean_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/Coverage3Radial_s1_CueWrong_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/Coverage3Radial_s1_CueWrong_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/Coverage3Radial_s2_Baseline_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/Coverage3Radial_s2_Baseline_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/Coverage3Radial_s2_CueMean_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/Coverage3Radial_s2_CueMean_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/Coverage3Radial_s2_CueWrong_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/Coverage3Radial_s2_CueWrong_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/对照汇总.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/执行状态.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/独立复核.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/逐题配对_Baseline.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/逐题配对_CueMean.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/目标对照/逐题配对_CueWrong.json",
+        "project/local_policy_default.json",
+        "选题报告相关/覆盖接管径向保护测试_v1.json",
+        "选题报告相关/覆盖接管径向保护诊断方案_v1.md",
+        "选题报告相关/覆盖接管径向保护单因素验证方案_v1.md",
+        "project/src/documents/summarize_coverage_radial.py",
+        "project/src/documents/stage_figures.py",
+        "project/src/documents/prepare_coverage_radial_confirmation_draft.py",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s0_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s0_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s1_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s1_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s2_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/神经对照/M0_s2_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/Coverage3_s0_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/Coverage3_s0_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/Coverage3_s1_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/Coverage3_s1_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/Coverage3_s2_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/Coverage3_s2_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/Coverage3Radial_s0_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/Coverage3Radial_s0_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/Coverage3Radial_s1_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/Coverage3Radial_s1_CueFull_轨迹.jsonl",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/Coverage3Radial_s2_CueFull_结果.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/Coverage3Radial_s2_CueFull_轨迹.jsonl"
+      ]
+    },
+    {
+      "id": "49_径向保护新确认区域与任务覆盖_v2",
+      "files": [
+        {
+          "path": "绘图/数据结果图/49_径向保护新确认区域与任务覆盖_v2.png",
+          "sha256": "ccaa72dd8890f3f19f7aac80fcf31be9e80af8f59e1ce41d33381dffe05d453e"
+        },
+        {
+          "path": "绘图/数据结果图/49_径向保护新确认区域与任务覆盖_v2.pdf",
+          "sha256": "4192df9f6287c5d0a0e16b4bf2fe3dd4f0b8b62cc50aab6dbc3189a91bbb3d04"
+        },
+        {
+          "path": "绘图/数据结果图/49_径向保护新确认区域与任务覆盖_v2.svg",
+          "sha256": "8630cc482465c7252fe2d16af7b61393229a7f11921816e13d04ef0cb98af21e"
+        }
+      ],
+      "caption": "数据准备阶段，仅元数据和固定像素质量筛选；无导航模型、编码器或视觉头预测。左图为EPSG:26986闭合足迹，包含原151影像、已消费14连续区域及10个预留确认新区；轴用投影公里，不是经纬度。新旧及新区之间的最短矩形距离独立核验均至少3公里。右图为冻结750条不同导航任务的三个分层（各250）和1200个匹配目标几何探针的三个类别（各400）；探针不计入导航SR。每新区9 km²、300米/格、10×10/B20，共40幅选中源图及1000图块。该图不包含新的模型成功率。 修订版将蓝色750导航任务与浅蓝色1200几何探针分别标注，绿色仅表示预留新区；数值、坐标、数据、候选与协议全部保持。",
+      "protocol": "fresh10reserved regions;750tasks;1200geometry probes;1000native patches; no model predictions or SR",
+      "sources": [
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/元数据/下载源坐标清单.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/元数据/作者数据页面.html",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/元数据/只读复用源坐标清单.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/元数据/官方train影像目录.html",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/元数据/官方源目录.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/元数据/已消费14连续区域.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/元数据/旧151像素SHA.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/元数据/旧151足迹.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/元数据/本项目模型使用状态.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/元数据/连续区域选择.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/核验/图像质量与接缝.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/核验/独立复核.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/核验/输入冻结结束.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/核验/预登记.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/核验/预登记封存.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/核验/验收结论.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/工程数据/任务分层.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/工程数据/图块来源.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/工程数据/导航任务.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/工程数据/数据清单.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/工程数据/邻接诊断探针.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/工程数据/错误目标计划.json",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/执行协议.md",
+        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/测试记录.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/验收结论.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/候选配置.json",
+        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/下一项空间隔离新区域确认草案.md",
+        "project/local_policy_default.json",
+        "project/src/documents/summarize_radial_confirmation_data.py",
+        "project/src/documents/stage_figures.py"
+      ]
+    },
+    {
+      "caption": "10个未参与候选选型的空间隔离新区域、750不同任务×3冻结权重：M0 SR58.84%、径向保护SR68.04%（差+9.20点，区域95%差[+7.07,+11.02]点）；混合SG755.20→648.53米。恢复295、损伤88，净增207成功。全部独立升级证据通过；默认M0保持，0训练/0云端。\n\n图50：SR为预算内成功率，SG为全部终点曼哈顿距离（米，成功0），两者分开展示。柱为三冻结权重平均，圆点/三角点为各权重成绩，点不是独立区域置信区间；完整区域配对SR差区间见报告。10新区域/750不同任务，三分层各250/权重，300米/格、10×10/B20。\n",
+      "files": [
+        {
+          "path": "绘图/数据结果图/50_径向保护独立新区域的分层确认结果.png",
+          "sha256": "849997dafc6946325c654e28441cb91f8d2fd34f8c0a0ce4344be450a4f169b9"
+        },
+        {
+          "path": "绘图/数据结果图/50_径向保护独立新区域的分层确认结果.pdf",
+          "sha256": "28cb4f29c7880d57716a6f7562ee149ed14f0a45ea0205f1dc1e8f85a5cd7371"
+        },
+        {
+          "path": "绘图/数据结果图/50_径向保护独立新区域的分层确认结果.svg",
+          "sha256": "fb966904f95f5851719341c4e3f8a2116b53fc64b140675dcdf7dfdb5d63fcf0"
+        }
+      ],
+      "id": "50_径向保护独立新区域的分层确认结果",
+      "protocol": "10 new regions; grid10/B20;300m;750routes;3 frozen weights",
+      "reproduction_script": "project/src/documents/close_radial_area_confirmation.py",
+      "sources": [
+        "project/src/documents/close_radial_area_confirmation.py",
+        "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/径向保护独立新区域导航确认报告.md",
+        "绘图/径向保护独立新区域导航确认图注_v1.md",
+        "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/验收结论.json",
+        "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/主对照/对照汇总.json",
+        "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/主对照/独立复核.json",
+        "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/预登记.json",
+        "project/src/documents/stage_figures.py"
+      ]
     }
   ],
   "script_sha256": "6eeefaa84f1ce6a7e8701f2c725c45e055e8f0ff2460b27d0d0041e96777deab"
