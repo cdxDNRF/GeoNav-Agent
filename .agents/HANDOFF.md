@@ -1,5 +1,14 @@
 # Agent交接簿
 
+## PLAT-003 + GIT-004 / ZCode / zcode-plat003-20261005 / 2026-10-05（完成：实时平台启动器与GitHub发布，释放写入范围）
+
+- 用户要求给实时导航平台V2做v1同款启动快捷程序，讲解两平台实现/M0/外部API提示词，并明确授权按docs/维护分层分析后提交推送GitHub。本轮0训练/0模型forward/0导航/0备用区消费/0默认改动；启动器测试未创建导航会话。
+- PLAT-003交付`平台/实时导航平台_v2/启动平台.ps1`（UTF-8 BOM，镜像v1逻辑）：先以`/api/meta`身份串（实时策略/视觉头推理…）探测8767既有v3服务，命中直接开浏览器；否则仓库根`python -B -m project.src.webapp.server_v3 --port 8767`前台运行，Start-Job每0.5秒轮询就绪后自动开浏览器，Ctrl+C停止。`server_v3`没有v1的`--open-browser`参数，浏览器开启由启动器负责，未改动已审查绑定的v3源码。README补启动说明；PROJECT_STATE平台段落已登记。
+- 验证：PowerShell Parser解析通过；后台实启server_v3，`/api/meta`返回tasks=100、mode匹配、api配置自动读取project/.env（仅显示key_configured，不回显）；真实PowerShell Invoke-RestMethod身份判定True；测试服务已停止无残留。首次运行的浏览器打开分支未弹窗实测（v1先例相同，逻辑仅为Start-Process标准调用）。
+- GIT-004按[Git收录与本地数据说明](../docs/维护/Git收录与本地数据说明.md)分层：待提交集=PLATFORM-002全部交付+PLAT-003启动器+10个协调入口修改，共102文件/31314插入。收录代码/测试/方案/报告/汇总/seal/科研图/课程材料；未含原始影像、模型、逐步JSONL、.env或`.agents/本地/`；`DATA/processed_data/MassGIS/平台运行/`按新.gitignore仅本地保留。
+- 提交前检查：15个新增py全部编译通过；37个新增JSON全部可解析；从project/.env读入的真实key在待提交集0命中（不在上下文回显）；无sk-模式残留；无禁入路径。提交`5371872`（platform: 交付实时导航平台V2、单模型对照与启动器，同步协调入口）SSH推送main成功，远程refs/heads/main=`537187202d55ce53c944dd16f761b7353c616732`与本地HEAD一致；无强推/历史重写。协调记录随后单独小提交同步。
+- 剩余：无本轮未完成项。PLATFORM-002遗留的教师提交要求人工核对仍开放；MassGIS坐标格点适配候选保持未启动。本任务全部写入范围（启动器、v2平台README、Git引用、协调入口）已释放。
+
 ## PLATFORM-002 / Codex / midterm-platform-20261005 / 2026-10-05（完成：实时本地/API批量/方法图与新中期总结，释放写入范围）
 
 - 用户授权三项顺序实施，已选择现有Gemma。当前[实时平台](../平台/实时导航平台_v2/README.md)启动入口为`python -B -m project.src.webapp.server_v3 --port 8767`；v2保留给原已完成对照，v1历史回放保持。100道已消费DATA007开发题、5/10格与三权重可选；GRU/目标头真实逐步forward，图像编码复用封存缓存。单步/自动/暂停/取消/终局下载、图像权限/状态隔离/同源token、可配置单模型与固定同题批量已实现。没有新训练/多Agent/备用区消费或默认更改。
