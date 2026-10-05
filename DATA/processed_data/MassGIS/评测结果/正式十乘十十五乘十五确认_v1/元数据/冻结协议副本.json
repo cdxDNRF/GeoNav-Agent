@@ -1,0 +1,100 @@
+{
+  "protocol_frozen": true,
+  "formal_execution_started": false,
+  "evaluation_role": "independent_confirmation",
+  "grids": [
+    10,
+    15
+  ],
+  "weights": [
+    0,
+    1,
+    2
+  ],
+  "policies": [
+    "M0",
+    "Coverage3Radial"
+  ],
+  "budget": 20,
+  "cell_size_m": 300,
+  "selected_regions": [
+    "mass2005_45000_878000",
+    "mass2005_57000_882000",
+    "mass2005_57000_902000",
+    "mass2005_61000_910000",
+    "mass2005_65000_874000",
+    "mass2005_65000_882000",
+    "mass2005_65000_902000",
+    "mass2005_65000_918000",
+    "mass2005_65000_926000",
+    "mass2005_69000_866000"
+  ],
+  "excluded_spares": [
+    "mass2005_69000_890000",
+    "mass2005_69000_910000",
+    "mass2005_69000_934000"
+  ],
+  "unique_tasks": {
+    "grid10": 750,
+    "grid15": 1000
+  },
+  "common_physical_tasks": 750,
+  "grid15_extra_far_tasks": 250,
+  "target_seam_fraction": 0.32,
+  "per_grid_MAIN_gate": {
+    "SR_gain": 0.02,
+    "positive_weights": 2,
+    "SG_no_worse": true,
+    "stratum_SR_loss_at_most": 0.02,
+    "stratum_SG_no_worse": true,
+    "region95_SR_lower_positive": true
+  },
+  "per_grid_TARGET_gate": {
+    "SR_gain": 0.05,
+    "positive_weights": 2,
+    "SG_no_worse": true,
+    "region95_SR_lower_positive": true
+  },
+  "per_grid_reliability_gate": {
+    "raw_precision": 0.9,
+    "raw_recall": 0.5,
+    "raw_correct_minimum": 30,
+    "recall_gain_over_mean": 0.1,
+    "false_cue_per_executed_action_at_most": 0.05,
+    "seam_target_false_cue_per_executed_action_at_most": 0.05,
+    "success_harm_rate_vs_disabled_at_most": 0.02
+  },
+  "grid15_common_main_gate_required": true,
+  "conditional_controls": "Independently per grid after main replay and all main gates pass",
+  "controls": [
+    "Baseline",
+    "CueMean",
+    "CueWrong"
+  ],
+  "bootstrap": {
+    "unit": "whole region, weights averaged within region",
+    "resamples": 4000,
+    "seed": 7317
+  },
+  "resource_limits": {
+    "main_records": 10500,
+    "conditional_control_records": 15750,
+    "rule_records": 3500,
+    "maximum_navigation_records": 29750,
+    "unique_images": 2250,
+    "probe_predictions": 282480,
+    "maximum_derived_bytes": 8589934592,
+    "minimum_free_bytes": 12884901888,
+    "execution_and_audit_seconds": 86400,
+    "preparation_seconds": 14400,
+    "network_requests": 0,
+    "cloud_calls": 0,
+    "training_steps": 0
+  },
+  "raw_precision_is_not_navigation_precision": true,
+  "no_universal_SR_floor": true,
+  "paired_common_area_change_is_reported_not_universal_noninferiority_gate": true,
+  "upgrades_require_all_per_grid_gates": true,
+  "automatic_default_upgrade": false,
+  "future_executor_and_cache_binding_required": true
+}

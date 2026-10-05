@@ -1,0 +1,57 @@
+{
+  "passed": true,
+  "data_gate_passed": true,
+  "stage": "DATA-006 quality engineering; navigation protocol not yet frozen",
+  "metrics": {
+    "accepted_regions": 13,
+    "reserved_confirmation_regions": 10,
+    "extra_reserved_regions": 3,
+    "rejected_regions": 7,
+    "native_pngs": 2925,
+    "mixed_source_cells_accepted": 377,
+    "mixed_source_cells_all20": 580,
+    "max_accepted_source_blank_fraction": 0.000880875,
+    "max_accepted_source_support_blank_fraction": 0.004759444444444445,
+    "max_accepted_window_blank_fraction": 0.00012174074074074074,
+    "max_accepted_cell_blank_fraction": 0.006086111111111111
+  },
+  "source_count": 80,
+  "source_quality_passed": 67,
+  "region_candidates": 20,
+  "source_pixels_checked": 5120000000,
+  "window_pixels_checked": 1620000000,
+  "cells_checked": 4500,
+  "http_attempts": 160,
+  "body_bytes": 1279212642,
+  "quality_thresholds_unchanged": true,
+  "tests": {
+    "successful": true,
+    "tests_run": 16,
+    "network_requests": 0,
+    "policy_calls": 0,
+    "new_SR": false
+  },
+  "independent_implementation_audit_passed": true,
+  "independent_person_review": false,
+  "protected_files": 2355,
+  "geographic_isolation": {
+    "regions": 20,
+    "parent_sources": 80,
+    "history_min_gap_m": 27986.43617401272,
+    "window_pair_min_gap_m": 3500.0,
+    "parent_pair_min_gap_m": 0.0,
+    "parent_supports_not_claimed_to_have_same_window_isolation": true
+  },
+  "old_default_changed": false,
+  "policy_calls": 0,
+  "encoder_forwards": 0,
+  "training_steps": 0,
+  "navigation_episodes": 0,
+  "new_SR": false,
+  "binding": {
+    "DATA/processed_data/MassGIS/工程准备/正式池获取_v1/核验/预登记.json": "ec008c5d866d019e446d2f5d29327322fa5cfb0b0cc3667dc3e33aa8b35669ee",
+    "DATA/processed_data/MassGIS/工程准备/正式池获取_v1/核验/独立正式池复核.json": "52be8bfa2e64f2e85b441a6dcafae4fbfebd9826f5a5478068ee0c2affb9cd09",
+    "DATA/processed_data/MassGIS/工程准备/正式池获取_v1/工程数据/保留池清单.json": "7caee7c2d3c037ebda6133da6da477326bc60691404f9630519d998fa181705c",
+    "DATA/processed_data/MassGIS/工程准备/正式池获取_v1/元数据/源使用与导航保留账本.json": "cd45d3ff9cd97d3b0e21b26dde7ec2a79a7638a0b04ef53fc056868e5d85b0fb"
+  }
+}

@@ -1,0 +1,122 @@
+# 全部实验索引
+
+每行对应原始批次目录。数据、权重、轨迹、源码快照均保留原址；相同名称的训练和评测目录分别列出。历史状态只描述对应批次，不是当前默认状态。
+
+| 数据集与类型 | 批次 | 判定 | 范围及入口 |
+|---|---|---|---|
+| Masa / 训练结果 | PBRS完整导航与局部匹配对照_v1 | 完整导航训练，局部匹配观察候选 | 开发140×3；Small Full 65.95%，Spatial Full 68.81%，强探索 72.62%；[报告](<../DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/对照报告.md>) / [验收](<../DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1>) |
+| Masa / 训练结果 | tiny_bc_v1 | 保留该批原判定 | 早期调试、训练或工程记录；不作为当前正式成绩；[原目录](<../DATA/processed_data/Masa/训练结果/tiny_bc_v1>) |
+| Masa / 训练结果 | tiny_curiosity_debug | 保留该批原判定 | 早期调试、训练或工程记录；不作为当前正式成绩；[原目录](<../DATA/processed_data/Masa/训练结果/tiny_curiosity_debug>) |
+| Masa / 训练结果 | tiny_curiosity_gpu_1000_debug | 保留该批原判定 | 早期调试、训练或工程记录；不作为当前正式成绩；[原目录](<../DATA/processed_data/Masa/训练结果/tiny_curiosity_gpu_1000_debug>) |
+| Masa / 训练结果 | tiny_curiosity_gpu_debug | 保留该批原判定 | 早期调试、训练或工程记录；不作为当前正式成绩；[原目录](<../DATA/processed_data/Masa/训练结果/tiny_curiosity_gpu_debug>) |
+| Masa / 训练结果 | tiny_curiosity_v1 | 保留该批原判定 | 早期调试、训练或工程记录；不作为当前正式成绩；[原目录](<../DATA/processed_data/Masa/训练结果/tiny_curiosity_v1>) |
+| Masa / 训练结果 | tiny_curiosity_v2 | 保留该批原判定 | 早期调试、训练或工程记录；不作为当前正式成绩；[原目录](<../DATA/processed_data/Masa/训练结果/tiny_curiosity_v2>) |
+| Masa / 训练结果 | tiny_pbrs_v1 | 保留该批原判定 | 早期调试、训练或工程记录；不作为当前正式成绩；[原目录](<../DATA/processed_data/Masa/训练结果/tiny_pbrs_v1>) |
+| Masa / 训练结果 | tiny_pbrs_v2 | 保留该批原判定 | 早期调试、训练或工程记录；不作为当前正式成绩；[原目录](<../DATA/processed_data/Masa/训练结果/tiny_pbrs_v2>) |
+| Masa / 训练结果 | 可信邻接目标线索与探索协作_v1 | 负结果：可信阈值全部弃权 | 开发140×3；SR 72.62%，未增加成功；五分类邻接头；[报告](<../DATA/processed_data/Masa/训练结果/可信邻接目标线索与探索协作_v1/对照报告.md>) / [验收](<../DATA/processed_data/Masa/训练结果/可信邻接目标线索与探索协作_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/训练结果/可信邻接目标线索与探索协作_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/训练结果/可信邻接目标线索与探索协作_v1>) |
+| Masa / 训练结果 | 合法动作协作验证_v1 | 动作筛选候选通过；视觉 S2 未通过 | val100×3；PBRS 44.33% → 合法动作筛选 66.00%；[报告](<../DATA/processed_data/Masa/训练结果/合法动作协作验证_v1/验收报告.md>) / [原目录](<../DATA/processed_data/Masa/训练结果/合法动作协作验证_v1>) |
+| Masa / 训练结果 | 好奇心配对验证_v3 | PBRS 与好奇心配对验证 | val100×3；好奇心未形成稳定提升；[报告](<../DATA/processed_data/Masa/训练结果/好奇心配对验证_v3/配对验证报告.md>) / [原目录](<../DATA/processed_data/Masa/训练结果/好奇心配对验证_v3>) |
+| Masa / 训练结果 | 探索器协议适配同预算对照_v1 | 六模型训练及重放完成 | Continue5/Adapt10各三最终权重；491520新训练动作，6144优化器更新；[复核](<../DATA/processed_data/Masa/训练结果/探索器协议适配同预算对照_v1/独立复核.json>) / [最终状态](<../DATA/processed_data/Masa/训练结果/探索器协议适配同预算对照_v1/最终状态.json>) / [原目录说明](<../DATA/processed_data/Masa/训练结果/探索器协议适配同预算对照_v1/README.md>) / [原目录](<../DATA/processed_data/Masa/训练结果/探索器协议适配同预算对照_v1>) |
+| Masa / 训练结果 | 旋转负样本视觉头对照_v1 | 保留该批原判定 | 早期调试、训练或工程记录；不作为当前正式成绩；[验收](<../DATA/processed_data/Masa/训练结果/旋转负样本视觉头对照_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/训练结果/旋转负样本视觉头对照_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/训练结果/旋转负样本视觉头对照_v1>) |
+| Masa / 训练结果 | 本地模型容量与局部匹配对照_v1 | 18 模型受控对照；新候选未通过 | 方向监督直接迁移，140 题；不可与 PBRS 完整导航混为一类；[报告](<../DATA/processed_data/Masa/训练结果/本地模型容量与局部匹配对照_v1/对照报告.md>) / [复核](<../DATA/processed_data/Masa/训练结果/本地模型容量与局部匹配对照_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/训练结果/本地模型容量与局部匹配对照_v1>) |
+| Masa / 训练结果 | 目标图利用验证_v1 | 目标监督与目标干预；候选未通过 | val100×3；Boundary 66%，TargetPairs 58%，未改善目标利用；[报告](<../DATA/processed_data/Masa/训练结果/目标图利用验证_v1/验收报告.md>) / [复核](<../DATA/processed_data/Masa/训练结果/目标图利用验证_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/训练结果/目标图利用验证_v1>) |
+| Masa / 训练结果 | 训练源图留出诊断_v1 | 原 train 源图留出诊断 | 109/28 已知开发隔离；方向预测不是导航 SR；[报告](<../DATA/processed_data/Masa/训练结果/训练源图留出诊断_v1/诊断报告.md>) / [复核](<../DATA/processed_data/Masa/训练结果/训练源图留出诊断_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/训练结果/训练源图留出诊断_v1>) |
+| Masa / 训练结果 | 边缘连续性可信线索对照_v1 | 开发候选与完整复核通过；正式 S2 待复验 | 开发140×3；SR 88.57%，SG 0.348，3/3种子提升；当前默认未替换；[报告](<../DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/对照报告.md>) / [验收](<../DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1>) |
+| Masa / 训练结果 | 邻接与方向解耦对照_v1 | 负结果：可信阈值全部弃权 | 开发140×3；SR 72.62%，条件方向信号不足以介入；[报告](<../DATA/processed_data/Masa/训练结果/邻接与方向解耦对照_v1/对照报告.md>) / [验收](<../DATA/processed_data/Masa/训练结果/邻接与方向解耦对照_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/训练结果/邻接与方向解耦对照_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/训练结果/邻接与方向解耦对照_v1>) |
+| Masa / 训练结果 | 高分旋转负样本视觉头对照_v1 | 保留该批原判定 | 早期调试、训练或工程记录；不作为当前正式成绩；[验收](<../DATA/processed_data/Masa/训练结果/高分旋转负样本视觉头对照_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/训练结果/高分旋转负样本视觉头对照_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/训练结果/高分旋转负样本视觉头对照_v1>) |
+| Masa / 评测结果 | DeepSeek接口检查_v1 | 接口检查与截断记录 | 合成双图工程探测，不计导航 SR；[原目录](<../DATA/processed_data/Masa/评测结果/DeepSeek接口检查_v1>) |
+| Masa / 评测结果 | DeepSeek接口检查_v2 | 提高输出额度后的接口检查 | 合成双图工程探测，不计导航 SR；[原目录](<../DATA/processed_data/Masa/评测结果/DeepSeek接口检查_v2>) |
+| Masa / 评测结果 | Gemma与DeepSeek同策略对照_v1 | 默认思考截断，按协议停止 | DeepSeek 3 次空正文；旧结果保留，修复见 v2；[报告](<../DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v1/对照报告.md>) / [原目录](<../DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v1>) |
+| Masa / 评测结果 | Gemma与DeepSeek同策略对照_v2 | 已完成并复核的服务配置对照 | val20；Gemma 45%，DeepSeek 非思考 20%，Frontier 50%；DeepSeek 完成 18/20；[报告](<../DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v2/官方参数说明.md>) / [复核](<../DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v2/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v2>) |
+| Masa / 评测结果 | Ollama试跑_v1 | 首次连接失败 | 未发送图像推理，保留故障证据；[原目录](<../DATA/processed_data/Masa/评测结果/Ollama试跑_v1>) |
+| Masa / 评测结果 | Ollama试跑_v1重试 | 有界重试与最小 VLM 接入 | 接口试跑，不是完整 S2；[报告](<../DATA/processed_data/Masa/评测结果/Ollama试跑_v1重试/试跑说明.md>) / [原目录](<../DATA/processed_data/Masa/评测结果/Ollama试跑_v1重试>) |
+| Masa / 评测结果 | S2稳定验证_v1 | 批次已关闭，完整评测未完成 | G/E 首轮各正常完成 20/100；后续有 not_run，S2 未通过；[报告](<../DATA/processed_data/Masa/评测结果/S2稳定验证_v1/S2验证报告.md>) / [原目录](<../DATA/processed_data/Masa/评测结果/S2稳定验证_v1>) |
+| Masa / 评测结果 | S4十乘十工程试跑_v1 | 保留该批原判定 | 早期调试、训练或工程记录；不作为当前正式成绩；[报告](<../DATA/processed_data/Masa/评测结果/S4十乘十工程试跑_v1/试跑结果说明.md>) / [验收](<../DATA/processed_data/Masa/评测结果/S4十乘十工程试跑_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/评测结果/S4十乘十工程试跑_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/评测结果/S4十乘十工程试跑_v1>) |
+| Masa / 评测结果 | S4十乘十正式扩展_v1 | S4密度扩展通过 | 500题×3，20已见源文件，10×10/B20，77.13%/1.201；[报告](<../DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/十乘十扩展报告.md>) / [验收](<../DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1>) |
+| Masa / 评测结果 | 三项验证_v1 | TLS 故障记录 | VLM 未成功决策，不能将完成文件视作完成评测；[原目录](<../DATA/processed_data/Masa/评测结果/三项验证_v1>) |
+| Masa / 评测结果 | 三项验证_v1连接修复 | 连接修复后的同题验证 | 改用系统传输；保留失败批次；[原目录](<../DATA/processed_data/Masa/评测结果/三项验证_v1连接修复>) |
+| Masa / 评测结果 | 云端8790接口检查_v1 | 已弃用备选 | 9生成+1列表；用户已决定不继续考虑三个选项；[报告](<../DATA/processed_data/Masa/评测结果/云端8790接口检查_v1/接口检查报告.md>) / [最终状态](<../DATA/processed_data/Masa/评测结果/云端8790接口检查_v1/最终状态.json>) / [原目录说明](<../DATA/processed_data/Masa/评测结果/云端8790接口检查_v1/README.md>) / [原目录](<../DATA/processed_data/Masa/评测结果/云端8790接口检查_v1>) |
+| Masa / 评测结果 | 候选可靠性开发验证_v1 | 新候选未通过 | 0.90阈值提高精度但损伤召回和干净SR；[报告](<../DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/接受可靠性校准报告.md>) / [验收](<../DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1>) |
+| Masa / 评测结果 | 候选可靠性离线校准_v1 | 离线校准完成 | 接受精度不是导航SR；在线验证另列；[报告](<../DATA/processed_data/Masa/评测结果/候选可靠性离线校准_v1/校准报告.md>) / [验收](<../DATA/processed_data/Masa/评测结果/候选可靠性离线校准_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/评测结果/候选可靠性离线校准_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/评测结果/候选可靠性离线校准_v1>) |
+| Masa / 评测结果 | 四组实验_v1 | 排序、动作治理与规则对照 | 最终修正报告为 *_v2；固定 val20 试验；[报告](<../DATA/processed_data/Masa/评测结果/四组实验_v1/四组对照报告.md>) / [原目录](<../DATA/processed_data/Masa/评测结果/四组实验_v1>) |
+| Masa / 评测结果 | 基础校验_v2 | 环境与评测基础记录 | 基础校验；不作为智能策略成绩；[原目录](<../DATA/processed_data/Masa/评测结果/基础校验_v2>) |
+| Masa / 评测结果 | 多Agent同预算小验证_v1 | 小验证未通过扩大门槛 | 原触发只覆盖成功题；未产生有效计划修正；[报告](<../DATA/processed_data/Masa/评测结果/多Agent同预算小验证_v1/任务要求与论文框架对应说明.md>) / [验收](<../DATA/processed_data/Masa/评测结果/多Agent同预算小验证_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/评测结果/多Agent同预算小验证_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/评测结果/多Agent同预算小验证_v1>) |
+| Masa / 评测结果 | 层级搜索实验_v1 | 单因素：层级搜索 | 云端后续对照的 G 策略来源；[报告](<../DATA/processed_data/Masa/评测结果/层级搜索实验_v1/层级搜索对照报告.md>) / [原目录](<../DATA/processed_data/Masa/评测结果/层级搜索实验_v1>) |
+| Masa / 评测结果 | 探索器协议适配开发验证_v1 | 协议适配升级未通过 | Continue5 79.73%/0.823、Adapt10 80.00%/1.059；同预算，不增加参数；[报告](<../DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/探索器协议适配报告.md>) / [验收](<../DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/独立复核.json>) / [最终状态](<../DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/最终状态.json>) / [原目录说明](<../DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/README.md>) / [原目录](<../DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1>) |
+| Masa / 评测结果 | 旋转负样本开发验证_v1 | 新候选未通过 | 增加旋转负例未达到SR一致收益门槛；[报告](<../DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1/旋转负样本对照报告.md>) / [验收](<../DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1>) |
+| Masa / 评测结果 | 本地S2固定配置复验_v1 | 工程检查通过；目标贡献未通过 | val100×3；当前默认 Small NoTarget 73.00%，SG 0.800；正式视觉 S2 未通过；[报告](<../DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1/复验报告.md>) / [复核](<../DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1>) |
+| Masa / 评测结果 | 目标方向候选开发验证_v1 | 开发条件通过后试跑失败 | 已见Masa28；不能把旋转集合不变性当任意旋转鲁棒；[报告](<../DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1/方向候选验证报告.md>) / [验收](<../DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1>) |
+| Masa / 评测结果 | 目标邻域覆盖规划验证_v1 | 候选未通过 | 76.93%/1.281，未增加净成功；[报告](<../DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1/目标邻域覆盖规划报告.md>) / [验收](<../DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1/独立复核.json>) / [最终状态](<../DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1/最终状态.json>) / [原目录说明](<../DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1/README.md>) / [原目录](<../DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1>) |
+| Masa / 评测结果 | 空间记忆实验_v1 | 单因素：空间记忆 | 固定小验证集；结果不外推到 val100；[报告](<../DATA/processed_data/Masa/评测结果/空间记忆实验_v1/空间记忆对照报告.md>) / [原目录](<../DATA/processed_data/Masa/评测结果/空间记忆实验_v1>) |
+| Masa / 评测结果 | 继续训练冻结目标证据复验_v1 | 目标证据通过 | 已见20源文件；Full79.73%/SG0.823；新增4500控制，复用1500真实目标；[报告](<../DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/冻结目标证据复验报告.md>) / [验收](<../DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/独立复核.json>) / [最终状态](<../DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/最终状态.json>) / [原目录说明](<../DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/README.md>) / [原目录](<../DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1>) |
+| Masa / 评测结果 | 证据账本简化接口验证_v2 | 接口和D通过，G未达扩大门槛 | 同20题，云端三重复；M0 55%、零调用60%、云端三方案均55%；[报告](<../DATA/processed_data/Masa/评测结果/证据账本简化接口验证_v2/简化接口与闭环验证报告.md>) / [验收](<../DATA/processed_data/Masa/评测结果/证据账本简化接口验证_v2/验收结论.json>) / [复核](<../DATA/processed_data/Masa/评测结果/证据账本简化接口验证_v2/独立复核.json>) / [原目录说明](<../DATA/processed_data/Masa/评测结果/证据账本简化接口验证_v2/README.md>) / [原目录](<../DATA/processed_data/Masa/评测结果/证据账本简化接口验证_v2>) |
+| Masa / 评测结果 | 证据账本预算规划验证_v1 | T通过，旧D未通过 | 14请求保留；修复在另批，不把请求成功当导航有效；[报告](<../DATA/processed_data/Masa/评测结果/证据账本预算规划验证_v1/分关验证报告.md>) / [验收](<../DATA/processed_data/Masa/评测结果/证据账本预算规划验证_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/评测结果/证据账本预算规划验证_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/评测结果/证据账本预算规划验证_v1>) |
+| Masa / 评测结果 | 账本探索保护规则验证_v1 | 候选未通过 | 77.07%/1.199；修复旧损伤，也失去大部分恢复；[报告](<../DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1/保护规则验证报告.md>) / [验收](<../DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1/独立复核.json>) / [最终状态](<../DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1/最终状态.json>) / [原目录说明](<../DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1/README.md>) / [原目录](<../DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1>) |
+| Masa / 评测结果 | 边缘线索S2正式复验_v1 | S2通过 | val100×3，4源文件，5×5/B10，SR89.33%/SG0.320；[报告](<../DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/正式复验报告.md>) / [验收](<../DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1>) |
+| Masa / 评测结果 | 边缘线索S3独立源图确认_v1 | S3通过 | test250×3，10源文件，5×5/B10，SR86.80%/SG0.300；[报告](<../DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/独立源图确认报告.md>) / [验收](<../DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1>) |
+| Masa / 评测结果 | 邻域确认实验_v1 | 单因素：邻域确认 | 保留负结果；不将所有因素叠加解释；[报告](<../DATA/processed_data/Masa/评测结果/邻域确认实验_v1/邻域确认对照报告.md>) / [原目录](<../DATA/processed_data/Masa/评测结果/邻域确认实验_v1>) |
+| Masa / 评测结果 | 零调用账本完整队列验证_v1 | 未达到SR+2点门槛 | M1 78.40%/1.110，对M0+1.27点；低成本备选；[报告](<../DATA/processed_data/Masa/评测结果/零调用账本完整队列验证_v1/完整队列验证报告.md>) / [验收](<../DATA/processed_data/Masa/评测结果/零调用账本完整队列验证_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/评测结果/零调用账本完整队列验证_v1/独立复核.json>) / [原目录说明](<../DATA/processed_data/Masa/评测结果/零调用账本完整队列验证_v1/README.md>) / [原目录](<../DATA/processed_data/Masa/评测结果/零调用账本完整队列验证_v1>) |
+| Masa / 评测结果 | 高分旋转负样本开发验证_v1 | 新候选未通过 | 训练预算一致，未优于均匀负旋转；未消费该批新确认图；[报告](<../DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1/高分旋转负样本对照报告.md>) / [验收](<../DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1/验收结论.json>) / [复核](<../DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1>) |
+| SwissView / 评测结果 | 五乘五工程试跑_v1 | 保留该批原判定 | 早期调试、训练或工程记录；不作为当前正式成绩；[报告](<../DATA/processed_data/SwissView/评测结果/五乘五工程试跑_v1/迁移验证报告.md>) / [验收](<../DATA/processed_data/SwissView/评测结果/五乘五工程试跑_v1/验收结论.json>) / [复核](<../DATA/processed_data/SwissView/评测结果/五乘五工程试跑_v1/独立复核.json>) / [原目录](<../DATA/processed_data/SwissView/评测结果/五乘五工程试跑_v1>) |
+| SwissView / 评测结果 | 五乘五正式迁移_v1 | SwissView迁移通过 | 500题×3，20新源文件，5×5/B10，86.80%/0.381；[报告](<../DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/迁移验证报告.md>) / [验收](<../DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/验收结论.json>) / [复核](<../DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/独立复核.json>) / [原目录](<../DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1>) |
+| SwissView / 评测结果 | 目标扰动鲁棒性_v1 | 扰动诊断完成 | 揭示边缘连续性对真实目标条件的依赖，不修改默认；[报告](<../DATA/processed_data/SwissView/评测结果/目标扰动鲁棒性_v1/鲁棒性与数据范围报告.md>) / [验收](<../DATA/processed_data/SwissView/评测结果/目标扰动鲁棒性_v1/验收结论.json>) / [复核](<../DATA/processed_data/SwissView/评测结果/目标扰动鲁棒性_v1/独立复核.json>) / [原目录](<../DATA/processed_data/SwissView/评测结果/目标扰动鲁棒性_v1>) |
+| SwissView / 评测结果 | 目标方向候选试跑确认_v1 | 新候选未通过 | 04…07新源文件试跑；四朝向降低干净接受可靠性；[报告](<../DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1/方向候选验证报告.md>) / [验收](<../DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1/验收结论.json>) / [复核](<../DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1/独立复核.json>) / [原目录](<../DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1>) |
+| SwissView / 评测结果 | 继续训练独立源图确认_v1 | 升级未通过 | 新20SwissView源文件；10×10仅SR+0.60点，1/3正，SG改善；默认保持；[报告](<../DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/任务采样说明.md>) / [验收](<../DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/验收结论.json>) / [复核](<../DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/独立复核.json>) / [最终状态](<../DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/最终状态.json>) / [原目录说明](<../DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/README.md>) / [原目录](<../DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1>) |
+| SwissView / 评测结果 | 继续训练恢复损伤诊断_v1 | 诊断与复核完成 | 6000既有轨迹；无新增导航，分解恢复/损伤与邻接时机；[报告](<../DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1/恢复损伤诊断报告.md>) / [复核](<../DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1/独立复核.json>) / [原目录](<../DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1>) |
+| Masa / 评测结果 | 回访新格筛选冻结验证_v1 | 开发候选与目标证据通过 | dev250×3；SR+2.00点、3/3正；原默认保持，尚未独立确认；[报告](<../DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/回访新格筛选验证报告.md>) / [复核](<../DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/独立复核.json>) / [原目录](<../DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1>) |
+| SwissView / 评测结果 | 回访新格筛选独立源图确认_v1 | 新源升级未通过，原M0保持 | 20新源500×3；[报告](../DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1/独立源图确认报告.md) / [复核](../DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1/独立复核.json) / [原目录](../DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1) |
+| Masa / 数据准备 | 实际区域扩展_v1 | 数据/协议通过；导航未启动 | 3已知train连续地图/12源/9km²每图；[报告](../DATA/processed_data/Masa/实际区域扩展_v1/实际区域扩展数据准备报告.md) / [复核](../DATA/processed_data/Masa/实际区域扩展_v1/核验/独立复核.json) / [原目录](../DATA/processed_data/Masa/实际区域扩展_v1) |
+| Masa / 评测结果 | 实际区域M0兼容试跑_v1 | 工程与目标控制通过；已知地区 | 3图75×3/9 km²各图；[报告](../DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/实际区域M0兼容试跑报告.md) / [复核](../DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/独立复核.json) / [原目录](../DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1) |
+| MasaRoads / 数据准备 | 空间隔离连续区域_v1 | 资源上限停止，未通过 | [报告](../DATA/processed_data/MasaRoads/空间隔离连续区域_v1/资源上限停止报告.md) / [判定](../DATA/processed_data/MasaRoads/空间隔离连续区域_v1/核验/验收结论.json) / [原目录](../DATA/processed_data/MasaRoads/空间隔离连续区域_v1) |
+| MasaRoads / 数据准备 | 空间隔离连续区域_v2 | 空间隔离数据通过，无新SR | [报告](../DATA/processed_data/MasaRoads/空间隔离连续区域_v2/空间隔离连续区域数据准备报告.md) / [判定](../DATA/processed_data/MasaRoads/空间隔离连续区域_v2/核验/验收结论.json) / [原目录](../DATA/processed_data/MasaRoads/空间隔离连续区域_v2) |
+| MasaRoads / 工程准备 | 十五乘十五数据目录补全_v1 | 完整目录/263地理标签/独立容量通过；像素质量待验 | Roads113组/最大12区；15单测，无新SR；[报告](<../DATA/processed_data/MasaRoads/工程准备/十五乘十五数据目录补全_v1/十五乘十五数据目录补全调查报告.md>) / [复核](<../DATA/processed_data/MasaRoads/工程准备/十五乘十五数据目录补全_v1/目录链接适配_v2/独立复核.json>) / [原目录](<../DATA/processed_data/MasaRoads/工程准备/十五乘十五数据目录补全_v1>) |
+| MasaRoads / 数据工程 | 真实十五乘十五数据准备_v1 | 可信复核/10区门槛未过；最大7区，2已知工程图 | 263源/177质量通过；450图块、150任务、720探针；无新SR；[报告](<../DATA/processed_data/MasaRoads/真实十五乘十五数据准备_v1/真实十五乘十五数据准备报告.md>) / [判定](<../DATA/processed_data/MasaRoads/真实十五乘十五数据准备_v1/验收结论.json>) / [复核](<../DATA/processed_data/MasaRoads/真实十五乘十五数据准备_v1/核验/独立数据复核.json>) / [原目录](<../DATA/processed_data/MasaRoads/真实十五乘十五数据准备_v1>) |
+| MasaRoads / 工程准备 | 同源窗口静态可行性_v1 | 可信复核/10区静态门槛未过；精确最大7，裁切因素收束 | 177源；720窗口+49原组去重577；12单测/双算法容量复核；零下载/训练/导航，无新SR；[报告](<../DATA/processed_data/MasaRoads/工程准备/同源窗口静态可行性_v1/同源窗口静态可行性报告.md>) / [判定](<../DATA/processed_data/MasaRoads/工程准备/同源窗口静态可行性_v1/验收结论.json>) / [复核](<../DATA/processed_data/MasaRoads/工程准备/同源窗口静态可行性_v1/核验/独立复核.json>) / [原目录](<../DATA/processed_data/MasaRoads/工程准备/同源窗口静态可行性_v1>) |
+| MassGIS / 工程准备 | 连续航拍影像池调查_v1 | 20区几何见证/三代表头通过；像素质量待验 | 1540索引/1093接受/604候选；12请求/2.00MiB/18测试；0新SR；[报告](../DATA/processed_data/MassGIS/工程准备/连续航拍影像池调查_v1/连续航拍影像池调查报告.md) / [判定](../DATA/processed_data/MassGIS/工程准备/连续航拍影像池调查_v1/验收结论.json) / [复核](../DATA/processed_data/MassGIS/工程准备/连续航拍影像池调查_v1/核验/独立复核.json) / [原目录](../DATA/processed_data/MassGIS/工程准备/连续航拍影像池调查_v1/) |
+| MassGIS / 工程准备 | 原生解码与小区域工程_v1 | 1已见工程区通过，正式区0，无新SR | 4源/9000窗/225原生600 PNG；29混合格/37测试；容器拒绝保留、v3读取；[报告](../DATA/processed_data/MassGIS/工程准备/原生解码与小区域工程_v1/原生解码与小区域工程报告.md) / [判定](../DATA/processed_data/MassGIS/工程准备/原生解码与小区域工程_v1/验收结论.json) / [独立复核](../DATA/processed_data/MassGIS/工程准备/原生解码与小区域工程_v1/核验/独立工程复核.json) / [原目录](../DATA/processed_data/MassGIS/工程准备/原生解码与小区域工程_v1/) |
+| MassGIS / 工程准备 | 正式池获取_v1 | 数据通过：13合格/10正式保留/3备用，无新SR | 20候选/80源/160HTTP/2925原生600PNG；16测试/独立复核/2355保护；[报告](../DATA/processed_data/MassGIS/工程准备/正式池获取_v1/正式池获取报告.md) / [判定](../DATA/processed_data/MassGIS/工程准备/正式池获取_v1/验收结论.json) / [复核](../DATA/processed_data/MassGIS/工程准备/正式池获取_v1/核验/独立正式池复核.json) / [保留清单](../DATA/processed_data/MassGIS/工程准备/正式池获取_v1/工程数据/保留池清单.json) / [原目录](../DATA/processed_data/MassGIS/工程准备/正式池获取_v1/) |
+| MassGIS / 工程准备 | 同产品开发导航兼容_v1 | 工程兼容与目标开发门槛通过，15格未导航 | 1已消费区；10格Coverage SR68.00%/SG646.67米；34+4测试/2300轨迹/独立重放；[报告](../DATA/processed_data/MassGIS/工程准备/同产品开发导航兼容_v1/同产品开发导航兼容报告_v2.md) / [判定](../DATA/processed_data/MassGIS/工程准备/同产品开发导航兼容_v1/验收结论.json) / [复核](../DATA/processed_data/MassGIS/工程准备/同产品开发导航兼容_v1/核验/独立导航兼容复核_v2.json) / [准备草案](../DATA/processed_data/MassGIS/工程准备/同产品开发导航兼容_v1/下一项正式导航协议准备草案.md) / [原目录](../DATA/processed_data/MassGIS/工程准备/同产品开发导航兼容_v1/) |
+| MassGIS / 工程准备 | 正式导航协议冻结_v1 | 协议/接口准备通过，正式消费0，无新SR | 10区；10/15格750/1000题/750物理配对；30测试/450旧开发题/独立几何标签复核；[报告](../DATA/processed_data/MassGIS/工程准备/正式导航协议冻结_v1/正式导航协议准备报告.md) / [协议](../DATA/processed_data/MassGIS/工程准备/正式导航协议冻结_v1/冻结协议.json) / [判定](../DATA/processed_data/MassGIS/工程准备/正式导航协议冻结_v1/验收结论.json) / [复核](../DATA/processed_data/MassGIS/工程准备/正式导航协议冻结_v1/核验/独立协议复核.json) / [原目录](../DATA/processed_data/MassGIS/工程准备/正式导航协议冻结_v1/) |
+| MassGIS / 评测结果 | 正式十乘十十五乘十五确认_v1 | 执行与重放通过；两网格新域门槛未过，无默认升级 | 10区；Coverage SR54.62%/20.27%，共同任务扩区−32.22点；42测试/14000轨迹/255125动作/6715保护；[报告](../DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/正式双网格确认报告.md) / [判定](../DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/验收结论.json) / [复核](../DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/核验/最终独立复核.json) / [诊断草案](../DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/下一项新域误触发与覆盖诊断草案.md) / [原目录](../DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/) |
+
+
+## 冻结M0空间隔离导航确认_v1
+
+10个空间隔离确认区域（每区9km²、300米/格、10×10/B20），750不同任务×3冻结权重。长距离主队列SR72.80%，混合队列SR58.27%/SG738.27米。跨源正确接受98.67%，非邻接误接受3.92%；导航通过；接缝头部通过；组合通过。两阶段14700导航记录/265139动作及15120探针判断复核通过；40冻结前测试及6审计修订回归测试通过。无训练、无云端、默认M0保持。
+
+[报告](../DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/新空间隔离区域M0导航确认报告_v2.md) / [判定](../DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/验收结论.json) / [独立复核](../DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/独立复核.json)。
+
+
+## 空间覆盖与误触发单因素验证_v1
+
+同10个已消费区域、750题×3权重的后验开发：三步覆盖候选混合SR65.91%（M0 58.27%，+7.64点，3/3权重正）；混合SG738.27→821.60米，长距离SR72.80%→65.07%。恢复439、损伤267，净增172条成功。SR收益保留，长距离及SG保护门槛未过；2250轨迹/36350动作重放与10项测试通过。未启动目标对照或新区域确认，默认M0保持。
+
+[报告](../DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/三步覆盖接管开发验证报告.md) / [判定](../DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/验收结论.json) / [复核](../DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/独立复核.json)。
+
+
+## 覆盖接管径向保护验证_v1
+
+同10个已消费区域、750题×3权重的后验开发，唯一新增径向保护：混合SR 67.56%（M0 58.27%，+9.29点）；混合SG 738.27→641.47米，长距离SR 83.33%。恢复298、损伤89，净增209成功。开发与目标证据通过，待新区域确认；10测试及完整重放通过，0训练/0云端，默认M0保持，未进行新区域确认。
+
+[报告](../DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/径向保护开发验证报告.md) / [判定](../DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/验收结论.json) / [复核](../DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/独立复核.json)。
+
+
+## 径向保护新区域确认_v1（数据准备）
+
+径向保护的10个预留确认新区已完成数据准备，每区9 km²、300米/格、10×10/B20，1000图块、750固定不同任务、1200几何探针。新增下载102源/658.15 MiB，旧152源只读复用；新至旧151最短7.50公里，至已消费14区及新区间均至少3公里（0.001米容差）。12测试及标签/像素/采样/空间独立复核通过。尚未调用编码器、视觉头或导航，不产生新SR，默认M0保持。
+
+[报告](../DATA/processed_data/MasaRoads/径向保护新区域确认_v1/新区域确认数据准备报告.md) / [判定](../DATA/processed_data/MasaRoads/径向保护新区域确认_v1/核验/验收结论.json) / [下一项草案](../DATA/processed_data/MasaRoads/径向保护新区域确认_v1/下一项冻结径向保护新区域导航确认方案_v1.md)。
+
+
+## 径向保护独立新区域导航确认_v1
+
+10个未参与候选选型的空间隔离新区域、750不同任务×3冻结权重：M0 SR58.84%、径向保护SR68.04%（差+9.20点，区域95%差[+7.07,+11.02]点）；混合SG755.20→648.53米。恢复295、损伤88，净增207成功。全部独立升级证据通过；默认M0保持，0训练/0云端。
+
+[报告](../DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/径向保护独立新区域导航确认报告.md) / [判定](../DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/验收结论.json)。
+
+
+## 默认版本化与十五乘十五兼容_v1
+
+已将Coverage3Radial登记为300米/格、10×10/B20物理区域协议默认；旧5×5配置与跨数据集入口保留。18项接口测试、900旧轨迹/15698动作精确回归、6合成轨迹/68动作及711公开规划状态的独立复核通过。15×15/B20参数化兼容通过，未训练、未下载、没有新真实SR。
+
+[报告](../DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1/默认版本化与十五乘十五兼容报告.md) / [复核](../DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1/独立工程复核.json)。

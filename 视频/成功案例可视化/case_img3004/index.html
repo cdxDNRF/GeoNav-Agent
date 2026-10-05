@@ -1,0 +1,44 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8">
+<title>GeoNav-Agent 成功案例 · img_3004 · 9km²</title>
+<style>
+ body{margin:0;background:#F0EBDE;font-family:"Noto Sans SC","Microsoft YaHei",sans-serif;color:#1F2BE0;display:flex;flex-direction:column;align-items:center}
+ h1{font-size:22px;margin:18px 0 6px}
+ p.sub{margin:0 0 12px;font-size:14px;color:#5560E5}
+ #img{max-width:92vw;border:3px solid #1F2BE0;image-rendering:auto}
+ .bar{display:flex;gap:10px;margin:14px 0}
+ button{font:600 15px "Noto Sans SC","Microsoft YaHei";padding:8px 22px;background:#1F2BE0;color:#F0EBDE;border:none;cursor:pointer}
+ button.ghost{background:transparent;color:#1F2BE0;border:2px solid #1F2BE0}
+ #log{width:92vw;max-width:1400px;font-size:14px;line-height:1.9;margin-top:10px;white-space:pre-wrap}
+</style></head><body>
+<h1>一次真实成功：从起点到目标的 20 步 · 9 km² 连续航拍区域</h1>
+<p class="sub">img_3004（Massachusetts Roads test_04 源图 19978915_15）· 300米/格 · 10×10 · 目标距离14格 · 策略 Coverage3Radial（探索器+边缘线索头+径向保护）· 种子 s0</p>
+<img id="img" src="frame_00.png">
+<div class="bar">
+ <button id="play">▶ 自动播放</button>
+ <button class="ghost" id="prev">◀ 上一步</button>
+ <button class="ghost" id="next">下一步 ▶</button>
+ <button class="ghost" id="jump">跳到命中瞬间（第20步）</button>
+</div>
+<div id="log"></div>
+<script>
+const F = 21; let cur = 0, timer = null;
+const notes = {
+ 0:"起点：智能体被随机投放在第4行第10列（左下偏上）。它只拿到一张目标图——目标在 2.6 公里外的左下角，具体位置未知。",
+ 1:"第1步 向左：探索器（无目标输入的 GRU 策略）开始铺路。此刻线索头判断“目标不在相邻格”，弃权。",
+ 3:"第2-3步：先试探性向下，随即回到向左——探索器沿道路结构向西推进，每步 300 米。",
+ 10:"第2-10步 连续 8 步向西：横穿近 2.4 公里。全程线索头保持弃权——目标还远，证据不足就不接管。",
+ 13:"第11-13步 连续 3 步向下：抵达西边界后沿边缘南下，进入左下象限。",
+ 14:"第14步 关键时刻：探索器建议回头（up），但“径向保护”规则改写为向右——只允许远离起点的方向，禁止原地打转。",
+ 17:"第15-17步：在 (7,0)/(7,1) 之间小幅修正后继续南下。预算只剩 3 步。",
+ 19:"第19-20步 线索头接管：第19步径向保护再次纠偏（explorer 想回头，被改写为 right）；第20步——边缘接缝线索头以 ≥0.50 的联合置信度接受“目标就在正下方相邻格”，接管决策，向下！",
+ 20:"第20步 命中：正好用完第 20 步预算，抵达目标格（右下角金色框）。SG=0，一次零浪费的成功——19 步探索铺路 + 1 步可信证据一击命中。"
+};
+function pickNote(s){ let best=0; for(const k of Object.keys(notes)) if(+k<=s) best=+k; return notes[best]; }
+function show(s){ cur=Math.max(0,Math.min(F-1,s)); document.getElementById("img").src="frame_"+String(cur).padStart(2,"0")+".png"; document.getElementById("log").textContent=pickNote(cur); }
+document.getElementById("next").onclick=()=>{stop();show(cur+1)};
+document.getElementById("prev").onclick=()=>{stop();show(cur-1)};
+document.getElementById("jump").onclick=()=>{stop();show(20)};
+function stop(){ if(timer){clearInterval(timer);timer=null} document.getElementById("play").textContent="▶ 自动播放"; }
+document.getElementById("play").onclick=()=>{ if(timer){stop();return} document.getElementById("play").textContent="⏸ 暂停"; show(0); timer=setInterval(()=>{ if(cur>=F-1){stop();return} show(cur+1); },650); };
+show(0);
+</script></body></html>

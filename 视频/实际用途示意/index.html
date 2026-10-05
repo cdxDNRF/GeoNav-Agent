@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="zh">
+<head>
+<meta charset="utf-8">
+<title>实际用途：一条需求如何变成无人机的 20 步</title>
+<style>
+ :root{--ink:#1F2BE0;--ink2:#515CDB;--paper:#F0EBDE;--gold:#DAA520;--red:#C81E3C}
+ *{box-sizing:border-box}
+ body{margin:0;background:var(--paper);color:var(--ink);font-family:"Noto Sans SC","Microsoft YaHei",sans-serif;display:flex;justify-content:center}
+ .wrap{width:min(1500px,96vw);padding:28px 0 60px}
+ h1{font-size:30px;margin:0 0 4px}
+ .sub{font-size:15px;color:var(--ink2);margin-bottom:26px}
+ .sec{margin:34px 0 12px;font-size:21px;font-weight:700;border-left:6px solid var(--ink);padding-left:12px}
+ .row{display:flex;gap:22px;flex-wrap:wrap;align-items:stretch}
+ .card{background:#fff;border:2.5px solid var(--ink);padding:14px;flex:1;min-width:300px}
+ .card img{width:100%;display:block;border:1.5px solid #b9b3a0}
+ .card .cap{font-size:14.5px;line-height:1.75;margin-top:10px}
+ .card .cap b{color:var(--red)}
+ .arrow{align-self:center;font-size:42px;font-weight:700;color:var(--ink)}
+ .req{font-size:17px;line-height:2.0;background:#fff;border:2.5px solid var(--ink);padding:18px 26px}
+ .req b{color:var(--red)}
+ .flow{display:flex;gap:0;margin:8px 0 0;flex-wrap:wrap}
+ .step{flex:1;min-width:210px;border:2px solid var(--ink);padding:12px 14px;font-size:14px;line-height:1.8;background:#fff;position:relative;margin-right:26px}
+ .step:last-child{margin-right:0}
+ .step:after{content:"➜";position:absolute;right:-24px;top:42%;font-size:20px;color:var(--ink)}
+ .step:last-child:after{content:""}
+ .step b{display:block;font-size:15px;margin-bottom:4px}
+ .framebig{width:100%;border:3px solid var(--ink);display:block}
+ .note{font-size:13.5px;color:var(--ink2);margin-top:8px;line-height:1.7}
+ .k{color:var(--red);font-weight:700}
+ .g{color:#8a6410;font-weight:700}
+</style>
+</head>
+<body>
+<div class="wrap">
+ <h1>实际用途示例：一句需求，如何变成无人机的 20 步</h1>
+ <div class="sub">以下全部取自项目真实运行记录（img_3004 区域 · 9 km² 连续航拍 · Massachusetts Roads 源图 19978915_15 · 径向保护独立确认批次 · 种子 s0），非示意图。</div>
+
+ <div class="sec">① 指挥端提出的实际需求</div>
+ <div class="req">
+ “这里是灾区以东 9 平方公里的航拍底图。侦察组在目标点拍到了一张<b>参考照片</b>（下图左）——河道拐弯、三岔路口、田埂走向都在里面。
+ 一架无人机在 2.7 公里外投放，<b>只带相机、没有 GPS</b>。<b>20 个动作单元内</b>飞到照片对应的那个位置，超时即任务失败。”
+ </div>
+
+ <div class="sec">② 平台把需求翻译成任务</div>
+ <div class="row">
+  <div class="card"><img src="goal_tile.png"><div class="cap"><b>目标参考照片</b>（300×300 米真实图块）<br>交给系统的全部目标信息就这一张图：金框在底图上的位置，系统知道、无人机<b>永远不知道</b>。</div></div>
+  <div class="arrow">＋</div>
+  <div class="card"><img src="start_tile.png"><div class="cap"><b>无人机脚下第一眼</b>（投放点实拍）<br>每一步只能看到自己所在格的画面，四邻格未到达前一律不可见——部分可观测，靠移动换信息。</div></div>
+  <div class="arrow">＋</div>
+  <div class="card"><div class="cap" style="font-size:15.5px;line-height:2.1">
+   <b>任务参数（对应真实世界）</b><br>
+   网格：10×10 格，每格 <span class="k">300 米</span> → 全图 <span class="k">3×3 km = 9 km²</span><br>
+   预算：20 步 = 最多 <span class="k">6 km</span> 航程<br>
+   起点到目标任务距离：14 格（曼哈顿口径）≈ <span class="k">4.2 km</span><br>
+   成功判定：走进目标格（左下金框）
+  </div></div>
+ </div>
+
+ <div class="sec">③ 无人机怎么找：每一步都在回答一个问题</div>
+ <div class="flow">
+  <div class="step"><b>第 1–13 步 · 探索器铺路</b>无目标输入的 GRU 策略按地形结构推进：向西横穿 2.4 km，再沿西边界南下。每步线索头都在比对“目标图 vs 脚下四邻”，证据不足就<b>弃权</b>——宁可继续探索，不乱猜方向。</div>
+  <div class="step"><b>第 14/16/18/19 步 · 径向保护纠偏</b>探索器几次想回头走已看过的格子，<b>规则层直接改写</b>为远离起点方向（金标签）：禁止打转，6 km 航程一米不浪费。</div>
+  <div class="step"><b>第 20 步 · 线索头接管命中</b>当目标与某邻格的<b>边缘接缝逐段吻合</b>（颜色误差+梯度误差+相关性 ≥0.50 置信），线索头接管决策：向下。第 20 步——预算最后一格——踏入目标（红标签）。</div>
+ </div>
+
+ <div class="sec">④ 走一遍全程（真实轨迹帧，点图可放大）</div>
+ <div class="row">
+  <div class="card"><a href="frame_00.png" target="_blank"><img class="framebig" src="frame_00.png"></a><div class="cap"><b>第 0 步</b>：投放。起=右上，目标=左下金框，任务距离 14 格 ≈ 4.2 km。</div></div>
+  <div class="card"><a href="frame_10.png" target="_blank"><img class="framebig" src="frame_10.png"></a><div class="cap"><b>第 10 步</b>：向西横穿完成，行程 3 km，线索头仍未接管（目标还远，证据不足）。</div></div>
+  <div class="card"><a href="frame_14.png" target="_blank"><img class="framebig" src="frame_14.png"></a><div class="cap"><b>第 14 步</b>：探索器想回头，被径向保护改写为向右（金标签）。</div></div>
+  <div class="card"><a href="final_hit.png" target="_blank"><img class="framebig" src="final_hit.png"></a><div class="cap"><b>第 20 步</b>：线索头接管（红标签）→ 命中金框。步数 20/20，SG=0。</div></div>
+ </div>
+
+ <div class="sec">⑤ 换算回实际场景意味着什么</div>
+ <div class="req" style="font-size:16px">
+ 在这套 9 km² 区域、20 步预算的正式确认里，该方法三权重平均成功率 <b>68.04%</b>（同题旧基线 58.84%，10 个新区全部提升，750 条轨迹独立复核）；本次案例是其中一次“零浪费”成功：6 km 航程全部用于接近目标。
+ 边界同样要交代：这是<span class="g">同源同向航拍切图仿真</span>，目标必须是<span class="g">同模态航拍图块</span>；地面照片指定目标、任意角度、异时影像属下一阶段工作。
+ </div>
+</div>
+</body>
+</html>

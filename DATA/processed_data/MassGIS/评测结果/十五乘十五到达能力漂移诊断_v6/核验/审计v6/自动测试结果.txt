@@ -1,0 +1,5 @@
+EVAL-004 independent audit v11 tests (2026-10-05)
+Command: D:\PYTHON\python.exe project/src/tests/test_massgis_arrival_drift_audit_v11.py -v
+Result: 8 tests passed, 0 failed.
+Static check: AST parse passed for project/src/eval/audit_massgis_arrival_drift_v11.py and project/src/tests/test_massgis_arrival_drift_audit_v11.py.
+Forbidden runtime check: no torch/torchvision/transformers imports and no forward/predict/act/load_area_policy/step calls in the audit source.

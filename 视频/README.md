@@ -20,7 +20,8 @@ npm run dev        # 即 npx hyperframes preview，自动打开浏览器播放�
 | 路径 | 内容 |
 |---|---|
 | `geonav-agent-explainer/` | HyperFrames 视频工程（唯一交付物） |
-| `geonav-agent-explainer/index.html` | 组装后的可播放入口 |
+| `成功案例可视化/case_img3004/` | 单次成功案例逐帧可视化：真实航拍底图 + 20步路线动画 + 步进式 HTML（数据取自径向保护独立确认批次的真实轨迹与源图 TIFF，只读） |
+| `实际用途示意/` | 实际需求→无人机命中的示意页：真实需求措辞、目标参考照片与起点第一眼（源图裁块）、四帧全过程、物理量换算（300米/格、6km航程）；数字与径向保护批次轨迹一致 || `geonav-agent-explainer/index.html` | 组装后的可播放入口 |
 | `geonav-agent-explainer/STORYBOARD.md` | 分镜（含逐场景镜头时间轴，与旁白逐句对齐） |
 | `geonav-agent-explainer/SCRIPT.md` | 旁白脚本（配音的唯一输入） |
 | `geonav-agent-explainer/audio/` | edge-tts 生成的 10 段配音 mp3 与句级 SRT |

@@ -13,6 +13,7 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 .mypy_cache/
+.superpowers/
 .ipynb_checkpoints/
 .DS_Store
 Thumbs.db
@@ -30,11 +31,39 @@ Thumbs.db
 *.ckpt
 *.safetensors
 
+# Developer-machine helpers and one-off handoff prompts are not project deliverables.
+/.agents/本地/
+/project/src/tools/local/
+/DATA/processed_data/**/源码快照/**/pi_*
+/DATA/processed_data/**/源码快照/**/external_agent_smoke_*
+
+# Full native rasters and step/prediction payloads stay at their local paths.
+# Reports, frozen tasks, summaries, seals and hashes remain versioned.
+/DATA/processed_data/**/*.tif
+/DATA/processed_data/**/*.tiff
+/DATA/processed_data/**/*.jsonl
+!/DATA/processed_data/Masa/episodes/episodes_*.jsonl
+!/DATA/processed_data/Masa/任务清单_v2/episodes_*.jsonl
+!/DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v1/原val任务清单.jsonl
+!/DATA/processed_data/Masa/评测结果/S2稳定验证_v1/固定任务.jsonl
+/DATA/processed_data/**/工程数据/previews/
+
+# Frame sequences are local rendering inputs; retain case HTML and final posters.
+/视频/成功案例可视化/**/frame_*.png
+/视频/成功案例可视化/**/start_overview.png
+/视频/实际用途示意/frame_*.png
+
 # Local tool caches and derived image artifacts (same class as patches/ - regenerated locally).
 .mimosa/
-/DATA/processed_data/**/views/
-/DATA/processed_data/**/方向视图/
-/DATA/processed_data/**/targets/
+/DATA/processed_data/**/views/**/*.jpg
+/DATA/processed_data/**/views/**/*.jpeg
+/DATA/processed_data/**/views/**/*.png
+/DATA/processed_data/**/方向视图/**/*.jpg
+/DATA/processed_data/**/方向视图/**/*.jpeg
+/DATA/processed_data/**/方向视图/**/*.png
+/DATA/processed_data/**/targets/**/*.jpg
+/DATA/processed_data/**/targets/**/*.jpeg
+/DATA/processed_data/**/targets/**/*.png
 
 # Native georeferenced mosaics and large frozen traces stay local.
 # Keep reports, manifests, source snapshots, and audit results versioned.

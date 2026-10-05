@@ -1,0 +1,25 @@
+{
+  "protocol": "massgis-grid15-halfm-engineering-v1",
+  "grid_size": 15,
+  "budget": 20,
+  "cell_size_m": 300,
+  "native_cell_pixels": 600,
+  "epsg": 26986,
+  "pixel_size_m": 0.5,
+  "mosaic_pixels": 9000,
+  "patch_format": "png",
+  "engineering_only": true,
+  "regions": [
+    {
+      "split": "dev",
+      "area": "img_6000",
+      "source_tile": "MassGIS2005/known_geo_engineering_00",
+      "bounds_m": [
+        233000.0,
+        894000.0,
+        237500.0,
+        898500.0
+      ]
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+{
+  "selected_for_engineering_investigation": "MassGIS 2005 original-lossy JP2; not source identity proven equal to Mnih",
+  "primary_sources": [
+    {
+      "url": "https://www.mass.gov/info-details/massgis-data-2005-aerial-imagery",
+      "saved": "元数据/mass2005_page.bin",
+      "supports": [
+        "April 2005; Sanborn/Vexcel Ultracam",
+        "statewide true-color RGBN; 8-bit",
+        "native 0.5m; 4000m square; State Plane NAD83 meters",
+        "original-lossy JP2 16:1; original GeoTIFFs are not current free download product",
+        "boundary/offshore black nodata possible"
+      ]
+    },
+    {
+      "url": "https://www.mass.gov/info-details/guide-to-adding-data-from-massgiss-geoserver-to-gis-software",
+      "supports": [
+        "official gis-prod.digital.mass.gov GeoServer entry; discovery via web tool"
+      ]
+    },
+    {
+      "url": "https://www.mass.gov/info-details/about-massgis",
+      "saved": "元数据/massgis_about.bin",
+      "supports": [
+        "public-record data usable; exceptions for licensed internal datasets",
+        "required source credit"
+      ]
+    },
+    {
+      "url": "https://gis-prod.digital.mass.gov/geoserver/wfs?service=WFS&version=2.0.0&request=GetFeature&typeNames=massgis:GISDATA.DOWNLOADLINKS_2005&srsName=EPSG:26986&outputFormat=application/json&count=10000",
+      "saved": "元数据/index2005.bin",
+      "supports": [
+        "1540 complete original JP2 URLs and EPSG26986 polygons; no pixels"
+      ]
+    }
+  ],
+  "old_dataset_relationship": {
+    "region_same_state": true,
+    "old_pixel_m": 1,
+    "new_pixel_m": 0.5,
+    "source_capture_year_identity_with_old": "unknown",
+    "sensor_identity_with_old": "unknown",
+    "pixel_identity_with_old": "unverified",
+    "old_source_crop_dimensions": 1500,
+    "new_source_native_dimensions": 8000,
+    "new_15_window_native_dimensions": 9000
+  },
+  "native_representative_checks": 3,
+  "full_images": 0,
+  "web_discovery_traffic_not_in_program_byte_ledger": true
+}

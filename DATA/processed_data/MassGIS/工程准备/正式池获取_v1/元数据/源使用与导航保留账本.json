@@ -1,0 +1,1901 @@
+{
+  "status": "quality_engineering_only_navigation_unused",
+  "epsg": 26986,
+  "original_product": "MassGIS2005 original-lossy 0.5m RGBN",
+  "navigation_episodes": 0,
+  "training_steps": 0,
+  "policy_calls": 0,
+  "encoder_forwards": 0,
+  "config_selection_from_navigation_results": false,
+  "reserved_first10": [
+    "mass2005_45000_878000",
+    "mass2005_57000_882000",
+    "mass2005_57000_902000",
+    "mass2005_61000_910000",
+    "mass2005_65000_874000",
+    "mass2005_65000_882000",
+    "mass2005_65000_902000",
+    "mass2005_65000_918000",
+    "mass2005_65000_926000",
+    "mass2005_69000_866000"
+  ],
+  "reserve_extra": [
+    "mass2005_69000_890000",
+    "mass2005_69000_910000",
+    "mass2005_69000_934000"
+  ],
+  "quality_rejected": [
+    "mass2005_33000_866000",
+    "mass2005_33000_874000",
+    "mass2005_37000_882000",
+    "mass2005_37000_890000",
+    "mass2005_41000_898000",
+    "mass2005_45000_914000",
+    "mass2005_49000_922000"
+  ],
+  "regions": [
+    {
+      "id": "mass2005_33000_866000",
+      "bounds_m": [
+        33000.0,
+        866000.0,
+        37500.0,
+        870500.0
+      ],
+      "parent_bounds_m": [
+        [
+          33000.0,
+          866000.0,
+          37000.0,
+          870000.0
+        ],
+        [
+          37000.0,
+          866000.0,
+          41000.0,
+          870000.0
+        ],
+        [
+          33000.0,
+          870000.0,
+          37000.0,
+          874000.0
+        ],
+        [
+          37000.0,
+          870000.0,
+          41000.0,
+          874000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_33000_874000",
+      "bounds_m": [
+        33000.0,
+        874000.0,
+        37500.0,
+        878500.0
+      ],
+      "parent_bounds_m": [
+        [
+          33000.0,
+          874000.0,
+          37000.0,
+          878000.0
+        ],
+        [
+          37000.0,
+          874000.0,
+          41000.0,
+          878000.0
+        ],
+        [
+          33000.0,
+          878000.0,
+          37000.0,
+          882000.0
+        ],
+        [
+          37000.0,
+          878000.0,
+          41000.0,
+          882000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_37000_882000",
+      "bounds_m": [
+        37000.0,
+        882000.0,
+        41500.0,
+        886500.0
+      ],
+      "parent_bounds_m": [
+        [
+          37000.0,
+          882000.0,
+          41000.0,
+          886000.0
+        ],
+        [
+          41000.0,
+          882000.0,
+          45000.0,
+          886000.0
+        ],
+        [
+          37000.0,
+          886000.0,
+          41000.0,
+          890000.0
+        ],
+        [
+          41000.0,
+          886000.0,
+          45000.0,
+          890000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_37000_890000",
+      "bounds_m": [
+        37000.0,
+        890000.0,
+        41500.0,
+        894500.0
+      ],
+      "parent_bounds_m": [
+        [
+          37000.0,
+          890000.0,
+          41000.0,
+          894000.0
+        ],
+        [
+          41000.0,
+          890000.0,
+          45000.0,
+          894000.0
+        ],
+        [
+          37000.0,
+          894000.0,
+          41000.0,
+          898000.0
+        ],
+        [
+          41000.0,
+          894000.0,
+          45000.0,
+          898000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_41000_898000",
+      "bounds_m": [
+        41000.0,
+        898000.0,
+        45500.0,
+        902500.0
+      ],
+      "parent_bounds_m": [
+        [
+          41000.0,
+          898000.0,
+          45000.0,
+          902000.0
+        ],
+        [
+          45000.0,
+          898000.0,
+          49000.0,
+          902000.0
+        ],
+        [
+          41000.0,
+          902000.0,
+          45000.0,
+          906000.0
+        ],
+        [
+          45000.0,
+          902000.0,
+          49000.0,
+          906000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_45000_878000",
+      "bounds_m": [
+        45000.0,
+        878000.0,
+        49500.0,
+        882500.0
+      ],
+      "parent_bounds_m": [
+        [
+          45000.0,
+          878000.0,
+          49000.0,
+          882000.0
+        ],
+        [
+          49000.0,
+          878000.0,
+          53000.0,
+          882000.0
+        ],
+        [
+          45000.0,
+          882000.0,
+          49000.0,
+          886000.0
+        ],
+        [
+          49000.0,
+          882000.0,
+          53000.0,
+          886000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_45000_914000",
+      "bounds_m": [
+        45000.0,
+        914000.0,
+        49500.0,
+        918500.0
+      ],
+      "parent_bounds_m": [
+        [
+          45000.0,
+          914000.0,
+          49000.0,
+          918000.0
+        ],
+        [
+          49000.0,
+          914000.0,
+          53000.0,
+          918000.0
+        ],
+        [
+          45000.0,
+          918000.0,
+          49000.0,
+          922000.0
+        ],
+        [
+          49000.0,
+          918000.0,
+          53000.0,
+          922000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_49000_922000",
+      "bounds_m": [
+        49000.0,
+        922000.0,
+        53500.0,
+        926500.0
+      ],
+      "parent_bounds_m": [
+        [
+          49000.0,
+          922000.0,
+          53000.0,
+          926000.0
+        ],
+        [
+          53000.0,
+          922000.0,
+          57000.0,
+          926000.0
+        ],
+        [
+          49000.0,
+          926000.0,
+          53000.0,
+          930000.0
+        ],
+        [
+          53000.0,
+          926000.0,
+          57000.0,
+          930000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_57000_882000",
+      "bounds_m": [
+        57000.0,
+        882000.0,
+        61500.0,
+        886500.0
+      ],
+      "parent_bounds_m": [
+        [
+          57000.0,
+          882000.0,
+          61000.0,
+          886000.0
+        ],
+        [
+          61000.0,
+          882000.0,
+          65000.0,
+          886000.0
+        ],
+        [
+          57000.0,
+          886000.0,
+          61000.0,
+          890000.0
+        ],
+        [
+          61000.0,
+          886000.0,
+          65000.0,
+          890000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_57000_902000",
+      "bounds_m": [
+        57000.0,
+        902000.0,
+        61500.0,
+        906500.0
+      ],
+      "parent_bounds_m": [
+        [
+          57000.0,
+          902000.0,
+          61000.0,
+          906000.0
+        ],
+        [
+          61000.0,
+          902000.0,
+          65000.0,
+          906000.0
+        ],
+        [
+          57000.0,
+          906000.0,
+          61000.0,
+          910000.0
+        ],
+        [
+          61000.0,
+          906000.0,
+          65000.0,
+          910000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_61000_910000",
+      "bounds_m": [
+        61000.0,
+        910000.0,
+        65500.0,
+        914500.0
+      ],
+      "parent_bounds_m": [
+        [
+          61000.0,
+          910000.0,
+          65000.0,
+          914000.0
+        ],
+        [
+          65000.0,
+          910000.0,
+          69000.0,
+          914000.0
+        ],
+        [
+          61000.0,
+          914000.0,
+          65000.0,
+          918000.0
+        ],
+        [
+          65000.0,
+          914000.0,
+          69000.0,
+          918000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_65000_874000",
+      "bounds_m": [
+        65000.0,
+        874000.0,
+        69500.0,
+        878500.0
+      ],
+      "parent_bounds_m": [
+        [
+          65000.0,
+          874000.0,
+          69000.0,
+          878000.0
+        ],
+        [
+          69000.0,
+          874000.0,
+          73000.0,
+          878000.0
+        ],
+        [
+          65000.0,
+          878000.0,
+          69000.0,
+          882000.0
+        ],
+        [
+          69000.0,
+          878000.0,
+          73000.0,
+          882000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_65000_882000",
+      "bounds_m": [
+        65000.0,
+        882000.0,
+        69500.0,
+        886500.0
+      ],
+      "parent_bounds_m": [
+        [
+          65000.0,
+          882000.0,
+          69000.0,
+          886000.0
+        ],
+        [
+          69000.0,
+          882000.0,
+          73000.0,
+          886000.0
+        ],
+        [
+          65000.0,
+          886000.0,
+          69000.0,
+          890000.0
+        ],
+        [
+          69000.0,
+          886000.0,
+          73000.0,
+          890000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_65000_902000",
+      "bounds_m": [
+        65000.0,
+        902000.0,
+        69500.0,
+        906500.0
+      ],
+      "parent_bounds_m": [
+        [
+          65000.0,
+          902000.0,
+          69000.0,
+          906000.0
+        ],
+        [
+          69000.0,
+          902000.0,
+          73000.0,
+          906000.0
+        ],
+        [
+          65000.0,
+          906000.0,
+          69000.0,
+          910000.0
+        ],
+        [
+          69000.0,
+          906000.0,
+          73000.0,
+          910000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_65000_918000",
+      "bounds_m": [
+        65000.0,
+        918000.0,
+        69500.0,
+        922500.0
+      ],
+      "parent_bounds_m": [
+        [
+          65000.0,
+          918000.0,
+          69000.0,
+          922000.0
+        ],
+        [
+          69000.0,
+          918000.0,
+          73000.0,
+          922000.0
+        ],
+        [
+          65000.0,
+          922000.0,
+          69000.0,
+          926000.0
+        ],
+        [
+          69000.0,
+          922000.0,
+          73000.0,
+          926000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_65000_926000",
+      "bounds_m": [
+        65000.0,
+        926000.0,
+        69500.0,
+        930500.0
+      ],
+      "parent_bounds_m": [
+        [
+          65000.0,
+          926000.0,
+          69000.0,
+          930000.0
+        ],
+        [
+          69000.0,
+          926000.0,
+          73000.0,
+          930000.0
+        ],
+        [
+          65000.0,
+          930000.0,
+          69000.0,
+          934000.0
+        ],
+        [
+          69000.0,
+          930000.0,
+          73000.0,
+          934000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_69000_866000",
+      "bounds_m": [
+        69000.0,
+        866000.0,
+        73500.0,
+        870500.0
+      ],
+      "parent_bounds_m": [
+        [
+          69000.0,
+          866000.0,
+          73000.0,
+          870000.0
+        ],
+        [
+          73000.0,
+          866000.0,
+          77000.0,
+          870000.0
+        ],
+        [
+          69000.0,
+          870000.0,
+          73000.0,
+          874000.0
+        ],
+        [
+          73000.0,
+          870000.0,
+          77000.0,
+          874000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_69000_890000",
+      "bounds_m": [
+        69000.0,
+        890000.0,
+        73500.0,
+        894500.0
+      ],
+      "parent_bounds_m": [
+        [
+          69000.0,
+          890000.0,
+          73000.0,
+          894000.0
+        ],
+        [
+          73000.0,
+          890000.0,
+          77000.0,
+          894000.0
+        ],
+        [
+          69000.0,
+          894000.0,
+          73000.0,
+          898000.0
+        ],
+        [
+          73000.0,
+          894000.0,
+          77000.0,
+          898000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_69000_910000",
+      "bounds_m": [
+        69000.0,
+        910000.0,
+        73500.0,
+        914500.0
+      ],
+      "parent_bounds_m": [
+        [
+          69000.0,
+          910000.0,
+          73000.0,
+          914000.0
+        ],
+        [
+          73000.0,
+          910000.0,
+          77000.0,
+          914000.0
+        ],
+        [
+          69000.0,
+          914000.0,
+          73000.0,
+          918000.0
+        ],
+        [
+          73000.0,
+          914000.0,
+          77000.0,
+          918000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    },
+    {
+      "id": "mass2005_69000_934000",
+      "bounds_m": [
+        69000.0,
+        934000.0,
+        73500.0,
+        938500.0
+      ],
+      "parent_bounds_m": [
+        [
+          69000.0,
+          934000.0,
+          73000.0,
+          938000.0
+        ],
+        [
+          73000.0,
+          934000.0,
+          77000.0,
+          938000.0
+        ],
+        [
+          69000.0,
+          938000.0,
+          73000.0,
+          942000.0
+        ],
+        [
+          73000.0,
+          938000.0,
+          77000.0,
+          942000.0
+        ]
+      ],
+      "navigation_used": false,
+      "training_used": false
+    }
+  ],
+  "sources": [
+    {
+      "sheet_id": "37866",
+      "bounds_m": [
+        33000.0,
+        866000.0,
+        37000.0,
+        870000.0
+      ],
+      "raw_sha256": "27d7151405c04d4e12748ef6748e6726787edc4ea142dcfc81e5ceb9f15b6cc4",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": false
+    },
+    {
+      "sheet_id": "41866",
+      "bounds_m": [
+        37000.0,
+        866000.0,
+        41000.0,
+        870000.0
+      ],
+      "raw_sha256": "cad08d1150275a5d3cb3f4ce83971c3942e7b0109ef0a06ba872b4c219095dc0",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": false
+    },
+    {
+      "sheet_id": "37870",
+      "bounds_m": [
+        33000.0,
+        870000.0,
+        37000.0,
+        874000.0
+      ],
+      "raw_sha256": "abfba59152cb8f6cde13ea8c5456761d5f947dfadf72146eeaec8832b4de3553",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": false
+    },
+    {
+      "sheet_id": "41870",
+      "bounds_m": [
+        37000.0,
+        870000.0,
+        41000.0,
+        874000.0
+      ],
+      "raw_sha256": "007e771b74171713b0fe23382acbcfa7ef9c501ba521b2978d6bc90d15ad1cbd",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "37874",
+      "bounds_m": [
+        33000.0,
+        874000.0,
+        37000.0,
+        878000.0
+      ],
+      "raw_sha256": "3d674c6515b1019018217f7d2b57ff7238cef4847d38dab3eeb0920e55d08f55",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": false
+    },
+    {
+      "sheet_id": "41874",
+      "bounds_m": [
+        37000.0,
+        874000.0,
+        41000.0,
+        878000.0
+      ],
+      "raw_sha256": "c93108002b55874ce3491af870f51b98d0cbeab3eec60493907fc16f39f26206",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "37878",
+      "bounds_m": [
+        33000.0,
+        878000.0,
+        37000.0,
+        882000.0
+      ],
+      "raw_sha256": "46460a99f87f12a142663040ca974d86267111edb772c7bb8e26c5be2ac4ab00",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": false
+    },
+    {
+      "sheet_id": "41878",
+      "bounds_m": [
+        37000.0,
+        878000.0,
+        41000.0,
+        882000.0
+      ],
+      "raw_sha256": "fc1024b3f1351fff83ee9cee7c76ffadabe4cdeaec589547fd770abc132c6b34",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "41882",
+      "bounds_m": [
+        37000.0,
+        882000.0,
+        41000.0,
+        886000.0
+      ],
+      "raw_sha256": "6000a0e934ae85e1347dc6eccd9d5b7060ba223bc60fab941c65ecb78d7ad37a",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "45882",
+      "bounds_m": [
+        41000.0,
+        882000.0,
+        45000.0,
+        886000.0
+      ],
+      "raw_sha256": "9cd2b6fc344ad428892c81e2250eb019264bd1b131acbef8739f9056e7a07350",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "41886",
+      "bounds_m": [
+        37000.0,
+        886000.0,
+        41000.0,
+        890000.0
+      ],
+      "raw_sha256": "253f82cb6a1f41d9f2e8127ab30413985bc054c319ab88eca7f1e2db07f2ef30",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": false
+    },
+    {
+      "sheet_id": "45886",
+      "bounds_m": [
+        41000.0,
+        886000.0,
+        45000.0,
+        890000.0
+      ],
+      "raw_sha256": "e9b10c3f4486b2481064fabc1d4066ae24086fff76a4e781eef43c52e82b2828",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "41890",
+      "bounds_m": [
+        37000.0,
+        890000.0,
+        41000.0,
+        894000.0
+      ],
+      "raw_sha256": "452a1e201468893782cd0f07964196f6a1da4c31414802b92b75ba03bff2eae7",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": false
+    },
+    {
+      "sheet_id": "45890",
+      "bounds_m": [
+        41000.0,
+        890000.0,
+        45000.0,
+        894000.0
+      ],
+      "raw_sha256": "616c22f10439c6307b677d454603c9092936f561ee129881ca8ffc0eb4106aa5",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "41894",
+      "bounds_m": [
+        37000.0,
+        894000.0,
+        41000.0,
+        898000.0
+      ],
+      "raw_sha256": "b9ef84eaa15c9ad8f1ba58e5b78bbad573a416d94e59f9a4d609b9bf9ecc48b5",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": false
+    },
+    {
+      "sheet_id": "45894",
+      "bounds_m": [
+        41000.0,
+        894000.0,
+        45000.0,
+        898000.0
+      ],
+      "raw_sha256": "6b0b96c4b38d2965d82885383e19f26e8eabf6194c86176aa4ffc9994ce778d7",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "45898",
+      "bounds_m": [
+        41000.0,
+        898000.0,
+        45000.0,
+        902000.0
+      ],
+      "raw_sha256": "2618522e44f1b7f1968cdfaa94234fd474683591faa384d95a18da4ecac4da4c",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": false
+    },
+    {
+      "sheet_id": "49898",
+      "bounds_m": [
+        45000.0,
+        898000.0,
+        49000.0,
+        902000.0
+      ],
+      "raw_sha256": "2cbfefb7e89cd208fb69253ced7386293d6a64cd7e3761b4e8fb95f0c20ddcf7",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "45902",
+      "bounds_m": [
+        41000.0,
+        902000.0,
+        45000.0,
+        906000.0
+      ],
+      "raw_sha256": "f213d444ec6ee7e2e4792acebd3890ea860ef44bf2b474723ad91d9f6ed2af3c",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": false
+    },
+    {
+      "sheet_id": "49902",
+      "bounds_m": [
+        45000.0,
+        902000.0,
+        49000.0,
+        906000.0
+      ],
+      "raw_sha256": "88a6f2ff5ab1331662295f4f0009f7311346b779fd0a3bcfc86333da11b96f08",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "49878",
+      "bounds_m": [
+        45000.0,
+        878000.0,
+        49000.0,
+        882000.0
+      ],
+      "raw_sha256": "7279279af6d790eba6be7e9f4e402ee269d88aacef03c790e75ea6873a5848e7",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "53878",
+      "bounds_m": [
+        49000.0,
+        878000.0,
+        53000.0,
+        882000.0
+      ],
+      "raw_sha256": "12f4563066dc3bea58fe7e4da25e0605d618c5249e893a6828b73c1e12e3a668",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "49882",
+      "bounds_m": [
+        45000.0,
+        882000.0,
+        49000.0,
+        886000.0
+      ],
+      "raw_sha256": "c86997657d1c5645d073a4dc4a67be877f827b4494c5955c6f689921296a9cc7",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "53882",
+      "bounds_m": [
+        49000.0,
+        882000.0,
+        53000.0,
+        886000.0
+      ],
+      "raw_sha256": "9463df22290b35bc0826af20abe47eb5c1a190a85bc1f4c1a3c6a5b750be0dbc",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "49914",
+      "bounds_m": [
+        45000.0,
+        914000.0,
+        49000.0,
+        918000.0
+      ],
+      "raw_sha256": "55413b1527052f6a08badd00452795f30f904a1e8d4a2db96d6098004f9edead",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": false
+    },
+    {
+      "sheet_id": "53914",
+      "bounds_m": [
+        49000.0,
+        914000.0,
+        53000.0,
+        918000.0
+      ],
+      "raw_sha256": "d7ccfa165e8faf74b7de99ad273eb4f3a22e30f2de6c3403f900700ba9ca5e04",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "49918",
+      "bounds_m": [
+        45000.0,
+        918000.0,
+        49000.0,
+        922000.0
+      ],
+      "raw_sha256": "faaa7c220665ed9923696fe9b12fdc3f8b172c1da647f3f3f0bf73a19f885ee4",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": false
+    },
+    {
+      "sheet_id": "53918",
+      "bounds_m": [
+        49000.0,
+        918000.0,
+        53000.0,
+        922000.0
+      ],
+      "raw_sha256": "5450d0218b604a5ac5cc08567da18e717b6191a328737edf50b27ff9e44c6d62",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "53922",
+      "bounds_m": [
+        49000.0,
+        922000.0,
+        53000.0,
+        926000.0
+      ],
+      "raw_sha256": "bd89aaec4e226ef61a9e2ab06ac00976f898aacf8b84bfd958c4300f934e2d3b",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "57922",
+      "bounds_m": [
+        53000.0,
+        922000.0,
+        57000.0,
+        926000.0
+      ],
+      "raw_sha256": "eadf8dee217b247ceb8649baafbbad83d7ddf4b457f27139f7f2c246233c0370",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "53926",
+      "bounds_m": [
+        49000.0,
+        926000.0,
+        53000.0,
+        930000.0
+      ],
+      "raw_sha256": "7fdb5d038f95359c85f641ca62fbcca715b315837d6efe129c46bf895610b2bd",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": false
+    },
+    {
+      "sheet_id": "57926",
+      "bounds_m": [
+        53000.0,
+        926000.0,
+        57000.0,
+        930000.0
+      ],
+      "raw_sha256": "6f3dcc11b3ddacd283add2d9766e4bdef105473a3471f8664b224d52c2c786bb",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "61882",
+      "bounds_m": [
+        57000.0,
+        882000.0,
+        61000.0,
+        886000.0
+      ],
+      "raw_sha256": "4afa8d382335658c7c16a73c35f82d1fbd3ac4d47dd00538742219d43ad800c4",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "65882",
+      "bounds_m": [
+        61000.0,
+        882000.0,
+        65000.0,
+        886000.0
+      ],
+      "raw_sha256": "5ac5a2fd98a5982ee79a8b0aff774c7518e76e248ae8d297b3175f94347ddfcb",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "61886",
+      "bounds_m": [
+        57000.0,
+        886000.0,
+        61000.0,
+        890000.0
+      ],
+      "raw_sha256": "4d0d0ffb1238d360b8621e667ed12bf5ffc43a56c8b3cddb6399efe6111bf673",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "65886",
+      "bounds_m": [
+        61000.0,
+        886000.0,
+        65000.0,
+        890000.0
+      ],
+      "raw_sha256": "cab894a87f41d6cdeaa535dff1d28a3ed3e5a672fe7365442d5b3e7ecb130789",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "61902",
+      "bounds_m": [
+        57000.0,
+        902000.0,
+        61000.0,
+        906000.0
+      ],
+      "raw_sha256": "ca1cc7d772609e6f0c567ad6b5e1e2aec685677257e1ca20ce593326af13f7f3",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "65902",
+      "bounds_m": [
+        61000.0,
+        902000.0,
+        65000.0,
+        906000.0
+      ],
+      "raw_sha256": "09066ebf0a96b80cf73015fe8bbf6f4d6a0a4f37cbf1ca1fbd995f15e9aed105",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "61906",
+      "bounds_m": [
+        57000.0,
+        906000.0,
+        61000.0,
+        910000.0
+      ],
+      "raw_sha256": "065d8a697c4e826b5b6ca54d900d06a7678721bfc68e3198fbebca98c7d7c20d",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "65906",
+      "bounds_m": [
+        61000.0,
+        906000.0,
+        65000.0,
+        910000.0
+      ],
+      "raw_sha256": "6cd10ea8170e1ab823ff39783f50a729a147a92407a42ae15c1ab38693402d0a",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "65910",
+      "bounds_m": [
+        61000.0,
+        910000.0,
+        65000.0,
+        914000.0
+      ],
+      "raw_sha256": "92ca885629f4af37d1e2d7608bb4c55ee8d1c795a9e1f99281c95a94e8c0d237",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "69910",
+      "bounds_m": [
+        65000.0,
+        910000.0,
+        69000.0,
+        914000.0
+      ],
+      "raw_sha256": "84cb7b99da82f21a60055e84ab94579a1489b001ee9cce782082cb9cc6fc2a53",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "65914",
+      "bounds_m": [
+        61000.0,
+        914000.0,
+        65000.0,
+        918000.0
+      ],
+      "raw_sha256": "78d365672ced7a87a024af498593cdb2f0f3f112fd8ca3f6898b621ee0d2569a",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "69914",
+      "bounds_m": [
+        65000.0,
+        914000.0,
+        69000.0,
+        918000.0
+      ],
+      "raw_sha256": "281858e1a6e55211739d7dbdd73f68ce03cf22a14fa47596689796828ee11759",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "69874",
+      "bounds_m": [
+        65000.0,
+        874000.0,
+        69000.0,
+        878000.0
+      ],
+      "raw_sha256": "e5cdd02c637264e5cbd752d8f8a6024f7cc2523b9f69f47ffe0b9f3f01b83ba1",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "73874",
+      "bounds_m": [
+        69000.0,
+        874000.0,
+        73000.0,
+        878000.0
+      ],
+      "raw_sha256": "b5357e2cb27ed71427d81ec796665ca7c3515edb600de18daa2330ea5b4bca91",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "69878",
+      "bounds_m": [
+        65000.0,
+        878000.0,
+        69000.0,
+        882000.0
+      ],
+      "raw_sha256": "e032e00e4497f24253400499d36699f52392187b3cab63ca42e0c828f49e6c2f",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "73878",
+      "bounds_m": [
+        69000.0,
+        878000.0,
+        73000.0,
+        882000.0
+      ],
+      "raw_sha256": "34c252749f2f2ac30d8508829fd14dfc988ca2014142859c8bc9859f24f89011",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "69882",
+      "bounds_m": [
+        65000.0,
+        882000.0,
+        69000.0,
+        886000.0
+      ],
+      "raw_sha256": "f4cef98b93e4d3a4f513570849afbfe39c3a6c9ede9a5243b774e7e9ce8c795c",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "73882",
+      "bounds_m": [
+        69000.0,
+        882000.0,
+        73000.0,
+        886000.0
+      ],
+      "raw_sha256": "b520e885c375eb7b566dd4eb493106aacdad6b7192b1175f135c634acd08358a",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "69886",
+      "bounds_m": [
+        65000.0,
+        886000.0,
+        69000.0,
+        890000.0
+      ],
+      "raw_sha256": "c3869bd8289333eb76d6923eb0061f7101a38aacd45b938d6a6a3acd42fd94de",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "73886",
+      "bounds_m": [
+        69000.0,
+        886000.0,
+        73000.0,
+        890000.0
+      ],
+      "raw_sha256": "b55b0c3d795cba1854e752546a6f5587f6ef0f23114edca80e4a31c1803fefc7",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "69902",
+      "bounds_m": [
+        65000.0,
+        902000.0,
+        69000.0,
+        906000.0
+      ],
+      "raw_sha256": "b662c16bf58261e05fc4ded4d4759f6c158498e18d00ee65fd1a5facb06908fa",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "73902",
+      "bounds_m": [
+        69000.0,
+        902000.0,
+        73000.0,
+        906000.0
+      ],
+      "raw_sha256": "c1ac7aea327cc073ac60cd286f276d0a55dce5f90a11ac57a7ee60e23626eac8",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "69906",
+      "bounds_m": [
+        65000.0,
+        906000.0,
+        69000.0,
+        910000.0
+      ],
+      "raw_sha256": "20d1cce8233e0e01c2ae0329499a61b02295ffce0fd838f64dd2b69b53bde577",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "73906",
+      "bounds_m": [
+        69000.0,
+        906000.0,
+        73000.0,
+        910000.0
+      ],
+      "raw_sha256": "e0534637daa7a8e2b211aa4d854f6f01099041b837de123e4b6eea19d9403803",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "69918",
+      "bounds_m": [
+        65000.0,
+        918000.0,
+        69000.0,
+        922000.0
+      ],
+      "raw_sha256": "41f812cde8d29b85862e805a8b265d2eecad1be74fe1ac475196ea605d652c0d",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "73918",
+      "bounds_m": [
+        69000.0,
+        918000.0,
+        73000.0,
+        922000.0
+      ],
+      "raw_sha256": "9afd3ba1d96c621e616eac4cd1a4b54fd8e5f6bb1de90f8ab9893159c449d317",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "69922",
+      "bounds_m": [
+        65000.0,
+        922000.0,
+        69000.0,
+        926000.0
+      ],
+      "raw_sha256": "43af66f03722afa9f69090ab9265978a129bc94ab6af7b89da5a9083aefc09f5",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "73922",
+      "bounds_m": [
+        69000.0,
+        922000.0,
+        73000.0,
+        926000.0
+      ],
+      "raw_sha256": "98664785726214a4307792a31d53c2fa9a2c8fbd474c4d86401e3e931ff1dddc",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "69926",
+      "bounds_m": [
+        65000.0,
+        926000.0,
+        69000.0,
+        930000.0
+      ],
+      "raw_sha256": "8139dbf8caf745bd80fea8efa0a18d1d6ca7267ecc43fc452b55369990bdb6fc",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "73926",
+      "bounds_m": [
+        69000.0,
+        926000.0,
+        73000.0,
+        930000.0
+      ],
+      "raw_sha256": "ed2b2a6a4612ecc6249adba086a8c9e531250e21e24ed2bef2e1faf63f00c149",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "69930",
+      "bounds_m": [
+        65000.0,
+        930000.0,
+        69000.0,
+        934000.0
+      ],
+      "raw_sha256": "a0c6644756e644d3aea8b8983f26f1299b8f4ca574420df413afc5c3d0df1af4",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "73930",
+      "bounds_m": [
+        69000.0,
+        930000.0,
+        73000.0,
+        934000.0
+      ],
+      "raw_sha256": "8ccb0d2a65d7d6b917ab1d69128ea7dc0fca91625af090a27cecc040488725c0",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "73866",
+      "bounds_m": [
+        69000.0,
+        866000.0,
+        73000.0,
+        870000.0
+      ],
+      "raw_sha256": "360257db7539c0d9e58190eb7a41e580861686cbc5cef61d3e65f98c993474a4",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "77866",
+      "bounds_m": [
+        73000.0,
+        866000.0,
+        77000.0,
+        870000.0
+      ],
+      "raw_sha256": "439fa0262efec74653175165c05529f2a8dcf15d22044128c46d96c627f9dc8a",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "73870",
+      "bounds_m": [
+        69000.0,
+        870000.0,
+        73000.0,
+        874000.0
+      ],
+      "raw_sha256": "4eb0fddf31b19cb00923adcaece9790f36b360353e19f0d3fb20e8a3b3d0792e",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "77870",
+      "bounds_m": [
+        73000.0,
+        870000.0,
+        77000.0,
+        874000.0
+      ],
+      "raw_sha256": "4ce542e8bd71cb59ff433b3a2e67fd5a5bbe3feceb5ca7fd8e26b572828ae6c4",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "73890",
+      "bounds_m": [
+        69000.0,
+        890000.0,
+        73000.0,
+        894000.0
+      ],
+      "raw_sha256": "819a2da38220cff68ae995b274eaa49fabd23b3c55bf394dac8421c980592381",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "77890",
+      "bounds_m": [
+        73000.0,
+        890000.0,
+        77000.0,
+        894000.0
+      ],
+      "raw_sha256": "276c00e8ff01249a59b0dc5e82df659feb06e5b99f9f10ecec4cf6b04f027b41",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "73894",
+      "bounds_m": [
+        69000.0,
+        894000.0,
+        73000.0,
+        898000.0
+      ],
+      "raw_sha256": "8fb09b345427adec1de9c5df1fbb0c9098442056b38beb2d411e284d812c000b",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "77894",
+      "bounds_m": [
+        73000.0,
+        894000.0,
+        77000.0,
+        898000.0
+      ],
+      "raw_sha256": "9355de3105625076f41a942349839bab5eb7d8fed06ff62d322f44d44b88a95c",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "73910",
+      "bounds_m": [
+        69000.0,
+        910000.0,
+        73000.0,
+        914000.0
+      ],
+      "raw_sha256": "5e6aab2c967c39d09f5339964979147a3721ae2dbb7a7f21a2d5b48102046712",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "77910",
+      "bounds_m": [
+        73000.0,
+        910000.0,
+        77000.0,
+        914000.0
+      ],
+      "raw_sha256": "4edef730975e66ff6a55f8a9c2003d3daddb4ff65b70336bfbc2c8d433bfcb00",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "73914",
+      "bounds_m": [
+        69000.0,
+        914000.0,
+        73000.0,
+        918000.0
+      ],
+      "raw_sha256": "b4ec0bb2e600aebd1eb211b442f51c86f52156d443a16177b159a3ec40716cd1",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "77914",
+      "bounds_m": [
+        73000.0,
+        914000.0,
+        77000.0,
+        918000.0
+      ],
+      "raw_sha256": "69024376005fa98cdff6e560efd2a75984e29eee67f6bcbc780e165bbe92e08f",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "73934",
+      "bounds_m": [
+        69000.0,
+        934000.0,
+        73000.0,
+        938000.0
+      ],
+      "raw_sha256": "4fb16a2c30226c528051b72640771f98054e6605f26b3491c5c83dc1514aca3d",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "77934",
+      "bounds_m": [
+        73000.0,
+        934000.0,
+        77000.0,
+        938000.0
+      ],
+      "raw_sha256": "8d9832283b33977061a7d871a87dec0514618fda818b0a844fc7e76849bd56f2",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "73938",
+      "bounds_m": [
+        69000.0,
+        938000.0,
+        73000.0,
+        942000.0
+      ],
+      "raw_sha256": "541dfb0cf6c83ea66bfd522952f3369876744fada511ff022ce39fa618db0c24",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    },
+    {
+      "sheet_id": "77938",
+      "bounds_m": [
+        73000.0,
+        938000.0,
+        77000.0,
+        942000.0
+      ],
+      "raw_sha256": "d0f8b2266e12184dc0b0fdd3e72322bdffe415978d99800990297c9f7aade70b",
+      "full_pixels_read_for_quality": true,
+      "navigation_used": false,
+      "training_used": false,
+      "quality_passed": true
+    }
+  ],
+  "note": "Window boundaries isolated >=3km; support boundaries may touch. Future full-source development consumption requires new exclusion; pretraining geography unknown."
+}

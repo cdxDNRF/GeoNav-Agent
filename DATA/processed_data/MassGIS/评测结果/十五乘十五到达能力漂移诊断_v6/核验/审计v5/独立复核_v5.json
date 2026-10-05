@@ -1,0 +1,93 @@
+{
+  "checks": {
+    "all_trajectory_seals": {
+      "主对照": {
+        "actions": 188246,
+        "files": 120,
+        "records": 10500
+      },
+      "规则基线": {
+        "actions": 66879,
+        "files": 40,
+        "records": 3500
+      }
+    },
+    "bounds_mapped_regions": 10,
+    "common_physical_tasks": 750,
+    "direction_counts_by_policy": {
+      "Coverage3Radial": {
+        "10": {
+          "away": 665,
+          "side_or_wall": 0,
+          "toward": 1585
+        },
+        "15": {
+          "away": 805,
+          "side_or_wall": 0,
+          "toward": 1445
+        }
+      },
+      "M0": {
+        "10": {
+          "away": 665,
+          "side_or_wall": 0,
+          "toward": 1585
+        },
+        "15": {
+          "away": 805,
+          "side_or_wall": 0,
+          "toward": 1445
+        }
+      }
+    },
+    "eval2_stage_files": 753,
+    "first_step_pair_records": 4500,
+    "input_context_distribution": {
+      "current_contexts": {
+        "gg10": 75822,
+        "gg15": 112424
+      },
+      "region_context_groups": 20,
+      "training_trace_states": 491520,
+      "unique_training_contexts": 41919
+    },
+    "main_input_hashes_reconstructed": 188246,
+    "model_forward": 0,
+    "navigation": 0,
+    "network": 0,
+    "planned_success_counts": {
+      "g10_Coverage3Radial": {
+        "n": 2250,
+        "success": 1229
+      },
+      "g10_M0": {
+        "n": 2250,
+        "success": 1151
+      },
+      "g15_Coverage3Radial": {
+        "n": 3000,
+        "success": 608
+      },
+      "g15_M0": {
+        "n": 3000,
+        "success": 575
+      }
+    },
+    "route_categories": {
+      "forked": 4173,
+      "identical_route": 327
+    },
+    "shared_cells_per_region": 100,
+    "spares": 0,
+    "training": 0,
+    "whole_region_bootstrap": {
+      "regions": 10,
+      "resamples": 4000,
+      "unit": "whole region"
+    }
+  },
+  "diagnostic_summary_sha256": "fb68cfc8d34e5e5d534f6e30f6e61306fd569c54b17b938c40bddbc3d3e4470f",
+  "main_analysis_binding_sha256": "c30675475b48c0a4d5d0418fa3140b8737d95afdc76b7bb4c6ee7c3297ff5a99",
+  "review_scope": "separate implementation by same developer; not independent-person review",
+  "status": "passed"
+}

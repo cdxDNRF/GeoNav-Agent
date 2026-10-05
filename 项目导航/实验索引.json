@@ -1,1073 +1,1310 @@
 {
-  "date": "2026-10-03",
-  "batches": [
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "PBRS完整导航与局部匹配对照_v1",
-      "category": "本地策略",
-      "status": "完整导航训练，局部匹配观察候选",
-      "scope": "开发140×3；Small Full 65.95%，Spatial Full 68.81%，强探索 72.62%",
-      "path": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1",
-      "reports": [
-        "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/对照报告.md",
-        "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/结果解读与后续方向.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/验收结论.json",
-        "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "tiny_bc_v1",
-      "category": "历史记录",
-      "status": "保留该批原判定",
-      "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
-      "path": "DATA/processed_data/Masa/训练结果/tiny_bc_v1",
-      "reports": [],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "tiny_curiosity_debug",
-      "category": "历史记录",
-      "status": "保留该批原判定",
-      "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
-      "path": "DATA/processed_data/Masa/训练结果/tiny_curiosity_debug",
-      "reports": [],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "tiny_curiosity_gpu_1000_debug",
-      "category": "历史记录",
-      "status": "保留该批原判定",
-      "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
-      "path": "DATA/processed_data/Masa/训练结果/tiny_curiosity_gpu_1000_debug",
-      "reports": [],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "tiny_curiosity_gpu_debug",
-      "category": "历史记录",
-      "status": "保留该批原判定",
-      "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
-      "path": "DATA/processed_data/Masa/训练结果/tiny_curiosity_gpu_debug",
-      "reports": [],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "tiny_curiosity_v1",
-      "category": "历史记录",
-      "status": "保留该批原判定",
-      "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
-      "path": "DATA/processed_data/Masa/训练结果/tiny_curiosity_v1",
-      "reports": [],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "tiny_curiosity_v2",
-      "category": "历史记录",
-      "status": "保留该批原判定",
-      "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
-      "path": "DATA/processed_data/Masa/训练结果/tiny_curiosity_v2",
-      "reports": [],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "tiny_pbrs_v1",
-      "category": "历史记录",
-      "status": "保留该批原判定",
-      "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
-      "path": "DATA/processed_data/Masa/训练结果/tiny_pbrs_v1",
-      "reports": [],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "tiny_pbrs_v2",
-      "category": "历史记录",
-      "status": "保留该批原判定",
-      "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
-      "path": "DATA/processed_data/Masa/训练结果/tiny_pbrs_v2",
-      "reports": [],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "可信邻接目标线索与探索协作_v1",
-      "category": "目标线索",
-      "status": "负结果：可信阈值全部弃权",
-      "scope": "开发140×3；SR 72.62%，未增加成功；五分类邻接头",
-      "path": "DATA/processed_data/Masa/训练结果/可信邻接目标线索与探索协作_v1",
-      "reports": [
-        "DATA/processed_data/Masa/训练结果/可信邻接目标线索与探索协作_v1/对照报告.md",
-        "DATA/processed_data/Masa/训练结果/可信邻接目标线索与探索协作_v1/结果解读与下一项.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/训练结果/可信邻接目标线索与探索协作_v1/验收结论.json",
-        "DATA/processed_data/Masa/训练结果/可信邻接目标线索与探索协作_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "合法动作协作验证_v1",
-      "category": "本地策略",
-      "status": "动作筛选候选通过；视觉 S2 未通过",
-      "scope": "val100×3；PBRS 44.33% → 合法动作筛选 66.00%",
-      "path": "DATA/processed_data/Masa/训练结果/合法动作协作验证_v1",
-      "reports": [
-        "DATA/processed_data/Masa/训练结果/合法动作协作验证_v1/验收报告.md"
-      ],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "好奇心配对验证_v3",
-      "category": "本地策略",
-      "status": "PBRS 与好奇心配对验证",
-      "scope": "val100×3；好奇心未形成稳定提升",
-      "path": "DATA/processed_data/Masa/训练结果/好奇心配对验证_v3",
-      "reports": [
-        "DATA/processed_data/Masa/训练结果/好奇心配对验证_v3/配对验证报告.md"
-      ],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "探索器协议适配同预算对照_v1",
-      "category": "训练记录",
-      "status": "六模型训练及重放完成",
-      "scope": "Continue5/Adapt10各三最终权重；491520新训练动作，6144优化器更新",
-      "path": "DATA/processed_data/Masa/训练结果/探索器协议适配同预算对照_v1",
-      "reports": [],
-      "evidence": [
-        "DATA/processed_data/Masa/训练结果/探索器协议适配同预算对照_v1/独立复核.json",
-        "DATA/processed_data/Masa/训练结果/探索器协议适配同预算对照_v1/最终状态.json",
-        "DATA/processed_data/Masa/训练结果/探索器协议适配同预算对照_v1/README.md"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "旋转负样本视觉头对照_v1",
-      "category": "历史记录",
-      "status": "保留该批原判定",
-      "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
-      "path": "DATA/processed_data/Masa/训练结果/旋转负样本视觉头对照_v1",
-      "reports": [],
-      "evidence": [
-        "DATA/processed_data/Masa/训练结果/旋转负样本视觉头对照_v1/验收结论.json",
-        "DATA/processed_data/Masa/训练结果/旋转负样本视觉头对照_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "本地模型容量与局部匹配对照_v1",
-      "category": "本地能力",
-      "status": "18 模型受控对照；新候选未通过",
-      "scope": "方向监督直接迁移，140 题；不可与 PBRS 完整导航混为一类",
-      "path": "DATA/processed_data/Masa/训练结果/本地模型容量与局部匹配对照_v1",
-      "reports": [
-        "DATA/processed_data/Masa/训练结果/本地模型容量与局部匹配对照_v1/对照报告.md",
-        "DATA/processed_data/Masa/训练结果/本地模型容量与局部匹配对照_v1/结果解读与后续方向.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/训练结果/本地模型容量与局部匹配对照_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "目标图利用验证_v1",
-      "category": "本地诊断",
-      "status": "目标监督与目标干预；候选未通过",
-      "scope": "val100×3；Boundary 66%，TargetPairs 58%，未改善目标利用",
-      "path": "DATA/processed_data/Masa/训练结果/目标图利用验证_v1",
-      "reports": [
-        "DATA/processed_data/Masa/训练结果/目标图利用验证_v1/验收报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/训练结果/目标图利用验证_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "训练源图留出诊断_v1",
-      "category": "本地诊断",
-      "status": "原 train 源图留出诊断",
-      "scope": "109/28 已知开发隔离；方向预测不是导航 SR",
-      "path": "DATA/processed_data/Masa/训练结果/训练源图留出诊断_v1",
-      "reports": [
-        "DATA/processed_data/Masa/训练结果/训练源图留出诊断_v1/诊断报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/训练结果/训练源图留出诊断_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "边缘连续性可信线索对照_v1",
-      "category": "目标线索",
-      "status": "开发候选与完整复核通过；正式 S2 待复验",
-      "scope": "开发140×3；SR 88.57%，SG 0.348，3/3种子提升；当前默认未替换",
-      "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1",
-      "reports": [
-        "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/对照报告.md",
-        "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/结果解读与下一项.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/验收结论.json",
-        "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "邻接与方向解耦对照_v1",
-      "category": "目标线索",
-      "status": "负结果：可信阈值全部弃权",
-      "scope": "开发140×3；SR 72.62%，条件方向信号不足以介入",
-      "path": "DATA/processed_data/Masa/训练结果/邻接与方向解耦对照_v1",
-      "reports": [
-        "DATA/processed_data/Masa/训练结果/邻接与方向解耦对照_v1/对照报告.md",
-        "DATA/processed_data/Masa/训练结果/邻接与方向解耦对照_v1/结果解读与下一项.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/训练结果/邻接与方向解耦对照_v1/验收结论.json",
-        "DATA/processed_data/Masa/训练结果/邻接与方向解耦对照_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "训练结果",
-      "name": "高分旋转负样本视觉头对照_v1",
-      "category": "历史记录",
-      "status": "保留该批原判定",
-      "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
-      "path": "DATA/processed_data/Masa/训练结果/高分旋转负样本视觉头对照_v1",
-      "reports": [],
-      "evidence": [
-        "DATA/processed_data/Masa/训练结果/高分旋转负样本视觉头对照_v1/验收结论.json",
-        "DATA/processed_data/Masa/训练结果/高分旋转负样本视觉头对照_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "DeepSeek接口检查_v1",
-      "category": "云端接口",
-      "status": "接口检查与截断记录",
-      "scope": "合成双图工程探测，不计导航 SR",
-      "path": "DATA/processed_data/Masa/评测结果/DeepSeek接口检查_v1",
-      "reports": [],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "DeepSeek接口检查_v2",
-      "category": "云端接口",
-      "status": "提高输出额度后的接口检查",
-      "scope": "合成双图工程探测，不计导航 SR",
-      "path": "DATA/processed_data/Masa/评测结果/DeepSeek接口检查_v2",
-      "reports": [],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "Gemma与DeepSeek同策略对照_v1",
-      "category": "云端能力",
-      "status": "默认思考截断，按协议停止",
-      "scope": "DeepSeek 3 次空正文；旧结果保留，修复见 v2",
-      "path": "DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v1/对照报告.md"
-      ],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "Gemma与DeepSeek同策略对照_v2",
-      "category": "云端能力",
-      "status": "已完成并复核的服务配置对照",
-      "scope": "val20；Gemma 45%，DeepSeek 非思考 20%，Frontier 50%；DeepSeek 完成 18/20",
-      "path": "DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v2",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v2/官方参数说明.md",
-        "DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v2/对照报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v2/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "Ollama试跑_v1",
-      "category": "云端接口",
-      "status": "首次连接失败",
-      "scope": "未发送图像推理，保留故障证据",
-      "path": "DATA/processed_data/Masa/评测结果/Ollama试跑_v1",
-      "reports": [],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "Ollama试跑_v1重试",
-      "category": "云端接口",
-      "status": "有界重试与最小 VLM 接入",
-      "scope": "接口试跑，不是完整 S2",
-      "path": "DATA/processed_data/Masa/评测结果/Ollama试跑_v1重试",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/Ollama试跑_v1重试/试跑说明.md"
-      ],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "S2稳定验证_v1",
-      "category": "云端验收",
-      "status": "批次已关闭，完整评测未完成",
-      "scope": "G/E 首轮各正常完成 20/100；后续有 not_run，S2 未通过",
-      "path": "DATA/processed_data/Masa/评测结果/S2稳定验证_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/S2稳定验证_v1/S2验证报告.md"
-      ],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "S4十乘十工程试跑_v1",
-      "category": "历史记录",
-      "status": "保留该批原判定",
-      "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
-      "path": "DATA/processed_data/Masa/评测结果/S4十乘十工程试跑_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/S4十乘十工程试跑_v1/试跑结果说明.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/S4十乘十工程试跑_v1/验收结论.json",
-        "DATA/processed_data/Masa/评测结果/S4十乘十工程试跑_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "S4十乘十正式扩展_v1",
-      "category": "正式扩展",
-      "status": "S4密度扩展通过",
-      "scope": "500题×3，20已见源文件，10×10/B20，77.13%/1.201",
-      "path": "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/十乘十扩展报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/验收结论.json",
-        "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "三项验证_v1",
-      "category": "云端策略",
-      "status": "TLS 故障记录",
-      "scope": "VLM 未成功决策，不能将完成文件视作完成评测",
-      "path": "DATA/processed_data/Masa/评测结果/三项验证_v1",
-      "reports": [],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "三项验证_v1连接修复",
-      "category": "云端策略",
-      "status": "连接修复后的同题验证",
-      "scope": "改用系统传输；保留失败批次",
-      "path": "DATA/processed_data/Masa/评测结果/三项验证_v1连接修复",
-      "reports": [],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "云端8790接口检查_v1",
-      "category": "云端接口",
-      "status": "已弃用备选",
-      "scope": "9生成+1列表；用户已决定不继续考虑三个选项",
-      "path": "DATA/processed_data/Masa/评测结果/云端8790接口检查_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/云端8790接口检查_v1/接口检查报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/云端8790接口检查_v1/最终状态.json",
-        "DATA/processed_data/Masa/评测结果/云端8790接口检查_v1/README.md"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "候选可靠性开发验证_v1",
-      "category": "目标校准",
-      "status": "新候选未通过",
-      "scope": "0.90阈值提高精度但损伤召回和干净SR",
-      "path": "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/接受可靠性校准报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/验收结论.json",
-        "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "候选可靠性离线校准_v1",
-      "category": "校准诊断",
-      "status": "离线校准完成",
-      "scope": "接受精度不是导航SR；在线验证另列",
-      "path": "DATA/processed_data/Masa/评测结果/候选可靠性离线校准_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/候选可靠性离线校准_v1/校准报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/候选可靠性离线校准_v1/验收结论.json",
-        "DATA/processed_data/Masa/评测结果/候选可靠性离线校准_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "四组实验_v1",
-      "category": "云端策略",
-      "status": "排序、动作治理与规则对照",
-      "scope": "最终修正报告为 *_v2；固定 val20 试验",
-      "path": "DATA/processed_data/Masa/评测结果/四组实验_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/四组实验_v1/四组对照报告.md",
-        "DATA/processed_data/Masa/评测结果/四组实验_v1/四组对照报告_v2.md"
-      ],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "基础校验_v2",
-      "category": "工程基础",
-      "status": "环境与评测基础记录",
-      "scope": "基础校验；不作为智能策略成绩",
-      "path": "DATA/processed_data/Masa/评测结果/基础校验_v2",
-      "reports": [],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "多Agent同预算小验证_v1",
-      "category": "云端协作",
-      "status": "小验证未通过扩大门槛",
-      "scope": "原触发只覆盖成功题；未产生有效计划修正",
-      "path": "DATA/processed_data/Masa/评测结果/多Agent同预算小验证_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/多Agent同预算小验证_v1/任务要求与论文框架对应说明.md",
-        "DATA/processed_data/Masa/评测结果/多Agent同预算小验证_v1/多Agent小验证报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/多Agent同预算小验证_v1/验收结论.json",
-        "DATA/processed_data/Masa/评测结果/多Agent同预算小验证_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "层级搜索实验_v1",
-      "category": "云端策略",
-      "status": "单因素：层级搜索",
-      "scope": "云端后续对照的 G 策略来源",
-      "path": "DATA/processed_data/Masa/评测结果/层级搜索实验_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/层级搜索实验_v1/层级搜索对照报告.md"
-      ],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "探索器协议适配开发验证_v1",
-      "category": "训练因素",
-      "status": "协议适配升级未通过",
-      "scope": "Continue5 79.73%/0.823、Adapt10 80.00%/1.059；同预算，不增加参数",
-      "path": "DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/探索器协议适配报告.md",
-        "DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/获取线索时机配对补充说明.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/验收结论.json",
-        "DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/独立复核.json",
-        "DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/最终状态.json",
-        "DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/README.md"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "旋转负样本开发验证_v1",
-      "category": "目标鲁棒性",
-      "status": "新候选未通过",
-      "scope": "增加旋转负例未达到SR一致收益门槛",
-      "path": "DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1/旋转负样本对照报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1/验收结论.json",
-        "DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "本地S2固定配置复验_v1",
-      "category": "本地复验",
-      "status": "工程检查通过；目标贡献未通过",
-      "scope": "val100×3；当前默认 Small NoTarget 73.00%，SG 0.800；正式视觉 S2 未通过",
-      "path": "DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1/复验报告.md",
-        "DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1/结果解读与默认方案.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "目标方向候选开发验证_v1",
-      "category": "目标旋转",
-      "status": "开发条件通过后试跑失败",
-      "scope": "已见Masa28；不能把旋转集合不变性当任意旋转鲁棒",
-      "path": "DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1/方向候选验证报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1/验收结论.json",
-        "DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "目标邻域覆盖规划验证_v1",
-      "category": "探索覆盖",
-      "status": "候选未通过",
-      "scope": "76.93%/1.281，未增加净成功",
-      "path": "DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1/目标邻域覆盖规划报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1/验收结论.json",
-        "DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1/独立复核.json",
-        "DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1/最终状态.json",
-        "DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1/README.md"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "空间记忆实验_v1",
-      "category": "云端策略",
-      "status": "单因素：空间记忆",
-      "scope": "固定小验证集；结果不外推到 val100",
-      "path": "DATA/processed_data/Masa/评测结果/空间记忆实验_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/空间记忆实验_v1/空间记忆对照报告.md"
-      ],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "继续训练冻结目标证据复验_v1",
-      "category": "最新复验",
-      "status": "目标证据通过",
-      "scope": "已见20源文件；Full79.73%/SG0.823；新增4500控制，复用1500真实目标",
-      "path": "DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/冻结目标证据复验报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/验收结论.json",
-        "DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/独立复核.json",
-        "DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/最终状态.json",
-        "DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/README.md"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "证据账本简化接口验证_v2",
-      "category": "云端协作",
-      "status": "接口和D通过，G未达扩大门槛",
-      "scope": "同20题，云端三重复；M0 55%、零调用60%、云端三方案均55%",
-      "path": "DATA/processed_data/Masa/评测结果/证据账本简化接口验证_v2",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/证据账本简化接口验证_v2/简化接口与闭环验证报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/证据账本简化接口验证_v2/验收结论.json",
-        "DATA/processed_data/Masa/评测结果/证据账本简化接口验证_v2/独立复核.json",
-        "DATA/processed_data/Masa/评测结果/证据账本简化接口验证_v2/README.md"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "证据账本预算规划验证_v1",
-      "category": "云端接口",
-      "status": "T通过，旧D未通过",
-      "scope": "14请求保留；修复在另批，不把请求成功当导航有效",
-      "path": "DATA/processed_data/Masa/评测结果/证据账本预算规划验证_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/证据账本预算规划验证_v1/分关验证报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/证据账本预算规划验证_v1/验收结论.json",
-        "DATA/processed_data/Masa/评测结果/证据账本预算规划验证_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "账本探索保护规则验证_v1",
-      "category": "探索保护",
-      "status": "候选未通过",
-      "scope": "77.07%/1.199；修复旧损伤，也失去大部分恢复",
-      "path": "DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1/保护规则验证报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1/验收结论.json",
-        "DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1/独立复核.json",
-        "DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1/最终状态.json",
-        "DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1/README.md"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "边缘线索S2正式复验_v1",
-      "category": "正式主线",
-      "status": "S2通过",
-      "scope": "val100×3，4源文件，5×5/B10，SR89.33%/SG0.320",
-      "path": "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/正式复验报告.md",
-        "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/结果解读与S3接续.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/验收结论.json",
-        "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "边缘线索S3独立源图确认_v1",
-      "category": "正式主线",
-      "status": "S3通过",
-      "scope": "test250×3，10源文件，5×5/B10，SR86.80%/SG0.300",
-      "path": "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/独立源图确认报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/验收结论.json",
-        "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "邻域确认实验_v1",
-      "category": "云端策略",
-      "status": "单因素：邻域确认",
-      "scope": "保留负结果；不将所有因素叠加解释",
-      "path": "DATA/processed_data/Masa/评测结果/邻域确认实验_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/邻域确认实验_v1/邻域确认对照报告.md"
-      ],
-      "evidence": []
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "零调用账本完整队列验证_v1",
-      "category": "探索规划",
-      "status": "未达到SR+2点门槛",
-      "scope": "M1 78.40%/1.110，对M0+1.27点；低成本备选",
-      "path": "DATA/processed_data/Masa/评测结果/零调用账本完整队列验证_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/零调用账本完整队列验证_v1/完整队列验证报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/零调用账本完整队列验证_v1/验收结论.json",
-        "DATA/processed_data/Masa/评测结果/零调用账本完整队列验证_v1/独立复核.json",
-        "DATA/processed_data/Masa/评测结果/零调用账本完整队列验证_v1/README.md"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "高分旋转负样本开发验证_v1",
-      "category": "目标鲁棒性",
-      "status": "新候选未通过",
-      "scope": "训练预算一致，未优于均匀负旋转；未消费该批新确认图",
-      "path": "DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1/高分旋转负样本对照报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1/验收结论.json",
-        "DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "SwissView",
-      "kind": "评测结果",
-      "name": "五乘五工程试跑_v1",
-      "category": "历史记录",
-      "status": "保留该批原判定",
-      "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
-      "path": "DATA/processed_data/SwissView/评测结果/五乘五工程试跑_v1",
-      "reports": [
-        "DATA/processed_data/SwissView/评测结果/五乘五工程试跑_v1/迁移验证报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/SwissView/评测结果/五乘五工程试跑_v1/验收结论.json",
-        "DATA/processed_data/SwissView/评测结果/五乘五工程试跑_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "SwissView",
-      "kind": "评测结果",
-      "name": "五乘五正式迁移_v1",
-      "category": "正式迁移",
-      "status": "SwissView迁移通过",
-      "scope": "500题×3，20新源文件，5×5/B10，86.80%/0.381",
-      "path": "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1",
-      "reports": [
-        "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/迁移验证报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/验收结论.json",
-        "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "SwissView",
-      "kind": "评测结果",
-      "name": "目标扰动鲁棒性_v1",
-      "category": "适用边界",
-      "status": "扰动诊断完成",
-      "scope": "揭示边缘连续性对真实目标条件的依赖，不修改默认",
-      "path": "DATA/processed_data/SwissView/评测结果/目标扰动鲁棒性_v1",
-      "reports": [
-        "DATA/processed_data/SwissView/评测结果/目标扰动鲁棒性_v1/鲁棒性与数据范围报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/SwissView/评测结果/目标扰动鲁棒性_v1/验收结论.json",
-        "DATA/processed_data/SwissView/评测结果/目标扰动鲁棒性_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "SwissView",
-      "kind": "评测结果",
-      "name": "目标方向候选试跑确认_v1",
-      "category": "目标旋转",
-      "status": "新候选未通过",
-      "scope": "04…07新源文件试跑；四朝向降低干净接受可靠性",
-      "path": "DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1",
-      "reports": [
-        "DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1/方向候选验证报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1/验收结论.json",
-        "DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "SwissView",
-      "kind": "评测结果",
-      "name": "继续训练独立源图确认_v1",
-      "category": "最新确认",
-      "status": "升级未通过",
-      "scope": "新20SwissView源文件；10×10仅SR+0.60点，1/3正，SG改善；默认保持",
-      "path": "DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1",
-      "reports": [
-        "DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/任务采样说明.md",
-        "DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/独立源图确认报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/验收结论.json",
-        "DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/独立复核.json",
-        "DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/最终状态.json",
-        "DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/README.md"
-      ]
-    },
-    {
-      "dataset": "SwissView",
-      "kind": "评测结果",
-      "name": "继续训练恢复损伤诊断_v1",
-      "category": "离线诊断",
-      "status": "诊断与复核完成",
-      "scope": "6000既有轨迹；无新增导航，分解恢复/损伤与邻接时机",
-      "path": "DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1",
-      "reports": [
-        "DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1/恢复损伤诊断报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1/独立复核.json",
-        "DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1/最终状态.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "回访新格筛选冻结验证_v1",
-      "category": "单因素开发",
-      "status": "开发候选与目标证据通过",
-      "scope": "dev250×3；SR+2.00点、3/3正；原默认保持，尚未独立确认",
-      "path": "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/回访新格筛选验证报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/独立复核.json",
-        "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/最终状态.json",
-        "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/验收结论.json"
-      ]
-    },
-    {
-      "dataset": "SwissView",
-      "kind": "评测结果",
-      "name": "回访新格筛选独立源图确认_v1",
-      "category": "独立源文件确认",
-      "status": "新源升级未通过，原M0保持",
-      "scope": "20新源/500×3/10×10B20；零训练和云端",
-      "path": "DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1",
-      "reports": [
-        "DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1/独立源图确认报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1/验收结论.json",
-        "DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1/独立复核.json",
-        "DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1/最终状态.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "数据准备",
-      "name": "实际区域扩展_v1",
-      "category": "实际面积工程",
-      "status": "数据/协议通过；导航未启动",
-      "scope": "3已知train连续地图/12源/9km²各图；300格/75题；无新SR",
-      "path": "DATA/processed_data/Masa/实际区域扩展_v1",
-      "reports": [
-        "DATA/processed_data/Masa/实际区域扩展_v1/实际区域扩展数据准备报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/实际区域扩展_v1/核验/验收结论.json",
-        "DATA/processed_data/Masa/实际区域扩展_v1/核验/独立复核.json",
-        "DATA/processed_data/Masa/实际区域扩展_v1/核验/最终状态.json"
-      ]
-    },
-    {
-      "dataset": "Masa",
-      "kind": "评测结果",
-      "name": "实际区域M0兼容试跑_v1",
-      "category": "实际面积兼容试跑",
-      "status": "工程通过；目标控制通过；已知训练地区",
-      "scope": "3已知地图/75×3/9km²各图；SR78.22%/SG316.00m；1050全重放",
-      "path": "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1",
-      "reports": [
-        "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/实际区域M0兼容试跑报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/验收结论.json",
-        "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/独立复核.json",
-        "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/最终状态.json"
-      ]
-    },
-    {
-      "dataset": "MasaRoads",
-      "kind": "数据准备",
-      "name": "空间隔离连续区域_v1",
-      "category": "空间隔离数据",
-      "status": "资源上限停止；未通过",
-      "scope": "120源/12合格区域；无导航SR",
-      "path": "DATA/processed_data/MasaRoads/空间隔离连续区域_v1",
-      "reports": [
-        "DATA/processed_data/MasaRoads/空间隔离连续区域_v1/资源上限停止报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/MasaRoads/空间隔离连续区域_v1/核验/验收结论.json",
-        "DATA/processed_data/MasaRoads/空间隔离连续区域_v1/核验/停止状态.json"
-      ]
-    },
-    {
-      "dataset": "MasaRoads",
-      "kind": "数据准备",
-      "name": "空间隔离连续区域_v2",
-      "category": "空间隔离数据",
-      "status": "数据/协议与空间隔离通过；导航未启动",
-      "scope": "14区域/56选定源/1050任务/1680探针；无新SR",
-      "path": "DATA/processed_data/MasaRoads/空间隔离连续区域_v2",
-      "reports": [
-        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/空间隔离连续区域数据准备报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/核验/验收结论.json",
-        "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/核验/独立复核.json"
-      ]
-    },
-    {
-      "dataset": "MasaRoads",
-      "kind": "评测",
-      "name": "冻结M0空间隔离导航确认_v1",
-      "category": "实际区域独立确认",
-      "status": "导航通过；接缝头部通过；组合通过",
-      "scope": "4工程/10确认，9km²每区；14700导航/15120探针；本地M0足迹空间隔离，Sat2Cap预训练地理覆盖未知；原模型与默认保持",
-      "path": "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1",
-      "reports": [
-        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/新空间隔离区域M0导航确认报告_v2.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/验收结论.json",
-        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/独立复核.json",
-        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/独立复核.json",
-        "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/审计修订登记_v3.json"
-      ]
-    },
-    {
-      "dataset": "MasaRoads",
-      "kind": "评测",
-      "name": "空间覆盖与误触发单因素验证_v1",
-      "category": "覆盖与误触发后验开发",
-      "status": "SR收益；长距离/SG保护未通过",
-      "scope": "10已消费区域/750任务/3权重；0训练/0云端；无新源确认，Sat2Cap预训练地理未知",
-      "path": "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1",
-      "reports": [
-        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/三步覆盖接管开发验证报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/验收结论.json",
-        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/独立复核.json",
-        "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/离线诊断/独立算术复核.json"
-      ]
-    },
-    {
-      "dataset": "MasaRoads",
-      "kind": "评测",
-      "name": "覆盖接管径向保护验证_v1",
-      "category": "公开径向保护后验开发",
-      "status": "开发通过待独立确认",
-      "scope": "10已消费区域/750任务/3权重；无训练/云端/新区域确认",
-      "path": "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1",
-      "reports": [
-        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/径向保护开发验证报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/验收结论.json",
-        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/独立复核.json",
-        "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/离线诊断/独立算术复核.json"
-      ]
-    },
-    {
-      "dataset": "MasaRoads",
-      "kind": "数据",
-      "name": "径向保护新区域确认_v1",
-      "category": "径向保护独立新区域准备",
-      "status": "数据/空间通过；未导航、无新SR",
-      "scope": "10预留新区/40源/1000图块/750路线/1200几何探针；预训练地理未知",
-      "path": "DATA/processed_data/MasaRoads/径向保护新区域确认_v1",
-      "reports": [
-        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/新区域确认数据准备报告.md",
-        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/科研图排版修订_v2.md",
-        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/下一项冻结径向保护新区域导航确认方案_v1.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/核验/验收结论.json",
-        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/核验/独立复核.json",
-        "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/核验/输入冻结结束.json"
-      ]
-    },
-    {
-      "dataset": "MasaRoads",
-      "kind": "评测结果",
-      "name": "径向保护独立新区域导航确认_v1",
-      "category": "径向保护独立新区域导航确认",
-      "status": "升级证据通过",
-      "scope": "10 new footprints;750routes/3weights;300m/grid10/B20;frozen single candidate",
-      "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1",
-      "reports": [
-        "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/径向保护独立新区域导航确认报告.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/验收结论.json",
-        "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/主对照/独立复核.json",
-        "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/首动作前输入封存.json"
-      ]
-    },
-    {
-      "dataset": "MasaRoads",
-      "kind": "工程准备",
-      "name": "默认版本化与十五乘十五兼容_v1",
-      "category": "协议默认版本化与15×15兼容",
-      "status": "默认登记/兼容通过；未进行真实15×15评测",
-      "scope": "900old regressions;6synthetic cases;no new realSR;physical15x15 data pending",
-      "path": "DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1",
-      "reports": [
-        "DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1/默认版本化与十五乘十五兼容报告.md",
-        "DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1/下一项真实十五乘十五数据准备草案.md"
-      ],
-      "evidence": [
-        "DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1/验收结论.json",
-        "DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1/独立工程复核.json",
-        "DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1/回归/完整核验.json"
-      ]
-    }
-  ],
-  "source_only": true
+ "date": "2026-10-05",
+ "batches": [
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "PBRS完整导航与局部匹配对照_v1",
+   "category": "本地策略",
+   "status": "完整导航训练，局部匹配观察候选",
+   "scope": "开发140×3；Small Full 65.95%，Spatial Full 68.81%，强探索 72.62%",
+   "path": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1",
+   "reports": [
+    "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/对照报告.md",
+    "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/结果解读与后续方向.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/验收结论.json",
+    "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "tiny_bc_v1",
+   "category": "历史记录",
+   "status": "保留该批原判定",
+   "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
+   "path": "DATA/processed_data/Masa/训练结果/tiny_bc_v1",
+   "reports": [],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "tiny_curiosity_debug",
+   "category": "历史记录",
+   "status": "保留该批原判定",
+   "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
+   "path": "DATA/processed_data/Masa/训练结果/tiny_curiosity_debug",
+   "reports": [],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "tiny_curiosity_gpu_1000_debug",
+   "category": "历史记录",
+   "status": "保留该批原判定",
+   "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
+   "path": "DATA/processed_data/Masa/训练结果/tiny_curiosity_gpu_1000_debug",
+   "reports": [],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "tiny_curiosity_gpu_debug",
+   "category": "历史记录",
+   "status": "保留该批原判定",
+   "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
+   "path": "DATA/processed_data/Masa/训练结果/tiny_curiosity_gpu_debug",
+   "reports": [],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "tiny_curiosity_v1",
+   "category": "历史记录",
+   "status": "保留该批原判定",
+   "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
+   "path": "DATA/processed_data/Masa/训练结果/tiny_curiosity_v1",
+   "reports": [],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "tiny_curiosity_v2",
+   "category": "历史记录",
+   "status": "保留该批原判定",
+   "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
+   "path": "DATA/processed_data/Masa/训练结果/tiny_curiosity_v2",
+   "reports": [],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "tiny_pbrs_v1",
+   "category": "历史记录",
+   "status": "保留该批原判定",
+   "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
+   "path": "DATA/processed_data/Masa/训练结果/tiny_pbrs_v1",
+   "reports": [],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "tiny_pbrs_v2",
+   "category": "历史记录",
+   "status": "保留该批原判定",
+   "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
+   "path": "DATA/processed_data/Masa/训练结果/tiny_pbrs_v2",
+   "reports": [],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "可信邻接目标线索与探索协作_v1",
+   "category": "目标线索",
+   "status": "负结果：可信阈值全部弃权",
+   "scope": "开发140×3；SR 72.62%，未增加成功；五分类邻接头",
+   "path": "DATA/processed_data/Masa/训练结果/可信邻接目标线索与探索协作_v1",
+   "reports": [
+    "DATA/processed_data/Masa/训练结果/可信邻接目标线索与探索协作_v1/对照报告.md",
+    "DATA/processed_data/Masa/训练结果/可信邻接目标线索与探索协作_v1/结果解读与下一项.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/训练结果/可信邻接目标线索与探索协作_v1/验收结论.json",
+    "DATA/processed_data/Masa/训练结果/可信邻接目标线索与探索协作_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "合法动作协作验证_v1",
+   "category": "本地策略",
+   "status": "动作筛选候选通过；视觉 S2 未通过",
+   "scope": "val100×3；PBRS 44.33% → 合法动作筛选 66.00%",
+   "path": "DATA/processed_data/Masa/训练结果/合法动作协作验证_v1",
+   "reports": [
+    "DATA/processed_data/Masa/训练结果/合法动作协作验证_v1/验收报告.md"
+   ],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "好奇心配对验证_v3",
+   "category": "本地策略",
+   "status": "PBRS 与好奇心配对验证",
+   "scope": "val100×3；好奇心未形成稳定提升",
+   "path": "DATA/processed_data/Masa/训练结果/好奇心配对验证_v3",
+   "reports": [
+    "DATA/processed_data/Masa/训练结果/好奇心配对验证_v3/配对验证报告.md"
+   ],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "探索器协议适配同预算对照_v1",
+   "category": "训练记录",
+   "status": "六模型训练及重放完成",
+   "scope": "Continue5/Adapt10各三最终权重；491520新训练动作，6144优化器更新",
+   "path": "DATA/processed_data/Masa/训练结果/探索器协议适配同预算对照_v1",
+   "reports": [],
+   "evidence": [
+    "DATA/processed_data/Masa/训练结果/探索器协议适配同预算对照_v1/独立复核.json",
+    "DATA/processed_data/Masa/训练结果/探索器协议适配同预算对照_v1/最终状态.json",
+    "DATA/processed_data/Masa/训练结果/探索器协议适配同预算对照_v1/README.md"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "旋转负样本视觉头对照_v1",
+   "category": "历史记录",
+   "status": "保留该批原判定",
+   "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
+   "path": "DATA/processed_data/Masa/训练结果/旋转负样本视觉头对照_v1",
+   "reports": [],
+   "evidence": [
+    "DATA/processed_data/Masa/训练结果/旋转负样本视觉头对照_v1/验收结论.json",
+    "DATA/processed_data/Masa/训练结果/旋转负样本视觉头对照_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "本地模型容量与局部匹配对照_v1",
+   "category": "本地能力",
+   "status": "18 模型受控对照；新候选未通过",
+   "scope": "方向监督直接迁移，140 题；不可与 PBRS 完整导航混为一类",
+   "path": "DATA/processed_data/Masa/训练结果/本地模型容量与局部匹配对照_v1",
+   "reports": [
+    "DATA/processed_data/Masa/训练结果/本地模型容量与局部匹配对照_v1/对照报告.md",
+    "DATA/processed_data/Masa/训练结果/本地模型容量与局部匹配对照_v1/结果解读与后续方向.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/训练结果/本地模型容量与局部匹配对照_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "目标图利用验证_v1",
+   "category": "本地诊断",
+   "status": "目标监督与目标干预；候选未通过",
+   "scope": "val100×3；Boundary 66%，TargetPairs 58%，未改善目标利用",
+   "path": "DATA/processed_data/Masa/训练结果/目标图利用验证_v1",
+   "reports": [
+    "DATA/processed_data/Masa/训练结果/目标图利用验证_v1/验收报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/训练结果/目标图利用验证_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "训练源图留出诊断_v1",
+   "category": "本地诊断",
+   "status": "原 train 源图留出诊断",
+   "scope": "109/28 已知开发隔离；方向预测不是导航 SR",
+   "path": "DATA/processed_data/Masa/训练结果/训练源图留出诊断_v1",
+   "reports": [
+    "DATA/processed_data/Masa/训练结果/训练源图留出诊断_v1/诊断报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/训练结果/训练源图留出诊断_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "边缘连续性可信线索对照_v1",
+   "category": "目标线索",
+   "status": "开发候选与完整复核通过；正式 S2 待复验",
+   "scope": "开发140×3；SR 88.57%，SG 0.348，3/3种子提升；当前默认未替换",
+   "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1",
+   "reports": [
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/对照报告.md",
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/结果解读与下一项.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/验收结论.json",
+    "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "邻接与方向解耦对照_v1",
+   "category": "目标线索",
+   "status": "负结果：可信阈值全部弃权",
+   "scope": "开发140×3；SR 72.62%，条件方向信号不足以介入",
+   "path": "DATA/processed_data/Masa/训练结果/邻接与方向解耦对照_v1",
+   "reports": [
+    "DATA/processed_data/Masa/训练结果/邻接与方向解耦对照_v1/对照报告.md",
+    "DATA/processed_data/Masa/训练结果/邻接与方向解耦对照_v1/结果解读与下一项.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/训练结果/邻接与方向解耦对照_v1/验收结论.json",
+    "DATA/processed_data/Masa/训练结果/邻接与方向解耦对照_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "训练结果",
+   "name": "高分旋转负样本视觉头对照_v1",
+   "category": "历史记录",
+   "status": "保留该批原判定",
+   "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
+   "path": "DATA/processed_data/Masa/训练结果/高分旋转负样本视觉头对照_v1",
+   "reports": [],
+   "evidence": [
+    "DATA/processed_data/Masa/训练结果/高分旋转负样本视觉头对照_v1/验收结论.json",
+    "DATA/processed_data/Masa/训练结果/高分旋转负样本视觉头对照_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "DeepSeek接口检查_v1",
+   "category": "云端接口",
+   "status": "接口检查与截断记录",
+   "scope": "合成双图工程探测，不计导航 SR",
+   "path": "DATA/processed_data/Masa/评测结果/DeepSeek接口检查_v1",
+   "reports": [],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "DeepSeek接口检查_v2",
+   "category": "云端接口",
+   "status": "提高输出额度后的接口检查",
+   "scope": "合成双图工程探测，不计导航 SR",
+   "path": "DATA/processed_data/Masa/评测结果/DeepSeek接口检查_v2",
+   "reports": [],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "Gemma与DeepSeek同策略对照_v1",
+   "category": "云端能力",
+   "status": "默认思考截断，按协议停止",
+   "scope": "DeepSeek 3 次空正文；旧结果保留，修复见 v2",
+   "path": "DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v1/对照报告.md"
+   ],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "Gemma与DeepSeek同策略对照_v2",
+   "category": "云端能力",
+   "status": "已完成并复核的服务配置对照",
+   "scope": "val20；Gemma 45%，DeepSeek 非思考 20%，Frontier 50%；DeepSeek 完成 18/20",
+   "path": "DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v2",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v2/官方参数说明.md",
+    "DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v2/对照报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v2/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "Ollama试跑_v1",
+   "category": "云端接口",
+   "status": "首次连接失败",
+   "scope": "未发送图像推理，保留故障证据",
+   "path": "DATA/processed_data/Masa/评测结果/Ollama试跑_v1",
+   "reports": [],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "Ollama试跑_v1重试",
+   "category": "云端接口",
+   "status": "有界重试与最小 VLM 接入",
+   "scope": "接口试跑，不是完整 S2",
+   "path": "DATA/processed_data/Masa/评测结果/Ollama试跑_v1重试",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/Ollama试跑_v1重试/试跑说明.md"
+   ],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "S2稳定验证_v1",
+   "category": "云端验收",
+   "status": "批次已关闭，完整评测未完成",
+   "scope": "G/E 首轮各正常完成 20/100；后续有 not_run，S2 未通过",
+   "path": "DATA/processed_data/Masa/评测结果/S2稳定验证_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/S2稳定验证_v1/S2验证报告.md"
+   ],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "S4十乘十工程试跑_v1",
+   "category": "历史记录",
+   "status": "保留该批原判定",
+   "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
+   "path": "DATA/processed_data/Masa/评测结果/S4十乘十工程试跑_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/S4十乘十工程试跑_v1/试跑结果说明.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/S4十乘十工程试跑_v1/验收结论.json",
+    "DATA/processed_data/Masa/评测结果/S4十乘十工程试跑_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "S4十乘十正式扩展_v1",
+   "category": "正式扩展",
+   "status": "S4密度扩展通过",
+   "scope": "500题×3，20已见源文件，10×10/B20，77.13%/1.201",
+   "path": "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/十乘十扩展报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/验收结论.json",
+    "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "三项验证_v1",
+   "category": "云端策略",
+   "status": "TLS 故障记录",
+   "scope": "VLM 未成功决策，不能将完成文件视作完成评测",
+   "path": "DATA/processed_data/Masa/评测结果/三项验证_v1",
+   "reports": [],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "三项验证_v1连接修复",
+   "category": "云端策略",
+   "status": "连接修复后的同题验证",
+   "scope": "改用系统传输；保留失败批次",
+   "path": "DATA/processed_data/Masa/评测结果/三项验证_v1连接修复",
+   "reports": [],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "云端8790接口检查_v1",
+   "category": "云端接口",
+   "status": "已弃用备选",
+   "scope": "9生成+1列表；用户已决定不继续考虑三个选项",
+   "path": "DATA/processed_data/Masa/评测结果/云端8790接口检查_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/云端8790接口检查_v1/接口检查报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/云端8790接口检查_v1/最终状态.json",
+    "DATA/processed_data/Masa/评测结果/云端8790接口检查_v1/README.md"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "候选可靠性开发验证_v1",
+   "category": "目标校准",
+   "status": "新候选未通过",
+   "scope": "0.90阈值提高精度但损伤召回和干净SR",
+   "path": "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/接受可靠性校准报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/验收结论.json",
+    "DATA/processed_data/Masa/评测结果/候选可靠性开发验证_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "候选可靠性离线校准_v1",
+   "category": "校准诊断",
+   "status": "离线校准完成",
+   "scope": "接受精度不是导航SR；在线验证另列",
+   "path": "DATA/processed_data/Masa/评测结果/候选可靠性离线校准_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/候选可靠性离线校准_v1/校准报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/候选可靠性离线校准_v1/验收结论.json",
+    "DATA/processed_data/Masa/评测结果/候选可靠性离线校准_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "四组实验_v1",
+   "category": "云端策略",
+   "status": "排序、动作治理与规则对照",
+   "scope": "最终修正报告为 *_v2；固定 val20 试验",
+   "path": "DATA/processed_data/Masa/评测结果/四组实验_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/四组实验_v1/四组对照报告.md",
+    "DATA/processed_data/Masa/评测结果/四组实验_v1/四组对照报告_v2.md"
+   ],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "基础校验_v2",
+   "category": "工程基础",
+   "status": "环境与评测基础记录",
+   "scope": "基础校验；不作为智能策略成绩",
+   "path": "DATA/processed_data/Masa/评测结果/基础校验_v2",
+   "reports": [],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "多Agent同预算小验证_v1",
+   "category": "云端协作",
+   "status": "小验证未通过扩大门槛",
+   "scope": "原触发只覆盖成功题；未产生有效计划修正",
+   "path": "DATA/processed_data/Masa/评测结果/多Agent同预算小验证_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/多Agent同预算小验证_v1/任务要求与论文框架对应说明.md",
+    "DATA/processed_data/Masa/评测结果/多Agent同预算小验证_v1/多Agent小验证报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/多Agent同预算小验证_v1/验收结论.json",
+    "DATA/processed_data/Masa/评测结果/多Agent同预算小验证_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "层级搜索实验_v1",
+   "category": "云端策略",
+   "status": "单因素：层级搜索",
+   "scope": "云端后续对照的 G 策略来源",
+   "path": "DATA/processed_data/Masa/评测结果/层级搜索实验_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/层级搜索实验_v1/层级搜索对照报告.md"
+   ],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "探索器协议适配开发验证_v1",
+   "category": "训练因素",
+   "status": "协议适配升级未通过",
+   "scope": "Continue5 79.73%/0.823、Adapt10 80.00%/1.059；同预算，不增加参数",
+   "path": "DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/探索器协议适配报告.md",
+    "DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/获取线索时机配对补充说明.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/验收结论.json",
+    "DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/独立复核.json",
+    "DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/最终状态.json",
+    "DATA/processed_data/Masa/评测结果/探索器协议适配开发验证_v1/README.md"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "旋转负样本开发验证_v1",
+   "category": "目标鲁棒性",
+   "status": "新候选未通过",
+   "scope": "增加旋转负例未达到SR一致收益门槛",
+   "path": "DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1/旋转负样本对照报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1/验收结论.json",
+    "DATA/processed_data/Masa/评测结果/旋转负样本开发验证_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "本地S2固定配置复验_v1",
+   "category": "本地复验",
+   "status": "工程检查通过；目标贡献未通过",
+   "scope": "val100×3；当前默认 Small NoTarget 73.00%，SG 0.800；正式视觉 S2 未通过",
+   "path": "DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1/复验报告.md",
+    "DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1/结果解读与默认方案.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/本地S2固定配置复验_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "目标方向候选开发验证_v1",
+   "category": "目标旋转",
+   "status": "开发条件通过后试跑失败",
+   "scope": "已见Masa28；不能把旋转集合不变性当任意旋转鲁棒",
+   "path": "DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1/方向候选验证报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1/验收结论.json",
+    "DATA/processed_data/Masa/评测结果/目标方向候选开发验证_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "目标邻域覆盖规划验证_v1",
+   "category": "探索覆盖",
+   "status": "候选未通过",
+   "scope": "76.93%/1.281，未增加净成功",
+   "path": "DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1/目标邻域覆盖规划报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1/验收结论.json",
+    "DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1/独立复核.json",
+    "DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1/最终状态.json",
+    "DATA/processed_data/Masa/评测结果/目标邻域覆盖规划验证_v1/README.md"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "空间记忆实验_v1",
+   "category": "云端策略",
+   "status": "单因素：空间记忆",
+   "scope": "固定小验证集；结果不外推到 val100",
+   "path": "DATA/processed_data/Masa/评测结果/空间记忆实验_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/空间记忆实验_v1/空间记忆对照报告.md"
+   ],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "继续训练冻结目标证据复验_v1",
+   "category": "最新复验",
+   "status": "目标证据通过",
+   "scope": "已见20源文件；Full79.73%/SG0.823；新增4500控制，复用1500真实目标",
+   "path": "DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/冻结目标证据复验报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/验收结论.json",
+    "DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/独立复核.json",
+    "DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/最终状态.json",
+    "DATA/processed_data/Masa/评测结果/继续训练冻结目标证据复验_v1/README.md"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "证据账本简化接口验证_v2",
+   "category": "云端协作",
+   "status": "接口和D通过，G未达扩大门槛",
+   "scope": "同20题，云端三重复；M0 55%、零调用60%、云端三方案均55%",
+   "path": "DATA/processed_data/Masa/评测结果/证据账本简化接口验证_v2",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/证据账本简化接口验证_v2/简化接口与闭环验证报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/证据账本简化接口验证_v2/验收结论.json",
+    "DATA/processed_data/Masa/评测结果/证据账本简化接口验证_v2/独立复核.json",
+    "DATA/processed_data/Masa/评测结果/证据账本简化接口验证_v2/README.md"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "证据账本预算规划验证_v1",
+   "category": "云端接口",
+   "status": "T通过，旧D未通过",
+   "scope": "14请求保留；修复在另批，不把请求成功当导航有效",
+   "path": "DATA/processed_data/Masa/评测结果/证据账本预算规划验证_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/证据账本预算规划验证_v1/分关验证报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/证据账本预算规划验证_v1/验收结论.json",
+    "DATA/processed_data/Masa/评测结果/证据账本预算规划验证_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "账本探索保护规则验证_v1",
+   "category": "探索保护",
+   "status": "候选未通过",
+   "scope": "77.07%/1.199；修复旧损伤，也失去大部分恢复",
+   "path": "DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1/保护规则验证报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1/验收结论.json",
+    "DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1/独立复核.json",
+    "DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1/最终状态.json",
+    "DATA/processed_data/Masa/评测结果/账本探索保护规则验证_v1/README.md"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "边缘线索S2正式复验_v1",
+   "category": "正式主线",
+   "status": "S2通过",
+   "scope": "val100×3，4源文件，5×5/B10，SR89.33%/SG0.320",
+   "path": "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/正式复验报告.md",
+    "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/结果解读与S3接续.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/验收结论.json",
+    "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "边缘线索S3独立源图确认_v1",
+   "category": "正式主线",
+   "status": "S3通过",
+   "scope": "test250×3，10源文件，5×5/B10，SR86.80%/SG0.300",
+   "path": "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/独立源图确认报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/验收结论.json",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "邻域确认实验_v1",
+   "category": "云端策略",
+   "status": "单因素：邻域确认",
+   "scope": "保留负结果；不将所有因素叠加解释",
+   "path": "DATA/processed_data/Masa/评测结果/邻域确认实验_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/邻域确认实验_v1/邻域确认对照报告.md"
+   ],
+   "evidence": []
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "零调用账本完整队列验证_v1",
+   "category": "探索规划",
+   "status": "未达到SR+2点门槛",
+   "scope": "M1 78.40%/1.110，对M0+1.27点；低成本备选",
+   "path": "DATA/processed_data/Masa/评测结果/零调用账本完整队列验证_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/零调用账本完整队列验证_v1/完整队列验证报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/零调用账本完整队列验证_v1/验收结论.json",
+    "DATA/processed_data/Masa/评测结果/零调用账本完整队列验证_v1/独立复核.json",
+    "DATA/processed_data/Masa/评测结果/零调用账本完整队列验证_v1/README.md"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "高分旋转负样本开发验证_v1",
+   "category": "目标鲁棒性",
+   "status": "新候选未通过",
+   "scope": "训练预算一致，未优于均匀负旋转；未消费该批新确认图",
+   "path": "DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1/高分旋转负样本对照报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1/验收结论.json",
+    "DATA/processed_data/Masa/评测结果/高分旋转负样本开发验证_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "SwissView",
+   "kind": "评测结果",
+   "name": "五乘五工程试跑_v1",
+   "category": "历史记录",
+   "status": "保留该批原判定",
+   "scope": "早期调试、训练或工程记录；不作为当前正式成绩",
+   "path": "DATA/processed_data/SwissView/评测结果/五乘五工程试跑_v1",
+   "reports": [
+    "DATA/processed_data/SwissView/评测结果/五乘五工程试跑_v1/迁移验证报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/SwissView/评测结果/五乘五工程试跑_v1/验收结论.json",
+    "DATA/processed_data/SwissView/评测结果/五乘五工程试跑_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "SwissView",
+   "kind": "评测结果",
+   "name": "五乘五正式迁移_v1",
+   "category": "正式迁移",
+   "status": "SwissView迁移通过",
+   "scope": "500题×3，20新源文件，5×5/B10，86.80%/0.381",
+   "path": "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1",
+   "reports": [
+    "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/迁移验证报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/验收结论.json",
+    "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "SwissView",
+   "kind": "评测结果",
+   "name": "目标扰动鲁棒性_v1",
+   "category": "适用边界",
+   "status": "扰动诊断完成",
+   "scope": "揭示边缘连续性对真实目标条件的依赖，不修改默认",
+   "path": "DATA/processed_data/SwissView/评测结果/目标扰动鲁棒性_v1",
+   "reports": [
+    "DATA/processed_data/SwissView/评测结果/目标扰动鲁棒性_v1/鲁棒性与数据范围报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/SwissView/评测结果/目标扰动鲁棒性_v1/验收结论.json",
+    "DATA/processed_data/SwissView/评测结果/目标扰动鲁棒性_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "SwissView",
+   "kind": "评测结果",
+   "name": "目标方向候选试跑确认_v1",
+   "category": "目标旋转",
+   "status": "新候选未通过",
+   "scope": "04…07新源文件试跑；四朝向降低干净接受可靠性",
+   "path": "DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1",
+   "reports": [
+    "DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1/方向候选验证报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1/验收结论.json",
+    "DATA/processed_data/SwissView/评测结果/目标方向候选试跑确认_v1/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "SwissView",
+   "kind": "评测结果",
+   "name": "继续训练独立源图确认_v1",
+   "category": "最新确认",
+   "status": "升级未通过",
+   "scope": "新20SwissView源文件；10×10仅SR+0.60点，1/3正，SG改善；默认保持",
+   "path": "DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1",
+   "reports": [
+    "DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/任务采样说明.md",
+    "DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/独立源图确认报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/验收结论.json",
+    "DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/独立复核.json",
+    "DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/最终状态.json",
+    "DATA/processed_data/SwissView/评测结果/继续训练独立源图确认_v1/README.md"
+   ]
+  },
+  {
+   "dataset": "SwissView",
+   "kind": "评测结果",
+   "name": "继续训练恢复损伤诊断_v1",
+   "category": "离线诊断",
+   "status": "诊断与复核完成",
+   "scope": "6000既有轨迹；无新增导航，分解恢复/损伤与邻接时机",
+   "path": "DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1",
+   "reports": [
+    "DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1/恢复损伤诊断报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1/独立复核.json",
+    "DATA/processed_data/SwissView/评测结果/继续训练恢复损伤诊断_v1/最终状态.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "回访新格筛选冻结验证_v1",
+   "category": "单因素开发",
+   "status": "开发候选与目标证据通过",
+   "scope": "dev250×3；SR+2.00点、3/3正；原默认保持，尚未独立确认",
+   "path": "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/回访新格筛选验证报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/独立复核.json",
+    "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/最终状态.json",
+    "DATA/processed_data/Masa/评测结果/回访新格筛选冻结验证_v1/验收结论.json"
+   ]
+  },
+  {
+   "dataset": "SwissView",
+   "kind": "评测结果",
+   "name": "回访新格筛选独立源图确认_v1",
+   "category": "独立源文件确认",
+   "status": "新源升级未通过，原M0保持",
+   "scope": "20新源/500×3/10×10B20；零训练和云端",
+   "path": "DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1",
+   "reports": [
+    "DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1/独立源图确认报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1/验收结论.json",
+    "DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1/独立复核.json",
+    "DATA/processed_data/SwissView/评测结果/回访新格筛选独立源图确认_v1/最终状态.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "数据准备",
+   "name": "实际区域扩展_v1",
+   "category": "实际面积工程",
+   "status": "数据/协议通过；导航未启动",
+   "scope": "3已知train连续地图/12源/9km²各图；300格/75题；无新SR",
+   "path": "DATA/processed_data/Masa/实际区域扩展_v1",
+   "reports": [
+    "DATA/processed_data/Masa/实际区域扩展_v1/实际区域扩展数据准备报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/实际区域扩展_v1/核验/验收结论.json",
+    "DATA/processed_data/Masa/实际区域扩展_v1/核验/独立复核.json",
+    "DATA/processed_data/Masa/实际区域扩展_v1/核验/最终状态.json"
+   ]
+  },
+  {
+   "dataset": "Masa",
+   "kind": "评测结果",
+   "name": "实际区域M0兼容试跑_v1",
+   "category": "实际面积兼容试跑",
+   "status": "工程通过；目标控制通过；已知训练地区",
+   "scope": "3已知地图/75×3/9km²各图；SR78.22%/SG316.00m；1050全重放",
+   "path": "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1",
+   "reports": [
+    "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/实际区域M0兼容试跑报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/验收结论.json",
+    "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/独立复核.json",
+    "DATA/processed_data/Masa/评测结果/实际区域M0兼容试跑_v1/最终状态.json"
+   ]
+  },
+  {
+   "dataset": "MasaRoads",
+   "kind": "数据准备",
+   "name": "空间隔离连续区域_v1",
+   "category": "空间隔离数据",
+   "status": "资源上限停止；未通过",
+   "scope": "120源/12合格区域；无导航SR",
+   "path": "DATA/processed_data/MasaRoads/空间隔离连续区域_v1",
+   "reports": [
+    "DATA/processed_data/MasaRoads/空间隔离连续区域_v1/资源上限停止报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MasaRoads/空间隔离连续区域_v1/核验/验收结论.json",
+    "DATA/processed_data/MasaRoads/空间隔离连续区域_v1/核验/停止状态.json"
+   ]
+  },
+  {
+   "dataset": "MasaRoads",
+   "kind": "数据准备",
+   "name": "空间隔离连续区域_v2",
+   "category": "空间隔离数据",
+   "status": "数据/协议与空间隔离通过；导航未启动",
+   "scope": "14区域/56选定源/1050任务/1680探针；无新SR",
+   "path": "DATA/processed_data/MasaRoads/空间隔离连续区域_v2",
+   "reports": [
+    "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/空间隔离连续区域数据准备报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/核验/验收结论.json",
+    "DATA/processed_data/MasaRoads/空间隔离连续区域_v2/核验/独立复核.json"
+   ]
+  },
+  {
+   "dataset": "MasaRoads",
+   "kind": "评测",
+   "name": "冻结M0空间隔离导航确认_v1",
+   "category": "实际区域独立确认",
+   "status": "导航通过；接缝头部通过；组合通过",
+   "scope": "4工程/10确认，9km²每区；14700导航/15120探针；本地M0足迹空间隔离，Sat2Cap预训练地理覆盖未知；原模型与默认保持",
+   "path": "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1",
+   "reports": [
+    "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/新空间隔离区域M0导航确认报告_v2.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/验收结论.json",
+    "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/工程接口/独立复核.json",
+    "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/独立确认/独立复核.json",
+    "DATA/processed_data/MasaRoads/评测结果/冻结M0空间隔离导航确认_v1/审计修订登记_v3.json"
+   ]
+  },
+  {
+   "dataset": "MasaRoads",
+   "kind": "评测",
+   "name": "空间覆盖与误触发单因素验证_v1",
+   "category": "覆盖与误触发后验开发",
+   "status": "SR收益；长距离/SG保护未通过",
+   "scope": "10已消费区域/750任务/3权重；0训练/0云端；无新源确认，Sat2Cap预训练地理未知",
+   "path": "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1",
+   "reports": [
+    "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/三步覆盖接管开发验证报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/验收结论.json",
+    "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/主对照/独立复核.json",
+    "DATA/processed_data/MasaRoads/评测结果/空间覆盖与误触发单因素验证_v1/离线诊断/独立算术复核.json"
+   ]
+  },
+  {
+   "dataset": "MasaRoads",
+   "kind": "评测",
+   "name": "覆盖接管径向保护验证_v1",
+   "category": "公开径向保护后验开发",
+   "status": "开发通过待独立确认",
+   "scope": "10已消费区域/750任务/3权重；无训练/云端/新区域确认",
+   "path": "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1",
+   "reports": [
+    "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/径向保护开发验证报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/验收结论.json",
+    "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/主对照/独立复核.json",
+    "DATA/processed_data/MasaRoads/评测结果/覆盖接管径向保护验证_v1/离线诊断/独立算术复核.json"
+   ]
+  },
+  {
+   "dataset": "MasaRoads",
+   "kind": "数据",
+   "name": "径向保护新区域确认_v1",
+   "category": "径向保护独立新区域准备",
+   "status": "数据/空间通过；未导航、无新SR",
+   "scope": "10预留新区/40源/1000图块/750路线/1200几何探针；预训练地理未知",
+   "path": "DATA/processed_data/MasaRoads/径向保护新区域确认_v1",
+   "reports": [
+    "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/新区域确认数据准备报告.md",
+    "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/科研图排版修订_v2.md",
+    "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/下一项冻结径向保护新区域导航确认方案_v1.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/核验/验收结论.json",
+    "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/核验/独立复核.json",
+    "DATA/processed_data/MasaRoads/径向保护新区域确认_v1/核验/输入冻结结束.json"
+   ]
+  },
+  {
+   "dataset": "MasaRoads",
+   "kind": "评测结果",
+   "name": "径向保护独立新区域导航确认_v1",
+   "category": "径向保护独立新区域导航确认",
+   "status": "升级证据通过",
+   "scope": "10 new footprints;750routes/3weights;300m/grid10/B20;frozen single candidate",
+   "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1",
+   "reports": [
+    "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/径向保护独立新区域导航确认报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/验收结论.json",
+    "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/主对照/独立复核.json",
+    "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/首动作前输入封存.json"
+   ]
+  },
+  {
+   "dataset": "MasaRoads",
+   "kind": "工程准备",
+   "name": "默认版本化与十五乘十五兼容_v1",
+   "category": "协议默认版本化与15×15兼容",
+   "status": "默认登记/兼容通过；未进行真实15×15评测",
+   "scope": "900old regressions;6synthetic cases;no new realSR;physical15x15 data pending",
+   "path": "DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1",
+   "reports": [
+    "DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1/默认版本化与十五乘十五兼容报告.md",
+    "DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1/下一项真实十五乘十五数据准备草案.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1/验收结论.json",
+    "DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1/独立工程复核.json",
+    "DATA/processed_data/MasaRoads/工程准备/默认版本化与十五乘十五兼容_v1/回归/完整核验.json"
+   ]
+  },
+  {
+   "dataset": "MasaRoads",
+   "kind": "工程准备",
+   "name": "十五乘十五数据目录补全_v1",
+   "category": "实际面积扩展数据调查",
+   "status": "完整目录及263标签核验通过；12坐标候选区，像素质量待核验；无新SR",
+   "scope": "Roads1171目录条目/113组三乘三/最大12隔离区；15单测/270请求/16.583MiB；Buildings当前151与本地文件名一致，无新容量",
+   "path": "DATA/processed_data/MasaRoads/工程准备/十五乘十五数据目录补全_v1",
+   "reports": [
+    "DATA/processed_data/MasaRoads/工程准备/十五乘十五数据目录补全_v1/十五乘十五数据目录补全调查报告.md",
+    "DATA/processed_data/MasaRoads/工程准备/十五乘十五数据目录补全_v1/下一项真实影像质量与数据准备草案.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MasaRoads/工程准备/十五乘十五数据目录补全_v1/目录链接适配_v2/完整目录分析结果.json",
+    "DATA/processed_data/MasaRoads/工程准备/十五乘十五数据目录补全_v1/目录链接适配_v2/独立复核.json",
+    "DATA/processed_data/MasaRoads/工程准备/十五乘十五数据目录补全_v1/预登记.json"
+   ]
+  },
+  {
+   "dataset": "MasaRoads",
+   "kind": "数据工程",
+   "name": "真实十五乘十五数据准备_v1",
+   "category": "实际面积扩展数据工程",
+   "status": "复核可信；10区门槛未过（最大7）；2旧源工程图完成，无新SR",
+   "scope": "263获取/177质量通过/49组；最高7区；450图块/150任务/720探针；267尝试/1.669GiB/12单测",
+   "path": "DATA/processed_data/MasaRoads/真实十五乘十五数据准备_v1",
+   "reports": [
+    "DATA/processed_data/MasaRoads/真实十五乘十五数据准备_v1/真实十五乘十五数据准备报告.md",
+    "DATA/processed_data/MasaRoads/真实十五乘十五数据准备_v1/下一项同源窗口可行性草案.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MasaRoads/真实十五乘十五数据准备_v1/验收结论.json",
+    "DATA/processed_data/MasaRoads/真实十五乘十五数据准备_v1/核验/独立数据复核.json",
+    "DATA/processed_data/MasaRoads/真实十五乘十五数据准备_v1/核验/输入冻结结束.json"
+   ]
+  },
+  {
+   "dataset": "MasaRoads",
+   "kind": "工程准备",
+   "name": "同源窗口静态可行性_v1",
+   "category": "实际面积扩展原生窗口静态调查",
+   "status": "复核可信；10区静态门槛未过（精确最大7）；裁切因素收束，无新SR",
+   "scope": "177源/20父块；720窗口+49原组，去重577；双优化器精确7；12单测；零请求/训练/导航",
+   "path": "DATA/processed_data/MasaRoads/工程准备/同源窗口静态可行性_v1",
+   "reports": [
+    "DATA/processed_data/MasaRoads/工程准备/同源窗口静态可行性_v1/同源窗口静态可行性报告.md",
+    "DATA/processed_data/MasaRoads/工程准备/同源窗口静态可行性_v1/下一项连续影像池调查草案.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MasaRoads/工程准备/同源窗口静态可行性_v1/验收结论.json",
+    "DATA/processed_data/MasaRoads/工程准备/同源窗口静态可行性_v1/核验/独立复核.json",
+    "DATA/processed_data/MasaRoads/工程准备/同源窗口静态可行性_v1/核验/预登记.json"
+   ]
+  },
+  {
+   "dataset": "MassGIS",
+   "kind": "工程准备",
+   "name": "连续航拍影像池调查_v1",
+   "category": "实际面积扩展官方产品调查",
+   "status": "20区几何见证/三代表原生头通过；像素质量待验，无新SR",
+   "scope": "1540官方索引/1093几何接受/604候选/20见证；12请求/2.00MiB/18测试；0.5米有损JP2新产品",
+   "path": "DATA/processed_data/MassGIS/工程准备/连续航拍影像池调查_v1",
+   "reports": [
+    "DATA/processed_data/MassGIS/工程准备/连续航拍影像池调查_v1/连续航拍影像池调查报告.md",
+    "DATA/processed_data/MassGIS/工程准备/连续航拍影像池调查_v1/下一项原生解码与质量工程草案.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MassGIS/工程准备/连续航拍影像池调查_v1/验收结论.json",
+    "DATA/processed_data/MassGIS/工程准备/连续航拍影像池调查_v1/核验/独立复核.json",
+    "DATA/processed_data/MassGIS/工程准备/连续航拍影像池调查_v1/核验/预登记.json"
+   ]
+  },
+  {
+   "dataset": "MassGIS",
+   "kind": "工程准备",
+   "name": "原生解码与小区域工程_v1",
+   "category": "原生解码与工程接口",
+   "status": "1已见地理工程区质量/接口/输入桥接通过；正式区0，无新SR",
+   "scope": "4源/8HTTP/60.95MiB；9000窗/225原生600PNG/29混合格；37测试；v1/v2拒绝保留，v3原始分量读取",
+   "path": "DATA/processed_data/MassGIS/工程准备/原生解码与小区域工程_v1",
+   "reports": [
+    "DATA/processed_data/MassGIS/工程准备/原生解码与小区域工程_v1/原生解码与小区域工程报告.md",
+    "DATA/processed_data/MassGIS/工程准备/原生解码与小区域工程_v1/下一项正式池获取与兼容验证草案.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MassGIS/工程准备/原生解码与小区域工程_v1/验收结论.json",
+    "DATA/processed_data/MassGIS/工程准备/原生解码与小区域工程_v1/核验/独立工程复核.json",
+    "DATA/processed_data/MassGIS/工程准备/原生解码与小区域工程_v1/核验/目标特征接口独立复核.json",
+    "DATA/processed_data/MassGIS/工程准备/原生解码与小区域工程_v1/原始码流适配_v3/原始分量逐位核验.json",
+    "DATA/processed_data/MassGIS/工程准备/原生解码与小区域工程_v1/核验/预登记.json"
+   ]
+  },
+  {
+   "dataset": "MassGIS",
+   "kind": "工程准备",
+   "name": "正式池获取_v1",
+   "category": "真实15×15正式池数据工程",
+   "status": "数据关卡通过：13合格/10正式保留/3备用，无新SR",
+   "scope": "固定20候选/80源，67源质量通过；160HTTP/1.19GiB；2925原生600PNG/377混合格；16测试/独立复核/2355保护一致",
+   "path": "DATA/processed_data/MassGIS/工程准备/正式池获取_v1",
+   "reports": [
+    "DATA/processed_data/MassGIS/工程准备/正式池获取_v1/正式池获取报告.md",
+    "DATA/processed_data/MassGIS/工程准备/正式池获取_v1/下一项同产品导航兼容与十五乘十五确认草案.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MassGIS/工程准备/正式池获取_v1/验收结论.json",
+    "DATA/processed_data/MassGIS/工程准备/正式池获取_v1/核验/独立正式池复核.json",
+    "DATA/processed_data/MassGIS/工程准备/正式池获取_v1/工程数据/保留池清单.json",
+    "DATA/processed_data/MassGIS/工程准备/正式池获取_v1/元数据/源使用与导航保留账本.json",
+    "DATA/processed_data/MassGIS/工程准备/正式池获取_v1/核验/预登记.json"
+   ]
+  },
+  {
+   "dataset": "MassGIS",
+   "kind": "工程准备",
+   "name": "同产品开发导航兼容_v1",
+   "category": "同产品开发导航兼容",
+   "status": "工程兼容与10网格目标开发门槛通过；正式池未消费，无15格导航",
+   "scope": "1已消费区；10格M0/Coverage SR61.78/68.00%；SG813.33/646.67m；34+4测试/2300轨迹/37860动作/30072探针/6040保护",
+   "path": "DATA/processed_data/MassGIS/工程准备/同产品开发导航兼容_v1",
+   "reports": [
+    "DATA/processed_data/MassGIS/工程准备/同产品开发导航兼容_v1/同产品开发导航兼容报告_v2.md",
+    "DATA/processed_data/MassGIS/工程准备/同产品开发导航兼容_v1/下一项正式导航协议准备草案.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MassGIS/工程准备/同产品开发导航兼容_v1/验收结论.json",
+    "DATA/processed_data/MassGIS/工程准备/同产品开发导航兼容_v1/核验/独立导航兼容复核_v2.json",
+    "DATA/processed_data/MassGIS/工程准备/同产品开发导航兼容_v1/核验/预登记.json",
+    "DATA/processed_data/MassGIS/工程准备/同产品开发导航兼容_v1/核验/首动作前封存.json",
+    "DATA/processed_data/MassGIS/工程准备/同产品开发导航兼容_v1/核验/审计v1拒绝记录.json",
+    "DATA/processed_data/MassGIS/工程准备/同产品开发导航兼容_v1/元数据/开发导航消费账本.json",
+    "DATA/processed_data/MassGIS/工程准备/同产品开发导航兼容_v1/兼容补充分层结果.json"
+   ]
+  },
+  {
+   "dataset": "MassGIS",
+   "kind": "工程准备",
+   "name": "正式导航协议冻结_v1",
+   "category": "正式双网格协议与工程接口准备",
+   "status": "协议/接口准备通过；正式模型消费0，无新SR",
+   "scope": "10区；10格750/15格1000题，750物理配对；30测试/450旧开发题7217动作/3250原生引用/47080探针登记/6603保护",
+   "path": "DATA/processed_data/MassGIS/工程准备/正式导航协议冻结_v1",
+   "reports": [
+    "DATA/processed_data/MassGIS/工程准备/正式导航协议冻结_v1/正式导航协议准备报告.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MassGIS/工程准备/正式导航协议冻结_v1/冻结协议.json",
+    "DATA/processed_data/MassGIS/工程准备/正式导航协议冻结_v1/验收结论.json",
+    "DATA/processed_data/MassGIS/工程准备/正式导航协议冻结_v1/核验/独立协议复核.json",
+    "DATA/processed_data/MassGIS/工程准备/正式导航协议冻结_v1/核验/预登记.json",
+    "DATA/processed_data/MassGIS/工程准备/正式导航协议冻结_v1/回归/旧开发轨迹精确回归.json",
+    "DATA/processed_data/MassGIS/工程准备/正式导航协议冻结_v1/元数据/正式池使用账本.json"
+   ]
+  },
+  {
+   "dataset": "MassGIS",
+   "kind": "评测结果",
+   "name": "正式十乘十十五乘十五确认_v1",
+   "category": "实际面积双网格正式独立确认",
+   "status": "执行/工程复核通过；10/15格主与可靠性门槛未过，条件目标对照未启动，无默认升级",
+   "scope": "10区域/三权重；10格SR54.62%、15格20.27%；共同任务扩区−32.22点；42测试/14000轨迹/255125动作/6715保护",
+   "path": "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1",
+   "reports": [
+    "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/正式双网格确认报告.md",
+    "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/下一项新域误触发与覆盖诊断草案.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/验收结论.json",
+    "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/核验/执行预登记.json",
+    "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/核验/首动作前封存.json",
+    "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/核验/特征与探针独立复核.json",
+    "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/核验/主对照独立复核.json",
+    "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/核验/最终独立复核.json",
+    "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/元数据/正式池导航完成账本.json",
+    "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/补充分层结果.json"
+   ]
+  },
+  {
+   "dataset": "MassGIS",
+   "kind": "评测结果",
+   "name": "新域误触发与覆盖诊断_v1",
+   "category": "EVAL-003只读失败诊断（邻接机会/误触发重定向/配对迁移）",
+   "status": "完成：机会=成功3563、失败0可行动机会；误触发83.4%在距离≥2且重定向劣于探索器提议；15格全程性塌陷；唯一候选=cue门槛校准已冻结方案未启动",
+   "scope": "只读EVAL-002封存10500轨迹/282480探针概率/1750任务；0训练0导航0模型调用；9项单测与另实现计数复核通过",
+   "path": "DATA/processed_data/MassGIS/评测结果/新域误触发与覆盖诊断_v1",
+   "reports": [
+    "DATA/processed_data/MassGIS/评测结果/新域误触发与覆盖诊断_v1/诊断报告.md",
+    "DATA/processed_data/MassGIS/评测结果/新域误触发与覆盖诊断_v1/下一批误触发治理冻结方案_v1.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MassGIS/评测结果/新域误触发与覆盖诊断_v1/误触发与覆盖诊断汇总.json",
+    "DATA/processed_data/MassGIS/评测结果/新域误触发与覆盖诊断_v1/核验/输入绑定.json",
+    "DATA/processed_data/MassGIS/评测结果/新域误触发与覆盖诊断_v1/核验/源码绑定.json",
+    "DATA/processed_data/MassGIS/评测结果/新域误触发与覆盖诊断_v1/核验/交叉复核.json",
+    "DATA/processed_data/MassGIS/评测结果/新域误触发与覆盖诊断_v1/核验/自动测试结果.txt"
+   ]
+  },
+  {
+   "dataset": "MassGIS",
+   "kind": "评测结果",
+   "name": "误触发治理开发验证_v1",
+   "category": "DEV-001单因素开发验证（cue接受门槛校准）",
+   "status": "完成：τ*=0.95消除误触发（错误cue 20%→≤0.17%）但SR门槛未过（grid5/10下降），因素按停止条件收束，默认不升级",
+   "scope": "校准只用EVAL-002封存探针282480；img_6100已消费开发区5/10/15双臂1950条；grid5/10 T050回归525条全等；10单测；0训练/导航外模型调用/正式区或备用区消费",
+   "path": "DATA/processed_data/MassGIS/评测结果/误触发治理开发验证_v1",
+   "reports": [
+    "DATA/processed_data/MassGIS/评测结果/误触发治理开发验证_v1/误触发治理开发验证报告.md",
+    "DATA/processed_data/MassGIS/评测结果/误触发治理开发验证_v1/下一项十五乘十五到达能力诊断草案.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MassGIS/评测结果/误触发治理开发验证_v1/核验/门槛判定.json",
+    "DATA/processed_data/MassGIS/评测结果/误触发治理开发验证_v1/元数据/校准结果.json",
+    "DATA/processed_data/MassGIS/评测结果/误触发治理开发验证_v1/核验/预登记.json",
+    "DATA/processed_data/MassGIS/评测结果/误触发治理开发验证_v1/核验/自动测试结果.txt"
+   ]
+  },
+  {
+   "dataset": "MassGIS",
+   "kind": "评测结果",
+   "name": "十五乘十五到达能力漂移诊断_v6",
+   "category": "EVAL-004只读到达能力/输入表征漂移诊断",
+   "status": "完成：主SR跨距离层/区域塌陷；坐标与25桶访问表示漂移是合理贡献因素，非因果证明；EVAL-002门槛/default不变",
+   "scope": "只读EVAL-002封存753项/14,000轨迹/255,125动作；重建188,246策略输入SHA、750共同任务/4,500首步配对、491,520训练上下文；8测试/另实现复核；0模型forward/训练/导航/网络/备用消费",
+   "path": "DATA/processed_data/MassGIS/评测结果/十五乘十五到达能力漂移诊断_v6",
+   "reports": [
+    "DATA/processed_data/MassGIS/评测结果/十五乘十五到达能力漂移诊断_v6/EVAL-004诊断与复核补充说明_v1.md",
+    "DATA/processed_data/MassGIS/评测结果/十五乘十五到达能力漂移诊断_v6/诊断报告.md",
+    "DATA/processed_data/MassGIS/评测结果/十五乘十五到达能力漂移诊断_v6/下一项单因素方案草案.md"
+   ],
+   "evidence": [
+    "DATA/processed_data/MassGIS/评测结果/十五乘十五到达能力漂移诊断_v6/诊断汇总.json",
+    "DATA/processed_data/MassGIS/评测结果/十五乘十五到达能力漂移诊断_v6/输入绑定.json",
+    "DATA/processed_data/MassGIS/评测结果/十五乘十五到达能力漂移诊断_v6/核验/审计v6/审计绑定.json",
+    "DATA/processed_data/MassGIS/评测结果/十五乘十五到达能力漂移诊断_v6/核验/审计v6/独立复核_v6.json",
+    "DATA/processed_data/MassGIS/评测结果/十五乘十五到达能力漂移诊断_v6/核验/最终交付绑定_v1.json"
+   ]
+  }
+ ],
+ "source_only": true
 }

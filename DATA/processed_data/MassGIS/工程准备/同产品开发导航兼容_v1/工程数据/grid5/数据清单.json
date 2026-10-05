@@ -1,0 +1,26 @@
+{
+  "protocol": "massgis-native-grid5-dev-v2",
+  "grid_size": 5,
+  "budget": 10,
+  "cell_size_m": 300,
+  "native_cell_pixels": 600,
+  "epsg": 26986,
+  "pixel_size_m": 0.5,
+  "mosaic_pixels": 3000,
+  "patch_format": "png",
+  "development_only": true,
+  "known_geography": true,
+  "bounds_m": [
+    236000.0,
+    897000.0,
+    237500.0,
+    898500.0
+  ],
+  "regions": [
+    {
+      "split": "dev",
+      "area": "img_6100",
+      "source_tile": "MassGIS2005/DATA005_known_full4"
+    }
+  ]
+}

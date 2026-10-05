@@ -1,0 +1,66 @@
+{
+ "utc": "2026-10-04T15:42:43.484501+00:00",
+ "independent_recount": {
+  "episodes": 10500,
+  "actionable_opportunities": 3563,
+  "accepted_at_opp_correct": 3557,
+  "accepted_at_opp_wrong": 0,
+  "fail_terminal_adjacent": 272
+ },
+ "summary_cross_check": {
+  "episodes": 10500,
+  "actionable_opportunities": 3563,
+  "accepted_at_opp_correct": 3557,
+  "accepted_at_opp_wrong": 0,
+  "fail_terminal_adjacent": 272,
+  "main_opportunities": 3563,
+  "independent_opportunities": 3563,
+  "opportunities_match": true,
+  "main_fail_terminal_adjacent": 272,
+  "independent_fail_terminal_adjacent": 272,
+  "terminal_match": true,
+  "accepted_at_opportunity": {
+   "correct": 3557,
+   "wrong": 0
+  }
+ },
+ "opportunities_equal_successes": true,
+ "accepted_at_opportunity": {
+  "correct": 3557,
+  "wrong": 0
+ },
+ "raw_matches_eval002": {
+  "g10_precision": 0.5112300985595147,
+  "g10_recall": 0.9989814814814815,
+  "g15_precision": 0.5211506622516556,
+  "g15_recall": 0.9992857142857143,
+  "expected_precision": [
+   0.5112,
+   0.5212
+  ],
+  "note": "与EVAL-002正式报告51.12%/52.12%、99.90%/99.93%一致"
+ },
+ "migration_matches_eval002": {
+  "g10": {
+   "both_fail": 865,
+   "both_success": 995,
+   "restored": 234,
+   "harmed": 156
+  },
+  "g15": {
+   "both_fail": 2271,
+   "both_success": 454,
+   "harmed": 121,
+   "restored": 154
+  },
+  "expected": {
+   "g10_restored": 234,
+   "g10_harmed": 156,
+   "g15_restored": 154,
+   "g15_harmed": 121
+  }
+ },
+ "passed": true,
+ "independent_person_review": false,
+ "note": "同一开发者另实现计数器与边界单测；不称独立人员审查"
+}

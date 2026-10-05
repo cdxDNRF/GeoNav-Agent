@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-05",
+  "browser": "Codex in-app browser",
+  "url": "http://127.0.0.1:8766",
+  "checks": {
+    "initial_unknown_map": true,
+    "three_catalog_switches": true,
+    "success_terminal_zero_sg": true,
+    "failure_terminal_budget_exhausted": true,
+    "play_pause_speed": true,
+    "step_jump": true,
+    "policy_and_seed_filter": true,
+    "empty_search_disables_play": true,
+    "truth_toggle_diagnostic_only": true,
+    "overview_complete_cohort_values": true,
+    "cue_priority_explained": true
+  },
+  "console_errors": [],
+  "screenshots": [
+    "审阅/工作台_桌面.png",
+    "审阅/十五乘十五_失败终局.png",
+    "审阅/实验总览.png"
+  ],
+  "json_export_endpoint_verified": true,
+  "json_export_local_receipt": "核验/单条证据导出接口验证_v1.json",
+  "browser_download_file_receipt_verified": false,
+  "browser_download_note": "内置浏览器waitForEvent(download)在5秒内未返回回执；无页面错误；仅能确认导出接口及本地保存校验，未声称GUI下载落盘成功",
+  "new_model_calls": 0
+}

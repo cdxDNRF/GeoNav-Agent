@@ -1,0 +1,29 @@
+<!doctype html>
+<html lang="zh-CN">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>GeoNav Lab · 主动探索实验平台</title><link rel="stylesheet" href="/style.css"><script src="/app.js" defer></script></head>
+<body>
+<header><a class="brand" href="/"><span class="brand-icon">↗</span><span>GeoNav <b>Lab</b></span></a><span class="header-note">主动探索 · 视觉地理定位</span><div class="mode"><i></i> 已保存轨迹回放</div><span class="version">V0.1</span></header>
+<main>
+<div class="intro"><div><span class="eyebrow">VISUAL GEOLOCALIZATION</span><h1>让每一步探索都有迹可循。</h1><p>以目标航拍图为线索，在有限预算内逐步搜索。查看观察、动作与结果，追溯原始实验。</p></div><div class="intro-side"><b id="total-records">—</b><span>条封存主对照轨迹</span><small>完整队列 · 成功与失败均保留</small></div></div>
+<nav class="tabs"><button id="replay-tab" class="active">轨迹工作台</button><button id="overview-tab">实验总览</button><span>单导航 Agent / 航拍 → 航拍</span></nav>
+<div id="error" role="alert" hidden></div>
+<section id="workspace">
+<aside class="panel filters"><div class="panel-title"><span>选择实验</span><span class="number">01</span></div>
+<label>数据与协议<select id="catalog"></select></label><div id="acceptance" class="acceptance"></div>
+<label>策略<select id="policy"><option value="Coverage3Radial">覆盖探索 + 径向保护</option><option value="M0">M0 原单 Agent</option></select></label>
+<div class="filter-pair"><label>冻结权重<select id="seed"><option value="0">Seed 0</option><option value="1">Seed 1</option><option value="2">Seed 2</option></select></label><label>结果<select id="outcome"><option value="">全部</option><option value="success">成功</option><option value="failure">失败</option></select></label></div>
+<label>完整区域<select id="area"></select></label><label>任务检索<input id="query" placeholder="任务编号，如 img_3004" type="search"></label>
+<div class="episode-heading"><b>任务目录</b><span id="list-count">—</span></div><div id="episode-list" aria-label="任务列表"></div>
+<p class="small muted">筛选只影响案例列表。实验总览按完整计划队列计算，不随筛选改变。</p></aside>
+<section class="center"><div class="metric-row"><div><span>当前步 / 行动预算</span><b id="step-metric">—</b></div><div><span>已观察格数</span><b id="coverage-metric">—</b></div><div><span>实际移动距离</span><b id="travel-metric">—</b></div><div><span>终局 SG</span><b id="sg-metric">—</b></div></div>
+<div class="panel map-panel"><div class="map-heading"><div><span class="eyebrow">EXPLORATION MAP</span><h2>逐步打开未知区域</h2></div><span id="protocol-badge" class="pill">—</span></div><div class="canvas-container"><canvas id="map" width="760" height="760" aria-label="仅显示当前步已观察的图块和历史路径"></canvas><div id="map-loading">正在载入封存轨迹…</div></div>
+<div class="legend"><span><i class="seen"></i>已观察</span><span><i class="unknown"></i>未知</span><span><i class="route"></i>已执行路径</span><span><i class="current"></i>当前位置</span></div>
+<div class="controls"><button id="previous" title="上一步">←</button><button id="play" class="primary">播放轨迹</button><button id="next" title="下一步">→</button><input id="slider" aria-label="回放进度" type="range" min="0" max="20" value="0"><span id="step-label">0 / 20</span><select id="speed" aria-label="播放速度"><option value="1000">1×</option><option value="500">2×</option><option value="250">4×</option></select></div>
+<div id="timeline" aria-label="逐步跳转"></div><div class="map-footer"><span id="episode-caption">—</span><label class="checkbox"><input id="diagnostic" type="checkbox"> 事后真值叠加</label></div><p id="truth-note" class="small muted">默认只展示已观察图块。真实目标位置不会作为策略输入。</p></div></section>
+<aside class="right"><section class="panel vision-panel"><div class="panel-title"><span>视觉线索</span><span class="number">02</span></div><div class="image-pair"><figure><div class="image-wrap"><img id="goal-image" alt="给定目标航拍图"></div><figcaption><b>给定目标</b><span>航拍图块</span></figcaption></figure><figure><div class="image-wrap"><img id="current-image" alt="当前观察航拍图"></div><figcaption><b>当前观察</b><span id="position">—</span></figcaption></figure></div></section>
+<section class="panel decision-panel"><div class="panel-title"><span>下一步决策</span><span class="number">03</span></div><div id="decision-status" class="decision-status">—</div><div class="decision-detail"><span>探索器提议</span><b id="explorer">—</b><span>视觉头接受</span><b id="cue">—</b><span>覆盖控制</span><b id="controller">—</b><span>动作依据</span><b id="reason">—</b></div><div class="prob-heading">目标头输出 <span>保存概率 · 非真值</span></div><div id="probabilities"></div><p class="small muted">这些是历史模型输出。回放不会重新编码、预测或调用云端模型。</p></section>
+<section class="panel evidence-panel"><div class="panel-title"><span>实验可追溯</span><span class="number">04</span></div><p>先校验轨迹封存，再逐条核对动作与终局指标；展示图块按绑定 SHA 校验。</p><button id="export">导出本条证据 JSON ↗</button><details><summary>原件路径与 SHA256</summary><pre id="source"></pre></details></section></aside>
+</section>
+<section id="overview" class="panel" hidden><span class="eyebrow">FROZEN COHORTS</span><h2>结果属于各自的协议。</h2><p>下表从已保存的全部主对照轨迹重算，三权重各一次完整队列；未通过的扩展不改变原验收。</p><div class="table-scroll"><table><thead><tr><th>来源 / 搜索范围</th><th>协议</th><th>原独立区域数</th><th>每权重题数</th><th>策略</th><th>SR</th><th>SG / 米</th><th>移动 / 米</th><th>历史结论</th></tr></thead><tbody id="overview-body"></tbody></table></div><div class="overview-note"><b>如何读这些结果</b><p>SR 使用计划任务分母；SG 是全部终局曼哈顿距离，成功记 0。移动距离单独统计。重复权重、双网格和两策略不增加独立地理样本；MassGIS 两个窗口共享同 10 个区域，不能累加为 20 个。</p><p>不同数据、面积或队列的 SR 不能直接相减当作累计提升。本平台当前是训练过的单智能体模块系统，同模态航拍目标；跨视角、异时影像与真实无人机尚未验证。</p></div></section>
+<footer><span>本地只读服务 · 无新增训练 / 导航 / API 调用</span><span>工程回放 V0.1 · 实时导航接口为下一里程碑</span></footer>
+</main></body></html>
