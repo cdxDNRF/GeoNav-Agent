@@ -1,0 +1,69 @@
+{
+  "ok": true,
+  "model_forward": true,
+  "encoding": "sealed native225 cache",
+  "reference_path": "DATA/processed_data/MassGIS/工程准备/同产品开发导航兼容_v1/主对照/g5_M0_s0_CueFull.jsonl",
+  "reference_sha256": "95b049d6f28b478c9748f4c00a9f52024c9d99491dfcb8ef211e342231db960f",
+  "run_path": "DATA/processed_data/MassGIS/平台运行/live_cfe164ff0282445db6a17dd7b7b549b0/终局.json",
+  "decisions": 4,
+  "matched_fields": [
+    "action",
+    "explorer_action",
+    "explorer_logits",
+    "probabilities",
+    "explorer_features_sha256",
+    "cue_features_sha256"
+  ],
+  "result": {
+    "episode_id": "native_dev_g5_0",
+    "success": true,
+    "termination": "goal_reached",
+    "sg": 0,
+    "steps": 4,
+    "revisits": 0,
+    "repeat_visit_rate": 0.0,
+    "out_of_bounds": 0,
+    "trajectory": [
+      {
+        "step": 0,
+        "patch_id": 4,
+        "action": null,
+        "out_of_bounds": false,
+        "revisited": false
+      },
+      {
+        "step": 1,
+        "patch_id": 9,
+        "action": "down",
+        "out_of_bounds": false,
+        "revisited": false
+      },
+      {
+        "step": 2,
+        "patch_id": 14,
+        "action": "down",
+        "out_of_bounds": false,
+        "revisited": false
+      },
+      {
+        "step": 3,
+        "patch_id": 13,
+        "action": "left",
+        "out_of_bounds": false,
+        "revisited": false
+      },
+      {
+        "step": 4,
+        "patch_id": 18,
+        "action": "down",
+        "out_of_bounds": false,
+        "revisited": false
+      }
+    ],
+    "protocol": "massgis-native-grid5-dev-v2",
+    "cell_size_m": 300,
+    "sg_m": 0,
+    "valid_travel_m": 1200,
+    "map_projected_area_km2": 2.25
+  }
+}

@@ -26,8 +26,10 @@
 | DOC-004 | 整理交接并编写Codex接手提示词 | done | ZCode / zcode-dev001-20261005 | 已释放；原范围为.agents/Codex接手EVAL-004提示词_v1.md、DEV-001批次内下一项草案、TASKS/HANDOFF/README/PROJECT_STATE协调入口 | 用户要求转回Codex并给下一步提示词；DEV-001已完成 | 草案与提示词已写（EVAL-004=15×15到达能力只读诊断，首步配对logits实验为核心）；锚点几何已预核实并要求接手者独立重推；无实验无提交 |
 | EVAL-004 | 15×15到达能力与输入表征漂移只读诊断 | done | Codex / massgis-arrival-drift-audit-v11-20261005 | 已释放；v1-v6主分析及审计v2-v6完整保留；v6补充诊断报告/输入绑定/源码快照/配对与路径明细；v11审计源码/测试及审计v6最终复核；README、PROJECT_STATE、TASKS、HANDOFF、实验索引 | DEV-001已按停止条件收束；只读EVAL-002正式封存/EVAL-003/DEV-001原件 | 复核753封存、160主/规则轨迹seal及分母、188246输入SHA、750共同题/4500首步配对、SR分层/10区域bootstrap/路线分叉/491520训练上下文通过；8项测试通过；补充报告与可追溯交付绑定见十五乘十五到达能力漂移诊断_v6；坐标格点对齐是唯一未执行候选，另立DEV再评估；0模型forward/训练/导航/网络/备用消费/默认改动；无提交/推送 |
 | DEMO-001 | 项目进度复查、轻量轨迹回放与平台V0.1 | done | Codex / replay-platform-20261005 | 已释放；原范围为webapp六源码/verify与静态界面、test_replay_platform_v1.py、平台/主动探索演示_v1/、进度计划及共享入口 | EVAL-004完成；封存日志/任务/图块只读 | 已交接：15000轨迹/261622动作/3250图块、原汇总/753封存/32交付/3默认和10单测通过；所列浏览器检查通过，下载事件回执未验证；8766回放服务保留，无新模型/训练/导航/备用消费 |
-| PLATFORM-002 | 界面驱动实时Agent导航与演示日志 | ready | 未认领 | 认领时声明新live服务/界面版本、适配与测试、开发演示批次及共享入口；保留V0.1与历史原件 | DEMO-001完成；只用已消费开发区域，原冻结策略/环境 | 先冻结演示协议、源码/模型/均值/任务身份与新输出路径；单步/自动/终止/状态隔离、公开Observation权限、冻结轨迹回归；补JSON按钮原生浏览器下载兼容检查，不默认启动15格研究或备用确认 |
+| PLATFORM-002 | 实时本地导航、单模型API与批量对照、方法图和中期材料整合 | done | Codex / midterm-platform-20261005 | 已交接释放；原运行日志.gitignore本地收录边界、新webapp/{live_v2,cloud_v2,batch_v2,server_v2,live_v3,cloud_v3,batch_v3,server_v3,binding_v3,verify_delivery_v3}.py、static_v2/、tests/test_live_platform_v2.py及test_cloud_platform_v2.py、test_platform_review_fixes_v3.py；平台/实时导航平台_v2/；DATA/processed_data/MassGIS/平台运行/与平台单模型对照_v1新批次；docs/平台交付设计_v2.md及实施计划；documents/{build_platform_midterm_v1,polish_platform_midterm_v2}.py、绘图/平台方法图_v1/与总结报告相关/平台交付_v1/；共享入口按本任务合并，v1/历史模型不改 | 用户已授权三项顺序实现；Gemma沿用现有配置；已消费DATA007开发区 | 三项已交付：39测试/5真实轨迹回归/v3四步；20+20工程对照85%/30%、179请求0回退；3图/5页Word/下载与小屏通过；审查2项修复、785保护/3默认/364链接通过；无训练/备用消费/默认升级/Git提交 |
 | GIT-003 | 分层整理本地工具、精简Git收录并推送GitHub | done | Codex / repository-release-20261005 | 已释放；本轮目录/忽略规则、核验源码与公开维护文档均已交付，数据原址保留 | 用户明确授权整理并上传GitHub；main现场保留 | 87迁移/950退出索引SHA、753/32历史、平台25+7及3默认通过；19测试、无本地目录样本9项、429语法/230链接/只读发布审查通过。主提交2b31b644已上传main且远程SHA一致；补同步交接状态，无新实验 |
+| PLAT-003 | 实时导航平台V2启动快捷程序 | done | ZCode / zcode-plat003-20261005 | 已释放；原范围为平台/实时导航平台_v2/启动平台.ps1及该目录README | PLATFORM-002已交付释放；用户要求 | 启动器已交付：先探测8767既有v3服务（/api/meta身份匹配）再启动并自动开浏览器；PowerShell解析通过、身份实测True、服务启停实测通过；README已补启动说明 |
+| GIT-004 | 提交推送平台V2交付、启动器与协调记录 | in_progress | ZCode / zcode-git004-20261005 | Git暂存区与本地main引用；.gitignore及本任务协调记录 | 用户明确授权提交并上传GitHub；PLAT-003完成 | 按docs/维护分层核验待提交集（凭据/禁入路径/大小/语法/JSON），提交后SSH推送并核对远程SHA |
 
 ZCode及其它Agent当前未登记，不自动指派给它们。认领前读取AGENTS.md及本表；只有`in_progress`行的写入范围处于占用，DOC-001已交接并释放。`ready/planned`行只是拆分建议，不代表任务已经开始或某Agent已获独占范围。
 
@@ -35,7 +37,7 @@ ZCode及其它Agent当前未登记，不自动指派给它们。认领前读取A
 
 1. 先核对状态和写入范围，再把自己的任务改为`in_progress`；写清执行者/会话、具体路径、实际更新时间和验收要求。未知输出路径先登记再创建，不能用“整个project/src”一类范围阻塞不相交任务。
 2. 更新表前读取最新版；若保存前文件已变，重新合并自己的行，保留其它Agent的记录。共享文档合并也遵守这条。
-3. EVAL-004及DEMO-001均已交接并释放；当前下一任务PLATFORM-002待认领，优先实时平台与课程交付。MassGIS坐标格点因素未启动，不作为平台交付前置。默认顺序接手、共享入口合并；外部助手旧授权不自动替代本批认领或科研验收。
+3. EVAL-004及DEMO-001均已交接并释放；PLATFORM-002已完成交接与范围释放，当前优先中期演示/教师提交要求核对，不自动启动新研究。MassGIS坐标格点因素未启动，不作为平台交付前置。默认顺序接手、共享入口合并；外部助手旧授权不自动替代本批认领或科研验收。
 4. 完成/移交先写HANDOFF，再标`done`或说明剩余任务及接手状态；保留记录但释放写入范围。暂停不能被其它Agent默认为完成。
 
 ## 新任务记录模板

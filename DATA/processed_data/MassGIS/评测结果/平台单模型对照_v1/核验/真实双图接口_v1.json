@@ -1,0 +1,82 @@
+{
+  "ok": true,
+  "decision": {
+    "step": 1,
+    "public_position": [
+      0,
+      4
+    ],
+    "public_visited": [
+      4
+    ],
+    "remaining_budget": 10,
+    "explorer_action": "down",
+    "explorer_logits": [
+      -3.4028234663852886e+38,
+      -3.4028234663852886e+38,
+      2.4177539348602295,
+      1.312016487121582
+    ],
+    "action": "down",
+    "cue_action": null,
+    "reason": "single_cloud_action",
+    "probabilities": [
+      0.014208152890205383,
+      4.34505200246349e-05,
+      0.0003785490698646754,
+      0.0024425319861620665,
+      0.9829272627830505
+    ],
+    "current_image_sha256": "a860b52c61c631eab487fc9602f115e0901d4c60d52ea20198c7eba8a787410d",
+    "target_image_sha256": "b26c840aa8eb3c6c746f10edf43a7a7bead134966e7760858dc227f38769ad25",
+    "explorer_features_sha256": "92cf4b70fdf03bbb4d6c2ffe06f5311db30475726fa1420f2aadbbbfd43dd1ca",
+    "cue_features_sha256": "c4af98a561de964bf7906a2027253e1d35b09492c47959843da2afd6ecdeec96",
+    "cloud": {
+      "public_state": {
+        "position": [
+          0,
+          4
+        ],
+        "grid_size": 5,
+        "remaining_budget": 10,
+        "visited": [
+          4
+        ],
+        "legal_actions": [
+          "up",
+          "right",
+          "down",
+          "left"
+        ]
+      },
+      "image_count": 2,
+      "prompt_version": "aerial-live-pair-v2",
+      "target_image_sha256": "b26c840aa8eb3c6c746f10edf43a7a7bead134966e7760858dc227f38769ad25",
+      "current_image_sha256": "a860b52c61c631eab487fc9602f115e0901d4c60d52ea20198c7eba8a787410d",
+      "system_prompt_sha256": "2533a56d04112abb4cbaa2a74ba0c51e8b4cd9a8779cd1dfdb2b4ea9891065a1",
+      "request_index": 1,
+      "fallback": false,
+      "model": "gemma4:31b",
+      "usage": {
+        "prompt_tokens": 693,
+        "completion_tokens": 31,
+        "total_tokens": 724
+      },
+      "error": null,
+      "evidence": "current image is urban residential, target image is a park with baseball fields",
+      "response_sha256": "6423b6521032ac4371506f81ec2484b94ecaaeaac565fd1e793c0a8a736d2c97",
+      "latency_ms": 5543.465800001286
+    }
+  },
+  "config": {
+    "base_url": "https://ollama.com/v1",
+    "model": "gemma4:31b",
+    "key_configured": true,
+    "timeout": 30,
+    "max_tokens": 512,
+    "prompt_version": "aerial-live-pair-v2"
+  },
+  "task_key": "g5:0",
+  "image_support_observed": true,
+  "note": "真实双图请求被接受不等于模型稳定使用目标图"
+}
