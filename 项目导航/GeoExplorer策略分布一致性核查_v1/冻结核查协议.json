@@ -1,0 +1,46 @@
+{
+  "task": "BENCH-023",
+  "stage": "offline_mechanism_diagnosis",
+  "input_sha256": {
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v2/seed_0/events.jsonl": "e474429fc51730731bfdace0a2143b2895eb0547f7034218ececcf0ae3b11981",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v2/seed_1/events.jsonl": "e03ecf9589c8650f10237f670f4a4995d3e1623f6e5542202cc46801713215de",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v2/seed_2/events.jsonl": "9169ed0d7642eaa954756124a5cd85c049f6ec2344853d44bcd88270e2962aac",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v2/元数据/冻结执行协议.json": "7d3415f60a29efe85da3d8daaf285b2f43cac542cdf9f2a82de2fbbeb0b8a7eb",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v2/核验/训练复核_完整_v1.json": "47daf19cae2b3683f655caac1e629b212f4aba1f0590c95e8d4fe869cff76b5c",
+    "项目导航/GeoExplorer资源验证_v1/公开来源/GeoExplorer__models__ppo.py": "666f940f0c5a5b292de5e32cf3f755f3dc470f6b4447a3795d5cd8dd8e56114e",
+    "project/src/train/geoexplorer_training_v1.py": "1b5d09d0405cd7f586053aab526f64b16fd304664a3327ef16ac5be11b9c3f46",
+    "project/src/train/geoexplorer_training_math_v1.py": "60a15cf3923053eae81aa8bbf99ff0359e560f9865f4863058589692180cba48",
+    "project/local_policy_default.json": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b",
+    "project/local_policy_defaults_v1.json": "8e1b85eb74021ac18f8246f8146f7db451d68f423d7152f6c3a5d7c86b4d16fa",
+    "project/defaults/masa_roads_grid10_radial_v1.json": "7d7563cad6b09214eddb74c7a0e4555ef940e023606654b3308f6a59676380ae",
+    "project/src/agents/action_distribution_v1.py": "46a55a496d705cee4bafc37dc3709939e1b708c7071fe2a6249f75aa1db55cbf",
+    "project/src/eval/geoexplorer_distribution_diagnosis_v1.py": "6205ef0f3ac0ec9892796f6cd6d41afea2023c7042f9b391fd31ee99e45e8a07",
+    "project/src/eval/audit_geoexplorer_distribution_v1.py": "d72c63331b5d7420a2f616227ddf25cf7ffe925c4a3993499c720cef006cb27e",
+    "project/src/tests/test_action_distribution_v1.py": "068768b0dfa34cb9bbe2826713a082ce235ed15e297323bf44e438a7154b7b74"
+  },
+  "seeds": [
+    0,
+    1,
+    2
+  ],
+  "expected_steps_per_seed": 163840,
+  "grid": 5,
+  "fit_sources": 109,
+  "primary_question": "Do acting and PPO evaluate use the same normalized action distribution?",
+  "scope": "Actual boundary exposure only; learned probability ratios were not logged and cannot be reconstructed without forward.",
+  "synthetic_probability_vector": [
+    0.25,
+    0.25,
+    0.25,
+    0.25
+  ],
+  "epsilon": 1e-06,
+  "candidate_limit": 1,
+  "output_limit_bytes": 2097152,
+  "no_training": true,
+  "no_project_forward": true,
+  "no_navigation": true,
+  "no_model_api": true,
+  "no_new_sources": true,
+  "defaults_unchanged": true
+}

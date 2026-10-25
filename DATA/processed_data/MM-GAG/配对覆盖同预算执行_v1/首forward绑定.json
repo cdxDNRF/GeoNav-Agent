@@ -1,0 +1,214 @@
+{
+  "task": "CV-019",
+  "sources": [
+    {
+      "path": "project/src/train/capturepoint_coverage_runtime_v1.py",
+      "sha256": "0c985a63dba48a7df6cab65a33c5f5f140c790350ff726c7284597a73fa2214f",
+      "bytes": 4792
+    },
+    {
+      "path": "project/src/eval/capturepoint_coverage_scoring_v1.py",
+      "sha256": "fb946efd5b4364486a7d0db99ad3a5c2295ab428c0b153f5c94df66a5b355af5",
+      "bytes": 4516
+    },
+    {
+      "path": "project/src/tools/run_capturepoint_coverage_v1.py",
+      "sha256": "2a7268957cf8abcce8c73f63b759340243f945ebeaa6cbb9c87bf4239f4d77cd",
+      "bytes": 15970
+    },
+    {
+      "path": "project/src/eval/audit_capturepoint_coverage_execution_v1.py",
+      "sha256": "f3f75763bbc4b0622f3f31a66950b805d852a71005a3342bef054d57aa953d66",
+      "bytes": 13809
+    },
+    {
+      "path": "project/src/tests/test_capturepoint_coverage_execution_v1.py",
+      "sha256": "adcac894a0eb04f1413859dafb1d89e6777c49c5a979c5026f852e23729861e0",
+      "bytes": 4824
+    },
+    {
+      "path": "project/src/documents/close_capturepoint_coverage_execution_v1.py",
+      "sha256": "f179156b25e54ea7ddf7c58530139db460a3b2028f004374e56d5c00a6b99da6",
+      "bytes": 9412
+    }
+  ],
+  "dependencies": [
+    {
+      "path": "project/src/tools/run_capturepoint_execution_v2.py",
+      "sha256": "8b2d6763a8056f7dd36d89ce247c33a5e88a942b49f13aea7db8d396f2ff74ea",
+      "bytes": 20497
+    },
+    {
+      "path": "project/src/agents/weak_alignment_head_v1.py",
+      "sha256": "abbb40ad6ffcc91b79be707258e72d7cd42cf152c4077796b8ad60a32f88b047",
+      "bytes": 1001
+    },
+    {
+      "path": "project/src/train/weak_scene_alignment_v1.py",
+      "sha256": "24020b2703f7028411580a285b69a11eac62c45f4025cda9e9c5a448cc90a68b",
+      "bytes": 4795
+    },
+    {
+      "path": "project/src/agents/capturepoint_target_head_v1.py",
+      "sha256": "28aec8801336d74240da520876b1e717750916fd90a6e972061d8eb574589531",
+      "bytes": 1132
+    },
+    {
+      "path": "project/src/agents/crossview_local_match_v1.py",
+      "sha256": "e42547ed693e11bf58cdec3bf02e069c440943d7b3bac796d6ead18af2d24f2c",
+      "bytes": 2515
+    },
+    {
+      "path": "project/src/data/mmgag_views_v1.py",
+      "sha256": "89ff8000978d494274c819fbf44d4a8abc4a3b07614fcd357166c4637e3f157e",
+      "bytes": 4069
+    },
+    {
+      "path": "project/src/data/capturepoint_coverage_protocol_v1.py",
+      "sha256": "2064baf67bf496afcfa5ac28f4226e2fca97825152409319c0920f5b4dec546d",
+      "bytes": 4438
+    }
+  ],
+  "inputs": [
+    {
+      "path": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/阶段封存.json",
+      "sha256": "e504d1630c25334aba15f7d59e07ff2954715a46182ea91ccc49b079b15fe97c",
+      "bytes": 5835
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/配对覆盖同预算冻结协议.json",
+      "sha256": "2962441173e62d4ecf7b87fc71d03a964e80a5efc708270466ea3c5688e99d2a",
+      "bytes": 7935
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/固定训练与开发队列.json",
+      "sha256": "08ee93f0106d456c30a9a6de2135ca599e0410a80b83614bd40b6ec677bbf7b9",
+      "bytes": 390693
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源用途账本_v1.json",
+      "sha256": "3a55e4fc09542b88de3229576bab5f3e89bac7fbde274aa840ba4ed3ea5cf3c3",
+      "bytes": 16244
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/阶段封存.json",
+      "sha256": "edbf6b4048fbb3484b17dcb103e2b49a634e10223c04ef0e225d346957711048",
+      "bytes": 8226
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/逐题排序结果.json",
+      "sha256": "06fa016eb60a2b64711d968c1008cd6fc65a4912d8d071687db8f554da284f7e",
+      "bytes": 1664685
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/首更新前特征绑定.json",
+      "sha256": "433587bf31697f08969053ae21604711babd9b127a3d525357b5d4f45d5cea15",
+      "bytes": 10330
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/开发对照汇总.json",
+      "sha256": "fc0d1d78b2a916ae59c7de16f57302576c46ba453aae26d0d8f40373c6906cc0",
+      "bytes": 24174
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/核验/ground_编码后.json",
+      "sha256": "50565cdad04fa3102d801a729cb18e42aaf873510349093395b8a95e37a05b80",
+      "bytes": 311
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/核验/aerial_编码后.json",
+      "sha256": "2ca2a4c57f090813061cc7fa4bb02929e47b57ab261f44c5f9f26fe3b51f10bc",
+      "bytes": 316
+    }
+  ],
+  "models": [
+    {
+      "path": "models/clip_vit_b32_public_v1/config.json",
+      "sha256": "b575ef3c36f2a057fa19e221650105052d61cc9c1a972ec15019c6261ec98770",
+      "bytes": 4186
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/preprocessor_config.json",
+      "sha256": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd",
+      "bytes": 316
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/pytorch_model.bin",
+      "sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+      "bytes": 605247071
+    },
+    {
+      "path": "models/Sat2Cap/config.json",
+      "sha256": "0a9cffa477a4bfc9682da841841b7e4227ad0cd06ad81d3eb1a831d5557976c5",
+      "bytes": 559
+    },
+    {
+      "path": "models/Sat2Cap/model.safetensors",
+      "sha256": "fec6802fbf27664ddd556fc445ff7d8e7ab0f05fea160c2e16680642dcebf3e0",
+      "bytes": 351420784
+    }
+  ],
+  "protected": [
+    {
+      "path": "project/local_policy_default.json",
+      "sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b"
+    },
+    {
+      "path": "project/local_policy_defaults_v1.json",
+      "sha256": "8e1b85eb74021ac18f8246f8146f7db451d68f423d7152f6c3a5d7c86b4d16fa"
+    },
+    {
+      "path": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.docx",
+      "sha256": "8529c55fb53823d88201dc7f485b3b5c43e5fb2113ddf7d1ead7321f2eea409f"
+    },
+    {
+      "path": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.pdf",
+      "sha256": "e127eac96ad85bdce079e1813e15fcea82fb80ee0cb61a7d80e958427167c4b2"
+    }
+  ],
+  "old_features": [
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/特征/ground.npy",
+      "sha256": "447a116113e1900acffbb0d123de43fc64c487d60833954392743de6da68fea7",
+      "bytes": 28800
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/特征/aerial.npy",
+      "sha256": "1edb8ab5b0057372ca9ae1146356dc309b5ac5dbc54e244c62759547d672d924",
+      "bytes": 2322560
+    }
+  ],
+  "old_heads": [
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/权重/initial.npz",
+      "sha256": "d8735cffaef2be71cc7467191cc42c874c2c9e61b8fc5dba8790a3fd763d5f61",
+      "bytes": 33258
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/权重/final.npz",
+      "sha256": "e4ea404d041045e7c2e33d9556978a6c8f165a268fa317d7887402127f22fc7f",
+      "bytes": 33258
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/权重/initial.npz",
+      "sha256": "d8735cffaef2be71cc7467191cc42c874c2c9e61b8fc5dba8790a3fd763d5f61",
+      "bytes": 33258
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/权重/final.npz",
+      "sha256": "c2ce5c91d5bf4e4275e8be3d80d51b7552e046dcc697047bb3554c6ad888ca3c",
+      "bytes": 33258
+    }
+  ],
+  "authorization": {
+    "path": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/运行授权.json",
+    "sha256": "d6b67553333272c37b3cd40d24b9a0b67347f37eae6263c98de5b6e647f9a8aa",
+    "bytes": 476
+  },
+  "reuse_plan": {
+    "path": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/特征复用计划.json",
+    "sha256": "66d4a66d5004a937d8683249aa979444bdff70d2204be04264cdb52782c5d0e1",
+    "bytes": 84089
+  },
+  "scope": "only3 new ground and208 unique aerial inputs, raw SHA verified; old35 vectors reused with identical encoder tensors/preprocessing; no confirmation/navigation/API"
+}

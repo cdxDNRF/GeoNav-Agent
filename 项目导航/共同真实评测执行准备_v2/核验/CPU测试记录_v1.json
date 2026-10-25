@@ -1,0 +1,25 @@
+{
+  "command": [
+    "D:\\PYTHON\\python.exe",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "project/src/tests",
+    "-p",
+    "test_benchmark_assets_audit_v1.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": "test_cache_shape_dtype_nan_rejected (test_benchmark_assets_audit_v1.AssetAuditTests.test_cache_shape_dtype_nan_rejected) ... ok\ntest_cluster_intervals_keep_all_seed_pairs_together (test_benchmark_assets_audit_v1.AssetAuditTests.test_cluster_intervals_keep_all_seed_pairs_together) ... ok\ntest_corrupt_transition_cannot_be_hidden_by_seal (test_benchmark_assets_audit_v1.AssetAuditTests.test_corrupt_transition_cannot_be_hidden_by_seal) ... ok\ntest_disabled_still_contains_real_target_rejected (test_benchmark_assets_audit_v1.AssetAuditTests.test_disabled_still_contains_real_target_rejected) ... ok\ntest_error_after_one_action_checks_rejected_public (test_benchmark_assets_audit_v1.AssetAuditTests.test_error_after_one_action_checks_rejected_public) ... ok\ntest_external_configuration_binding_required_matches (test_benchmark_assets_audit_v1.AssetAuditTests.test_external_configuration_binding_required_matches) ... ok\ntest_goal_and_wrong_payload_swapping_detected_after_reseal (test_benchmark_assets_audit_v1.AssetAuditTests.test_goal_and_wrong_payload_swapping_detected_after_reseal) ... ok\ntest_input_answers_unknown_fields_rejected (test_benchmark_assets_audit_v1.AssetAuditTests.test_input_answers_unknown_fields_rejected) ... ok\ntest_method_mean_confusion_detected (test_benchmark_assets_audit_v1.AssetAuditTests.test_method_mean_confusion_detected) ... ok\ntest_model_file_drift_detected_without_forward (test_benchmark_assets_audit_v1.AssetAuditTests.test_model_file_drift_detected_without_forward) ... ok\ntest_no_tensor_model_imports_in_new_cpu_modules (test_benchmark_assets_audit_v1.AssetAuditTests.test_no_tensor_model_imports_in_new_cpu_modules) ... ok\ntest_omitted_task_does_not_change_denominator (test_benchmark_assets_audit_v1.AssetAuditTests.test_omitted_task_does_not_change_denominator) ... ok\ntest_original_cohort_wrong_distance_assertions (test_benchmark_assets_audit_v1.AssetAuditTests.test_original_cohort_wrong_distance_assertions) ... ok\ntest_out_of_bounds_and_step_ten_arrival (test_benchmark_assets_audit_v1.AssetAuditTests.test_out_of_bounds_and_step_ten_arrival) ... ok\ntest_out_of_bounds_exhaustion_and_no_actual_movement (test_benchmark_assets_audit_v1.AssetAuditTests.test_out_of_bounds_exhaustion_and_no_actual_movement) ... ok\ntest_path_and_source_drift_checks (test_benchmark_assets_audit_v1.AssetAuditTests.test_path_and_source_drift_checks) ... ok\ntest_policy_failure_preserves_counts_and_blocks_claims (test_benchmark_assets_audit_v1.AssetAuditTests.test_policy_failure_preserves_counts_and_blocks_claims) ... ok\ntest_recovered_harmed_tamper_detected (test_benchmark_assets_audit_v1.AssetAuditTests.test_recovered_harmed_tamper_detected) ... ok\ntest_replay_four_controls_and_three_paired_seeds (test_benchmark_assets_audit_v1.AssetAuditTests.test_replay_four_controls_and_three_paired_seeds) ... ok\ntest_summary_metric_tamper_detected (test_benchmark_assets_audit_v1.AssetAuditTests.test_summary_metric_tamper_detected) ... ok\ntest_terminal_distance_and_movement_independently_recomputed (test_benchmark_assets_audit_v1.AssetAuditTests.test_terminal_distance_and_movement_independently_recomputed) ... ok\n\n----------------------------------------------------------------------\nRan 21 tests in 11.274s\n\nOK\n",
+  "source_bindings": {
+    "tools/benchmark_assets_v1.py": "681960b046f5f9ae4073835beaf30a7c5388315d43c3d16251c9c67d5ef56a7f",
+    "eval/audit_benchmark_runner_v2.py": "ca571ca0a13deeb5f6427675a2ca11dfa11a1690f423ba8e1b026a29df2f307a",
+    "tests/test_benchmark_assets_audit_v1.py": "3b707ef3a3b5fe5b5a936d45bd6d688a93b56b91f25d4589d9b46d319ebd99f5",
+    "tools/verify_benchmark_preparation_v1.py": "1ab53a7dcbba66f4837611dfecc2decd2bc48bf7a29d9d5655774460f7848b04"
+  },
+  "real_model_forward": 0,
+  "real_navigation": 0
+}

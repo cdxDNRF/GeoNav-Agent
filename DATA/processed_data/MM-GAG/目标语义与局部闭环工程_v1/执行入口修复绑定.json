@@ -1,0 +1,22 @@
+{
+  "task": "CV-024",
+  "stage": "pre-first-action",
+  "prior_attempt": "v1 execute failed at tests import, no execution-start or trajectories created",
+  "prior_error": "ModuleNotFoundError: No module named tests.test_ground_local_loop_v1",
+  "cause": "a top-level tests package shadows project namespace; explicit project.src.tests import resolves it",
+  "sources": [
+    {
+      "path": "project/src/tools/execute_ground_local_loop_v2.py",
+      "sha256": "88c95ba489cbbf527516768d36dfd5be2c0ce73f902d80fa80acb48298d47739",
+      "bytes": 8403
+    }
+  ],
+  "original_binding": {
+    "path": "DATA/processed_data/MM-GAG/目标语义与局部闭环工程_v1/首动作绑定.json",
+    "sha256": "902423bcf9ef63f104a5e38604c8a5af2bd7b0d6e86928870f61058b745508fb",
+    "bytes": 34588
+  },
+  "unchanged": "20 tasks/100episodes, four v1 sources, encoders, conditions, formula and stopping gates",
+  "initial_freeze_error": "before directory creation, old hash-only protection entry lacked bytes; fixed before v1 source binding",
+  "real_actions_so_far": 0
+}

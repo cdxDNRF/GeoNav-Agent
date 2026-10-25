@@ -1,0 +1,705 @@
+{
+  "task": "CV-038",
+  "completed_pairs": 3,
+  "actual_images": 6,
+  "actual_decodes": 6,
+  "model_calls": 0,
+  "training": 0,
+  "navigation": 0,
+  "confirmation_consumed": 0,
+  "results": [
+    {
+      "city": "amsterdam",
+      "category": "mapillary/cities/NL/amsterdam",
+      "label_member": "OpenCVL_sample_data/mapillary/cities/NL/amsterdam/labels.json",
+      "row_index": 0,
+      "label": {
+        "country": "NL",
+        "city": "amsterdam",
+        "mapil_image_id": "10000258569988630",
+        "mapil_image": "ground/10000258569988630.png",
+        "aerial_image": "aerial/10000258569988630.png",
+        "resolution": 0.045454545454545456,
+        "dx_mapilraw": -241,
+        "dy_mapilraw": 54,
+        "heading_mapilraw": 291.05605197302,
+        "K": [
+          [
+            324.6714782714844,
+            0.0,
+            476.0
+          ],
+          [
+            0.0,
+            322.5494384765625,
+            266.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "max_offset_m": 20.0,
+        "ground_latlon": [
+          52.3281234,
+          5.04875418
+        ],
+        "ground_latlon_mapilraw": [
+          52.3281234,
+          5.04875418
+        ],
+        "ground_latlon_mapilopensfm": [
+          52.328183025601,
+          5.0491007787651
+        ],
+        "heading_mapilopensfm": 292.14345555767,
+        "dx_mapilopensfm": 279,
+        "dy_mapilopensfm": 200,
+        "pose_mapilopensfm_available": true,
+        "heading_mapilraw_before_meridian_is_zero": false,
+        "mapillary_creator_id": "106617448243381"
+      },
+      "images": {
+        "ground": {
+          "file": {
+            "path": "DATA/processed_data/OpenCVL/三城市照片与空间标签预检_v1/输入/amsterdam_ground.png",
+            "bytes": 516406,
+            "sha256": "9e809fe2c68a4430a89e91b2c5ee47a5b618f8ff95e9b9b11e5c891bcc45e80f"
+          },
+          "member": {
+            "name": "OpenCVL_sample_data/mapillary/cities/NL/amsterdam/ground/10000258569988630.png",
+            "flags": 8,
+            "compression": 8,
+            "crc32": "1a7b5e81",
+            "compressed_bytes": 504404,
+            "bytes": 516406,
+            "local_offset": 30859493,
+            "external_attrs": 2175008768
+          },
+          "png": {
+            "width": 952,
+            "height": 532,
+            "bit_depth": 8,
+            "color_type": 2,
+            "interlaced": false
+          },
+          "native_mode": "RGB",
+          "quality": {
+            "width": 952,
+            "height": 532,
+            "channel_mean": [
+              89.82856826941303,
+              98.66632574082264,
+              106.45012083780881
+            ],
+            "channel_std": [
+              59.72655747969673,
+              60.6807527830355,
+              62.92726245224978
+            ],
+            "gray_std": 60.83767359306238,
+            "near_black_fraction": 0.003984488532255007,
+            "near_white_fraction": 0.0,
+            "nonblank": true
+          },
+          "decoded_RGB_sha256": "7290142c6bb12ab9de44d6c8cbc55c63886ed9d4b6441f7424c535881211f316",
+          "alternate_mean": [
+            89.82856826941303,
+            98.66632574082264,
+            106.45012083780881
+          ],
+          "alternate_std": [
+            59.72655747968492,
+            60.68075278304453,
+            62.92726245225165
+          ],
+          "image_info": {},
+          "exif_tags": [],
+          "exif_orientation": null,
+          "GPS_EXIF_present": false,
+          "actual_decodes": 1
+        },
+        "aerial": {
+          "file": {
+            "path": "DATA/processed_data/OpenCVL/三城市照片与空间标签预检_v1/输入/amsterdam_aerial.png",
+            "bytes": 3891043,
+            "sha256": "6a08fe155d9634f895f4ba16a22c26e14fcedc175c45cb475b86102da6ce53f2"
+          },
+          "member": {
+            "name": "OpenCVL_sample_data/mapillary/cities/NL/amsterdam/aerial/10000258569988630.png",
+            "flags": 8,
+            "compression": 8,
+            "crc32": "aefbcbb2",
+            "compressed_bytes": 3891912,
+            "bytes": 3891043,
+            "local_offset": 32560170,
+            "external_attrs": 2175008768
+          },
+          "png": {
+            "width": 2200,
+            "height": 2200,
+            "bit_depth": 8,
+            "color_type": 2,
+            "interlaced": false
+          },
+          "native_mode": "RGB",
+          "quality": {
+            "width": 2200,
+            "height": 2200,
+            "channel_mean": [
+              140.35024938016528,
+              146.99310702479337,
+              152.1981758264463
+            ],
+            "channel_std": [
+              30.5413068333843,
+              27.143347692752823,
+              23.68068401801599
+            ],
+            "gray_std": 26.656346931969246,
+            "near_black_fraction": 0.0,
+            "near_white_fraction": 0.0009134297520661157,
+            "nonblank": true
+          },
+          "decoded_RGB_sha256": "c864b7eb841be7bf222f9e2ae253bd4562359bef562eb773c02bd4f6ea6b347a",
+          "alternate_mean": [
+            140.35024938016528,
+            146.99310702479337,
+            152.1981758264463
+          ],
+          "alternate_std": [
+            30.541306833515918,
+            27.14334769284172,
+            23.680684017922452
+          ],
+          "image_info": {},
+          "exif_tags": [],
+          "exif_orientation": null,
+          "GPS_EXIF_present": false,
+          "actual_decodes": 1
+        }
+      },
+      "geometry": {
+        "variants": {
+          "raw": {
+            "x": 859.0,
+            "y": 1046.0,
+            "inside": true,
+            "dx": -241,
+            "dy": 54,
+            "heading_label": 291.05605197302,
+            "camera_latlon": [
+              52.3281234,
+              5.04875418
+            ],
+            "border_clearance_px": 859.0
+          },
+          "opensfm": {
+            "x": 1379.0,
+            "y": 900.0,
+            "inside": true,
+            "dx": 279,
+            "dy": 200,
+            "heading_label": 292.14345555767,
+            "camera_latlon": [
+              52.328183025601,
+              5.0491007787651
+            ],
+            "border_clearance_px": 820.0
+          }
+        },
+        "K_status": {
+          "present": true,
+          "valid_matrix": true,
+          "image_dimensions_verified": true,
+          "principal_inside_pixels": true,
+          "aligned_to_given_pixels": false,
+          "usable_calibration": false
+        },
+        "principal_matches_actual_image_center_within1px": true,
+        "implied_horizontal_FoV_deg_if_K_applies": 111.40553778608376,
+        "K_pixel_chain_provenance_verified": false,
+        "projection_type_verified_from_calibration": false,
+        "metric_extent_from_label_m": [
+          100.0,
+          100.0
+        ],
+        "north_up_label_convention": "dx east, dy north; raster north-up not independently surveyed",
+        "absolute_raster_georeference_verified": false,
+        "both_pose_points_inside": true
+      },
+      "engineering_nonblank_and_points_inside": true,
+      "role": "consumed_pixel_engineering_unassigned_to_training",
+      "training_admitted": false,
+      "projection_visual_review_pending": true
+    },
+    {
+      "city": "krakow",
+      "category": "mapillary/cities/PL/krakow",
+      "label_member": "OpenCVL_sample_data/mapillary/cities/PL/krakow/labels.json",
+      "row_index": 0,
+      "label": {
+        "country": "PL",
+        "city": "krakow",
+        "mapil_image_id": "1000015350919599",
+        "mapil_image": "ground/1000015350919599.png",
+        "aerial_image": "aerial/1000015350919599.png",
+        "resolution": 0.1,
+        "dx_mapilraw": -110,
+        "dy_mapilraw": 24,
+        "heading_mapilraw": 147.54645534327645,
+        "K": [
+          [
+            789.5570068359375,
+            0.0,
+            476.0
+          ],
+          [
+            0.0,
+            784.0971069335938,
+            266.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "max_offset_m": 20.0,
+        "ground_latlon": [
+          50.040099665825,
+          19.809635484078
+        ],
+        "ground_latlon_mapilraw": [
+          50.040099665825,
+          19.809635484078
+        ],
+        "ground_latlon_mapilopensfm": [
+          50.040050063185,
+          19.809907369378
+        ],
+        "heading_mapilopensfm": 155.92441106602644,
+        "dx_mapilopensfm": 85,
+        "dy_mapilopensfm": -31,
+        "pose_mapilopensfm_available": true,
+        "heading_mapilraw_before_meridian_is_zero": false,
+        "mapillary_creator_id": "107556454815084"
+      },
+      "images": {
+        "ground": {
+          "file": {
+            "path": "DATA/processed_data/OpenCVL/三城市照片与空间标签预检_v1/输入/krakow_ground.png",
+            "bytes": 539326,
+            "sha256": "407ae2ad28e9e3262baaffeb345002a21deb4ed49cba4d18bd611251b134ec91"
+          },
+          "member": {
+            "name": "OpenCVL_sample_data/mapillary/cities/PL/krakow/ground/1000015350919599.png",
+            "flags": 8,
+            "compression": 8,
+            "crc32": "810ed12d",
+            "compressed_bytes": 494383,
+            "bytes": 539326,
+            "local_offset": 23831594,
+            "external_attrs": 2175008768
+          },
+          "png": {
+            "width": 952,
+            "height": 532,
+            "bit_depth": 8,
+            "color_type": 2,
+            "interlaced": false
+          },
+          "native_mode": "RGB",
+          "quality": {
+            "width": 952,
+            "height": 532,
+            "channel_mean": [
+              103.18635677955393,
+              121.48247061982688,
+              129.85092721299046
+            ],
+            "channel_std": [
+              58.54504326240258,
+              61.07846640739539,
+              62.294491773392814
+            ],
+            "gray_std": 60.556873913635584,
+            "near_black_fraction": 0.0022884153661464584,
+            "near_white_fraction": 0.0,
+            "nonblank": true
+          },
+          "decoded_RGB_sha256": "4ebfd8259ccf8e14db90af681f1ea4b0133313edc791d4188092b8b03bce68d0",
+          "alternate_mean": [
+            103.18635677955393,
+            121.48247061982688,
+            129.85092721299046
+          ],
+          "alternate_std": [
+            58.5450432623379,
+            61.07846640738239,
+            62.29449177340604
+          ],
+          "image_info": {},
+          "exif_tags": [],
+          "exif_orientation": null,
+          "GPS_EXIF_present": false,
+          "actual_decodes": 1
+        },
+        "aerial": {
+          "file": {
+            "path": "DATA/processed_data/OpenCVL/三城市照片与空间标签预检_v1/输入/krakow_aerial.png",
+            "bytes": 1470146,
+            "sha256": "66aee3b348a9163374992da35428c8b136c0dcf5ca4e9b0f492a312c70f6ce9e"
+          },
+          "member": {
+            "name": "OpenCVL_sample_data/mapillary/cities/PL/krakow/aerial/1000015350919599.png",
+            "flags": 8,
+            "compression": 8,
+            "crc32": "42e5ca62",
+            "compressed_bytes": 1466427,
+            "bytes": 1470146,
+            "local_offset": 26498179,
+            "external_attrs": 2175008768
+          },
+          "png": {
+            "width": 1000,
+            "height": 1000,
+            "bit_depth": 8,
+            "color_type": 2,
+            "interlaced": false
+          },
+          "native_mode": "RGB",
+          "quality": {
+            "width": 1000,
+            "height": 1000,
+            "channel_mean": [
+              146.510056,
+              149.914428,
+              138.621576
+            ],
+            "channel_std": [
+              42.99986080064877,
+              37.24224248662201,
+              40.7657435020589
+            ],
+            "gray_std": 40.05974261369081,
+            "near_black_fraction": 0.0,
+            "near_white_fraction": 0.004445,
+            "nonblank": true
+          },
+          "decoded_RGB_sha256": "fa4a228de41762d2fc1cef7e53aee24e44609f46f0e793063871e3f6e41abae9",
+          "alternate_mean": [
+            146.510056,
+            149.914428,
+            138.621576
+          ],
+          "alternate_std": [
+            42.99986080066848,
+            37.242242486628214,
+            40.765743502065824
+          ],
+          "image_info": {},
+          "exif_tags": [],
+          "exif_orientation": null,
+          "GPS_EXIF_present": false,
+          "actual_decodes": 1
+        }
+      },
+      "geometry": {
+        "variants": {
+          "raw": {
+            "x": 390.0,
+            "y": 476.0,
+            "inside": true,
+            "dx": -110,
+            "dy": 24,
+            "heading_label": 147.54645534327645,
+            "camera_latlon": [
+              50.040099665825,
+              19.809635484078
+            ],
+            "border_clearance_px": 390.0
+          },
+          "opensfm": {
+            "x": 585.0,
+            "y": 531.0,
+            "inside": true,
+            "dx": 85,
+            "dy": -31,
+            "heading_label": 155.92441106602644,
+            "camera_latlon": [
+              50.040050063185,
+              19.809907369378
+            ],
+            "border_clearance_px": 414.0
+          }
+        },
+        "K_status": {
+          "present": true,
+          "valid_matrix": true,
+          "image_dimensions_verified": true,
+          "principal_inside_pixels": true,
+          "aligned_to_given_pixels": false,
+          "usable_calibration": false
+        },
+        "principal_matches_actual_image_center_within1px": true,
+        "implied_horizontal_FoV_deg_if_K_applies": 62.16900402631986,
+        "K_pixel_chain_provenance_verified": false,
+        "projection_type_verified_from_calibration": false,
+        "metric_extent_from_label_m": [
+          100.0,
+          100.0
+        ],
+        "north_up_label_convention": "dx east, dy north; raster north-up not independently surveyed",
+        "absolute_raster_georeference_verified": false,
+        "both_pose_points_inside": true
+      },
+      "engineering_nonblank_and_points_inside": true,
+      "role": "consumed_pixel_engineering_unassigned_to_training",
+      "training_admitted": false,
+      "projection_visual_review_pending": true
+    },
+    {
+      "city": "stockholm",
+      "category": "mapillary/cities/SE/stockholm",
+      "label_member": "OpenCVL_sample_data/mapillary/cities/SE/stockholm/labels.json",
+      "row_index": 0,
+      "label": {
+        "country": "SE",
+        "city": "stockholm",
+        "mapil_image_id": "1000081124702485",
+        "mapil_image": "ground/1000081124702485.png",
+        "aerial_image": "aerial/1000081124702485.png",
+        "resolution": 0.06702412868632708,
+        "dx_mapilraw": -163,
+        "dy_mapilraw": 36,
+        "heading_mapilraw": 264.0915730787645,
+        "K": [
+          [
+            394.4310302734375,
+            0.0,
+            476.0
+          ],
+          [
+            0.0,
+            391.8530578613281,
+            266.0
+          ],
+          [
+            0.0,
+            0.0,
+            1.0
+          ]
+        ],
+        "max_offset_m": 20.0,
+        "ground_latlon": [
+          59.27806071,
+          18.02836816
+        ],
+        "ground_latlon_mapilraw": [
+          59.27806071,
+          18.02836816
+        ],
+        "ground_latlon_mapilopensfm": [
+          59.278020973392,
+          18.028598054197
+        ],
+        "heading_mapilopensfm": 263.61414245975453,
+        "dx_mapilopensfm": 33,
+        "dy_mapilopensfm": -30,
+        "pose_mapilopensfm_available": true,
+        "heading_mapilraw_before_meridian_is_zero": false,
+        "mapillary_creator_id": "101012259077733"
+      },
+      "images": {
+        "ground": {
+          "file": {
+            "path": "DATA/processed_data/OpenCVL/三城市照片与空间标签预检_v1/输入/stockholm_ground.png",
+            "bytes": 681926,
+            "sha256": "38fad7ce909eb8d56cb91cc56355a12d57ab163c291038f805b5130feb769834"
+          },
+          "member": {
+            "name": "OpenCVL_sample_data/mapillary/cities/SE/stockholm/ground/1000081124702485.png",
+            "flags": 8,
+            "compression": 8,
+            "crc32": "89201b3d",
+            "compressed_bytes": 670280,
+            "bytes": 681926,
+            "local_offset": 20023420,
+            "external_attrs": 2175008768
+          },
+          "png": {
+            "width": 952,
+            "height": 532,
+            "bit_depth": 8,
+            "color_type": 2,
+            "interlaced": false
+          },
+          "native_mode": "RGB",
+          "quality": {
+            "width": 952,
+            "height": 532,
+            "channel_mean": [
+              110.84099363429583,
+              112.5890981392557,
+              116.46214735894358
+            ],
+            "channel_std": [
+              71.80197484143896,
+              71.60115215704985,
+              80.01511480356773
+            ],
+            "gray_std": 74.02677056636136,
+            "near_black_fraction": 0.0,
+            "near_white_fraction": 0.002087019018133569,
+            "nonblank": true
+          },
+          "decoded_RGB_sha256": "dc3e7888921160da8411219be5c862eb9544f92d2443aabe2b065537e6ddeb47",
+          "alternate_mean": [
+            110.84099363429583,
+            112.5890981392557,
+            116.46214735894358
+          ],
+          "alternate_std": [
+            71.80197484143866,
+            71.60115215706642,
+            80.01511480358954
+          ],
+          "image_info": {},
+          "exif_tags": [],
+          "exif_orientation": null,
+          "GPS_EXIF_present": false,
+          "actual_decodes": 1
+        },
+        "aerial": {
+          "file": {
+            "path": "DATA/processed_data/OpenCVL/三城市照片与空间标签预检_v1/输入/stockholm_aerial.png",
+            "bytes": 552052,
+            "sha256": "e2b4ef27134b5920b08686dd33e45593138939783f86960f19716bc1806e30c4"
+          },
+          "member": {
+            "name": "OpenCVL_sample_data/mapillary/cities/SE/stockholm/aerial/1000081124702485.png",
+            "flags": 8,
+            "compression": 8,
+            "crc32": "654bba2f",
+            "compressed_bytes": 551525,
+            "bytes": 552052,
+            "local_offset": 22070809,
+            "external_attrs": 2175008768
+          },
+          "png": {
+            "width": 625,
+            "height": 625,
+            "bit_depth": 8,
+            "color_type": 2,
+            "interlaced": false
+          },
+          "native_mode": "RGB",
+          "quality": {
+            "width": 625,
+            "height": 625,
+            "channel_mean": [
+              67.91979776,
+              79.01518592,
+              77.03267072
+            ],
+            "channel_std": [
+              35.18892823489629,
+              30.51601575743807,
+              28.959056384904766
+            ],
+            "gray_std": 31.335377173912413,
+            "near_black_fraction": 0.0,
+            "near_white_fraction": 0.0,
+            "nonblank": true
+          },
+          "decoded_RGB_sha256": "631941b3d5284b3da49d5748ba467d8c1cb269f1c16991f834b3b7d9b7ad8ebe",
+          "alternate_mean": [
+            67.91979776,
+            79.01518592,
+            77.03267072
+          ],
+          "alternate_std": [
+            35.18892823489654,
+            30.51601575743192,
+            28.959056384904105
+          ],
+          "image_info": {},
+          "exif_tags": [],
+          "exif_orientation": null,
+          "GPS_EXIF_present": false,
+          "actual_decodes": 1
+        }
+      },
+      "geometry": {
+        "variants": {
+          "raw": {
+            "x": 149.5,
+            "y": 276.5,
+            "inside": true,
+            "dx": -163,
+            "dy": 36,
+            "heading_label": 264.0915730787645,
+            "camera_latlon": [
+              59.27806071,
+              18.02836816
+            ],
+            "border_clearance_px": 149.5
+          },
+          "opensfm": {
+            "x": 345.5,
+            "y": 342.5,
+            "inside": true,
+            "dx": 33,
+            "dy": -30,
+            "heading_label": 263.61414245975453,
+            "camera_latlon": [
+              59.278020973392,
+              18.028598054197
+            ],
+            "border_clearance_px": 278.5
+          }
+        },
+        "K_status": {
+          "present": true,
+          "valid_matrix": true,
+          "image_dimensions_verified": true,
+          "principal_inside_pixels": true,
+          "aligned_to_given_pixels": false,
+          "usable_calibration": false
+        },
+        "principal_matches_actual_image_center_within1px": true,
+        "implied_horizontal_FoV_deg_if_K_applies": 100.7072209076462,
+        "K_pixel_chain_provenance_verified": false,
+        "projection_type_verified_from_calibration": false,
+        "metric_extent_from_label_m": [
+          41.89008042895443,
+          41.89008042895443
+        ],
+        "north_up_label_convention": "dx east, dy north; raster north-up not independently surveyed",
+        "absolute_raster_georeference_verified": false,
+        "both_pose_points_inside": true
+      },
+      "engineering_nonblank_and_points_inside": true,
+      "role": "consumed_pixel_engineering_unassigned_to_training",
+      "training_admitted": false,
+      "projection_visual_review_pending": true
+    }
+  ],
+  "contact_sheet": {
+    "path": "DATA/processed_data/OpenCVL/三城市照片与空间标签预检_v1/核验/三城市固定样例接触表.png",
+    "bytes": 909224,
+    "sha256": "d0ccd73ebb4cb2c08ad029d776963a117fcb7918f8d2a6aea1daa8be2d0e67b4"
+  },
+  "network_body_bytes": 7579761,
+  "proxy": "http://127.0.0.1:7897",
+  "downloaded_full_archive": false,
+  "upstream_test_images_read": 0,
+  "old_pixels_reread": 0,
+  "all_basic_pixel_engineering_passed": true,
+  "calibrated_input_admitted": false,
+  "independent_camera_accuracy_claim": false,
+  "training_admitted": false,
+  "actual_storage_bytes": 8813444
+}

@@ -1,0 +1,42 @@
+{
+  "task": "CV-002",
+  "date": "2026-10-16",
+  "pairs": 16,
+  "aerial_inputs": 400,
+  "ground_inputs": 16,
+  "conditions": [
+    "Full",
+    "Mean",
+    "Wrong"
+  ],
+  "dev_groups": 10,
+  "reserved_groups": 20,
+  "scoring": "L2-normalized 512D cosine; float64 diagnostic arithmetic",
+  "mean": "mean of 16 normalized development ground vectors, L2 normalized",
+  "wrong": "fixed different development group target; no extra encoded images",
+  "ties": "sort by decreasing score then SHA256(CV-002/tie/v1:pair_id:cell_index); never by truth",
+  "ground_preprocessing": "EXIF transpose, PIL shortest-edge 224 BICUBIC, center crop 224, official CLIP mean/std; matches explicit HF PIL reference",
+  "aerial_preprocessing": "PIL square224 BICUBIC; bound Sat2Cap mean/std",
+  "batch_size": 8,
+  "maximum_forward_attempts_inputs": 416,
+  "cuda_allocation_limit_bytes": 2147483648,
+  "device_rule": "CUDA if free memory >=2560MiB at run start, otherwise CPU; no post-score device/model selection",
+  "training_steps": 0,
+  "navigation_episodes": 0,
+  "model_api_calls": 0,
+  "output_limit_bytes": 16777216,
+  "candidate_gates": {
+    "all_16_complete": true,
+    "full_top1_minimum": 4,
+    "full_minus_mean_minimum": 2,
+    "full_minus_wrong_minimum": 2,
+    "groups_net_better_than_both_minimum": 3
+  },
+  "stopping": "one candidate; no tuning or reserved encoding after results; Top-k is not SR",
+  "ground_model": "models/clip_vit_b32_public_v1/pytorch_model.bin; vision_model.* + visual_projection.* only, strict load",
+  "aerial_model": "models/Sat2Cap/model.safetensors; frozen",
+  "runtime_input": "pixels only, metadata sanitized; candidate bank allowed only to offline evaluator, never online agent",
+  "geometry": "image coordinates, numeric first index is row; code-based (5,5) label not externally surveyed; no metric SG",
+  "authority": "user started CV-002 and explicitly approved one official CLIP download",
+  "engineering_repair": "核验/预处理修复_v2.json; no threshold, model, source or task changes"
+}

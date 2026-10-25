@@ -1,0 +1,54 @@
+{
+  "task": "CV-025",
+  "stage": "pre-first-forward engineering repair",
+  "original_binding": {
+    "path": "DATA/processed_data/MM-GAG/地面目标实时编码接口工程_v1/首forward绑定.json",
+    "sha256": "968e18588f88ead49718dcc8f83cb52b5d81d9a7cc73fefce4f138c3ba6c6ab2",
+    "bytes": 35878
+  },
+  "prior_failure": {
+    "path": "DATA/processed_data/MM-GAG/地面目标实时编码接口工程_v1/工程中断.json",
+    "sha256": "3e117424bf985c43f8c139c492fc1f47f165effcc0947bdeb901371418347450",
+    "bytes": 180
+  },
+  "sources": [
+    {
+      "path": "project/src/agents/frozen_crossview_encoder_v2.py",
+      "sha256": "43331f592492458228c417987207fc47dbee1a262f7c116c800526a6c66360bc",
+      "bytes": 4260
+    },
+    {
+      "path": "project/src/tests/test_ground_encoding_v2.py",
+      "sha256": "22bbf1a0c626a6906573b240014161a0f249093d57e5def20de7fb018ce27ca9",
+      "bytes": 2280
+    },
+    {
+      "path": "project/src/tools/verify_ground_encoding_v2.py",
+      "sha256": "73815a3a46eb63c6052c7459fa3ea38f7c32d41c745e3e66697cecb11128134b",
+      "bytes": 10498
+    },
+    {
+      "path": "project/src/documents/close_ground_encoding_v2.py",
+      "sha256": "6cf6c64b9ba36c1b532561ec3e11e0e874d361ba4101edb63adc6aa639bc44a4",
+      "bytes": 9365
+    }
+  ],
+  "changes": [
+    "meta model construction",
+    "load_state_dict strict assign reuses CPU tensor storage",
+    "one live encoder at a time"
+  ],
+  "unchanged": [
+    "model architecture/tensors",
+    "8fixed inputs",
+    "preprocessing",
+    "error/cosine thresholds",
+    "3GiB RSS cap"
+  ],
+  "prior_actual_forward_calls": 0,
+  "remaining_actual_forward_calls": 8,
+  "prior_failed_elapsed_seconds": 101.96288279999862,
+  "cumulative_encoding_time_limit_seconds": 600,
+  "v1_execute_must_not_rerun": true,
+  "stop_if_repair_fails": true
+}

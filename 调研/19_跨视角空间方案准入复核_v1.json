@@ -1,0 +1,87 @@
+{
+  "passed": true,
+  "local_inputs_verified": 12,
+  "source_bindings_verified": 2,
+  "model_admission": {
+    "CCVPE": {
+      "autonomous_navigation_admitted": false,
+      "missing_or_incompatible": [
+        "checkpoint_identity_verified",
+        "ordinary_photo_adapter_verified",
+        "goal_semantics_verified",
+        "local_information_only_verified",
+        "outside_or_negative_behavior_verified",
+        "resource_measurement_passed",
+        "inside_reference_model_is_not_an_outside_target_direction_policy"
+      ]
+    },
+    "TUCVPE": {
+      "autonomous_navigation_admitted": false,
+      "missing_or_incompatible": [
+        "official_code_verified",
+        "checkpoint_identity_verified",
+        "ordinary_photo_adapter_verified",
+        "goal_semantics_verified",
+        "local_information_only_verified",
+        "outside_or_negative_behavior_verified",
+        "resource_measurement_passed",
+        "inside_reference_model_is_not_an_outside_target_direction_policy"
+      ]
+    },
+    "SliceMatch": {
+      "autonomous_navigation_admitted": false,
+      "missing_or_incompatible": [
+        "official_code_verified",
+        "checkpoint_identity_verified",
+        "ordinary_photo_adapter_verified",
+        "goal_semantics_verified",
+        "local_information_only_verified",
+        "outside_or_negative_behavior_verified",
+        "resource_measurement_passed",
+        "inside_reference_model_is_not_an_outside_target_direction_policy"
+      ]
+    },
+    "ViewBridge": {
+      "autonomous_navigation_admitted": false,
+      "missing_or_incompatible": [
+        "official_code_verified",
+        "checkpoint_identity_verified",
+        "ordinary_photo_adapter_verified",
+        "goal_semantics_verified",
+        "local_information_only_verified",
+        "outside_or_negative_behavior_verified",
+        "resource_measurement_passed",
+        "inside_reference_model_is_not_an_outside_target_direction_policy"
+      ]
+    },
+    "GAGeo": {
+      "autonomous_navigation_admitted": false,
+      "missing_or_incompatible": [
+        "official_code_verified",
+        "checkpoint_identity_verified",
+        "ordinary_photo_adapter_verified",
+        "goal_semantics_verified",
+        "local_information_only_verified",
+        "outside_or_negative_behavior_verified",
+        "resource_measurement_passed",
+        "inside_reference_model_is_not_an_outside_target_direction_policy"
+      ]
+    }
+  },
+  "supervision_admission": {
+    "metadata_precheck_candidate": true,
+    "training_admitted": false,
+    "missing_actual_evidence": [
+      "local_examples_hash_verified",
+      "local_label_mapping_verified",
+      "project_source_roles_frozen",
+      "outside_and_unrelated_labels_verified"
+    ]
+  },
+  "metadata_only": true,
+  "public_pointer_matches_prior_local_weight_binding": true,
+  "current_weight_bytes_not_read": true,
+  "same_agent_not_independent_person": true,
+  "actual_new_model_calls": 0,
+  "actual_navigation": 0
+}

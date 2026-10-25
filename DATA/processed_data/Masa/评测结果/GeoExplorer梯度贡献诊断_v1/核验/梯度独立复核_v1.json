@@ -1,0 +1,444 @@
+{
+  "status": "passed",
+  "samples_checked": 654,
+  "input_hashes_checked": 654,
+  "fit_sources": 109,
+  "QA_cases": 6,
+  "summary": [
+    {
+      "stage": "initialization_reference",
+      "group": "backbone",
+      "samples": 327,
+      "fit_source_groups": 109,
+      "median_state_action_norm": 0.10910188441464834,
+      "ratio_p05_p95": [
+        0.08313478119787412,
+        0.15068086534295796
+      ],
+      "median_gradient_cosine": -0.0014818719614685101,
+      "negative_gradient_dot_rate": 0.5198776758409785,
+      "baseline_BCE_ascent_rate": 0.0,
+      "lambda01_BCE_ascent_rate": 0.0,
+      "baseline_harmed_count": 0,
+      "restored_harmed_count": 0,
+      "restored_harmed_fraction": null,
+      "ascent_rate_reduction": 0.0,
+      "ascent_reduction_source_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "median_ratio": 0.11137985045104773,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 1,
+          "median_ratio": 0.1105229447466267,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 2,
+          "median_ratio": 0.10720932739473371,
+          "BCE_ascent_rate": 0.0
+        }
+      ],
+      "median_action_loss": 0.7044987678527832,
+      "median_state_loss": 1.0202419757843018
+    },
+    {
+      "stage": "initialization_reference",
+      "group": "output_projection",
+      "samples": 327,
+      "fit_source_groups": 109,
+      "median_state_action_norm": 0.10220515109834455,
+      "ratio_p05_p95": [
+        0.07751534470499534,
+        0.142200397254526
+      ],
+      "median_gradient_cosine": 0.002233406529829366,
+      "negative_gradient_dot_rate": 0.4648318042813456,
+      "baseline_BCE_ascent_rate": 0.0,
+      "lambda01_BCE_ascent_rate": 0.0,
+      "baseline_harmed_count": 0,
+      "restored_harmed_count": 0,
+      "restored_harmed_fraction": null,
+      "ascent_rate_reduction": 0.0,
+      "ascent_reduction_source_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "median_ratio": 0.10399497651129243,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 1,
+          "median_ratio": 0.1012697302952594,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 2,
+          "median_ratio": 0.09918520297935807,
+          "BCE_ascent_rate": 0.0
+        }
+      ],
+      "median_action_loss": 0.7044987678527832,
+      "median_state_loss": 1.0202419757843018
+    },
+    {
+      "stage": "initialization_reference",
+      "group": "layer_norm",
+      "samples": 327,
+      "fit_source_groups": 109,
+      "median_state_action_norm": 1.2327702359982142,
+      "ratio_p05_p95": [
+        1.0223588006422364,
+        1.6709606566696025
+      ],
+      "median_gradient_cosine": 0.006603177198690471,
+      "negative_gradient_dot_rate": 0.43425076452599387,
+      "baseline_BCE_ascent_rate": 0.0,
+      "lambda01_BCE_ascent_rate": 0.0,
+      "baseline_harmed_count": 0,
+      "restored_harmed_count": 0,
+      "restored_harmed_fraction": null,
+      "ascent_rate_reduction": 0.0,
+      "ascent_reduction_source_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "median_ratio": 1.2880554144644738,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 1,
+          "median_ratio": 1.2036784624112318,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 2,
+          "median_ratio": 1.2066863139128854,
+          "BCE_ascent_rate": 0.0
+        }
+      ],
+      "median_action_loss": 0.7044987678527832,
+      "median_state_loss": 1.0202419757843018
+    },
+    {
+      "stage": "initialization_reference",
+      "group": "direction_head",
+      "samples": 327,
+      "fit_source_groups": 109,
+      "median_state_action_norm": 0.0,
+      "ratio_p05_p95": [
+        0.0,
+        0.0
+      ],
+      "median_gradient_cosine": null,
+      "negative_gradient_dot_rate": 0.0,
+      "baseline_BCE_ascent_rate": 0.0,
+      "lambda01_BCE_ascent_rate": 0.0,
+      "baseline_harmed_count": 0,
+      "restored_harmed_count": 0,
+      "restored_harmed_fraction": null,
+      "ascent_rate_reduction": 0.0,
+      "ascent_reduction_source_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "median_ratio": 0.0,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 1,
+          "median_ratio": 0.0,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 2,
+          "median_ratio": 0.0,
+          "BCE_ascent_rate": 0.0
+        }
+      ],
+      "median_action_loss": 0.7044987678527832,
+      "median_state_loss": 1.0202419757843018
+    },
+    {
+      "stage": "initialization_reference",
+      "group": "all_shared",
+      "samples": 327,
+      "fit_source_groups": 109,
+      "median_state_action_norm": 0.10949322510853851,
+      "ratio_p05_p95": [
+        0.08315707212111724,
+        0.15104961892952976
+      ],
+      "median_gradient_cosine": -0.0009293786429474185,
+      "negative_gradient_dot_rate": 0.5137614678899083,
+      "baseline_BCE_ascent_rate": 0.0,
+      "lambda01_BCE_ascent_rate": 0.0,
+      "baseline_harmed_count": 0,
+      "restored_harmed_count": 0,
+      "restored_harmed_fraction": null,
+      "ascent_rate_reduction": 0.0,
+      "ascent_reduction_source_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "median_ratio": 0.11142705576280233,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 1,
+          "median_ratio": 0.11002718244123347,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 2,
+          "median_ratio": 0.10717542012230989,
+          "BCE_ascent_rate": 0.0
+        }
+      ],
+      "median_action_loss": 0.7044987678527832,
+      "median_state_loss": 1.0202419757843018
+    },
+    {
+      "stage": "epoch300",
+      "group": "backbone",
+      "samples": 327,
+      "fit_source_groups": 109,
+      "median_state_action_norm": 0.03327237352077913,
+      "ratio_p05_p95": [
+        0.01773154222357171,
+        0.06802489712069097
+      ],
+      "median_gradient_cosine": -0.01552887753132776,
+      "negative_gradient_dot_rate": 0.5443425076452599,
+      "baseline_BCE_ascent_rate": 0.0,
+      "lambda01_BCE_ascent_rate": 0.0,
+      "baseline_harmed_count": 0,
+      "restored_harmed_count": 0,
+      "restored_harmed_fraction": null,
+      "ascent_rate_reduction": 0.0,
+      "ascent_reduction_source_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "median_ratio": 0.029507104931869907,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 1,
+          "median_ratio": 0.0340017741553173,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 2,
+          "median_ratio": 0.03501962073305307,
+          "BCE_ascent_rate": 0.0
+        }
+      ],
+      "median_action_loss": 0.6408354640007019,
+      "median_state_loss": 0.8824977874755859
+    },
+    {
+      "stage": "epoch300",
+      "group": "output_projection",
+      "samples": 327,
+      "fit_source_groups": 109,
+      "median_state_action_norm": 0.09052104253001743,
+      "ratio_p05_p95": [
+        0.054330678083319435,
+        0.1815732479045248
+      ],
+      "median_gradient_cosine": -0.00027228346722115733,
+      "negative_gradient_dot_rate": 0.5076452599388379,
+      "baseline_BCE_ascent_rate": 0.0,
+      "lambda01_BCE_ascent_rate": 0.0,
+      "baseline_harmed_count": 0,
+      "restored_harmed_count": 0,
+      "restored_harmed_fraction": null,
+      "ascent_rate_reduction": 0.0,
+      "ascent_reduction_source_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "median_ratio": 0.09328496887829196,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 1,
+          "median_ratio": 0.08952812298422186,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 2,
+          "median_ratio": 0.08947163331958911,
+          "BCE_ascent_rate": 0.0
+        }
+      ],
+      "median_action_loss": 0.6408354640007019,
+      "median_state_loss": 0.8824977874755859
+    },
+    {
+      "stage": "epoch300",
+      "group": "layer_norm",
+      "samples": 327,
+      "fit_source_groups": 109,
+      "median_state_action_norm": 1.5024591889848087,
+      "ratio_p05_p95": [
+        0.941205935283819,
+        2.8183161007876167
+      ],
+      "median_gradient_cosine": -0.004707832773542742,
+      "negative_gradient_dot_rate": 0.5198776758409785,
+      "baseline_BCE_ascent_rate": 0.0,
+      "lambda01_BCE_ascent_rate": 0.0,
+      "baseline_harmed_count": 0,
+      "restored_harmed_count": 0,
+      "restored_harmed_fraction": null,
+      "ascent_rate_reduction": 0.0,
+      "ascent_reduction_source_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "median_ratio": 1.519909927206439,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 1,
+          "median_ratio": 1.4593836393443809,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 2,
+          "median_ratio": 1.516392516995036,
+          "BCE_ascent_rate": 0.0
+        }
+      ],
+      "median_action_loss": 0.6408354640007019,
+      "median_state_loss": 0.8824977874755859
+    },
+    {
+      "stage": "epoch300",
+      "group": "direction_head",
+      "samples": 327,
+      "fit_source_groups": 109,
+      "median_state_action_norm": 0.0,
+      "ratio_p05_p95": [
+        0.0,
+        0.0
+      ],
+      "median_gradient_cosine": null,
+      "negative_gradient_dot_rate": 0.0,
+      "baseline_BCE_ascent_rate": 0.0,
+      "lambda01_BCE_ascent_rate": 0.0,
+      "baseline_harmed_count": 0,
+      "restored_harmed_count": 0,
+      "restored_harmed_fraction": null,
+      "ascent_rate_reduction": 0.0,
+      "ascent_reduction_source_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "median_ratio": 0.0,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 1,
+          "median_ratio": 0.0,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 2,
+          "median_ratio": 0.0,
+          "BCE_ascent_rate": 0.0
+        }
+      ],
+      "median_action_loss": 0.6408354640007019,
+      "median_state_loss": 0.8824977874755859
+    },
+    {
+      "stage": "epoch300",
+      "group": "all_shared",
+      "samples": 327,
+      "fit_source_groups": 109,
+      "median_state_action_norm": 0.03741522311418136,
+      "ratio_p05_p95": [
+        0.020449781675486823,
+        0.07539451127707451
+      ],
+      "median_gradient_cosine": -0.013637467447906785,
+      "negative_gradient_dot_rate": 0.5443425076452599,
+      "baseline_BCE_ascent_rate": 0.0,
+      "lambda01_BCE_ascent_rate": 0.0,
+      "baseline_harmed_count": 0,
+      "restored_harmed_count": 0,
+      "restored_harmed_fraction": null,
+      "ascent_rate_reduction": 0.0,
+      "ascent_reduction_source_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "median_ratio": 0.03312103867349968,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 1,
+          "median_ratio": 0.03790623416746349,
+          "BCE_ascent_rate": 0.0
+        },
+        {
+          "seed": 2,
+          "median_ratio": 0.03897785870075548,
+          "BCE_ascent_rate": 0.0
+        }
+      ],
+      "median_action_loss": 0.6408354640007019,
+      "median_state_loss": 0.8824977874755859
+    }
+  ],
+  "primary_gate_checks": {
+    "backbone_state_gradient_dominance": false,
+    "baseline_backbone_BCE_ascent": false,
+    "at_least_two_seeds": false,
+    "restores_harmed": false,
+    "source_interval_positive": false
+  },
+  "loss_weight_candidate_screen_passed": false,
+  "gate_scope": "Fit gradient mechanism screen, not validation of convergence/SR or causal source of failure",
+  "protocol_sha256": "396e6a44378ff2901a524363c5713d18be4a5c0e003acd1df30b4ddce8ecdd2c",
+  "audit_source_sha256": "ddc4c6a4b796a6d80ca8bf9682ba9b1995840560373d645ee609c1530f90d3ce",
+  "model_forward": 0,
+  "backward_calls": 0,
+  "new_navigation": 0,
+  "independent_person_review": false
+}

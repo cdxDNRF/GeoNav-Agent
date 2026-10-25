@@ -1,0 +1,92 @@
+{
+  "template": {
+    "source": "课程相关报告模版/综合工程设计-3-总结报告.docx",
+    "sha256": "669eae2df76c4442aea5e1c809413fad3b2e24253e63843bf80a386c810a2891",
+    "nonempty_paragraphs": [
+      "计算机科学与技术学院",
+      "大数据智能方向综合工程设计技术报告",
+      "题     目：",
+      "姓     名：            学号",
+      "姓     名：            学号",
+      "姓     名：            学号",
+      "指导老师：",
+      "起止时间：       年   月 至       年   月",
+      "技术报告要求不少于8000字",
+      "摘要（中、英文）",
+      "绪论",
+      "研究目的与意义",
+      "国内外研究现状",
+      "第二章 系统需求分析 算法的理论基础",
+      "第三章 系统软件设计与实现（算法的总体设计与实现）",
+      "第四章 系统调试与测试（实验与实验结果分析）",
+      "第五章 总结",
+      "参考文献"
+    ],
+    "minimum": 8000
+  },
+  "references": [
+    {
+      "source": "gomaa_pdf",
+      "path": "论文/GOMAA-Geo.pdf",
+      "sha256": "c3066cbb11f0e53d36e4a7e414a77a1a959b9053ea5467e1a6eeaeaf33a0287e",
+      "title": "GOMAA-Geo: GOal Modality Agnostic Active Geo-localization",
+      "page_count": 23,
+      "first_page_excerpt": "GOMAA-Geo: GOal Modality Agnostic Active\nGeo-localization\nAnindya Sarkar1∗, Srikumar Sastry1∗, Aleksis Pirinen2,\nChongjie Zhang1, Nathan Jacobs1, Yevgeniy Vorobeychik1\n1Department of Computer Science and Engineering, Washington University in St. Louis\n2RISE Research Institutes of Sweden\nCorresponding authors:\n{anindya, s.sastry}@wustl.edu\nAbstract\nWe consider the task of active geo-localization (AGL) in which an agent uses a\nsequence of visual cues observed during aerial navigation to find a target specified\nthrough multiple possible modalities. This could emulate a UAV involved in a\nsearch-and-rescue operation navigating through an area, observing a stream of\naerial images as it goes. The AGL task is associated with two important challenges.\nFirstly, an agent must deal with a goal specification in one of multiple modalities\n(e.g., through a natural language description) while the search cues are provided in\nother modalities (aerial imagery). The second challenge is limited localization time\n(e.g., limited battery life, urgency) so that the goal must be localized as efficiently\nas possible, i.e. the agent must effectively leverage its sequentially observed aerial\nviews when searching for the goal. To address these challenges, we propose\nGOMAA-Geo – a goal modality agnostic active geo-localization agent – for zero-\nshot generalization between different goal modalities. Our approach combines\ncross-modality contrastive learning to align representations across modalities with\nsupervised foundation model pretraining and reinforcement learning to obtain\nhighly effective navigation and localization policies. Through extensive evaluations,\nwe show that GOMAA-Geo outperforms alternative learnable approaches and that\nit generalizes across datasets – e.g., to disaster-hit areas without seeing a single\ndisaster scenario during training – and goal modalities – e.g., to ground-level\nimagery or textual descriptions, despite only being trained with goals specified as\naerial views. Code and models will be made publicly available at this link.\n1\nIntroduction\nA common objective among many search-and-rescue (SAR) operations is to locate missing individuals\nwithin a defined search area, such as a specific neighborhood. To this end, one may leverage indirect\ninformation about the location of these individuals that may come from natural language descriptions,\nphotographs, etc, e.g. through social media or eyewitness accounts. However, such information may\nnot allow us to precisely identify actual locations (for example, these may not be provided on social\nmedia), and potential GPS information may be unreliable. In such situations, deploying a UAV to\nexplore the area from an aerial perspective can be effective for accurate localization and subsequent\nassistance to those who are missing. However, the field of view of a UAV is typically limited (at\nleast in comparison with the area to be explored), and the inherent urgency of search-and-rescue\ntasks imposes an effective temporal budget constraint. We refer to this general task and modeling\nframework as goal modality agnostic active geo-localization. Pirinen et al. [23] recently introduced a\ndeep reinforcement learning (DRL) approach for a significantly simpler version of this setup, where\n∗Equal contribution.\nPrepri",
+      "verified_scope": "local PDF title/abstract only; not journal metadata or numerical table equivalence",
+      "formal_reference_fields_pending": "venue/year/volume/pages/DOI/version to verify in FINAL-002"
+    },
+    {
+      "source": "geo_pdf",
+      "path": "论文/GeoExplorer.pdf",
+      "sha256": "391d6e67618689522fc4aa19097abe1b24dbfbc74732babdc247cbe32e1de09f",
+      "title": "GeoExplorer: Active Geo-localization with Curiosity-Driven Exploration",
+      "page_count": 22,
+      "first_page_excerpt": "GeoExplorer: Active Geo-localization with Curiosity-Driven Exploration\nLi Mi, Manon B´echaz, Zeming Chen, Antoine Bosselut, Devis Tuia\nEPFL, Switzerland\nhttps://limirs.github.io/GeoExplorer/\nAbstract\nActive Geo-localization (AGL) is the task of localizing a\ngoal, represented in various modalities (e.g., aerial images,\nground-level images, or text), within a predefined search\narea. Current methods approach AGL as a goal-reaching\nreinforcement learning (RL) problem with a distance-based\nreward. They localize the goal by implicitly learning to min-\nimize the relative distance from it. However, when distance\nestimation becomes challenging or when encountering un-\nseen targets and environments, the agent exhibits reduced\nrobustness and generalization ability due to the less reliable\nexploration strategy learned during training. In this paper,\nwe propose GeoExplorer, an AGL agent that incorporates\ncuriosity-driven exploration through intrinsic rewards. Un-\nlike distance-based rewards, our curiosity-driven reward is\ngoal-agnostic, enabling robust, diverse, and contextually\nrelevant exploration based on effective environment model-\ning. These capabilities have been proven through extensive\nexperiments across four AGL benchmarks, demonstrating\nthe effectiveness and generalization ability of GeoExplorer\nin diverse settings, particularly in localizing unfamiliar tar-\ngets and environments.\n1. Introduction\nGuiding unmanned aerial vehicles (UAVs) is essential in\nsearch-and-rescue operations, which necessitate UAVs to\nscreen affected areas and locate missing individuals or dam-\naged structures [23, 26].\nInstead of conducting exhaus-\ntive searches across entire regions, UAVs can be actively\nguided using available information: one could use coordi-\nnates of the point of interest, historical aerial imagery, or\neven ground photographs or textual descriptions [29, 33].\nThe problem is known in computer vision as Active\nGeo-Localization (AGL) [29, 33] within a goal-reaching\nreinforcement learning (RL) context (Figure 1 (a)). AGL\nfocuses on localizing a target (goal), within a predefined\nsearch area (environment) presented in the bird’s eye view,\nby navigating the agent towards it. At a given time, the\nagent observes a state, i.e., a patch representing a limited\nFigure 1. GeoExplorer combines goal-oriented and curiosity-\ndriven rewards to address AGL. (a) Task setting. Given a start-\ning patch (◦) and a predefined search area (environment), AGL\naims at localizing a goal (△), by guiding an agent towards it. At\na given time, the agent observes a state and selects an action. The\ngoal location is unknown for inference. (b) Goal modalities. The\ngoal can be presented in various modalities including aerial images\n(I), ground-level images (G) and text (T), associated with a patch\nin the area. (c) GeoExplorer. The learning process of GeoEx-\nplorer is guided by two rewards: 1) a goal-oriented distance-based\nreward, as in previous methods, which directs the agent toward\nthe goal, and 2) a goal-agnostic, curiosity-driven reward that en-\ncourages the agent to explore the environment based on curiosity\nmeasured by similarity of state prediction and observation.\nobservation of the environment, and selects an action, i.e.,\na decision that modifies the agent position and the obs",
+      "verified_scope": "local PDF title/abstract only; not journal metadata or numerical table equivalence",
+      "formal_reference_fields_pending": "venue/year/volume/pages/DOI/version to verify in FINAL-002"
+    },
+    {
+      "source": "dyncur_pdf",
+      "path": "论文/DynCur-Geo.pdf",
+      "sha256": "abbf401ac45daa1b27e4d90aef5a084357623bd1834f8ef402591835c9650301",
+      "title": "DynCur-Geo: Dynamic Curiosity Reward Shaping for Multimodal Active Geo-Localization",
+      "page_count": 24,
+      "first_page_excerpt": "DynCur-Geo: Dynamic Curiosity Reward Shaping for Multimodal Active\nGeo-Localization\nYiming Sun1, Yang Zhang1, Pengfei Zhu1\n1School of Automation, Southeast University, Nanjing 210096, China\nAbstract\nActive geo-localization enables low-altitude UAVs to search\nfor specified targets from limited local aerial observations,\nsupporting time-sensitive applications such as search and res-\ncue and emergency inspection. However, multimodal target\ncues, restricted views, and sparse feedback make it diffi-\ncult to balance exploration with target convergence. Exist-\ning curiosity-driven methods assign a fixed intrinsic-reward\nweight throughout search, which can continue rewarding nov-\nelty after the agent nears the target and induce detours. We\npropose DynCur-Geo, a dynamic curiosity framework that\nadjusts prediction-error intrinsic reward according to remain-\ning target distance. A distance-aware gate encourages early\nexploration and shifts the policy toward goal-directed be-\nhavior near the target, while potential-based reward shaping\nsupplies dense progress guidance. Experiments across multi-\nmodal, cross-scene, disaster-affected, and long-range settings\nshow consistent gains over active geo-localization baselines.\nIntroduction\nLow-altitude UAVs can search large areas when direct ac-\ncess is difficult or rapid response is required. In search and\nrescue or emergency inspection, however, the target may\nbe absent from the initial view, so the UAV must gather\nevidence, choose movements, and localize the target be-\nfore the search budget is exhausted. This distinguishes ac-\ntive geo-localization (AGL) from conventional visual geo-\nlocalization, where a query is matched against a geotagged\nreference set or mapped to coordinates [3, 5, 11, 12, 34, 35,\n36]. AGL instead poses localization as sequential decisions\nover local aerial observations, making an efficient learned\npolicy essential [16, 20, 22].\nTargets may be specified by a previous aerial crop,\na ground-view photograph, or a short text description.\nGOMAA-Geo [22] extends AGL to this goal-modality-\nagnostic setting, where the policy must align these cues with\nlocal aerial observations. The cue and local views may dif-\nfer strongly in appearance and viewpoint, directional evi-\ndence can remain ambiguous for several steps, and every\nexploratory action consumes budget.\nCuriosity-driven exploration helps under sparse feedback.\nGeoExplorer [16] uses action-state prediction error as an in-\ntrinsic reward and combines it with the external reward using\na fixed curiosity weight throughout search. Although this en-\ncourages informative transitions, prediction error measures\nFigure 1: Motivation for distance-gated curiosity. GeoEx-\nplorer uses a fixed curiosity weight that can weaken late-\nstage convergence by rewarding novelty throughout search\n(orange). Our dynamic gate weights intrinsic reward more\nstrongly far from the target and less near it, promoting explo-\nration followed by goal-directed convergence (blue–green).\nnovelty rather than goal relevance, so it can preserve ex-\nploratory pressure after the policy enters the target neighbor-\nhood, where convergence is more valuable than unfamiliar\nstates.\nTo address this limitation, we propose DynCur-Geo, a\ndynamic curiosity framework for multimodal AGL. Fig. 1\n",
+      "verified_scope": "local PDF title/abstract only; not journal metadata or numerical table equivalence",
+      "formal_reference_fields_pending": "venue/year/volume/pages/DOI/version to verify in FINAL-002"
+    }
+  ],
+  "proposal_goals": [
+    "总体目标：构建局部观测下的主动地理定位实验平台，自主设计零训练的多智能体记忆与层级搜索方法，检验其能否改善定位表现并减少无效探索。这里“零训练”指不进行本课题任务相关的参数训练或微调，不否认基础模型已有预训练。研究目标与创新点均为待验证假设，允许得到不支持假设的结果。具体目标如下：",
+    "平台目标：支持多模态线索、5×5至25×25可配置网格、预算B与初始距离C；记录覆盖范围、单格视野和分辨率，提供SR/SG及轨迹分析，并严格隔离智能体观测与评测真值；",
+    "方法目标：自主设计感知、记忆与决策协调的多智能体基础框架，研究“少走回头路”的episode内记忆与“少走弯路”的层级搜索；GOMAA-Geo作为训练式对照，而非被复现的多智能体原型；",
+    "实验目标：在冻结的本地测试任务上对比Random、受限观测贪心、单智能体及无记忆/无层级搜索消融；训练式基线仅在复现条件与协议对齐后加入。检验大网格SR提高5个百分点、重复访问率相对降低30%的探索性目标，报告不确定性与失败案例，不将其作为已达成结论或必达承诺；",
+    "成果目标：交付可运行的实验平台与方法代码、完整的对比与消融实验分析，以及课程设计报告。"
+  ],
+  "personnel": {
+    "members": [
+      {
+        "name": "陈德昕",
+        "student_id": "23009200711"
+      },
+      {
+        "name": "李世显",
+        "student_id": "23009201269"
+      },
+      {
+        "name": "陈龙辉",
+        "student_id": "23009200692"
+      }
+    ],
+    "supervisor": "王笛",
+    "source": "选题报告相关/最新版选题报告/18-基于主动探索的视觉地理定位方法设计与实现-陈德昕-李世显-陈龙辉.docx",
+    "status": "existing proposal fields; actual division and project start/end dates need team confirmation",
+    "contact_details_copied": false
+  },
+  "local_source_pool_counts": {
+    "train": 137,
+    "val": 4,
+    "test": 10
+  },
+  "counts_scope": "metadata.csv original local pool; not all used in each training or evaluation"
+}

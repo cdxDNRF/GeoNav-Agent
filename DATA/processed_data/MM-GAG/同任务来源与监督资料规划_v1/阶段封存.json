@@ -1,0 +1,105 @@
+{
+  "task": "CV-010",
+  "files": [
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/候选代表与监督引用.json",
+      "sha256": "37a7a092540447701749427fe5b654ec87c92a9f62aef69950e2d41ae052f19f",
+      "bytes": 861639
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/冻结元数据规划范围.json",
+      "sha256": "9f46c538e2989a0580f7dc38a74bbf45e8323809f2a9188fb338f1662c023dcc",
+      "bytes": 1170
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/同任务来源与监督资料规划报告.md",
+      "sha256": "a96145478a21a1489391e1aa7d6f47f44f4baa71ec55062cff00ab95a96f8f59",
+      "bytes": 9349
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/后续工程准入条件.json",
+      "sha256": "47dd7348b9489fe96876f7fed0b65261f60bd5684cd0ab2388f048a37569e3bd",
+      "bytes": 1717
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/坐标与旧哈希分组复核.json",
+      "sha256": "17add43aa2afa1b0a4b1d02388fb7747d1a043b1c6f8c8936fc94b341a3a7a69",
+      "bytes": 416909
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/当前角色与候选容量.json",
+      "sha256": "0f6d6fc10c70dab0cb0aaa451800b9ddf5bb88262dd793b79e3b8cd1fbe36b9e",
+      "bytes": 466
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/待审九五六分组.json",
+      "sha256": "597cdde49bcbbc2b11a125c4c808d0d22eafde8d9fc40bb607652918027d5f26",
+      "bytes": 7878
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/待审用途调整与工程范围.json",
+      "sha256": "468ed5a818ee7c3e046afdcc7569567cddb62d7c3a0701903868b9b4822d6722",
+      "bytes": 1258
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/来源规划阅读页.html",
+      "sha256": "658bf8be62d6253ab924b26a4237e3523e4e3da666d25efda8f1c8fae8b340c8",
+      "bytes": 4775
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/核验/另实现复核.json",
+      "sha256": "0e8a056f06c7fbcb4680a7aab659adc6bec01ee23e53254e6c24530e8fe5c052",
+      "bytes": 598
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/核验/工程测试记录.json",
+      "sha256": "a2b92fd31bbd56141f75a51573fd511ac553bcde6a50d3cd801309a31392fe6d",
+      "bytes": 276
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/规划汇总.json",
+      "sha256": "b1701271a7ee3fa629d58bbc3c46b93d7aa426b6228b2ca2a3eff51a92c4e579",
+      "bytes": 1181
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/输入与源码绑定.json",
+      "sha256": "bd89fef1eaa9f0f7972dd6e45819a674036e35fbb6af753697c9e76c223b294b",
+      "bytes": 16421
+    }
+  ],
+  "sources": [
+    {
+      "path": "project/src/data/capturepoint_partition_v1.py",
+      "sha256": "0def32c6564aab6cdc1b1319073ec3d4b2fd4890579158b832d85ab11dee80b1",
+      "bytes": 5205
+    },
+    {
+      "path": "project/src/tools/plan_capturepoint_sources_v1.py",
+      "sha256": "3060fc0f4e1b9212c3c6c955b9ef681835f5cd96765fb87a402104dd14a94555",
+      "bytes": 14317
+    },
+    {
+      "path": "project/src/eval/audit_capturepoint_sources_v1.py",
+      "sha256": "8f73b7be3a2d517ce7971a96005f6010656938802103d022b4af0b3ba48aa205",
+      "bytes": 11696
+    },
+    {
+      "path": "project/src/tests/test_capturepoint_sources_v1.py",
+      "sha256": "9d4756cb274bd0f0f2504ccb9d039e414fbb338cf4685945c87301782f59f701",
+      "bytes": 3316
+    },
+    {
+      "path": "project/src/documents/close_capturepoint_sources_v1.py",
+      "sha256": "619b3c9fc2d0c1800cdc9e8b82ceb318a6d35133320bfc186e850a09914aa3d5",
+      "bytes": 15396
+    }
+  ],
+  "sealed_bytes": 1323637,
+  "mutable_entries_excluded": [
+    "README.md"
+  ],
+  "roles_changed": false,
+  "model_calls": 0,
+  "raw_image_reads": 0,
+  "recovery": "read-only audit; freeze/build/close consumed, proposal not activation"
+}

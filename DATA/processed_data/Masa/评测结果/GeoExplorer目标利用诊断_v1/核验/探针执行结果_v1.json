@@ -1,0 +1,85 @@
+{
+  "status": "completed_frozen_diagnostic",
+  "elapsed_seconds": 53.18675789999543,
+  "history_forwards": 618,
+  "prediction_rows": 9864,
+  "seeds": [
+    {
+      "seed": 0,
+      "physical_history_calls": 206,
+      "layer_norm": {
+        "weight": {
+          "min": 0.9975773096084595,
+          "p05": 0.9978203475475311,
+          "median": 0.998532772064209,
+          "p95": 0.9992858171463013,
+          "max": 0.9996128678321838
+        },
+        "bias": {
+          "min": -0.0021404048893600702,
+          "p05": -0.0019240035733673721,
+          "median": 0.00013784314069198444,
+          "p95": 0.0019082814338617026,
+          "max": 0.0021813043858855963
+        }
+      },
+      "peak_reserved_mib": 1024.0,
+      "rows": 3288,
+      "file_sha256": "028156cd41e4a907805fa417418991a91d18363cb0a6a60aac6fdf55cc5876c1"
+    },
+    {
+      "seed": 1,
+      "physical_history_calls": 206,
+      "layer_norm": {
+        "weight": {
+          "min": 0.9975137114524841,
+          "p05": 0.9978447794914246,
+          "median": 0.998548150062561,
+          "p95": 0.9993159353733063,
+          "max": 0.9996532797813416
+        },
+        "bias": {
+          "min": -0.002290094271302223,
+          "p05": -0.001891321159200743,
+          "median": 4.556553903967142e-06,
+          "p95": 0.0018967081618029625,
+          "max": 0.0020721065811812878
+        }
+      },
+      "peak_reserved_mib": 1024.0,
+      "rows": 3288,
+      "file_sha256": "ce3ed998d6b998c9832f02f1e83fceddb8be275e9c89f5a4a52c0e4c1761a030"
+    },
+    {
+      "seed": 2,
+      "physical_history_calls": 206,
+      "layer_norm": {
+        "weight": {
+          "min": 0.9976316094398499,
+          "p05": 0.9978467047214508,
+          "median": 0.9984956979751587,
+          "p95": 0.9993190318346024,
+          "max": 0.9996199011802673
+        },
+        "bias": {
+          "min": -0.0022544600069522858,
+          "p05": -0.0019372423586901278,
+          "median": -0.00010971178198815323,
+          "p95": 0.0018974337726831436,
+          "max": 0.0021089529618620872
+        }
+      },
+      "peak_reserved_mib": 1024.0,
+      "rows": 3288,
+      "file_sha256": "7e59476b582d0b37d7282f4e92e976bd1c7b4668d38063925d66b49e07f9ee3e"
+    }
+  ],
+  "protocol_sha256": "68f3d0812f1a1b8938da100bd107c0638dfb286f8aeab4e794bb7794bed1d08e",
+  "new_training": 0,
+  "optimizer_updates": 0,
+  "new_navigation": 0,
+  "scientific_sr": false,
+  "encoder_forward": 0,
+  "cloud_calls": 0,
+  "reserve_consumption": 0
+}

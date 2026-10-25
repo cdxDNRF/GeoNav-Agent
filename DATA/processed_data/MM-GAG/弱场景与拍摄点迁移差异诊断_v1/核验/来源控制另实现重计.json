@@ -1,0 +1,110 @@
+{
+  "task": "CV-009",
+  "passed": true,
+  "flags": {
+    "weak_dev": {
+      "Bern": false,
+      "LacBleu": true,
+      "Luzern": false,
+      "Rolex": true,
+      "Sion": false
+    },
+    "MMGAG": {
+      "dev_00": false,
+      "dev_01": false,
+      "dev_02": false,
+      "dev_03": false,
+      "dev_04": false,
+      "dev_05": false,
+      "dev_06": false,
+      "dev_07": false,
+      "dev_08": false,
+      "dev_09": false
+    }
+  },
+  "per_source_final_top1": {
+    "weak_dev": {
+      "Bern": {
+        "Full": 1,
+        "Mean": 6,
+        "Wrong": 0
+      },
+      "LacBleu": {
+        "Full": 17,
+        "Mean": 0,
+        "Wrong": 0
+      },
+      "Luzern": {
+        "Full": 2,
+        "Mean": 0,
+        "Wrong": 9
+      },
+      "Rolex": {
+        "Full": 25,
+        "Mean": 5,
+        "Wrong": 0
+      },
+      "Sion": {
+        "Full": 25,
+        "Mean": 25,
+        "Wrong": 0
+      }
+    },
+    "MMGAG": {
+      "dev_00": {
+        "Full": 0,
+        "Mean": 0,
+        "Wrong": 0
+      },
+      "dev_01": {
+        "Full": 0,
+        "Mean": 0,
+        "Wrong": 0
+      },
+      "dev_02": {
+        "Full": 0,
+        "Mean": 0,
+        "Wrong": 0
+      },
+      "dev_03": {
+        "Full": 0,
+        "Mean": 1,
+        "Wrong": 0
+      },
+      "dev_04": {
+        "Full": 0,
+        "Mean": 0,
+        "Wrong": 1
+      },
+      "dev_05": {
+        "Full": 0,
+        "Mean": 1,
+        "Wrong": 0
+      },
+      "dev_06": {
+        "Full": 0,
+        "Mean": 0,
+        "Wrong": 0
+      },
+      "dev_07": {
+        "Full": 0,
+        "Mean": 0,
+        "Wrong": 0
+      },
+      "dev_08": {
+        "Full": 0,
+        "Mean": 0,
+        "Wrong": 0
+      },
+      "dev_09": {
+        "Full": 0,
+        "Mean": 0,
+        "Wrong": 0
+      }
+    }
+  },
+  "method": "alternate filter of original saved true ranks, no head calls, strict Full above both controls",
+  "posthoc_only_not_new_acceptance_gate": true,
+  "new_predictions": 0,
+  "model_calls": 0
+}

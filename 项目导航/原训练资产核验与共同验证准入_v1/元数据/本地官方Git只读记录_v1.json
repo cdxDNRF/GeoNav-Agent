@@ -1,0 +1,86 @@
+[
+  {
+    "repo": "GOMAA-Geo",
+    "args": [
+      "rev-parse",
+      "--is-shallow-repository"
+    ],
+    "returncode": 0,
+    "stdout": "false\n",
+    "stderr": ""
+  },
+  {
+    "repo": "GOMAA-Geo",
+    "args": [
+      "show-ref"
+    ],
+    "returncode": 0,
+    "stdout": "1faa1eee1608529eae95cc0af1d76330c9e46e60 refs/heads/main\n1faa1eee1608529eae95cc0af1d76330c9e46e60 refs/remotes/origin/HEAD\n1faa1eee1608529eae95cc0af1d76330c9e46e60 refs/remotes/origin/main\n",
+    "stderr": ""
+  },
+  {
+    "repo": "GOMAA-Geo",
+    "args": [
+      "ls-tree",
+      "-r",
+      "1faa1eee1608529eae95cc0af1d76330c9e46e60"
+    ],
+    "returncode": 0,
+    "stdout": "100644 blob 82f927558a3dff0ea8c20858856e70779fd02c93\t.gitignore\n100644 blob 93e90125ae6f906b94f569f660c60b039d22a746\tLICENSE\n100644 blob b25af5f03898fb47a00a4d34bb76ab72177548ae\tREADME.md\n100644 blob 39f4241f711a8e904460cae554a32f0d85aba6d6\tconfig.py\n100644 blob a6c6d30e95400519db31058d6c634d583897ec69\tdata_utils/__init__.py\n100644 blob 921a49a68626320d6ee1a3543fe36ddd33d18f9f\tdata_utils/get_patches.py\n100644 blob c40a854066e3e056b9fd6078e23f08a42de8e055\tdata_utils/get_sat_embeddings_sat2cap.py\n100644 blob dcf1b58d84609e4dc22fefe71695e416c33b29ba\tdata_utils/get_text_embeddings.py\n100644 blob 7e73d0488710ce578083664d32fa8d3c0e865c68\tdata_utils/sequence.py\n100644 blob bc654f8b54410a83fe8f0b591335488ecbfe89bd\timgs/logo-3.png\n100644 blob c0e6e29c5c1190bde359d8d94f4cd80fcfacc5f5\tmodels/decision_transformer.py\n100644 blob e33c0ad69abf05f6422855a7f2ed061c2edd5918\tmodels/model_falcon.py\n100644 blob e8a0982301e3d18842d3187666b384a596697e8b\tmodels/model_gemma.py\n100644 blob 31aa41e4faec80b88ec4517ab5e94422880b6529\tmodels/model_gpt.py\n100644 blob 6c32b2cb08ef3325110a68d8172eb67724417810\tmodels/model_llama2.py\n100644 blob 65667f3354ef25724c3009e2e6ee11121b6cdfdd\tmodels/model_mamba.py\n100644 blob 63921f01762f78ba1dc9435ad528dcc620384f26\tmodels/model_mixtral.py\n100644 blob 10a0afa908733b0b40e95299b961ddc4c8705248\tmodels/ppo.py\n100644 blob 7910bfab188ef34fd8e1f388d5bc7a45a7ef4c17\tmodels/pretrain_model.py\n100644 blob 175cf0e575a307286fde629c5409dc18b100a164\tpretrain.py\n100644 blob 84b61f12f4c0eaf96d2a41812fece7114abf9e9a\trequirements.txt\n100644 blob 92d24a6947ba983d7edfafb6c718755ce162fc9e\ttrain.py\n100644 blob a3cb2d4db349a5ffc11600683c6ba97e18cb6e2d\tutils/__init__.py\n100644 blob 4916ff689cee024c026a6489aad2c1407f56a20a\tutils/get_test_config.py\n100644 blob 7552694efc589b79999211d11960b4421fb63ecc\tutils/pca_plots.py\n100644 blob 848bea0f2c1ab90712430add6d08192c3f3b037a\tutils/random_seed.py\n100644 blob c913eb0eea4256f9f0db98e2c2b719763bb3ae73\tvalidate.py\n100644 blob 1df32bf1592fd4092acc4bb35bc4a821378f5d4f\tviz_path.py\n",
+    "stderr": ""
+  },
+  {
+    "repo": "GOMAA-Geo",
+    "args": [
+      "log",
+      "--all",
+      "--format=%H %aI %s",
+      "--name-only"
+    ],
+    "returncode": 0,
+    "stdout": "1faa1eee1608529eae95cc0af1d76330c9e46e60 2024-10-02T09:51:51-05:00 bug fixes\n\nmodels/ppo.py\ntrain.py\n706336b474c643ec67b3bd9262b75e64fb900a64 2024-09-30T15:12:14-05:00 bug fixes\n\nREADME.md\nmodels/ppo.py\ntrain.py\n09e7d7ad19b38d356486cbb69a8883459ae96ef9 2024-09-26T07:56:36+02:00 Update README.md\n\nREADME.md\nea9672cc522139edf240ac38442dc10323d5c25e 2024-06-10T08:39:54+02:00 update bib\n\nREADME.md\n81a35f13b9a18d7dfa4877e5dc792b22364294dc 2024-06-05T15:06:26-05:00 update files\n\nREADME.md\nconfig.py\ndata_utils/__init__.py\ndata_utils/get_patches.py\ndata_utils/get_sat_embeddings_sat2cap.py\ndata_utils/get_text_embeddings.py\ndata_utils/sequence.py\nmodels/decision_transformer.py\nmodels/model_falcon.py\nmodels/model_gemma.py\nmodels/model_gpt.py\nmodels/model_llama2.py\nmodels/model_mamba.py\nmodels/model_mixtral.py\nmodels/ppo.py\nmodels/pretrain_model.py\npretrain.py\nrequirements.txt\ntrain.py\nutils/__init__.py\nutils/get_test_config.py\nutils/pca_plots.py\nutils/random_seed.py\nvalidate.py\nviz_path.py\nb60c8c5f596f7c5ea4da209686e2e0fdf5b8e20a 2024-06-05T09:06:46+02:00 add links to arxiv\n\nREADME.md\n8eaf680cf8470e8a57e694b73920353d28010093 2024-06-04T09:09:10+02:00 Update README.md\n\nREADME.md\necabe7dcb6241507b50145385899c3f459235ab1 2024-06-03T22:14:26-05:00 Update README.md\n\nREADME.md\n94872aa0a85206bcf6f638100b338b7b496f18b5 2024-06-03T21:44:20+02:00 link to aleksis webpage\n\nREADME.md\n006c386b571adfa77d28e970146bb80b94e3d314 2024-06-03T10:25:04-05:00 readme.update\n\nREADME.md\nimgs/logo-3.png\nf6de9a77af7ec81b7d4a9df76df7d1fcaaac3517 2024-06-03T10:08:35-05:00 Initial commit\n\n.gitignore\nLICENSE\nREADME.md\n",
+    "stderr": ""
+  },
+  {
+    "repo": "project/.runtime/geoexplorer_probe_v1/source",
+    "args": [
+      "rev-parse",
+      "--is-shallow-repository"
+    ],
+    "returncode": 0,
+    "stdout": "false\n",
+    "stderr": ""
+  },
+  {
+    "repo": "project/.runtime/geoexplorer_probe_v1/source",
+    "args": [
+      "show-ref"
+    ],
+    "returncode": 0,
+    "stdout": "2d9fc71a7151ec4060950cc6ae639880a74f6201 refs/heads/main\n2d9fc71a7151ec4060950cc6ae639880a74f6201 refs/remotes/origin/HEAD\n2d9fc71a7151ec4060950cc6ae639880a74f6201 refs/remotes/origin/main\n",
+    "stderr": ""
+  },
+  {
+    "repo": "project/.runtime/geoexplorer_probe_v1/source",
+    "args": [
+      "ls-tree",
+      "-r",
+      "2d9fc71a7151ec4060950cc6ae639880a74f6201"
+    ],
+    "returncode": 0,
+    "stdout": "100644 blob 97908a22796ec1b05aa06c05be8974bc34c4b737\tREADME.md\n100644 blob f9e86f7621dde11930d7b330e902963e9b57d393\tconfig.py\n100644 blob a6c6d30e95400519db31058d6c634d583897ec69\tdata_utils/__init__.py\n100644 blob 60716bd978ffba95454ff83b92b029dcaf9473fb\tdata_utils/get_grd_embeddings.py\n100644 blob aa913bde09461879da929f504b6cb4d31537abad\tdata_utils/get_patches.py\n100644 blob 5289b3e1cfcd6d692660f94913f410d0a00a66cc\tdata_utils/get_sat_embeddings.py\n100644 blob 04a64588e9da141516bd3c1dc042c4d9e1118751\tdata_utils/sequence.py\n100644 blob 98c0e642a7a7b614aa5416cd8e69cdd1606d0c2a\tenvironment.yml\n100644 blob 7985b248ee234c559cdb814f105f9f4c214b2830\tindex.html\n100644 blob c0e6e29c5c1190bde359d8d94f4cd80fcfacc5f5\tmodels/decision_transformer.py\n100644 blob 24850aa070d7e91651b9451a37b1ad27c91c466c\tmodels/model_falcon.py\n100644 blob ff1de3ccbc98d6975114696815afe5f4c3a86869\tmodels/ppo.py\n100644 blob fafa1ac004cf3ad32e82620f42632d6caa3f51ef\tmodels/pretrain_model.py\n100644 blob fe4de548487fcf78e49185bcc1cbd80857e8b37f\tpretrain.py\n100644 blob 4d4b7d103e0013f64e4dedd2ad0b2947cc0d11a5\tstatic/css/bulma-carousel.min.css\n100644 blob 09b4aeb2fb19d7d883a0b01cb1982cb382992f95\tstatic/css/bulma-slider.min.css\n100644 blob ed3a9d377ba3c30e6eb8b2a35e08e8dc814a0725\tstatic/css/bulma.css.map.txt\n100644 blob a807a314caa0df0ddccacd6b732d83f5ffde7a89\tstatic/css/bulma.min.css\n100644 blob cbeaa76a1f624412d148a03b600afa54b2684114\tstatic/css/fontawesome.all.min.css\n100644 blob c4559011e814c2a731c474fb6a88afcc6ea7ea7e\tstatic/css/index.css\n100644 blob ee76ae10275f0c299df1877477cdb236e0e81b98\tstatic/images/Fig_ECEO.png\n100644 blob 1bf0b67d59a5d3fca19787b65cd28134649f5568\tstatic/images/Fig_EPFL_Black.png\n100644 blob f888916ddab84cb67a01d142c31c64c7d47afd6c\tstatic/images/Fig_EPFL_Red.png\n100644 blob f35cf68eed0c38407037669ffe97c5ef3721ddb0\tstatic/images/Fig_NLP.png\n100644 blob 8e91d28f92ee0bb2b689e027cd0fded7b6f4b161\tstatic/images/Fig_Pipeline.png\n100644 blob 8330fa99e81dea3ef74cea76aabe03f6fb21b69d\tstatic/images/Fig_Summary.png\n100644 blob 4eb0bb395d2ada8c123779549e76ec0fb35f2483\tstatic/images/Fig_Swissimage.png\n100644 blob a759bb52ab763e36dbd50c8af3d6daa7ef39813a\tstatic/images/Fig_Task.png\n100644 blob 88937f36c8ada5e3ecd0af4e11515e8b243c326a\tstatic/images/SFig_Path.png\n100644 blob febfc8b07ce871f7120e594f72a304c3ba2f7b1b\tstatic/images/SFig_Reward.png\n100644 blob 9d33f3ff25a2e5f5c4fe9a9a98698fbdc0371aa8\tstatic/images/SFig_Unseen.png\n100644 blob abf192f92538f79af41ba4ba5f283ead8a3b62d5\tstatic/images/WFig_cross-domain.png\n100644 blob 7b36735e7736212f08c7f7442182b1d418043ea4\tstatic/images/WFig_cross-modal.png\n100644 blob d2d53f68e1435f795541b6d6c9ee311b0ad5698f\tstatic/images/WFig_unseen.png\n100644 blob 6ab653adcd5a38f99f65e941ab2f96c824e6be8a\tstatic/images/explore.png\n100644 blob 229edba242bb190698662cdce6bdacde9f0769fe\tstatic/js/bulma-carousel.js\n100644 blob 5fff0695f00cf9da60dd87aa72c51367b00e92ff\tstatic/js/bulma-carousel.min.js\n100644 blob c6718de5c5ae59d2c22141a147f5afba41af9cbb\tstatic/js/bulma-slider.js\n100644 blob 7e62685763cf7668cfa8857fac0b27af2c277286\tstatic/js/bulma-slider.min.js\n100644 blob 9ee22fdb7753983bae3986b2436bdd167730cd5b\tstatic/js/fontawesome.all.min.js\n100644 blob c08a79032592be8f5e7318991b0242323389469d\tstatic/js/index.js\n100644 blob 8b137891791fe96927ad78e64b0aad7bded08bdc\tstatic/readme.md\n100644 blob a81e799ffc448384ddb00743acee043f41751145\ttrain.py\n100644 blob f50fdb0f83ce943c871cb3b7cacb2f1cd781d407\tutils/__init__.py\n100644 blob 686d5bcf551d60f0c213b093afe3c1f2625ebe7b\tutils/get_test_config.py\n100644 blob 848bea0f2c1ab90712430add6d08192c3f3b037a\tutils/random_seed.py\n100644 blob 1544e1d86bd35f3721ff833b30e5badeeda24bd8\tvalidate.py\n",
+    "stderr": ""
+  },
+  {
+    "repo": "project/.runtime/geoexplorer_probe_v1/source",
+    "args": [
+      "log",
+      "--all",
+      "--format=%H %aI %s",
+      "--name-only"
+    ],
+    "returncode": 128,
+    "stdout": "2d9fc71a7151ec4060950cc6ae639880a74f6201 2026-03-02T16:24:05+01:00 update ppo.py\n\nmodels/ppo.py\n348c3bf69193e240909b97f47e44d100808a05a5 2025-12-05T11:15:42+01:00 Update data processing instructions\n\nREADME.md\n46015f295db39d6db0337f4e58efb813205a6a83 2025-12-05T11:13:58+01:00 Update data preprocessing instructions in README\n\nREADME.md\n84a3ee39cb78c18dfb782beff5f17f639a3f7a8e 2025-11-06T16:09:41+01:00 update README.md\n\nREADME.md\ncc65a007c90cb755f3b20c0153064af24b24c5e1 2025-11-05T23:41:10+01:00 update README.md\n\nREADME.md\nc2866cd448017d8e06e617ae5ea1540187406e3a 2025-11-05T23:40:09+01:00 update README.md\n\nREADME.md\n",
+    "stderr": "fatal: unable to access 'https://github.com/limirs/GeoExplorer.git/': Recv failure: Connection was reset\nfatal: could not fetch 29feded561a2fb1bb58918fff02ce461bc300767 from promisor remote\n"
+  }
+]

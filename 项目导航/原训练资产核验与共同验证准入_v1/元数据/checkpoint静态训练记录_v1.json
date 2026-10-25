@@ -1,0 +1,414 @@
+[
+  {
+    "path": "models/gomaa_public_v1/ppo_falcon.pt",
+    "size": 955903920,
+    "sha256": "f987246c7e0575e7d7ee85eab823d965dcfc0cac421ec05235cae323bf09be4d",
+    "member": "ppo_falcon/data.pkl",
+    "metadata_bytes": 46409,
+    "metadata_sha256": "e1af6be6693ecc4c04bde5ca5e4123b12b489d43f38e442f3d7d9312f9b68e89",
+    "archive_entries": 107,
+    "top_keys_count": 188,
+    "training_top_keys": [],
+    "hyperparameters_present": false,
+    "metadata": {},
+    "syntax": {
+      "globals": [
+        "collections OrderedDict",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "opcodes": {
+        "PROTO": 1,
+        "GLOBAL": 3,
+        "BINPUT": 256,
+        "EMPTY_TUPLE": 190,
+        "REDUCE": 378,
+        "MARK": 378,
+        "BINUNICODE": 804,
+        "BININT": 110,
+        "TUPLE": 376,
+        "BINPERSID": 188,
+        "BININT1": 758,
+        "BININT2": 452,
+        "TUPLE2": 248,
+        "NEWFALSE": 188,
+        "BINGET": 780,
+        "TUPLE1": 128,
+        "LONG_BINPUT": 2002,
+        "LONG_BINGET": 372,
+        "SETITEMS": 2,
+        "EMPTY_DICT": 321,
+        "SETITEM": 321,
+        "BUILD": 1,
+        "STOP": 1
+      }
+    },
+    "tensor_values_read": false,
+    "deserialization_executed": false
+  },
+  {
+    "path": "models/gomaa_public_v1/sat2cap_optimal_action_falcon.pt.ckpt",
+    "size": 2264331389,
+    "sha256": "195351ae83654415faa03c500fe4ec912e07f3567d3f8c2ecb3f4c8a1bc2c3d2",
+    "member": "archive/data.pkl",
+    "metadata_bytes": 45165,
+    "metadata_sha256": "45db93eafd2f7a8da0ae4c755b062cfb4b00f7365bd917d8acd55ad831340c8b",
+    "archive_entries": 324,
+    "top_keys_count": 8,
+    "training_top_keys": [
+      "epoch",
+      "global_step",
+      "pytorch-lightning_version",
+      "state_dict",
+      "loops",
+      "callbacks",
+      "optimizer_states",
+      "lr_schedulers"
+    ],
+    "hyperparameters_present": false,
+    "metadata": {
+      "epoch": 202,
+      "global_step": 812,
+      "pytorch-lightning_version": "2.2.1",
+      "loops": {
+        "fit_loop": {
+          "state_dict": {},
+          "epoch_loop.state_dict": {
+            "_batches_that_stepped": 812
+          },
+          "epoch_loop.batch_progress": {
+            "total": {
+              "ready": 168693,
+              "completed": 168693,
+              "started": 168693,
+              "processed": 168693
+            },
+            "current": {
+              "ready": 831,
+              "completed": 831,
+              "started": 831,
+              "processed": 831
+            },
+            "is_last_batch": true
+          },
+          "epoch_loop.scheduler_progress": {
+            "total": {
+              "ready": 203,
+              "completed": 203
+            },
+            "current": {
+              "ready": 1,
+              "completed": 1
+            }
+          },
+          "epoch_loop.automatic_optimization.state_dict": {},
+          "epoch_loop.automatic_optimization.optim_progress": {
+            "optimizer": {
+              "step": {
+                "total": {
+                  "ready": 812,
+                  "completed": 812
+                },
+                "current": {
+                  "ready": 4,
+                  "completed": 4
+                }
+              },
+              "zero_grad": {
+                "total": {
+                  "ready": 812,
+                  "completed": 812,
+                  "started": 812
+                },
+                "current": {
+                  "ready": 4,
+                  "completed": 4,
+                  "started": 4
+                }
+              }
+            }
+          },
+          "epoch_loop.manual_optimization.state_dict": {},
+          "epoch_loop.manual_optimization.optim_step_progress": {
+            "total": {
+              "ready": 0,
+              "completed": 0
+            },
+            "current": {
+              "ready": 0,
+              "completed": 0
+            }
+          },
+          "epoch_loop.val_loop.state_dict": {},
+          "epoch_loop.val_loop.batch_progress": {
+            "total": {
+              "ready": 178,
+              "completed": 178,
+              "started": 178,
+              "processed": 178
+            },
+            "current": {
+              "ready": 178,
+              "completed": 178,
+              "started": 178,
+              "processed": 178
+            },
+            "is_last_batch": true
+          },
+          "epoch_progress": {
+            "total": {
+              "ready": 203,
+              "completed": 202,
+              "started": 203,
+              "processed": 203
+            },
+            "current": {
+              "ready": 203,
+              "completed": 202,
+              "started": 203,
+              "processed": 203
+            }
+          }
+        },
+        "validate_loop": {
+          "state_dict": {},
+          "batch_progress": {
+            "total": {
+              "ready": 0,
+              "completed": 0,
+              "started": 0,
+              "processed": 0
+            },
+            "current": {
+              "ready": 0,
+              "completed": 0,
+              "started": 0,
+              "processed": 0
+            },
+            "is_last_batch": false
+          }
+        },
+        "test_loop": {
+          "state_dict": {},
+          "batch_progress": {
+            "total": {
+              "ready": 0,
+              "completed": 0,
+              "started": 0,
+              "processed": 0
+            },
+            "current": {
+              "ready": 0,
+              "completed": 0,
+              "started": 0,
+              "processed": 0
+            },
+            "is_last_batch": false
+          }
+        },
+        "predict_loop": {
+          "state_dict": {},
+          "batch_progress": {
+            "total": {
+              "ready": 0,
+              "completed": 0,
+              "started": 0,
+              "processed": 0
+            },
+            "current": {
+              "ready": 0,
+              "completed": 0,
+              "started": 0,
+              "processed": 0
+            }
+          }
+        }
+      },
+      "callbacks": {
+        "ModelCheckpoint{'monitor': 'val_loss', 'mode': 'min', 'every_n_train_steps': 0, 'every_n_epochs': 1, 'train_time_interval': None}": {
+          "monitor": "val_loss",
+          "best_model_score": {
+            "omitted": "tensor"
+          },
+          "best_model_path": "/storage1/fs1/jacobsn/Active/user_s.sastry/SatNav_v3/checkpoint/pretrain_falcon/sat2cap_optimal_action_falcon.pt.ckpt",
+          "current_score": {
+            "omitted": "tensor"
+          },
+          "dirpath": "/storage1/fs1/jacobsn/Active/user_s.sastry/SatNav_v3/checkpoint/pretrain_falcon",
+          "best_k_models": {
+            "/storage1/fs1/jacobsn/Active/user_s.sastry/SatNav_v3/checkpoint/pretrain_falcon/sat2cap_optimal_action_falcon.pt.ckpt": {
+              "omitted": "tensor"
+            }
+          },
+          "kth_best_model_path": "/storage1/fs1/jacobsn/Active/user_s.sastry/SatNav_v3/checkpoint/pretrain_falcon/sat2cap_optimal_action_falcon.pt.ckpt",
+          "kth_value": {
+            "omitted": "tensor"
+          },
+          "last_model_path": ""
+        }
+      },
+      "lr_schedulers": [
+        {
+          "T_0": 5,
+          "T_i": 5,
+          "T_mult": 1,
+          "eta_min": 0,
+          "T_cur": 3,
+          "base_lrs": [
+            1e-05
+          ],
+          "last_epoch": 203,
+          "verbose": false,
+          "_step_count": 0,
+          "_get_lr_called_within_step": false,
+          "_last_lr": [
+            3.4549150281252635e-06
+          ]
+        }
+      ],
+      "optimizer_param_groups": [
+        [
+          {
+            "lr": 3.4549150281252635e-06,
+            "betas": [
+              0.9,
+              0.999
+            ],
+            "eps": 1e-08,
+            "weight_decay": 0.0001,
+            "amsgrad": false,
+            "foreach": null,
+            "maximize": false,
+            "capturable": false,
+            "differentiable": false,
+            "fused": null,
+            "initial_lr": 1e-05,
+            "params": [
+              0,
+              1,
+              2,
+              3,
+              4,
+              5,
+              6,
+              7,
+              8,
+              9,
+              10,
+              11,
+              12,
+              13,
+              14,
+              15,
+              16,
+              17,
+              18,
+              19,
+              20,
+              21,
+              22,
+              23,
+              24,
+              25,
+              26,
+              27,
+              28,
+              29,
+              30,
+              31,
+              32,
+              33,
+              34,
+              35,
+              36,
+              37,
+              38,
+              39,
+              40,
+              41,
+              42,
+              43,
+              44,
+              45,
+              46,
+              47,
+              48,
+              49,
+              50,
+              51,
+              52,
+              53,
+              54,
+              55,
+              56,
+              57,
+              58,
+              59,
+              60,
+              61,
+              62,
+              63,
+              64,
+              65,
+              66,
+              67,
+              68,
+              69,
+              70,
+              71,
+              72,
+              73,
+              74,
+              75,
+              76,
+              77,
+              78,
+              79,
+              80
+            ]
+          }
+        ]
+      ]
+    },
+    "syntax": {
+      "globals": [
+        "collections OrderedDict",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "opcodes": {
+        "PROTO": 1,
+        "EMPTY_DICT": 280,
+        "BINPUT": 256,
+        "MARK": 771,
+        "BINUNICODE": 872,
+        "BININT1": 1026,
+        "BININT2": 656,
+        "GLOBAL": 3,
+        "EMPTY_TUPLE": 487,
+        "REDUCE": 648,
+        "BININT": 159,
+        "TUPLE": 646,
+        "BINPERSID": 323,
+        "TUPLE2": 329,
+        "NEWFALSE": 331,
+        "BINGET": 1295,
+        "TUPLE1": 156,
+        "LONG_BINPUT": 2684,
+        "SETITEMS": 124,
+        "SETITEM": 151,
+        "LONG_BINGET": 553,
+        "BUILD": 1,
+        "NEWTRUE": 2,
+        "EMPTY_LIST": 6,
+        "BINFLOAT": 8,
+        "NONE": 2,
+        "APPENDS": 1,
+        "APPEND": 5,
+        "STOP": 1
+      }
+    },
+    "tensor_values_read": false,
+    "deserialization_executed": false
+  }
+]

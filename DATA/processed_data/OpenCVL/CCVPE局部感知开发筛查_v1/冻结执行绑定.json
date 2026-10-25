@@ -1,0 +1,2301 @@
+{
+  "task": "CV-031",
+  "inputs": [
+    {
+      "path": "project/src/tools/ccvpe_acquire_v1.py",
+      "bytes": 4931,
+      "sha256": "3348c63e808012ad2df09d2eea3eda1c20cf57a83e3884efa733d7e9835d835d"
+    },
+    {
+      "path": "project/src/tools/ccvpe_engineering_v1.py",
+      "bytes": 14131,
+      "sha256": "7118d69e50dbceaa2babb5d22ef51b3b748c640af644674ee55e4be4d9182d7d"
+    },
+    {
+      "path": "project/src/agents/ccvpe_runtime_v1.py",
+      "bytes": 7877,
+      "sha256": "5ba93f3aaf2cd9565631e3d5df8818ef6a23039dd9e1874b09e0fa45f55a71d2"
+    },
+    {
+      "path": "project/src/eval/audit_ccvpe_engineering_v1.py",
+      "bytes": 5283,
+      "sha256": "4c1dd19e00c2b5d80164f0079ce7889fce36d4a080ddc9865d3317ade2aa8f52"
+    },
+    {
+      "path": "project/src/tests/test_ccvpe_engineering_v1.py",
+      "bytes": 3952,
+      "sha256": "f435f87ebef11c3e689b0b76b715fe6594e266fd5d722720462edf15fd937cef"
+    },
+    {
+      "path": "project/src/documents/close_ccvpe_engineering_v1.py",
+      "bytes": 9792,
+      "sha256": "c0ef1c9854fc39a4b0ea80ef1483a9b64c2be84731dc5f2d67de171236575f3f"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/README.md",
+      "bytes": 6226,
+      "sha256": "00605c6d0c2c9b5678af757d1b02a1ead8bfd637e2d0a574d3df90359af4fe33"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/下一步边界.json",
+      "bytes": 370,
+      "sha256": "0ca1533d672a23d5529b9cf92e2b5abf728318e39018c0f4e9be7070ee4d3ab5"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/像素取得开始.json",
+      "bytes": 96,
+      "sha256": "2a24c3062325d63987eca92d6d4d5f46a9d360312416bda81895bb836942e52e"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/像素质量回执.json",
+      "bytes": 5372,
+      "sha256": "7c0bda9ba9b17ed24cb3201189112d6c561c8c2fb1103e8846a1670d3eaa8c54"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/冻结工程协议.json",
+      "bytes": 2099,
+      "sha256": "5d04aba9197ae65b8bc9a9d42282057bca3ae11a4dc0cb79b938c5a40077ce2c"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/取得前范围与探测.json",
+      "bytes": 2006,
+      "sha256": "f455148707d74f6c3f2f14bcc90d3ceb663ae7599b1cfa3eafa8d495045e2a6f"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/取得回执.jsonl",
+      "bytes": 23329,
+      "sha256": "c070d4e4d589b182beb76766aa6968341405bb04ee0179c5121759131d4d4523"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/另实现核验.json",
+      "bytes": 734,
+      "sha256": "bc656979185375ee392ef10675ffe7338ddcf172622fff2fc9bf23a8db39253d"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/合成测试.json",
+      "bytes": 128,
+      "sha256": "593363b5a3323026692945825e2f93f291df63739138c6dac8e26fc93fb77dd6"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/固定四对清单.json",
+      "bytes": 7646,
+      "sha256": "2cd22af6db31c62a22b2d1b44e086c9f926e6e0ff46cdf59827f15b1a79a854b"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/执行完成.json",
+      "bytes": 300,
+      "sha256": "351d582d2a0755637307b6084e73592e9fdaf9d410e7a0a857e3d9906f109c7f"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/标签取得完成.json",
+      "bytes": 1966,
+      "sha256": "62ab659a143e171923c447fe0ce645cf39901e4563a52706dda592226dfa1d90"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/核验/ZIP中央目录.bin",
+      "bytes": 25680,
+      "sha256": "a4eb127503dd4a05b58921bcf8609aa578a990db14272e4247de7a2e4df490dd"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/核验/四对空间标签工程面板.png",
+      "bytes": 1000851,
+      "sha256": "67784cca1280c09e99b9b747145f28118f6f26b45b84a60090a52dba2f23b2ad"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/核验/视觉质量观察.json",
+      "bytes": 709,
+      "sha256": "ae41284cc3f5ec02de7270c38d3c69c3694f5813f3a61d811598d65f11e412fc"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/目录清单.json",
+      "bytes": 55183,
+      "sha256": "44077ce09b54fb42aff6e5fd07b6354c744f7cbce1f444288ccc0aca24961ba0"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/空间监督检查.json",
+      "bytes": 36609,
+      "sha256": "870fe1203664aba6964fd855bbb524a89416b6d18812e3a15ff31b72cc3588f3"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/索引原值核验.json",
+      "bytes": 179,
+      "sha256": "efcc010a4212395e6d4542928cef50bcf781ee83d025770f1c3799b836cf4600"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/labels_3ee1423614ef9e61.json",
+      "bytes": 2345,
+      "sha256": "7d0a4d002723aa81814181279bfac7ce7dd8403d01bb64992cdeb1813cd46953"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/labels_af2cf0a3ac273ac1.json",
+      "bytes": 2328,
+      "sha256": "c7462175a07f5ba9193618de26bec4a348f5be15786e17286d9874f3404dc29f"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/labels_e2bd73f2ab1a7553.json",
+      "bytes": 1931,
+      "sha256": "ed96e1d1ebee7f96c3f33c9cebdbde2ee172354969beefedd5bf4ac891a3daa5"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_0_aerial.png",
+      "bytes": 514417,
+      "sha256": "12c19dd4c69c2f4b1685b69ac46fab1ee723a55b3e05c648fdd74a527381d19a"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_0_ground.png",
+      "bytes": 411632,
+      "sha256": "37347e32331d4f0cf24c2f6f9d0b8d5560b1b06f19c73621bb695cd9b3f0a980"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_1_aerial.png",
+      "bytes": 585650,
+      "sha256": "a1fd06eb9c7ff450d15f7b1fea0c28c4da88dcade79705c44d1fc0429cc74b4b"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_1_ground.png",
+      "bytes": 530824,
+      "sha256": "60fb6d9c6c12d8a044e4cada2c64a491cfa2bcc799b61cf4c948c4a04f311b03"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_2_aerial.png",
+      "bytes": 625106,
+      "sha256": "15abce257837caedae90edb4330405353c72117581660365b5f9fb79564ed87d"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_2_ground.png",
+      "bytes": 455963,
+      "sha256": "82f2ea3ee5d0e941d5402fbb0a000c99e6b00acbfa6c158afe5f66a2b48d8863"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_3_aerial.png",
+      "bytes": 626017,
+      "sha256": "88cad3a9ab9072268c574fe53835acbba6dc652546076229403b710fef842f18"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_3_ground.png",
+      "bytes": 348980,
+      "sha256": "be9c12ded75f6a7329b2291152aaeffc4f6616a44209eb87a8f6a2aa590fbe75"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/阶段封存.json",
+      "bytes": 7783,
+      "sha256": "f4a7901c8e1d55562b6a73d929b3897927a93497d174a97cf1a289d8ad733936"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/首图像取得绑定.json",
+      "bytes": 17950,
+      "sha256": "497730bd3aa87fe3f2816c0606f5e989190a07b9bd6664a150fabf1ca613d93a"
+    },
+    {
+      "path": "调研/20_轻量空间关系感知与拒绝协议_v1.md",
+      "bytes": 9248,
+      "sha256": "dccd00437b03284a1877b440f071b0012dca6e16b2d207ad3700fcf5019d0444"
+    },
+    {
+      "path": "调研/20_轻量空间关系感知与拒绝协议_v1.json",
+      "bytes": 63247,
+      "sha256": "cd2136b8563ae006d2c56d1f3514d73487b304ca31770bdb81e396dc68ad91d0"
+    },
+    {
+      "path": "调研/20_协议复核_v1.json",
+      "bytes": 498,
+      "sha256": "388d8ec8c04776a24c60895721e89b586a15d7df8666222492ed1d2e2a5815dd"
+    },
+    {
+      "path": "project/src/data/spatial_perception_protocol_v1.py",
+      "bytes": 16594,
+      "sha256": "9ea43fcc2452416e7bdde4561d412ceab2f2300ad4ad89db529f602011c69f9c"
+    },
+    {
+      "path": "project/src/eval/audit_spatial_perception_protocol_v1.py",
+      "bytes": 5263,
+      "sha256": "54f7fc3322f9d2a773e3dc93a20772571ebdf2d756f8b0e41e796c6096ab2f3c"
+    },
+    {
+      "path": "project/src/tests/test_spatial_perception_protocol_v1.py",
+      "bytes": 5808,
+      "sha256": "08ccf294b96d2bc53acac2078b1cffc18c652e6435769c6903eab318047fd62a"
+    },
+    {
+      "path": "project/src/documents/close_spatial_perception_protocol_v1.py",
+      "bytes": 14467,
+      "sha256": "66b8f572288d6516a4d63bcc746a0e9578f752e7cea737dac74157bc0f689247"
+    },
+    {
+      "path": "project/src/platform_core/cli_v1.py",
+      "bytes": 2385,
+      "sha256": "7d400503cc3a86dc1e1726a6be68234f0d4c877d73a68d65110d35772d71bd26"
+    },
+    {
+      "path": "project/src/platform_core/cli_v2.py",
+      "bytes": 2437,
+      "sha256": "c2b07f7c96c52096c78acbfa0aba56f088e82b59f5fa25879561bc6732d344ce"
+    },
+    {
+      "path": "project/src/platform_core/cli_v3.py",
+      "bytes": 2670,
+      "sha256": "ad969bd697e4242ffafc7d4d7fc921d95ffc10b694c68a560f65d27dd0383c33"
+    },
+    {
+      "path": "project/src/platform_core/cli_v4.py",
+      "bytes": 2737,
+      "sha256": "c58621de6c50f259a48f6cc5708bd0967256a9d7d22cf7c8c4f114849ea29a11"
+    },
+    {
+      "path": "project/src/platform_core/engine_v1.py",
+      "bytes": 27262,
+      "sha256": "d3209b43ec1c17f69322a1516d769c341a2ee3bc0ff61492b1c296c66ce0c2fe"
+    },
+    {
+      "path": "project/src/platform_core/engine_v2.py",
+      "bytes": 32054,
+      "sha256": "320cfafe0b5dffea7202b16d9faf0945a649d2833e17d458ba4af000a651d831"
+    },
+    {
+      "path": "project/src/platform_core/ground_encoding_v1.py",
+      "bytes": 6395,
+      "sha256": "c43307df9f632e2e3409db93172a72320ce2b441e398e398df6d968e5b59bb0f"
+    },
+    {
+      "path": "project/src/platform_core/ground_frame_encoder_v1.py",
+      "bytes": 4443,
+      "sha256": "771dc8c159d5c6a63035e65bce3a136d1fae00a064eeffd5c2880617065cf042"
+    },
+    {
+      "path": "project/src/platform_core/ground_live_v1.py",
+      "bytes": 14361,
+      "sha256": "bdaef19df935a024258489533f55fb466a7666cb30d002cf2a255e68654ffd29"
+    },
+    {
+      "path": "project/src/platform_core/ground_live_v2.py",
+      "bytes": 14821,
+      "sha256": "8b1290cfda8d3d9a7244ddf85d0451f871b512c601d717aa114d7a6e3000fc79"
+    },
+    {
+      "path": "project/src/platform_core/ground_tasks_v1.py",
+      "bytes": 19905,
+      "sha256": "51f78ab5772e42ced8663eeba367f2df1fe3a51c300136feef88c31765ecd106"
+    },
+    {
+      "path": "project/src/platform_core/ground_tasks_v2.py",
+      "bytes": 10311,
+      "sha256": "454dc7fe6a547c3f6abc3955fe621706331dc5989fa14d95fe5cc245355dee73"
+    },
+    {
+      "path": "project/src/platform_core/ground_walk_v1.py",
+      "bytes": 14451,
+      "sha256": "6fbac9e8fd45a95a1a10463b283475bfd75908cefb24ac57b340cf8c7968a98a"
+    },
+    {
+      "path": "project/src/platform_core/local_goal_evidence_v1.py",
+      "bytes": 8796,
+      "sha256": "b38d11b235249daf31529348860b7128d7ed10088de3b75d7029516dfade885b"
+    },
+    {
+      "path": "project/src/platform_core/method_catalog_v1.py",
+      "bytes": 10847,
+      "sha256": "f56abe9c6897756681af237004a5c7e8c3025ac71012428e4c8aa307da7b7093"
+    },
+    {
+      "path": "project/src/platform_core/scene_workspace_v1.py",
+      "bytes": 15118,
+      "sha256": "33c3b0e0192d23161638f5cf8954200b20418935f43c1f1558d89f8aacdb1f25"
+    },
+    {
+      "path": "project/src/platform_core/scene_workspace_v2.py",
+      "bytes": 6848,
+      "sha256": "876ac9a12eb63ec7f0bc4c8cf12d80eff400b1347d8b8f62f1321902d1328013"
+    },
+    {
+      "path": "project/src/platform_core/service_v1.py",
+      "bytes": 14777,
+      "sha256": "5a7e6b61b4365d5b9ae7e16869a7dda7e5ee08af8da3f1ada98f5626ce935fe0"
+    },
+    {
+      "path": "project/src/platform_core/service_v10.py",
+      "bytes": 742,
+      "sha256": "3dbfba497a22ce0980bcd35ee991494ddf066edb1a262247ccd16ec3d1dbfae2"
+    },
+    {
+      "path": "project/src/platform_core/service_v11.py",
+      "bytes": 917,
+      "sha256": "cb86f78995cb925161b2855702c45791b2eff1ef74d28f84781f2b9e818cf28f"
+    },
+    {
+      "path": "project/src/platform_core/service_v2.py",
+      "bytes": 14778,
+      "sha256": "ea01ba4ec2acbecabe3a06e7624c193d0ae5e3454311ecc7431ed76b8c967b3a"
+    },
+    {
+      "path": "project/src/platform_core/service_v3.py",
+      "bytes": 1420,
+      "sha256": "6ab2d47b63ecf1031b3b413a65c302f9d7ba51b7c93868bbac7941021613b1b0"
+    },
+    {
+      "path": "project/src/platform_core/service_v4.py",
+      "bytes": 1929,
+      "sha256": "3521c85ba0e6084b4c3db5121654f0c4b970f4f6625f655f8e8bd91ef9e21172"
+    },
+    {
+      "path": "project/src/platform_core/service_v5.py",
+      "bytes": 991,
+      "sha256": "65951e0e91d18644de8a0fa87343f50e7674545349d32aec3d3dab7808d6a233"
+    },
+    {
+      "path": "project/src/platform_core/service_v6.py",
+      "bytes": 1192,
+      "sha256": "2d89825a0df4d6d9f9d1050b1bf399e21d8021c87bc32e9f103cf29c8850e40c"
+    },
+    {
+      "path": "project/src/platform_core/service_v7.py",
+      "bytes": 4245,
+      "sha256": "6303ff08798fdece36bc346ba5f1165482da292385af7aad9a2691d9ef54c7fb"
+    },
+    {
+      "path": "project/src/platform_core/service_v8.py",
+      "bytes": 797,
+      "sha256": "e2770973f6aa03f287b302ea957d4da041cf7ddd4b7cc5c15467b06e0715cf15"
+    },
+    {
+      "path": "project/src/platform_core/service_v9.py",
+      "bytes": 1100,
+      "sha256": "87581817a62013ca14cab66600330d0ca6e60a60a041567e0332d5c9b66144fc"
+    },
+    {
+      "path": "project/src/platform_core/storage_v1.py",
+      "bytes": 930,
+      "sha256": "afe1d5a33acde6af9abdc90a0f05d49061432b583085f6793c8bcd60705640a8"
+    },
+    {
+      "path": "project/src/platform_core/trial_workflow_v1.py",
+      "bytes": 9533,
+      "sha256": "3bdff88c118c6bd97c3aafdd31092c75c64a815c1662549de1ec0fddd877ad96"
+    },
+    {
+      "path": "project/src/webapp/batch_v2.py",
+      "bytes": 5306,
+      "sha256": "c5688f9218b054f66159795506b525fe769da3050bbf493a3eec7c8bab9ce0ff"
+    },
+    {
+      "path": "project/src/webapp/batch_v3.py",
+      "bytes": 5305,
+      "sha256": "b4fa6110b2913dd73228c5ad31a4001a29f7eead4e931411fa13bcce6add6a27"
+    },
+    {
+      "path": "project/src/webapp/binding_v3.py",
+      "bytes": 3187,
+      "sha256": "586e830c3a5d50c09c31abed9e4bd1e9925910ed6bb57664b375dd788f69978b"
+    },
+    {
+      "path": "project/src/webapp/cloud_v2.py",
+      "bytes": 6924,
+      "sha256": "e7af3b35e5288be7dfada8118cb41b80297813fe2fbd8355d7639a8cbdcd4dca"
+    },
+    {
+      "path": "project/src/webapp/cloud_v3.py",
+      "bytes": 7166,
+      "sha256": "1eff9f99510f0592b6938b8fe7d99d79dfe68130867f4df50251d5e5244bb7c5"
+    },
+    {
+      "path": "project/src/webapp/crossview_evidence_v1.html",
+      "bytes": 14417,
+      "sha256": "71d7d72b609eb2e0f8b0225c9687cf359e5e440591cd60276a4c73b14ebcff24"
+    },
+    {
+      "path": "project/src/webapp/ground_layout_v2.css",
+      "bytes": 448,
+      "sha256": "c33c5ee1eda9ab44d0ab40dab91d2e04d6bf1a59126e3176a82d6632f1c396d9"
+    },
+    {
+      "path": "project/src/webapp/ground_live_v1.css",
+      "bytes": 8407,
+      "sha256": "8c3e9e06c465f5ffc4042e7cc73dfd3f7f70d6edfdcf327641b7e1ff3f68eee1"
+    },
+    {
+      "path": "project/src/webapp/ground_live_v1.html",
+      "bytes": 5663,
+      "sha256": "aa8681532cb2e7be217b79cb682ab8087ff62bca064634c043398603def972f6"
+    },
+    {
+      "path": "project/src/webapp/ground_live_v1.js",
+      "bytes": 8017,
+      "sha256": "83e9e316d2f8ba783939ed47b157b057c2766d2b868ff0a9beccc6b159d09635"
+    },
+    {
+      "path": "project/src/webapp/ground_live_v2.js",
+      "bytes": 8112,
+      "sha256": "8b086ee1f35c8076c8dc838aad690050a1e8aac2ca8cc844ad67064b01c7d9dd"
+    },
+    {
+      "path": "project/src/webapp/ground_live_v3.js",
+      "bytes": 8330,
+      "sha256": "26eaa3945c1aa4ff48083a15e51ecb0babe40298d27711b7cb5f9c3e1d499571"
+    },
+    {
+      "path": "project/src/webapp/ground_recovery_v1.js",
+      "bytes": 1077,
+      "sha256": "9d82dd851a73552f20ff679f7c03682c521338d5b0c797451768df9b8ee02482"
+    },
+    {
+      "path": "project/src/webapp/ground_walk_v1.css",
+      "bytes": 2061,
+      "sha256": "12e9666ab7923cefe75fac8de82e1a06665b45551d61160f11d062306b4702f2"
+    },
+    {
+      "path": "project/src/webapp/ground_walk_v1.html",
+      "bytes": 4818,
+      "sha256": "1e12a62577e3f258c87cfcc8cc868b4b2614512f1093931b31628fc99cdb598a"
+    },
+    {
+      "path": "project/src/webapp/ground_walk_v1.js",
+      "bytes": 7658,
+      "sha256": "2dd8132a1d28e0b8e7b68eb281b3332522471374d2e0900b9b950d30fa079251"
+    },
+    {
+      "path": "project/src/webapp/live_v2.py",
+      "bytes": 10616,
+      "sha256": "359cca8233bcf143b5493334d829faa3b03abae81c955654e9bad45b7da7ab84"
+    },
+    {
+      "path": "project/src/webapp/live_v3.py",
+      "bytes": 11097,
+      "sha256": "c3d0425ff05af859deb28b1bd261a3a1d299a52c8a600e45c7a41cdb425a9afc"
+    },
+    {
+      "path": "project/src/webapp/live_v4.py",
+      "bytes": 14164,
+      "sha256": "c9bf012cd90ce6f0199490c361e183ad017594b3392d37d9776f8f6d3f0904ff"
+    },
+    {
+      "path": "project/src/webapp/masa_workbench_v1.py",
+      "bytes": 12835,
+      "sha256": "62f0dd242fee3e113cf440a7c666c767579abd1c1148d53f49242db52d3b5b67"
+    },
+    {
+      "path": "project/src/webapp/replay_v1.py",
+      "bytes": 15617,
+      "sha256": "a10404d07080539c82038a2e19ca158432d29fb668326efa75be39cbd7f45a4b"
+    },
+    {
+      "path": "project/src/webapp/scene_workspace_v1.css",
+      "bytes": 6424,
+      "sha256": "4ddacf1fe99ecd217ad6cf828f313bbbf4aaf588733f14297322e420b9b81654"
+    },
+    {
+      "path": "project/src/webapp/scene_workspace_v1.html",
+      "bytes": 6280,
+      "sha256": "4b3fa32e163b4cd8d6fe7a5daa6b8a0672e48a4b50463ea2713f15dc74d501c4"
+    },
+    {
+      "path": "project/src/webapp/scene_workspace_v1.js",
+      "bytes": 11758,
+      "sha256": "d1db30dcc2da45e909ee53e8342181ea1ec7a39a5d137e2caa648f984cdb3c7d"
+    },
+    {
+      "path": "project/src/webapp/scene_workspace_v2.js",
+      "bytes": 11998,
+      "sha256": "8c85c6f41f677c974a4c509e148d1a402931a7315bffe85babf6681a698bddb9"
+    },
+    {
+      "path": "project/src/webapp/server_v1.py",
+      "bytes": 4178,
+      "sha256": "b2d931b55168d05be2637d5b7378f711963f849e8f507283ae467a8a27230a43"
+    },
+    {
+      "path": "project/src/webapp/server_v2.py",
+      "bytes": 6854,
+      "sha256": "7227c3e1963501490b80716f9bf7510f1044e49ff0f5e3ffff7e3cd0c6f1261c"
+    },
+    {
+      "path": "project/src/webapp/server_v3.py",
+      "bytes": 6961,
+      "sha256": "23b5b9de5ba697dcebe1dcccdbee4d0ea54545a409182ddb63c2e7358cae4708"
+    },
+    {
+      "path": "project/src/webapp/server_v4.py",
+      "bytes": 7521,
+      "sha256": "0998d280b18338bea0fb35c1bb7abf38c0241d7291642c0afa2a54bff163edcc"
+    },
+    {
+      "path": "project/src/webapp/server_v5.py",
+      "bytes": 10661,
+      "sha256": "36fc7d4757ae441bc87e01506c9adec91a5a206389b9a2065b07c91bdc1bf917"
+    },
+    {
+      "path": "project/src/webapp/static/app.js",
+      "bytes": 13667,
+      "sha256": "e8b763e506b6913c84f295abff687f63db8368c6708a7e6c6388a087d370f141"
+    },
+    {
+      "path": "project/src/webapp/static/index.html",
+      "bytes": 6959,
+      "sha256": "07ab78feb685aafd84af50d69b38c66f6ae05c109c1a404e7bd7ab1a0aa40638"
+    },
+    {
+      "path": "project/src/webapp/static/style.css",
+      "bytes": 9680,
+      "sha256": "765bf733893fab395504f3f61fa41705184e2a565ff72e9423e3fe34fa61126f"
+    },
+    {
+      "path": "project/src/webapp/static_ground_v1/app.js",
+      "bytes": 8780,
+      "sha256": "e98eb045b53df504031c637f4df97522d3f2da38aa453839dbe0527fd790371a"
+    },
+    {
+      "path": "project/src/webapp/static_ground_v1/index.html",
+      "bytes": 5158,
+      "sha256": "4937643f98a04c3836a01965d19bc4cee6c8080251d550023ec58712d4d2a402"
+    },
+    {
+      "path": "project/src/webapp/static_ground_v1/style.css",
+      "bytes": 4565,
+      "sha256": "107b7485030cd8742edb3263c39e54d9b689fbdb15ada104ab2c9200a1d50a6f"
+    },
+    {
+      "path": "project/src/webapp/static_v10/app.js",
+      "bytes": 32832,
+      "sha256": "b794d12f2d6faeded634425427195ea2036d1c8e3508ccd795797e16655c68ce"
+    },
+    {
+      "path": "project/src/webapp/static_v10/index.html",
+      "bytes": 21151,
+      "sha256": "75f02cd6b65f9332c9a14a94ddd41d2d871b8a22d586723fd028ea6c8ea79e81"
+    },
+    {
+      "path": "project/src/webapp/static_v10/methods.css",
+      "bytes": 3269,
+      "sha256": "932ac6f35aed40789061f1736d66d2ddd456b625dcb96b3d002826ee86ac75d8"
+    },
+    {
+      "path": "project/src/webapp/static_v10/methods.js",
+      "bytes": 5835,
+      "sha256": "ced759f9b204d91a7eecfc69bcf7ab86cf6d51481a6b225809543c77f0cc8c61"
+    },
+    {
+      "path": "project/src/webapp/static_v10/style.css",
+      "bytes": 23481,
+      "sha256": "336c664ae80711ce92c206938f10096e0d7ddd7f71cb8159f84785d7f7a7f0e2"
+    },
+    {
+      "path": "project/src/webapp/static_v2/app.js",
+      "bytes": 7505,
+      "sha256": "44bfba193b9e934813e87c3617b53c0ee5ffe63dc46306291100340c94da186f"
+    },
+    {
+      "path": "project/src/webapp/static_v2/index.html",
+      "bytes": 5894,
+      "sha256": "32ea4ef647bf3cdb4ef998437c6a2c7a121f20430ae35e6085fff2cd115fbb21"
+    },
+    {
+      "path": "project/src/webapp/static_v2/style.css",
+      "bytes": 4211,
+      "sha256": "24c6e8373c1b9c4ebd03ffdaf0cf1ffb58e070bb65a8683e1649aecc53d7f673"
+    },
+    {
+      "path": "project/src/webapp/static_v3/app.js",
+      "bytes": 8216,
+      "sha256": "1785d439cc56963d8eef5345d032df0842884e125c27b23d1e662b0127e700a0"
+    },
+    {
+      "path": "project/src/webapp/static_v3/index.html",
+      "bytes": 5757,
+      "sha256": "e668f9c582ff5ac9ce50742ba11ffe68e4b35887d119d3b794d1d7efeede63d3"
+    },
+    {
+      "path": "project/src/webapp/static_v3/style.css",
+      "bytes": 4961,
+      "sha256": "e0142ed8f34f29234303b524c48bf850256d79b6483f6171368551fed454e18a"
+    },
+    {
+      "path": "project/src/webapp/static_v4/app.js",
+      "bytes": 15324,
+      "sha256": "12d924eb5b1a9c8445a21d3f693fb364f3b414d433913fe251b5d1431fcfee50"
+    },
+    {
+      "path": "project/src/webapp/static_v4/index.html",
+      "bytes": 9940,
+      "sha256": "c126e5a6d845834ce500a330e866640b3267bfa9bf0ff3eeea4a7f89561e6bfb"
+    },
+    {
+      "path": "project/src/webapp/static_v4/style.css",
+      "bytes": 4961,
+      "sha256": "e0142ed8f34f29234303b524c48bf850256d79b6483f6171368551fed454e18a"
+    },
+    {
+      "path": "project/src/webapp/static_v5/app.js",
+      "bytes": 18486,
+      "sha256": "338ab67c8afc0a5f6ae6173f795c2dbd5118bc83cfc2c092cad3f4c838d88281"
+    },
+    {
+      "path": "project/src/webapp/static_v5/index.html",
+      "bytes": 11353,
+      "sha256": "1b83ee7027524c9c73b3a25fd183f69237649ab16110eee608958db1101c67fe"
+    },
+    {
+      "path": "project/src/webapp/static_v5/style.css",
+      "bytes": 12580,
+      "sha256": "b9ca202d6b8e9b49778fa389e6f29271f87a2860b8c4cbdad7d57caa2e57659b"
+    },
+    {
+      "path": "project/src/webapp/static_v6/app.js",
+      "bytes": 26794,
+      "sha256": "a6247f921827008128f1fc475334b0b110c56223c9fd7705a775be3497d4cb2c"
+    },
+    {
+      "path": "project/src/webapp/static_v6/index.html",
+      "bytes": 14848,
+      "sha256": "7a7b35426aba8894bbabb485da49ae4b5b4dc8fce010dcf4cf9152b7ee62c334"
+    },
+    {
+      "path": "project/src/webapp/static_v6/style.css",
+      "bytes": 13793,
+      "sha256": "cd6d47eab69920c8d3d567435e44cdc5780da16d3ea4021d4851ba0cfb592f6c"
+    },
+    {
+      "path": "project/src/webapp/static_v7/app.js",
+      "bytes": 30894,
+      "sha256": "df65a3f283aef9be47bcb634fc0d47b6440a57fb0cd0341cd319563ad2025f7f"
+    },
+    {
+      "path": "project/src/webapp/static_v7/index.html",
+      "bytes": 17355,
+      "sha256": "b4dabd0a114b22f37a51f32e2bf2f57c5225a7083fd190037454277a304d6f64"
+    },
+    {
+      "path": "project/src/webapp/static_v7/style.css",
+      "bytes": 23112,
+      "sha256": "4c8aedc317288d9b7bb39bfdbc2428a2613f120096dd83d6428b9ba57c992be8"
+    },
+    {
+      "path": "project/src/webapp/static_v8/app.js",
+      "bytes": 32721,
+      "sha256": "36767460f974d8a6a41f0af4500fd5ee2a1103f5af88bbd74c3ac20cb7d50967"
+    },
+    {
+      "path": "project/src/webapp/static_v8/index.html",
+      "bytes": 17853,
+      "sha256": "6888a15c640df7a1da56e469d6ea9431fb8de682b5dbb38cdb315c9568622ca1"
+    },
+    {
+      "path": "project/src/webapp/static_v8/style.css",
+      "bytes": 23481,
+      "sha256": "336c664ae80711ce92c206938f10096e0d7ddd7f71cb8159f84785d7f7a7f0e2"
+    },
+    {
+      "path": "project/src/webapp/static_v9/app.js",
+      "bytes": 32832,
+      "sha256": "b794d12f2d6faeded634425427195ea2036d1c8e3508ccd795797e16655c68ce"
+    },
+    {
+      "path": "project/src/webapp/static_v9/index.html",
+      "bytes": 17853,
+      "sha256": "1bf879e078117dd8bad565bcbd681de92e631fb69f265e4f4225fdbdaf1a57a5"
+    },
+    {
+      "path": "project/src/webapp/static_v9/style.css",
+      "bytes": 23481,
+      "sha256": "336c664ae80711ce92c206938f10096e0d7ddd7f71cb8159f84785d7f7a7f0e2"
+    },
+    {
+      "path": "project/src/webapp/trial_workflow_v1.css",
+      "bytes": 1286,
+      "sha256": "06708dac5a0c5a90ded2854c3b58659dfd6af7a6cf1f4f4d5e923ecce2c1a7b4"
+    },
+    {
+      "path": "project/src/webapp/trial_workflow_v1.js",
+      "bytes": 6362,
+      "sha256": "9e8d547667ced7ae1331c8bec9b701733807db010437ff20dfc2187d678b5855"
+    },
+    {
+      "path": "project/src/webapp/upload_v4.py",
+      "bytes": 10225,
+      "sha256": "1d9cdab3c4a598f1fbe69db1d7d503a7cd1b4495b9311eb0a2c993a7279fe918"
+    },
+    {
+      "path": "project/src/webapp/verify_delivery_v3.py",
+      "bytes": 5999,
+      "sha256": "f8e2d5074590df8970034c1a1eb56168d6ef61e1737496a2beb561f8939df9f4"
+    },
+    {
+      "path": "project/src/webapp/verify_v1.py",
+      "bytes": 5986,
+      "sha256": "87b5f1f921a915d02f8ca69ce49392211274e21a0e12098007bbe7939b1d96e4"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v1.py",
+      "bytes": 7975,
+      "sha256": "16e161c97a6e77e8ef5a1fca97bb8f00582ef5c88e4573eff599d3853696b1a6"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v10.py",
+      "bytes": 2605,
+      "sha256": "fbb2149f75f5f53c47fca24dab12de9891ae070b051f8832b66a85c930fba876"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v11.py",
+      "bytes": 5268,
+      "sha256": "d69d281ca082de736341d244f018f51482b1845547b0c7850ea9ffa7dd7615e3"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v12.py",
+      "bytes": 1987,
+      "sha256": "d28d060e231c07891c5362a78f512768c13fdbe51fd5abc013aee539681187e1"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v13.py",
+      "bytes": 7730,
+      "sha256": "4ebe0e195cf9d943ad5b669e2df985b62fe3b2106179cf2e947e83233c96610a"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v14.py",
+      "bytes": 7945,
+      "sha256": "b0dddbf92d9df5c64d2de6f437857d5966cbc921e43a6e3ec65eb322b89a2b4d"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v15.py",
+      "bytes": 12205,
+      "sha256": "17857d2ccc1954c3522e44e25b3e722b7a961560d07e286b47d73b70322b1c09"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v16.py",
+      "bytes": 2388,
+      "sha256": "4fb0c26c1e8ef2482d2f50d83c710d9550e606a27a73cbd00c3be72d8543f9bd"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v17.py",
+      "bytes": 12548,
+      "sha256": "d44e3824df6b9e175e1ac10f843a0a989448ef522872363c89f772ac129586a2"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v18.py",
+      "bytes": 16762,
+      "sha256": "c4c7563e4c83cfd25712cf57eca9ca54f22740a58f2b26d1aa3bbc82c52a0704"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v2.py",
+      "bytes": 1150,
+      "sha256": "98f7844ca89a08c78d6221e22be2d0e60666b89a8638dd4577775dec6b72472b"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v3.py",
+      "bytes": 8515,
+      "sha256": "cf529593236db4e1f40e13f094fa762ded93c7350a0ea6394c1e42a8d0988115"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v4.py",
+      "bytes": 8560,
+      "sha256": "3295cb15c51218d124647bbfaea0bc9472b4363e7bfb0d8ebffd6ce2b47de55d"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v5.py",
+      "bytes": 9492,
+      "sha256": "70ad02b6dfacf380bcc76410286fd361a95379926d92833093c40a015bd06eaa"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v6.py",
+      "bytes": 9517,
+      "sha256": "b4f65e912dc243fedd09d6cb7363c1e292b4926e76a1d6f2e0c5a3aefd7e6980"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v7.py",
+      "bytes": 3297,
+      "sha256": "a0cef0377596e968c9a4f0be53c5d3b3111132486af34d01b341c87fbb57e892"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v8.py",
+      "bytes": 6095,
+      "sha256": "2d70a264fe0ace58d80d98a734e4111479485cc83cd6ee0de950e18fddebe952"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v9.py",
+      "bytes": 1690,
+      "sha256": "f6f3e82eb2345a75fb9db955303a54758c22323006fdf89ee143b638ec487dcb"
+    },
+    {
+      "path": "project/src/webapp/workbench_v1.py",
+      "bytes": 24233,
+      "sha256": "7ff666462117381e0cc1eb40e0b14c90fd686006d902a86f81a59892de3e58a0"
+    },
+    {
+      "path": "project/src/webapp/workbench_v2.py",
+      "bytes": 1246,
+      "sha256": "9e9b74a2425efa1a85b0ab6af8ab26a66a3dc11d78fcac2c9ef5053b7a621349"
+    },
+    {
+      "path": "project/src/webapp/workbench_v3.py",
+      "bytes": 9415,
+      "sha256": "fe7a7aea5aae8084e5247e9405d2ea5cf25733a95eaa1fa37ace3f30be49c2a5"
+    },
+    {
+      "path": "project/src/webapp/workflow_polish_v1.css",
+      "bytes": 149,
+      "sha256": "c3ca9ae1688a5d3b3666d656042296806d1d23321402be2d84392c841b589ec8"
+    },
+    {
+      "path": "project/src/webapp/workflow_polish_v1.js",
+      "bytes": 1014,
+      "sha256": "6a758b12ca9c870a7f4e7036f8b1ced34e5de50c78c01450c0ce77f07f999e52"
+    },
+    {
+      "path": "平台/启动平台.ps1",
+      "bytes": 2624,
+      "sha256": "26fab7c920ad0a086ab300520fa878cfeb7335fde03db298a76d149e3c62009e"
+    },
+    {
+      "path": "平台/启动平台.cmd",
+      "bytes": 135,
+      "sha256": "29058dd7a1c396bbe9134d370341ba4c09d4ba77f61c845bbc75d21a542fcce3"
+    },
+    {
+      "path": "project/.runtime/ccvpe_engineering_v1/upstream_models.py",
+      "bytes": 64638,
+      "sha256": "672b46aaf2a2f22c19b5ae18789831a4c5a97d52e171bfa1f1ef919b80ce32c4",
+      "url": "https://raw.githubusercontent.com/tudelft-iv/CCVPE/3028aa5c1585d3c274c3a531bdce19846c9c3bd2/models.py"
+    },
+    {
+      "path": "project/.runtime/ccvpe_engineering_v1/efficientnet_pytorch/model.py",
+      "bytes": 18641,
+      "sha256": "4ec8c0f15149b6d03e29aed433aeacde0cf6731e3171876cae4727d072c5003c",
+      "url": "https://raw.githubusercontent.com/tudelft-iv/CCVPE/3028aa5c1585d3c274c3a531bdce19846c9c3bd2/efficientnet_pytorch/model.py"
+    },
+    {
+      "path": "project/.runtime/ccvpe_engineering_v1/efficientnet_pytorch/utils.py",
+      "bytes": 32300,
+      "sha256": "dc90d362bb4b107fc7864c45fa6781c58838faf4add6b242052fbd71898f4213",
+      "url": "https://raw.githubusercontent.com/tudelft-iv/CCVPE/3028aa5c1585d3c274c3a531bdce19846c9c3bd2/efficientnet_pytorch/utils.py"
+    },
+    {
+      "path": "project/.runtime/ccvpe_engineering_v1/efficientnet_pytorch/__init__.py",
+      "bytes": 182,
+      "sha256": "d138f56b6f2cff028cfc0a6193f97909ed5041335596da3d40892f06e3145f2b",
+      "url": "https://raw.githubusercontent.com/tudelft-iv/CCVPE/3028aa5c1585d3c274c3a531bdce19846c9c3bd2/efficientnet_pytorch/__init__.py"
+    },
+    {
+      "path": "project/.runtime/ccvpe_engineering_v1/LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "url": "https://raw.githubusercontent.com/tudelft-iv/CCVPE/3028aa5c1585d3c274c3a531bdce19846c9c3bd2/LICENSE"
+    },
+    {
+      "path": "models/ccvpe_kitti_public_v1/model.pt",
+      "bytes": 242293725,
+      "sha256": "1e24db00c675493264a4c184f918e94fe4843fffd121389ae4642c530d4cc338"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/README.md",
+      "bytes": 4289,
+      "sha256": "e5a19e041db34c976255c7135caa32fb61bcaceca22f835923a59f4976d6a61b"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/下一步边界.json",
+      "bytes": 343,
+      "sha256": "f6e37a3f7851486a8baf63e51d8fb9c47ec4c4cdaf570fce8e8e26fb8d9f1d61"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/严格加载与冻结前张量.json",
+      "bytes": 183498,
+      "sha256": "34f886745c67a67148d67ddf4c257a28c3a19e2ec01856547f60525e1ad16629"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/交付核验.json",
+      "bytes": 285,
+      "sha256": "3401691051a79f628e36efc81be25ad0dd76153a83d18bdf44085762be208b78"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/全部控制检查.json",
+      "bytes": 881,
+      "sha256": "8f5ddd0412fb5426cc01d6a6f62f3c0cefc78b73147f22b63efb16d1b2e28358"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/冻结后张量.json",
+      "bytes": 183307,
+      "sha256": "33ef428a9a41a423e3658992d710640c4e2a12b2d8d81a4fdebf271058c55c8a"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/前向_01.json",
+      "bytes": 36230,
+      "sha256": "a46c8a586eb17fe38376e4a80a17a01224a8067f5fa613d6c74b870e78097894"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/前向_02.json",
+      "bytes": 36220,
+      "sha256": "15aa0584895d3a7117a210065b856c992bc1e0156507335dedfb04747894d095"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/前向_03.json",
+      "bytes": 36075,
+      "sha256": "809ec59ce79d7f15cff2b043a6f176cd4e066a19f9343cf8eed0d346d96765bb"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/前向_04.json",
+      "bytes": 36065,
+      "sha256": "f0e25c9e9a023085f9e2d8ea81c94217385c0331a6e2cf0cc3f039713b4a0d7e"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/前向_05.json",
+      "bytes": 36120,
+      "sha256": "0d1dcab38891129948c7147f58d945bd8e38630df564c4186b588a616872af3c"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/前向_06.json",
+      "bytes": 36110,
+      "sha256": "0587210a0780e61726fb485ad69dd4c1783f21e8be79f39e7d9113623cfcb630"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/前向_07.json",
+      "bytes": 36042,
+      "sha256": "08e2bee0d33a5435c98a85962d680581280af67826cc7817b8710e089cb12729"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/前向_08.json",
+      "bytes": 36032,
+      "sha256": "80f0fb32bc5a90e711adfcec3ab1d2743e44e6d1fe49a58cfda61b7b48cd40aa"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/前向_09.json",
+      "bytes": 36033,
+      "sha256": "0f08e9fef7809e51882ce508bee16a0aa700b23380a7222d1e47de49d42a5f06"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/前向_10.json",
+      "bytes": 35986,
+      "sha256": "d161f17da83693d835e43725472ea31afdaa4afdb8c7797d4d92da9163a4afbb"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/前向_11.json",
+      "bytes": 36129,
+      "sha256": "37e801058bfc132d788e0c4206c3120bb19523a39a649d3d87b318af9c07c9e7"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/前向_12.json",
+      "bytes": 36073,
+      "sha256": "fa8d5fd99f942d8917a158b70ad4ecb799c6dd2514a9c17380775cd3d72c7956"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/取得事件.jsonl",
+      "bytes": 6086,
+      "sha256": "3404b35375b3dbabacd901b2d7c6b98ea85798dd49185c68658a364d38a9b030"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/取得前授权与定位.json",
+      "bytes": 1524,
+      "sha256": "3036e7c30c0278c32aa5288730899a12a29d334655e944c7b0e7026c08aeef9d"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/取得开始.json",
+      "bytes": 272,
+      "sha256": "fa98399d6c7e84ead0016dbe0796dde37dbe6a8a2baa7a7da7fc5ae4ad120981"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/另实现复核.json",
+      "bytes": 1070,
+      "sha256": "0fb07acb81cc2902b961afd63750fa8a69c8ca3d60085f1f5df8906b0f9dd25b"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/官方源码取得与静态结构.json",
+      "bytes": 4406,
+      "sha256": "fe96ace2ec7be52864116269de1c797407de51698d47c2f6808863ef18a3135d"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/工件取得完成.json",
+      "bytes": 2070,
+      "sha256": "e6a18d572fdca2179bca977a42b9924ceb31be68d1bfcd98ffcd08572ca60b8a"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/工作进程stderr.log",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/工作进程stdout.log",
+      "bytes": 7470,
+      "sha256": "796aabe7d1e5e2c2c70d2456d223de78bcc7713b5e25dff32bd989f743d4ba97"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/工作进程身份.json",
+      "bytes": 86,
+      "sha256": "8440e7604f496ece735cae43fe5f8be8d0e7b1e778116b5b05901cd5fffe43c6"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/工程执行完成.json",
+      "bytes": 400,
+      "sha256": "377abedfef33e62fff60ef03303f5a9d8d48edb2fd76f79228017f1e14db7622"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/工程执行开始.json",
+      "bytes": 98,
+      "sha256": "e2e6f77be4802664725233c0262a8a38569eb17edfe0bd29e4a6b88c9128ae9b"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/校准目标多层均值.json",
+      "bytes": 33718,
+      "sha256": "288c2c2cb63bac4d334e7d834ce1171444ad5e8817e4811c709c09b65487d7ad"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/等价_0.json",
+      "bytes": 189,
+      "sha256": "ecc2c200ca152ef672088052742f8e4c043f35cb2c6722a968eb5577aedd650f"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/等价_1.json",
+      "bytes": 189,
+      "sha256": "a439c4cbbe5a22b1e6dfd528b9c0a7254f1e2a9b0765b006d62436f488ee5e00"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/等价_2.json",
+      "bytes": 189,
+      "sha256": "87dda70e7edbb49a69217f7f9bd3a9455d659a7394c0b0d26d81674d0ce15e23"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/等价_3.json",
+      "bytes": 189,
+      "sha256": "3e02b342eb4b9dcd64b9ef97591b834d84411dc22d27f27204ac4ad7a2a2a9bf"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/资源护栏回执.json",
+      "bytes": 198,
+      "sha256": "27a054d5a9a698f3efd7531da4d797f751afa49a5378611fb07697d46528badf"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/运行事件.jsonl",
+      "bytes": 7470,
+      "sha256": "796aabe7d1e5e2c2c70d2456d223de78bcc7713b5e25dff32bd989f743d4ba97"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/阶段封存.json",
+      "bytes": 10861,
+      "sha256": "7e5d56246e517bfa1945fc206d8792792922813fd91057cf68e6766d6cc92ddb"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/CCVPE真实工程准入_v1/首前向冻结绑定.json",
+      "bytes": 54283,
+      "sha256": "f6281ca9cba4bc016ce6421496cfaa6f32ba1f36c51b6301b56493c4262202a7"
+    },
+    {
+      "path": "project/src/eval/ccvpe_screen_v1.py",
+      "bytes": 14908,
+      "sha256": "1a055c1bf97b521db6a79f70b26e64c1db55f48172f1964b8405c9525881cb90"
+    },
+    {
+      "path": "project/src/eval/audit_ccvpe_screen_v1.py",
+      "bytes": 9436,
+      "sha256": "a4dcc1792837338df013075e9193cd7ed0221d73660f6748069e1729d2039b7d"
+    },
+    {
+      "path": "project/src/tests/test_ccvpe_screen_v1.py",
+      "bytes": 3904,
+      "sha256": "36ae473fa528b294f1c106fb8c06dd0febf09e692197dd4099afebe39ac1110e"
+    },
+    {
+      "path": "project/src/documents/close_ccvpe_screen_v1.py",
+      "bytes": 11653,
+      "sha256": "9cc402ad9169fa304920434a3ef059050e5fa265d0fd820fa221a59e4fbc996c"
+    }
+  ],
+  "sources": [
+    {
+      "path": "project/src/eval/ccvpe_screen_v1.py",
+      "bytes": 14908,
+      "sha256": "1a055c1bf97b521db6a79f70b26e64c1db55f48172f1964b8405c9525881cb90"
+    },
+    {
+      "path": "project/src/eval/audit_ccvpe_screen_v1.py",
+      "bytes": 9436,
+      "sha256": "a4dcc1792837338df013075e9193cd7ed0221d73660f6748069e1729d2039b7d"
+    },
+    {
+      "path": "project/src/tests/test_ccvpe_screen_v1.py",
+      "bytes": 3904,
+      "sha256": "36ae473fa528b294f1c106fb8c06dd0febf09e692197dd4099afebe39ac1110e"
+    },
+    {
+      "path": "project/src/documents/close_ccvpe_screen_v1.py",
+      "bytes": 11653,
+      "sha256": "9cc402ad9169fa304920434a3ef059050e5fa265d0fd820fa221a59e4fbc996c"
+    }
+  ],
+  "cases": {
+    "calibration": [
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_0/12",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 12,
+        "current_crop_bounds": [
+          250,
+          250,
+          375,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "inside",
+          "query_xy_native": [
+            347.5,
+            342.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_0/7",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 7,
+        "current_crop_bounds": [
+          250,
+          125,
+          375,
+          250
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            347.5,
+            342.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_0/13",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 13,
+        "current_crop_bounds": [
+          375,
+          250,
+          500,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            347.5,
+            342.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_0/17",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 17,
+        "current_crop_bounds": [
+          250,
+          375,
+          375,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            347.5,
+            342.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_0/11",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 11,
+        "current_crop_bounds": [
+          125,
+          250,
+          250,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            347.5,
+            342.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_1/13",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 13,
+        "current_crop_bounds": [
+          375,
+          250,
+          500,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_1/8",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 8,
+        "current_crop_bounds": [
+          375,
+          125,
+          500,
+          250
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_1/14",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 14,
+        "current_crop_bounds": [
+          500,
+          250,
+          625,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_1/18",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 18,
+        "current_crop_bounds": [
+          375,
+          375,
+          500,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_1/12",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 12,
+        "current_crop_bounds": [
+          250,
+          250,
+          375,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_0/12",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 12,
+        "current_crop_bounds": [
+          250,
+          250,
+          375,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_0/7",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 7,
+        "current_crop_bounds": [
+          250,
+          125,
+          375,
+          250
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_0/13",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 13,
+        "current_crop_bounds": [
+          375,
+          250,
+          500,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_0/17",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 17,
+        "current_crop_bounds": [
+          250,
+          375,
+          375,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_0/11",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 11,
+        "current_crop_bounds": [
+          125,
+          250,
+          250,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_1/13",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 13,
+        "current_crop_bounds": [
+          375,
+          250,
+          500,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "inside",
+          "query_xy_native": [
+            385.5,
+            268.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_1/8",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 8,
+        "current_crop_bounds": [
+          375,
+          125,
+          500,
+          250
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            385.5,
+            268.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_1/14",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 14,
+        "current_crop_bounds": [
+          500,
+          250,
+          625,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            385.5,
+            268.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_1/18",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 18,
+        "current_crop_bounds": [
+          375,
+          375,
+          500,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            385.5,
+            268.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_1/12",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 12,
+        "current_crop_bounds": [
+          250,
+          250,
+          375,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            385.5,
+            268.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      }
+    ],
+    "development_screen": [
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/17",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 17,
+        "current_crop_bounds": [
+          250,
+          375,
+          375,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "inside",
+          "query_xy_native": [
+            293.5,
+            383.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/12",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 12,
+        "current_crop_bounds": [
+          250,
+          250,
+          375,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            293.5,
+            383.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/18",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 18,
+        "current_crop_bounds": [
+          375,
+          375,
+          500,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            293.5,
+            383.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/22",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 22,
+        "current_crop_bounds": [
+          250,
+          500,
+          375,
+          625
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            293.5,
+            383.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/16",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 16,
+        "current_crop_bounds": [
+          125,
+          375,
+          250,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            293.5,
+            383.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/13",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 13,
+        "current_crop_bounds": [
+          375,
+          250,
+          500,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/8",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 8,
+        "current_crop_bounds": [
+          375,
+          125,
+          500,
+          250
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/14",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 14,
+        "current_crop_bounds": [
+          500,
+          250,
+          625,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/18",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 18,
+        "current_crop_bounds": [
+          375,
+          375,
+          500,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/12",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 12,
+        "current_crop_bounds": [
+          250,
+          250,
+          375,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/17",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 17,
+        "current_crop_bounds": [
+          250,
+          375,
+          375,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/12",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 12,
+        "current_crop_bounds": [
+          250,
+          250,
+          375,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/18",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 18,
+        "current_crop_bounds": [
+          375,
+          375,
+          500,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/22",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 22,
+        "current_crop_bounds": [
+          250,
+          500,
+          375,
+          625
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/16",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 16,
+        "current_crop_bounds": [
+          125,
+          375,
+          250,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/13",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 13,
+        "current_crop_bounds": [
+          375,
+          250,
+          500,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "inside",
+          "query_xy_native": [
+            405.5,
+            298.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/8",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 8,
+        "current_crop_bounds": [
+          375,
+          125,
+          500,
+          250
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            405.5,
+            298.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/14",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 14,
+        "current_crop_bounds": [
+          500,
+          250,
+          625,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            405.5,
+            298.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/18",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 18,
+        "current_crop_bounds": [
+          375,
+          375,
+          500,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            405.5,
+            298.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/12",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 12,
+        "current_crop_bounds": [
+          250,
+          250,
+          375,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            405.5,
+            298.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      }
+    ]
+  },
+  "checkpoint": {
+    "path": "models/ccvpe_kitti_public_v1/model.pt",
+    "bytes": 242293725,
+    "sha256": "1e24db00c675493264a4c184f918e94fe4843fffd121389ae4642c530d4cc338"
+  },
+  "vendor": [
+    {
+      "path": "project/.runtime/ccvpe_engineering_v1/upstream_models.py",
+      "bytes": 64638,
+      "sha256": "672b46aaf2a2f22c19b5ae18789831a4c5a97d52e171bfa1f1ef919b80ce32c4",
+      "url": "https://raw.githubusercontent.com/tudelft-iv/CCVPE/3028aa5c1585d3c274c3a531bdce19846c9c3bd2/models.py"
+    },
+    {
+      "path": "project/.runtime/ccvpe_engineering_v1/efficientnet_pytorch/model.py",
+      "bytes": 18641,
+      "sha256": "4ec8c0f15149b6d03e29aed433aeacde0cf6731e3171876cae4727d072c5003c",
+      "url": "https://raw.githubusercontent.com/tudelft-iv/CCVPE/3028aa5c1585d3c274c3a531bdce19846c9c3bd2/efficientnet_pytorch/model.py"
+    },
+    {
+      "path": "project/.runtime/ccvpe_engineering_v1/efficientnet_pytorch/utils.py",
+      "bytes": 32300,
+      "sha256": "dc90d362bb4b107fc7864c45fa6781c58838faf4add6b242052fbd71898f4213",
+      "url": "https://raw.githubusercontent.com/tudelft-iv/CCVPE/3028aa5c1585d3c274c3a531bdce19846c9c3bd2/efficientnet_pytorch/utils.py"
+    },
+    {
+      "path": "project/.runtime/ccvpe_engineering_v1/efficientnet_pytorch/__init__.py",
+      "bytes": 182,
+      "sha256": "d138f56b6f2cff028cfc0a6193f97909ed5041335596da3d40892f06e3145f2b",
+      "url": "https://raw.githubusercontent.com/tudelft-iv/CCVPE/3028aa5c1585d3c274c3a531bdce19846c9c3bd2/efficientnet_pytorch/__init__.py"
+    },
+    {
+      "path": "project/.runtime/ccvpe_engineering_v1/LICENSE",
+      "bytes": 35149,
+      "sha256": "3972dc9744f6499f0f9b2dbf76696f2ae7ad8af9b23dde66d6af86c9dfb36986",
+      "url": "https://raw.githubusercontent.com/tudelft-iv/CCVPE/3028aa5c1585d3c274c3a531bdce19846c9c3bd2/LICENSE"
+    }
+  ],
+  "images": [
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_0_ground.png",
+      "bytes": 411632,
+      "sha256": "37347e32331d4f0cf24c2f6f9d0b8d5560b1b06f19c73621bb695cd9b3f0a980"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_0_aerial.png",
+      "bytes": 514417,
+      "sha256": "12c19dd4c69c2f4b1685b69ac46fab1ee723a55b3e05c648fdd74a527381d19a"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_1_ground.png",
+      "bytes": 530824,
+      "sha256": "60fb6d9c6c12d8a044e4cada2c64a491cfa2bcc799b61cf4c948c4a04f311b03"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_1_aerial.png",
+      "bytes": 585650,
+      "sha256": "a1fd06eb9c7ff450d15f7b1fea0c28c4da88dcade79705c44d1fc0429cc74b4b"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_2_ground.png",
+      "bytes": 455963,
+      "sha256": "82f2ea3ee5d0e941d5402fbb0a000c99e6b00acbfa6c158afe5f66a2b48d8863"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_2_aerial.png",
+      "bytes": 625106,
+      "sha256": "15abce257837caedae90edb4330405353c72117581660365b5f9fb79564ed87d"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_3_ground.png",
+      "bytes": 348980,
+      "sha256": "be9c12ded75f6a7329b2291152aaeffc4f6616a44209eb87a8f6a2aa590fbe75"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_3_aerial.png",
+      "bytes": 626017,
+      "sha256": "88cad3a9ab9072268c574fe53835acbba6dc652546076229403b710fef842f18"
+    }
+  ],
+  "current": {
+    "platform": "平台/实验工作台_v4/README.md",
+    "launcher": "平台/启动平台.ps1",
+    "server": "project/src/webapp/workbench_server_v18.py",
+    "static": "project/src/webapp/static_v10/",
+    "report": "中期报告相关/中期成果冻结版_v1/中期报告_基于主动探索的视觉地理定位方法设计与实现_冻结版_v2.docx",
+    "report_pdf": "中期报告相关/中期成果冻结版_v1/中期报告_基于主动探索的视觉地理定位方法设计与实现_冻结版_v2.pdf",
+    "midterm_freeze": "中期报告相关/中期成果冻结版_v1/README.md",
+    "benchmark_preparation": "项目导航/共同真实评测执行准备_v2/README.md",
+    "benchmark_training": "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v2/README.md",
+    "benchmark_evaluation": "DATA/processed_data/Masa/评测结果/共同学习基线对照_v1/README.md",
+    "benchmark_figures": "绘图/共同学习基线对照_v1/论文图_v2/README.md",
+    "benchmark_diagnosis": "DATA/processed_data/Masa/评测结果/GeoExplorer目标利用诊断_v1/README.md",
+    "benchmark_gradient_diagnosis": "DATA/processed_data/Masa/评测结果/GeoExplorer梯度贡献诊断_v1/README.md",
+    "benchmark_learning_curve": "DATA/processed_data/Masa/评测结果/GeoExplorer目标学习曲线诊断_v1/README.md",
+    "benchmark_supervision_context": "DATA/processed_data/Masa/评测结果/GeoExplorer监督情境覆盖诊断_v1/README.md",
+    "benchmark_evidence_close": "项目导航/GeoExplorer复现差异与诊断收束_v1/README.md",
+    "benchmark_position_engineering": "项目导航/GeoExplorer位置编码工程验证_v1/README.md",
+    "benchmark_position_development": "DATA/processed_data/Masa/训练结果/GeoExplorer位置编码同预算对照_v1/README.md",
+    "benchmark_position_development_report": "DATA/processed_data/Masa/训练结果/GeoExplorer位置编码同预算对照_v1/训练完成与开发对照报告_v2.md",
+    "paper_repro_materials": "总结报告相关/论文复现交付_v1/README.md",
+    "baseline_eligibility": "项目导航/学习基线资格核查_v1/README.md",
+    "gomaa_static_eligibility": "项目导航/GOMAA权重静态资格_v1/README.md",
+    "gomaa_engineering": "项目导航/GOMAA工程推理验证_v1/README.md",
+    "gomaa_development_navigation": "DATA/processed_data/Masa/评测结果/GOMAA开发闭环目标诊断_v1/README.md",
+    "baseline_provenance_followup": "项目导航/学习基线来源与编码器补证据_v1/README.md",
+    "benchmark_original_assets": "项目导航/原训练资料接收_v1/README.md",
+    "benchmark_joint_admission": "项目导航/原训练资产核验与共同验证准入_v1/共同验证条件草案_v1.md",
+    "benchmark_original_asset_intake": "项目导航/原训练资料接收_v1/README.md",
+    "platform_release": "平台/实验工作台_v4/地面目标连续观测与人工探索_v1/README.md",
+    "platform_validation": "平台/实验工作台_v4/方案与模型_v1/README.md",
+    "kernel": "project/src/platform_core/service_v11.py",
+    "launcher_cmd": "平台/启动平台.cmd",
+    "platform_maintenance": "平台/实验工作台_v4/入口清理_v1/README.md",
+    "storage_retention": "项目导航/归档永久清理_20261012_v1/README.md",
+    "launcher_validation": "平台/实验工作台_v4/启动修复_v1/README.md",
+    "transfer_asset_manifest": "平台/实验工作台_v4/地面目标连续观测与人工探索_v1/搬迁发布清单_v2.json",
+    "benchmark_independent_development": "项目导航/GeoExplorer策略分布一致性核查_v1/README.md",
+    "benchmark_mask_engineering": "项目导航/GeoExplorer分布一致性工程验证_v1/README.md",
+    "benchmark_mask_training": "DATA/processed_data/Masa/训练结果/GeoExplorer分布一致性成对开发_v1/README.md",
+    "benchmark_mask_driver": "project/src/tools/run_geoexplorer_mask_v3.py",
+    "benchmark_mask_continuation": "project/src/tools/finish_geoexplorer_mask_v2.py",
+    "benchmark_mask_report": "DATA/processed_data/Masa/训练结果/GeoExplorer分布一致性成对开发_v1/训练完成与开发对照报告_v1.md",
+    "method_catalog": "project/src/platform_core/method_catalog_v1.py",
+    "transfer_builder": "project/src/tools/package_workbench_v21.py",
+    "portable_validation": "平台/实验工作台_v4/便携闭环_v1/README.md",
+    "release_rehearsal": "平台/实验工作台_v4/发布彩排_v1/README.md",
+    "migration_guide": "平台/实验工作台_v4/发布彩排_v1/迁移与启动说明.md",
+    "demonstration_card": "平台/实验工作台_v4/发布彩排_v1/答辩操作卡.html",
+    "midterm_entry": "中期报告相关/README.md",
+    "final_report_preparation": "总结报告相关/总结准备_v1/README.md",
+    "final_report_plan": "总结报告相关/总结准备_v1/总结阶段计划_v1.md",
+    "final_report_template": "课程相关报告模版/综合工程设计-3-总结报告.docx",
+    "final_report_workspace": "总结报告相关/总结报告_v1/README.md",
+    "final_report_outline": "总结报告相关/总结报告_v1/准备/详细大纲_v1.md",
+    "final_claim_evidence": "总结报告相关/总结报告_v1/准备/论断与证据表.md",
+    "final_report": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.docx",
+    "final_report_pdf": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.pdf",
+    "final_report_entry": "总结报告相关/总结报告_v1/README.md",
+    "final_report_content": "project/src/documents/final_report_content_v3.json",
+    "final_report_audit": "总结报告相关/总结报告_v1/核验/初稿_v1/修订_v2/终校_v4/最终交付复核.json",
+    "crossview_entry": "DATA/processed_data/MM-GAG/跨视角公开资产准入_v1/README.md",
+    "crossview_inventory": "DATA/processed_data/MM-GAG/数据核验与跨视角准入_v1/数据准入汇总.json",
+    "crossview_next_plan": "DATA/processed_data/MM-GAG/跨视角公开资产准入_v1/下一项权重获取与工程条件.md",
+    "final_report_role": "stage snapshot; final integration postponed for ground-goal cross-view mainline",
+    "crossview_probe": "DATA/processed_data/MM-GAG/拍摄点语义与完整目标图验证_v1/完整目标图对照汇总.json",
+    "ground_encoder": "models/clip_vit_b32_public_v1",
+    "ground_encoder_provenance": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/模型获取回执.json",
+    "crossview_global_probe": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/感知对照汇总.json",
+    "crossview_local_probe": "DATA/processed_data/MM-GAG/局部语义匹配单因素验证_v1/局部匹配对照汇总.json",
+    "crossview_label_scale": "DATA/processed_data/MM-GAG/目标格定义与视觉尺度审查_v1/审查汇总.json",
+    "crossview_case_gallery": "DATA/processed_data/MM-GAG/目标格定义与视觉尺度审查_v1/样例审查.html",
+    "crossview_fullframe_probe": "DATA/processed_data/MM-GAG/拍摄点语义与完整目标图验证_v1/完整目标图对照汇总.json",
+    "crossview_goal_semantics": "DATA/processed_data/MM-GAG/拍摄点语义与完整目标图验证_v1/目标语义约定.json",
+    "crossview_goal_contract": "project/src/data/crossview_goal_semantics_v1.py",
+    "crossview_training_inventory": "DATA/processed_data/MM-GAG/对齐头训练素材准入_v1/素材核验汇总.json",
+    "crossview_data_admission_page": "DATA/processed_data/MM-GAG/对齐头训练素材准入_v1/数据可用性.html",
+    "crossview_conditional_head_design": "DATA/processed_data/MM-GAG/对齐头训练素材准入_v1/条件式小头方案_未准入.json",
+    "crossview_weak_manifest": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/派生素材清单.json",
+    "crossview_training_design": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/训练设计冻结.json",
+    "crossview_weak_pair_adapter": "project/src/data/weak_scene_pairs_v1.py",
+    "crossview_weak_pair_QA": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/弱配对审查.html",
+    "crossview_weak_alignment": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/感知对照汇总.json",
+    "crossview_weak_alignment_report": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/工程训练与目标对照报告.md",
+    "crossview_weak_alignment_audit": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/核验/另实现复核.json",
+    "crossview_weak_alignment_driver": "project/src/tools/run_weak_alignment_v3.py",
+    "crossview_weak_alignment_head": "project/src/agents/weak_alignment_head_v1.py",
+    "crossview_transfer_diagnosis": "DATA/processed_data/MM-GAG/弱场景与拍摄点迁移差异诊断_v1/迁移差异诊断报告.md",
+    "crossview_transfer_diagnosis_page": "DATA/processed_data/MM-GAG/弱场景与拍摄点迁移差异诊断_v1/诊断阅读页.html",
+    "crossview_transfer_diagnosis_audit": "DATA/processed_data/MM-GAG/弱场景与拍摄点迁移差异诊断_v1/核验/另实现复核.json",
+    "crossview_source_proposal": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/待审九五六分组.json",
+    "crossview_source_proposal_page": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/来源规划阅读页.html",
+    "crossview_source_roles": "DATA/processed_data/MM-GAG/同任务来源用途账本_v1.json",
+    "crossview_pixel_preflight": "DATA/processed_data/MM-GAG/同任务首批图像轴向预检_v1/工程汇总.json",
+    "crossview_pixel_preflight_audit": "DATA/processed_data/MM-GAG/同任务首批图像轴向预检_v1/核验/另实现复核.json",
+    "crossview_pixel_preflight_authorization": "DATA/processed_data/MM-GAG/同任务首批图像轴向预检_v1/用户授权记录.json",
+    "crossview_same_task_protocol": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/配对覆盖同预算冻结协议.json",
+    "crossview_same_task_queue": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/固定训练与开发队列.json",
+    "crossview_same_task_protocol_audit": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/核验/协议另实现复核.json",
+    "crossview_actual_executor": "project/src/tools/run_capturepoint_coverage_v1.py",
+    "crossview_actual_auditor": "project/src/eval/audit_capturepoint_coverage_execution_v1.py",
+    "crossview_target_head": "project/src/agents/capturepoint_target_head_v1.py",
+    "crossview_actual_scoring": "project/src/eval/capturepoint_coverage_scoring_v1.py",
+    "crossview_executor_engineering": "DATA/processed_data/MM-GAG/同任务对齐执行器工程_v2/工程结果.json",
+    "crossview_executor_binding": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/首forward绑定.json",
+    "crossview_same_task_execution": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/执行完成.json",
+    "crossview_same_task_report": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/十二配对同预算训练与目标对照报告.md",
+    "crossview_same_task_result": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/开发对照汇总.json",
+    "crossview_same_task_decision": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/核验/最终门槛判定.json",
+    "crossview_same_task_audit": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/核验/完整另实现复核.json",
+    "crossview_evidence_close": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/跨视角阶段证据与失败边界.md",
+    "crossview_evidence_gaps": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/证据与缺项表.json",
+    "crossview_platform_boundary": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/平台接入边界.md",
+    "crossview_evidence_close_driver": "project/src/eval/crossview_evidence_close_v2.py",
+    "crossview_label_admission_review": "DATA/processed_data/MM-GAG/同任务拍摄点标签与可辨识性审查_v1/审查汇总与收束判定.json",
+    "crossview_label_gallery": "DATA/processed_data/MM-GAG/同任务拍摄点标签与可辨识性审查_v1/README.md",
+    "crossview_label_review_driver": "project/src/tools/capturepoint_label_review_v1.py",
+    "crossview_current_material_training_branch_status": "frozen_representation_grid_signal_failed_route_closed_no_more_head_training",
+    "crossview_training_capacity": "DATA/processed_data/MM-GAG/训练正配对容量与划分追溯_v1/训练容量与取样追溯汇总.json",
+    "crossview_training_capacity_report": "DATA/processed_data/MM-GAG/训练正配对容量与划分追溯_v1/九对限制来源与训练配对容量报告.md",
+    "crossview_training_capacity_driver": "project/src/eval/capturepoint_training_capacity_v1.py",
+    "crossview_coverage_protocol": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/配对覆盖同预算冻结协议.json",
+    "crossview_coverage_queue": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/固定训练与开发队列.json",
+    "crossview_coverage_preparer": "project/src/tools/prepare_capturepoint_coverage_v1.py",
+    "crossview_coverage_protocol_auditor": "project/src/eval/audit_capturepoint_coverage_v1.py",
+    "crossview_coverage_gate": "project/src/data/capturepoint_coverage_protocol_v1.py",
+    "crossview_legacy9_executor": "project/src/tools/run_capturepoint_execution_v2.py",
+    "crossview_legacy9_auditor": "project/src/eval/audit_capturepoint_execution_v2.py",
+    "crossview_legacy9_actual_scoring": "project/src/eval/capturepoint_execution_scoring_v1.py",
+    "crossview_legacy9_executor_binding": "DATA/processed_data/MM-GAG/同任务对齐执行器工程_v2/首forward输入源码绑定.json",
+    "crossview_legacy9_same_task_protocol": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/同任务对齐训练冻结协议.json",
+    "crossview_legacy9_same_task_queue": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/固定编码与训练开发队列.json",
+    "crossview_legacy9_same_task_protocol_audit": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/核验/另实现复核.json",
+    "crossview_legacy9_same_task_execution": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/执行完成.json",
+    "crossview_legacy9_same_task_result": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/开发对照汇总.json",
+    "crossview_legacy9_same_task_decision": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/核验/最终门槛判定.json",
+    "crossview_legacy9_same_task_audit": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/核验/另实现复核.json",
+    "crossview_legacy9_same_task_report": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/同任务训练与目标对照报告.md",
+    "crossview_review": "DATA/processed_data/MM-GAG/配对覆盖复查与后续计划_v1/复查结论.md",
+    "crossview_review_evidence": "DATA/processed_data/MM-GAG/配对覆盖复查与后续计划_v1/复查汇总.json",
+    "crossview_review_driver": "project/src/eval/review_capturepoint_coverage_v1.py",
+    "crossview_signal_diagnosis": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/场景与精确格诊断报告.md",
+    "crossview_signal_result": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/开发信号筛选.json",
+    "crossview_signal_audit": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/另实现复核.json",
+    "crossview_signal_runner": "project/src/tools/run_crossview_signal_v1.py",
+    "crossview_platform_evidence": "平台/实验工作台_v4/地面目标证据_v1/README.md",
+    "ground_task_core": "project/src/platform_core/ground_tasks_v2.py",
+    "ground_task_CLI": "project/src/platform_core/cli_v4.py",
+    "ground_workbench": "平台/实验工作台_v4/地面任务可靠性修复_v1/README.md",
+    "ground_release_report": "平台/实验工作台_v4/地面任务可靠性修复_v1/发布与验收报告.md",
+    "ground_static": "project/src/webapp/static_ground_v1/",
+    "ground_layout": "project/src/webapp/ground_layout_v2.css",
+    "platform_service": "project/src/platform_core/service_v5.py",
+    "ground_workbench_review": "平台/实验工作台_v4/地面任务复查与后续规划_v1/README.md",
+    "ground_recovery_ui": "project/src/webapp/ground_recovery_v1.js",
+    "historical_platform_auditor": "project/src/tools/audit_ground_release_v2.py",
+    "crossview_asset_admission": "DATA/processed_data/MM-GAG/跨视角公开资产准入_v1/准入判定.json",
+    "local_goal_evidence_contract": "project/src/platform_core/local_goal_evidence_v1.py",
+    "local_goal_interface_preparation": "平台/实验工作台_v4/局部目标接口准备_v1/README.md",
+    "crossview_local_loop_engineering": "DATA/processed_data/MM-GAG/目标语义与局部闭环工程_v1/README.md",
+    "crossview_local_loop_status": "engineering_passed_semantic_trend_screen_failed_closed_no_default_upgrade",
+    "scene_kernel": "project/src/platform_core/scene_workspace_v2.py",
+    "scene_delivery": "平台/实验工作台_v4/场景交互复查与修复_v1/README.md",
+    "ground_encoding_engineering": "DATA/processed_data/MM-GAG/地面目标实时编码接口工程_v2/README.md",
+    "ground_encoding_interface": "project/src/platform_core/ground_encoding_v1.py",
+    "ground_encoding_loader": "project/src/agents/frozen_crossview_encoder_v2.py",
+    "ground_live": "平台/实验工作台_v4/地面证据四项修复与回归_v1/README.md",
+    "ground_walk": "平台/实验工作台_v4/地面目标连续观测与人工探索_v1/README.md"
+  },
+  "index_count": 155,
+  "index_sha": "4ab3e0acb6d7ce8cbf64878f4021b954cafeb3d8c5e04e419f5c99bcaa559d0b",
+  "authorized": {
+    "directory": "DATA\\processed_data\\OpenCVL\\CCVPE局部感知开发筛查_v1",
+    "bytes": 16777216,
+    "decodes": 8,
+    "pipeline": 100,
+    "backbones": 200,
+    "CPU_RSS": 4294967296,
+    "seconds": 1800
+  },
+  "tests": {
+    "passed": true,
+    "count": 6,
+    "real_forward": 0
+  },
+  "protocol_sha": {
+    "path": "调研/20_轻量空间关系感知与拒绝协议_v1.json",
+    "bytes": 63247,
+    "sha256": "cd2136b8563ae006d2c56d1f3514d73487b304ca31770bdb81e396dc68ad91d0"
+  },
+  "prediction": "visible512 heatmap argmax,row-major first tie;native centers625/512",
+  "score": "max yaw-reduced finest256 raw matching over native centers625/256 in public current tile;no upsampling",
+  "Mean": "reuse CV030 calibration0/1 six descriptor means unchanged",
+  "calibration": "20 Full only,threshold persisted before development",
+  "training": 0,
+  "navigation": 0,
+  "downloads": 0,
+  "APIs": 0,
+  "confirmation_groups": 0
+}

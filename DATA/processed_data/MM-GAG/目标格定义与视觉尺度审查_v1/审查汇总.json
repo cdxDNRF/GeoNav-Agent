@@ -1,0 +1,212 @@
+{
+  "task": "CV-004",
+  "planned_pairs": 16,
+  "development_groups": 10,
+  "raw_target_center_mapping_passed": 16,
+  "EXIF_GPS_present": 0,
+  "camera_heading_present": 0,
+  "independently_verified_geographic_footprints": 0,
+  "camera_vs_visible_landmark_unknown": 16,
+  "visual_semantics_counts": {
+    "not_clear": 12,
+    "plausible": 4
+  },
+  "visual_risks": {
+    "viewpoint_and_scale": 16,
+    "building_occlusion": 8,
+    "center_crop": 16,
+    "sky": 7,
+    "distant_landmark": 4,
+    "vegetation_occlusion": 4
+  },
+  "retained_area_min_max": [
+    0.5628140703517588,
+    0.7516778523489933
+  ],
+  "per_group_visual_observations": {
+    "dev_00": {
+      "pairs": 1,
+      "plausible": 0,
+      "not_clear": 1,
+      "unknown": 0
+    },
+    "dev_01": {
+      "pairs": 1,
+      "plausible": 1,
+      "not_clear": 0,
+      "unknown": 0
+    },
+    "dev_02": {
+      "pairs": 2,
+      "plausible": 2,
+      "not_clear": 0,
+      "unknown": 0
+    },
+    "dev_03": {
+      "pairs": 1,
+      "plausible": 0,
+      "not_clear": 1,
+      "unknown": 0
+    },
+    "dev_04": {
+      "pairs": 2,
+      "plausible": 0,
+      "not_clear": 2,
+      "unknown": 0
+    },
+    "dev_05": {
+      "pairs": 1,
+      "plausible": 0,
+      "not_clear": 1,
+      "unknown": 0
+    },
+    "dev_06": {
+      "pairs": 2,
+      "plausible": 0,
+      "not_clear": 2,
+      "unknown": 0
+    },
+    "dev_07": {
+      "pairs": 2,
+      "plausible": 0,
+      "not_clear": 2,
+      "unknown": 0
+    },
+    "dev_08": {
+      "pairs": 2,
+      "plausible": 0,
+      "not_clear": 2,
+      "unknown": 0
+    },
+    "dev_09": {
+      "pairs": 2,
+      "plausible": 1,
+      "not_clear": 1,
+      "unknown": 0
+    }
+  },
+  "post_review_rank_join": [
+    {
+      "pair_id": "cvp_00",
+      "group_id": "dev_00",
+      "visual_semantics": "not_clear",
+      "global_full_rank": 7,
+      "local_full_rank": 8
+    },
+    {
+      "pair_id": "cvp_01",
+      "group_id": "dev_01",
+      "visual_semantics": "plausible",
+      "global_full_rank": 3,
+      "local_full_rank": 7
+    },
+    {
+      "pair_id": "cvp_02",
+      "group_id": "dev_02",
+      "visual_semantics": "plausible",
+      "global_full_rank": 2,
+      "local_full_rank": 17
+    },
+    {
+      "pair_id": "cvp_03",
+      "group_id": "dev_03",
+      "visual_semantics": "not_clear",
+      "global_full_rank": 10,
+      "local_full_rank": 9
+    },
+    {
+      "pair_id": "cvp_04",
+      "group_id": "dev_04",
+      "visual_semantics": "not_clear",
+      "global_full_rank": 19,
+      "local_full_rank": 12
+    },
+    {
+      "pair_id": "cvp_05",
+      "group_id": "dev_05",
+      "visual_semantics": "not_clear",
+      "global_full_rank": 17,
+      "local_full_rank": 15
+    },
+    {
+      "pair_id": "cvp_06",
+      "group_id": "dev_06",
+      "visual_semantics": "not_clear",
+      "global_full_rank": 11,
+      "local_full_rank": 5
+    },
+    {
+      "pair_id": "cvp_07",
+      "group_id": "dev_07",
+      "visual_semantics": "not_clear",
+      "global_full_rank": 19,
+      "local_full_rank": 13
+    },
+    {
+      "pair_id": "cvp_08",
+      "group_id": "dev_08",
+      "visual_semantics": "not_clear",
+      "global_full_rank": 22,
+      "local_full_rank": 3
+    },
+    {
+      "pair_id": "cvp_09",
+      "group_id": "dev_09",
+      "visual_semantics": "plausible",
+      "global_full_rank": 18,
+      "local_full_rank": 4
+    },
+    {
+      "pair_id": "cvp_10",
+      "group_id": "dev_02",
+      "visual_semantics": "plausible",
+      "global_full_rank": 19,
+      "local_full_rank": 21
+    },
+    {
+      "pair_id": "cvp_11",
+      "group_id": "dev_04",
+      "visual_semantics": "not_clear",
+      "global_full_rank": 17,
+      "local_full_rank": 3
+    },
+    {
+      "pair_id": "cvp_12",
+      "group_id": "dev_06",
+      "visual_semantics": "not_clear",
+      "global_full_rank": 5,
+      "local_full_rank": 11
+    },
+    {
+      "pair_id": "cvp_13",
+      "group_id": "dev_07",
+      "visual_semantics": "not_clear",
+      "global_full_rank": 9,
+      "local_full_rank": 8
+    },
+    {
+      "pair_id": "cvp_14",
+      "group_id": "dev_08",
+      "visual_semantics": "not_clear",
+      "global_full_rank": 23,
+      "local_full_rank": 16
+    },
+    {
+      "pair_id": "cvp_15",
+      "group_id": "dev_09",
+      "visual_semantics": "not_clear",
+      "global_full_rank": 4,
+      "local_full_rank": 17
+    }
+  ],
+  "review_is_subjective": true,
+  "person_independent": false,
+  "model_forward_calls": 0,
+  "training_steps": 0,
+  "navigation_episodes": 0,
+  "new_SR": null,
+  "conclusion": "numeric geometry passed; precise capture-point/landmark and metric footprints unverified; images expose plausible viewpoint/scale risks, not proof of wrong labels or sole failure cause",
+  "new_candidate_selected": false,
+  "reason": "two fixed representation probes failed and exact visual/geo semantics remain uncertain; no justified new zero-training scorer or navigation admission",
+  "next": "small team-assisted semantic label checklist on these16; no new source/model/parameter/navigation experiments from this batch"
+}

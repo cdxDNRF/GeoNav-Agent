@@ -1,0 +1,38 @@
+{
+  "status": "verified_reuse",
+  "files": [
+    {
+      "seed": 0,
+      "original_path": "DATA\\processed_data\\Masa\\评测结果\\GeoExplorer目标利用诊断_v1\\探针\\seed_0.jsonl",
+      "original_sha256": "028156cd41e4a907805fa417418991a91d18363cb0a6a60aac6fdf55cc5876c1",
+      "normalized_path": "DATA\\processed_data\\Masa\\评测结果\\GeoExplorer目标学习曲线诊断_v1\\探针\\seed_0_epoch300.jsonl",
+      "normalized_sha256": "9b0987b886de40ecf6641710f7b39154601fea2624786d6175ef629c80c5c3ce",
+      "rows": 3288
+    },
+    {
+      "seed": 1,
+      "original_path": "DATA\\processed_data\\Masa\\评测结果\\GeoExplorer目标利用诊断_v1\\探针\\seed_1.jsonl",
+      "original_sha256": "ce3ed998d6b998c9832f02f1e83fceddb8be275e9c89f5a4a52c0e4c1761a030",
+      "normalized_path": "DATA\\processed_data\\Masa\\评测结果\\GeoExplorer目标学习曲线诊断_v1\\探针\\seed_1_epoch300.jsonl",
+      "normalized_sha256": "2d17bbc8aec9766cf2c2fe7d1e7b7a613f27a01ba19379a6db6d7fd7bf0ef58c",
+      "rows": 3288
+    },
+    {
+      "seed": 2,
+      "original_path": "DATA\\processed_data\\Masa\\评测结果\\GeoExplorer目标利用诊断_v1\\探针\\seed_2.jsonl",
+      "original_sha256": "7e59476b582d0b37d7282f4e92e976bd1c7b4668d38063925d66b49e07f9ee3e",
+      "normalized_path": "DATA\\processed_data\\Masa\\评测结果\\GeoExplorer目标学习曲线诊断_v1\\探针\\seed_2_epoch300.jsonl",
+      "normalized_sha256": "e2488dcfa22b0ea5da153888578a5a7ff5789fd0858bc8ad59458cb06c6edaac",
+      "rows": 3288
+    }
+  ],
+  "expression_AST_equivalence": true,
+  "network_inputs": "same bound requests/bank/fit mean/history/position tokens",
+  "network_weights": "same three sealed epoch300 checkpoints and bound original class/config/environment; eval FP32/TF32 disabled",
+  "actor_not_executed": true,
+  "epoch300_new_forward": 0,
+  "source_sha256": {
+    "project\\src\\agents\\geoexplorer_goal_probe_v1.py": "ae3c2af890bc7b19bfb6e7327efe324f77889009b082e30b02af68a46f41def0",
+    "project\\src\\agents\\geoexplorer_curve_probe_v1.py": "0ca1605ac059a2840de130f14d4c338b4b8fa519bf91f87f9a403fd52a0f105b"
+  }
+}

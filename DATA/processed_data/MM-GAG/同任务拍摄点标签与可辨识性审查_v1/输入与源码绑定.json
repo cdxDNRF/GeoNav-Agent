@@ -1,0 +1,95 @@
+{
+  "task": "CV-016",
+  "inputs": [
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务首批图像轴向预检_v1/首像素冻结协议.json",
+      "bytes": 504711,
+      "sha256": "b074dc5c9a0e938d61641c562ed38a236476df1a6d356caade330d391f6ffbdb"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务首批图像轴向预检_v1/逐图解码与字节回执.json",
+      "bytes": 512568,
+      "sha256": "6895a10745997ea06b7f45c618d72152d89c6ec53a6e2d0bd5fb90f721d67f00"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务首批图像轴向预检_v1/阶段封存.json",
+      "bytes": 7117,
+      "sha256": "0607e5c2cd20c8b8a82a1a00743317094650dfdfd7ee6f6c307f9faf78f19066"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源用途账本_v1.json",
+      "bytes": 16244,
+      "sha256": "3a55e4fc09542b88de3229576bab5f3e89bac7fbde274aa840ba4ed3ea5cf3c3"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/候选代表与监督引用.json",
+      "bytes": 861639,
+      "sha256": "37a7a092540447701749427fe5b654ec87c92a9f62aef69950e2d41ae052f19f"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/数据核验与跨视角准入_v1/逐源准入清单.json",
+      "bytes": 121639,
+      "sha256": "21475f7392d17e53e521d43f5aa220be537c6bf0c154e4e38372a91b373e4b65"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/后续方向与准入条件.md",
+      "bytes": 2340,
+      "sha256": "98772faddea7ac04b08bea48b2dba497e924ea7ec555cb9d542b70f8c8271b0c"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/阶段封存.json",
+      "bytes": 3445,
+      "sha256": "a4cff5f93d5bb44efdf64ba747a0f7cdcb143cd1150843d4ed862c370dc23bdd"
+    }
+  ],
+  "sources": [
+    {
+      "path": "project/src/tools/capturepoint_label_review_v1.py",
+      "bytes": 10358,
+      "sha256": "2955c2e08f54622819cdeb973ac92f017dd97d0136c1498c12d89e2940e61780"
+    },
+    {
+      "path": "project/src/eval/audit_capturepoint_label_review_v1.py",
+      "bytes": 3347,
+      "sha256": "8e066051f5c7cb45df0e2a3e0b5783c243a5e8ac5dddfcaec6b151aeabc8d1e4"
+    },
+    {
+      "path": "project/src/tests/test_capturepoint_label_review_v1.py",
+      "bytes": 1869,
+      "sha256": "aecbf39591beb3aebd9748bc83543fc36de199b930857079700e3ea84375c05c"
+    },
+    {
+      "path": "project/src/documents/close_capturepoint_label_review_v1.py",
+      "bytes": 10292,
+      "sha256": "3ca2a97fe26ec1769f841359dbf75b1d6a9bb364cbacf03aaf08a40132124bb8"
+    }
+  ],
+  "protected": [
+    {
+      "path": "project/local_policy_default.json",
+      "bytes": 4143,
+      "sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b"
+    },
+    {
+      "path": "project/local_policy_defaults_v1.json",
+      "bytes": 747,
+      "sha256": "8e1b85eb74021ac18f8246f8146f7db451d68f423d7152f6c3a5d7c86b4d16fa"
+    },
+    {
+      "path": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.docx",
+      "bytes": 1183421,
+      "sha256": "8529c55fb53823d88201dc7f485b3b5c43e5fb2113ddf7d1ead7321f2eea409f"
+    },
+    {
+      "path": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.pdf",
+      "bytes": 1051983,
+      "sha256": "e127eac96ad85bdce079e1813e15fcea82fb80ee0cb61a7d80e958427167c4b2"
+    }
+  ],
+  "protocol": {
+    "path": "DATA/processed_data/MM-GAG/同任务拍摄点标签与可辨识性审查_v1/冻结审查范围.json",
+    "bytes": 19949,
+    "sha256": "5ba1a12abe709fdc9e2613d3b2cdbb573c40de6f59ff6932a35d38b5e941be65"
+  },
+  "scope": "raw byte reads/decodes only42 frozen images, once; no feature/weight/model/API access"
+}

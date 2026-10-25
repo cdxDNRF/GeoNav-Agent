@@ -1,0 +1,31 @@
+{
+  "task": "BENCH-021",
+  "status": "blocked_draft",
+  "execute_allowed": false,
+  "execution_configuration_frozen": false,
+  "admission_rules_fixed": true,
+  "requirements": "元数据/资产准入清单_v1.json",
+  "proposed_grid": 5,
+  "proposed_budget": 10,
+  "proposed_distances": [
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "proposed_minimum_complete_sources": 10,
+  "pairs_per_source_per_distance": 5,
+  "tasks_manifest": null,
+  "sources_manifest": null,
+  "final_weights_and_resource_caps": null,
+  "development_target_gate": {
+    "full_minus_removed_sr_pp": 5,
+    "full_minus_wrong_sr_pp": 5,
+    "source_paired_95ci_lower_gt": 0,
+    "engineering_audit": true
+  },
+  "old_gomaa_failure_preserved": true,
+  "new_sources_consumed": 0,
+  "reserve_consumption": 0
+}

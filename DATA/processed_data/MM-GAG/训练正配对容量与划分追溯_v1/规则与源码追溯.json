@@ -1,0 +1,31 @@
+{
+  "code_rules": [
+    {
+      "path": "project/src/data/capturepoint_partition_v1.py",
+      "start": 69,
+      "end": 69,
+      "excerpt": "                       'current_role':'reserved','proposed_role':'fit' if i<9 else 'development' if i<14 else 'confirmation',"
+    },
+    {
+      "path": "project/src/data/capturepoint_partition_v1.py",
+      "start": 67,
+      "end": 67,
+      "excerpt": "        representative=min(g,key=lambda sid:hashlib.sha256(('CV-010/representative/v1\\n'+ground_hashes[sid]).encode()).hexdigest())"
+    },
+    {
+      "path": "project/src/data/capturepoint_alignment_protocol_v1.py",
+      "start": 10,
+      "end": 10,
+      "excerpt": "    if len(sources)!=14 or [s['role'] for s in sources]!=['fit']*9+['development']*5:"
+    },
+    {
+      "path": "project/src/data/capturepoint_alignment_protocol_v1.py",
+      "start": 23,
+      "end": 23,
+      "excerpt": "        if i<9:"
+    }
+  ],
+  "frozen_only_new_factor": "training data regime: nine MM-GAG camera-proxy pairs instead of nine Swiss common-scene pairs; this also changes domain/content, not a pure causal label-only test",
+  "CV010_candidate_rule": "SHA256(CV-010/proposed-group/v1 + sorted ground hashes), first9 fit,next5dev,last6confirmation; one hash-selected representative per group",
+  "design_snapshot_flags_not_current_authorization": true
+}

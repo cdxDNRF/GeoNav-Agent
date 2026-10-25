@@ -1,0 +1,98 @@
+{
+  "task": "CV-022",
+  "metadata_inspection_complete": true,
+  "candidate": "Sample4Geo/CVUSA",
+  "source_revision": "498c6511478053ddb4a43f24a9f4942fab238f09",
+  "decision": "retain_candidate_no_download_model_probe_or_navigation_admission",
+  "download_admitted": false,
+  "model_probe_admitted": false,
+  "navigation_admitted": false,
+  "gates": [
+    {
+      "gate": "public_source_pinned",
+      "result": true,
+      "evidence": "498c6511478053ddb4a43f24a9f4942fab238f09"
+    },
+    {
+      "gate": "official_checkpoint_path_declared",
+      "result": true,
+      "evidence": "pretrained/cvusa/convnext_base.fb_in22k_ft_in1k_384/weights_e40_98.6830.pth"
+    },
+    {
+      "gate": "official_archive_identified",
+      "result": true,
+      "evidence": {
+        "id": "1dZ9itDjS-h5KHc23OQb8oHqJ3KoSaPyS",
+        "name": "pretrained.zip",
+        "visible_size": [
+          "1.51 GB"
+        ]
+      }
+    },
+    {
+      "gate": "single_asset_within_suggested1GiB_cap",
+      "result": false,
+      "evidence": "Public directory reports1.51GB, numeric size metadata1626048556; not downloaded or independently measured"
+    },
+    {
+      "gate": "local_missing_dependencies_resolved",
+      "result": false,
+      "evidence": "timm and albumentations not installed; no installation performed"
+    },
+    {
+      "gate": "ordinary_photo_FoV_and_proxy_cell_applicability_demonstrated",
+      "result": null,
+      "evidence": "Current goal aspect ratios0.75/1.333 vs public140x768; FoV and geographic footprint unverified, no performance probe"
+    },
+    {
+      "gate": "checkpoint_bytes_tensors_and_preprocessing_bound",
+      "result": null,
+      "evidence": "No model downloaded or loaded"
+    },
+    {
+      "gate": "source_and_weight_redistribution_permission_established",
+      "result": null,
+      "evidence": "No explicit root license link in inspected public page/README; archive not inspected, not a legal conclusion"
+    },
+    {
+      "gate": "no_automatic_extra_download_in_original_entry",
+      "result": false,
+      "evidence": "pretrained=True before checkpoint loading; future adapter must disable it"
+    },
+    {
+      "gate": "strict_CPU_weight_loading_in_original_entry",
+      "result": false,
+      "evidence": "strict=False and no map_location in original entry; engineering adaptation required"
+    },
+    {
+      "gate": "parameter_and_peak_memory_budget_measured",
+      "result": null,
+      "evidence": "No model construction/forward; not measured"
+    }
+  ],
+  "official_archive_size_metadata_bytes": 1626048556,
+  "suggested_single_asset_cap_bytes": 1073741824,
+  "size_is_remote_metadata_not_local_file_measurement": true,
+  "ground_input_height_width": [
+    140,
+    768
+  ],
+  "aerial_input_height_width": [
+    384,
+    384
+  ],
+  "known_development_goal_count": 5,
+  "new_independent_geographies": 0,
+  "ConGeo_selected": false,
+  "local_direct_requests": 19,
+  "post_freeze_web_tool_open_requests": 3,
+  "post_freeze_observable_logical_requests": 22,
+  "preliminary_web_requests_before_scope_freeze": 7,
+  "model_payload_downloads": 0,
+  "source_code_executed": 0,
+  "training": 0,
+  "navigation": 0,
+  "confirmation_pixels_features_or_evaluation": 0,
+  "no_author_contact": true,
+  "stop_rule": "This bounded metadata batch is closed. Any acquisition/new resource limit or real inference needs a separate concrete protocol; no blind repetition or current-head training."
+}

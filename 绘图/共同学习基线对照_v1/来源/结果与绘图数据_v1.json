@@ -1,0 +1,4815 @@
+{
+  "sources": {
+    "DATA\\processed_data\\Masa\\评测结果\\共同学习基线对照_v1\\核验\\正式独立复核_v1.json": "c3745b719b1429ca94ea95002001722c23b1a93a4e04d5bb671c9e0a40f9a216",
+    "DATA\\processed_data\\Masa\\评测结果\\共同学习基线对照_v1\\核验\\推理资源_v1.json": "c78297098ad2fabff0ed923c2945a2f3ddd454f0a0d22d6d9d16d35df82db5be",
+    "DATA\\processed_data\\Masa\\评测结果\\共同学习基线对照_v1\\元数据\\正式冻结协议_v1.json": "bd450f508930135ddff5f0e7b770f4e3714d274a9d27188d4b8eece2ca36f071",
+    "project\\src\\documents\\build_common_benchmark_delivery_v1.py": "8bc54d36ef1f3dd2e6b69aeb80adb4b841a658d822816e3d052a65c11629f076"
+  },
+  "aggregate_metrics": [
+    {
+      "method": "M0",
+      "condition": "Full",
+      "planned": 750,
+      "successes": 651,
+      "sr": 0.868,
+      "normal_terminals": 750,
+      "sg_cells_all_planned": 0.3,
+      "movement_cells_all_planned": 7.596,
+      "policy_errors": 0
+    },
+    {
+      "method": "M0",
+      "condition": "Disabled",
+      "planned": 750,
+      "successes": 552,
+      "sr": 0.736,
+      "normal_terminals": 750,
+      "sg_cells_all_planned": 0.7186666666666667,
+      "movement_cells_all_planned": 8.033333333333333,
+      "policy_errors": 0
+    },
+    {
+      "method": "M0",
+      "condition": "Mean",
+      "planned": 750,
+      "successes": 549,
+      "sr": 0.732,
+      "normal_terminals": 750,
+      "sg_cells_all_planned": 0.6986666666666667,
+      "movement_cells_all_planned": 8.074666666666667,
+      "policy_errors": 0
+    },
+    {
+      "method": "M0",
+      "condition": "Wrong",
+      "planned": 750,
+      "successes": 521,
+      "sr": 0.6946666666666667,
+      "normal_terminals": 750,
+      "sg_cells_all_planned": 0.8306666666666667,
+      "movement_cells_all_planned": 8.190666666666667,
+      "policy_errors": 0
+    },
+    {
+      "method": "GeoExplorer",
+      "condition": "Full",
+      "planned": 750,
+      "successes": 267,
+      "sr": 0.356,
+      "normal_terminals": 750,
+      "sg_cells_all_planned": 2.5893333333333333,
+      "movement_cells_all_planned": 8.941333333333333,
+      "policy_errors": 0
+    },
+    {
+      "method": "GeoExplorer",
+      "condition": "Disabled",
+      "planned": 750,
+      "successes": 265,
+      "sr": 0.35333333333333333,
+      "normal_terminals": 750,
+      "sg_cells_all_planned": 2.526666666666667,
+      "movement_cells_all_planned": 8.937333333333333,
+      "policy_errors": 0
+    },
+    {
+      "method": "GeoExplorer",
+      "condition": "Mean",
+      "planned": 750,
+      "successes": 265,
+      "sr": 0.35333333333333333,
+      "normal_terminals": 750,
+      "sg_cells_all_planned": 2.526666666666667,
+      "movement_cells_all_planned": 8.937333333333333,
+      "policy_errors": 0
+    },
+    {
+      "method": "GeoExplorer",
+      "condition": "Wrong",
+      "planned": 750,
+      "successes": 276,
+      "sr": 0.368,
+      "normal_terminals": 750,
+      "sg_cells_all_planned": 2.466666666666667,
+      "movement_cells_all_planned": 8.882666666666667,
+      "policy_errors": 0
+    }
+  ],
+  "contrasts": [
+    {
+      "left": [
+        "M0",
+        "Full"
+      ],
+      "right": [
+        "GeoExplorer",
+        "Full"
+      ],
+      "source_file_groups": 10,
+      "paired_observations": 750,
+      "sr_difference": 0.512,
+      "sg_difference": -2.2893333333333334,
+      "movement_difference": -1.3453333333333333,
+      "sr_difference_ci95": [
+        0.43733333333333335,
+        0.5813333333333334
+      ],
+      "sg_difference_ci95": [
+        -2.6186666666666665,
+        -1.9759000000000004
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "sr_difference": 0.5,
+          "sg_difference": -2.3,
+          "recovered": 136,
+          "harmed": 11
+        },
+        {
+          "seed": 1,
+          "sr_difference": 0.532,
+          "sg_difference": -2.384,
+          "recovered": 136,
+          "harmed": 3
+        },
+        {
+          "seed": 2,
+          "sr_difference": 0.504,
+          "sg_difference": -2.184,
+          "recovered": 134,
+          "harmed": 8
+        }
+      ],
+      "recovered": 406,
+      "harmed": 22,
+      "by_area": {
+        "img_0": {
+          "planned": 75,
+          "sr_difference": 0.6133333333333333,
+          "sg_difference": -3.0
+        },
+        "img_1": {
+          "planned": 75,
+          "sr_difference": 0.56,
+          "sg_difference": -2.7733333333333334
+        },
+        "img_2": {
+          "planned": 75,
+          "sr_difference": 0.4,
+          "sg_difference": -1.7066666666666668
+        },
+        "img_3": {
+          "planned": 75,
+          "sr_difference": 0.6933333333333334,
+          "sg_difference": -2.6533333333333333
+        },
+        "img_4": {
+          "planned": 75,
+          "sr_difference": 0.26666666666666666,
+          "sg_difference": -1.48
+        },
+        "img_5": {
+          "planned": 75,
+          "sr_difference": 0.64,
+          "sg_difference": -3.12
+        },
+        "img_6": {
+          "planned": 75,
+          "sr_difference": 0.4266666666666667,
+          "sg_difference": -1.8
+        },
+        "img_7": {
+          "planned": 75,
+          "sr_difference": 0.44,
+          "sg_difference": -2.066666666666667
+        },
+        "img_8": {
+          "planned": 75,
+          "sr_difference": 0.49333333333333335,
+          "sg_difference": -1.96
+        },
+        "img_9": {
+          "planned": 75,
+          "sr_difference": 0.5866666666666667,
+          "sg_difference": -2.3333333333333335
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 150,
+          "sr_difference": 0.4266666666666667,
+          "sg_difference": -1.8533333333333333
+        },
+        "C5": {
+          "planned": 150,
+          "sr_difference": 0.3933333333333333,
+          "sg_difference": -2.2333333333333334
+        },
+        "C6": {
+          "planned": 150,
+          "sr_difference": 0.5133333333333333,
+          "sg_difference": -2.04
+        },
+        "C7": {
+          "planned": 150,
+          "sr_difference": 0.5333333333333333,
+          "sg_difference": -2.44
+        },
+        "C8": {
+          "planned": 150,
+          "sr_difference": 0.6933333333333334,
+          "sg_difference": -2.88
+        }
+      },
+      "bootstrap": {
+        "repeats": 2000,
+        "seed": 20261008,
+        "unit": "source file; all seeds/route repeats together"
+      },
+      "errors_present": false,
+      "claim_gate": {
+        "passed": true,
+        "minimum_sr_gain": 0.02,
+        "checks": {
+          "sr_gain_at_least": true,
+          "at_least_two_positive_seeds": true,
+          "source_ci_lower_positive": true,
+          "sg_not_worse": true,
+          "engineering_passed": true,
+          "real_retrospective_scope": true
+        }
+      }
+    },
+    {
+      "left": [
+        "M0",
+        "Full"
+      ],
+      "right": [
+        "M0",
+        "Disabled"
+      ],
+      "source_file_groups": 10,
+      "paired_observations": 750,
+      "sr_difference": 0.132,
+      "sg_difference": -0.4186666666666667,
+      "movement_difference": -0.43733333333333335,
+      "sr_difference_ci95": [
+        0.112,
+        0.15066666666666667
+      ],
+      "sg_difference_ci95": [
+        -0.5026666666666667,
+        -0.336
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "sr_difference": 0.148,
+          "sg_difference": -0.452,
+          "recovered": 38,
+          "harmed": 1
+        },
+        {
+          "seed": 1,
+          "sr_difference": 0.104,
+          "sg_difference": -0.32,
+          "recovered": 26,
+          "harmed": 0
+        },
+        {
+          "seed": 2,
+          "sr_difference": 0.144,
+          "sg_difference": -0.484,
+          "recovered": 36,
+          "harmed": 0
+        }
+      ],
+      "recovered": 100,
+      "harmed": 1,
+      "by_area": {
+        "img_0": {
+          "planned": 75,
+          "sr_difference": 0.16,
+          "sg_difference": -0.4533333333333333
+        },
+        "img_1": {
+          "planned": 75,
+          "sr_difference": 0.14666666666666667,
+          "sg_difference": -0.5733333333333334
+        },
+        "img_2": {
+          "planned": 75,
+          "sr_difference": 0.10666666666666667,
+          "sg_difference": -0.28
+        },
+        "img_3": {
+          "planned": 75,
+          "sr_difference": 0.08,
+          "sg_difference": -0.36
+        },
+        "img_4": {
+          "planned": 75,
+          "sr_difference": 0.13333333333333333,
+          "sg_difference": -0.48
+        },
+        "img_5": {
+          "planned": 75,
+          "sr_difference": 0.13333333333333333,
+          "sg_difference": -0.32
+        },
+        "img_6": {
+          "planned": 75,
+          "sr_difference": 0.14666666666666667,
+          "sg_difference": -0.36
+        },
+        "img_7": {
+          "planned": 75,
+          "sr_difference": 0.08,
+          "sg_difference": -0.18666666666666668
+        },
+        "img_8": {
+          "planned": 75,
+          "sr_difference": 0.16,
+          "sg_difference": -0.52
+        },
+        "img_9": {
+          "planned": 75,
+          "sr_difference": 0.17333333333333334,
+          "sg_difference": -0.6533333333333333
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 150,
+          "sr_difference": 0.2733333333333333,
+          "sg_difference": -0.8266666666666667
+        },
+        "C5": {
+          "planned": 150,
+          "sr_difference": 0.18,
+          "sg_difference": -0.74
+        },
+        "C6": {
+          "planned": 150,
+          "sr_difference": 0.18666666666666668,
+          "sg_difference": -0.44
+        },
+        "C7": {
+          "planned": 150,
+          "sr_difference": 0.02,
+          "sg_difference": -0.08666666666666667
+        },
+        "C8": {
+          "planned": 150,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        }
+      },
+      "bootstrap": {
+        "repeats": 2000,
+        "seed": 20261008,
+        "unit": "source file; all seeds/route repeats together"
+      },
+      "errors_present": false,
+      "claim_gate": {
+        "passed": true,
+        "minimum_sr_gain": 0.05,
+        "checks": {
+          "sr_gain_at_least": true,
+          "at_least_two_positive_seeds": true,
+          "source_ci_lower_positive": true,
+          "sg_not_worse": true,
+          "engineering_passed": true,
+          "real_retrospective_scope": true
+        }
+      }
+    },
+    {
+      "left": [
+        "M0",
+        "Full"
+      ],
+      "right": [
+        "M0",
+        "Mean"
+      ],
+      "source_file_groups": 10,
+      "paired_observations": 750,
+      "sr_difference": 0.136,
+      "sg_difference": -0.39866666666666667,
+      "movement_difference": -0.4786666666666667,
+      "sr_difference_ci95": [
+        0.116,
+        0.15733333333333333
+      ],
+      "sg_difference_ci95": [
+        -0.4693333333333333,
+        -0.3266333333333335
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "sr_difference": 0.144,
+          "sg_difference": -0.416,
+          "recovered": 37,
+          "harmed": 1
+        },
+        {
+          "seed": 1,
+          "sr_difference": 0.124,
+          "sg_difference": -0.312,
+          "recovered": 31,
+          "harmed": 0
+        },
+        {
+          "seed": 2,
+          "sr_difference": 0.14,
+          "sg_difference": -0.468,
+          "recovered": 35,
+          "harmed": 0
+        }
+      ],
+      "recovered": 103,
+      "harmed": 1,
+      "by_area": {
+        "img_0": {
+          "planned": 75,
+          "sr_difference": 0.16,
+          "sg_difference": -0.4533333333333333
+        },
+        "img_1": {
+          "planned": 75,
+          "sr_difference": 0.13333333333333333,
+          "sg_difference": -0.52
+        },
+        "img_2": {
+          "planned": 75,
+          "sr_difference": 0.12,
+          "sg_difference": -0.29333333333333333
+        },
+        "img_3": {
+          "planned": 75,
+          "sr_difference": 0.09333333333333334,
+          "sg_difference": -0.26666666666666666
+        },
+        "img_4": {
+          "planned": 75,
+          "sr_difference": 0.13333333333333333,
+          "sg_difference": -0.48
+        },
+        "img_5": {
+          "planned": 75,
+          "sr_difference": 0.13333333333333333,
+          "sg_difference": -0.32
+        },
+        "img_6": {
+          "planned": 75,
+          "sr_difference": 0.2,
+          "sg_difference": -0.49333333333333335
+        },
+        "img_7": {
+          "planned": 75,
+          "sr_difference": 0.08,
+          "sg_difference": -0.18666666666666668
+        },
+        "img_8": {
+          "planned": 75,
+          "sr_difference": 0.17333333333333334,
+          "sg_difference": -0.5466666666666666
+        },
+        "img_9": {
+          "planned": 75,
+          "sr_difference": 0.13333333333333333,
+          "sg_difference": -0.4266666666666667
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 150,
+          "sr_difference": 0.26666666666666666,
+          "sg_difference": -0.7866666666666666
+        },
+        "C5": {
+          "planned": 150,
+          "sr_difference": 0.15333333333333332,
+          "sg_difference": -0.5933333333333334
+        },
+        "C6": {
+          "planned": 150,
+          "sr_difference": 0.17333333333333334,
+          "sg_difference": -0.4
+        },
+        "C7": {
+          "planned": 150,
+          "sr_difference": 0.05333333333333334,
+          "sg_difference": -0.14666666666666667
+        },
+        "C8": {
+          "planned": 150,
+          "sr_difference": 0.03333333333333333,
+          "sg_difference": -0.06666666666666667
+        }
+      },
+      "bootstrap": {
+        "repeats": 2000,
+        "seed": 20261008,
+        "unit": "source file; all seeds/route repeats together"
+      },
+      "errors_present": false,
+      "claim_gate": {
+        "passed": true,
+        "minimum_sr_gain": 0.05,
+        "checks": {
+          "sr_gain_at_least": true,
+          "at_least_two_positive_seeds": true,
+          "source_ci_lower_positive": true,
+          "sg_not_worse": true,
+          "engineering_passed": true,
+          "real_retrospective_scope": true
+        }
+      }
+    },
+    {
+      "left": [
+        "M0",
+        "Full"
+      ],
+      "right": [
+        "M0",
+        "Wrong"
+      ],
+      "source_file_groups": 10,
+      "paired_observations": 750,
+      "sr_difference": 0.17333333333333334,
+      "sg_difference": -0.5306666666666666,
+      "movement_difference": -0.5946666666666667,
+      "sr_difference_ci95": [
+        0.14133333333333334,
+        0.20666666666666667
+      ],
+      "sg_difference_ci95": [
+        -0.6520333333333334,
+        -0.42933333333333334
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "sr_difference": 0.192,
+          "sg_difference": -0.564,
+          "recovered": 49,
+          "harmed": 1
+        },
+        {
+          "seed": 1,
+          "sr_difference": 0.152,
+          "sg_difference": -0.444,
+          "recovered": 38,
+          "harmed": 0
+        },
+        {
+          "seed": 2,
+          "sr_difference": 0.176,
+          "sg_difference": -0.584,
+          "recovered": 45,
+          "harmed": 1
+        }
+      ],
+      "recovered": 132,
+      "harmed": 2,
+      "by_area": {
+        "img_0": {
+          "planned": 75,
+          "sr_difference": 0.24,
+          "sg_difference": -0.68
+        },
+        "img_1": {
+          "planned": 75,
+          "sr_difference": 0.17333333333333334,
+          "sg_difference": -0.6266666666666667
+        },
+        "img_2": {
+          "planned": 75,
+          "sr_difference": 0.12,
+          "sg_difference": -0.28
+        },
+        "img_3": {
+          "planned": 75,
+          "sr_difference": 0.08,
+          "sg_difference": -0.36
+        },
+        "img_4": {
+          "planned": 75,
+          "sr_difference": 0.18666666666666668,
+          "sg_difference": -0.52
+        },
+        "img_5": {
+          "planned": 75,
+          "sr_difference": 0.16,
+          "sg_difference": -0.4
+        },
+        "img_6": {
+          "planned": 75,
+          "sr_difference": 0.22666666666666666,
+          "sg_difference": -0.5733333333333334
+        },
+        "img_7": {
+          "planned": 75,
+          "sr_difference": 0.13333333333333333,
+          "sg_difference": -0.36
+        },
+        "img_8": {
+          "planned": 75,
+          "sr_difference": 0.16,
+          "sg_difference": -0.5733333333333334
+        },
+        "img_9": {
+          "planned": 75,
+          "sr_difference": 0.25333333333333335,
+          "sg_difference": -0.9333333333333333
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 150,
+          "sr_difference": 0.34,
+          "sg_difference": -1.0
+        },
+        "C5": {
+          "planned": 150,
+          "sr_difference": 0.21333333333333335,
+          "sg_difference": -0.8533333333333334
+        },
+        "C6": {
+          "planned": 150,
+          "sr_difference": 0.2,
+          "sg_difference": -0.49333333333333335
+        },
+        "C7": {
+          "planned": 150,
+          "sr_difference": 0.05333333333333334,
+          "sg_difference": -0.18666666666666668
+        },
+        "C8": {
+          "planned": 150,
+          "sr_difference": 0.06,
+          "sg_difference": -0.12
+        }
+      },
+      "bootstrap": {
+        "repeats": 2000,
+        "seed": 20261008,
+        "unit": "source file; all seeds/route repeats together"
+      },
+      "errors_present": false,
+      "claim_gate": {
+        "passed": true,
+        "minimum_sr_gain": 0.05,
+        "checks": {
+          "sr_gain_at_least": true,
+          "at_least_two_positive_seeds": true,
+          "source_ci_lower_positive": true,
+          "sg_not_worse": true,
+          "engineering_passed": true,
+          "real_retrospective_scope": true
+        }
+      }
+    },
+    {
+      "left": [
+        "GeoExplorer",
+        "Full"
+      ],
+      "right": [
+        "GeoExplorer",
+        "Disabled"
+      ],
+      "source_file_groups": 10,
+      "paired_observations": 750,
+      "sr_difference": 0.0026666666666666666,
+      "sg_difference": 0.06266666666666666,
+      "movement_difference": 0.004,
+      "sr_difference_ci95": [
+        -0.036,
+        0.04136666666666648
+      ],
+      "sg_difference_ci95": [
+        -0.08933333333333333,
+        0.2093666666666665
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "sr_difference": 0.008,
+          "sg_difference": -0.004,
+          "recovered": 30,
+          "harmed": 28
+        },
+        {
+          "seed": 1,
+          "sr_difference": -0.008,
+          "sg_difference": 0.116,
+          "recovered": 25,
+          "harmed": 27
+        },
+        {
+          "seed": 2,
+          "sr_difference": 0.008,
+          "sg_difference": 0.076,
+          "recovered": 40,
+          "harmed": 38
+        }
+      ],
+      "recovered": 95,
+      "harmed": 93,
+      "by_area": {
+        "img_0": {
+          "planned": 75,
+          "sr_difference": -0.013333333333333334,
+          "sg_difference": 0.17333333333333334
+        },
+        "img_1": {
+          "planned": 75,
+          "sr_difference": 0.02666666666666667,
+          "sg_difference": -0.14666666666666667
+        },
+        "img_2": {
+          "planned": 75,
+          "sr_difference": 0.013333333333333334,
+          "sg_difference": -0.2
+        },
+        "img_3": {
+          "planned": 75,
+          "sr_difference": -0.09333333333333334,
+          "sg_difference": 0.3333333333333333
+        },
+        "img_4": {
+          "planned": 75,
+          "sr_difference": 0.04,
+          "sg_difference": 0.02666666666666667
+        },
+        "img_5": {
+          "planned": 75,
+          "sr_difference": 0.0,
+          "sg_difference": 0.4
+        },
+        "img_6": {
+          "planned": 75,
+          "sr_difference": -0.08,
+          "sg_difference": 0.25333333333333335
+        },
+        "img_7": {
+          "planned": 75,
+          "sr_difference": -0.04,
+          "sg_difference": 0.22666666666666666
+        },
+        "img_8": {
+          "planned": 75,
+          "sr_difference": 0.13333333333333333,
+          "sg_difference": -0.37333333333333335
+        },
+        "img_9": {
+          "planned": 75,
+          "sr_difference": 0.04,
+          "sg_difference": -0.06666666666666667
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 150,
+          "sr_difference": 0.03333333333333333,
+          "sg_difference": -0.13333333333333333
+        },
+        "C5": {
+          "planned": 150,
+          "sr_difference": -0.05333333333333334,
+          "sg_difference": 0.26666666666666666
+        },
+        "C6": {
+          "planned": 150,
+          "sr_difference": 0.0,
+          "sg_difference": 0.05333333333333334
+        },
+        "C7": {
+          "planned": 150,
+          "sr_difference": -0.006666666666666667,
+          "sg_difference": 0.12666666666666668
+        },
+        "C8": {
+          "planned": 150,
+          "sr_difference": 0.04,
+          "sg_difference": 0.0
+        }
+      },
+      "bootstrap": {
+        "repeats": 2000,
+        "seed": 20261008,
+        "unit": "source file; all seeds/route repeats together"
+      },
+      "errors_present": false,
+      "claim_gate": {
+        "passed": false,
+        "minimum_sr_gain": 0.05,
+        "checks": {
+          "sr_gain_at_least": false,
+          "at_least_two_positive_seeds": true,
+          "source_ci_lower_positive": false,
+          "sg_not_worse": false,
+          "engineering_passed": true,
+          "real_retrospective_scope": true
+        }
+      }
+    },
+    {
+      "left": [
+        "GeoExplorer",
+        "Full"
+      ],
+      "right": [
+        "GeoExplorer",
+        "Mean"
+      ],
+      "source_file_groups": 10,
+      "paired_observations": 750,
+      "sr_difference": 0.0026666666666666666,
+      "sg_difference": 0.06266666666666666,
+      "movement_difference": 0.004,
+      "sr_difference_ci95": [
+        -0.036,
+        0.04136666666666648
+      ],
+      "sg_difference_ci95": [
+        -0.08933333333333333,
+        0.2093666666666665
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "sr_difference": 0.008,
+          "sg_difference": -0.004,
+          "recovered": 30,
+          "harmed": 28
+        },
+        {
+          "seed": 1,
+          "sr_difference": -0.008,
+          "sg_difference": 0.116,
+          "recovered": 25,
+          "harmed": 27
+        },
+        {
+          "seed": 2,
+          "sr_difference": 0.008,
+          "sg_difference": 0.076,
+          "recovered": 40,
+          "harmed": 38
+        }
+      ],
+      "recovered": 95,
+      "harmed": 93,
+      "by_area": {
+        "img_0": {
+          "planned": 75,
+          "sr_difference": -0.013333333333333334,
+          "sg_difference": 0.17333333333333334
+        },
+        "img_1": {
+          "planned": 75,
+          "sr_difference": 0.02666666666666667,
+          "sg_difference": -0.14666666666666667
+        },
+        "img_2": {
+          "planned": 75,
+          "sr_difference": 0.013333333333333334,
+          "sg_difference": -0.2
+        },
+        "img_3": {
+          "planned": 75,
+          "sr_difference": -0.09333333333333334,
+          "sg_difference": 0.3333333333333333
+        },
+        "img_4": {
+          "planned": 75,
+          "sr_difference": 0.04,
+          "sg_difference": 0.02666666666666667
+        },
+        "img_5": {
+          "planned": 75,
+          "sr_difference": 0.0,
+          "sg_difference": 0.4
+        },
+        "img_6": {
+          "planned": 75,
+          "sr_difference": -0.08,
+          "sg_difference": 0.25333333333333335
+        },
+        "img_7": {
+          "planned": 75,
+          "sr_difference": -0.04,
+          "sg_difference": 0.22666666666666666
+        },
+        "img_8": {
+          "planned": 75,
+          "sr_difference": 0.13333333333333333,
+          "sg_difference": -0.37333333333333335
+        },
+        "img_9": {
+          "planned": 75,
+          "sr_difference": 0.04,
+          "sg_difference": -0.06666666666666667
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 150,
+          "sr_difference": 0.03333333333333333,
+          "sg_difference": -0.13333333333333333
+        },
+        "C5": {
+          "planned": 150,
+          "sr_difference": -0.05333333333333334,
+          "sg_difference": 0.26666666666666666
+        },
+        "C6": {
+          "planned": 150,
+          "sr_difference": 0.0,
+          "sg_difference": 0.05333333333333334
+        },
+        "C7": {
+          "planned": 150,
+          "sr_difference": -0.006666666666666667,
+          "sg_difference": 0.12666666666666668
+        },
+        "C8": {
+          "planned": 150,
+          "sr_difference": 0.04,
+          "sg_difference": 0.0
+        }
+      },
+      "bootstrap": {
+        "repeats": 2000,
+        "seed": 20261008,
+        "unit": "source file; all seeds/route repeats together"
+      },
+      "errors_present": false,
+      "claim_gate": {
+        "passed": false,
+        "minimum_sr_gain": 0.05,
+        "checks": {
+          "sr_gain_at_least": false,
+          "at_least_two_positive_seeds": true,
+          "source_ci_lower_positive": false,
+          "sg_not_worse": false,
+          "engineering_passed": true,
+          "real_retrospective_scope": true
+        }
+      }
+    },
+    {
+      "left": [
+        "GeoExplorer",
+        "Full"
+      ],
+      "right": [
+        "GeoExplorer",
+        "Wrong"
+      ],
+      "source_file_groups": 10,
+      "paired_observations": 750,
+      "sr_difference": -0.012,
+      "sg_difference": 0.12266666666666666,
+      "movement_difference": 0.058666666666666666,
+      "sr_difference_ci95": [
+        -0.07466666666666667,
+        0.04803333333333315
+      ],
+      "sg_difference_ci95": [
+        -0.14673333333333333,
+        0.4053333333333333
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "sr_difference": -0.008,
+          "sg_difference": 0.172,
+          "recovered": 33,
+          "harmed": 35
+        },
+        {
+          "seed": 1,
+          "sr_difference": -0.04,
+          "sg_difference": 0.2,
+          "recovered": 35,
+          "harmed": 45
+        },
+        {
+          "seed": 2,
+          "sr_difference": 0.012,
+          "sg_difference": -0.004,
+          "recovered": 39,
+          "harmed": 36
+        }
+      ],
+      "recovered": 107,
+      "harmed": 116,
+      "by_area": {
+        "img_0": {
+          "planned": 75,
+          "sr_difference": -0.13333333333333333,
+          "sg_difference": 0.5733333333333334
+        },
+        "img_1": {
+          "planned": 75,
+          "sr_difference": -0.05333333333333334,
+          "sg_difference": 0.5866666666666667
+        },
+        "img_2": {
+          "planned": 75,
+          "sr_difference": 0.04,
+          "sg_difference": -0.3466666666666667
+        },
+        "img_3": {
+          "planned": 75,
+          "sr_difference": -0.2,
+          "sg_difference": 0.64
+        },
+        "img_4": {
+          "planned": 75,
+          "sr_difference": 0.08,
+          "sg_difference": -0.09333333333333334
+        },
+        "img_5": {
+          "planned": 75,
+          "sr_difference": -0.09333333333333334,
+          "sg_difference": 0.6
+        },
+        "img_6": {
+          "planned": 75,
+          "sr_difference": 0.09333333333333334,
+          "sg_difference": -0.56
+        },
+        "img_7": {
+          "planned": 75,
+          "sr_difference": -0.04,
+          "sg_difference": 0.36
+        },
+        "img_8": {
+          "planned": 75,
+          "sr_difference": 0.12,
+          "sg_difference": -0.38666666666666666
+        },
+        "img_9": {
+          "planned": 75,
+          "sr_difference": 0.06666666666666667,
+          "sg_difference": -0.14666666666666667
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 150,
+          "sr_difference": 0.013333333333333334,
+          "sg_difference": 0.21333333333333335
+        },
+        "C5": {
+          "planned": 150,
+          "sr_difference": -0.006666666666666667,
+          "sg_difference": -0.08666666666666667
+        },
+        "C6": {
+          "planned": 150,
+          "sr_difference": 0.0,
+          "sg_difference": -0.02666666666666667
+        },
+        "C7": {
+          "planned": 150,
+          "sr_difference": -0.04666666666666667,
+          "sg_difference": 0.19333333333333333
+        },
+        "C8": {
+          "planned": 150,
+          "sr_difference": -0.02,
+          "sg_difference": 0.32
+        }
+      },
+      "bootstrap": {
+        "repeats": 2000,
+        "seed": 20261008,
+        "unit": "source file; all seeds/route repeats together"
+      },
+      "errors_present": false,
+      "claim_gate": {
+        "passed": false,
+        "minimum_sr_gain": 0.05,
+        "checks": {
+          "sr_gain_at_least": false,
+          "at_least_two_positive_seeds": false,
+          "source_ci_lower_positive": false,
+          "sg_not_worse": false,
+          "engineering_passed": true,
+          "real_retrospective_scope": true
+        }
+      }
+    }
+  ],
+  "arms": [
+    {
+      "method": "M0",
+      "seed": 0,
+      "condition": "Full",
+      "file": "M0_s0_Full.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 216,
+        "sr": 0.864,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 0.292,
+        "movement_cells_all_planned": 7.516,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.36,
+          "movement_cells_all_planned": 8.28,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 22,
+          "sr": 0.88,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.2,
+          "movement_cells_all_planned": 7.4,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 21,
+          "sr": 0.84,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.24,
+          "movement_cells_all_planned": 7.84,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 21,
+          "sr": 0.84,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.28,
+          "movement_cells_all_planned": 7.72,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 23,
+          "sr": 0.92,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.2,
+          "movement_cells_all_planned": 7.0,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 21,
+          "sr": 0.84,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.4,
+          "movement_cells_all_planned": 7.84,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 22,
+          "sr": 0.88,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.12,
+          "movement_cells_all_planned": 7.4,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 21,
+          "sr": 0.84,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.36,
+          "movement_cells_all_planned": 7.56,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 22,
+          "sr": 0.88,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.56,
+          "movement_cells_all_planned": 7.28,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 24,
+          "sr": 0.96,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.2,
+          "movement_cells_all_planned": 6.84,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 40,
+          "sr": 0.8,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.52,
+          "movement_cells_all_planned": 6.56,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 32,
+          "sr": 0.64,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.68,
+          "movement_cells_all_planned": 7.64,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 47,
+          "sr": 0.94,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.2,
+          "movement_cells_all_planned": 7.56,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 47,
+          "sr": 0.94,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.06,
+          "movement_cells_all_planned": 7.82,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 50,
+          "sr": 1.0,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 8.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 0,
+      "condition": "Disabled",
+      "file": "M0_s0_Disabled.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 179,
+        "sr": 0.716,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 0.744,
+        "movement_cells_all_planned": 8.08,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 15,
+          "sr": 0.6,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.76,
+          "movement_cells_all_planned": 8.6,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.84,
+          "movement_cells_all_planned": 8.28,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.68,
+          "movement_cells_all_planned": 8.04,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 17,
+          "sr": 0.68,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.92,
+          "movement_cells_all_planned": 8.44,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 20,
+          "sr": 0.8,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.52,
+          "movement_cells_all_planned": 7.8,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.56,
+          "movement_cells_all_planned": 8.24,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 16,
+          "sr": 0.64,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.8,
+          "movement_cells_all_planned": 8.4,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 20,
+          "sr": 0.8,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.44,
+          "movement_cells_all_planned": 7.64,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.08,
+          "movement_cells_all_planned": 7.72,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.84,
+          "movement_cells_all_planned": 7.64,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 25,
+          "sr": 0.5,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.52,
+          "movement_cells_all_planned": 7.88,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 20,
+          "sr": 0.4,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.44,
+          "movement_cells_all_planned": 8.6,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 36,
+          "sr": 0.72,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.72,
+          "movement_cells_all_planned": 8.12,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 48,
+          "sr": 0.96,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.04,
+          "movement_cells_all_planned": 7.8,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 50,
+          "sr": 1.0,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 8.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 0,
+      "condition": "Mean",
+      "file": "M0_s0_Mean.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 180,
+        "sr": 0.72,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 0.708,
+        "movement_cells_all_planned": 8.06,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 15,
+          "sr": 0.6,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.76,
+          "movement_cells_all_planned": 8.6,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.84,
+          "movement_cells_all_planned": 8.28,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.68,
+          "movement_cells_all_planned": 8.04,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.72,
+          "movement_cells_all_planned": 8.24,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 20,
+          "sr": 0.8,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.52,
+          "movement_cells_all_planned": 7.8,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.56,
+          "movement_cells_all_planned": 8.24,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 14,
+          "sr": 0.56,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.0,
+          "movement_cells_all_planned": 8.6,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 20,
+          "sr": 0.8,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.44,
+          "movement_cells_all_planned": 7.64,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.08,
+          "movement_cells_all_planned": 7.72,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 21,
+          "sr": 0.84,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.48,
+          "movement_cells_all_planned": 7.44,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 26,
+          "sr": 0.52,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.44,
+          "movement_cells_all_planned": 7.8,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 22,
+          "sr": 0.44,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.24,
+          "movement_cells_all_planned": 8.4,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 37,
+          "sr": 0.74,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.68,
+          "movement_cells_all_planned": 8.12,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 47,
+          "sr": 0.94,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.1,
+          "movement_cells_all_planned": 7.9,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 48,
+          "sr": 0.96,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.08,
+          "movement_cells_all_planned": 8.08,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 0,
+      "condition": "Wrong",
+      "file": "M0_s0_Wrong.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 168,
+        "sr": 0.672,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 0.856,
+        "movement_cells_all_planned": 8.232,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 13,
+          "sr": 0.52,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.08,
+          "movement_cells_all_planned": 8.76,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 17,
+          "sr": 0.68,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.92,
+          "movement_cells_all_planned": 8.28,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.6,
+          "movement_cells_all_planned": 8.2,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 17,
+          "sr": 0.68,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.0,
+          "movement_cells_all_planned": 8.6,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.6,
+          "movement_cells_all_planned": 7.88,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 17,
+          "sr": 0.68,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.72,
+          "movement_cells_all_planned": 8.48,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 14,
+          "sr": 0.56,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.92,
+          "movement_cells_all_planned": 8.44,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.56,
+          "movement_cells_all_planned": 7.84,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.16,
+          "movement_cells_all_planned": 7.88,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.0,
+          "movement_cells_all_planned": 7.96,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 21,
+          "sr": 0.42,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.6,
+          "movement_cells_all_planned": 8.0,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 20,
+          "sr": 0.4,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.56,
+          "movement_cells_all_planned": 8.68,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 35,
+          "sr": 0.7,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.8,
+          "movement_cells_all_planned": 8.16,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 46,
+          "sr": 0.92,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.16,
+          "movement_cells_all_planned": 7.96,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 46,
+          "sr": 0.92,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.16,
+          "movement_cells_all_planned": 8.36,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 1,
+      "condition": "Full",
+      "file": "M0_s1_Full.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 223,
+        "sr": 0.892,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 0.232,
+        "movement_cells_all_planned": 7.736,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 23,
+          "sr": 0.92,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.08,
+          "movement_cells_all_planned": 7.84,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 23,
+          "sr": 0.92,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.12,
+          "movement_cells_all_planned": 7.88,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 21,
+          "sr": 0.84,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.32,
+          "movement_cells_all_planned": 8.16,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 23,
+          "sr": 0.92,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.24,
+          "movement_cells_all_planned": 7.52,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 22,
+          "sr": 0.88,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.24,
+          "movement_cells_all_planned": 7.6,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 21,
+          "sr": 0.84,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.2,
+          "movement_cells_all_planned": 8.28,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 22,
+          "sr": 0.88,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.32,
+          "movement_cells_all_planned": 7.84,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 21,
+          "sr": 0.84,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.64,
+          "movement_cells_all_planned": 7.52,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 23,
+          "sr": 0.92,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.12,
+          "movement_cells_all_planned": 7.4,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 24,
+          "sr": 0.96,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.04,
+          "movement_cells_all_planned": 7.32,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 39,
+          "sr": 0.78,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.6,
+          "movement_cells_all_planned": 7.52,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 36,
+          "sr": 0.72,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.36,
+          "movement_cells_all_planned": 7.64,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 48,
+          "sr": 0.96,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.2,
+          "movement_cells_all_planned": 7.68,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 50,
+          "sr": 1.0,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 7.84,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 50,
+          "sr": 1.0,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 8.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 1,
+      "condition": "Disabled",
+      "file": "M0_s1_Disabled.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 197,
+        "sr": 0.788,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 0.552,
+        "movement_cells_all_planned": 8.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.56,
+          "movement_cells_all_planned": 8.32,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 21,
+          "sr": 0.84,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.4,
+          "movement_cells_all_planned": 8.24,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.48,
+          "movement_cells_all_planned": 8.24,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 21,
+          "sr": 0.84,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.68,
+          "movement_cells_all_planned": 7.88,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 20,
+          "sr": 0.8,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.48,
+          "movement_cells_all_planned": 7.76,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 17,
+          "sr": 0.68,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.72,
+          "movement_cells_all_planned": 8.56,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.56,
+          "movement_cells_all_planned": 8.0,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.84,
+          "movement_cells_all_planned": 7.72,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 21,
+          "sr": 0.84,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.32,
+          "movement_cells_all_planned": 7.68,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 21,
+          "sr": 0.84,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.48,
+          "movement_cells_all_planned": 7.6,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 26,
+          "sr": 0.52,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.32,
+          "movement_cells_all_planned": 8.12,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 31,
+          "sr": 0.62,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.9,
+          "movement_cells_all_planned": 8.06,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 41,
+          "sr": 0.82,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.44,
+          "movement_cells_all_planned": 7.92,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 49,
+          "sr": 0.98,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.1,
+          "movement_cells_all_planned": 7.9,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 50,
+          "sr": 1.0,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 8.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 1,
+      "condition": "Mean",
+      "file": "M0_s1_Mean.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 192,
+        "sr": 0.768,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 0.544,
+        "movement_cells_all_planned": 8.096,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.56,
+          "movement_cells_all_planned": 8.32,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 22,
+          "sr": 0.88,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.24,
+          "movement_cells_all_planned": 8.0,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.52,
+          "movement_cells_all_planned": 8.36,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.6,
+          "movement_cells_all_planned": 8.12,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 20,
+          "sr": 0.8,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.48,
+          "movement_cells_all_planned": 7.76,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 17,
+          "sr": 0.68,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.72,
+          "movement_cells_all_planned": 8.56,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 17,
+          "sr": 0.68,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.76,
+          "movement_cells_all_planned": 8.28,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.84,
+          "movement_cells_all_planned": 7.72,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 20,
+          "sr": 0.8,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.4,
+          "movement_cells_all_planned": 7.92,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 21,
+          "sr": 0.84,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.32,
+          "movement_cells_all_planned": 7.92,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 26,
+          "sr": 0.52,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.28,
+          "movement_cells_all_planned": 8.08,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 33,
+          "sr": 0.66,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.66,
+          "movement_cells_all_planned": 7.98,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 41,
+          "sr": 0.82,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.44,
+          "movement_cells_all_planned": 8.08,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 45,
+          "sr": 0.9,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.22,
+          "movement_cells_all_planned": 8.18,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 47,
+          "sr": 0.94,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.12,
+          "movement_cells_all_planned": 8.16,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 1,
+      "condition": "Wrong",
+      "file": "M0_s1_Wrong.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 185,
+        "sr": 0.74,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 0.676,
+        "movement_cells_all_planned": 8.164,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.64,
+          "movement_cells_all_planned": 8.48,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.56,
+          "movement_cells_all_planned": 8.4,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.48,
+          "movement_cells_all_planned": 8.32,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 21,
+          "sr": 0.84,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.6,
+          "movement_cells_all_planned": 7.88,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.6,
+          "movement_cells_all_planned": 7.88,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 16,
+          "sr": 0.64,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.8,
+          "movement_cells_all_planned": 8.88,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 17,
+          "sr": 0.68,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.76,
+          "movement_cells_all_planned": 8.2,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 17,
+          "sr": 0.68,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.16,
+          "movement_cells_all_planned": 8.04,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 21,
+          "sr": 0.84,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.4,
+          "movement_cells_all_planned": 7.68,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.76,
+          "movement_cells_all_planned": 7.88,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 22,
+          "sr": 0.44,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.56,
+          "movement_cells_all_planned": 8.24,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 29,
+          "sr": 0.58,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.02,
+          "movement_cells_all_planned": 8.26,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 40,
+          "sr": 0.8,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.48,
+          "movement_cells_all_planned": 8.0,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 48,
+          "sr": 0.96,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.16,
+          "movement_cells_all_planned": 8.0,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 46,
+          "sr": 0.92,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.16,
+          "movement_cells_all_planned": 8.32,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 2,
+      "condition": "Full",
+      "file": "M0_s2_Full.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 212,
+        "sr": 0.848,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 0.376,
+        "movement_cells_all_planned": 7.536,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.44,
+          "movement_cells_all_planned": 7.8,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 17,
+          "sr": 0.68,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.52,
+          "movement_cells_all_planned": 7.48,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 21,
+          "sr": 0.84,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.64,
+          "movement_cells_all_planned": 7.68,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 22,
+          "sr": 0.88,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.36,
+          "movement_cells_all_planned": 7.64,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 21,
+          "sr": 0.84,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.28,
+          "movement_cells_all_planned": 7.24,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 20,
+          "sr": 0.8,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.4,
+          "movement_cells_all_planned": 7.84,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 22,
+          "sr": 0.88,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.2,
+          "movement_cells_all_planned": 7.8,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 22,
+          "sr": 0.88,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.32,
+          "movement_cells_all_planned": 7.52,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 25,
+          "sr": 1.0,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 7.04,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 23,
+          "sr": 0.92,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.6,
+          "movement_cells_all_planned": 7.32,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 39,
+          "sr": 0.78,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.6,
+          "movement_cells_all_planned": 6.8,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 41,
+          "sr": 0.82,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.34,
+          "movement_cells_all_planned": 6.98,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 40,
+          "sr": 0.8,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.68,
+          "movement_cells_all_planned": 7.96,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 45,
+          "sr": 0.9,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.14,
+          "movement_cells_all_planned": 7.66,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 47,
+          "sr": 0.94,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.12,
+          "movement_cells_all_planned": 8.28,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 2,
+      "condition": "Disabled",
+      "file": "M0_s2_Disabled.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 176,
+        "sr": 0.704,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 0.86,
+        "movement_cells_all_planned": 8.02,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 15,
+          "sr": 0.6,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.92,
+          "movement_cells_all_planned": 8.36,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 12,
+          "sr": 0.48,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.32,
+          "movement_cells_all_planned": 8.28,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.88,
+          "movement_cells_all_planned": 8.24,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 22,
+          "sr": 0.88,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.36,
+          "movement_cells_all_planned": 7.64,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 16,
+          "sr": 0.64,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.16,
+          "movement_cells_all_planned": 8.04,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 17,
+          "sr": 0.68,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.68,
+          "movement_cells_all_planned": 8.04,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 20,
+          "sr": 0.8,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.36,
+          "movement_cells_all_planned": 7.96,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.6,
+          "movement_cells_all_planned": 7.64,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.84,
+          "movement_cells_all_planned": 7.88,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.48,
+          "movement_cells_all_planned": 8.12,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 26,
+          "sr": 0.52,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.36,
+          "movement_cells_all_planned": 7.68,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 31,
+          "sr": 0.62,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.26,
+          "movement_cells_all_planned": 7.86,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 30,
+          "sr": 0.6,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.24,
+          "movement_cells_all_planned": 8.48,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 42,
+          "sr": 0.84,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.32,
+          "movement_cells_all_planned": 7.8,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 47,
+          "sr": 0.94,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.12,
+          "movement_cells_all_planned": 8.28,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 2,
+      "condition": "Mean",
+      "file": "M0_s2_Mean.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 177,
+        "sr": 0.708,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 0.844,
+        "movement_cells_all_planned": 8.068,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 15,
+          "sr": 0.6,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.92,
+          "movement_cells_all_planned": 8.36,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 12,
+          "sr": 0.48,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.32,
+          "movement_cells_all_planned": 8.28,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.88,
+          "movement_cells_all_planned": 8.32,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 22,
+          "sr": 0.88,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.36,
+          "movement_cells_all_planned": 7.64,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 16,
+          "sr": 0.64,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.16,
+          "movement_cells_all_planned": 8.04,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 17,
+          "sr": 0.68,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.68,
+          "movement_cells_all_planned": 8.04,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 20,
+          "sr": 0.8,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.36,
+          "movement_cells_all_planned": 7.96,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.6,
+          "movement_cells_all_planned": 7.64,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.84,
+          "movement_cells_all_planned": 7.88,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.32,
+          "movement_cells_all_planned": 8.52,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 26,
+          "sr": 0.52,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.36,
+          "movement_cells_all_planned": 7.68,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 31,
+          "sr": 0.62,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.26,
+          "movement_cells_all_planned": 7.94,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 31,
+          "sr": 0.62,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.16,
+          "movement_cells_all_planned": 8.4,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 42,
+          "sr": 0.84,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.32,
+          "movement_cells_all_planned": 7.84,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 47,
+          "sr": 0.94,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.12,
+          "movement_cells_all_planned": 8.48,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 2,
+      "condition": "Wrong",
+      "file": "M0_s2_Wrong.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 168,
+        "sr": 0.672,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 0.96,
+        "movement_cells_all_planned": 8.176,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 12,
+          "sr": 0.48,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.2,
+          "movement_cells_all_planned": 8.8,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 13,
+          "sr": 0.52,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.24,
+          "movement_cells_all_planned": 8.36,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 17,
+          "sr": 0.68,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.96,
+          "movement_cells_all_planned": 8.24,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 22,
+          "sr": 0.88,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.36,
+          "movement_cells_all_planned": 7.64,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 16,
+          "sr": 0.64,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.08,
+          "movement_cells_all_planned": 8.12,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 17,
+          "sr": 0.68,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.68,
+          "movement_cells_all_planned": 8.12,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 18,
+          "sr": 0.72,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.68,
+          "movement_cells_all_planned": 8.28,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.68,
+          "movement_cells_all_planned": 7.64,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 19,
+          "sr": 0.76,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 0.84,
+          "movement_cells_all_planned": 7.96,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 15,
+          "sr": 0.6,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.88,
+          "movement_cells_all_planned": 8.6,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 24,
+          "sr": 0.48,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.56,
+          "movement_cells_all_planned": 7.92,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 28,
+          "sr": 0.56,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.36,
+          "movement_cells_all_planned": 8.04,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 30,
+          "sr": 0.6,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.28,
+          "movement_cells_all_planned": 8.48,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 40,
+          "sr": 0.8,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.44,
+          "movement_cells_all_planned": 7.96,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 46,
+          "sr": 0.92,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 0.16,
+          "movement_cells_all_planned": 8.48,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 0,
+      "condition": "Full",
+      "file": "GeoExplorer_s0_Full.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 91,
+        "sr": 0.364,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 2.592,
+        "movement_cells_all_planned": 9.016,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 2,
+          "sr": 0.08,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 4.0,
+          "movement_cells_all_planned": 10.0,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 4,
+          "sr": 0.16,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.52,
+          "movement_cells_all_planned": 9.52,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 9,
+          "sr": 0.36,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.24,
+          "movement_cells_all_planned": 8.96,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 6,
+          "sr": 0.24,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.92,
+          "movement_cells_all_planned": 9.24,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 17,
+          "sr": 0.68,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.4,
+          "movement_cells_all_planned": 8.12,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 2,
+          "sr": 0.08,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 4.08,
+          "movement_cells_all_planned": 9.92,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 15,
+          "sr": 0.6,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.28,
+          "movement_cells_all_planned": 7.92,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 11,
+          "sr": 0.44,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.32,
+          "movement_cells_all_planned": 9.04,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 13,
+          "sr": 0.52,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.92,
+          "movement_cells_all_planned": 8.56,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 12,
+          "sr": 0.48,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.24,
+          "movement_cells_all_planned": 8.88,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 18,
+          "sr": 0.36,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.52,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 19,
+          "sr": 0.38,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.58,
+          "movement_cells_all_planned": 8.82,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 20,
+          "sr": 0.4,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.56,
+          "movement_cells_all_planned": 8.88,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 19,
+          "sr": 0.38,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.58,
+          "movement_cells_all_planned": 8.94,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 15,
+          "sr": 0.3,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.72,
+          "movement_cells_all_planned": 9.44,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 0,
+      "condition": "Disabled",
+      "file": "GeoExplorer_s0_Disabled.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 89,
+        "sr": 0.356,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 2.596,
+        "movement_cells_all_planned": 9.06,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 6,
+          "sr": 0.24,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.2,
+          "movement_cells_all_planned": 9.44,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 6,
+          "sr": 0.24,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.16,
+          "movement_cells_all_planned": 9.48,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 9,
+          "sr": 0.36,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.6,
+          "movement_cells_all_planned": 9.24,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 6,
+          "sr": 0.24,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.4,
+          "movement_cells_all_planned": 9.2,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 13,
+          "sr": 0.52,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.36,
+          "movement_cells_all_planned": 8.68,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 4,
+          "sr": 0.16,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.48,
+          "movement_cells_all_planned": 9.4,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 14,
+          "sr": 0.56,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.68,
+          "movement_cells_all_planned": 8.4,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 13,
+          "sr": 0.52,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.4,
+          "movement_cells_all_planned": 8.88,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 9,
+          "sr": 0.36,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.32,
+          "movement_cells_all_planned": 8.72,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 9,
+          "sr": 0.36,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.36,
+          "movement_cells_all_planned": 9.16,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 18,
+          "sr": 0.36,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.52,
+          "movement_cells_all_planned": 9.12,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 21,
+          "sr": 0.42,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.46,
+          "movement_cells_all_planned": 8.66,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 19,
+          "sr": 0.38,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.68,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 22,
+          "sr": 0.44,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.32,
+          "movement_cells_all_planned": 8.84,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 9,
+          "sr": 0.18,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 3.0,
+          "movement_cells_all_planned": 9.68,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 0,
+      "condition": "Mean",
+      "file": "GeoExplorer_s0_Mean.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 89,
+        "sr": 0.356,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 2.596,
+        "movement_cells_all_planned": 9.06,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 6,
+          "sr": 0.24,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.2,
+          "movement_cells_all_planned": 9.44,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 6,
+          "sr": 0.24,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.16,
+          "movement_cells_all_planned": 9.48,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 9,
+          "sr": 0.36,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.6,
+          "movement_cells_all_planned": 9.24,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 6,
+          "sr": 0.24,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.4,
+          "movement_cells_all_planned": 9.2,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 13,
+          "sr": 0.52,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.36,
+          "movement_cells_all_planned": 8.68,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 4,
+          "sr": 0.16,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.48,
+          "movement_cells_all_planned": 9.4,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 14,
+          "sr": 0.56,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.68,
+          "movement_cells_all_planned": 8.4,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 13,
+          "sr": 0.52,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.4,
+          "movement_cells_all_planned": 8.88,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 9,
+          "sr": 0.36,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.32,
+          "movement_cells_all_planned": 8.72,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 9,
+          "sr": 0.36,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.36,
+          "movement_cells_all_planned": 9.16,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 18,
+          "sr": 0.36,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.52,
+          "movement_cells_all_planned": 9.12,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 21,
+          "sr": 0.42,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.46,
+          "movement_cells_all_planned": 8.66,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 19,
+          "sr": 0.38,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.68,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 22,
+          "sr": 0.44,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.32,
+          "movement_cells_all_planned": 8.84,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 9,
+          "sr": 0.18,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 3.0,
+          "movement_cells_all_planned": 9.68,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 0,
+      "condition": "Wrong",
+      "file": "GeoExplorer_s0_Wrong.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 93,
+        "sr": 0.372,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 2.42,
+        "movement_cells_all_planned": 8.924,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 5,
+          "sr": 0.2,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.4,
+          "movement_cells_all_planned": 9.24,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 8,
+          "sr": 0.32,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.52,
+          "movement_cells_all_planned": 9.08,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 7,
+          "sr": 0.28,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.04,
+          "movement_cells_all_planned": 9.28,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 12,
+          "sr": 0.48,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.64,
+          "movement_cells_all_planned": 8.76,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 14,
+          "sr": 0.56,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.0,
+          "movement_cells_all_planned": 8.32,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 6,
+          "sr": 0.24,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.36,
+          "movement_cells_all_planned": 9.28,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 12,
+          "sr": 0.48,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.88,
+          "movement_cells_all_planned": 8.36,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 15,
+          "sr": 0.6,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.68,
+          "movement_cells_all_planned": 8.4,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 5,
+          "sr": 0.2,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.56,
+          "movement_cells_all_planned": 9.36,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 9,
+          "sr": 0.36,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.12,
+          "movement_cells_all_planned": 9.16,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 19,
+          "sr": 0.38,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.16,
+          "movement_cells_all_planned": 8.72,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 19,
+          "sr": 0.38,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.82,
+          "movement_cells_all_planned": 8.74,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 19,
+          "sr": 0.38,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.48,
+          "movement_cells_all_planned": 8.92,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 26,
+          "sr": 0.52,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.92,
+          "movement_cells_all_planned": 8.6,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 10,
+          "sr": 0.2,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.72,
+          "movement_cells_all_planned": 9.64,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 1,
+      "condition": "Full",
+      "file": "GeoExplorer_s1_Full.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 90,
+        "sr": 0.36,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 2.616,
+        "movement_cells_all_planned": 8.96,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 5,
+          "sr": 0.2,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.08,
+          "movement_cells_all_planned": 9.08,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 9,
+          "sr": 0.36,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.16,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 12,
+          "sr": 0.48,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.2,
+          "movement_cells_all_planned": 8.76,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 3,
+          "sr": 0.12,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.16,
+          "movement_cells_all_planned": 9.64,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 16,
+          "sr": 0.64,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.76,
+          "movement_cells_all_planned": 8.24,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 8,
+          "sr": 0.32,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.76,
+          "movement_cells_all_planned": 9.16,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 10,
+          "sr": 0.4,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.36,
+          "movement_cells_all_planned": 8.92,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 9,
+          "sr": 0.36,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.84,
+          "movement_cells_all_planned": 9.16,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 8,
+          "sr": 0.32,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.4,
+          "movement_cells_all_planned": 8.88,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 10,
+          "sr": 0.4,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.44,
+          "movement_cells_all_planned": 8.76,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 15,
+          "sr": 0.3,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.72,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 18,
+          "sr": 0.36,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.68,
+          "movement_cells_all_planned": 8.76,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 21,
+          "sr": 0.42,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.2,
+          "movement_cells_all_planned": 8.84,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 24,
+          "sr": 0.48,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.36,
+          "movement_cells_all_planned": 8.68,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 12,
+          "sr": 0.24,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 3.12,
+          "movement_cells_all_planned": 9.52,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 1,
+      "condition": "Disabled",
+      "file": "GeoExplorer_s1_Disabled.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 92,
+        "sr": 0.368,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 2.5,
+        "movement_cells_all_planned": 8.908,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 3,
+          "sr": 0.12,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.64,
+          "movement_cells_all_planned": 9.48,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 5,
+          "sr": 0.2,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.52,
+          "movement_cells_all_planned": 9.6,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 13,
+          "sr": 0.52,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.92,
+          "movement_cells_all_planned": 8.72,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 6,
+          "sr": 0.24,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.96,
+          "movement_cells_all_planned": 9.36,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 14,
+          "sr": 0.56,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.6,
+          "movement_cells_all_planned": 8.32,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 6,
+          "sr": 0.24,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.0,
+          "movement_cells_all_planned": 9.16,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 16,
+          "sr": 0.64,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.48,
+          "movement_cells_all_planned": 8.04,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 12,
+          "sr": 0.48,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.88,
+          "movement_cells_all_planned": 8.52,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 9,
+          "sr": 0.36,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.12,
+          "movement_cells_all_planned": 8.76,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 8,
+          "sr": 0.32,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.88,
+          "movement_cells_all_planned": 9.12,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 13,
+          "sr": 0.26,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.68,
+          "movement_cells_all_planned": 9.04,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 20,
+          "sr": 0.4,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.48,
+          "movement_cells_all_planned": 8.64,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 23,
+          "sr": 0.46,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.96,
+          "movement_cells_all_planned": 8.64,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 21,
+          "sr": 0.42,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.46,
+          "movement_cells_all_planned": 8.82,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 15,
+          "sr": 0.3,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.92,
+          "movement_cells_all_planned": 9.4,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 1,
+      "condition": "Mean",
+      "file": "GeoExplorer_s1_Mean.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 92,
+        "sr": 0.368,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 2.5,
+        "movement_cells_all_planned": 8.908,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 3,
+          "sr": 0.12,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.64,
+          "movement_cells_all_planned": 9.48,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 5,
+          "sr": 0.2,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.52,
+          "movement_cells_all_planned": 9.6,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 13,
+          "sr": 0.52,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.92,
+          "movement_cells_all_planned": 8.72,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 6,
+          "sr": 0.24,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.96,
+          "movement_cells_all_planned": 9.36,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 14,
+          "sr": 0.56,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.6,
+          "movement_cells_all_planned": 8.32,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 6,
+          "sr": 0.24,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.0,
+          "movement_cells_all_planned": 9.16,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 16,
+          "sr": 0.64,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.48,
+          "movement_cells_all_planned": 8.04,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 12,
+          "sr": 0.48,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.88,
+          "movement_cells_all_planned": 8.52,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 9,
+          "sr": 0.36,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.12,
+          "movement_cells_all_planned": 8.76,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 8,
+          "sr": 0.32,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.88,
+          "movement_cells_all_planned": 9.12,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 13,
+          "sr": 0.26,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.68,
+          "movement_cells_all_planned": 9.04,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 20,
+          "sr": 0.4,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.48,
+          "movement_cells_all_planned": 8.64,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 23,
+          "sr": 0.46,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 1.96,
+          "movement_cells_all_planned": 8.64,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 21,
+          "sr": 0.42,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.46,
+          "movement_cells_all_planned": 8.82,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 15,
+          "sr": 0.3,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.92,
+          "movement_cells_all_planned": 9.4,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 1,
+      "condition": "Wrong",
+      "file": "GeoExplorer_s1_Wrong.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 100,
+        "sr": 0.4,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 2.416,
+        "movement_cells_all_planned": 8.816,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 9,
+          "sr": 0.36,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.8,
+          "movement_cells_all_planned": 8.64,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 10,
+          "sr": 0.4,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.16,
+          "movement_cells_all_planned": 8.96,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 13,
+          "sr": 0.52,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.04,
+          "movement_cells_all_planned": 8.6,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 6,
+          "sr": 0.24,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.12,
+          "movement_cells_all_planned": 9.36,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 15,
+          "sr": 0.6,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.64,
+          "movement_cells_all_planned": 8.28,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 4,
+          "sr": 0.16,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.92,
+          "movement_cells_all_planned": 9.48,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 13,
+          "sr": 0.52,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.12,
+          "movement_cells_all_planned": 8.44,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 11,
+          "sr": 0.44,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.16,
+          "movement_cells_all_planned": 8.72,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 11,
+          "sr": 0.44,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.4,
+          "movement_cells_all_planned": 8.48,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 8,
+          "sr": 0.32,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.8,
+          "movement_cells_all_planned": 9.2,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 16,
+          "sr": 0.32,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.28,
+          "movement_cells_all_planned": 8.72,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 17,
+          "sr": 0.34,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.62,
+          "movement_cells_all_planned": 8.82,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 23,
+          "sr": 0.46,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.12,
+          "movement_cells_all_planned": 8.76,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 27,
+          "sr": 0.54,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.38,
+          "movement_cells_all_planned": 8.46,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 17,
+          "sr": 0.34,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.68,
+          "movement_cells_all_planned": 9.32,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 2,
+      "condition": "Full",
+      "file": "GeoExplorer_s2_Full.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 86,
+        "sr": 0.344,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 2.56,
+        "movement_cells_all_planned": 8.848,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 8,
+          "sr": 0.32,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.8,
+          "movement_cells_all_planned": 8.8,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 7,
+          "sr": 0.28,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.48,
+          "movement_cells_all_planned": 9.04,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 12,
+          "sr": 0.48,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.88,
+          "movement_cells_all_planned": 8.52,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 5,
+          "sr": 0.2,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.76,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 13,
+          "sr": 0.52,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.0,
+          "movement_cells_all_planned": 8.24,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 4,
+          "sr": 0.16,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.52,
+          "movement_cells_all_planned": 9.84,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 9,
+          "sr": 0.36,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.4,
+          "movement_cells_all_planned": 9.04,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 11,
+          "sr": 0.44,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.36,
+          "movement_cells_all_planned": 8.68,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 12,
+          "sr": 0.48,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.24,
+          "movement_cells_all_planned": 8.16,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 5,
+          "sr": 0.2,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.16,
+          "movement_cells_all_planned": 9.16,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 21,
+          "sr": 0.42,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.04,
+          "movement_cells_all_planned": 8.0,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 13,
+          "sr": 0.26,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.82,
+          "movement_cells_all_planned": 9.06,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 17,
+          "sr": 0.34,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.44,
+          "movement_cells_all_planned": 8.8,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 19,
+          "sr": 0.38,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.58,
+          "movement_cells_all_planned": 9.02,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 16,
+          "sr": 0.32,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.92,
+          "movement_cells_all_planned": 9.36,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 2,
+      "condition": "Disabled",
+      "file": "GeoExplorer_s2_Disabled.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 84,
+        "sr": 0.336,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 2.484,
+        "movement_cells_all_planned": 8.844,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 7,
+          "sr": 0.28,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.52,
+          "movement_cells_all_planned": 8.92,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 7,
+          "sr": 0.28,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.92,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 10,
+          "sr": 0.4,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.4,
+          "movement_cells_all_planned": 8.48,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 9,
+          "sr": 0.36,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.48,
+          "movement_cells_all_planned": 8.24,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 16,
+          "sr": 0.64,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.12,
+          "movement_cells_all_planned": 8.32,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 4,
+          "sr": 0.16,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.68,
+          "movement_cells_all_planned": 9.72,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 10,
+          "sr": 0.4,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.12,
+          "movement_cells_all_planned": 8.76,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 9,
+          "sr": 0.36,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.56,
+          "movement_cells_all_planned": 8.8,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 5,
+          "sr": 0.2,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.24,
+          "movement_cells_all_planned": 9.16,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 7,
+          "sr": 0.28,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.8,
+          "movement_cells_all_planned": 9.04,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 18,
+          "sr": 0.36,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.48,
+          "movement_cells_all_planned": 8.08,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 17,
+          "sr": 0.34,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.34,
+          "movement_cells_all_planned": 8.9,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 16,
+          "sr": 0.32,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.4,
+          "movement_cells_all_planned": 8.84,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 20,
+          "sr": 0.4,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.36,
+          "movement_cells_all_planned": 8.92,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 13,
+          "sr": 0.26,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.84,
+          "movement_cells_all_planned": 9.48,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 2,
+      "condition": "Mean",
+      "file": "GeoExplorer_s2_Mean.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 84,
+        "sr": 0.336,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 2.484,
+        "movement_cells_all_planned": 8.844,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 7,
+          "sr": 0.28,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.52,
+          "movement_cells_all_planned": 8.92,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 7,
+          "sr": 0.28,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.92,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 10,
+          "sr": 0.4,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.4,
+          "movement_cells_all_planned": 8.48,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 9,
+          "sr": 0.36,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.48,
+          "movement_cells_all_planned": 8.24,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 16,
+          "sr": 0.64,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.12,
+          "movement_cells_all_planned": 8.32,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 4,
+          "sr": 0.16,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.68,
+          "movement_cells_all_planned": 9.72,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 10,
+          "sr": 0.4,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.12,
+          "movement_cells_all_planned": 8.76,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 9,
+          "sr": 0.36,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.56,
+          "movement_cells_all_planned": 8.8,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 5,
+          "sr": 0.2,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.24,
+          "movement_cells_all_planned": 9.16,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 7,
+          "sr": 0.28,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.8,
+          "movement_cells_all_planned": 9.04,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 18,
+          "sr": 0.36,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.48,
+          "movement_cells_all_planned": 8.08,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 17,
+          "sr": 0.34,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.34,
+          "movement_cells_all_planned": 8.9,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 16,
+          "sr": 0.32,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.4,
+          "movement_cells_all_planned": 8.84,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 20,
+          "sr": 0.4,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.36,
+          "movement_cells_all_planned": 8.92,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 13,
+          "sr": 0.26,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.84,
+          "movement_cells_all_planned": 9.48,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 2,
+      "condition": "Wrong",
+      "file": "GeoExplorer_s2_Wrong.jsonl",
+      "metrics": {
+        "planned": 250,
+        "successes": 83,
+        "sr": 0.332,
+        "normal_terminals": 250,
+        "sg_cells_all_planned": 2.564,
+        "movement_cells_all_planned": 8.908,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "img_0": {
+          "planned": 25,
+          "successes": 11,
+          "sr": 0.44,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.96,
+          "movement_cells_all_planned": 8.52,
+          "policy_errors": 0
+        },
+        "img_1": {
+          "planned": 25,
+          "successes": 6,
+          "sr": 0.24,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.72,
+          "movement_cells_all_planned": 9.04,
+          "policy_errors": 0
+        },
+        "img_2": {
+          "planned": 25,
+          "successes": 10,
+          "sr": 0.4,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.28,
+          "movement_cells_all_planned": 8.76,
+          "policy_errors": 0
+        },
+        "img_3": {
+          "planned": 25,
+          "successes": 11,
+          "sr": 0.44,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.16,
+          "movement_cells_all_planned": 8.4,
+          "policy_errors": 0
+        },
+        "img_4": {
+          "planned": 25,
+          "successes": 11,
+          "sr": 0.44,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 1.8,
+          "movement_cells_all_planned": 8.68,
+          "policy_errors": 0
+        },
+        "img_5": {
+          "planned": 25,
+          "successes": 11,
+          "sr": 0.44,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.28,
+          "movement_cells_all_planned": 9.16,
+          "policy_errors": 0
+        },
+        "img_6": {
+          "planned": 25,
+          "successes": 2,
+          "sr": 0.08,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.72,
+          "movement_cells_all_planned": 9.72,
+          "policy_errors": 0
+        },
+        "img_7": {
+          "planned": 25,
+          "successes": 8,
+          "sr": 0.32,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.6,
+          "movement_cells_all_planned": 8.76,
+          "policy_errors": 0
+        },
+        "img_8": {
+          "planned": 25,
+          "successes": 8,
+          "sr": 0.32,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 2.76,
+          "movement_cells_all_planned": 8.84,
+          "policy_errors": 0
+        },
+        "img_9": {
+          "planned": 25,
+          "successes": 5,
+          "sr": 0.2,
+          "normal_terminals": 25,
+          "sg_cells_all_planned": 3.36,
+          "movement_cells_all_planned": 9.2,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C4": {
+          "planned": 50,
+          "successes": 17,
+          "sr": 0.34,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.2,
+          "movement_cells_all_planned": 8.32,
+          "policy_errors": 0
+        },
+        "C5": {
+          "planned": 50,
+          "successes": 15,
+          "sr": 0.3,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.9,
+          "movement_cells_all_planned": 8.98,
+          "policy_errors": 0
+        },
+        "C6": {
+          "planned": 50,
+          "successes": 16,
+          "sr": 0.32,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.68,
+          "movement_cells_all_planned": 8.72,
+          "policy_errors": 0
+        },
+        "C7": {
+          "planned": 50,
+          "successes": 16,
+          "sr": 0.32,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.64,
+          "movement_cells_all_planned": 9.24,
+          "policy_errors": 0
+        },
+        "C8": {
+          "planned": 50,
+          "successes": 19,
+          "sr": 0.38,
+          "normal_terminals": 50,
+          "sg_cells_all_planned": 2.4,
+          "movement_cells_all_planned": 9.28,
+          "policy_errors": 0
+        }
+      }
+    }
+  ],
+  "matplotlib": "3.10.8",
+  "note": "seed dots are checkpoints, not independent maps; CIs cluster 10 source files"
+}

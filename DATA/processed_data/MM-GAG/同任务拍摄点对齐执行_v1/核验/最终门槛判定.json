@@ -1,0 +1,38 @@
+{
+  "gates": {
+    "all1250_planned_rankings_complete": true,
+    "all_engineering_and_audit_passed": true,
+    "Full_Top1_at_least32_of125": false,
+    "Full_minus_Mean_at_least16": false,
+    "Full_minus_Wrong_at_least16": false,
+    "Full_minus_Disabled_at_least16": false,
+    "Full_minus_Identity_at_least5": false,
+    "Full_minus_SwissFrozen_at_least5": false,
+    "sources_above_both_target_controls_at_least3": false,
+    "sources_above_both_baselines_at_least3": false
+  },
+  "passed": false,
+  "planned_windows": 125,
+  "unique_source_units": 5,
+  "source_positive_against_controls": 0,
+  "source_positive_against_baselines": 0,
+  "counts": {
+    "Identity": {
+      "Full": 0,
+      "Mean": 7,
+      "Wrong": 0
+    },
+    "SwissRank8Frozen": {
+      "Full": 2,
+      "Mean": 25,
+      "Wrong": 4
+    },
+    "MMRank8Final": {
+      "Full": 0,
+      "Mean": 0,
+      "Wrong": 1
+    }
+  },
+  "shared_disabled_top1": 4,
+  "interpretation": "development candidate only, not navigation SR or new-source confirmation"
+}

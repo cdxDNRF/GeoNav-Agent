@@ -1,0 +1,15 @@
+{
+  "task": "CV-017",
+  "command": "D:/PYTHON/python.exe -m unittest discover -s project/src/tests -p test_capturepoint_training_capacity_v1.py -v",
+  "tests": 4,
+  "exit_code": 0,
+  "failures": 0,
+  "errors": 0,
+  "raw_images_used": 0,
+  "checks": [
+    "source/photo/positive/pair/group units distinct",
+    "duplicate source not a sample",
+    "raw/feature/model paths rejected",
+    "distance unit meters"
+  ]
+}

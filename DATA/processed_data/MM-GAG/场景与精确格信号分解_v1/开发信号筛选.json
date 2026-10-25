@@ -1,0 +1,189 @@
+{
+  "arms": {
+    "Identity": {
+      "scene_top1_counts": {
+        "Full": 5,
+        "Mean": 1,
+        "Wrong": 0
+      },
+      "spatial_81_counts": {
+        "Full": {
+          "top1": 0,
+          "top5": 0,
+          "best_within_one": 0
+        },
+        "Mean": {
+          "top1": 0,
+          "top5": 0,
+          "best_within_one": 0
+        },
+        "Wrong": {
+          "top1": 0,
+          "top5": 0,
+          "best_within_one": 0
+        }
+      },
+      "cell_rank_better_than": {
+        "Mean": [
+          "mmgag_073",
+          "mmgag_081"
+        ],
+        "Wrong": [
+          "mmgag_062",
+          "mmgag_073"
+        ]
+      },
+      "cell_rank_better_than_both": [
+        "mmgag_073"
+      ],
+      "gates": {
+        "scene_Full_at_least3": true,
+        "scene_Full_minus_Mean_at_least2": true,
+        "scene_Full_minus_Wrong_at_least2": true,
+        "cell_rank_above_both_controls_at_least3_sources": false
+      },
+      "signal_screen_passed": false
+    },
+    "SwissRank8Frozen": {
+      "scene_top1_counts": {
+        "Full": 3,
+        "Mean": 1,
+        "Wrong": 0
+      },
+      "spatial_81_counts": {
+        "Full": {
+          "top1": 0,
+          "top5": 0,
+          "best_within_one": 1
+        },
+        "Mean": {
+          "top1": 1,
+          "top5": 1,
+          "best_within_one": 2
+        },
+        "Wrong": {
+          "top1": 0,
+          "top5": 0,
+          "best_within_one": 0
+        }
+      },
+      "cell_rank_better_than": {
+        "Mean": [
+          "mmgag_073",
+          "mmgag_079",
+          "mmgag_081"
+        ],
+        "Wrong": [
+          "mmgag_062",
+          "mmgag_073",
+          "mmgag_079",
+          "mmgag_039"
+        ]
+      },
+      "cell_rank_better_than_both": [
+        "mmgag_073",
+        "mmgag_079"
+      ],
+      "gates": {
+        "scene_Full_at_least3": true,
+        "scene_Full_minus_Mean_at_least2": true,
+        "scene_Full_minus_Wrong_at_least2": true,
+        "cell_rank_above_both_controls_at_least3_sources": false
+      },
+      "signal_screen_passed": false
+    },
+    "MMRank8Final": {
+      "scene_top1_counts": {
+        "Full": 4,
+        "Mean": 1,
+        "Wrong": 0
+      },
+      "spatial_81_counts": {
+        "Full": {
+          "top1": 0,
+          "top5": 0,
+          "best_within_one": 0
+        },
+        "Mean": {
+          "top1": 0,
+          "top5": 0,
+          "best_within_one": 0
+        },
+        "Wrong": {
+          "top1": 0,
+          "top5": 0,
+          "best_within_one": 0
+        }
+      },
+      "cell_rank_better_than": {
+        "Mean": [
+          "mmgag_062",
+          "mmgag_073",
+          "mmgag_079",
+          "mmgag_081"
+        ],
+        "Wrong": []
+      },
+      "cell_rank_better_than_both": [],
+      "gates": {
+        "scene_Full_at_least3": true,
+        "scene_Full_minus_Mean_at_least2": true,
+        "scene_Full_minus_Wrong_at_least2": true,
+        "cell_rank_above_both_controls_at_least3_sources": false
+      },
+      "signal_screen_passed": false
+    },
+    "MMRank8Coverage12": {
+      "scene_top1_counts": {
+        "Full": 4,
+        "Mean": 1,
+        "Wrong": 0
+      },
+      "spatial_81_counts": {
+        "Full": {
+          "top1": 0,
+          "top5": 0,
+          "best_within_one": 1
+        },
+        "Mean": {
+          "top1": 0,
+          "top5": 0,
+          "best_within_one": 0
+        },
+        "Wrong": {
+          "top1": 0,
+          "top5": 0,
+          "best_within_one": 0
+        }
+      },
+      "cell_rank_better_than": {
+        "Mean": [
+          "mmgag_062",
+          "mmgag_073",
+          "mmgag_039"
+        ],
+        "Wrong": [
+          "mmgag_062"
+        ]
+      },
+      "cell_rank_better_than_both": [
+        "mmgag_062"
+      ],
+      "gates": {
+        "scene_Full_at_least3": true,
+        "scene_Full_minus_Mean_at_least2": true,
+        "scene_Full_minus_Wrong_at_least2": true,
+        "cell_rank_above_both_controls_at_least3_sources": false
+      },
+      "signal_screen_passed": false
+    }
+  },
+  "eligible": [],
+  "selected_by_frozen_priority": null,
+  "direction_signal_present": false,
+  "formal_method_passed": false,
+  "navigation_SR": null,
+  "independent_source_units": 5,
+  "confirmation_consumption": 0,
+  "decision": "close_current_frozen_representation_small_head_route_no_further_training"
+}

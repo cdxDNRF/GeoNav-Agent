@@ -1,0 +1,1693 @@
+{
+  "catalogue_entries": 82,
+  "eligible_inventory": {
+    "source_records": 65,
+    "source_groups": 30,
+    "distinct_ground_bytes": 65,
+    "distinct_positive_bytes": 53,
+    "distinct_byte_pairs": 65
+  },
+  "by_role": {
+    "confirmation_reserved": {
+      "source_records": 24,
+      "source_groups": 6,
+      "distinct_ground_bytes": 24,
+      "distinct_positive_bytes": 12,
+      "distinct_byte_pairs": 24
+    },
+    "development": {
+      "source_records": 6,
+      "source_groups": 5,
+      "distinct_ground_bytes": 6,
+      "distinct_positive_bytes": 6,
+      "distinct_byte_pairs": 6
+    },
+    "fit_preparation": {
+      "source_records": 12,
+      "source_groups": 9,
+      "distinct_ground_bytes": 12,
+      "distinct_positive_bytes": 12,
+      "distinct_byte_pairs": 12
+    },
+    "known_development": {
+      "source_records": 23,
+      "source_groups": 10,
+      "distinct_ground_bytes": 23,
+      "distinct_positive_bytes": 23,
+      "distinct_byte_pairs": 23
+    }
+  },
+  "frozen_actual_training": {
+    "source_records": 9,
+    "source_groups": 9,
+    "distinct_ground_bytes": 9,
+    "distinct_positive_bytes": 9,
+    "distinct_byte_pairs": 9
+  },
+  "existing_fit_preparation_capacity": {
+    "source_records": 12,
+    "source_groups": 9,
+    "distinct_ground_bytes": 12,
+    "distinct_positive_bytes": 12,
+    "distinct_byte_pairs": 12
+  },
+  "additional_fit_candidates": [
+    {
+      "additional_source": "mmgag_031",
+      "frozen_representative": "mmgag_063",
+      "group": "cp_051fd603c27d",
+      "different_ground_bytes": true,
+      "different_center_proxy_bytes": true,
+      "camera_distance_m": 438.1143704648076,
+      "shared_aerial_byte_hashes81": 35,
+      "shared_aerial_byte_hashes121": 63,
+      "additional_positive_in_representative81": [
+        3,
+        1
+      ],
+      "representative_positive_in_additional81": [
+        7,
+        9
+      ],
+      "new_geographic_group": false,
+      "new_pixels_read_this_batch": false,
+      "training_ready": false,
+      "missing_before_new_execution": [
+        "source-specific engineering and current-byte checks",
+        "frozen new sample-budget/evaluation protocol"
+      ]
+    },
+    {
+      "additional_source": "mmgag_050",
+      "frozen_representative": "mmgag_051",
+      "group": "cp_0b697bbbd36f",
+      "different_ground_bytes": true,
+      "different_center_proxy_bytes": true,
+      "camera_distance_m": 1689.597567202927,
+      "shared_aerial_byte_hashes81": 0,
+      "shared_aerial_byte_hashes121": 0,
+      "additional_positive_in_representative81": null,
+      "representative_positive_in_additional81": null,
+      "new_geographic_group": false,
+      "new_pixels_read_this_batch": false,
+      "training_ready": false,
+      "missing_before_new_execution": [
+        "source-specific engineering and current-byte checks",
+        "frozen new sample-budget/evaluation protocol"
+      ]
+    },
+    {
+      "additional_source": "mmgag_065",
+      "frozen_representative": "mmgag_066",
+      "group": "cp_1a5a192d5446",
+      "different_ground_bytes": true,
+      "different_center_proxy_bytes": true,
+      "camera_distance_m": 1217.5779954277214,
+      "shared_aerial_byte_hashes81": 0,
+      "shared_aerial_byte_hashes121": 0,
+      "additional_positive_in_representative81": null,
+      "representative_positive_in_additional81": null,
+      "new_geographic_group": false,
+      "new_pixels_read_this_batch": false,
+      "training_ready": false,
+      "missing_before_new_execution": [
+        "source-specific engineering and current-byte checks",
+        "frozen new sample-budget/evaluation protocol"
+      ]
+    }
+  ],
+  "frozen_training_source_ids": [
+    "mmgag_042",
+    "mmgag_051",
+    "mmgag_052",
+    "mmgag_058",
+    "mmgag_061",
+    "mmgag_063",
+    "mmgag_066",
+    "mmgag_075",
+    "mmgag_080"
+  ],
+  "all_source_role_pair_records": [
+    {
+      "source_id": "mmgag_056",
+      "role": "known_development",
+      "group": "legacy_dev_0",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2834.jpg",
+        "bytes": 1287719,
+        "sha256": "0adacba15828a430087d084c55a385cbf7f48bf1581cd0956b2e09a044a97d84"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2834.HEIC/sat_5_5.jpg",
+        "bytes": 15785,
+        "sha256": "51e8a244d811140e83c29120cb617247ac9c9a971974f60fb90d3f726fcb88a3"
+      },
+      "camera_coordinate_evaluator_only": [
+        19.0868833333333,
+        72.8889777777778
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_040",
+      "role": "known_development",
+      "group": "legacy_dev_1",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2268.jpg",
+        "bytes": 958468,
+        "sha256": "1eb2fd9cd98bc245e02c853a2d962928fb7e7a827f114bc1c01fbad0f90cb406"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2268.HEIC/sat_5_5.jpg",
+        "bytes": 14925,
+        "sha256": "7c7e06391fa55e950aa27d4882e93b6fd843ef926fb8e7b3501d673ac34cfbfb"
+      },
+      "camera_coordinate_evaluator_only": [
+        52.5163333333333,
+        13.3784416666667
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_041",
+      "role": "known_development",
+      "group": "legacy_dev_2",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2402.jpg",
+        "bytes": 1154067,
+        "sha256": "8abae5d5999d5fc0ecb1ad68e6d9200e96857e9a4462ffd32ac9eda95020df38"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2402.HEIC/sat_5_5.jpg",
+        "bytes": 22599,
+        "sha256": "e4922090482f6e663640007fef9f12c586b52edf2eaa27f4d845357a7af03e1e"
+      },
+      "camera_coordinate_evaluator_only": [
+        50.0851944444445,
+        14.4216138888889
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_049",
+      "role": "known_development",
+      "group": "legacy_dev_2",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2529.jpg",
+        "bytes": 886881,
+        "sha256": "ed80f43081a05fd33e095b289acc0e248b4d429170dfb49067e7c7e24739e692"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2529.HEIC/sat_5_5.jpg",
+        "bytes": 16543,
+        "sha256": "be8bd3eb9e33847b09ade8a3f06a6866b27238dd5e889f02ddadab7fd70f1f92"
+      },
+      "camera_coordinate_evaluator_only": [
+        50.0866305555556,
+        14.4102388888889
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_059",
+      "role": "known_development",
+      "group": "legacy_dev_3",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3268.jpg",
+        "bytes": 1585721,
+        "sha256": "8e25892789b2032446f2c7d1e072398e3085e5f13d2a5aa11be518a269bedd0f"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3268.HEIC/sat_5_5.jpg",
+        "bytes": 17704,
+        "sha256": "99ab587022314e6853e37acbf0a1520626f065671027dd71a18261d952b58352"
+      },
+      "camera_coordinate_evaluator_only": [
+        37.3236361111111,
+        -122.0105139
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_067",
+      "role": "known_development",
+      "group": "legacy_dev_4",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3769.jpg",
+        "bytes": 1060613,
+        "sha256": "40b9ccbf52eb6d48acab27252825bb1a71280b6a4df214173bea073b581aa115"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3769.HEIC/sat_5_5.jpg",
+        "bytes": 19604,
+        "sha256": "4e1563a49d8a713108d4cf07760d57508789b067166bb24c57874303f7168741"
+      },
+      "camera_coordinate_evaluator_only": [
+        40.7116611111111,
+        -74.01128333
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_068",
+      "role": "known_development",
+      "group": "legacy_dev_4",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3777.jpg",
+        "bytes": 1517489,
+        "sha256": "7b3bc2d6089fab4db49693b8bf03e32a04cb8e7696c147732ce33ecfda2fd610"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3777.HEIC/sat_5_5.jpg",
+        "bytes": 15575,
+        "sha256": "e47ae29e2d7911f65069694ae53e85cb161afb73693e39d81b99846ad7d91bba"
+      },
+      "camera_coordinate_evaluator_only": [
+        40.7108,
+        -74.01034444
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_069",
+      "role": "known_development",
+      "group": "legacy_dev_4",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3784.jpg",
+        "bytes": 1293241,
+        "sha256": "ba6f0e3275c8a26c7f695c248ea0b80c350ac43e64ef0397b6806b6da9f898e1"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3784.HEIC/sat_5_5.jpg",
+        "bytes": 20593,
+        "sha256": "e99cee8500f9ebd179c61d1e5ef2a05340120260d8c5347f876dfaaa1dc01651"
+      },
+      "camera_coordinate_evaluator_only": [
+        40.713,
+        -74.01290833
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_055",
+      "role": "known_development",
+      "group": "legacy_dev_5",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2817.jpg",
+        "bytes": 909319,
+        "sha256": "f4e072a117b0b1348bc10b777492b0c08f5892f5d1eb94235dc3da5b708f10f1"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2817.HEIC/sat_5_5.jpg",
+        "bytes": 17648,
+        "sha256": "cac12af1c0d5a73c9aed1955d688e6c88c5e2a3f096693c3da2efd7a732dc03c"
+      },
+      "camera_coordinate_evaluator_only": [
+        18.9221666666667,
+        72.8337777777778
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_033",
+      "role": "known_development",
+      "group": "legacy_dev_6",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_1827.jpg",
+        "bytes": 1035337,
+        "sha256": "1558dd689675ac69b35e9b117829cd7c33732f519437b00ac1dfb250dda83a08"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_1827.HEIC/sat_5_5.jpg",
+        "bytes": 24643,
+        "sha256": "e767b9cd08bc399ed28e1e61e8b2e59050e7d97d41421ce40a7386f7ead134b3"
+      },
+      "camera_coordinate_evaluator_only": [
+        50.1121972222222,
+        8.67726388888889
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_034",
+      "role": "known_development",
+      "group": "legacy_dev_6",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_1833.jpg",
+        "bytes": 1438936,
+        "sha256": "9e4cac952ac36a0fccb951951ecb99a33597aa4867cc9f6abbb8ecca3f64cd1b"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_1833.HEIC/sat_5_5.jpg",
+        "bytes": 19657,
+        "sha256": "df7bb3c88304338af695d3a8733c73263a7cbad1647e1457684a455cc4b192cb"
+      },
+      "camera_coordinate_evaluator_only": [
+        50.1102361111111,
+        8.68192777777778
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_074",
+      "role": "known_development",
+      "group": "legacy_dev_6",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3987.jpg",
+        "bytes": 1280394,
+        "sha256": "9973220a6ff0f743c47e218619d2b87dd1d059771e14c85ef4bfbb9617d8871a"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3987.HEIC/sat_5_5.jpg",
+        "bytes": 19582,
+        "sha256": "29c20dab5acdf7d856c1bb3e00aba5c72918de3fac5bb489ec2fe7e7bd4fe15b"
+      },
+      "camera_coordinate_evaluator_only": [
+        50.1104277777778,
+        8.684863889
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_076",
+      "role": "known_development",
+      "group": "legacy_dev_6",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_4020.jpg",
+        "bytes": 1209704,
+        "sha256": "2a84050088d8274597e22e1876bdb02a80c3a95cc0f3c9ffd781ed38b247d528"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_4020.HEIC/sat_5_5.jpg",
+        "bytes": 24487,
+        "sha256": "97c61ec06a2d376ceecc634113953a7aa3f2c8462b9d457e1b03e198c3181036"
+      },
+      "camera_coordinate_evaluator_only": [
+        50.1088861111111,
+        8.67482222222222
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_057",
+      "role": "known_development",
+      "group": "legacy_dev_7",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2928.jpg",
+        "bytes": 1555108,
+        "sha256": "2fd6178b4c56865a4da725b6c99622f14cfc7f3be76fab18e7c678631568d775"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2928.HEIC/sat_5_5.jpg",
+        "bytes": 16554,
+        "sha256": "8a88e98db321c0d42098b0d691845647554ae9e660152aaca503235176f2c2ac"
+      },
+      "camera_coordinate_evaluator_only": [
+        38.6483333333333,
+        -90.30177222
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_077",
+      "role": "known_development",
+      "group": "legacy_dev_7",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_4066.jpg",
+        "bytes": 2218865,
+        "sha256": "c1399bd02af07d5b2d047378560136f3d96136c8aae27643aad1298349378059"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_4066.HEIC/sat_5_5.jpg",
+        "bytes": 19201,
+        "sha256": "f5a188bbca94d1cf1c3181c21e9304c1d409df1034c307fd55b526151c07e496"
+      },
+      "camera_coordinate_evaluator_only": [
+        38.6349527777778,
+        -90.2882
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_070",
+      "role": "known_development",
+      "group": "legacy_dev_8",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3896.jpg",
+        "bytes": 1086182,
+        "sha256": "99de273478451a460a4fb5443b545b77f2fe008447a19599e3d471e2b8e6c0ca"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3896.HEIC/sat_5_5.jpg",
+        "bytes": 16869,
+        "sha256": "0159bf26f3185397212da6d15c03364d5f2c3d5c4e5b80cbee3f41dba12474bf"
+      },
+      "camera_coordinate_evaluator_only": [
+        38.6336111111111,
+        -90.24050833
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_078",
+      "role": "known_development",
+      "group": "legacy_dev_8",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_4266.jpg",
+        "bytes": 517628,
+        "sha256": "5569c802aa0b2377cca9fd040508f278375fb00854e9bd088ef1a542bd1a1314"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_4266.HEIC/sat_5_5.jpg",
+        "bytes": 18321,
+        "sha256": "ffaa575340d8d2b27f5b08384d77c46e70b986304a7278315837d722be1b579c"
+      },
+      "camera_coordinate_evaluator_only": [
+        38.6117888888889,
+        -90.25798056
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_043",
+      "role": "known_development",
+      "group": "legacy_dev_9",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2465.jpg",
+        "bytes": 1094442,
+        "sha256": "4373177edd988bed139c82f8ff9a0107ffa8c6d5f2050340711bb76e3084075c"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2465.HEIC/sat_5_5.jpg",
+        "bytes": 25163,
+        "sha256": "4fb006c9dd9ac90acc04634c209ab2d9a84a486e62571a31f276e6581ddf7f44"
+      },
+      "camera_coordinate_evaluator_only": [
+        41.8753861111111,
+        12.4810944444444
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_044",
+      "role": "known_development",
+      "group": "legacy_dev_9",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2482.jpg",
+        "bytes": 1450151,
+        "sha256": "e1cc48433ad501a27f04e08c56aa2bc747f9f62505e8c20c445ee05ce73d1dbb"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2482.HEIC/sat_5_5.jpg",
+        "bytes": 21166,
+        "sha256": "4f0c0cb0978268781ab1bc85585b5df922fbe9e71c7eb2676fcc552917138a43"
+      },
+      "camera_coordinate_evaluator_only": [
+        41.9023444444444,
+        12.4578361111111
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_045",
+      "role": "known_development",
+      "group": "legacy_dev_9",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2491.jpg",
+        "bytes": 1181612,
+        "sha256": "8d139c7d5d733a6a10e75b87a4a6e0ea333a2d355c5a009afed30ab8a6485e21"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2491.HEIC/sat_5_5.jpg",
+        "bytes": 23190,
+        "sha256": "375302b8be85ade5430125e8ed6efcce02a3aa136bffdbe85fb5370ba11e28a3"
+      },
+      "camera_coordinate_evaluator_only": [
+        41.9014027777778,
+        12.4639722222222
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_046",
+      "role": "known_development",
+      "group": "legacy_dev_9",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2505.jpg",
+        "bytes": 2163673,
+        "sha256": "2acc10abe39a383d404d3d1125020344f378e5c3b9d0ee4dac095a73a565a89f"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2505.HEIC/sat_5_5.jpg",
+        "bytes": 22720,
+        "sha256": "8bb9a1ad8d77285ae192b1175be35e58b3d66bc9b7d3bac2e65cb1264b0002bc"
+      },
+      "camera_coordinate_evaluator_only": [
+        41.890225,
+        12.4912527777778
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_047",
+      "role": "known_development",
+      "group": "legacy_dev_9",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2517.jpg",
+        "bytes": 1930779,
+        "sha256": "3857fd046bc542c4e64b9508bd4b36eb2ac9e2349b129b65ba6bcda90c2ca093"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2517.HEIC/sat_5_5.jpg",
+        "bytes": 24735,
+        "sha256": "5052eb89fa5eddb7febad83cc0e283f90839d895a2f4080c175066ed7409cd51"
+      },
+      "camera_coordinate_evaluator_only": [
+        41.8833805555556,
+        12.4878611111111
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_048",
+      "role": "known_development",
+      "group": "legacy_dev_9",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2522.jpg",
+        "bytes": 1989675,
+        "sha256": "22c09098c156c9dad8555ca8f7543ae9ff99cb0aa0dff30311a7684a2e719ccc"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2522.HEIC/sat_5_5.jpg",
+        "bytes": 28250,
+        "sha256": "f9e78c91ed8ef82d3cb16dfec86f80ecade5e932cef9d61298f907f8506aa180"
+      },
+      "camera_coordinate_evaluator_only": [
+        41.9007333333333,
+        12.4832611111111
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_031",
+      "role": "fit_preparation",
+      "group": "cp_051fd603c27d",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_1704.jpg",
+        "bytes": 1920740,
+        "sha256": "0c78513db559e6ecb3bf713695df52c0ef0be6f342f9bbad6dba9d2c25cf7e5e"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_1704.HEIC/sat_5_5.jpg",
+        "bytes": 23882,
+        "sha256": "9d38491f31bed4f4c3a368424d59cab4934fd01175a6330aacb6bd74f85b15e3"
+      },
+      "camera_coordinate_evaluator_only": [
+        47.79995,
+        13.04015
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_063",
+      "role": "fit_preparation",
+      "group": "cp_051fd603c27d",
+      "representative": true,
+      "used_in_frozen_training": true,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3551.jpg",
+        "bytes": 1131548,
+        "sha256": "ef6c84aa5443535ea41289265cc4418cf193379d3ba5d947c79deee4c12cff99"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3551.HEIC/sat_5_5.jpg",
+        "bytes": 20011,
+        "sha256": "20d969a089f4ae3f728e5b4349d9cca603896f14ff622a0126f9dedfaba07229"
+      },
+      "camera_coordinate_evaluator_only": [
+        47.7979777777778,
+        13.0452277777778
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": true
+    },
+    {
+      "source_id": "mmgag_050",
+      "role": "fit_preparation",
+      "group": "cp_0b697bbbd36f",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2557.jpg",
+        "bytes": 1224088,
+        "sha256": "a58f95ebf45f12767bab5118290f1a1a4c03ecf430713c213963a6d732857d1a"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2557.HEIC/sat_5_5.jpg",
+        "bytes": 24569,
+        "sha256": "5181dc4fc70149b1c75bcd383a7a7905f3e5ee8f3bf618fac8086c9ec4fe351d"
+      },
+      "camera_coordinate_evaluator_only": [
+        43.7078027777778,
+        10.3978916666667
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_051",
+      "role": "fit_preparation",
+      "group": "cp_0b697bbbd36f",
+      "representative": true,
+      "used_in_frozen_training": true,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2586.jpg",
+        "bytes": 1399723,
+        "sha256": "b229ba3279661565851c64a05deab9c93385d69a7c59921c3aae379aba6eae37"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2586.HEIC/sat_5_5.jpg",
+        "bytes": 24906,
+        "sha256": "0c629886273ffae524d2013635fec65a2c37e48d3c0f921a0f419feea930cd74"
+      },
+      "camera_coordinate_evaluator_only": [
+        43.7229944444444,
+        10.3974583333333
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": true
+    },
+    {
+      "source_id": "mmgag_058",
+      "role": "fit_preparation",
+      "group": "cp_0ba97ce156ca",
+      "representative": true,
+      "used_in_frozen_training": true,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2938.jpg",
+        "bytes": 1442613,
+        "sha256": "3f7dc864a78ea299bf52636189a9dc38e263f7575bc09e5e375adf8aead687ba"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2938.HEIC/sat_5_5.jpg",
+        "bytes": 20455,
+        "sha256": "119f3268cee3e4207a8a5e0694e85e16ff80002b7f85a75ad090e9c649b1ec99"
+      },
+      "camera_coordinate_evaluator_only": [
+        50.9412305555556,
+        6.96188611111111
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": true
+    },
+    {
+      "source_id": "mmgag_061",
+      "role": "fit_preparation",
+      "group": "cp_0d03875fbde2",
+      "representative": true,
+      "used_in_frozen_training": true,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3349.jpg",
+        "bytes": 2169939,
+        "sha256": "95e947cc1df70861f50c57546b873e15681a4eb1a6502e8e4da2bcedb8f73871"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3349.HEIC/sat_5_5.jpg",
+        "bytes": 15109,
+        "sha256": "240e0f636097c9ea289c7b8dcef34ae14add5b5627a507443e686d0f30da2cf8"
+      },
+      "camera_coordinate_evaluator_only": [
+        37.9009083333333,
+        -122.5782556
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": true
+    },
+    {
+      "source_id": "mmgag_052",
+      "role": "fit_preparation",
+      "group": "cp_0da17d201ccf",
+      "representative": true,
+      "used_in_frozen_training": true,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2598.jpg",
+        "bytes": 1453772,
+        "sha256": "bcfed31b0d96c894668ab537710a2f28eb4d6cd82c8602fe2f4f51c14ff5b1ad"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2598.HEIC/sat_5_5.jpg",
+        "bytes": 23152,
+        "sha256": "9dc271d9adee16186fde465abed8b0a3d1eceb7435c1e983ad7295989de44908"
+      },
+      "camera_coordinate_evaluator_only": [
+        43.7726361111111,
+        11.2575416666667
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": true
+    },
+    {
+      "source_id": "mmgag_042",
+      "role": "fit_preparation",
+      "group": "cp_189f8f7945e1",
+      "representative": true,
+      "used_in_frozen_training": true,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2445.jpg",
+        "bytes": 1309619,
+        "sha256": "2a003c48d43fb8ea2ebdaeac1343010c7b96ac95972e6c0670885eb7baf274dc"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2445.HEIC/sat_5_5.jpg",
+        "bytes": 20689,
+        "sha256": "0f5beaf84c2543f77cf99d071a0a29d01fc3ef84f8f12cc1bfabd44635b9db39"
+      },
+      "camera_coordinate_evaluator_only": [
+        45.6939555555556,
+        9.67098888888889
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": true
+    },
+    {
+      "source_id": "mmgag_065",
+      "role": "fit_preparation",
+      "group": "cp_1a5a192d5446",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3644.jpg",
+        "bytes": 1282675,
+        "sha256": "cd3a5cfcc355399b41c2f1a46e6de5e3d04792a27d2e53c105df0ef215ea8799"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3644.HEIC/sat_5_5.jpg",
+        "bytes": 16450,
+        "sha256": "56936e40ad48d2c2456dcbb28e0a061281fe87cb703997c25c8aeb3d4129cd23"
+      },
+      "camera_coordinate_evaluator_only": [
+        40.7598027777778,
+        -73.98436667
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_066",
+      "role": "fit_preparation",
+      "group": "cp_1a5a192d5446",
+      "representative": true,
+      "used_in_frozen_training": true,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3726.jpg",
+        "bytes": 1474467,
+        "sha256": "ddbf75111d98a8b3291ec917aca59917539b4fb605033e4088062d5a980b3bb2"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3726.HEIC/sat_5_5.jpg",
+        "bytes": 14979,
+        "sha256": "4fe9177bfb9d3aa095ddc7e710c464528d1a3337ca4e108205917b18e7c5334c"
+      },
+      "camera_coordinate_evaluator_only": [
+        40.7489166666667,
+        -73.985925
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": true
+    },
+    {
+      "source_id": "mmgag_080",
+      "role": "fit_preparation",
+      "group": "cp_6064860b53f7",
+      "representative": true,
+      "used_in_frozen_training": true,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_4404.jpg",
+        "bytes": 3127030,
+        "sha256": "567e5e84ae357607d3458277386015892fed25c3df56c722a084116b8c7f4ca6"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_4404.HEIC/sat_5_5.jpg",
+        "bytes": 13618,
+        "sha256": "19aa851453aa57bc145aca60c9176bc4bfb8bdbe442a52a6e5fbed173c87d26c"
+      },
+      "camera_coordinate_evaluator_only": [
+        19.9943777777778,
+        -155.8248444
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": true
+    },
+    {
+      "source_id": "mmgag_075",
+      "role": "fit_preparation",
+      "group": "cp_718cbae06243",
+      "representative": true,
+      "used_in_frozen_training": true,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3991.jpg",
+        "bytes": 923223,
+        "sha256": "489245fc2f9dba6a3847561407ad852b5aaca67e4e7afefb79d1a61459365b9d"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3991.HEIC/sat_5_5.jpg",
+        "bytes": 18557,
+        "sha256": "2a6ee09e5c48dcde902c7e9ed6ee6f38897566d0329eb676091a9cf8aec966ad"
+      },
+      "camera_coordinate_evaluator_only": [
+        34.1448444444444,
+        -118.1443778
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": true
+    },
+    {
+      "source_id": "mmgag_062",
+      "role": "development",
+      "group": "cp_90e82d3f1b4a",
+      "representative": true,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3368.jpg",
+        "bytes": 1593333,
+        "sha256": "4f4064b8c691eaf9e08e6157bb872625ae03116896892a99ebc6646683a18ff0"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3368.HEIC/sat_5_5.jpg",
+        "bytes": 6550,
+        "sha256": "82d81a82fb71b62d37423005cfbd3962c0d065d43f6c8483d700cb019cd255d2"
+      },
+      "camera_coordinate_evaluator_only": [
+        36.9598972222222,
+        -122.018525
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": true
+    },
+    {
+      "source_id": "mmgag_072",
+      "role": "development",
+      "group": "cp_9aebd6834001",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3942.jpg",
+        "bytes": 1275810,
+        "sha256": "08f654e73166ccdbbc7af6c165fe558b426e9fbae0aa9bfdfd3745759734db82"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3942.HEIC/sat_5_5.jpg",
+        "bytes": 21325,
+        "sha256": "5c2738772eed6b81d49cee53c56fde52e2e0cf7b647974d179f9cd9741243c1b"
+      },
+      "camera_coordinate_evaluator_only": [
+        34.1160694444445,
+        -118.2958611
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_073",
+      "role": "development",
+      "group": "cp_9aebd6834001",
+      "representative": true,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3961.jpg",
+        "bytes": 1165575,
+        "sha256": "0290079a2d57e42b78206eb4fc142dbb523899b8b49dc4398c66deaf702cbdcb"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3961.HEIC/sat_5_5.jpg",
+        "bytes": 19108,
+        "sha256": "bf808f6b7f6c766ac02dfef2d5f641f7663141294ebd8182e2325abf5abea0ff"
+      },
+      "camera_coordinate_evaluator_only": [
+        34.1189388888889,
+        -118.3003306
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": true
+    },
+    {
+      "source_id": "mmgag_079",
+      "role": "development",
+      "group": "cp_9e8fdb82d71d",
+      "representative": true,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_4352.jpg",
+        "bytes": 1613643,
+        "sha256": "03f1af0ad03a7ccedfec08937448d4b056ee1bca156bf8e9017b929601ddc4ea"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_4352.HEIC/sat_5_5.jpg",
+        "bytes": 12793,
+        "sha256": "c604e9201342b9d79999e43bbbe33543c0dbacf877407ca63a8cb8c23655cf44"
+      },
+      "camera_coordinate_evaluator_only": [
+        19.9283111111111,
+        -155.888825
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": true
+    },
+    {
+      "source_id": "mmgag_039",
+      "role": "development",
+      "group": "cp_b2dde602d621",
+      "representative": true,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2146.jpg",
+        "bytes": 814710,
+        "sha256": "a9e793b737826ab1c21c6549524b77f724848c5ef7c3c1ba43fc29e29219ff04"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2146.HEIC/sat_5_5.jpg",
+        "bytes": 18845,
+        "sha256": "8c8f796f0afc4653ffa0b74e7919dc2c0fcb93eb0824362a87246f19062bd291"
+      },
+      "camera_coordinate_evaluator_only": [
+        48.1436416666667,
+        17.1170777777778
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": true
+    },
+    {
+      "source_id": "mmgag_081",
+      "role": "development",
+      "group": "cp_b34c205adc4a",
+      "representative": true,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_4440.jpg",
+        "bytes": 1668993,
+        "sha256": "8c26428dbb94fe0b06055194eb0cd120006cecfc49e807a1ac7d7477f311b126"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_4440.HEIC/sat_5_5.jpg",
+        "bytes": 17998,
+        "sha256": "6a6cda9d2c7385d7ae9280135f9745bc4eca289ad8b5a9de4db1469c60cce422"
+      },
+      "camera_coordinate_evaluator_only": [
+        19.7491277777778,
+        -155.4548944
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": true
+    },
+    {
+      "source_id": "mmgag_032",
+      "role": "confirmation_reserved",
+      "group": "cp_cff7c33d2c32",
+      "representative": true,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_1734.jpg",
+        "bytes": 1352128,
+        "sha256": "90c564b8cca6c5162d987ec63901706d226e78ae44fadccf529af34b61ea5d24"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_1734.HEIC/sat_5_5.jpg",
+        "bytes": 13774,
+        "sha256": "6ed396ed6008757cb66a3d4d568e870db9e6d52492483de9f5567160455cae63"
+      },
+      "camera_coordinate_evaluator_only": [
+        47.5575361111111,
+        13.6836138888889
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_053",
+      "role": "confirmation_reserved",
+      "group": "cp_d8bb8b789981",
+      "representative": true,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2639.jpg",
+        "bytes": 1410815,
+        "sha256": "c58c40f30f28d4a16a8609a2c1010f32fa4c94e7b26ab727c6b16e33fb259fbc"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2639.HEIC/sat_5_5.jpg",
+        "bytes": 22798,
+        "sha256": "ca172fb3802f7d71732f72c88285231e020162d274750473ad1def198d25bee0"
+      },
+      "camera_coordinate_evaluator_only": [
+        45.4334444444444,
+        12.3396277777778
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_054",
+      "role": "confirmation_reserved",
+      "group": "cp_d8bb8b789981",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2658.jpg",
+        "bytes": 1107723,
+        "sha256": "7f597be4ea85d4197c11f864a0ddb4b457328aa9c33b58026ffb6b8fde6a767c"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2658.HEIC/sat_5_5.jpg",
+        "bytes": 18550,
+        "sha256": "a84d2dcf9fd9f4e3e6bc343aa7a2d022ba709c4b145aed05121abc1b15161ca1"
+      },
+      "camera_coordinate_evaluator_only": [
+        45.435375,
+        12.3294833333333
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_064",
+      "role": "confirmation_reserved",
+      "group": "cp_dc232fef4acf",
+      "representative": true,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3633.jpg",
+        "bytes": 1098077,
+        "sha256": "ab116cc990a5555fb597a8b3ce01c2d8f1fb49087caa8d93a2e9bcd0190b79c7"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3633.HEIC/sat_5_5.jpg",
+        "bytes": 19973,
+        "sha256": "f1f0948497a7872f81f561bea47c9da7614867ca93e9b065497c628f14c533ee"
+      },
+      "camera_coordinate_evaluator_only": [
+        38.8891027777778,
+        -77.00598056
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_037",
+      "role": "confirmation_reserved",
+      "group": "cp_e26348e232c7",
+      "representative": true,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2098.jpg",
+        "bytes": 2238061,
+        "sha256": "5e5f652acedac23e4953351103103ecd3eeaac5a36cba519565002255c338926"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_2098.HEIC/sat_5_5.jpg",
+        "bytes": 25238,
+        "sha256": "d5c8f912eb0dd118319e23117eeb8c5fdb80f7283f08dc03100db39a7cec2eb0"
+      },
+      "camera_coordinate_evaluator_only": [
+        48.2079722222222,
+        16.366275
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_060",
+      "role": "confirmation_reserved",
+      "group": "cp_e8ed90f2ae8a",
+      "representative": true,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3332.jpg",
+        "bytes": 1822496,
+        "sha256": "4c38eb93992dc82d7ad3c84d8e5bfd295891153b8d0c15f8e2edf69260008174"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3332.HEIC/sat_5_5.jpg",
+        "bytes": 23344,
+        "sha256": "ae12eb8693f47cf22527bffb587017a9f8f57625bd82e79b7702f7c701fe923b"
+      },
+      "camera_coordinate_evaluator_only": [
+        37.4220805555556,
+        -122.0831444
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_000",
+      "role": "confirmation_reserved",
+      "group": "cp_f0ff271f6d29",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/2024-04-03 08.16.01.jpg",
+        "bytes": 6380969,
+        "sha256": "7468fcdce36800f8c55eeecb48450724ed274e01db2e0c84abb035e8a76e1b3c"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/2024-04-03 08.16.01.jpg/sat_5_5.jpg",
+        "bytes": 15327,
+        "sha256": "cdb4ae8896387a7acddbdf4ac5ceaed3dd25554057ae80ffb020ae1ec1fdf850"
+      },
+      "camera_coordinate_evaluator_only": [
+        55.722757299722225,
+        13.1619623
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_001",
+      "role": "confirmation_reserved",
+      "group": "cp_f0ff271f6d29",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/2024-04-03 08.19.21.jpg",
+        "bytes": 4234182,
+        "sha256": "bd2240793002b1f9ede9ae0c8dd3a87a806b6b21990ecb29ec05106f7fa39168"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/2024-04-03 08.19.21.jpg/sat_5_5.jpg",
+        "bytes": 15755,
+        "sha256": "4aec4d02d41a87e7e6fc00c555c09fa93ad084db4dfe5f8944198f07a6e44a24"
+      },
+      "camera_coordinate_evaluator_only": [
+        55.724579599722226,
+        13.160894
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_002",
+      "role": "confirmation_reserved",
+      "group": "cp_f0ff271f6d29",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/2024-04-03 08.19.37.jpg",
+        "bytes": 5425737,
+        "sha256": "623283c8ed469d441f6500b1ef3248ca8dfaf6bb8b1ec318e671e24cb609283b"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/2024-04-03 08.19.37.jpg/sat_5_5.jpg",
+        "bytes": 15755,
+        "sha256": "4aec4d02d41a87e7e6fc00c555c09fa93ad084db4dfe5f8944198f07a6e44a24"
+      },
+      "camera_coordinate_evaluator_only": [
+        55.724579599722226,
+        13.160894
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_003",
+      "role": "confirmation_reserved",
+      "group": "cp_f0ff271f6d29",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/2024-04-03 08.19.42.jpg",
+        "bytes": 5342825,
+        "sha256": "0702f324eda4b2064c89696ef7450fba604fb78d33b1f087236ff229e00c0752"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/2024-04-03 08.19.42.jpg/sat_5_5.jpg",
+        "bytes": 15755,
+        "sha256": "4aec4d02d41a87e7e6fc00c555c09fa93ad084db4dfe5f8944198f07a6e44a24"
+      },
+      "camera_coordinate_evaluator_only": [
+        55.724579599722226,
+        13.160894
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_005",
+      "role": "confirmation_reserved",
+      "group": "cp_f0ff271f6d29",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/2024-04-03 08.21.35.jpg",
+        "bytes": 5049196,
+        "sha256": "47ee64fe026bd64bdcc1535fe06eb2b94484fb24c46d52421ca9dfca92be08c6"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/2024-04-03 08.21.35.jpg/sat_5_5.jpg",
+        "bytes": 16096,
+        "sha256": "5b4bb76a2570ca2b8e082fbc76625f561d85cbb5b99f84edc6179483eabd8ba7"
+      },
+      "camera_coordinate_evaluator_only": [
+        55.7249502,
+        13.1597079
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_007",
+      "role": "confirmation_reserved",
+      "group": "cp_f0ff271f6d29",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/2024-04-03 08.23.29.jpg",
+        "bytes": 4590084,
+        "sha256": "86fa9c68bf4a592b2a351f5ccbb12ac2212a87e3b85196b953ab763a1c4b9280"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/2024-04-03 08.23.29.jpg/sat_5_5.jpg",
+        "bytes": 16786,
+        "sha256": "cb5f9258aa403714d87821338381499b0f48271d463dae046e7193f14f980b74"
+      },
+      "camera_coordinate_evaluator_only": [
+        55.725502599722226,
+        13.1583404
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_008",
+      "role": "confirmation_reserved",
+      "group": "cp_f0ff271f6d29",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/2024-04-03 08.24.05.jpg",
+        "bytes": 5687704,
+        "sha256": "1624e4055481e79a91d903678db3fc3293174fb9c420d3f75fed278a5bba8e8f"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/2024-04-03 08.24.05.jpg/sat_5_5.jpg",
+        "bytes": 16786,
+        "sha256": "cb5f9258aa403714d87821338381499b0f48271d463dae046e7193f14f980b74"
+      },
+      "camera_coordinate_evaluator_only": [
+        55.725548,
+        13.1582228
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_010",
+      "role": "confirmation_reserved",
+      "group": "cp_f0ff271f6d29",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/2024-04-03 08.26.42.jpg",
+        "bytes": 5259116,
+        "sha256": "2700e48a12ada99c16e7909caac23883a674dbfa605f7102fc3f992819c8cf9b"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/2024-04-03 08.26.42.jpg/sat_5_5.jpg",
+        "bytes": 16786,
+        "sha256": "cb5f9258aa403714d87821338381499b0f48271d463dae046e7193f14f980b74"
+      },
+      "camera_coordinate_evaluator_only": [
+        55.72534399972223,
+        13.1580328
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_011",
+      "role": "confirmation_reserved",
+      "group": "cp_f0ff271f6d29",
+      "representative": true,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/2024-04-03 08.27.44.jpg",
+        "bytes": 5727502,
+        "sha256": "f7ddd81c2f3fedf62a6768945a25f1114da873b999fec511d45f9c73688549d6"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/2024-04-03 08.27.44.jpg/sat_5_5.jpg",
+        "bytes": 16786,
+        "sha256": "cb5f9258aa403714d87821338381499b0f48271d463dae046e7193f14f980b74"
+      },
+      "camera_coordinate_evaluator_only": [
+        55.7251904,
+        13.158103999722222
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_014",
+      "role": "confirmation_reserved",
+      "group": "cp_f0ff271f6d29",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/2024-04-03 08.30.16.jpg",
+        "bytes": 4573207,
+        "sha256": "071bf9b5eff2f021d510e17b338db50dd065c1bb1432333021752191e4a4db25"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/2024-04-03 08.30.16.jpg/sat_5_5.jpg",
+        "bytes": 15751,
+        "sha256": "a10e83e1a18cbabb8e0a5271caacdff1df89415b8205018518561de2034bb1af"
+      },
+      "camera_coordinate_evaluator_only": [
+        55.7239232,
+        13.1593592
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_015",
+      "role": "confirmation_reserved",
+      "group": "cp_f0ff271f6d29",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/2024-04-03 08.30.39.jpg",
+        "bytes": 4858932,
+        "sha256": "aee83656d2925355cbf57b0b40411e25b7c275d14c4dcae17b986d1ca634211d"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/2024-04-03 08.30.39.jpg/sat_5_5.jpg",
+        "bytes": 15751,
+        "sha256": "a10e83e1a18cbabb8e0a5271caacdff1df89415b8205018518561de2034bb1af"
+      },
+      "camera_coordinate_evaluator_only": [
+        55.7239232,
+        13.1593592
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_016",
+      "role": "confirmation_reserved",
+      "group": "cp_f0ff271f6d29",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/2024-04-03 08.30.59.jpg",
+        "bytes": 4822210,
+        "sha256": "ece850a7f618c7281f651d79633f3ac05c1c1592233fe3f803ac257ff37f1b7f"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/2024-04-03 08.30.59.jpg/sat_5_5.jpg",
+        "bytes": 15751,
+        "sha256": "a10e83e1a18cbabb8e0a5271caacdff1df89415b8205018518561de2034bb1af"
+      },
+      "camera_coordinate_evaluator_only": [
+        55.7239232,
+        13.1593592
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_017",
+      "role": "confirmation_reserved",
+      "group": "cp_f0ff271f6d29",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/2024-04-03 08.31.04.jpg",
+        "bytes": 4899306,
+        "sha256": "2f0364e8ab6aee9fbbe03474a440add8fb05ea03e618bc6d08a381f3e3e2d41d"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/2024-04-03 08.31.04.jpg/sat_5_5.jpg",
+        "bytes": 15751,
+        "sha256": "a10e83e1a18cbabb8e0a5271caacdff1df89415b8205018518561de2034bb1af"
+      },
+      "camera_coordinate_evaluator_only": [
+        55.7239232,
+        13.1593592
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_018",
+      "role": "confirmation_reserved",
+      "group": "cp_f0ff271f6d29",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/2024-04-03 08.32.00.jpg",
+        "bytes": 6028382,
+        "sha256": "54f9615a555aa4fca4df945a8d90ebcc4b6d278fb22fc008fab5196fd6e1ba16"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/2024-04-03 08.32.00.jpg/sat_5_5.jpg",
+        "bytes": 15751,
+        "sha256": "a10e83e1a18cbabb8e0a5271caacdff1df89415b8205018518561de2034bb1af"
+      },
+      "camera_coordinate_evaluator_only": [
+        55.723513599722224,
+        13.159786399722222
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_019",
+      "role": "confirmation_reserved",
+      "group": "cp_f0ff271f6d29",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/2024-04-03 08.32.42.jpg",
+        "bytes": 5586515,
+        "sha256": "3fbe8c723e51eff055b14b672cbb66f8d66cb27a9d41c38ca9463eac07bc2e85"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/2024-04-03 08.32.42.jpg/sat_5_5.jpg",
+        "bytes": 14419,
+        "sha256": "96ae43487dfa2605188dab3d1f795789e0bc6bf5a67a5297cb1869f68eae1534"
+      },
+      "camera_coordinate_evaluator_only": [
+        55.723065599722226,
+        13.1602888
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_020",
+      "role": "confirmation_reserved",
+      "group": "cp_f0ff271f6d29",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/2024-04-03 08.32.51.jpg",
+        "bytes": 6617532,
+        "sha256": "5aa751644be17bf9e0cb327602db717e4684c81f7147744ce027d691ecd196e7"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/2024-04-03 08.32.51.jpg/sat_5_5.jpg",
+        "bytes": 14419,
+        "sha256": "96ae43487dfa2605188dab3d1f795789e0bc6bf5a67a5297cb1869f68eae1534"
+      },
+      "camera_coordinate_evaluator_only": [
+        55.723065599722226,
+        13.1602888
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_021",
+      "role": "confirmation_reserved",
+      "group": "cp_f0ff271f6d29",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/2024-04-03 08.33.52.jpg",
+        "bytes": 3981498,
+        "sha256": "b6d9e5cf811d2c3d942f47aa5b37998e30eb89e7406eb82cb844a9ee21a3020c"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/2024-04-03 08.33.52.jpg/sat_5_5.jpg",
+        "bytes": 14419,
+        "sha256": "96ae43487dfa2605188dab3d1f795789e0bc6bf5a67a5297cb1869f68eae1534"
+      },
+      "camera_coordinate_evaluator_only": [
+        55.722700799722226,
+        13.1604536
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    },
+    {
+      "source_id": "mmgag_022",
+      "role": "confirmation_reserved",
+      "group": "cp_f0ff271f6d29",
+      "representative": false,
+      "used_in_frozen_training": false,
+      "ground": {
+        "path": "DATA/raw_data/MM-GAG/ground_images_jpg/2024-04-03 08.34.04.jpg",
+        "bytes": 4242596,
+        "sha256": "688543cd6fec2d3b8919117f3cd6cf9712b020101e4a54688553772f0bd4735a"
+      },
+      "center_proxy": {
+        "path": "DATA/raw_data/MM-GAG/sat_images_patches/2024-04-03 08.34.04.jpg/sat_5_5.jpg",
+        "bytes": 14419,
+        "sha256": "96ae43487dfa2605188dab3d1f795789e0bc6bf5a67a5297cb1869f68eae1534"
+      },
+      "camera_coordinate_evaluator_only": [
+        55.722700799722226,
+        13.1604536
+      ],
+      "label_semantics": "original CSV/code camera-center proxy, not surveyed pixel or visible-landmark relabel",
+      "engineering_in_current14_source_scope": false
+    }
+  ],
+  "cross_role_byte_overlaps": [
+    {
+      "roles": [
+        "confirmation_reserved",
+        "development"
+      ],
+      "shared_ground_bytes": 0,
+      "shared_center_proxy_bytes": 0
+    },
+    {
+      "roles": [
+        "confirmation_reserved",
+        "fit_preparation"
+      ],
+      "shared_ground_bytes": 0,
+      "shared_center_proxy_bytes": 0
+    },
+    {
+      "roles": [
+        "confirmation_reserved",
+        "known_development"
+      ],
+      "shared_ground_bytes": 0,
+      "shared_center_proxy_bytes": 0
+    },
+    {
+      "roles": [
+        "development",
+        "fit_preparation"
+      ],
+      "shared_ground_bytes": 0,
+      "shared_center_proxy_bytes": 0
+    },
+    {
+      "roles": [
+        "development",
+        "known_development"
+      ],
+      "shared_ground_bytes": 0,
+      "shared_center_proxy_bytes": 0
+    },
+    {
+      "roles": [
+        "fit_preparation",
+        "known_development"
+      ],
+      "shared_ground_bytes": 0,
+      "shared_center_proxy_bytes": 0
+    }
+  ],
+  "new_independent_geographic_groups_from_three_additions": 0,
+  "additional_distinct_ground_photo_limit": 3,
+  "head_parameters": 8192,
+  "nine_pair_limit_origin": "chosen9fit groups, one hash-selected representative/group, and same9-query training budget as frozen Swiss comparison; not a dataset total",
+  "image_augmentations_or25_shifts_add_distinct_photos": false,
+  "all_statistics_use_historical_byte_hashes_not_current_raw_revalidation": true,
+  "independent_GPS_to_pixel_transform_required_for_proxy_task_training": false,
+  "task": "CV-017",
+  "new_raw_reads": 0,
+  "new_model_forward_calls": 0,
+  "new_predictions": 0,
+  "new_training_steps": 0,
+  "new_navigation_SR": null,
+  "confirmation_access": 0,
+  "roles_changed": false,
+  "training_candidate_executable": false
+}

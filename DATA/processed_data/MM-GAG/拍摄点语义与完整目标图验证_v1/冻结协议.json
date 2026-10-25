@@ -1,0 +1,47 @@
+{
+  "task": "CV-005",
+  "date": "2026-10-17",
+  "only_new_factor": "target-photo input center-crop replaced by full-frame aspect-preserving resize+fixed mean padding; unchanged global cosine scorer",
+  "rationale": "CV-004 measured56.28%-75.17% area retention and observed context/landmark risks; causal relevance unproved",
+  "task_semantics": "capture point proxy cell, unchanged from previousqueue, no landmark relabeling",
+  "pairs": 16,
+  "development_groups": 10,
+  "reserved_groups": 20,
+  "arms": [
+    "CropReplay",
+    "FullFrame"
+  ],
+  "conditions": [
+    "Full",
+    "Mean",
+    "Wrong"
+  ],
+  "scoring": "unchanged normalized global cosine, float64 from savedfloat32 vectors; CV-002 hash ties",
+  "controls": "Mean of16 normalized target vectors within each arm then normalize; Wrong same frozen different-group pair mapping",
+  "input_rule": "longside224, shortside floor minimum1, centered zero padding in normalized tensor, remainder right/bottom, PIL bicubic; no formula/position/model sweeps",
+  "batch_size": 8,
+  "maximum_ground_input_attempts": 32,
+  "maximum_encoder_forward_calls": 4,
+  "new_aerial_forward_calls": 0,
+  "cuda_allocation_limit_bytes": 2147483648,
+  "device_rule": "CUDA if free>=2560MiB at start else CPU; no post-score choice/retry",
+  "crop_replay_tolerance": 1e-05,
+  "replay_must_pass_before_fullframe": true,
+  "output_limit_bytes": 4194304,
+  "training_steps": 0,
+  "new_training_parameters": 0,
+  "model_api_calls": 0,
+  "navigation_episodes": 0,
+  "downloads": 0,
+  "candidate_gates": {
+    "all16_complete": true,
+    "full_top1_minimum": 4,
+    "full_minus_mean_minimum": 2,
+    "full_minus_wrong_minimum": 2,
+    "groups_net_better_than_both_minimum": 3
+  },
+  "secondary": "same-queue CropReplay vs FullFrame recovered/harmed Top1/Top5 and pergroup results, not navigation SR",
+  "stop": "single fixed processor; if any required gate fails close candidate, no fill/crop/scorer/layer/model/queue sweep, no reserved consumption; no automatic fourth zero-training probe",
+  "interpretation": "development observation only; preserved input area does not prove better alignment; padding changes pretrained input distribution and may hurt",
+  "online_boundary": "evaluator caches25 aerial candidates for ranking only; no bank/GPS/goal information enters encoder or public target"
+}

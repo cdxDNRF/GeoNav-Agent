@@ -1,0 +1,37 @@
+'use strict';
+const $=id=>document.getElementById(id),base='/api/ground-live/';
+let owner=sessionStorage.getItem('geonav-ground-live-owner');if(!owner){owner=crypto.randomUUID().replaceAll('-','');sessionStorage.setItem('geonav-ground-live-owner',owner)}
+let token='',id=null,state=null,mode='upload',images={},poll=null,ready=false,closed=false;
+const terminal=s=>['completed','failed','cancelled'].includes(s),names={running:'正在编码',completed:'编码完成',failed:'编码失败',cancelled:'已取消'};
+const headers=()=>({'X-GeoNav-Session':owner,'X-GeoNav-Scene-Token':token,'Content-Type':'application/json'});
+async function api(path,value){const response=await fetch(base+path,{headers:headers(),...(value===undefined?{}:{method:'POST',body:JSON.stringify(value)})});const data=await response.json();if(!response.ok)throw Error(data.error||'请求失败');return data}
+function notice(text=''){$('notice').textContent=text}
+function fromFile(blob){return new Promise((resolve,reject)=>{const r=new FileReader();r.onload=()=>resolve(String(r.result));r.onerror=()=>reject(Error('图像读取失败'));r.readAsDataURL(blob)})}
+function preview(slot,url){const im=$(slot+'-image');if(im.getAttribute('src')!==url)im.src=url;im.classList.add('loaded')}
+function freezeInputs(frozen){for(const key of ['load-sample','target-file','current-file','job-name'])$(key).disabled=frozen;$('encode').disabled=frozen||!ready||!images.target||!images.current}
+function reset(){clearTimeout(poll);id=null;state=null;mode='upload';images={};for(const slot of ['target','current']){$(slot+'-file').value='';$(slot+'-image').removeAttribute('src');$(slot+'-image').classList.remove('loaded')}$('similarity').textContent='—';$('score-marker').style.display='none';$('job-status').textContent='等待图像';$('call-count').textContent='0 / 2';$('save-status').textContent='临时';$('feature-size').textContent='尚未生成';$('frozen-state').textContent='等待运行';$('resources').textContent='—';$('timeline').replaceChildren();$('image-note').textContent='预览 · 尚未编码';$('record-note').textContent='临时结果离页释放；保存与导出不会重新编码。';for(const key of ['save','export','cancel'])$(key).disabled=true;freezeInputs(false)}
+function query(extra){return new URLSearchParams({owner,...extra}).toString()}
+function render(s){state=s;id=s.id;$('job-name').value=s.name;const done=terminal(s.status);$('job-status').textContent=names[s.status]||s.status;$('save-status').textContent=s.saved?'已保存 · 只读':'临时';$('call-count').textContent=(s.events||[]).filter(e=>e.type==='vector_ready').length+' / 2';freezeInputs(true);$('save').disabled=!done||s.saved;$('export').disabled=!done;$('cancel').disabled=done;$('new-job').disabled=!done;
+  for(const slot of ['target','current'])preview(slot,base+'image?'+query({id,slot}));$('image-note').textContent='实际224×224编码输入 · RGB';
+  $('timeline').replaceChildren();for(const e of s.events||[]){let text='',detail='';if(e.type==='attempt'){text=e.kind==='ground'?'地面目标：开始编码':'当前航拍：开始编码';detail='CPU · 单图输入 · 第'+e.attempt+'次forward'}else if(e.type==='vector_ready'){text=e.kind==='ground'?'地面特征已生成':'当前观测特征已生成';detail='512维 · 像素绑定 '+e.pixel_sha256.slice(0,10)+'…'}else if(e.type==='error'){text='编码异常';detail='未自动重试'}else continue;const li=document.createElement('li');li.textContent=text;const small=document.createElement('small');small.textContent=detail;li.append(small);$('timeline').append(li)}
+  if(!s.events?.length){const li=document.createElement('li');li.textContent='正在校验资产并加载冻结编码器…';$('timeline').append(li)}
+  $('similarity').textContent='—';$('score-marker').style.display='none';$('score-marker').style.left='';$('feature-size').textContent='未生成';$('frozen-state').textContent='无完整结果';$('resources').textContent='—';
+  const r=s.result;if(r){const score=r.event.raw_similarity;$('similarity').textContent=score.toFixed(4);$('score-marker').style.display='block';$('score-marker').style.left=((score+1)*50)+'%';$('feature-size').textContent=r.packet.target_feature.length+' / '+r.packet.current_feature.length+' 维';$('frozen-state').textContent=r.frozen_encoder_report.frozen_tensor_checks.every(x=>x.unchanged)?'通过 · 无参数更新':'需检查';const v=r.resources;$('resources').textContent=v?v.elapsed_seconds.toFixed(1)+' s / '+(v.sampled_peak_RSS_bytes/1024**3).toFixed(2)+' GiB':'未提供';}
+  $('record-note').textContent=s.error|| (s.saved?'已保存为本机只读记录。重开、保存和导出均不会重新调用模型。':'编码结果仅在本页会话内保留。显式保存后才能跨服务重开。');
+  if(s.error)notice(s.error)
+}
+async function catalog(){const c=await api('catalog');const old=$('saved').value;$('saved').replaceChildren(new Option('选择已保存记录',''),...c.saved.map(x=>new Option(x.name+' · '+(names[x.status]||x.status),x.id)));if(c.saved.some(x=>x.id===old))$('saved').value=old;ready=c.real_encoding_available;if(c.recovery.broken||c.recovery.pending)notice('有'+c.recovery.broken+'条异常记录、'+c.recovery.pending+'个未提交目录已隔离，原件保留。');else if(!ready)notice('本机缺少编码资产，当前可查看已存结果。不会自动下载模型。');freezeInputs(Boolean(id));return c}
+async function watch(){if(!id||closed)return;try{const s=await api('state?'+query({id}));render(s);if(!terminal(s.status))poll=setTimeout(watch,800)}catch(e){notice(e.message);$('new-job').disabled=false}}
+async function action(fn){try{notice();await fn()}catch(e){notice(e.message)}}
+for(const slot of ['target','current'])$(slot+'-file').onchange=()=>action(async()=>{const f=$(slot+'-file').files[0];if(!f)return;if(f.size>10*1024**2)throw Error('请选择不超过10MiB的图片');const url=await fromFile(f);images[slot]=url.split(',')[1];mode='upload';preview(slot,url);freezeInputs(false)});
+$('load-sample').onclick=()=>action(async()=>{for(const slot of ['target','current']){const r=await fetch(base+'sample?'+query({slot}),{headers:headers()});if(!r.ok)throw Error('当前搬迁工作区未携带开发示例，可自行选图。');const url=await fromFile(await r.blob());images[slot]=url.split(',')[1];preview(slot,url)}mode='sample';freezeInputs(false);notice('已载入原有已消费开发图像；点击“开始实时编码”才会调用本地模型。')});
+$('encode').onclick=()=>action(async()=>{freezeInputs(true);$('new-job').disabled=true;try{const spec={name:$('job-name').value,mode};if(mode==='upload')Object.assign(spec,{target_b64:images.target,current_b64:images.current});const s=await api('create',spec);render(s);watch()}catch(e){freezeInputs(false);$('new-job').disabled=false;throw e}});
+$('new-job').onclick=()=>action(async()=>{if(state)await api('release',{});reset();notice('新临时编码不会沿用上一目标或特征。')});
+$('save').onclick=()=>action(async()=>{render(await api('save',{id}));await catalog();$('saved').value=id});
+$('open-saved').onclick=()=>action(async()=>{const selected=$('saved').value;if(!selected)throw Error('请先选择记录');if(state&&!terminal(state.status))throw Error('请先完成或取消当前编码');clearTimeout(poll);render(await api('state?'+query({id:selected})));notice('只读重开，不重新编码。')});
+$('cancel').onclick=()=>action(async()=>{await api('cancel',{id});notice('已请求取消，正在释放编码进程…');watch()});
+$('export').onclick=()=>{if(!id)return;const a=document.createElement('a');a.href=base+'export?'+query({id});a.download='geonav-ground-'+id+'.json';a.click()};
+$('refresh').onclick=()=>action(catalog);
+window.addEventListener('pagehide',()=>{closed=true;clearTimeout(poll);fetch(base+'release',{method:'POST',headers:headers(),body:'{}',keepalive:true}).catch(()=>{})});
+setInterval(()=>{if(!closed)api('heartbeat',{}).catch(()=>{})},30000);
+action(async()=>{const response=await fetch('/api/meta',{headers:{'X-GeoNav-Session':owner}});const meta=await response.json();token=meta.scene_token;if(!token)throw Error('当前服务版本尚不支持实时证据接口');await catalog();reset()});

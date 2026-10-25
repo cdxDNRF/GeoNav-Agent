@@ -1,0 +1,450 @@
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 10905)
+Traceback (most recent call last):
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 80, in do_GET
+    elif u.path=='/api/perception/image':self.send(reader.image(get('case'),get('arm'),get('slot')),'image/png')
+                                         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 67, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v11.py", line 32, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v10.py", line 24, in send
+    return super().send(blob, mime, status, download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v6.py", line 39, in send
+    if self.command!='HEAD':self.wfile.write(blob)
+                            ~~~~~~~~~~~~~~~~^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PYTHON\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+----------------------------------------
+  File "D:\PYTHON\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+Exception occurred during processing of request from ('127.0.0.1', 8828)
+  File "D:\PYTHON\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 85, in do_GET
+    except (EvidenceUnavailable,OSError,KeyError,ValueError):self.json({'error':'证据缺失、选择无效或封存绑定变化，请核对携带资产。已有实验不受影响。'},400)
+                                                             ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 40, in json
+    return super().json(value,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v11.py", line 23, in json
+    return self.send(json.dumps(value,ensure_ascii=False,allow_nan=False).encode(),
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     'application/json; charset=utf-8',status,download)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 67, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v11.py", line 32, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v10.py", line 24, in send
+    return super().send(blob, mime, status, download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v6.py", line 38, in send
+    self.end_headers()
+    ~~~~~~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 549, in end_headers
+    self.flush_headers()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 553, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+Traceback (most recent call last):
+----------------------------------------
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 80, in do_GET
+    elif u.path=='/api/perception/image':self.send(reader.image(get('case'),get('arm'),get('slot')),'image/png')
+                                         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 67, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v11.py", line 32, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v10.py", line 24, in send
+    return super().send(blob, mime, status, download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v6.py", line 39, in send
+    if self.command!='HEAD':self.wfile.write(blob)
+                            ~~~~~~~~~~~~~~~~^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PYTHON\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 85, in do_GET
+    except (EvidenceUnavailable,OSError,KeyError,ValueError):self.json({'error':'证据缺失、选择无效或封存绑定变化，请核对携带资产。已有实验不受影响。'},400)
+                                                             ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 40, in json
+    return super().json(value,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v11.py", line 23, in json
+    return self.send(json.dumps(value,ensure_ascii=False,allow_nan=False).encode(),
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     'application/json; charset=utf-8',status,download)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 67, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v11.py", line 32, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v10.py", line 24, in send
+    return super().send(blob, mime, status, download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v6.py", line 38, in send
+    self.end_headers()
+    ~~~~~~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 549, in end_headers
+    self.flush_headers()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 553, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 13142)
+Traceback (most recent call last):
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 80, in do_GET
+    elif u.path=='/api/perception/image':self.send(reader.image(get('case'),get('arm'),get('slot')),'image/png')
+                                         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 67, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v11.py", line 32, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v10.py", line 24, in send
+    return super().send(blob, mime, status, download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v6.py", line 39, in send
+    if self.command!='HEAD':self.wfile.write(blob)
+                            ~~~~~~~~~~~~~~~~^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PYTHON\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 85, in do_GET
+    except (EvidenceUnavailable,OSError,KeyError,ValueError):self.json({'error':'证据缺失、选择无效或封存绑定变化，请核对携带资产。已有实验不受影响。'},400)
+                                                             ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 40, in json
+    return super().json(value,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v11.py", line 23, in json
+    return self.send(json.dumps(value,ensure_ascii=False,allow_nan=False).encode(),
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     'application/json; charset=utf-8',status,download)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 67, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v11.py", line 32, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v10.py", line 24, in send
+    return super().send(blob, mime, status, download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v6.py", line 38, in send
+    self.end_headers()
+    ~~~~~~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 549, in end_headers
+    self.flush_headers()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 553, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 2928)
+Traceback (most recent call last):
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 80, in do_GET
+    elif u.path=='/api/perception/image':self.send(reader.image(get('case'),get('arm'),get('slot')),'image/png')
+                                         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 67, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v11.py", line 32, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v10.py", line 24, in send
+    return super().send(blob, mime, status, download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v6.py", line 39, in send
+    if self.command!='HEAD':self.wfile.write(blob)
+                            ~~~~~~~~~~~~~~~~^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PYTHON\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 85, in do_GET
+    except (EvidenceUnavailable,OSError,KeyError,ValueError):self.json({'error':'证据缺失、选择无效或封存绑定变化，请核对携带资产。已有实验不受影响。'},400)
+                                                             ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 40, in json
+    return super().json(value,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v11.py", line 23, in json
+    return self.send(json.dumps(value,ensure_ascii=False,allow_nan=False).encode(),
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     'application/json; charset=utf-8',status,download)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 67, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v11.py", line 32, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v10.py", line 24, in send
+    return super().send(blob, mime, status, download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v6.py", line 38, in send
+    self.end_headers()
+    ~~~~~~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 549, in end_headers
+    self.flush_headers()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 553, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+----------------------------------------
+----------------------------------------
+Exception occurred during processing of request from ('127.0.0.1', 14473)
+Traceback (most recent call last):
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 80, in do_GET
+    elif u.path=='/api/perception/image':self.send(reader.image(get('case'),get('arm'),get('slot')),'image/png')
+                                         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 67, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v11.py", line 32, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v10.py", line 24, in send
+    return super().send(blob, mime, status, download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v6.py", line 39, in send
+    if self.command!='HEAD':self.wfile.write(blob)
+                            ~~~~~~~~~~~~~~~~^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PYTHON\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 85, in do_GET
+    except (EvidenceUnavailable,OSError,KeyError,ValueError):self.json({'error':'证据缺失、选择无效或封存绑定变化，请核对携带资产。已有实验不受影响。'},400)
+                                                             ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 40, in json
+    return super().json(value,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v11.py", line 23, in json
+    return self.send(json.dumps(value,ensure_ascii=False,allow_nan=False).encode(),
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     'application/json; charset=utf-8',status,download)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+----------------------------------------
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 67, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Exception occurred during processing of request from ('127.0.0.1', 12661)
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v11.py", line 32, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v10.py", line 24, in send
+    return super().send(blob, mime, status, download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v6.py", line 38, in send
+    self.end_headers()
+    ~~~~~~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 549, in end_headers
+    self.flush_headers()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 553, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+----------------------------------------
+Traceback (most recent call last):
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 80, in do_GET
+    elif u.path=='/api/perception/image':self.send(reader.image(get('case'),get('arm'),get('slot')),'image/png')
+                                         ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 67, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v11.py", line 32, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v10.py", line 24, in send
+    return super().send(blob, mime, status, download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v6.py", line 39, in send
+    if self.command!='HEAD':self.wfile.write(blob)
+                            ~~~~~~~~~~~~~~~~^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "D:\PYTHON\Lib\socketserver.py", line 697, in process_request_thread
+    self.finish_request(request, client_address)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 362, in finish_request
+    self.RequestHandlerClass(request, client_address, self)
+    ~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 766, in __init__
+    self.handle()
+    ~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 447, in handle
+    self.handle_one_request()
+    ~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 435, in handle_one_request
+    method()
+    ~~~~~~^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 85, in do_GET
+    except (EvidenceUnavailable,OSError,KeyError,ValueError):self.json({'error':'证据缺失、选择无效或封存绑定变化，请核对携带资产。已有实验不受影响。'},400)
+                                                             ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 40, in json
+    return super().json(value,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v11.py", line 23, in json
+    return self.send(json.dumps(value,ensure_ascii=False,allow_nan=False).encode(),
+           ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+                     'application/json; charset=utf-8',status,download)
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v19.py", line 67, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v11.py", line 32, in send
+    return super().send(blob,mime,status,download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v10.py", line 24, in send
+    return super().send(blob, mime, status, download)
+           ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\桌面\XDUCS-courses\大四\大数据工程\project\src\webapp\workbench_server_v6.py", line 38, in send
+    self.end_headers()
+    ~~~~~~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 549, in end_headers
+    self.flush_headers()
+    ~~~~~~~~~~~~~~~~~~^^
+  File "D:\PYTHON\Lib\http\server.py", line 553, in flush_headers
+    self.wfile.write(b"".join(self._headers_buffer))
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "D:\PYTHON\Lib\socketserver.py", line 845, in write
+    self._sock.sendall(b)
+    ~~~~~~~~~~~~~~~~~~^^^
+ConnectionAbortedError: [WinError 10053] 你的主机中的软件中止了一个已建立的连接。
+----------------------------------------

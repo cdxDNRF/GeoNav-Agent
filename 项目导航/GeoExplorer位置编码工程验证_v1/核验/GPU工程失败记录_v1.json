@@ -1,0 +1,12 @@
+{
+  "status": "failed_before_optimizer_updates",
+  "exit_code": 1,
+  "session": 82621,
+  "error": "empty next-state tensor max reduction for one-observation history",
+  "optimizer_steps": 0,
+  "scientific_training": 0,
+  "new_navigation": 0,
+  "new_sr": false,
+  "original_source_sha256": "ef705bc488c7868730d708206df417740721f27e08e02b3ef2fab070d5c84ca0",
+  "repair": "v2 skips empty state MSE in one-observation gradient probe and compares shape/empty outputs; training loss unchanged"
+}

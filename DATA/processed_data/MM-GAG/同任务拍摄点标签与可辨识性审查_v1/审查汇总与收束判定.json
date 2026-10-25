@@ -1,0 +1,30 @@
+{
+  "task": "CV-016",
+  "sources": 14,
+  "fit_sources": 9,
+  "development_sources": 5,
+  "raw_reads": 42,
+  "raw_decodes": 42,
+  "pixel_center_mapping_consistent": 14,
+  "camera_coordinates_available": 14,
+  "GPS_to_pixel_transform_verified": 0,
+  "GPS_ifd_present_in42_images": 0,
+  "heading_present_in42_images": 0,
+  "scene_correspondence_counts": {
+    "plausible": 8,
+    "unclear": 6
+  },
+  "independent_geographic_camera_labels_verified": 0,
+  "camera_points_visually_proven": 0,
+  "camera_points_identifiability_unknown": 14,
+  "verified_same_area_multiple_query_relations": 0,
+  "training_branch_status": "closed_for_current_materials",
+  "new_training_candidate_admitted": false,
+  "new_model_forward_calls": 0,
+  "new_predictions": 0,
+  "new_training_steps": 0,
+  "new_navigation_SR": null,
+  "confirmation_access": 0,
+  "default_upgraded": false,
+  "reason": "center geometry/scene correspondence do not supply georeferenced camera visibility or within-area multi-query positives; stop current9-pair head-training branch, not the whole cross-view task"
+}

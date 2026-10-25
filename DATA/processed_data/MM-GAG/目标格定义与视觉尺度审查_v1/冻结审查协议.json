@@ -1,0 +1,52 @@
+{
+  "task": "CV-004",
+  "date": "2026-10-17",
+  "pairs": 16,
+  "development_groups": 10,
+  "reserved_groups": 20,
+  "maximum_panels": 16,
+  "output_limit_bytes": 8388608,
+  "sample_policy": "exact CV-002 queue, no replacements or reserved material",
+  "model_forward_calls": 0,
+  "training_steps": 0,
+  "navigation_episodes": 0,
+  "model_api_calls": 0,
+  "downloads": 0,
+  "static_fields": [
+    "numeric_window_to_5_5",
+    "axis_stitch_mae",
+    "CSV_coordinate_present",
+    "EXIF_GPS_agreement_if_available",
+    "camera_heading_presence",
+    "metric_georeference_presence",
+    "CLIP_actual_crop_geometry"
+  ],
+  "visual_fields": {
+    "ground_scene": "free factual description",
+    "aerial_center_scene": "free factual description",
+    "shared_semantic_evidence": [
+      "plausible",
+      "not_clear",
+      "unknown"
+    ],
+    "risk_flags": [
+      "viewpoint_and_scale",
+      "distant_landmark",
+      "sky",
+      "vegetation_occlusion",
+      "building_occlusion",
+      "center_crop"
+    ],
+    "camera_vs_landmark_cell": [
+      "unknown",
+      "independently_proven_same",
+      "independently_proven_different"
+    ],
+    "notes": "observed image evidence, uncertainty explicit"
+  },
+  "visual_blinding": "panels exclude prediction ranks/scores and top-predicted tiles; all16 reviewed before joining cached results",
+  "unknown_policy": "CSV identifies a tagged point; do not infer visible landmark coordinates or exact footprint; do not relabel from predictions",
+  "acceptance": "all16 completed, unknowns explicit, alternate geometry/counts/raw integrity verified; no SR gate or efficacy claim",
+  "stopping": "one bounded audit; no score/pooling/model/label changes, no training or navigation from this batch",
+  "policy_access": "all images/coordinates/truth are offline evaluator material, not a navigation input"
+}

@@ -1,0 +1,1470 @@
+{
+  "metrics": {
+    "Full": {
+      "planned": 20,
+      "completed": 20,
+      "by_source": {
+        "opencvl_engineering_2": {
+          "balanced_accuracy": 0.6666666666666666,
+          "rates": {
+            "inside": 0.0,
+            "outside": 1.0,
+            "unrelated": 1.0
+          },
+          "counts": {
+            "inside": {
+              "n": 1,
+              "accepted": 0
+            },
+            "outside": {
+              "n": 4,
+              "accepted": 0
+            },
+            "unrelated": {
+              "n": 5,
+              "accepted": 0
+            }
+          }
+        },
+        "opencvl_engineering_3": {
+          "balanced_accuracy": 0.6833333333333332,
+          "rates": {
+            "inside": 1.0,
+            "outside": 0.25,
+            "unrelated": 0.8
+          },
+          "counts": {
+            "inside": {
+              "n": 1,
+              "accepted": 1
+            },
+            "outside": {
+              "n": 4,
+              "accepted": 3
+            },
+            "unrelated": {
+              "n": 5,
+              "accepted": 1
+            }
+          }
+        }
+      },
+      "source_macro_balanced_accuracy": 0.6749999999999999,
+      "positive_accepted_and_within5m": 0,
+      "positive_MAE_all_predictions_m": 7.762234067434253
+    },
+    "Disabled": {
+      "planned": 20,
+      "completed": 20,
+      "by_source": {
+        "opencvl_engineering_2": {
+          "balanced_accuracy": 0.3333333333333333,
+          "rates": {
+            "inside": 1.0,
+            "outside": 0.0,
+            "unrelated": 0.0
+          },
+          "counts": {
+            "inside": {
+              "n": 1,
+              "accepted": 1
+            },
+            "outside": {
+              "n": 4,
+              "accepted": 4
+            },
+            "unrelated": {
+              "n": 5,
+              "accepted": 5
+            }
+          }
+        },
+        "opencvl_engineering_3": {
+          "balanced_accuracy": 0.3333333333333333,
+          "rates": {
+            "inside": 1.0,
+            "outside": 0.0,
+            "unrelated": 0.0
+          },
+          "counts": {
+            "inside": {
+              "n": 1,
+              "accepted": 1
+            },
+            "outside": {
+              "n": 4,
+              "accepted": 4
+            },
+            "unrelated": {
+              "n": 5,
+              "accepted": 5
+            }
+          }
+        }
+      },
+      "source_macro_balanced_accuracy": 0.3333333333333333,
+      "positive_accepted_and_within5m": 0,
+      "positive_MAE_all_predictions_m": 6.440711593975001
+    },
+    "Mean": {
+      "planned": 20,
+      "completed": 20,
+      "by_source": {
+        "opencvl_engineering_2": {
+          "balanced_accuracy": 0.6666666666666666,
+          "rates": {
+            "inside": 0.0,
+            "outside": 1.0,
+            "unrelated": 1.0
+          },
+          "counts": {
+            "inside": {
+              "n": 1,
+              "accepted": 0
+            },
+            "outside": {
+              "n": 4,
+              "accepted": 0
+            },
+            "unrelated": {
+              "n": 5,
+              "accepted": 0
+            }
+          }
+        },
+        "opencvl_engineering_3": {
+          "balanced_accuracy": 0.6666666666666666,
+          "rates": {
+            "inside": 0.0,
+            "outside": 1.0,
+            "unrelated": 1.0
+          },
+          "counts": {
+            "inside": {
+              "n": 1,
+              "accepted": 0
+            },
+            "outside": {
+              "n": 4,
+              "accepted": 0
+            },
+            "unrelated": {
+              "n": 5,
+              "accepted": 0
+            }
+          }
+        }
+      },
+      "source_macro_balanced_accuracy": 0.6666666666666666,
+      "positive_accepted_and_within5m": 0,
+      "positive_MAE_all_predictions_m": 6.6124372887037595
+    },
+    "Wrong": {
+      "planned": 20,
+      "completed": 20,
+      "by_source": {
+        "opencvl_engineering_2": {
+          "balanced_accuracy": 0.31666666666666665,
+          "rates": {
+            "inside": 0.0,
+            "outside": 0.75,
+            "unrelated": 0.19999999999999996
+          },
+          "counts": {
+            "inside": {
+              "n": 1,
+              "accepted": 0
+            },
+            "outside": {
+              "n": 4,
+              "accepted": 1
+            },
+            "unrelated": {
+              "n": 5,
+              "accepted": 4
+            }
+          }
+        },
+        "opencvl_engineering_3": {
+          "balanced_accuracy": 0.6666666666666666,
+          "rates": {
+            "inside": 0.0,
+            "outside": 1.0,
+            "unrelated": 1.0
+          },
+          "counts": {
+            "inside": {
+              "n": 1,
+              "accepted": 0
+            },
+            "outside": {
+              "n": 4,
+              "accepted": 0
+            },
+            "unrelated": {
+              "n": 5,
+              "accepted": 0
+            }
+          }
+        }
+      },
+      "source_macro_balanced_accuracy": 0.49166666666666664,
+      "positive_accepted_and_within5m": 0,
+      "positive_MAE_all_predictions_m": 6.422460627317957
+    }
+  },
+  "contrasts": {
+    "Disabled": {
+      "by_class": {
+        "inside": {
+          "recovered": 0,
+          "harmed": 0,
+          "net": 0,
+          "n": 2
+        },
+        "outside": {
+          "recovered": 5,
+          "harmed": 0,
+          "net": 5,
+          "n": 8
+        },
+        "unrelated": {
+          "recovered": 9,
+          "harmed": 0,
+          "net": 9,
+          "n": 10
+        }
+      },
+      "source_macro_balanced_accuracy_gain": 0.3416666666666666,
+      "source_deltas": [
+        0.3333333333333333,
+        0.3499999999999999
+      ],
+      "source_bootstrap_support": [
+        0.3333333333333333,
+        0.3416666666666666,
+        0.3416666666666666,
+        0.3499999999999999
+      ],
+      "confidence_limit": "2 known engineering sources;descriptive only,not stable independent superiority"
+    },
+    "Mean": {
+      "by_class": {
+        "inside": {
+          "recovered": 0,
+          "harmed": 0,
+          "net": 0,
+          "n": 2
+        },
+        "outside": {
+          "recovered": 0,
+          "harmed": 3,
+          "net": -3,
+          "n": 8
+        },
+        "unrelated": {
+          "recovered": 0,
+          "harmed": 1,
+          "net": -1,
+          "n": 10
+        }
+      },
+      "source_macro_balanced_accuracy_gain": 0.008333333333333304,
+      "source_deltas": [
+        0.0,
+        0.016666666666666607
+      ],
+      "source_bootstrap_support": [
+        0.0,
+        0.008333333333333304,
+        0.008333333333333304,
+        0.016666666666666607
+      ],
+      "confidence_limit": "2 known engineering sources;descriptive only,not stable independent superiority"
+    },
+    "Wrong": {
+      "by_class": {
+        "inside": {
+          "recovered": 0,
+          "harmed": 0,
+          "net": 0,
+          "n": 2
+        },
+        "outside": {
+          "recovered": 1,
+          "harmed": 3,
+          "net": -2,
+          "n": 8
+        },
+        "unrelated": {
+          "recovered": 4,
+          "harmed": 1,
+          "net": 3,
+          "n": 10
+        }
+      },
+      "source_macro_balanced_accuracy_gain": 0.1833333333333333,
+      "source_deltas": [
+        0.35,
+        0.016666666666666607
+      ],
+      "source_bootstrap_support": [
+        0.35,
+        0.1833333333333333,
+        0.1833333333333333,
+        0.016666666666666607
+      ],
+      "confidence_limit": "2 known engineering sources;descriptive only,not stable independent superiority"
+    }
+  },
+  "gates": {
+    "complete": true,
+    "both_true_positives_accepted_within5m": false,
+    "per_source_outside_false_accept_at_most10pct": false,
+    "per_source_unrelated_false_accept_at_most10pct": false,
+    "goal_controls_positive_joint_net_at_least1": false,
+    "goal_controls_balanced_accuracy_gain_at_least5pp": false
+  },
+  "perception_screen_passed": false,
+  "navigation_admitted": false,
+  "new_navigation_SR": null,
+  "detailed": [
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/17",
+      "arm": "Full",
+      "source": "opencvl_engineering_2",
+      "relation": "inside",
+      "score": -0.664528489112854,
+      "accepted": false,
+      "predicted_xy_native": [
+        260.6201171875,
+        375.3662109375
+      ],
+      "error_m": 5.419361363471772,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/17",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_2",
+      "relation": "inside",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        259.3994140625,
+        375.3662109375
+      ],
+      "error_m": 5.609154770224132,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/17",
+      "arm": "Mean",
+      "source": "opencvl_engineering_2",
+      "relation": "inside",
+      "score": -0.6804449558258057,
+      "accepted": false,
+      "predicted_xy_native": [
+        258.1787109375,
+        375.3662109375
+      ],
+      "error_m": 5.7993146862433775,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/17",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_2",
+      "relation": "inside",
+      "score": -0.5888704061508179,
+      "accepted": false,
+      "predicted_xy_native": [
+        260.6201171875,
+        375.3662109375
+      ],
+      "error_m": 5.419361363471772,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/12",
+      "arm": "Full",
+      "source": "opencvl_engineering_2",
+      "relation": "outside",
+      "score": -0.6920132040977478,
+      "accepted": false,
+      "predicted_xy_native": [
+        350.9521484375,
+        250.8544921875
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/12",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_2",
+      "relation": "outside",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        286.2548828125,
+        250.8544921875
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/12",
+      "arm": "Mean",
+      "source": "opencvl_engineering_2",
+      "relation": "outside",
+      "score": -0.6954082250595093,
+      "accepted": false,
+      "predicted_xy_native": [
+        353.3935546875,
+        250.8544921875
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/12",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_2",
+      "relation": "outside",
+      "score": -0.6168704032897949,
+      "accepted": false,
+      "predicted_xy_native": [
+        353.3935546875,
+        250.8544921875
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/18",
+      "arm": "Full",
+      "source": "opencvl_engineering_2",
+      "relation": "outside",
+      "score": -0.6964929699897766,
+      "accepted": false,
+      "predicted_xy_native": [
+        426.6357421875,
+        375.3662109375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/18",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_2",
+      "relation": "outside",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        427.8564453125,
+        375.3662109375
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/18",
+      "arm": "Mean",
+      "source": "opencvl_engineering_2",
+      "relation": "outside",
+      "score": -0.7056962847709656,
+      "accepted": false,
+      "predicted_xy_native": [
+        426.6357421875,
+        375.3662109375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/18",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_2",
+      "relation": "outside",
+      "score": -0.6125367879867554,
+      "accepted": false,
+      "predicted_xy_native": [
+        426.6357421875,
+        375.3662109375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/22",
+      "arm": "Full",
+      "source": "opencvl_engineering_2",
+      "relation": "outside",
+      "score": -0.5598782896995544,
+      "accepted": false,
+      "predicted_xy_native": [
+        374.1455078125,
+        624.3896484375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/22",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_2",
+      "relation": "outside",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        266.7236328125,
+        565.7958984375
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/22",
+      "arm": "Mean",
+      "source": "opencvl_engineering_2",
+      "relation": "outside",
+      "score": -0.6134607195854187,
+      "accepted": false,
+      "predicted_xy_native": [
+        374.1455078125,
+        624.3896484375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/22",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_2",
+      "relation": "outside",
+      "score": -0.5314478874206543,
+      "accepted": false,
+      "predicted_xy_native": [
+        374.1455078125,
+        624.3896484375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/16",
+      "arm": "Full",
+      "source": "opencvl_engineering_2",
+      "relation": "outside",
+      "score": -0.584293007850647,
+      "accepted": false,
+      "predicted_xy_native": [
+        165.4052734375,
+        498.6572265625
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/16",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_2",
+      "relation": "outside",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        166.6259765625,
+        498.6572265625
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/16",
+      "arm": "Mean",
+      "source": "opencvl_engineering_2",
+      "relation": "outside",
+      "score": -0.5918269157409668,
+      "accepted": false,
+      "predicted_xy_native": [
+        162.9638671875,
+        499.8779296875
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/16",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_2",
+      "relation": "outside",
+      "score": -0.49395912885665894,
+      "accepted": true,
+      "predicted_xy_native": [
+        165.4052734375,
+        499.8779296875
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/13",
+      "arm": "Full",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": -0.5424023866653442,
+      "accepted": false,
+      "predicted_xy_native": [
+        433.9599609375,
+        261.8408203125
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/13",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        433.9599609375,
+        263.0615234375
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/13",
+      "arm": "Mean",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": -0.5667941570281982,
+      "accepted": false,
+      "predicted_xy_native": [
+        433.9599609375,
+        261.8408203125
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/13",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": -0.46909192204475403,
+      "accepted": true,
+      "predicted_xy_native": [
+        460.8154296875,
+        328.9794921875
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/8",
+      "arm": "Full",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": -0.5413340926170349,
+      "accepted": false,
+      "predicted_xy_native": [
+        470.5810546875,
+        219.1162109375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/8",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        469.3603515625,
+        219.1162109375
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/8",
+      "arm": "Mean",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": -0.5641171336174011,
+      "accepted": false,
+      "predicted_xy_native": [
+        470.5810546875,
+        217.8955078125
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/8",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": -0.4777277708053589,
+      "accepted": true,
+      "predicted_xy_native": [
+        470.5810546875,
+        219.1162109375
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/14",
+      "arm": "Full",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": -0.5375011563301086,
+      "accepted": false,
+      "predicted_xy_native": [
+        624.3896484375,
+        294.7998046875
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/14",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        532.8369140625,
+        289.9169921875
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/14",
+      "arm": "Mean",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": -0.5562138557434082,
+      "accepted": false,
+      "predicted_xy_native": [
+        624.3896484375,
+        294.7998046875
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/14",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": -0.4537973701953888,
+      "accepted": true,
+      "predicted_xy_native": [
+        624.3896484375,
+        294.7998046875
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/18",
+      "arm": "Full",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": -0.6712830662727356,
+      "accepted": false,
+      "predicted_xy_native": [
+        394.8974609375,
+        375.3662109375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/18",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        432.7392578125,
+        498.6572265625
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/18",
+      "arm": "Mean",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": -0.6645942330360413,
+      "accepted": false,
+      "predicted_xy_native": [
+        394.8974609375,
+        375.3662109375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/18",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": -0.5917688012123108,
+      "accepted": false,
+      "predicted_xy_native": [
+        394.8974609375,
+        375.3662109375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/12",
+      "arm": "Full",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": -0.5205779671669006,
+      "accepted": false,
+      "predicted_xy_native": [
+        348.5107421875,
+        299.6826171875
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/12",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        347.2900390625,
+        299.6826171875
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/12",
+      "arm": "Mean",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": -0.5360061526298523,
+      "accepted": false,
+      "predicted_xy_native": [
+        348.5107421875,
+        300.9033203125
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/12",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_2",
+      "relation": "unrelated",
+      "score": -0.43726712465286255,
+      "accepted": true,
+      "predicted_xy_native": [
+        347.2900390625,
+        300.9033203125
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/17",
+      "arm": "Full",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": -0.5888704061508179,
+      "accepted": false,
+      "predicted_xy_native": [
+        260.6201171875,
+        375.3662109375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/17",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        259.3994140625,
+        375.3662109375
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/17",
+      "arm": "Mean",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": -0.6804449558258057,
+      "accepted": false,
+      "predicted_xy_native": [
+        258.1787109375,
+        375.3662109375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/17",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": -0.664528489112854,
+      "accepted": false,
+      "predicted_xy_native": [
+        260.6201171875,
+        375.3662109375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/12",
+      "arm": "Full",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": -0.6168704032897949,
+      "accepted": false,
+      "predicted_xy_native": [
+        353.3935546875,
+        250.8544921875
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/12",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        286.2548828125,
+        250.8544921875
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/12",
+      "arm": "Mean",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": -0.6954082250595093,
+      "accepted": false,
+      "predicted_xy_native": [
+        353.3935546875,
+        250.8544921875
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/12",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": -0.6920132040977478,
+      "accepted": false,
+      "predicted_xy_native": [
+        350.9521484375,
+        250.8544921875
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/18",
+      "arm": "Full",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": -0.6125367879867554,
+      "accepted": false,
+      "predicted_xy_native": [
+        426.6357421875,
+        375.3662109375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/18",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        427.8564453125,
+        375.3662109375
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/18",
+      "arm": "Mean",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": -0.7056962847709656,
+      "accepted": false,
+      "predicted_xy_native": [
+        426.6357421875,
+        375.3662109375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/18",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": -0.6964929699897766,
+      "accepted": false,
+      "predicted_xy_native": [
+        426.6357421875,
+        375.3662109375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/22",
+      "arm": "Full",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": -0.5314478874206543,
+      "accepted": false,
+      "predicted_xy_native": [
+        374.1455078125,
+        624.3896484375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/22",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        266.7236328125,
+        565.7958984375
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/22",
+      "arm": "Mean",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": -0.6134607195854187,
+      "accepted": false,
+      "predicted_xy_native": [
+        374.1455078125,
+        624.3896484375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/22",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": -0.5598782896995544,
+      "accepted": false,
+      "predicted_xy_native": [
+        374.1455078125,
+        624.3896484375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/16",
+      "arm": "Full",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": -0.49395912885665894,
+      "accepted": true,
+      "predicted_xy_native": [
+        165.4052734375,
+        499.8779296875
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/16",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        166.6259765625,
+        498.6572265625
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/16",
+      "arm": "Mean",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": -0.5918269157409668,
+      "accepted": false,
+      "predicted_xy_native": [
+        162.9638671875,
+        499.8779296875
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/16",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_3",
+      "relation": "unrelated",
+      "score": -0.584293007850647,
+      "accepted": false,
+      "predicted_xy_native": [
+        165.4052734375,
+        498.6572265625
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/13",
+      "arm": "Full",
+      "source": "opencvl_engineering_3",
+      "relation": "inside",
+      "score": -0.46909192204475403,
+      "accepted": true,
+      "predicted_xy_native": [
+        460.8154296875,
+        328.9794921875
+      ],
+      "error_m": 10.105106771396734,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/13",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_3",
+      "relation": "inside",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        433.9599609375,
+        263.0615234375
+      ],
+      "error_m": 7.27226841772587,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/13",
+      "arm": "Mean",
+      "source": "opencvl_engineering_3",
+      "relation": "inside",
+      "score": -0.5667941570281982,
+      "accepted": false,
+      "predicted_xy_native": [
+        433.9599609375,
+        261.8408203125
+      ],
+      "error_m": 7.425559891164142,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/13",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_3",
+      "relation": "inside",
+      "score": -0.5424023866653442,
+      "accepted": false,
+      "predicted_xy_native": [
+        433.9599609375,
+        261.8408203125
+      ],
+      "error_m": 7.425559891164142,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/8",
+      "arm": "Full",
+      "source": "opencvl_engineering_3",
+      "relation": "outside",
+      "score": -0.4777277708053589,
+      "accepted": true,
+      "predicted_xy_native": [
+        470.5810546875,
+        219.1162109375
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/8",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_3",
+      "relation": "outside",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        469.3603515625,
+        219.1162109375
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/8",
+      "arm": "Mean",
+      "source": "opencvl_engineering_3",
+      "relation": "outside",
+      "score": -0.5641171336174011,
+      "accepted": false,
+      "predicted_xy_native": [
+        470.5810546875,
+        217.8955078125
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/8",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_3",
+      "relation": "outside",
+      "score": -0.5413340926170349,
+      "accepted": false,
+      "predicted_xy_native": [
+        470.5810546875,
+        219.1162109375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/14",
+      "arm": "Full",
+      "source": "opencvl_engineering_3",
+      "relation": "outside",
+      "score": -0.4537973701953888,
+      "accepted": true,
+      "predicted_xy_native": [
+        624.3896484375,
+        294.7998046875
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/14",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_3",
+      "relation": "outside",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        532.8369140625,
+        289.9169921875
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/14",
+      "arm": "Mean",
+      "source": "opencvl_engineering_3",
+      "relation": "outside",
+      "score": -0.5562138557434082,
+      "accepted": false,
+      "predicted_xy_native": [
+        624.3896484375,
+        294.7998046875
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/14",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_3",
+      "relation": "outside",
+      "score": -0.5375011563301086,
+      "accepted": false,
+      "predicted_xy_native": [
+        624.3896484375,
+        294.7998046875
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/18",
+      "arm": "Full",
+      "source": "opencvl_engineering_3",
+      "relation": "outside",
+      "score": -0.5917688012123108,
+      "accepted": false,
+      "predicted_xy_native": [
+        394.8974609375,
+        375.3662109375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/18",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_3",
+      "relation": "outside",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        432.7392578125,
+        498.6572265625
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/18",
+      "arm": "Mean",
+      "source": "opencvl_engineering_3",
+      "relation": "outside",
+      "score": -0.6645942330360413,
+      "accepted": false,
+      "predicted_xy_native": [
+        394.8974609375,
+        375.3662109375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/18",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_3",
+      "relation": "outside",
+      "score": -0.6712830662727356,
+      "accepted": false,
+      "predicted_xy_native": [
+        394.8974609375,
+        375.3662109375
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/12",
+      "arm": "Full",
+      "source": "opencvl_engineering_3",
+      "relation": "outside",
+      "score": -0.43726712465286255,
+      "accepted": true,
+      "predicted_xy_native": [
+        347.2900390625,
+        300.9033203125
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/12",
+      "arm": "Disabled",
+      "source": "opencvl_engineering_3",
+      "relation": "outside",
+      "score": 0.0,
+      "accepted": true,
+      "predicted_xy_native": [
+        347.2900390625,
+        299.6826171875
+      ],
+      "error_m": null,
+      "joint_correct": false
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/12",
+      "arm": "Mean",
+      "source": "opencvl_engineering_3",
+      "relation": "outside",
+      "score": -0.5360061526298523,
+      "accepted": false,
+      "predicted_xy_native": [
+        348.5107421875,
+        300.9033203125
+      ],
+      "error_m": null,
+      "joint_correct": true
+    },
+    {
+      "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/12",
+      "arm": "Wrong",
+      "source": "opencvl_engineering_3",
+      "relation": "outside",
+      "score": -0.5205779671669006,
+      "accepted": false,
+      "predicted_xy_native": [
+        348.5107421875,
+        299.6826171875
+      ],
+      "error_m": null,
+      "joint_correct": true
+    }
+  ],
+  "position_baselines": [
+    {
+      "source": "opencvl_engineering_2",
+      "parent_center_error_m": 11.759727888008294,
+      "current_tile_center_error_m": 9.159213940071496
+    },
+    {
+      "source": "opencvl_engineering_3",
+      "parent_center_error_m": 15.047657625025897,
+      "current_tile_center_error_m": 5.588559742903353
+    }
+  ],
+  "always_reject_BA": 0.6666666666666666,
+  "always_accept_BA": 0.3333333333333333,
+  "full_parent_comparison": "CV030 saved equality hashes only,not localization/score peaks;no quantitative full-parent contrast available without new inference",
+  "independent_development_sources": 2,
+  "source_use": "known engineering development,not independent confirmation"
+}

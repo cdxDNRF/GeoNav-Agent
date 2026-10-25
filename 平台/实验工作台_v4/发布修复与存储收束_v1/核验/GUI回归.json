@@ -1,0 +1,149 @@
+{
+  "passed": true,
+  "checks": [
+    "memory: original-image failure disables export; stale handler cannot alter new selection",
+    "4.13.1 meta retains scene/workflow tokens; Wrong donor/current/original all load",
+    "missing: original-only 400 shows restoration notice; donor/current unaffected; export disabled",
+    "tampered: original-only 400 shows restoration notice; donor/current unaffected; export disabled",
+    "restoring originals and reloading clears warning and re-enables export",
+    "390 mobile square images/no horizontal overflow",
+    "existing entry pages remain readable",
+    "zero page errors, external requests, POST, models or navigation"
+  ],
+  "requests": [
+    {
+      "url": "http://127.0.0.1:13372/spatial-evidence?case=13&method=Spatial&seed=0&arm=Wrong",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/spatial-evidence/style.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/spatial-evidence/app.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/catalog",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/detail?case=13&method=Spatial&seed=0&arm=Wrong",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/image?case=13&method=Spatial&seed=0&arm=Wrong&slot=target",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/image?case=13&method=Spatial&seed=0&arm=Wrong&slot=current",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/image?case=13&method=Spatial&seed=0&arm=Wrong&slot=original",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/spatial-evidence?case=13&method=Spatial&seed=0&arm=Wrong",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/spatial-evidence/style.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/spatial-evidence/app.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/catalog",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/detail?case=13&method=Spatial&seed=0&arm=Wrong",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/image?case=13&method=Spatial&seed=0&arm=Wrong&slot=target",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/image?case=13&method=Spatial&seed=0&arm=Wrong&slot=current",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/image?case=13&method=Spatial&seed=0&arm=Wrong&slot=original",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/spatial-evidence?case=13&method=Spatial&seed=0&arm=Wrong",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/spatial-evidence/style.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/spatial-evidence/app.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/catalog",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/detail?case=13&method=Spatial&seed=0&arm=Wrong",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/image?case=13&method=Spatial&seed=0&arm=Wrong&slot=target",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/image?case=13&method=Spatial&seed=0&arm=Wrong&slot=current",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/image?case=13&method=Spatial&seed=0&arm=Wrong&slot=original",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/spatial-evidence?case=13&method=Spatial&seed=0&arm=Wrong",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/spatial-evidence/style.css",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/spatial-evidence/app.js",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/catalog",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/detail?case=13&method=Spatial&seed=0&arm=Wrong",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/image?case=13&method=Spatial&seed=0&arm=Wrong&slot=target",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/image?case=13&method=Spatial&seed=0&arm=Wrong&slot=current",
+      "method": "GET"
+    },
+    {
+      "url": "http://127.0.0.1:13372/api/spatial-evidence/image?case=13&method=Spatial&seed=0&arm=Wrong&slot=original",
+      "method": "GET"
+    }
+  ],
+  "page_errors": [],
+  "external_requests": [],
+  "visible_browser": true,
+  "url": "http://127.0.0.1:13372",
+  "model_calls": 0,
+  "navigation": 0
+}

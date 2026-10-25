@@ -1,0 +1,83 @@
+{
+  "task": "CV-017",
+  "files": [
+    {
+      "path": "DATA/processed_data/MM-GAG/训练正配对容量与划分追溯_v1/九对与十二对同预算开发候选草案_未执行.json",
+      "sha256": "07c9e60408e337434063398cf229f3b406383d1edfa0edf6eab2d94f98b9f2a2",
+      "bytes": 4344
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/训练正配对容量与划分追溯_v1/九对限制来源与训练配对容量报告.md",
+      "sha256": "9235c17d391c95d1dfb410f8cded3fb61cddd1564863c9991d45197366f2a8b2",
+      "bytes": 6543
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/训练正配对容量与划分追溯_v1/核验/另实现复核.json",
+      "sha256": "0f190955463c43a9f5b26e86bc46cbaaf62dabec03aa273d7666f30a662e9955",
+      "bytes": 518
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/训练正配对容量与划分追溯_v1/核验/边界测试记录.json",
+      "sha256": "27ba6c7ca22978a4879959f9208c14cb1ccb3ee456273b1b814394a6cfceda09",
+      "bytes": 416
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/训练正配对容量与划分追溯_v1/规则与源码追溯.json",
+      "sha256": "f708f169d9a8e1dbb4e118c73281c6c609ac9c0ae1af24815d677b94fd3a9924",
+      "bytes": 1349
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/训练正配对容量与划分追溯_v1/训练容量与取样追溯汇总.json",
+      "sha256": "4f31917be03d9e705f87aa9a634b09f9796bfc2e48e110e41e8e460519771d65",
+      "bytes": 63673
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/训练正配对容量与划分追溯_v1/输入与源码绑定.json",
+      "sha256": "facfbf16519fa71e93373ff121d6fac9df15db3b880c4732345380cf8798a79a",
+      "bytes": 4831
+    }
+  ],
+  "sources": [
+    {
+      "path": "project/src/eval/capturepoint_training_capacity_v1.py",
+      "sha256": "3140f9811e6f1a8229a908a3c064d4d97060304a91ddeeff2c878f37dab9df2f",
+      "bytes": 10771
+    },
+    {
+      "path": "project/src/eval/audit_capturepoint_training_capacity_v1.py",
+      "sha256": "4ae8d63cdbf403de124ca0623c1e31448f5b700b9a9ec9656646e03bdf76cd8e",
+      "bytes": 5834
+    },
+    {
+      "path": "project/src/tests/test_capturepoint_training_capacity_v1.py",
+      "sha256": "13ddceb5ba1977b24ef45f87d4d56b638f9f653d9fe518de820a4aebd796aea0",
+      "bytes": 1425
+    },
+    {
+      "path": "project/src/documents/close_capturepoint_training_capacity_v1.py",
+      "sha256": "2e6d2b49bbb6f0809ec2e4c1d73c37f34b921f53a777dfcad9fad799a7baa394",
+      "bytes": 14254
+    }
+  ],
+  "readonly_rule_sources": [
+    {
+      "path": "project/src/data/capturepoint_partition_v1.py",
+      "sha256": "0def32c6564aab6cdc1b1319073ec3d4b2fd4890579158b832d85ab11dee80b1",
+      "bytes": 5205
+    },
+    {
+      "path": "project/src/data/capturepoint_alignment_protocol_v1.py",
+      "sha256": "8cbbaa152da7322606fa9754a57a38416daa5ed9d5e75378bf64fd07e2ca3cc5",
+      "bytes": 5281
+    }
+  ],
+  "sealed_bytes": 81674,
+  "mutable_entries_excluded": [
+    "README.md"
+  ],
+  "new_training_candidate_executable": false,
+  "new_model_forward_calls": 0,
+  "new_training_steps": 0,
+  "new_navigation_SR": null,
+  "confirmation_access": 0
+}

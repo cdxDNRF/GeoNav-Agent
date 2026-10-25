@@ -1,0 +1,835 @@
+{
+  "task": "CV-024",
+  "sources": [
+    {
+      "path": "project/src/agents/ground_local_loop_v1.py",
+      "sha256": "bb24a9f7271bebcfaaefeed8578d909c16d5a30485a07dcb518417c9f8abf34b",
+      "bytes": 6167
+    },
+    {
+      "path": "project/src/tools/run_ground_local_loop_v1.py",
+      "sha256": "40271014c1072a739157a7b075ee7739f4d5d16eed322ce95223fee165d40f1e",
+      "bytes": 17776
+    },
+    {
+      "path": "project/src/eval/audit_ground_local_loop_v1.py",
+      "sha256": "266163666040762c3f1a9421c03fd06881d9461ec2ae7433c643030cb56a2507",
+      "bytes": 9830
+    },
+    {
+      "path": "project/src/tests/test_ground_local_loop_v1.py",
+      "sha256": "cd14d2a64cd666569e940839661fc6c567b772219b56a95b7e2a4da6657adeb5",
+      "bytes": 3833
+    }
+  ],
+  "inputs": [
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/固定编码与训练开发队列.json",
+      "sha256": "15b9cf7d44d3a65cc5a4104f73116fdf28b0f0ee8171c646fb02007544f77415",
+      "bytes": 348018
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源用途账本_v1.json",
+      "sha256": "3a55e4fc09542b88de3229576bab5f3e89bac7fbde274aa840ba4ed3ea5cf3c3",
+      "bytes": 16244
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/阶段封存.json",
+      "sha256": "5ed0b17b3455baae878c19f7edc631c4e46affaed1b78a0b7f832a51a71ac52e",
+      "bytes": 11900
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/阶段封存.json",
+      "sha256": "5a2b38205dd1b1c50a2aa5546cf2f5464e84faec0a7b2de79647e8f84af305f4",
+      "bytes": 7524
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/阶段封存.json",
+      "sha256": "c91b99edbb04247d5ada725fdfbd66ffd895de4d622ad402c71609e0e59d951d",
+      "bytes": 4797
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/阶段封存.json",
+      "sha256": "e98cf25f67955c859dc1bf694660bd3d579eab92803f3aeddfb062a3a811e1e4",
+      "bytes": 5998
+    },
+    {
+      "path": "GOMAA-Geo/models/ppo.py",
+      "sha256": "b2ee21811ab223bb5dbace3aa1f5822d7194dbdcc11a656400aef39ffa430883",
+      "bytes": 40398
+    },
+    {
+      "path": "GOMAA-Geo/data_utils/get_sat_embeddings_sat2cap.py",
+      "sha256": "58d318fe79f250ba4b9ff7e6c382db127d0bbdcd15d3dd793223ad5af17d824c",
+      "bytes": 2965
+    },
+    {
+      "path": "GOMAA-Geo/data_utils/sequence.py",
+      "sha256": "8c0f8d035677527220ad30681cb40ffa388ee3822e2be27b7422fb17ff154c2e",
+      "bytes": 11450
+    },
+    {
+      "path": "DATA/raw_data/MM-GAG/coordinates.csv",
+      "sha256": "8e0794d1b5484ec30131a67fd580fa4d7bcdd60869afecdbe238892b448b0eb8",
+      "bytes": 3605
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/拍摄点语义与完整目标图验证_v1/目标语义约定.json",
+      "sha256": "cd9ab739abc06a4bd5c6ae5f3b8f902e10491faf9a5ba1272c17915aec50f702",
+      "bytes": 826
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/首forward绑定.json",
+      "sha256": "e96ddd9cedd9830c46d32558b7c391cc1ec240274ce59082d5628f4d8119824b",
+      "bytes": 7439
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务对齐执行器工程_v2/阶段封存.json",
+      "sha256": "a6865b817218705a39bd3103f4697af824459034dcf8f2a64f8b044c845b4c6b",
+      "bytes": 7817
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/首forward绑定.json",
+      "sha256": "52ba94b799af138d4ad099c5e329e6a28d224e5c9c62d9bc8139bce8a1dbd88c",
+      "bytes": 8396
+    }
+  ],
+  "features": [
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/特征/ground.npy",
+      "sha256": "447a116113e1900acffbb0d123de43fc64c487d60833954392743de6da68fea7",
+      "bytes": 28800
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/特征/aerial.npy",
+      "sha256": "1edb8ab5b0057372ca9ae1146356dc309b5ac5dbc54e244c62759547d672d924",
+      "bytes": 2322560
+    }
+  ],
+  "models": [
+    {
+      "path": "models/clip_vit_b32_public_v1/config.json",
+      "sha256": "b575ef3c36f2a057fa19e221650105052d61cc9c1a972ec15019c6261ec98770",
+      "bytes": 4186
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/preprocessor_config.json",
+      "sha256": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd",
+      "bytes": 316
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/pytorch_model.bin",
+      "sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+      "bytes": 605247071
+    },
+    {
+      "path": "models/Sat2Cap/config.json",
+      "sha256": "0a9cffa477a4bfc9682da841841b7e4227ad0cd06ad81d3eb1a831d5557976c5",
+      "bytes": 559
+    },
+    {
+      "path": "models/Sat2Cap/model.safetensors",
+      "sha256": "fec6802fbf27664ddd556fc445ff7d8e7ab0f05fea160c2e16680642dcebf3e0",
+      "bytes": 351420784
+    }
+  ],
+  "protected": [
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/特征/ground.npy",
+      "sha256": "447a116113e1900acffbb0d123de43fc64c487d60833954392743de6da68fea7",
+      "bytes": 28800
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/特征/aerial.npy",
+      "sha256": "1edb8ab5b0057372ca9ae1146356dc309b5ac5dbc54e244c62759547d672d924",
+      "bytes": 2322560
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/config.json",
+      "sha256": "b575ef3c36f2a057fa19e221650105052d61cc9c1a972ec15019c6261ec98770",
+      "bytes": 4186
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/preprocessor_config.json",
+      "sha256": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd",
+      "bytes": 316
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/pytorch_model.bin",
+      "sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+      "bytes": 605247071
+    },
+    {
+      "path": "models/Sat2Cap/config.json",
+      "sha256": "0a9cffa477a4bfc9682da841841b7e4227ad0cd06ad81d3eb1a831d5557976c5",
+      "bytes": 559
+    },
+    {
+      "path": "models/Sat2Cap/model.safetensors",
+      "sha256": "fec6802fbf27664ddd556fc445ff7d8e7ab0f05fea160c2e16680642dcebf3e0",
+      "bytes": 351420784
+    },
+    {
+      "path": "project/local_policy_default.json",
+      "sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b"
+    },
+    {
+      "path": "project/local_policy_defaults_v1.json",
+      "sha256": "8e1b85eb74021ac18f8246f8146f7db451d68f423d7152f6c3a5d7c86b4d16fa"
+    },
+    {
+      "path": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.docx",
+      "sha256": "8529c55fb53823d88201dc7f485b3b5c43e5fb2113ddf7d1ead7321f2eea409f"
+    },
+    {
+      "path": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.pdf",
+      "sha256": "e127eac96ad85bdce079e1813e15fcea82fb80ee0cb61a7d80e958427167c4b2"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/GUI修订停止请求.json",
+      "bytes": 46,
+      "sha256": "7d9e4ffa32fd0173567d273f73414055b0a352a87b0cf5eda07a27d47fabd9e5"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/GUI修订服务关闭.json",
+      "bytes": 48,
+      "sha256": "87b85faef287557e37b749369cfd607a19972f66ef9f5d527d5f0a675bdb75c9"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/GUI修订服务开始.json",
+      "bytes": 8339,
+      "sha256": "ec9f9659f546f0124c1148530b184f00905418115c6ff1b422db5a3cbccb7b22"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/QA停止请求.json",
+      "bytes": 60,
+      "sha256": "167304b7009bc3e8ad20e93f2da5c1b2f1046d464995729b3feff090f5059295"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/QA服务关闭.json",
+      "bytes": 88,
+      "sha256": "c571099ab5612a6ebe1b7e187c97d138fe6d219d2676bfe116c5096a5c7e5f82"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/QA服务开始.json",
+      "bytes": 212,
+      "sha256": "894cdb6dded1de1c115936b483c21ae355bd8d9847c6167588fbd431dd8d1862"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/README.md",
+      "bytes": 2607,
+      "sha256": "d5c6b8be19f482da24b523bf499c04e8dd882f5c40aab9da91576ce142e84d53"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/交付源码绑定.json",
+      "bytes": 2294,
+      "sha256": "ae877dfb5156fffdee84575dad1a8388efc60fd2176a8135bdb437af549347d5"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/使用说明.md",
+      "bytes": 2901,
+      "sha256": "ec946c442de853d0c1599c1a69c26afb0144ae7c0ccca680c45373f082672b67"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/入口快照/core_README.md",
+      "bytes": 5126,
+      "sha256": "0ded5e19655ca545b4fbb00c4664372cf3ef9351cf9e71dd612e2a7c584f3231"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/入口快照/platform_README.md",
+      "bytes": 5991,
+      "sha256": "ef1cf72c3d9141bb1d5370fbdb482892e02fb12f5213d964a19180b2b4e45842"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/入口快照/root_launcher.cmd",
+      "bytes": 135,
+      "sha256": "29058dd7a1c396bbe9134d370341ba4c09d4ba77f61c845bbc75d21a542fcce3"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/入口快照/root_launcher.ps1",
+      "bytes": 2593,
+      "sha256": "325fff6e3d898f4bf84a7c0a825fb21f595f15194269e2f7d803e5ef0bee8c8c"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/入口更新映射.json",
+      "bytes": 2794,
+      "sha256": "0931ea45f9154fe94f6281f488f5cfe51c7af51455685beb0457db3fd2cb6a77"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/启动前保护.json",
+      "bytes": 190249,
+      "sha256": "1ec53394b0a43956240d2b8b1e4600c18fbcbd512ee49328b2ed333616b6d1f8"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/审阅/桌面.jpg",
+      "bytes": 90949,
+      "sha256": "d23d4d5e011cd0534f8c791caf94636b6ba88ea7116a1498904b4ef4285f70fa"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/审阅/窄屏.jpg",
+      "bytes": 11420,
+      "sha256": "80e6ee96168f19a402b9748f6977ea93a5a68768be6978671f505ee147127a69"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/工程工作区/experiments/2aa35aeccd1c422cafa3d63d05049754/seal.json",
+      "bytes": 375,
+      "sha256": "7d58d7f5da71c334f16a921855dcc7d609c0e11da77ee578a00ad9546c9f26f2"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/工程工作区/experiments/2aa35aeccd1c422cafa3d63d05049754/动作.jsonl",
+      "bytes": 3647,
+      "sha256": "e01de6e0dd820d89d5e1cea9d6de1a0c038179c17bfa773b6a63608e3a78955d"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/工程工作区/experiments/2aa35aeccd1c422cafa3d63d05049754/实验定义.json",
+      "bytes": 15072,
+      "sha256": "b850c5938bfe4b8c7a1e4b9743ac5d59a3a3412e7a248e11ae270d6b66985b76"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/工程工作区/experiments/2aa35aeccd1c422cafa3d63d05049754/结果.json",
+      "bytes": 23790,
+      "sha256": "abdc581b6b4c4f71fec092b6f6f119d69ec875934b17a7197ea6124b3ec2e718"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/工程工作区/experiments/2aa35aeccd1c422cafa3d63d05049754/进度.json",
+      "bytes": 7453,
+      "sha256": "cf16e572c77d51c22a4415d2f7cd1ff801789aa0f8e0ad75b2c0235d40feb1d1"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/工程工作区/experiments/fbc8cd7470e14cd88aaef79537678c99/seal.json",
+      "bytes": 375,
+      "sha256": "944a9e06ff2463f15bb9b5866a9a2de3d42ac88d9a11d6438da2874177989235"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/工程工作区/experiments/fbc8cd7470e14cd88aaef79537678c99/动作.jsonl",
+      "bytes": 999,
+      "sha256": "4ea9121fc3b68f0fae3c61415281a8f49bd349073e86e9cefe82a19b6885464a"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/工程工作区/experiments/fbc8cd7470e14cd88aaef79537678c99/实验定义.json",
+      "bytes": 15335,
+      "sha256": "8f5172dcb286073ee811ff1dd3fc4558bf351eb060d9c21199aa4fc4467093b0"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/工程工作区/experiments/fbc8cd7470e14cd88aaef79537678c99/结果.json",
+      "bytes": 20413,
+      "sha256": "c7118130105442cc2f3ede3ab800f1454d0a94c630e6b798c25514b4d8531bfc"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/工程工作区/experiments/fbc8cd7470e14cd88aaef79537678c99/进度.json",
+      "bytes": 3795,
+      "sha256": "6dca8e893b9626b4c72284b63f5a04506889130f055095c631867e33b59bc71a"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/工程工作区/service.lock",
+      "bytes": 2,
+      "sha256": "f1534392279bddbf9d43dde8701cb5be14b82f76ec6607bf8d6ad557f60f304e"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/工程范围与资源.json",
+      "bytes": 1562,
+      "sha256": "eac116799f133a3fd26eda1150c4d55049ec13f6d2fd2de2060d3e1c6e73decd"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/搬迁发布清单.json",
+      "bytes": 92436,
+      "sha256": "16614f87d72e484178fb56f25f2665f3a726567524f60d0a08f4ee979cac3183"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/最终核验.json",
+      "bytes": 1389,
+      "sha256": "c11bd111de200bbac53001703777a30a123832cf96c2eb1333ffaf2ae32bc8fc"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/核验/接口与故障测试.json",
+      "bytes": 194,
+      "sha256": "8aa59aea359523a5092b7f23dba439d3d568b17f9b408123d5f41105250db40f"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/核验/搬迁调用方式记录.json",
+      "bytes": 303,
+      "sha256": "ebc7008b6887b16f23e276b69eacfb71038a2575ea07cc498d8801339e8dd4d1"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/核验/浏览器验收.json",
+      "bytes": 850,
+      "sha256": "bce28bdf18ff32526eaaf93ae31016997ee887440eed18ab3e84440764e5a8b8"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/核验/真实保存与几何复核.json",
+      "bytes": 2864,
+      "sha256": "2d241f4538da7467fd667a0984931f2b435275ebb2df36277e812db5f3fbc608"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/正式部署核验.json",
+      "bytes": 420,
+      "sha256": "c6bfb3fc5c51d6db3ec1f876952f458b65d198bc39b7c2b09c4679c2254ddccb"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/研究路线取舍.md",
+      "bytes": 3801,
+      "sha256": "b35fe1f2824807cd262de6548309445276b71ebc1d8bc1df21b330db1468ef4f"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/索引追加前绑定.json",
+      "bytes": 113,
+      "sha256": "eb773665e30429d2c2b0e9b590e16bbc4ec15297f38ae6f1a3fa8a89f8610ebe"
+    },
+    {
+      "path": "平台/实验工作台_v4/试跑保存与同题对照_v1/首动作绑定.json",
+      "bytes": 15091,
+      "sha256": "28e34a36a330cf16c43adec2fd941954219245c096a57ce6ba01f74602e503e3"
+    },
+    {
+      "path": "project/src/platform_core/trial_workflow_v1.py",
+      "bytes": 9533,
+      "sha256": "3bdff88c118c6bd97c3aafdd31092c75c64a815c1662549de1ec0fddd877ad96"
+    },
+    {
+      "path": "project/src/platform_core/service_v6.py",
+      "bytes": 1192,
+      "sha256": "2d89825a0df4d6d9f9d1050b1bf399e21d8021c87bc32e9f103cf29c8850e40c"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v11.py",
+      "bytes": 5268,
+      "sha256": "d69d281ca082de736341d244f018f51482b1845547b0c7850ea9ffa7dd7615e3"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v12.py",
+      "bytes": 1987,
+      "sha256": "d28d060e231c07891c5362a78f512768c13fdbe51fd5abc013aee539681187e1"
+    },
+    {
+      "path": "project/src/webapp/trial_workflow_v1.js",
+      "bytes": 6362,
+      "sha256": "9e8d547667ced7ae1331c8bec9b701733807db010437ff20dfc2187d678b5855"
+    },
+    {
+      "path": "project/src/webapp/trial_workflow_v1.css",
+      "bytes": 1286,
+      "sha256": "06708dac5a0c5a90ded2854c3b58659dfd6af7a6cf1f4f4d5e923ecce2c1a7b4"
+    },
+    {
+      "path": "project/src/webapp/workflow_polish_v1.js",
+      "bytes": 1014,
+      "sha256": "6a758b12ca9c870a7f4e7036f8b1ced34e5de50c78c01450c0ce77f07f999e52"
+    },
+    {
+      "path": "project/src/webapp/workflow_polish_v1.css",
+      "bytes": 149,
+      "sha256": "c3ca9ae1688a5d3b3666d656042296806d1d23321402be2d84392c841b589ec8"
+    },
+    {
+      "path": "project/src/tests/test_trial_workflow_v1.py",
+      "bytes": 10013,
+      "sha256": "27170d77bffdb2a7619f538cffd572bf5e272abd03fe092defea919d1a587c74"
+    },
+    {
+      "path": "project/src/tools/verify_trial_workflow_v1.py",
+      "bytes": 6909,
+      "sha256": "6d2958685bc6cf53ed9cedc978621f0ea92e4be9e25ef079211ef7f721cefc32"
+    },
+    {
+      "path": "project/src/tools/verify_trial_workflow_gui_v1.py",
+      "bytes": 2632,
+      "sha256": "7b941eb422942887332c509a3923d5d710b77c095bd478e69fe75beabaccd86f"
+    },
+    {
+      "path": "project/src/tools/package_workbench_v12.py",
+      "bytes": 7379,
+      "sha256": "8afbfe6612ba106b3c73091abe5a2110971af772be21bb9ca50370483128e3ce"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/下一项局部语义匹配单因素草案.md",
+      "bytes": 2581,
+      "sha256": "619aee171127b05a2b2ac8678a6943cd4a5b83cd1012de0e588fc29b54cc4bcf"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/冻结协议.json",
+      "bytes": 2061,
+      "sha256": "7f2ff411dc88ee41a60f9af8ec842ead75d75dab6ba492f6f7b08992d8f8bb9c"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/冻结执行任务.json",
+      "bytes": 37680,
+      "sha256": "d2f6e933c1764bb00b70af3feb0986a12127364ea335e33a3dc0293089967283"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/准备开始绑定.json",
+      "bytes": 408184,
+      "sha256": "b02dbc131d3cb7337e3d311510a8283dc4fd28909102eb7285507190c768cf69"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/划分与任务.json",
+      "bytes": 7764,
+      "sha256": "35861887a82bb3eae0d706af12a0a144ebf7ecbfc40b67746116996c54dad6d0"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/地面特征.npy",
+      "bytes": 32896,
+      "sha256": "38e6b3e4900dec1b96bbf763b826d1344552802ee35f1cfdf1dd10c0bc5a942a"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/工程核验.json",
+      "bytes": 13716,
+      "sha256": "260da95968418d21c5e33ea10a319008e85c7b5d7dc07db499aa7000724ed999"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/感知对照汇总.json",
+      "bytes": 2183,
+      "sha256": "ddcf57452e0325c807bdc2caecbbc7ef10843316e9eb08f9a45586f8e8777abf"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/执行状态.json",
+      "bytes": 489,
+      "sha256": "712b331d1533cda108454124f9e43620cb69604553a8e3dfe156ce2379c49c5c"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/核验/事后区域尺度诊断.json",
+      "bytes": 34071,
+      "sha256": "022bd7c515f5ba2fcbf9c888f70e2f16ef02740c5281bb506503456bb153e33c"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/核验/交付源码与测试.json",
+      "bytes": 1994,
+      "sha256": "7c83021626c5c9c7384177aaf257e0de5a60e7ae340810408e9a2c4585f8f511"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/核验/入口复核.json",
+      "bytes": 181,
+      "sha256": "dee46ddbc155979647dca3e89f84afc718af6272f879cf707362e8e58bec332c"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/核验/冻结结果与尺度诊断.pdf",
+      "bytes": 19063,
+      "sha256": "e203658de9416de7a8014bc91c2e2dd45024080f89c411dcd606128cac619699"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/核验/冻结结果与尺度诊断.png",
+      "bytes": 75548,
+      "sha256": "eaf328c9993b19431fc4604690371216856ac25ef9fe55d73e5a3fa64fe519e0"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/核验/原默认与阶段稿保护.json",
+      "bytes": 906,
+      "sha256": "e6a1c1815b2dd0a8e57ebe2cac47741f66bdbc4fbf0652f8748f462e21acef42"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/核验/另实现复核.json",
+      "bytes": 598,
+      "sha256": "0a1214d794b80c69064fa8278e2aa5f5126ff4912df013628bacc6d86b6e74b1"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/核验/旧数据复查与保存范围.json",
+      "bytes": 536,
+      "sha256": "15d064756dc15b5de6385b1a9ac0e0981a3f0c1dfe3d66ba26eb978226982f47"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/核验/科研图PDF独立渲染.png",
+      "bytes": 32760,
+      "sha256": "67a0fc10eebd1f607889b4df119d63e8f1689d9dbdd6f7d9773e3c2def0c0ed3"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/核验/预处理修复_v2.json",
+      "bytes": 1039,
+      "sha256": "21e1d6bbec2923a62b9553e9f5608881ba2bf0f5ee87730cac7c4e8001d2ba41"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/模型获取回执.json",
+      "bytes": 794,
+      "sha256": "5fa625bf6042911d4fe86a452e74004d5382e3408a02d9a6b04f1dca0a25f65c"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/航拍特征.npy",
+      "bytes": 819328,
+      "sha256": "63c732c94cd5d02c6ae500125b729036e301818e3a56301659cfe2c794b10565"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/跨视角感知验证报告.md",
+      "bytes": 6084,
+      "sha256": "882585eb9af18905a240c4ec50fdad4008eec3e3906d515ca346623c00185b98"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/运行资源.json",
+      "bytes": 1437,
+      "sha256": "62bf053198ded96ce342ea42cd16e3033f9cfa67365db9a789c2fe0a402b0032"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/逐对排序结果.json",
+      "bytes": 68603,
+      "sha256": "7695b83017d06e2c7f048beee37ea025dc3a89c5515dfa2aa1d8f45a26b60437"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/首forward前绑定.json",
+      "bytes": 409314,
+      "sha256": "c7acd6fd410eca052d27d973a3d5593b98d5057b993ea168c0ea61be7a64e79c"
+    },
+    {
+      "path": "project/src/data/mmgag_views_v1.py",
+      "sha256": "89ff8000978d494274c819fbf44d4a8abc4a3b07614fcd357166c4637e3f157e"
+    },
+    {
+      "path": "project/src/tools/prepare_crossview_probe_v1.py",
+      "sha256": "d4b978ad29d0a38659972f2db4bc61973237cf600c6f47f9a85271f4c7687be8"
+    },
+    {
+      "path": "project/src/tools/acquire_clip_b32_v1.py",
+      "sha256": "edea440329d48214a948d5bdb457601c1b0d6755fa63531c80d248ce576a562c"
+    },
+    {
+      "path": "project/src/eval/crossview_probe_v1.py",
+      "sha256": "18c1e47f1e3fff0c87e644364b6f4707b774e800c330a025afa833f5933749b2"
+    },
+    {
+      "path": "project/src/eval/audit_crossview_probe_v1.py",
+      "sha256": "f7a14c469745c03c3f1991b50151e534c83635dbee8a51c03bd081e7704c2fd3"
+    },
+    {
+      "path": "project/src/tests/test_crossview_probe_v1.py",
+      "sha256": "4208149c0c309bc273bb9c18ee72c665dc3690fb63174b6afcb4567c30ecbb4e"
+    },
+    {
+      "path": "project/src/tools/prepare_crossview_probe_v2.py",
+      "sha256": "f3c82bd2624bdbb16a3ff4ebb528c233514fc8924255a70998e6a1afb22175f6"
+    },
+    {
+      "path": "project/src/tests/test_crossview_processors_v2.py",
+      "sha256": "53be8ee715cacd9d0d9af0300fd16a16bf4758220b40d1460f3587de3fa07906"
+    },
+    {
+      "path": "project/src/eval/diagnose_crossview_context_v1.py",
+      "sha256": "90d0ff1da61e5bf3890b9b2e5a3753f924f5a258ce386c375c7cde9490233bd3"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/README.md",
+      "sha256": "9ccce81ffcaac46fcc410c1454193512e3ddb8a6c9f99e29a310a1d2c3693193",
+      "bytes": 1448
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/交付检查.json",
+      "sha256": "72fa2c5c87697212cb2d1ee9245c86bcc089c0478ccaacd13435a5b54cf43442",
+      "bytes": 1023
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/冻结诊断协议.json",
+      "sha256": "54acec99fe3a8ee66b88b58f1e84d32a73edc56393931af80bea1b2e753df59f",
+      "bytes": 1881
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/另实现复核.json",
+      "sha256": "001e4a1fa0fdecccac6aaa45fcf72aa8128078ee2dc36f4763ce3082d0c11114",
+      "bytes": 498
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/合成测试记录.json",
+      "sha256": "43cf692d1d463fa6470a4592fe85719295cb9abaf87f9d5726261354e7a400fd",
+      "bytes": 287
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/场景与精确格诊断报告.md",
+      "sha256": "8677b4107e10402caed74b4fa0490a390053a8d7586b95871f3436b09cb49ab1",
+      "bytes": 5099
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/场景分数与查询投影.json",
+      "sha256": "50519911fc081cafd268fe4078fe073cb24ce9815f5f9c1de07b5e784b4832ce",
+      "bytes": 431902
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/开发信号筛选.json",
+      "sha256": "0f736c5c8060d61f7a99372aa8df0a374d4d2c8f9b019020683d8cd171e10830",
+      "bytes": 4343
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/执行完成.json",
+      "sha256": "0b710763b2a295c0ee74c54b9ee70b32f1d4bcdf9115a909c58f1a281d136ba5",
+      "bytes": 387
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/执行开始.json",
+      "sha256": "63a3c6cd09c238aa106d4335397067447185e60db819f3fecced9e79216a3fef",
+      "bytes": 90
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/格级已存分数重组.json",
+      "sha256": "a1bd2950c2c1bbe96d9b975575a3cfbced456420f570cd0226dbca72ac07d426",
+      "bytes": 283429
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/结果解读与下一步.md",
+      "sha256": "59a4ae68cf0e1b820ce7c3222fa04cee45882619a06e7df3c075d09c6fd938e7",
+      "bytes": 3278
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/输入与源码绑定.json",
+      "sha256": "3d118446b9425bc0fad9983a92c04686a1240a0c39088beaef79992ca9161acd",
+      "bytes": 6029
+    },
+    {
+      "path": "project/src/eval/crossview_signal_v1.py",
+      "sha256": "3c4cf6a796452788ecc9b0aadcf1bf13f14c71ad5c98ac21a0688bc69804f83e",
+      "bytes": 9130
+    },
+    {
+      "path": "project/src/eval/audit_crossview_signal_v1.py",
+      "sha256": "48cf8c799a77906a21d0437d1df0b4a6a23031303737db082623deda816c0496",
+      "bytes": 8632
+    },
+    {
+      "path": "project/src/tools/run_crossview_signal_v1.py",
+      "sha256": "742989ad151ea80f1a68cee1634fac60a6b6332f54e1514fb9644a375daf2598",
+      "bytes": 7325
+    },
+    {
+      "path": "project/src/tests/test_crossview_signal_v1.py",
+      "sha256": "4a871c4fd3e224cbbef496ea2e7acaa973a0b254384a641db7b1393ba65068b7",
+      "bytes": 5342
+    },
+    {
+      "path": "project/src/documents/build_crossview_signal_report_v1.py",
+      "sha256": "1b4f336af1b3ef07f4c5e81984f5dbfbb45c62ade182653ce6d91fb5ff3cfda6",
+      "bytes": 10005
+    },
+    {
+      "path": "project/src/webapp/crossview_evidence_v1.html",
+      "sha256": "71d7d72b609eb2e0f8b0225c9687cf359e5e440591cd60276a4c73b14ebcff24",
+      "bytes": 14417
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/README.md",
+      "bytes": 3318,
+      "sha256": "8964d372908fcfd57fcb3731a3036736321fb0cf87a17f5cf6e004a9bf75d67c"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/交付核验.json",
+      "bytes": 1283,
+      "sha256": "fb7f17a545f44e04c69fb6bd4d8db78bd1515bcb15408fdceb195dd9c28e9c78"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/冻结协议.json",
+      "bytes": 144023,
+      "sha256": "1a50aa324661d0155a268c4f53766ed7ed8281b313cfcdd48dff1558d1d74a48"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/历史与用户保护.json",
+      "bytes": 98913,
+      "sha256": "b55d826793b14d5cefb92560fb570984f36378a976f06933f7932a2087af8e46"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/另实现复核.json",
+      "bytes": 827,
+      "sha256": "629b2c14902630a8aaa2dca52473e66e649742e74514e69055277a6548346963"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/对照汇总.json",
+      "bytes": 46118,
+      "sha256": "a4dfde3fa9e7fe023a9974855ebb0dcd582e4b4bc4be922a1f8972d112a5e702"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/对照阅读页.html",
+      "bytes": 7345,
+      "sha256": "d8cfd388ecc44da949e1230fdf0f6cbc48004b2caf6eb7991a9cd560f8508f86"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/执行开始.json",
+      "bytes": 538,
+      "sha256": "fb51cd91feb0d92f0a7b5921df169e8c94d3ddf8b5096836aea828ee215cd70c"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/执行结果.json",
+      "bytes": 646,
+      "sha256": "804792460bca9ba16eeafbe0ed066fea60b638a74610051c71884c4d8fd9df0c"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/模型冻结核验.json",
+      "bytes": 200,
+      "sha256": "38a6d408224ef60ada0aed5234c3cc4ab6e6064456da89423e5b7ce7bd234e17"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/测试核验.json",
+      "bytes": 143,
+      "sha256": "18b9c1259f10d4b9f08e02c066dd7e97dd8b07ee29cf084de8e80a2526cc0138"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/特征/特征.sqlite",
+      "bytes": 1966080,
+      "sha256": "104e7d6566ee113202b7e9cc3e562ec17e0e0df93e740b8b59f00a41dfd2429e"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/目标对照开发报告.md",
+      "bytes": 5088,
+      "sha256": "8dbb850a8a7c6de2d138903d66a08471ac7e84a70047ac87976480e49afb364d"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/索引追加前绑定.json",
+      "bytes": 295,
+      "sha256": "f8b6dcba46f8d8a272210960d6a77a20ca02d0a4f2c0350034eeb46d37445110"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/编码事件.jsonl",
+      "bytes": 359101,
+      "sha256": "acc5ce104eb88c639eb383bfe50111c397521b9da25dce5a7349040f2c00ef4d"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/评分明细.json",
+      "bytes": 150406,
+      "sha256": "c0e59b1b91277542ccfb615802c07700fca939231859b8de8f0023cb6ba2dada"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/评分输入与均值绑定.json",
+      "bytes": 28871,
+      "sha256": "b9d8a6f613e3a120184ffd76c7f8b3791343afffb73e6beee3848e0f3c051b2b"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/输入源码与运行环境绑定.json",
+      "bytes": 65763,
+      "sha256": "90dd8d783b76498a8d8b33c7fdca0e9b6bf5c3c774afb6448f74afc5facadec2"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/阅读页与环境核验.json",
+      "bytes": 549,
+      "sha256": "1c553080c5d93f3b6252c82feb4d025532d973e7bd16f1ee6d4ac54a28e469b2"
+    },
+    {
+      "path": "project/src/data/sample4geo_protocol_v1.py",
+      "bytes": 11291,
+      "sha256": "b36a694c3a081d3d41b7fe5ae1880a8ece02205666d9eced555c371334b851fb"
+    },
+    {
+      "path": "project/src/eval/sample4geo_controls_v1.py",
+      "bytes": 9134,
+      "sha256": "ab8b55930d74eff13536d138fc3f07b34a6f56d865e8e73bb2c7a30f48dea77b"
+    },
+    {
+      "path": "project/src/eval/audit_sample4geo_controls_v1.py",
+      "bytes": 11449,
+      "sha256": "ebcd4f85fb8adc50bef4ce13bb4dbc2c421dc85d0c20c0ed6a198b2faf6ae813"
+    },
+    {
+      "path": "project/src/tools/run_sample4geo_controls_v1.py",
+      "bytes": 12919,
+      "sha256": "71c1f753a59a572fdedd31fc8243aad4c1f1ca9648538907f61e34c7c047bbf1"
+    },
+    {
+      "path": "project/src/tests/test_sample4geo_controls_v1.py",
+      "bytes": 6963,
+      "sha256": "017ea3f60f364572b40b5e382269f4f7cafae51b9196fe9a1b1a61662bcb4720"
+    },
+    {
+      "path": "project/src/documents/build_sample4geo_controls_v1.py",
+      "bytes": 9351,
+      "sha256": "6f9de4e2a0d4541e97bc81f87871382d869c4537fdb83e71e36417c306ff2830"
+    }
+  ],
+  "protocol": {
+    "path": "DATA/processed_data/MM-GAG/目标语义与局部闭环工程_v1/冻结协议.json",
+    "sha256": "92b54f9f07c09af36ec4a77bb90defa55f038922a7a7dd7dc6336d46c4abaa1d",
+    "bytes": 2325
+  },
+  "tasks": {
+    "path": "DATA/processed_data/MM-GAG/目标语义与局部闭环工程_v1/任务清单.json",
+    "sha256": "d109948f147cd8440a983a5f08e9739381eb4ae15fb63a96aa82dd14b2f623fc",
+    "bytes": 17760
+  }
+}

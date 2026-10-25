@@ -1,0 +1,165 @@
+{
+  "status": "delivery_verified",
+  "stage_seal_files_checked": 45,
+  "input_source_bindings_checked": 3111,
+  "source_files_ast_checked": 29,
+  "local_links_checked": 357,
+  "normal_episodes": 6000,
+  "public_decisions": 50695,
+  "aggregate_metrics": [
+    {
+      "method": "M0",
+      "condition": "Full",
+      "planned": 750,
+      "successes": 651,
+      "sr": 0.868,
+      "normal_terminals": 750,
+      "sg_cells_all_planned": 0.3,
+      "movement_cells_all_planned": 7.596,
+      "policy_errors": 0
+    },
+    {
+      "method": "M0",
+      "condition": "Disabled",
+      "planned": 750,
+      "successes": 552,
+      "sr": 0.736,
+      "normal_terminals": 750,
+      "sg_cells_all_planned": 0.7186666666666667,
+      "movement_cells_all_planned": 8.033333333333333,
+      "policy_errors": 0
+    },
+    {
+      "method": "M0",
+      "condition": "Mean",
+      "planned": 750,
+      "successes": 549,
+      "sr": 0.732,
+      "normal_terminals": 750,
+      "sg_cells_all_planned": 0.6986666666666667,
+      "movement_cells_all_planned": 8.074666666666667,
+      "policy_errors": 0
+    },
+    {
+      "method": "M0",
+      "condition": "Wrong",
+      "planned": 750,
+      "successes": 521,
+      "sr": 0.6946666666666667,
+      "normal_terminals": 750,
+      "sg_cells_all_planned": 0.8306666666666667,
+      "movement_cells_all_planned": 8.190666666666667,
+      "policy_errors": 0
+    },
+    {
+      "method": "GeoExplorer",
+      "condition": "Full",
+      "planned": 750,
+      "successes": 267,
+      "sr": 0.356,
+      "normal_terminals": 750,
+      "sg_cells_all_planned": 2.5893333333333333,
+      "movement_cells_all_planned": 8.941333333333333,
+      "policy_errors": 0
+    },
+    {
+      "method": "GeoExplorer",
+      "condition": "Disabled",
+      "planned": 750,
+      "successes": 265,
+      "sr": 0.35333333333333333,
+      "normal_terminals": 750,
+      "sg_cells_all_planned": 2.526666666666667,
+      "movement_cells_all_planned": 8.937333333333333,
+      "policy_errors": 0
+    },
+    {
+      "method": "GeoExplorer",
+      "condition": "Mean",
+      "planned": 750,
+      "successes": 265,
+      "sr": 0.35333333333333333,
+      "normal_terminals": 750,
+      "sg_cells_all_planned": 2.526666666666667,
+      "movement_cells_all_planned": 8.937333333333333,
+      "policy_errors": 0
+    },
+    {
+      "method": "GeoExplorer",
+      "condition": "Wrong",
+      "planned": 750,
+      "successes": 276,
+      "sr": 0.368,
+      "normal_terminals": 750,
+      "sg_cells_all_planned": 2.466666666666667,
+      "movement_cells_all_planned": 8.882666666666667,
+      "policy_errors": 0
+    }
+  ],
+  "target_effect_gates": {
+    "M0": {
+      "controls": {
+        "Disabled": true,
+        "Mean": true,
+        "Wrong": true
+      },
+      "all_passed": true
+    },
+    "GeoExplorer": {
+      "controls": {
+        "Disabled": false,
+        "Mean": false,
+        "Wrong": false
+      },
+      "all_passed": false
+    }
+  },
+  "source_file_groups": 10,
+  "geographic_nonoverlap_verified": false,
+  "current_report": "同题对照报告_v2.md",
+  "current_figure_version": "论文图_v2",
+  "historical_readme_preserved": "绘图\\共同学习基线对照_v1\\审阅\\README_生成初稿_v1.md",
+  "figures": [
+    {
+      "name": "同题主与目标对照_v2",
+      "pdf_sha256": "31d94321e42cec356d4fd05e7f0a6e34486ed2950f6efef4036209046cc47304",
+      "render_path": "绘图\\共同学习基线对照_v1\\论文图_v2\\审阅\\同题主与目标对照_v2_PDF独立渲染_v1.png",
+      "render_sha256": "7fbd1f901f26ead99c63eb4a8ce3e11afd7e1c9ff9d3138575859413cafad67f",
+      "page_count": 1,
+      "width_points": 507.6000061035156,
+      "minimum_font_pt": 8.0,
+      "minimum_scaled_font_pt_at_18cm": 8.04154790129593,
+      "clipped_text": [],
+      "text_spans": 45
+    },
+    {
+      "name": "目标有效性配对区间_v2",
+      "pdf_sha256": "e54db00ea9460d44d071e52f259a2f4d9a2d2f4ac5e94d329cda7e7e14aa3b22",
+      "render_path": "绘图\\共同学习基线对照_v1\\论文图_v2\\审阅\\目标有效性配对区间_v2_PDF独立渲染_v1.png",
+      "render_sha256": "4fe6a882b09ce4e756daa055d4354acb9f9937a69514309cbad53719941ed723",
+      "page_count": 1,
+      "width_points": 507.6000061035156,
+      "minimum_font_pt": 8.0,
+      "minimum_scaled_font_pt_at_18cm": 8.04154790129593,
+      "clipped_text": [],
+      "text_spans": 23
+    }
+  ],
+  "independent_metrics_implementation": true,
+  "independent_person_review": false,
+  "model_forward": 0,
+  "new_navigation": 0,
+  "cloud_calls": 0,
+  "reserve_consumption": 0,
+  "default_upgrade": false,
+  "source_sha256": "506f275cf9950b986e3f0d66cd12b747a0f3a3a8c34e17023ec20c9d096e5335",
+  "time": "2026-10-08T10:48:48.798801+00:00",
+  "visual_inspection": {
+    "status": "passed",
+    "reviewer": "same Codex agent",
+    "originals_and_independent_pdf_renders": 4,
+    "numeric_labels_unobscured": true,
+    "legends_axes_units_and_18cm_fonts_readable": true,
+    "no_plot_clipping_observed": true
+  }
+}

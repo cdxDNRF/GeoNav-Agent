@@ -1,0 +1,127 @@
+{
+  "task": "CV-003",
+  "planned_pairs": 16,
+  "development_groups": 10,
+  "reserved_groups": 20,
+  "top1_counts": {
+    "Full": 0,
+    "Mean": 0,
+    "Wrong": 0
+  },
+  "top5_counts": {
+    "Full": 4,
+    "Mean": 3,
+    "Wrong": 3
+  },
+  "top1_rates": {
+    "Full": 0.0,
+    "Mean": 0.0,
+    "Wrong": 0.0
+  },
+  "median_true_rank": {
+    "Full": 10.0,
+    "Mean": 10.0,
+    "Wrong": 11.0
+  },
+  "per_group": {
+    "dev_00": {
+      "planned": 1,
+      "Full": 0,
+      "Mean": 0,
+      "Wrong": 0
+    },
+    "dev_01": {
+      "planned": 1,
+      "Full": 0,
+      "Mean": 0,
+      "Wrong": 0
+    },
+    "dev_02": {
+      "planned": 2,
+      "Full": 0,
+      "Mean": 0,
+      "Wrong": 0
+    },
+    "dev_03": {
+      "planned": 1,
+      "Full": 0,
+      "Mean": 0,
+      "Wrong": 0
+    },
+    "dev_04": {
+      "planned": 2,
+      "Full": 0,
+      "Mean": 0,
+      "Wrong": 0
+    },
+    "dev_05": {
+      "planned": 1,
+      "Full": 0,
+      "Mean": 0,
+      "Wrong": 0
+    },
+    "dev_06": {
+      "planned": 2,
+      "Full": 0,
+      "Mean": 0,
+      "Wrong": 0
+    },
+    "dev_07": {
+      "planned": 2,
+      "Full": 0,
+      "Mean": 0,
+      "Wrong": 0
+    },
+    "dev_08": {
+      "planned": 2,
+      "Full": 0,
+      "Mean": 0,
+      "Wrong": 0
+    },
+    "dev_09": {
+      "planned": 2,
+      "Full": 0,
+      "Mean": 0,
+      "Wrong": 0
+    }
+  },
+  "groups_positive_against_both_controls": 0,
+  "contrasts": {
+    "Mean": {
+      "recovered": 0,
+      "harmed": 0,
+      "net": 0
+    },
+    "Wrong": {
+      "recovered": 0,
+      "harmed": 0,
+      "net": 0
+    }
+  },
+  "local_vs_global_full": {
+    "top1": {
+      "recovered": 0,
+      "harmed": 0,
+      "net": 0
+    },
+    "top5": {
+      "recovered": 4,
+      "harmed": 4,
+      "net": 0
+    }
+  },
+  "gates": {
+    "all_16_complete": true,
+    "full_top1_at_least4": false,
+    "full_minus_mean_at_least2": false,
+    "full_minus_wrong_at_least2": false,
+    "positive_groups_at_least3": false
+  },
+  "candidate_passed": false,
+  "navigation_SR": null,
+  "training_steps": 0,
+  "model_api_calls": 0,
+  "formal_confirmation": false,
+  "single_candidate": true,
+  "interpretation": "Offline development association only; final patch tokens were not explicitly trained for cross-view alignment."
+}

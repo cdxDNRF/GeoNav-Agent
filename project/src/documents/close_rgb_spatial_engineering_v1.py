@@ -1,0 +1,101 @@
+"""Publish CV040 only after real engineering/resource/alternate checks pass."""
+import json
+from project.src.eval.rgb_spatial_engineering_v1 import ROOT,OUT,entry,read,put,verify
+
+
+def update(p,old,text):
+    assert p.read_bytes()==old,str(p)+' changed during write'
+    p.write_bytes(text.encode('utf-8'))
+
+
+def publish():
+    if (OUT/'README.md').exists():raise ValueError('Already published; inspect instead of rerunning')
+    b=verify();a=read(OUT/'核验/另实现复核.json');res=read(OUT/'资源回执.json');done=read(OUT/'工程完成.json');resume=read(OUT/'核验/梯度与恢复.json');frozen=read(OUT/'最终冻结核验.json')
+    assert a['passed'] and res['passed'] and done['passed'] and resume['passed'] and frozen['unchanged']
+    assert read(ROOT/'项目导航/实验索引.json')['batches']==b['index_prefix']
+    assert read(ROOT/'docs/维护/版本生命周期.json')['current']==b['current']
+    put('工程准入判定.json',dict(task='CV-040',engineering_passed=True,actual_encoder_parameters=87849216,
+        actual_head_parameters=65537,encoder_calls=8,unique_reusable_features=6,remaining_unique_encodings=72,
+        cumulative_encoder_cap=80,head_optimizer_updates=8,engineering_training_pair_uses=48,
+        extra_pair_checks=32,formal_training_started=False,formal_training_authorized=False,
+        perception_effect_validated=False,navigation_admitted=False,
+        next='CV041 bind remaining72 encodings and the fixed18-head development run; new directory/resources must be authorized'))
+    report=f'''# CV-040 普通RGB空间执行器工程准入
+
+**真实工程检查通过。** 已实现并绑定共享冻结图像塔、空间小头、合法单格输入、目标控制、梯度和精确恢复；尚未执行正式18头训练，没有感知准确率或导航SR。
+
+## 实现与实际资源
+
+|项目|实际结果|
+|---|---|
+|本地图像塔|87,849,216参数，0可训练；同一个CLIP ViT-B/32图像塔处理两种图像|
+|空间小头|65,537训练参数（Wg/Wa各512×64＋empty偏置）|
+|真实编码|8次图像塔调用＝6独特输入＋2精确重复；原6图各解码一次|
+|原代码输出关系|CLS post-LN投影与原生pooler路径差0；重复目标用原CLIP包装器再核，特征差0|
+|骨干冻结|首末全状态张量SHA相同，eval/无梯度，无GPU操作|
+|小头工程更新|连续4次与恢复路径4次，共8次/48对，均为工程用途|
+|额外检查|在线22对＋另实现方程10对＝32对；没有重复追加检查|
+|CPU资源|采样峰值{res['peak_sampled_RSS']/1024**3:.3f}GiB，监督进程计时{res['wall_seconds']:.2f}秒；上限4GiB/180秒|
+
+原图与冻结骨干均不复制。6个缓存条目＝3个目标512向量＋3个原生cell0的49×512空间特征，身份/预处理/数值SHA在[特征清单](特征清单.json)。后续若协议和代码完全相同，可复用这6条，只需剩余72个独特输入；不得重新编码这6条后仍声称累计80以内。
+
+地面整幅letterbox到224（224×125内容、上49下50），没有沿用旧中心裁剪。航拍只编码各父图5×5的第0格，绝不将完整父图或未知格特征给匹配器。三个原生格大小/米制尺度沿CV039，未统一伪装成100米。头只接target/current两Tensor字段，GPS/heading/goal_cell/sourceID/parent_bank/labels均在forward前拒绝。
+
+## 目标路径与原方程核验
+
+同一当前格，实际执行Full/Disabled/Mean/Wrong；Mean只用该折两个fit目标，不含held，Wrong固定供体。四条件查询q身份不同，当前k身份不变；Disabled q和49个空间logit均为0。更换被覆盖的原始目标后，Disabled与Mean输出分别完全相同，表明没有遗漏目标通道。RawCos四条件也已执行。
+
+另实现只在预留的10个检查样本上用NumPy重算初始头/RawCos公式；logit最大差{a['max_head_equation_logit_difference']:.9g}≤2e-5；概率与最大patch序号按保存logits另算。此10对已计入32总检查，审计主程序与audit()都不能再运行追加10次；后续仅核SHA/保存结果即可。工程控制生效不等于真实目标带来定位收益。
+
+## 梯度与恢复
+
+同种子头初始张量严格一致。连续路径4次更新；另一条路径更新2次，保存模型/Adam/采样游标/RNG/输入配置绑定后加载，再更新2次。实际总8次，没有将连续8与恢复8叠加。三参数Wg/Wa/empty的梯度每次均非零且有限，损失/梯度裁剪/状态哈希逐步保留。
+
+连续/恢复最终模型状态、Adam状态与6对输出全部精确相同，预测差0，RNG恢复相同，游标2→4。工程固定6对负样本损失{resume['initial_loss']:.6f}→{resume['final_loss']:.6f}，只是优化器/恢复检查，不能当正式拟合成功、目标定位准确率或开发过线。
+
+当前cell0样例均是窗外/异源，未因为工程需要调用目标格或用伪标签改原任务。窗内高斯/空类构造已由纯合成覆盖；正式训练仍必须从固定种子重新初始化，使用CV039规定的每批2窗内/2窗外/2异源，不能延续本工程负样本拟合状态。
+
+## 完整执行器与下一步
+
+新运行内核为agents/rgb_spatial_runtime_v1.py和train/rgb_spatial_executor_v1.py；正式固定训练核心支持Spatial/TrainedMean两臂、先检查完整缓存再更新、200次固定循环及回调；本轮没有调用这个正式训练入口。新工程执行器eval/rgb_spatial_engineering_v1.py负责首调用绑定、只监管自建worker、资源停止、逐次计数和保存证据。没有启动/停止平台或其它进程。
+
+下一CV-041才绑定完整任务/特征，并在授权的新正式批次中：剩余72次CPU编码→18个全新初始化小头（3600更新/21600样本使用）→固定6750次非训练对预测与目标/无目标对照→一次校准/另实现/门槛判定。未通过则收束，不按开发结果调epoch、阈值、窗口或模型。当前只证明工程可运行，三城市仍是已消费开发来源、独立确认0；原M0/S2S3S4不因此升级或降级。
+
+## 证据与恢复
+
+[首编码绑定](首编码绑定.json) · [实际加载](实际加载与初始冻结.json) · [特征](特征清单.json) · [目标控制](核验/目标控制十对.json) · [梯度/恢复](核验/梯度与恢复.json) · [最终冻结](最终冻结核验.json) · [资源](资源回执.json) · [另实现](核验/另实现复核.json) · [准入](工程准入判定.json)。9合成检查与{len(a['checks'])}项另实现均通过，同Agent另一实现非独立人员审查。
+
+实际绑定的6新源/5旧依赖、旧协议/素材/模型SHA均保留；工程恢复点与3份小头数组为工程证据，不是18个正式候选。目录总≤12MiB，不含原图或骨干副本；不把这些证据当缓存清理。bind/execute/worker/写盘audit/publish均已消费，不重跑覆盖；先读绑定/事件/资源/完成/判定，异常前缀不能当完整通过。
+
+本轮0下载/导航/模型API/确认组消费、正式更新0，无新SR；全程离线，未使用代理，无主动C盘任务文件、安装/持久配置、Git提交推送。CPU运行不占GPU/不改ComfyUI。平台4.12/server19/service11/pack23/current及旧角色/6确认保持，当前167索引且旧166值保持；无GUI升级。
+'''
+    with (OUT/'README.md').open('x',encoding='utf-8') as f:f.write(report)
+    rel=OUT.relative_to(ROOT).as_posix();rp=rel+'/README.md'
+    p=ROOT/'项目导航/实验索引.json';old=p.read_bytes();idx=read(p);idx['date']='2026-10-24'
+    idx['batches'].append(dict(category='CV-040',dataset='OpenCVL三城市工程前缀',kind='普通RGB真实编码/小头梯度与恢复',name='普通RGB空间执行器工程准入_v1',
+        status='真实工程过；正式18头训练/开发/导航未启动',path=rel,reports=[rp],evidence=[rel+'/工程准入判定.json',rel+'/工程完成.json',rel+'/核验/另实现复核.json']))
+    update(p,old,json.dumps(idx,ensure_ascii=False,indent=2)+'\n')
+    p=ROOT/'docs/维护/版本生命周期.json';old=p.read_bytes();life=read(p);life['updated']='2026-10-24'
+    life['cv040_rgb_spatial_engineering']=dict(status='engineering_passed_not_formal_training',report=rp,
+        replaces='CV039 pending executor engineering only; no default/source role replaced',
+        runtime='project/src/agents/rgb_spatial_runtime_v1.py',executor='project/src/train/rgb_spatial_executor_v1.py',
+        features=rel+'/特征清单.json',recovery='read original receipts; do not repeat8 encodings or budgeted10 audit equations',
+        next='CV041 separately bound remaining72+18-head formal development run, pending resource/directory approval',formal_training_authorized=False)
+    update(p,old,json.dumps(life,ensure_ascii=False,indent=2)+'\n')
+    for name in ('README.md','项目导航/README.md','项目导航/实验索引.md'):
+        p=ROOT/name;old=p.read_bytes();text=old.decode('utf-8-sig').replace('\r','');h,_,rest=text.partition('\n');pre='' if name=='README.md' else '../'
+        link=f'[CV-040 · 普通RGB执行器工程]({pre}{rp})：8编码/8工程更新/精确恢复与控制核验通过，6特征可复用；正式训练未启动。'
+        update(p,old,h+'\n\n'+link+'\n\n'+rest)
+    p=ROOT/'docs/PROJECT_STATE.md';old=p.read_bytes();text=old.decode('utf-8-sig').replace('\r','');h,_,rest=text.partition('\n')
+    note=f'''\n\n### CV-040：普通RGB执行器真实工程通过，正式开发训练待启动（2026-10-24）
+
+[真实参数/输入/梯度/恢复与资源](../{rp})。实际共享冻结CLIP图像塔87,849,216参数，小头65,537参数；8编码（6unique+2repeat）/6decode，原生CLS/包装器与重复差0，骨干前后SHA相同。连续4更新vs断点恢复4更新，总8/48工程样本，模型/Adam/输出恢复差0；6神经+4raw在线控制、12恢复输出及10另实现方程共32检查，不再重算。CPU RSS{res['peak_sampled_RSS']/1024**3:.3f}GiB、{res['wall_seconds']:.2f}秒，9合成/{len(a['checks'])}另实现通过。工程负样本损失下降不作感知成绩。
+
+下一CV041拟复用6特征/再72编码，18头正式200次各、同预算/目标对照和固定门槛；尚未正式训练或新定位/导航SR，目录资源需另授权。当前167索引且旧166/current/旧角色/6确认保持，平台未升级；离线无代理/主动C盘任务输出/Git。\n'''
+    update(p,old,h+note+'\n'+rest)
+    files=[p for p in OUT.rglob('*') if p.is_file()];assert sum(p.stat().st_size for p in files)<12*1024**2-20000
+    put('阶段封存.json',dict(files=[entry(p) for p in files],sources=b['sources'],dependencies=b['dependencies'],seal_itself_excluded=True,engineering_passed=True,formal_training_started=False))
+    print(json.dumps(dict(published=True,index=167,bytes=sum(p.stat().st_size for p in OUT.rglob('*') if p.is_file()),engineering_passed=True),ensure_ascii=False))
+
+
+if __name__=='__main__':publish()

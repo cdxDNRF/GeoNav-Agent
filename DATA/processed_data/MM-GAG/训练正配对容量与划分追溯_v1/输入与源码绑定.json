@@ -1,0 +1,119 @@
+{
+  "task": "CV-017",
+  "date": "2026-10-18",
+  "inputs": [
+    {
+      "path": "DATA/processed_data/MM-GAG/数据核验与跨视角准入_v1/逐源准入清单.json",
+      "sha256": "21475f7392d17e53e521d43f5aa220be537c6bf0c154e4e38372a91b373e4b65",
+      "bytes": 121639
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/数据核验与跨视角准入_v1/输入文件与源码绑定.json",
+      "sha256": "daab5cd9e798ba578d0498014fed57b8902c85f8a612dc9ac5574ba2636395bc",
+      "bytes": 1679665
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源用途账本_v1.json",
+      "sha256": "3a55e4fc09542b88de3229576bab5f3e89bac7fbde274aa840ba4ed3ea5cf3c3",
+      "bytes": 16244
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/待审九五六分组.json",
+      "sha256": "597cdde49bcbbc2b11a125c4c808d0d22eafde8d9fc40bb607652918027d5f26",
+      "bytes": 7878
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/冻结元数据规划范围.json",
+      "sha256": "9f46c538e2989a0580f7dc38a74bbf45e8323809f2a9188fb338f1662c023dcc",
+      "bytes": 1170
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/同任务对齐训练冻结协议.json",
+      "sha256": "f2e71621b5f4910b06124bfca72be185aaf1a40a27af5fe6b9ab8d9a13968983",
+      "bytes": 10511
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/固定编码与训练开发队列.json",
+      "sha256": "15b9cf7d44d3a65cc5a4104f73116fdf28b0f0ee8171c646fb02007544f77415",
+      "bytes": 348018
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务首批图像轴向预检_v1/首像素冻结协议.json",
+      "sha256": "b074dc5c9a0e938d61641c562ed38a236476df1a6d356caade330d391f6ffbdb",
+      "bytes": 504711
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务首批图像轴向预检_v1/工程汇总.json",
+      "sha256": "dace0664f96081e275869427232f36957d4b708ccc9772585d837d9579fb04ce",
+      "bytes": 11915
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/训练日志.json",
+      "sha256": "d6b785719d871b9f7feb7c031462ccdbabb79db35295ac3a8276babc61ed79a3",
+      "bytes": 70219
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点标签与可辨识性审查_v1/审查汇总与收束判定.json",
+      "sha256": "a82dd6326bf2db75f17b405e0850ef3294301e964ed3e54f2d141cc880c6637d",
+      "bytes": 1067
+    }
+  ],
+  "sources": [
+    {
+      "path": "project/src/eval/capturepoint_training_capacity_v1.py",
+      "sha256": "3140f9811e6f1a8229a908a3c064d4d97060304a91ddeeff2c878f37dab9df2f",
+      "bytes": 10771
+    },
+    {
+      "path": "project/src/eval/audit_capturepoint_training_capacity_v1.py",
+      "sha256": "4ae8d63cdbf403de124ca0623c1e31448f5b700b9a9ec9656646e03bdf76cd8e",
+      "bytes": 5834
+    },
+    {
+      "path": "project/src/tests/test_capturepoint_training_capacity_v1.py",
+      "sha256": "13ddceb5ba1977b24ef45f87d4d56b638f9f653d9fe518de820a4aebd796aea0",
+      "bytes": 1425
+    },
+    {
+      "path": "project/src/documents/close_capturepoint_training_capacity_v1.py",
+      "sha256": "2e6d2b49bbb6f0809ec2e4c1d73c37f34b921f53a777dfcad9fad799a7baa394",
+      "bytes": 14254
+    }
+  ],
+  "readonly_rule_sources": [
+    {
+      "path": "project/src/data/capturepoint_partition_v1.py",
+      "sha256": "0def32c6564aab6cdc1b1319073ec3d4b2fd4890579158b832d85ab11dee80b1",
+      "bytes": 5205
+    },
+    {
+      "path": "project/src/data/capturepoint_alignment_protocol_v1.py",
+      "sha256": "8cbbaa152da7322606fa9754a57a38416daa5ed9d5e75378bf64fd07e2ca3cc5",
+      "bytes": 5281
+    }
+  ],
+  "protected_current_files": [
+    {
+      "path": "project/local_policy_default.json",
+      "sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b",
+      "bytes": 4143
+    },
+    {
+      "path": "project/local_policy_defaults_v1.json",
+      "sha256": "8e1b85eb74021ac18f8246f8146f7db451d68f423d7152f6c3a5d7c86b4d16fa",
+      "bytes": 747
+    },
+    {
+      "path": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.docx",
+      "sha256": "8529c55fb53823d88201dc7f485b3b5c43e5fb2113ddf7d1ead7321f2eea409f",
+      "bytes": 1183421
+    },
+    {
+      "path": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.pdf",
+      "sha256": "e127eac96ad85bdce079e1813e15fcea82fb80ee0cb61a7d80e958427167c4b2",
+      "bytes": 1051983
+    }
+  ],
+  "scope": "existing metadata and old selectors only; no raw/images/features/weights/model/API/navigation/role change",
+  "output_max_bytes": 2097152
+}

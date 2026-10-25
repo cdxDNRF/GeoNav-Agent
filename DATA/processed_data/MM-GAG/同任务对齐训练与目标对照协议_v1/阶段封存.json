@@ -1,0 +1,76 @@
+{
+  "task": "CV-012",
+  "date": "2026-10-18",
+  "files": [
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/协议阅读页.html",
+      "sha256": "88437afa827277dc84af9b23994138e471c20f8839c0d2aa0f26689c751bfe5a",
+      "bytes": 3788
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/同任务对齐训练冻结协议.json",
+      "sha256": "f2e71621b5f4910b06124bfca72be185aaf1a40a27af5fe6b9ab8d9a13968983",
+      "bytes": 10511
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/同任务训练与目标对照协议说明.md",
+      "sha256": "72f4831163696668a0bf66c4d6a20bc993220296c617f5b702bb17ab89c3b419",
+      "bytes": 8663
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/固定编码与训练开发队列.json",
+      "sha256": "15b9cf7d44d3a65cc5a4104f73116fdf28b0f0ee8171c646fb02007544f77415",
+      "bytes": 348018
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/核验/另实现复核.json",
+      "sha256": "5ce1803a9300aa3e2c2d1e72a315b6dfa7cf88a1691d58f0f4ed02e9fc8a4ea8",
+      "bytes": 608
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/核验/合成测试记录.json",
+      "sha256": "559098d05febe011746fd7a12ee256f83106724f531d6c3b222fe0d821a8a941",
+      "bytes": 341
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/输入与协议源码绑定.json",
+      "sha256": "c20a6eaabbb2a713f0a852c7b06b618be9c9d1e9dd1080097250d020e043bc3e",
+      "bytes": 18227
+    }
+  ],
+  "sources": [
+    {
+      "path": "project/src/data/capturepoint_alignment_protocol_v1.py",
+      "sha256": "8cbbaa152da7322606fa9754a57a38416daa5ed9d5e75378bf64fd07e2ca3cc5",
+      "bytes": 5281
+    },
+    {
+      "path": "project/src/tools/freeze_capturepoint_alignment_v1.py",
+      "sha256": "4e51ef87292c5165a1c625d31d2413ba253cd07d5201e896d29306846888a4a5",
+      "bytes": 11446
+    },
+    {
+      "path": "project/src/eval/audit_capturepoint_protocol_v1.py",
+      "sha256": "c0f71a7032955773de8f0fa3e97c4e4470c08bd765f8f773a2e2236ac7b10d4c",
+      "bytes": 8924
+    },
+    {
+      "path": "project/src/tests/test_capturepoint_protocol_v1.py",
+      "sha256": "787b450ed1fd0a04204891e09d862da337471618793824b80231474bb59e0a3f",
+      "bytes": 4007
+    },
+    {
+      "path": "project/src/documents/close_capturepoint_protocol_v1.py",
+      "sha256": "e8731e10b9a541b18cac9e704162d073eb480d6a95cb8654963b0fde6295ad4d",
+      "bytes": 13524
+    }
+  ],
+  "sealed_bytes": 390156,
+  "mutable_entries_excluded": [
+    "README.md"
+  ],
+  "research_design_frozen": true,
+  "execution_admitted": false,
+  "training_started": false,
+  "model_calls": 0
+}

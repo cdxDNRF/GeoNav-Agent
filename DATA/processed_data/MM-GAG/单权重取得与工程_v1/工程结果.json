@@ -1,0 +1,132 @@
+{
+  "status": "engineering_passed_not_perception_admission",
+  "parameters": 87566465,
+  "model_count": 1,
+  "forwards": [
+    {
+      "name": "synthetic_ground",
+      "view": "ground",
+      "input_shape": [
+        1,
+        3,
+        140,
+        768
+      ],
+      "input_tensor_sha256": "622e8f613ee5fc5404484acc18518c2ace2c2dcba154e36e6450b802c0c11db4",
+      "output_sha256": "4ba1a939e298676bd8ac65a97e327bf6f24a035a6cc630302b3d751ea30f44b2",
+      "output_shape": [
+        1,
+        1024
+      ],
+      "norm": 21.210956573486328,
+      "seconds": 0.5363839999999982
+    },
+    {
+      "name": "synthetic_aerial",
+      "view": "aerial",
+      "input_shape": [
+        1,
+        3,
+        384,
+        384
+      ],
+      "input_tensor_sha256": "78aa7ae8d5449836e5033dc782b0eb50f587892bb880282fce4c0ebbbbf440fd",
+      "output_sha256": "29d8d4bb4827758572176b2d9b73b4ba17f241fa06522f8d1cae4bfa00a8ffcc",
+      "output_shape": [
+        1,
+        1024
+      ],
+      "norm": 22.023582458496094,
+      "seconds": 0.6696504000001369
+    },
+    {
+      "name": "fit_ground",
+      "view": "ground",
+      "input_shape": [
+        1,
+        3,
+        140,
+        768
+      ],
+      "input_tensor_sha256": "3f620c2932c9bee5f03bdd383cccd242ccf3f97130b31f6ff4b4c96bf8de41a0",
+      "output_sha256": "8fafa105e8c379c0203838d16161b25798f74148297b05b05c6e85afd83b4bbb",
+      "output_shape": [
+        1,
+        1024
+      ],
+      "norm": 22.819068908691406,
+      "seconds": 0.44176889999971536
+    },
+    {
+      "name": "fit_aerial",
+      "view": "aerial",
+      "input_shape": [
+        1,
+        3,
+        384,
+        384
+      ],
+      "input_tensor_sha256": "6ad914a32f366dd654f697a784585a937f207ffb1d02ce3090986287abb6887e",
+      "output_sha256": "2cc2146b39f6f058e425449f4ac161f1f8b6fc377b3d63aa9836248509160e92",
+      "output_shape": [
+        1,
+        1024
+      ],
+      "norm": 22.817304611206055,
+      "seconds": 0.6679067000000032
+    },
+    {
+      "name": "repeat_ground",
+      "view": "ground",
+      "input_shape": [
+        1,
+        3,
+        140,
+        768
+      ],
+      "input_tensor_sha256": "3f620c2932c9bee5f03bdd383cccd242ccf3f97130b31f6ff4b4c96bf8de41a0",
+      "output_sha256": "8fafa105e8c379c0203838d16161b25798f74148297b05b05c6e85afd83b4bbb",
+      "output_shape": [
+        1,
+        1024
+      ],
+      "norm": 22.819068908691406,
+      "seconds": 0.40852310000036596
+    },
+    {
+      "name": "repeat_aerial",
+      "view": "aerial",
+      "input_shape": [
+        1,
+        3,
+        384,
+        384
+      ],
+      "input_tensor_sha256": "6ad914a32f366dd654f697a784585a937f207ffb1d02ce3090986287abb6887e",
+      "output_sha256": "2cc2146b39f6f058e425449f4ac161f1f8b6fc377b3d63aa9836248509160e92",
+      "output_shape": [
+        1,
+        1024
+      ],
+      "norm": 22.817304611206055,
+      "seconds": 0.6732037000001583
+    }
+  ],
+  "single_input_forward_count": 6,
+  "unique_raw_images": 2,
+  "unique_synthetic_inputs": 2,
+  "raw_reads": 2,
+  "repeat_max_absolute_difference": 0.0,
+  "network_guard_enabled": true,
+  "training": 0,
+  "navigation": 0,
+  "development_rankings": 0,
+  "confirmation_access": 0,
+  "new_SR": null,
+  "cuda_measured": false,
+  "timm_path": "project\\.runtime\\sample4geo_engineering_v1\\timm\\__init__.py",
+  "CPU_threads": 4,
+  "elapsed_seconds": 14.450808899999629,
+  "sampled_peak_CPU_RSS_bytes": 1414082560,
+  "RSS_measurement": "whole process, sampled25ms; includes torch/runtime, not exact allocator peak"
+}

@@ -1,0 +1,53 @@
+{
+  "failed_state": {
+    "task": "CV-008",
+    "state": "failed",
+    "phase": "extraction",
+    "pid": 44872,
+    "device": "cuda:0",
+    "initial_cuda_free_bytes": 7451181056,
+    "torch": "2.6.0+cu124",
+    "transformers": "5.9.0",
+    "attempted_encoder_inputs": 14,
+    "attempted_encoder_calls": 2,
+    "successful_encoder_calls": 2,
+    "forward_ledger": [
+      {
+        "kind": "ground",
+        "offset": 0,
+        "count": 8,
+        "status": "saved"
+      },
+      {
+        "kind": "ground",
+        "offset": 8,
+        "count": 6,
+        "status": "saved"
+      }
+    ],
+    "training_steps": 0,
+    "external_api_calls": 0,
+    "navigation_episodes": 0,
+    "reserved_groups_consumed": 0,
+    "recovery": "Inspect this ledger and existing feature coverage; no blind rerun. Final recovery has AdamW state.",
+    "pending_forward": null,
+    "ground_completed": 14,
+    "error_type": "AssertionError",
+    "error": ""
+  },
+  "ground_cache": {
+    "path": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v1/特征/ground.npy",
+    "sha256": "1709eec2783d1c8b9431bec6665cb5db80b787256333c976ddea4264233d57ea",
+    "bytes": 28800
+  },
+  "bug": "CV-006 cell SHA is raw RGB bytes only; erroneous dimension prefix rejected before first aerial forward",
+  "captured_stdout": "ground: 14 inputs saved; frozen encoder verified",
+  "original_ground_tensor_assertions_executed": true,
+  "logging_limitation": "ground tensor hashes and peak were checked in bound v1 code but not persisted before process exit; never claim reconstructed values were measured",
+  "new_encoder_inputs": 1134,
+  "new_encoder_calls": 142,
+  "aggregate_inputs": 1148,
+  "aggregate_calls": 144,
+  "research_protocol_unchanged": true,
+  "old_outputs_untouched": true
+}

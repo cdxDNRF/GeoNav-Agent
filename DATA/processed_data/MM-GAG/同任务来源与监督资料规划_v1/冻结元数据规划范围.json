@@ -1,0 +1,23 @@
+{
+  "task": "CV-010",
+  "date": "2026-10-17",
+  "type": "metadata_only_nonexecutable_proposal",
+  "current_roles_unchanged": true,
+  "role_activation_authorized": false,
+  "read_raw_images": false,
+  "inputs": "sealed inventories/old coordinates/old byte hashes; no current raw-file verification",
+  "group_guard": "same ground bytes OR shared aerial bytes OR spherical camera distance<=3000m; components must match30 prior groups",
+  "candidate_rule": "SHA256(CV-010/proposed-group/v1 + sorted ground hashes), first9 fit,next5dev,last6confirmation; one hash-selected representative per group",
+  "raw_hash_manifest": "references only; never open listed raw paths, .git files or credentials",
+  "planning_only": "source and81-cell references, center(5,5) proxy labels and25 virtual windows; unverified axes explicitly conditional",
+  "stopping": "one metadata proposal, no score-based reallocation or second candidate search",
+  "output_limit_bytes": 3145728,
+  "model_calls": 0,
+  "training_steps": 0,
+  "new_predictions": 0,
+  "raw_image_reads": 0,
+  "navigation_episodes": 0,
+  "API_calls": 0,
+  "downloads": 0,
+  "reserved_groups_consumed": 0
+}

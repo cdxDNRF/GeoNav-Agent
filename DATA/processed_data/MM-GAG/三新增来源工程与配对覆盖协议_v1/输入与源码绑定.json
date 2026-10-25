@@ -1,0 +1,132 @@
+{
+  "task": "CV-018",
+  "inputs": [
+    {
+      "path": "DATA/processed_data/MM-GAG/训练正配对容量与划分追溯_v1/阶段封存.json",
+      "sha256": "9697775a0bee6d4319a61b67fb14fc17ec2b344afa313291e238dfd973c666e8",
+      "bytes": 3146
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/训练正配对容量与划分追溯_v1/九对与十二对同预算开发候选草案_未执行.json",
+      "sha256": "07c9e60408e337434063398cf229f3b406383d1edfa0edf6eab2d94f98b9f2a2",
+      "bytes": 4344
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/训练正配对容量与划分追溯_v1/训练容量与取样追溯汇总.json",
+      "sha256": "4f31917be03d9e705f87aa9a634b09f9796bfc2e48e110e41e8e460519771d65",
+      "bytes": 63673
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源用途账本_v1.json",
+      "sha256": "3a55e4fc09542b88de3229576bab5f3e89bac7fbde274aa840ba4ed3ea5cf3c3",
+      "bytes": 16244
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/数据核验与跨视角准入_v1/逐源准入清单.json",
+      "sha256": "21475f7392d17e53e521d43f5aa220be537c6bf0c154e4e38372a91b373e4b65",
+      "bytes": 121639
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/数据核验与跨视角准入_v1/输入文件与源码绑定.json",
+      "sha256": "daab5cd9e798ba578d0498014fed57b8902c85f8a612dc9ac5574ba2636395bc",
+      "bytes": 1679665
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/同任务对齐训练冻结协议.json",
+      "sha256": "f2e71621b5f4910b06124bfca72be185aaf1a40a27af5fe6b9ab8d9a13968983",
+      "bytes": 10511
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/固定编码与训练开发队列.json",
+      "sha256": "15b9cf7d44d3a65cc5a4104f73116fdf28b0f0ee8171c646fb02007544f77415",
+      "bytes": 348018
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/首forward绑定.json",
+      "sha256": "e96ddd9cedd9830c46d32558b7c391cc1ec240274ce59082d5628f4d8119824b",
+      "bytes": 7439
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/首更新前特征绑定.json",
+      "sha256": "433587bf31697f08969053ae21604711babd9b127a3d525357b5d4f45d5cea15",
+      "bytes": 10330
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/阶段封存.json",
+      "sha256": "edbf6b4048fbb3484b17dcb103e2b49a634e10223c04ef0e225d346957711048",
+      "bytes": 8226
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/开发对照汇总.json",
+      "sha256": "fc0d1d78b2a916ae59c7de16f57302576c46ba453aae26d0d8f40373c6906cc0",
+      "bytes": 24174
+    }
+  ],
+  "sources": [
+    {
+      "path": "project/src/data/capturepoint_coverage_protocol_v1.py",
+      "sha256": "2064baf67bf496afcfa5ac28f4226e2fca97825152409319c0920f5b4dec546d",
+      "bytes": 4438
+    },
+    {
+      "path": "project/src/tools/prepare_capturepoint_coverage_v1.py",
+      "sha256": "09436a8450dd1d5febe19c07e5017f8135b0dbd0486111809a57c3137ed184fe",
+      "bytes": 14077
+    },
+    {
+      "path": "project/src/eval/audit_capturepoint_coverage_v1.py",
+      "sha256": "60360d0483e2947e92421788b40c84a31081e9ae489313485484d7dc2ff67adf",
+      "bytes": 7955
+    },
+    {
+      "path": "project/src/tests/test_capturepoint_coverage_v1.py",
+      "sha256": "469d107cb5ce8f5988ada6e0912a9d00ff217db09e598a2030060d44f1f3c5fd",
+      "bytes": 4151
+    },
+    {
+      "path": "project/src/documents/close_capturepoint_coverage_v1.py",
+      "sha256": "e3245614e95cbd6ca45357432997d7b694d8041b1b44153c43ff444882d26b0e",
+      "bytes": 10488
+    }
+  ],
+  "readonly_math_dependencies": [
+    {
+      "path": "project/src/tools/preflight_capturepoint_sources_v1.py",
+      "sha256": "7d604e258a65a75e7eb11bd334bfef696d1721e659c88d25ceead3fe6cde4164",
+      "bytes": 11651
+    }
+  ],
+  "protected": [
+    {
+      "path": "project/local_policy_default.json",
+      "sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b",
+      "bytes": 4143
+    },
+    {
+      "path": "project/local_policy_defaults_v1.json",
+      "sha256": "8e1b85eb74021ac18f8246f8146f7db451d68f423d7152f6c3a5d7c86b4d16fa",
+      "bytes": 747
+    },
+    {
+      "path": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.docx",
+      "sha256": "8529c55fb53823d88201dc7f485b3b5c43e5fb2113ddf7d1ead7321f2eea409f",
+      "bytes": 1183421
+    },
+    {
+      "path": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.pdf",
+      "sha256": "e127eac96ad85bdce079e1813e15fcea82fb80ee0cb61a7d80e958427167c4b2",
+      "bytes": 1051983
+    }
+  ],
+  "protocol": {
+    "path": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/首像素冻结范围.json",
+    "sha256": "240ee36e5fe9d8ddcaba7394c64605a62d8504fa3e1786143953c79107de0451",
+    "bytes": 106320
+  },
+  "authorization": {
+    "path": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/新增三来源工程授权.json",
+    "sha256": "d98d06c5e86796e9e434d38dca2ab0d9a3fa56818cf511ec0aff86372b43ccea",
+    "bytes": 476
+  },
+  "scope": "new3 pixel/axis checks and research design only; no old14 pixels, model/feature/weight loads, training, predictions or navigation"
+}

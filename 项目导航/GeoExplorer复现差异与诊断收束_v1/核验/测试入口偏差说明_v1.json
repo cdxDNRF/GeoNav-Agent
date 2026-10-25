@@ -1,0 +1,15 @@
+{
+  "status": "documented_unintended_dependency_import_before_tests",
+  "first_record": "核验/CPU测试_v1.json",
+  "current_record": "核验/CPU测试_v2.json",
+  "external_source_bindings": {
+    "D:\\PYTHON\\Lib\\site-packages\\tests\\__init__.py": "5c1582750c87c6e77d293c83ac6dbed9824378a61302a93bbda06949c8c57dcd",
+    "D:\\PYTHON\\Lib\\site-packages\\ultralytics\\utils\\checks.py": "7b56ea1a0259a6c4acce1922ce0f79c25d70376287dc4316a7be2868ef5b6720"
+  },
+  "cause": "tests name resolved to installed Ultralytics tests; import chain includes torch; CUDA availability uses read-only nvidia-smi",
+  "project_model_loaded": false,
+  "project_model_forward": 0,
+  "new_training": 0,
+  "whole_turn_zero_torch_import_claim": false,
+  "remedy": "file discovery in a fresh process; no rerun/overwrite of failed record or frozen sources"
+}

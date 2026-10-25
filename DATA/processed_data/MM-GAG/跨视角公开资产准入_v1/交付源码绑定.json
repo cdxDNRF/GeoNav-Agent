@@ -1,0 +1,31 @@
+{
+  "task": "CV-022",
+  "sources": [
+    {
+      "path": "project/src/tools/inspect_crossview_assets_v1.py",
+      "sha256": "c446a13452ed8b08b556a95e1c8739cf133683465980e6e34c5574d87152a3fa",
+      "bytes": 9434
+    },
+    {
+      "path": "project/src/tools/collect_crossview_public_fallback_v1.py",
+      "sha256": "85c1842b4e2761a2e742e6388888f655f4235bb4191c3f867640b50602b152b9",
+      "bytes": 6947
+    },
+    {
+      "path": "project/src/tools/verify_crossview_public_facts_v1.py",
+      "sha256": "5bd20b2b34a267c805c19bb4721e20a9c88e010835b1de646fa1cca2e9843341",
+      "bytes": 4196
+    },
+    {
+      "path": "project/src/tests/test_crossview_public_facts_v1.py",
+      "sha256": "58838d043ab3364d5e71de0036b50500b484992b352a684d62c7fb6cd18eeb23",
+      "bytes": 1514
+    }
+  ],
+  "shared_audit": {
+    "path": "project/src/eval/audit_crossview_admission_interface_v1.py",
+    "sha256": "0c84586f80a397b6878bdfc2b3db62c2a2dbc0cb15298d039b6637ef598ae9c6",
+    "bytes": 4064
+  },
+  "scope": "metadata and synthetic contract only, no trained model or deployed runtime change"
+}

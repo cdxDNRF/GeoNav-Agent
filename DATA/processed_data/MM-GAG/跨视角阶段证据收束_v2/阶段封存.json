@@ -1,0 +1,91 @@
+{
+  "task": "CV-015",
+  "files": [
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/后续方向与准入条件.md",
+      "bytes": 2340,
+      "sha256": "98772faddea7ac04b08bea48b2dba497e924ea7ec555cb9d542b70f8c8271b0c"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/平台接入边界.md",
+      "bytes": 1280,
+      "sha256": "76170c3e5c4f57ab8920c2544ed745be4a01b74ba5b1e7909b0b0ab5542911f9"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/核验/另实现复核.json",
+      "bytes": 440,
+      "sha256": "3d0b2a00ea6b5fd5d9f384db639732840fed993b6ea7db8574739465efec8c9c"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/核验/边界测试记录.json",
+      "bytes": 537,
+      "sha256": "e75912623b42e55492a7c95969ad1e0c7793556693ba52378f556b4299430df6"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/格式恢复映射.json",
+      "bytes": 726,
+      "sha256": "705fae88da1e72a2d14f4f74326daaf558c0b3c4361be3db62e013101c8df57e"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/证据与缺项表.json",
+      "bytes": 2976,
+      "sha256": "9a24b2f391289556624ad89501aef6544793a558d94d1522f2265cdf6c70ea58"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/证据重计汇总.json",
+      "bytes": 36855,
+      "sha256": "7c70001bafcba4c65d238edf0154366e9ac3316e2c328198110eab2d7b9f6187"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/跨视角阶段证据与失败边界.md",
+      "bytes": 7531,
+      "sha256": "6238c4970ae643d53cfbedbccfb9c4a7a9a59508104bf13d72157f175692f126"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/输入与源码绑定.json",
+      "bytes": 10317,
+      "sha256": "d7a844a0f1ad7ff8116bdbbf6ea01547409b691749f01f06b277d26d59684e9e"
+    }
+  ],
+  "sources": [
+    {
+      "path": "project/src/eval/crossview_evidence_close_v1.py",
+      "sha256": "2a958ece13cd9abacccca16cd2738761bcabd1946594a049e65303d6af40c789",
+      "bytes": 15748
+    },
+    {
+      "path": "project/src/eval/audit_crossview_evidence_close_v1.py",
+      "sha256": "8ae0736a88ae733a4a1bfd628473d92b5c6f2edf9183f8cd925fef4c3fbff625",
+      "bytes": 7899
+    },
+    {
+      "path": "project/src/tests/test_crossview_evidence_close_v1.py",
+      "sha256": "498f15ad922bb8d6fa403224130dc19d3d3b937ee1eed295c6e2ed720a4dc197",
+      "bytes": 3019
+    },
+    {
+      "path": "project/src/documents/close_crossview_evidence_v1.py",
+      "sha256": "06c3f68db6fc2d13c0505fcf9ce487c1a85127758167798921abc0fcbf1496fa",
+      "bytes": 16313
+    },
+    {
+      "path": "project/src/eval/crossview_evidence_close_v2.py",
+      "sha256": "b1d94b46c934611a68483a1e53d348fd89a28050a5b347f5e84ad15282f0daf2",
+      "bytes": 8184
+    },
+    {
+      "path": "project/src/tests/test_crossview_evidence_close_v2.py",
+      "sha256": "68208feaf600de900f14b610333a9fa069c1e77372421d455f76b41c50fa7c86",
+      "bytes": 1232
+    }
+  ],
+  "sealed_bytes": 63002,
+  "mutable_entries_excluded": [
+    "README.md"
+  ],
+  "new_model_candidate_admitted": false,
+  "new_model_forward_calls": 0,
+  "new_training_steps": 0,
+  "new_navigation_SR": null,
+  "recovery": "read-only SHA/JSON checks; collection/audit/close already consumed"
+}

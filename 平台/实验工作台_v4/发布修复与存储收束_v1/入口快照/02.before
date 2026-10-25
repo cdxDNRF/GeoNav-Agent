@@ -1,0 +1,15 @@
+# 源码使用入口与历史边界
+
+当前合并平台：webapp/server_v5.py及static_v4；它仍依赖live_v2/v3/v4、cloud_v3、batch_v3等。请从[平台入口](../../平台/README.md)运行。
+
+同名多版本代码的角色、替代对象与SHA见[版本生命周期登记](../../docs/维护/版本生命周期.json)。current_dependency仍在用；selected_reproduction用于对应批次最终复核；superseded_entry为旧启动入口；historical_evidence为过程/失败/旧对照证据。旧编号不等于可删除。
+
+研究执行源码受封存路径约束，保留原址。新实验按原协议建立新批次，不能直接跑旧脚本覆盖输出。当前模型按5格/10格已确认协议分别加载，15格仍为实验性。
+
+跨视角当前开发探针为[CV-003报告](../../DATA/processed_data/MM-GAG/局部语义匹配单因素验证_v1/README.md)，候选未过；agents/crossview_local_match_v1.py仅单图token匹配内核，未接入导航。该批prepare/runner/报告生成器已消费，复核仅运行eval/audit_crossview_local_v1.py（不加--save）；CV-002和mmgag_views_v1为仍需保留的绑定依赖。
+
+跨视角当前入口已转到[CV-005](../../DATA/processed_data/MM-GAG/拍摄点语义与完整目标图验证_v1/README.md)：data/crossview_goal_semantics_v1.py提供仅像素/模态/拍摄点语义的公开目标契约和固定全图处理；候选未过，未接生产GUI或导航。恢复仅eval/audit_crossview_fullframe_v1.py（不加--save），旧CV-002/003/004为绑定证据/依赖，不能按淘汰版本删除。
+
+当前跨视角进度阅读入口为[CV-006素材准入](../../DATA/processed_data/MM-GAG/对齐头训练素材准入_v1/README.md)，只有静态盘点和未准入的小头构想。复核用eval/audit_crossview_training_inventory_v1.py，不加--save；没有新训练器/模型，不能把条件式方案当执行授权。最近真实感知仍为CV-005失败对照，旧依赖/数据和来源角色保留。
+
+当前弱配对数据/研究设计入口为[CV-007](../../DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/README.md)，data/weak_scene_pairs_v1.py仅将经过SHA验证的原图片段转为两张只读RGB，不返回整图或标签给头。训练执行器与特征绑定尚未实现；复核用eval/audit_weak_scene_pairs_v1.py（不加--save），不得直接运行训练设计文件。

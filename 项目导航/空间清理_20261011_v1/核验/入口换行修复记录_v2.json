@@ -1,0 +1,40 @@
+{
+  "at": "2026-10-11T19:36:22+0800",
+  "initial_whitespace_check_passed": false,
+  "cause": "current-entry writes added extra CR characters on Windows",
+  "fix": "only mutable current entries touched this task; single LF storage; no historical evidence or code rewrites",
+  "files": [
+    {
+      "path": ".agents/TASKS.md",
+      "duplicated_CR_sequences": 708
+    },
+    {
+      "path": "README.md",
+      "duplicated_CR_sequences": 197
+    },
+    {
+      "path": "docs/PROJECT_STATE.md",
+      "duplicated_CR_sequences": 359
+    },
+    {
+      "path": "docs/维护/版本生命周期.json",
+      "duplicated_CR_sequences": 0
+    },
+    {
+      "path": ".gitignore",
+      "duplicated_CR_sequences": 96
+    },
+    {
+      "path": "项目导航/空间清理_20261011_v1/README.md",
+      "duplicated_CR_sequences": 20
+    },
+    {
+      "path": "项目导航/空间清理_20261011_v1/清理报告.md",
+      "duplicated_CR_sequences": 32
+    },
+    {
+      "path": "项目导航/空间清理_20261011_v1/保留策略与恢复说明.md",
+      "duplicated_CR_sequences": 22
+    }
+  ]
+}

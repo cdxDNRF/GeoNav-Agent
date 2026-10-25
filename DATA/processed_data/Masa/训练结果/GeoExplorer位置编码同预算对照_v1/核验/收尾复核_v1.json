@@ -1,0 +1,32 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-09T10:23:42",
+  "training_runs": 6,
+  "microbatches_checked": 196200,
+  "updates_checked": 1800,
+  "finite_losses_and_resource_caps": true,
+  "checkpoint_seals_checked": 9,
+  "prediction_rows_checked": 19728,
+  "preserved_engineering_and_closure_files": 45,
+  "necessary_gates": 13,
+  "passed_gates": 8,
+  "development_screen_passed": false,
+  "read_only_audits_repeated": [
+    {
+      "module": "eval.audit_geoexplorer_position_training_v1",
+      "exit_code": 0
+    },
+    {
+      "module": "eval.audit_geoexplorer_position_development_v1",
+      "exit_code": 0
+    }
+  ],
+  "model_forward": 0,
+  "new_training": 0,
+  "new_navigation": 0,
+  "new_sr": false,
+  "api_calls": 0,
+  "reserve_consumption": 0,
+  "independent_person_review": false,
+  "scope": "Same Agent, separate previously frozen path/label/count/bootstrap audits; closure also checks finite logs, byte seals and prior evidence."
+}

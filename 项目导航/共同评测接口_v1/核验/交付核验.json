@@ -1,0 +1,141 @@
+{
+  "task": "BENCH-002",
+  "status": "passed",
+  "scope": "synthetic interface, not learned baseline reproduction",
+  "unit_tests_passed": 24,
+  "synthetic_episodes": 48,
+  "synthetic_actions": 264,
+  "synthetic_area_labels": 2,
+  "true_geographic_samples": 0,
+  "real_training_seeds": 0,
+  "sources": [
+    {
+      "path": "project/src/agents/benchmark_contract_v1.py",
+      "sha256": "920b7d346f5f715f72bfb3c1dd5fab6e9924853d9eecb31cb8732e8467ae1a2f",
+      "ast_ok": true,
+      "imports": [
+        "dataclasses",
+        "math",
+        "typing",
+        "env.environment"
+      ],
+      "status": "selected_interface_delivery",
+      "replacement": null
+    },
+    {
+      "path": "project/src/agents/geoexplorer_contract_v1.py",
+      "sha256": "a936e8c27adc9ccf0cb7b1ed421de8bba8ec5fdb2822a97af271ecce35506ec6",
+      "ast_ok": true,
+      "imports": [
+        "dataclasses",
+        "agents.benchmark_contract_v1"
+      ],
+      "status": "selected_interface_delivery",
+      "replacement": null
+    },
+    {
+      "path": "project/src/eval/benchmark_runner_v1.py",
+      "sha256": "122d8ca993edb7b78e4c0d98dbcb827cd12f2677d7b49b1ee25d17300b7fb1ca",
+      "ast_ok": true,
+      "imports": [
+        "dataclasses",
+        "hashlib",
+        "json",
+        "pathlib",
+        "re",
+        "typing",
+        "agents.benchmark_contract_v1",
+        "env.environment"
+      ],
+      "status": "selected_interface_delivery",
+      "replacement": null
+    },
+    {
+      "path": "project/src/eval/audit_benchmark_contract_v1.py",
+      "sha256": "6548bd9e992c0ee4fb898ba449dbe4c1fb8bd9b4cdaaa8316b9bc816afd56ed8",
+      "ast_ok": true,
+      "imports": [
+        "argparse",
+        "hashlib",
+        "json",
+        "pathlib"
+      ],
+      "status": "selected_interface_delivery",
+      "replacement": null
+    },
+    {
+      "path": "project/src/tests/test_benchmark_contract_v1.py",
+      "sha256": "eb84716cf431135b72609d02536d347cec6edee332cbff71e54380e7510b38b1",
+      "ast_ok": true,
+      "imports": [
+        "dataclasses",
+        "pathlib",
+        "hashlib",
+        "json",
+        "sys",
+        "tempfile",
+        "unittest",
+        "agents.benchmark_contract_v1",
+        "agents.geoexplorer_contract_v1",
+        "eval.benchmark_runner_v1",
+        "eval.audit_benchmark_contract_v1"
+      ],
+      "status": "selected_interface_delivery",
+      "replacement": null
+    }
+  ],
+  "bindings": {
+    "project/src/agents/benchmark_contract_v1.py": "920b7d346f5f715f72bfb3c1dd5fab6e9924853d9eecb31cb8732e8467ae1a2f",
+    "project/src/agents/geoexplorer_contract_v1.py": "a936e8c27adc9ccf0cb7b1ed421de8bba8ec5fdb2822a97af271ecce35506ec6",
+    "project/src/eval/benchmark_runner_v1.py": "122d8ca993edb7b78e4c0d98dbcb827cd12f2677d7b49b1ee25d17300b7fb1ca",
+    "project/src/eval/audit_benchmark_contract_v1.py": "6548bd9e992c0ee4fb898ba449dbe4c1fb8bd9b4cdaaa8316b9bc816afd56ed8",
+    "project/src/tests/test_benchmark_contract_v1.py": "eb84716cf431135b72609d02536d347cec6edee332cbff71e54380e7510b38b1",
+    "项目导航/共同评测接口_v1/README.md": "5e157789b1630f57712bb6072f226d248f3fcb2519dafc6942dba3f8d6f8d6b3",
+    "项目导航/共同评测接口_v1/下一项资源实测与训练协议草案.md": "2d76639b64f5b0798f25a300ae494a56827c2610e155cf67e5efa55f507eeacb",
+    "项目导航/共同评测接口_v1/共同评测接口验收报告.md": "9bfdd6a0d69a8f6ce14e5ec6ad10e0beb1312862a1d316cf660b92b0a34e6cd7",
+    "项目导航/共同评测接口_v1/合成验证/fake_weight.json": "c6b756fbc042c40b6f6f4392da75ccae8258894f380f33e1bde6d7b51f2d5212",
+    "项目导航/共同评测接口_v1/合成验证/独立方程复核.json": "8788884c1168d991609b902719ea817ef94cc7a4312cdd3542c015c09a2a47f3",
+    "项目导航/共同评测接口_v1/源码快照/audit_benchmark_contract_v1.py": "6548bd9e992c0ee4fb898ba449dbe4c1fb8bd9b4cdaaa8316b9bc816afd56ed8",
+    "项目导航/共同评测接口_v1/源码快照/benchmark_contract_v1.py": "920b7d346f5f715f72bfb3c1dd5fab6e9924853d9eecb31cb8732e8467ae1a2f",
+    "项目导航/共同评测接口_v1/源码快照/benchmark_runner_v1.py": "122d8ca993edb7b78e4c0d98dbcb827cd12f2677d7b49b1ee25d17300b7fb1ca",
+    "项目导航/共同评测接口_v1/源码快照/geoexplorer_contract_v1.py": "a936e8c27adc9ccf0cb7b1ed421de8bba8ec5fdb2822a97af271ecce35506ec6",
+    "项目导航/共同评测接口_v1/源码快照/test_benchmark_contract_v1.py": "eb84716cf431135b72609d02536d347cec6edee332cbff71e54380e7510b38b1",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/binding.json": "091b642dfdc1278578bd58af16d1213b433b05d13d24e743193e96b4f154b4c5",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/evaluator_manifest.json": "30b43b3886f07bb9a65ee91e610356c4cb6c87c799bd0d3e5a19bd58c6d9a5ae",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeGeoHistory_s0_Disabled.jsonl": "fc56d33d6b79980a5fe5d6244b7bfb9df0ff47de4032ace9cb224e6c8a494193",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeGeoHistory_s0_Full.jsonl": "3fc2e97ec32e8a8dedd749c0f0d270951392f0d0615e018af96bb2a69ec4c531",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeGeoHistory_s0_Mean.jsonl": "219e0899e4fce55f2b4bc47f06c43cc6b0009ffb0094d3490a7f7e7941bd650e",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeGeoHistory_s0_Wrong.jsonl": "667c5a9aec0cf48e1ed9335b4c91534be1b00c8fdc7c2d40634918057d2c6ee9",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeGeoHistory_s1_Disabled.jsonl": "fc56d33d6b79980a5fe5d6244b7bfb9df0ff47de4032ace9cb224e6c8a494193",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeGeoHistory_s1_Full.jsonl": "3fc2e97ec32e8a8dedd749c0f0d270951392f0d0615e018af96bb2a69ec4c531",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeGeoHistory_s1_Mean.jsonl": "219e0899e4fce55f2b4bc47f06c43cc6b0009ffb0094d3490a7f7e7941bd650e",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeGeoHistory_s1_Wrong.jsonl": "667c5a9aec0cf48e1ed9335b4c91534be1b00c8fdc7c2d40634918057d2c6ee9",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeGeoHistory_s2_Disabled.jsonl": "fc56d33d6b79980a5fe5d6244b7bfb9df0ff47de4032ace9cb224e6c8a494193",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeGeoHistory_s2_Full.jsonl": "3fc2e97ec32e8a8dedd749c0f0d270951392f0d0615e018af96bb2a69ec4c531",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeGeoHistory_s2_Mean.jsonl": "219e0899e4fce55f2b4bc47f06c43cc6b0009ffb0094d3490a7f7e7941bd650e",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeGeoHistory_s2_Wrong.jsonl": "667c5a9aec0cf48e1ed9335b4c91534be1b00c8fdc7c2d40634918057d2c6ee9",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeScript_s0_Disabled.jsonl": "fc56d33d6b79980a5fe5d6244b7bfb9df0ff47de4032ace9cb224e6c8a494193",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeScript_s0_Full.jsonl": "3fc2e97ec32e8a8dedd749c0f0d270951392f0d0615e018af96bb2a69ec4c531",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeScript_s0_Mean.jsonl": "219e0899e4fce55f2b4bc47f06c43cc6b0009ffb0094d3490a7f7e7941bd650e",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeScript_s0_Wrong.jsonl": "667c5a9aec0cf48e1ed9335b4c91534be1b00c8fdc7c2d40634918057d2c6ee9",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeScript_s1_Disabled.jsonl": "fc56d33d6b79980a5fe5d6244b7bfb9df0ff47de4032ace9cb224e6c8a494193",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeScript_s1_Full.jsonl": "3fc2e97ec32e8a8dedd749c0f0d270951392f0d0615e018af96bb2a69ec4c531",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeScript_s1_Mean.jsonl": "219e0899e4fce55f2b4bc47f06c43cc6b0009ffb0094d3490a7f7e7941bd650e",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeScript_s1_Wrong.jsonl": "667c5a9aec0cf48e1ed9335b4c91534be1b00c8fdc7c2d40634918057d2c6ee9",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeScript_s2_Disabled.jsonl": "fc56d33d6b79980a5fe5d6244b7bfb9df0ff47de4032ace9cb224e6c8a494193",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeScript_s2_Full.jsonl": "3fc2e97ec32e8a8dedd749c0f0d270951392f0d0615e018af96bb2a69ec4c531",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeScript_s2_Mean.jsonl": "219e0899e4fce55f2b4bc47f06c43cc6b0009ffb0094d3490a7f7e7941bd650e",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/FakeScript_s2_Wrong.jsonl": "667c5a9aec0cf48e1ed9335b4c91534be1b00c8fdc7c2d40634918057d2c6ee9",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/seal.json": "93534f35ad6229e048e206f959cface3fb311a574178580cc594a26e8e192711",
+    "项目导航/共同评测接口_v1/合成验证/固定队列/summary.json": "d3417166a54eb4209c33bf64f1948800becd59dd586fbbef63e5756ce21987d0"
+  },
+  "local_links_checked": 8,
+  "temporary_fixture_residue": 0,
+  "model_forward_executed_in_this_batch": 0,
+  "model_api_calls": 0,
+  "network_calls": 0,
+  "reserve_regions_consumed": 0,
+  "independent_person_review": false,
+  "previous_bench001_hash_recheck": "passed by original readonly verifier",
+  "science_verdict_changed": false
+}

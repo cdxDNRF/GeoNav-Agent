@@ -1,0 +1,39 @@
+{
+  "task": "CV-002",
+  "replaces": "processor equivalence field of failed 工程核验.json only; geometry and 16-pair split unchanged",
+  "implicit_backend": "CLIPImageProcessor in transformers 5.9.0 inherits TorchvisionBackend",
+  "explicit_reference_backend": "CLIPImageProcessorPil; matches original PIL image resize/crop contract",
+  "original_max_delta": 0.015007972717285156,
+  "fixed_max_delta": 0.0,
+  "tolerance_unchanged": 1e-05,
+  "all_deltas": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+  ],
+  "passed": true,
+  "model_forward_calls": 0,
+  "new_sources": [
+    {
+      "path": "project/src/tools/prepare_crossview_probe_v2.py",
+      "sha256": "f3c82bd2624bdbb16a3ff4ebb528c233514fc8924255a70998e6a1afb22175f6"
+    },
+    {
+      "path": "project/src/tests/test_crossview_processors_v2.py",
+      "sha256": "53be8ee715cacd9d0d9af0300fd16a16bf4758220b40d1460f3587de3fa07906"
+    }
+  ]
+}

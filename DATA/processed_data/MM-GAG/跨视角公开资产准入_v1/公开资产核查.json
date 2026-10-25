@@ -1,0 +1,104 @@
+{
+  "task": "CV-022",
+  "candidate": "Sample4Geo/CVUSA",
+  "sample4geo": {
+    "revision": null
+  },
+  "congeo_mechanism_reference_only": {
+    "revision": null
+  },
+  "known_development_dimension_metadata": [
+    {
+      "source_id": "mmgag_062",
+      "ground_width_height": [
+        3024,
+        4032
+      ],
+      "ground_aspect_ratio": 0.75,
+      "fov_degrees_known": false,
+      "target_semantics": "capture_point_proxy",
+      "original_pixels_read": false
+    },
+    {
+      "source_id": "mmgag_073",
+      "ground_width_height": [
+        3024,
+        4032
+      ],
+      "ground_aspect_ratio": 0.75,
+      "fov_degrees_known": false,
+      "target_semantics": "capture_point_proxy",
+      "original_pixels_read": false
+    },
+    {
+      "source_id": "mmgag_079",
+      "ground_width_height": [
+        3024,
+        4032
+      ],
+      "ground_aspect_ratio": 0.75,
+      "fov_degrees_known": false,
+      "target_semantics": "capture_point_proxy",
+      "original_pixels_read": false
+    },
+    {
+      "source_id": "mmgag_039",
+      "ground_width_height": [
+        3024,
+        4032
+      ],
+      "ground_aspect_ratio": 0.75,
+      "fov_degrees_known": false,
+      "target_semantics": "capture_point_proxy",
+      "original_pixels_read": false
+    },
+    {
+      "source_id": "mmgag_081",
+      "ground_width_height": [
+        4032,
+        3024
+      ],
+      "ground_aspect_ratio": 1.3333333333333333,
+      "fov_degrees_known": false,
+      "target_semantics": "capture_point_proxy",
+      "original_pixels_read": false
+    }
+  ],
+  "requests": [
+    {
+      "url": "https://api.github.com/repos/Skyy93/Sample4Geo",
+      "method": "GET",
+      "model_payload": false,
+      "error_type": "HTTPError",
+      "error": "HTTP Error 403: rate limit exceeded",
+      "status": 403
+    },
+    {
+      "url": "https://api.github.com/repos/Skyy93/Sample4Geo/commits/main",
+      "method": "GET",
+      "model_payload": false,
+      "error_type": "HTTPError",
+      "error": "HTTP Error 403: rate limit exceeded",
+      "status": 403
+    },
+    {
+      "url": "https://api.github.com/repos/eceo-epfl/ConGeo/commits/main",
+      "method": "GET",
+      "model_payload": false,
+      "error_type": "HTTPError",
+      "error": "HTTP Error 403: rate limit exceeded",
+      "status": 403
+    }
+  ],
+  "public_fetches": 3,
+  "full_third_party_sources_saved": false,
+  "source_code_executed": false,
+  "model_weights_downloaded": 0,
+  "raw_images_read": 0,
+  "model_forward": 0,
+  "training": 0,
+  "navigation": 0,
+  "confirmation_pixels_features_or_evaluation": 0,
+  "runtime_parameter_count_or_VRAM_measured": false,
+  "public_link_is_not_a_weight_integrity_proof": true
+}

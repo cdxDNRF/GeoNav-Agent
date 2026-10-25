@@ -1,0 +1,61 @@
+{
+  "device": "cuda:0",
+  "elapsed_seconds": 10.54781859999639,
+  "encoders": [
+    {
+      "encoder": "ground",
+      "parameters_used": 87849216,
+      "images": 16,
+      "ignored_nonparameter_buffers": [
+        "vision_model.embeddings.position_ids"
+      ],
+      "seconds": 4.064886300002399,
+      "peak_cuda_allocated_bytes": 414387200,
+      "peak_cuda_reserved_bytes": 457179136,
+      "gradients_enabled": false,
+      "training": false
+    },
+    {
+      "encoder": "aerial",
+      "parameters_used": 87849216,
+      "images": 400,
+      "ignored_nonparameter_buffers": [],
+      "seconds": 2.802678300002299,
+      "peak_cuda_allocated_bytes": 414387200,
+      "peak_cuda_reserved_bytes": 457179136,
+      "gradients_enabled": false,
+      "training": false
+    }
+  ],
+  "attempted_input_images": 416,
+  "successful_forward_calls": 52,
+  "feature_files": [
+    {
+      "path": "DATA/processed_data/MM-GAG/局部语义匹配单因素验证_v1/地面局部特征.npy",
+      "bytes": 802944,
+      "sha256": "f1b841aec4f38c2adff94a60a1d1f9c992f5bd19285055883d94eadbe1334755"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/局部语义匹配单因素验证_v1/航拍局部特征.npy",
+      "bytes": 20070528,
+      "sha256": "5f17e090d29c30c3f72a1cc69143f9e25f426b6340b1c3d943d17ea4b1b3c930"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/局部语义匹配单因素验证_v1/地面全局复现.npy",
+      "bytes": 32896,
+      "sha256": "38e6b3e4900dec1b96bbf763b826d1344552802ee35f1cfdf1dd10c0bc5a942a"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/局部语义匹配单因素验证_v1/航拍全局复现.npy",
+      "bytes": 819328,
+      "sha256": "63c732c94cd5d02c6ae500125b729036e301818e3a56301659cfe2c794b10565"
+    }
+  ],
+  "frozen_models": true,
+  "reserved_source_images_encoded": 0,
+  "new_training_parameters": 0,
+  "training_steps": 0,
+  "navigation_episodes": 0,
+  "model_api_calls": 0,
+  "downloads": 0
+}

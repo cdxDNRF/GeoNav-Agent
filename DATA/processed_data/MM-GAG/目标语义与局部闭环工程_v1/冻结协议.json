@@ -1,0 +1,52 @@
+{
+  "task": "CV-024",
+  "date": "2026-10-22",
+  "status": "engineering development, not formal confirmation",
+  "hypothesis": "a local affine semantic trend can guide equal-cost frontier choices using only visited observations",
+  "one_factor": "semantic tie-break of nearest-frontier exploration; frozen paired encoders, no head/capacity/threshold change",
+  "arms": [
+    "Full",
+    "Disabled",
+    "Mean",
+    "Wrong",
+    "Frontier"
+  ],
+  "unique_tasks": 20,
+  "planned_episodes": 100,
+  "grid": 5,
+  "budget": 10,
+  "task_selection": "hash of fixed known-dev window/start, without feature scores;5 sources x C4/5/6/8",
+  "formula": "s_i=cos(a_i,g); b=lstsq(X-mean(X),s-mean(s)); choose min(path_cost,-s_hat,public_cell_id)",
+  "forecast_precision": "round predicted score to12 decimal places for stable exact ties",
+  "model_input": "one goal512, current512, public cell/grid/step/budget only; internal history reset per episode",
+  "topology": "known grid geometry; paths through visited cells with at most one unknown endpoint",
+  "conditions": {
+    "Full": "same paired ground vector",
+    "Disabled": "goal=None",
+    "Mean": "unit(mean(unit(fit ground[0:9]))) only",
+    "Wrong": "fixed previous-protocol cyclic dev ground index",
+    "Frontier": "same path and tie ordering, no target evidence"
+  },
+  "actions": "up/right/down/left; out-of-bounds would cost one step; first arrival/last-step success; no stop",
+  "gate_scope": "bounded mechanism screen only; no static Top-k pass required; historical failed gates unchanged",
+  "screen": {
+    "Full_net_success_vs_each_control_and_Frontier_min": 2,
+    "Full_SG_no_worse_than_each": true,
+    "positive_sources_vs_Frontier_min": 3,
+    "audit_and_permission_tests_required": true
+  },
+  "stop": "single execution; failed screen closes this simple local-gradient factor, no tuning/relabel/new-source/parameter scan",
+  "resources": {
+    "output_bytes": 8388608,
+    "CPU_seconds": 600,
+    "max_actions": 1000,
+    "encoder_forward": 0,
+    "train_updates": 0,
+    "raw_pixel_reads": 0,
+    "downloads": 0,
+    "API": 0,
+    "reserved_group_features": 0
+  },
+  "not_authorized_by_result": "automatic default/GUI release, new model, training or confirmation",
+  "retention": "small code/config/task/trajectory/metric/audit evidence; no feature/model copies"
+}

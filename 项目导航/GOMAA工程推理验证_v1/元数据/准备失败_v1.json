@@ -1,0 +1,9 @@
+{
+  "stage": "before_freeze",
+  "preparer": "project/src/tools/prepare_gomaa_engineering_v1.py",
+  "error": "KeyError cached-feature binding uses Windows separators",
+  "model_forward": 0,
+  "navigation": 0,
+  "frozen_protocol_created": false,
+  "repair": "prepare_gomaa_engineering_v2.py normalizes old path separators only"
+}

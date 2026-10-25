@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "engineering_evidence": "DATA/processed_data/MM-GAG/地面目标实时编码接口工程_v2/README.md",
+  "models": [
+    {
+      "path": "models/clip_vit_b32_public_v1/config.json",
+      "sha256": "b575ef3c36f2a057fa19e221650105052d61cc9c1a972ec15019c6261ec98770",
+      "bytes": 4186
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/preprocessor_config.json",
+      "sha256": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd",
+      "bytes": 316
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/pytorch_model.bin",
+      "sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+      "bytes": 605247071
+    },
+    {
+      "path": "models/Sat2Cap/config.json",
+      "sha256": "0a9cffa477a4bfc9682da841841b7e4227ad0cd06ad81d3eb1a831d5557976c5",
+      "bytes": 559
+    },
+    {
+      "path": "models/Sat2Cap/model.safetensors",
+      "sha256": "fec6802fbf27664ddd556fc445ff7d8e7ab0f05fea160c2e16680642dcebf3e0",
+      "bytes": 351420784
+    }
+  ],
+  "sample": {
+    "target": {
+      "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3368.jpg",
+      "bytes": 1593333,
+      "sha256": "4f4064b8c691eaf9e08e6157bb872625ae03116896892a99ebc6646683a18ff0"
+    },
+    "current": {
+      "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3368.HEIC/sat_1_4.jpg",
+      "bytes": 23828,
+      "sha256": "e9dbf8eef82cbefd6c10364c9aa6c5b51c7c75fd5717ac44a25dfb8327496e09"
+    }
+  },
+  "sample_scope": "one already consumed development pair;not independent navigation confirmation"
+}

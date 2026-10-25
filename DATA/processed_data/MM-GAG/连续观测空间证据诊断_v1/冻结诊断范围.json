@@ -1,0 +1,38 @@
+{
+  "task": "CV-026",
+  "stage": "posthoc developer diagnosis, not navigation or confirmation",
+  "purpose": "test raw scalar similarity as approach/near-proxy evidence without re-running closed CV024 factor",
+  "primary": "5 known-dev source maps, Identity only, all144 undirected edges per9x9 source; no new encoder/head variants",
+  "controls": [
+    "Full",
+    "Disabled",
+    "Mean",
+    "Wrong"
+  ],
+  "formulas": {
+    "edge": "sign((s_b-s_a)*(d(a,g)-d(b,g))); tie gets half credit, no epsilon search",
+    "local_peak": "s(proxy)>all4 direct neighbor scores by >1e-12",
+    "prefix": "only saved decision positions on target-blind Frontier routes, exclude unobserved terminal destinations",
+    "rank": "rank of centered visited row/column positions; geometry only, not a target direction estimate"
+  },
+  "secondary": "20 fixed old windows,100 old trajectories, one saved human trace; overlapping edges and repeated visits not new samples",
+  "exploratory_screen": {
+    "Full_edge_macro_gt_half": true,
+    "Full_local_proxy_peaks_min_sources": 3,
+    "Full_vs_Mean_and_Wrong_positive_sources_min": 3,
+    "paired_source_bootstrap95_lower_gt_zero": true
+  },
+  "screen_limits": "eligibility for raw-similarity approach/peak mechanism only; not universal necessity, formal acceptance or proof of impossibility",
+  "stop": "one diagnosis; no policy navigation, threshold tuning, model application, label change or reserved-source use; failed screen does not authorize a new autonomous candidate",
+  "resources": {
+    "output_bytes": 3145728,
+    "CPU_seconds": 120,
+    "raw_pixels": 0,
+    "encoder_forward": 0,
+    "training": 0,
+    "navigation": 0,
+    "API": 0,
+    "downloads": 0,
+    "reserved_groups": 0
+  }
+}

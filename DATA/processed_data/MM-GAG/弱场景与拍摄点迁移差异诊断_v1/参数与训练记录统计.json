@@ -1,0 +1,44 @@
+{
+  "Identity": {
+    "parameters": 8192,
+    "U_frobenius": 0.0,
+    "V_frobenius": 1.2714325088430471,
+    "residual_operator_singular_values": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "residual_operator_frobenius": 0.0,
+    "note": "parameter-only spectrum; never apply U/V to cached targets"
+  },
+  "Rank8Final": {
+    "parameters": 8192,
+    "U_frobenius": 4.103486380075253,
+    "V_frobenius": 6.262090882427176,
+    "residual_operator_singular_values": [
+      5.0112200503493565,
+      4.251558802419274,
+      3.616410108531897,
+      3.3277662149854725,
+      2.934775991827583,
+      2.539437680642437,
+      2.1374697199877084,
+      1.6742545461449063
+    ],
+    "residual_operator_frobenius": 9.474918872653637,
+    "note": "parameter-only spectrum; never apply U/V to cached targets"
+  },
+  "training": {
+    "updates": 500,
+    "distinct_fit_queries": 9,
+    "supervision_uses": 4500,
+    "first_fit_loss": 4.14785623550415,
+    "final_fit_loss": 0.08066688477993011,
+    "criterion": "only fit losses saved during CV-008, not a dev learning curve"
+  }
+}

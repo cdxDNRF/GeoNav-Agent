@@ -1,0 +1,3607 @@
+{
+  "task": "BENCH-017",
+  "torch_version": "2.6.0+cu124",
+  "weights_only": true,
+  "map_location": "meta",
+  "mmap": true,
+  "results": [
+    {
+      "file": "ppo_falcon.pt",
+      "sha256": "f987246c7e0575e7d7ee85eab823d965dcfc0cac421ec05235cae323bf09be4d",
+      "safe_load_success": true,
+      "zip_format": true,
+      "archive_entries": 107,
+      "archive_uncompressed_bytes": 955883379,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "top_keys": [
+        "llm_module.llm.transformer.word_embeddings.weight",
+        "llm_module.llm.transformer.h.0.self_attention.query_key_value.weight",
+        "llm_module.llm.transformer.h.0.self_attention.dense.weight",
+        "llm_module.llm.transformer.h.0.mlp.dense_h_to_4h.weight",
+        "llm_module.llm.transformer.h.0.mlp.dense_4h_to_h.weight",
+        "llm_module.llm.transformer.h.0.input_layernorm.weight",
+        "llm_module.llm.transformer.h.0.input_layernorm.bias",
+        "llm_module.llm.transformer.h.1.self_attention.query_key_value.weight",
+        "llm_module.llm.transformer.h.1.self_attention.dense.weight",
+        "llm_module.llm.transformer.h.1.mlp.dense_h_to_4h.weight",
+        "llm_module.llm.transformer.h.1.mlp.dense_4h_to_h.weight",
+        "llm_module.llm.transformer.h.1.input_layernorm.weight",
+        "llm_module.llm.transformer.h.1.input_layernorm.bias",
+        "llm_module.llm.transformer.h.2.self_attention.query_key_value.weight",
+        "llm_module.llm.transformer.h.2.self_attention.dense.weight",
+        "llm_module.llm.transformer.h.2.mlp.dense_h_to_4h.weight",
+        "llm_module.llm.transformer.h.2.mlp.dense_4h_to_h.weight",
+        "llm_module.llm.transformer.h.2.input_layernorm.weight",
+        "llm_module.llm.transformer.h.2.input_layernorm.bias",
+        "llm_module.llm.transformer.h.3.self_attention.query_key_value.weight",
+        "llm_module.llm.transformer.h.3.self_attention.dense.weight",
+        "llm_module.llm.transformer.h.3.mlp.dense_h_to_4h.weight",
+        "llm_module.llm.transformer.h.3.mlp.dense_4h_to_h.weight",
+        "llm_module.llm.transformer.h.3.input_layernorm.weight",
+        "llm_module.llm.transformer.h.3.input_layernorm.bias",
+        "llm_module.llm.transformer.h.4.self_attention.query_key_value.weight",
+        "llm_module.llm.transformer.h.4.self_attention.dense.weight",
+        "llm_module.llm.transformer.h.4.mlp.dense_h_to_4h.weight",
+        "llm_module.llm.transformer.h.4.mlp.dense_4h_to_h.weight",
+        "llm_module.llm.transformer.h.4.input_layernorm.weight",
+        "llm_module.llm.transformer.h.4.input_layernorm.bias",
+        "llm_module.llm.transformer.h.5.self_attention.query_key_value.weight",
+        "llm_module.llm.transformer.h.5.self_attention.dense.weight",
+        "llm_module.llm.transformer.h.5.mlp.dense_h_to_4h.weight",
+        "llm_module.llm.transformer.h.5.mlp.dense_4h_to_h.weight",
+        "llm_module.llm.transformer.h.5.input_layernorm.weight",
+        "llm_module.llm.transformer.h.5.input_layernorm.bias",
+        "llm_module.llm.transformer.h.6.self_attention.query_key_value.weight",
+        "llm_module.llm.transformer.h.6.self_attention.dense.weight",
+        "llm_module.llm.transformer.h.6.mlp.dense_h_to_4h.weight",
+        "llm_module.llm.transformer.h.6.mlp.dense_4h_to_h.weight",
+        "llm_module.llm.transformer.h.6.input_layernorm.weight",
+        "llm_module.llm.transformer.h.6.input_layernorm.bias",
+        "llm_module.llm.transformer.h.7.self_attention.query_key_value.weight",
+        "llm_module.llm.transformer.h.7.self_attention.dense.weight",
+        "llm_module.llm.transformer.h.7.mlp.dense_h_to_4h.weight",
+        "llm_module.llm.transformer.h.7.mlp.dense_4h_to_h.weight",
+        "llm_module.llm.transformer.h.7.input_layernorm.weight",
+        "llm_module.llm.transformer.h.7.input_layernorm.bias",
+        "llm_module.llm.transformer.h.8.self_attention.query_key_value.weight",
+        "llm_module.llm.transformer.h.8.self_attention.dense.weight",
+        "llm_module.llm.transformer.h.8.mlp.dense_h_to_4h.weight",
+        "llm_module.llm.transformer.h.8.mlp.dense_4h_to_h.weight",
+        "llm_module.llm.transformer.h.8.input_layernorm.weight",
+        "llm_module.llm.transformer.h.8.input_layernorm.bias",
+        "llm_module.llm.transformer.h.9.self_attention.query_key_value.weight",
+        "llm_module.llm.transformer.h.9.self_attention.dense.weight",
+        "llm_module.llm.transformer.h.9.mlp.dense_h_to_4h.weight",
+        "llm_module.llm.transformer.h.9.mlp.dense_4h_to_h.weight",
+        "llm_module.llm.transformer.h.9.input_layernorm.weight",
+        "llm_module.llm.transformer.h.9.input_layernorm.bias",
+        "llm_module.llm.transformer.h.10.self_attention.query_key_value.weight",
+        "llm_module.llm.transformer.h.10.self_attention.dense.weight",
+        "llm_module.llm.transformer.h.10.mlp.dense_h_to_4h.weight",
+        "llm_module.llm.transformer.h.10.mlp.dense_4h_to_h.weight",
+        "llm_module.llm.transformer.h.10.input_layernorm.weight",
+        "llm_module.llm.transformer.h.10.input_layernorm.bias",
+        "llm_module.llm.transformer.h.11.self_attention.query_key_value.weight",
+        "llm_module.llm.transformer.h.11.self_attention.dense.weight",
+        "llm_module.llm.transformer.h.11.mlp.dense_h_to_4h.weight",
+        "llm_module.llm.transformer.h.11.mlp.dense_4h_to_h.weight",
+        "llm_module.llm.transformer.h.11.input_layernorm.weight",
+        "llm_module.llm.transformer.h.11.input_layernorm.bias",
+        "llm_module.llm.transformer.project_in.weight",
+        "llm_module.llm.transformer.action_tokens.weight",
+        "llm_module.llm.transformer.patch_pos_embeds.weight",
+        "llm_module.llm.transformer.project_action_in.weight",
+        "llm_module.llm.transformer.project_out.weight",
+        "llm_module.llm.transformer.ln_f.weight",
+        "llm_module.llm.transformer.ln_f.bias",
+        "llm_module.llm.lm_head.weight",
+        "llm_module.llm.distance_pred.weight",
+        "llm.transformer.word_embeddings.weight",
+        "llm.transformer.h.0.self_attention.query_key_value.weight",
+        "llm.transformer.h.0.self_attention.dense.weight",
+        "llm.transformer.h.0.mlp.dense_h_to_4h.weight",
+        "llm.transformer.h.0.mlp.dense_4h_to_h.weight",
+        "llm.transformer.h.0.input_layernorm.weight",
+        "llm.transformer.h.0.input_layernorm.bias",
+        "llm.transformer.h.1.self_attention.query_key_value.weight",
+        "llm.transformer.h.1.self_attention.dense.weight",
+        "llm.transformer.h.1.mlp.dense_h_to_4h.weight",
+        "llm.transformer.h.1.mlp.dense_4h_to_h.weight",
+        "llm.transformer.h.1.input_layernorm.weight",
+        "llm.transformer.h.1.input_layernorm.bias",
+        "llm.transformer.h.2.self_attention.query_key_value.weight",
+        "llm.transformer.h.2.self_attention.dense.weight",
+        "llm.transformer.h.2.mlp.dense_h_to_4h.weight",
+        "llm.transformer.h.2.mlp.dense_4h_to_h.weight",
+        "llm.transformer.h.2.input_layernorm.weight",
+        "llm.transformer.h.2.input_layernorm.bias",
+        "llm.transformer.h.3.self_attention.query_key_value.weight",
+        "llm.transformer.h.3.self_attention.dense.weight",
+        "llm.transformer.h.3.mlp.dense_h_to_4h.weight",
+        "llm.transformer.h.3.mlp.dense_4h_to_h.weight",
+        "llm.transformer.h.3.input_layernorm.weight",
+        "llm.transformer.h.3.input_layernorm.bias",
+        "llm.transformer.h.4.self_attention.query_key_value.weight",
+        "llm.transformer.h.4.self_attention.dense.weight",
+        "llm.transformer.h.4.mlp.dense_h_to_4h.weight",
+        "llm.transformer.h.4.mlp.dense_4h_to_h.weight",
+        "llm.transformer.h.4.input_layernorm.weight",
+        "llm.transformer.h.4.input_layernorm.bias",
+        "llm.transformer.h.5.self_attention.query_key_value.weight",
+        "llm.transformer.h.5.self_attention.dense.weight",
+        "llm.transformer.h.5.mlp.dense_h_to_4h.weight",
+        "llm.transformer.h.5.mlp.dense_4h_to_h.weight",
+        "llm.transformer.h.5.input_layernorm.weight",
+        "llm.transformer.h.5.input_layernorm.bias",
+        "llm.transformer.h.6.self_attention.query_key_value.weight",
+        "llm.transformer.h.6.self_attention.dense.weight",
+        "llm.transformer.h.6.mlp.dense_h_to_4h.weight",
+        "llm.transformer.h.6.mlp.dense_4h_to_h.weight",
+        "llm.transformer.h.6.input_layernorm.weight",
+        "llm.transformer.h.6.input_layernorm.bias",
+        "llm.transformer.h.7.self_attention.query_key_value.weight",
+        "llm.transformer.h.7.self_attention.dense.weight",
+        "llm.transformer.h.7.mlp.dense_h_to_4h.weight",
+        "llm.transformer.h.7.mlp.dense_4h_to_h.weight",
+        "llm.transformer.h.7.input_layernorm.weight",
+        "llm.transformer.h.7.input_layernorm.bias",
+        "llm.transformer.h.8.self_attention.query_key_value.weight",
+        "llm.transformer.h.8.self_attention.dense.weight",
+        "llm.transformer.h.8.mlp.dense_h_to_4h.weight",
+        "llm.transformer.h.8.mlp.dense_4h_to_h.weight",
+        "llm.transformer.h.8.input_layernorm.weight",
+        "llm.transformer.h.8.input_layernorm.bias",
+        "llm.transformer.h.9.self_attention.query_key_value.weight",
+        "llm.transformer.h.9.self_attention.dense.weight",
+        "llm.transformer.h.9.mlp.dense_h_to_4h.weight",
+        "llm.transformer.h.9.mlp.dense_4h_to_h.weight",
+        "llm.transformer.h.9.input_layernorm.weight",
+        "llm.transformer.h.9.input_layernorm.bias",
+        "llm.transformer.h.10.self_attention.query_key_value.weight",
+        "llm.transformer.h.10.self_attention.dense.weight",
+        "llm.transformer.h.10.mlp.dense_h_to_4h.weight",
+        "llm.transformer.h.10.mlp.dense_4h_to_h.weight",
+        "llm.transformer.h.10.input_layernorm.weight",
+        "llm.transformer.h.10.input_layernorm.bias",
+        "llm.transformer.h.11.self_attention.query_key_value.weight",
+        "llm.transformer.h.11.self_attention.dense.weight",
+        "llm.transformer.h.11.mlp.dense_h_to_4h.weight",
+        "llm.transformer.h.11.mlp.dense_4h_to_h.weight",
+        "llm.transformer.h.11.input_layernorm.weight",
+        "llm.transformer.h.11.input_layernorm.bias",
+        "llm.transformer.project_in.weight",
+        "llm.transformer.action_tokens.weight",
+        "llm.transformer.patch_pos_embeds.weight",
+        "llm.transformer.project_action_in.weight",
+        "llm.transformer.project_out.weight",
+        "llm.transformer.ln_f.weight",
+        "llm.transformer.ln_f.bias",
+        "llm.lm_head.weight",
+        "llm.distance_pred.weight",
+        "policy.actor.0.weight",
+        "policy.actor.0.bias",
+        "policy.actor.2.weight",
+        "policy.actor.2.bias",
+        "policy.actor.4.weight",
+        "policy.actor.4.bias",
+        "policy.critic.0.weight",
+        "policy.critic.0.bias",
+        "policy.critic.2.weight",
+        "policy.critic.2.bias",
+        "policy.critic.4.weight",
+        "policy.critic.4.bias",
+        "policy_old.actor.0.weight",
+        "policy_old.actor.0.bias",
+        "policy_old.actor.2.weight",
+        "policy_old.actor.2.bias",
+        "policy_old.actor.4.weight",
+        "policy_old.actor.4.bias",
+        "policy_old.critic.0.weight",
+        "policy_old.critic.0.bias",
+        "policy_old.critic.2.weight",
+        "policy_old.critic.2.bias",
+        "policy_old.critic.4.weight",
+        "policy_old.critic.4.bias"
+      ],
+      "state": {
+        "llm_module.llm.transformer.word_embeddings.weight": {
+          "shape": [
+            65031,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 74915712,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.0.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.0.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.0.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.0.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.0.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.0.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.1.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.1.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.1.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.1.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.1.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.1.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.2.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.2.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.2.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.2.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.2.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.2.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.3.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.3.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.3.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.3.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.3.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.3.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.4.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.4.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.4.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.4.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.4.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.4.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.5.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.5.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.5.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.5.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.5.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.5.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.6.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.6.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.6.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.6.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.6.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.6.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.7.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.7.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.7.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.7.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.7.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.7.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.8.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.8.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.8.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.8.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.8.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.8.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.9.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.9.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.9.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.9.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.9.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.9.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.10.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.10.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.10.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.10.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.10.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.10.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.11.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.11.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.11.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.11.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.11.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.h.11.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.project_in.weight": {
+          "shape": [
+            1152,
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 589824,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.action_tokens.weight": {
+          "shape": [
+            4,
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 2048,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.patch_pos_embeds.weight": {
+          "shape": [
+            1152,
+            4
+          ],
+          "dtype": "torch.float32",
+          "numel": 4608,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.project_action_in.weight": {
+          "shape": [
+            1152,
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 589824,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.project_out.weight": {
+          "shape": [
+            512,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 589824,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.ln_f.weight": {
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 512,
+          "device": "meta"
+        },
+        "llm_module.llm.transformer.ln_f.bias": {
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 512,
+          "device": "meta"
+        },
+        "llm_module.llm.lm_head.weight": {
+          "shape": [
+            65031,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 74915712,
+          "device": "meta"
+        },
+        "llm_module.llm.distance_pred.weight": {
+          "shape": [
+            4,
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 2048,
+          "device": "meta"
+        },
+        "llm.transformer.word_embeddings.weight": {
+          "shape": [
+            65031,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 74915712,
+          "device": "meta"
+        },
+        "llm.transformer.h.0.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.0.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.0.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.0.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.0.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.0.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.1.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.1.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.1.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.1.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.1.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.1.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.2.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.2.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.2.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.2.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.2.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.2.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.3.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.3.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.3.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.3.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.3.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.3.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.4.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.4.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.4.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.4.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.4.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.4.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.5.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.5.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.5.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.5.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.5.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.5.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.6.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.6.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.6.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.6.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.6.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.6.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.7.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.7.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.7.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.7.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.7.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.7.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.8.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.8.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.8.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.8.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.8.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.8.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.9.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.9.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.9.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.9.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.9.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.9.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.10.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.10.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.10.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.10.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.10.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.10.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.11.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.11.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.11.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.11.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.11.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.11.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.project_in.weight": {
+          "shape": [
+            1152,
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 589824,
+          "device": "meta"
+        },
+        "llm.transformer.action_tokens.weight": {
+          "shape": [
+            4,
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 2048,
+          "device": "meta"
+        },
+        "llm.transformer.patch_pos_embeds.weight": {
+          "shape": [
+            1152,
+            4
+          ],
+          "dtype": "torch.float32",
+          "numel": 4608,
+          "device": "meta"
+        },
+        "llm.transformer.project_action_in.weight": {
+          "shape": [
+            1152,
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 589824,
+          "device": "meta"
+        },
+        "llm.transformer.project_out.weight": {
+          "shape": [
+            512,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 589824,
+          "device": "meta"
+        },
+        "llm.transformer.ln_f.weight": {
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 512,
+          "device": "meta"
+        },
+        "llm.transformer.ln_f.bias": {
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 512,
+          "device": "meta"
+        },
+        "llm.lm_head.weight": {
+          "shape": [
+            65031,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 74915712,
+          "device": "meta"
+        },
+        "llm.distance_pred.weight": {
+          "shape": [
+            4,
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 2048,
+          "device": "meta"
+        },
+        "policy.actor.0.weight": {
+          "shape": [
+            128,
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 65536,
+          "device": "meta"
+        },
+        "policy.actor.0.bias": {
+          "shape": [
+            128
+          ],
+          "dtype": "torch.float32",
+          "numel": 128,
+          "device": "meta"
+        },
+        "policy.actor.2.weight": {
+          "shape": [
+            128,
+            128
+          ],
+          "dtype": "torch.float32",
+          "numel": 16384,
+          "device": "meta"
+        },
+        "policy.actor.2.bias": {
+          "shape": [
+            128
+          ],
+          "dtype": "torch.float32",
+          "numel": 128,
+          "device": "meta"
+        },
+        "policy.actor.4.weight": {
+          "shape": [
+            4,
+            128
+          ],
+          "dtype": "torch.float32",
+          "numel": 512,
+          "device": "meta"
+        },
+        "policy.actor.4.bias": {
+          "shape": [
+            4
+          ],
+          "dtype": "torch.float32",
+          "numel": 4,
+          "device": "meta"
+        },
+        "policy.critic.0.weight": {
+          "shape": [
+            128,
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 65536,
+          "device": "meta"
+        },
+        "policy.critic.0.bias": {
+          "shape": [
+            128
+          ],
+          "dtype": "torch.float32",
+          "numel": 128,
+          "device": "meta"
+        },
+        "policy.critic.2.weight": {
+          "shape": [
+            128,
+            128
+          ],
+          "dtype": "torch.float32",
+          "numel": 16384,
+          "device": "meta"
+        },
+        "policy.critic.2.bias": {
+          "shape": [
+            128
+          ],
+          "dtype": "torch.float32",
+          "numel": 128,
+          "device": "meta"
+        },
+        "policy.critic.4.weight": {
+          "shape": [
+            1,
+            128
+          ],
+          "dtype": "torch.float32",
+          "numel": 128,
+          "device": "meta"
+        },
+        "policy.critic.4.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "torch.float32",
+          "numel": 1,
+          "device": "meta"
+        },
+        "policy_old.actor.0.weight": {
+          "shape": [
+            128,
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 65536,
+          "device": "meta"
+        },
+        "policy_old.actor.0.bias": {
+          "shape": [
+            128
+          ],
+          "dtype": "torch.float32",
+          "numel": 128,
+          "device": "meta"
+        },
+        "policy_old.actor.2.weight": {
+          "shape": [
+            128,
+            128
+          ],
+          "dtype": "torch.float32",
+          "numel": 16384,
+          "device": "meta"
+        },
+        "policy_old.actor.2.bias": {
+          "shape": [
+            128
+          ],
+          "dtype": "torch.float32",
+          "numel": 128,
+          "device": "meta"
+        },
+        "policy_old.actor.4.weight": {
+          "shape": [
+            4,
+            128
+          ],
+          "dtype": "torch.float32",
+          "numel": 512,
+          "device": "meta"
+        },
+        "policy_old.actor.4.bias": {
+          "shape": [
+            4
+          ],
+          "dtype": "torch.float32",
+          "numel": 4,
+          "device": "meta"
+        },
+        "policy_old.critic.0.weight": {
+          "shape": [
+            128,
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 65536,
+          "device": "meta"
+        },
+        "policy_old.critic.0.bias": {
+          "shape": [
+            128
+          ],
+          "dtype": "torch.float32",
+          "numel": 128,
+          "device": "meta"
+        },
+        "policy_old.critic.2.weight": {
+          "shape": [
+            128,
+            128
+          ],
+          "dtype": "torch.float32",
+          "numel": 16384,
+          "device": "meta"
+        },
+        "policy_old.critic.2.bias": {
+          "shape": [
+            128
+          ],
+          "dtype": "torch.float32",
+          "numel": 128,
+          "device": "meta"
+        },
+        "policy_old.critic.4.weight": {
+          "shape": [
+            1,
+            128
+          ],
+          "dtype": "torch.float32",
+          "numel": 128,
+          "device": "meta"
+        },
+        "policy_old.critic.4.bias": {
+          "shape": [
+            1
+          ],
+          "dtype": "torch.float32",
+          "numel": 1,
+          "device": "meta"
+        }
+      },
+      "state_tensor_count": 188,
+      "logical_numel_including_alias_keys": 627419914,
+      "metadata": {},
+      "hyperparameters_present": false,
+      "expected_schema": {
+        "llm_module.llm.transformer.word_embeddings.weight": [
+          65031,
+          1152
+        ],
+        "llm_module.llm.lm_head.weight": [
+          65031,
+          1152
+        ],
+        "llm_module.llm.transformer.project_in.weight": [
+          1152,
+          512
+        ],
+        "llm_module.llm.transformer.project_out.weight": [
+          512,
+          1152
+        ],
+        "llm_module.llm.transformer.project_action_in.weight": [
+          1152,
+          512
+        ],
+        "llm_module.llm.transformer.patch_pos_embeds.weight": [
+          1152,
+          4
+        ],
+        "llm_module.llm.transformer.action_tokens.weight": [
+          4,
+          512
+        ],
+        "llm_module.llm.transformer.ln_f.weight": [
+          512
+        ],
+        "llm_module.llm.transformer.ln_f.bias": [
+          512
+        ],
+        "llm_module.llm.distance_pred.weight": [
+          4,
+          512
+        ],
+        "llm_module.llm.transformer.h.0.input_layernorm.weight": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.0.input_layernorm.bias": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.0.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm_module.llm.transformer.h.0.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm_module.llm.transformer.h.0.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm_module.llm.transformer.h.0.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm_module.llm.transformer.h.1.input_layernorm.weight": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.1.input_layernorm.bias": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.1.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm_module.llm.transformer.h.1.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm_module.llm.transformer.h.1.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm_module.llm.transformer.h.1.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm_module.llm.transformer.h.2.input_layernorm.weight": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.2.input_layernorm.bias": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.2.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm_module.llm.transformer.h.2.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm_module.llm.transformer.h.2.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm_module.llm.transformer.h.2.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm_module.llm.transformer.h.3.input_layernorm.weight": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.3.input_layernorm.bias": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.3.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm_module.llm.transformer.h.3.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm_module.llm.transformer.h.3.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm_module.llm.transformer.h.3.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm_module.llm.transformer.h.4.input_layernorm.weight": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.4.input_layernorm.bias": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.4.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm_module.llm.transformer.h.4.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm_module.llm.transformer.h.4.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm_module.llm.transformer.h.4.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm_module.llm.transformer.h.5.input_layernorm.weight": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.5.input_layernorm.bias": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.5.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm_module.llm.transformer.h.5.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm_module.llm.transformer.h.5.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm_module.llm.transformer.h.5.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm_module.llm.transformer.h.6.input_layernorm.weight": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.6.input_layernorm.bias": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.6.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm_module.llm.transformer.h.6.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm_module.llm.transformer.h.6.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm_module.llm.transformer.h.6.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm_module.llm.transformer.h.7.input_layernorm.weight": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.7.input_layernorm.bias": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.7.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm_module.llm.transformer.h.7.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm_module.llm.transformer.h.7.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm_module.llm.transformer.h.7.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm_module.llm.transformer.h.8.input_layernorm.weight": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.8.input_layernorm.bias": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.8.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm_module.llm.transformer.h.8.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm_module.llm.transformer.h.8.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm_module.llm.transformer.h.8.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm_module.llm.transformer.h.9.input_layernorm.weight": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.9.input_layernorm.bias": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.9.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm_module.llm.transformer.h.9.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm_module.llm.transformer.h.9.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm_module.llm.transformer.h.9.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm_module.llm.transformer.h.10.input_layernorm.weight": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.10.input_layernorm.bias": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.10.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm_module.llm.transformer.h.10.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm_module.llm.transformer.h.10.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm_module.llm.transformer.h.10.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm_module.llm.transformer.h.11.input_layernorm.weight": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.11.input_layernorm.bias": [
+          1152
+        ],
+        "llm_module.llm.transformer.h.11.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm_module.llm.transformer.h.11.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm_module.llm.transformer.h.11.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm_module.llm.transformer.h.11.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.word_embeddings.weight": [
+          65031,
+          1152
+        ],
+        "llm.lm_head.weight": [
+          65031,
+          1152
+        ],
+        "llm.transformer.project_in.weight": [
+          1152,
+          512
+        ],
+        "llm.transformer.project_out.weight": [
+          512,
+          1152
+        ],
+        "llm.transformer.project_action_in.weight": [
+          1152,
+          512
+        ],
+        "llm.transformer.patch_pos_embeds.weight": [
+          1152,
+          4
+        ],
+        "llm.transformer.action_tokens.weight": [
+          4,
+          512
+        ],
+        "llm.transformer.ln_f.weight": [
+          512
+        ],
+        "llm.transformer.ln_f.bias": [
+          512
+        ],
+        "llm.distance_pred.weight": [
+          4,
+          512
+        ],
+        "llm.transformer.h.0.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.0.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.0.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.0.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.0.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.0.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.1.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.1.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.1.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.1.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.1.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.1.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.2.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.2.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.2.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.2.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.2.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.2.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.3.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.3.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.3.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.3.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.3.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.3.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.4.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.4.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.4.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.4.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.4.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.4.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.5.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.5.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.5.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.5.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.5.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.5.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.6.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.6.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.6.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.6.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.6.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.6.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.7.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.7.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.7.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.7.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.7.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.7.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.8.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.8.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.8.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.8.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.8.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.8.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.9.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.9.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.9.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.9.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.9.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.9.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.10.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.10.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.10.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.10.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.10.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.10.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.11.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.11.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.11.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.11.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.11.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.11.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "policy.actor.0.weight": [
+          128,
+          512
+        ],
+        "policy.actor.0.bias": [
+          128
+        ],
+        "policy.actor.2.weight": [
+          128,
+          128
+        ],
+        "policy.actor.2.bias": [
+          128
+        ],
+        "policy.actor.4.weight": [
+          4,
+          128
+        ],
+        "policy.actor.4.bias": [
+          4
+        ],
+        "policy.critic.0.weight": [
+          128,
+          512
+        ],
+        "policy.critic.0.bias": [
+          128
+        ],
+        "policy.critic.2.weight": [
+          128,
+          128
+        ],
+        "policy.critic.2.bias": [
+          128
+        ],
+        "policy.critic.4.weight": [
+          1,
+          128
+        ],
+        "policy.critic.4.bias": [
+          1
+        ],
+        "policy_old.actor.0.weight": [
+          128,
+          512
+        ],
+        "policy_old.actor.0.bias": [
+          128
+        ],
+        "policy_old.actor.2.weight": [
+          128,
+          128
+        ],
+        "policy_old.actor.2.bias": [
+          128
+        ],
+        "policy_old.actor.4.weight": [
+          4,
+          128
+        ],
+        "policy_old.actor.4.bias": [
+          4
+        ],
+        "policy_old.critic.0.weight": [
+          128,
+          512
+        ],
+        "policy_old.critic.0.bias": [
+          128
+        ],
+        "policy_old.critic.2.weight": [
+          128,
+          128
+        ],
+        "policy_old.critic.2.bias": [
+          128
+        ],
+        "policy_old.critic.4.weight": [
+          1,
+          128
+        ],
+        "policy_old.critic.4.bias": [
+          1
+        ]
+      },
+      "schema_comparison": {
+        "missing": [],
+        "unexpected": [],
+        "shape_mismatches": []
+      },
+      "strict_schema_pass": true,
+      "cuda_initialized": false
+    },
+    {
+      "file": "sat2cap_optimal_action_falcon.pt.ckpt",
+      "sha256": "195351ae83654415faa03c500fe4ec912e07f3567d3f8c2ecb3f4c8a1bc2c3d2",
+      "safe_load_success": true,
+      "zip_format": true,
+      "archive_entries": 324,
+      "archive_uncompressed_bytes": 2264270771,
+      "pickle_globals": [
+        "collections OrderedDict",
+        "torch FloatStorage",
+        "torch._utils _rebuild_tensor_v2"
+      ],
+      "top_keys": [
+        "epoch",
+        "global_step",
+        "pytorch-lightning_version",
+        "state_dict",
+        "loops",
+        "callbacks",
+        "optimizer_states",
+        "lr_schedulers"
+      ],
+      "state": {
+        "llm.transformer.word_embeddings.weight": {
+          "shape": [
+            65031,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 74915712,
+          "device": "meta"
+        },
+        "llm.transformer.h.0.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.0.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.0.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.0.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.0.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.0.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.1.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.1.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.1.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.1.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.1.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.1.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.2.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.2.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.2.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.2.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.2.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.2.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.3.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.3.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.3.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.3.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.3.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.3.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.4.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.4.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.4.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.4.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.4.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.4.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.5.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.5.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.5.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.5.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.5.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.5.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.6.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.6.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.6.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.6.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.6.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.6.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.7.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.7.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.7.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.7.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.7.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.7.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.8.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.8.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.8.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.8.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.8.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.8.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.9.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.9.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.9.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.9.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.9.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.9.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.10.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.10.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.10.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.10.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.10.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.10.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.11.self_attention.query_key_value.weight": {
+          "shape": [
+            1344,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1548288,
+          "device": "meta"
+        },
+        "llm.transformer.h.11.self_attention.dense.weight": {
+          "shape": [
+            1152,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1327104,
+          "device": "meta"
+        },
+        "llm.transformer.h.11.mlp.dense_h_to_4h.weight": {
+          "shape": [
+            4608,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.11.mlp.dense_4h_to_h.weight": {
+          "shape": [
+            1152,
+            4608
+          ],
+          "dtype": "torch.float32",
+          "numel": 5308416,
+          "device": "meta"
+        },
+        "llm.transformer.h.11.input_layernorm.weight": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.h.11.input_layernorm.bias": {
+          "shape": [
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 1152,
+          "device": "meta"
+        },
+        "llm.transformer.project_in.weight": {
+          "shape": [
+            1152,
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 589824,
+          "device": "meta"
+        },
+        "llm.transformer.action_tokens.weight": {
+          "shape": [
+            4,
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 2048,
+          "device": "meta"
+        },
+        "llm.transformer.patch_pos_embeds.weight": {
+          "shape": [
+            1152,
+            4
+          ],
+          "dtype": "torch.float32",
+          "numel": 4608,
+          "device": "meta"
+        },
+        "llm.transformer.project_action_in.weight": {
+          "shape": [
+            1152,
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 589824,
+          "device": "meta"
+        },
+        "llm.transformer.project_out.weight": {
+          "shape": [
+            512,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 589824,
+          "device": "meta"
+        },
+        "llm.transformer.ln_f.weight": {
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 512,
+          "device": "meta"
+        },
+        "llm.transformer.ln_f.bias": {
+          "shape": [
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 512,
+          "device": "meta"
+        },
+        "llm.lm_head.weight": {
+          "shape": [
+            65031,
+            1152
+          ],
+          "dtype": "torch.float32",
+          "numel": 74915712,
+          "device": "meta"
+        },
+        "llm.distance_pred.weight": {
+          "shape": [
+            4,
+            512
+          ],
+          "dtype": "torch.float32",
+          "numel": 2048,
+          "device": "meta"
+        }
+      },
+      "state_tensor_count": 82,
+      "logical_numel_including_alias_keys": 313544960,
+      "metadata": {
+        "epoch": 202,
+        "global_step": 812,
+        "pytorch-lightning_version": "2.2.1"
+      },
+      "hyperparameters_present": false,
+      "expected_schema": {
+        "llm.transformer.word_embeddings.weight": [
+          65031,
+          1152
+        ],
+        "llm.lm_head.weight": [
+          65031,
+          1152
+        ],
+        "llm.transformer.project_in.weight": [
+          1152,
+          512
+        ],
+        "llm.transformer.project_out.weight": [
+          512,
+          1152
+        ],
+        "llm.transformer.project_action_in.weight": [
+          1152,
+          512
+        ],
+        "llm.transformer.patch_pos_embeds.weight": [
+          1152,
+          4
+        ],
+        "llm.transformer.action_tokens.weight": [
+          4,
+          512
+        ],
+        "llm.transformer.ln_f.weight": [
+          512
+        ],
+        "llm.transformer.ln_f.bias": [
+          512
+        ],
+        "llm.distance_pred.weight": [
+          4,
+          512
+        ],
+        "llm.transformer.h.0.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.0.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.0.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.0.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.0.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.0.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.1.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.1.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.1.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.1.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.1.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.1.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.2.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.2.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.2.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.2.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.2.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.2.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.3.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.3.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.3.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.3.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.3.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.3.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.4.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.4.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.4.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.4.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.4.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.4.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.5.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.5.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.5.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.5.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.5.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.5.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.6.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.6.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.6.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.6.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.6.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.6.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.7.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.7.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.7.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.7.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.7.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.7.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.8.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.8.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.8.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.8.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.8.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.8.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.9.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.9.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.9.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.9.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.9.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.9.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.10.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.10.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.10.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.10.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.10.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.10.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ],
+        "llm.transformer.h.11.input_layernorm.weight": [
+          1152
+        ],
+        "llm.transformer.h.11.input_layernorm.bias": [
+          1152
+        ],
+        "llm.transformer.h.11.self_attention.query_key_value.weight": [
+          1344,
+          1152
+        ],
+        "llm.transformer.h.11.self_attention.dense.weight": [
+          1152,
+          1152
+        ],
+        "llm.transformer.h.11.mlp.dense_h_to_4h.weight": [
+          4608,
+          1152
+        ],
+        "llm.transformer.h.11.mlp.dense_4h_to_h.weight": [
+          1152,
+          4608
+        ]
+      },
+      "schema_comparison": {
+        "missing": [],
+        "unexpected": [],
+        "shape_mismatches": []
+      },
+      "strict_schema_pass": true,
+      "cuda_initialized": false
+    }
+  ],
+  "strict_structure_pass": true,
+  "provenance_verified": false,
+  "paper_baseline_qualified": false,
+  "cuda_initialized": false,
+  "forward": 0,
+  "training": 0,
+  "navigation": 0,
+  "acquisition_receipt": "下载记录/获取结果_v2.json"
+}

@@ -1,0 +1,1343 @@
+{
+  "date": "2026-10-07",
+  "scope": "AST and shallow metadata; excludes raw data/models/third-party/local helper archive",
+  "runtime_verification": false,
+  "no_model_or_api": true,
+  "no_moves_or_deletes": true,
+  "source_count": 429,
+  "parse_errors": [],
+  "source_version_families": [
+    {
+      "family": "project/src/data/massgis_native",
+      "items": [
+        {
+          "path": "project/src/data/massgis_native_v1.py",
+          "version": 1,
+          "sha256": "aef3f2c269009e90b287ebab2e8a7051b16fbfbb73cc2848e4e55f0717831c93",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [
+            "project/src/data/massgis_confirmation_pool_v1.py",
+            "project/src/data/massgis_native_v2.py",
+            "project/src/data/massgis_native_v3.py",
+            "project/src/eval/audit_massgis_bridge_v1.py",
+            "project/src/eval/audit_massgis_native_v1.py",
+            "project/src/tests/test_massgis_bridge_v1.py",
+            "project/src/tests/test_massgis_native_v1.py"
+          ],
+          "unused_not_proven": false
+        },
+        {
+          "path": "project/src/data/massgis_native_v2.py",
+          "version": 2,
+          "sha256": "19b64901ed0cce3b534240e10436501862ad6a382812e39e2fef31f27d285bb3",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [
+            "project/src/data/massgis_confirmation_pool_v1.py",
+            "project/src/data/massgis_native_v3.py",
+            "project/src/tests/test_massgis_confirmation_pool_v1.py"
+          ],
+          "unused_not_proven": false
+        },
+        {
+          "path": "project/src/data/massgis_native_v3.py",
+          "version": 3,
+          "sha256": "5595195f9fae3620a72249fae1cbd90a3591c880066b8b97e7af630b2eb6ed20",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        }
+      ]
+    },
+    {
+      "family": "project/src/eval/audit_massgis_arrival_drift",
+      "items": [
+        {
+          "path": "project/src/eval/audit_massgis_arrival_drift_v1.py",
+          "version": 1,
+          "sha256": "74ca90649b2f1d5e1ae30658647a968733a8f30cf9239a9b45f228f8571cc9f3",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/eval/audit_massgis_arrival_drift_v2.py",
+          "version": 2,
+          "sha256": "e5fc8bd2adff953e7032b810e5b7cf418a0ac0708b8b0bd1af26fb44ce6d627e",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/eval/audit_massgis_arrival_drift_v3.py",
+          "version": 3,
+          "sha256": "721c520662b60db98e4b2dd7afe068b4b9a0739cd152136d2486852b1b2d1249",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/eval/audit_massgis_arrival_drift_v4.py",
+          "version": 4,
+          "sha256": "726bbafcecd1de34eee088ad98c666b50a3c82089b3222ac185eb41b68a73f4f",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/eval/audit_massgis_arrival_drift_v5.py",
+          "version": 5,
+          "sha256": "fe7e07fcf5136b2fe5d507f3fe9e7d57eba08ec5201ad707e209eeffe66aba0c",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/eval/audit_massgis_arrival_drift_v6.py",
+          "version": 6,
+          "sha256": "4a50bd15fe49356741520e56c520c7b76dfe059dae4c31724032eede8cb94e7d",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/eval/audit_massgis_arrival_drift_v7.py",
+          "version": 7,
+          "sha256": "7b5791d808efc036558fedddba7be212473a3a8cf679a5abfd8679ba8a2ca9f4",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/eval/audit_massgis_arrival_drift_v8.py",
+          "version": 8,
+          "sha256": "5964ab5e8e702904e2f52ef8a4c73c97ae2c47aba0b3dc9140266087afa60457",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/eval/audit_massgis_arrival_drift_v9.py",
+          "version": 9,
+          "sha256": "da015ce75e4cfa389a1bb3e590bb4f96f3f4e7d407c2faf343769e5ddee27f60",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/eval/audit_massgis_arrival_drift_v10.py",
+          "version": 10,
+          "sha256": "fe7642913d74d71cd1f79003ce026fcaa8dee803b5a134ed5c78f9007b1f12d1",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/eval/audit_massgis_arrival_drift_v11.py",
+          "version": 11,
+          "sha256": "5ee608a2ee0b02cd7a291bca31dbb0e75f583fbfbe7c68634bf071673fe58bb9",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        }
+      ]
+    },
+    {
+      "family": "project/src/eval/audit_massgis_navigation_compat",
+      "items": [
+        {
+          "path": "project/src/eval/audit_massgis_navigation_compat_v1.py",
+          "version": 1,
+          "sha256": "465e4ea2c21ac974d100e5f5b48c85d27485073e6cd14a39cc2a07de1256c145",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/eval/audit_massgis_navigation_compat_v2.py",
+          "version": 2,
+          "sha256": "fe3b5319ddf2043de883526b822534d6871ecf0edf63667b354eb6ff86aeab9c",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [
+            "project/src/eval/audit_massgis_confirmation_run_v1.py",
+            "project/src/tests/test_massgis_audit_scope_v2.py"
+          ],
+          "unused_not_proven": false
+        }
+      ]
+    },
+    {
+      "family": "project/src/eval/audit_spatial_area_confirmation",
+      "items": [
+        {
+          "path": "project/src/eval/audit_spatial_area_confirmation_v2.py",
+          "version": 2,
+          "sha256": "43b2a641f9baee578457b00235b6559cb8e40cad9c31a506b1f859a9c48079da",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [
+            "project/src/eval/audit_spatial_area_confirmation_v3.py",
+            "project/src/tests/test_spatial_area_confirmation_audit_v2.py"
+          ],
+          "unused_not_proven": false
+        },
+        {
+          "path": "project/src/eval/audit_spatial_area_confirmation_v3.py",
+          "version": 3,
+          "sha256": "1f1be235da7bb229c3c57db8ca995c6455afea5eaabcf60f3c1c29cf3b481e90",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [
+            "project/src/documents/check_spatial_confirmation_delivery.py",
+            "project/src/tests/test_spatial_area_confirmation_audit_v3.py"
+          ],
+          "unused_not_proven": false
+        }
+      ]
+    },
+    {
+      "family": "project/src/eval/diagnose_massgis_arrival_drift",
+      "items": [
+        {
+          "path": "project/src/eval/diagnose_massgis_arrival_drift_v1.py",
+          "version": 1,
+          "sha256": "50d6fcd288f75b8cbba683c0b3793d8909048529429a795937ad95a192619b16",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/eval/diagnose_massgis_arrival_drift_v2.py",
+          "version": 2,
+          "sha256": "6164bd105d7144cc1636da7e7e75730c2d1942a2192e9dd33f7d64f41b35ba58",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/eval/diagnose_massgis_arrival_drift_v3.py",
+          "version": 3,
+          "sha256": "71115cce64116ae94bd9c7f4440d68494c4bf7bef23a5687f80df3e80226d9c1",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/eval/diagnose_massgis_arrival_drift_v4.py",
+          "version": 4,
+          "sha256": "031845076af140bb403c63d3a8a52f91a705cc205dce49c7e850dc3fcce5af03",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/eval/diagnose_massgis_arrival_drift_v5.py",
+          "version": 5,
+          "sha256": "d6b227b7839cfe4b390c5ce0c35430a82affaa4146df7d883acfb3ff8774f8d8",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/eval/diagnose_massgis_arrival_drift_v6.py",
+          "version": 6,
+          "sha256": "5172fb62dbb19548884e4b82e9e1112a73275a85e621b22a02d75d52d9d3a152",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        }
+      ]
+    },
+    {
+      "family": "project/src/tests/test_massgis_arrival_drift",
+      "items": [
+        {
+          "path": "project/src/tests/test_massgis_arrival_drift_v1.py",
+          "version": 1,
+          "sha256": "e5f2b437474ae0e3edccb781a9c4b0880ee15faadb27df4224a29915557fd0c8",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/tests/test_massgis_arrival_drift_v2.py",
+          "version": 2,
+          "sha256": "d1eb6abf994aa2937c40f56f23181f7c937022cbee8d4ed640c1fb06b96ed449",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/tests/test_massgis_arrival_drift_v3.py",
+          "version": 3,
+          "sha256": "b019b789d8fa442692f701053e2e3415db757d246b9cf989eb99eaca16ba4408",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/tests/test_massgis_arrival_drift_v4.py",
+          "version": 4,
+          "sha256": "63b4fc74da7301d135e2201f36aac779d5427003265e48d8591cdff44a826947",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/tests/test_massgis_arrival_drift_v5.py",
+          "version": 5,
+          "sha256": "4cea3aee56c0cfcc8d74d767eb4b7bbfbed7de4f81d9f72a0560bebffd9c9b29",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/tests/test_massgis_arrival_drift_v6.py",
+          "version": 6,
+          "sha256": "52d0e328cd90e5dab479f4c2596fc1693f9c6bf6f119be7458d0c58680c176d8",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        }
+      ]
+    },
+    {
+      "family": "project/src/tests/test_massgis_arrival_drift_audit",
+      "items": [
+        {
+          "path": "project/src/tests/test_massgis_arrival_drift_audit_v7.py",
+          "version": 7,
+          "sha256": "45168c3d64e49afce466c7f9fd409b65af49619702010c0d831d5f81f760060d",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/tests/test_massgis_arrival_drift_audit_v8.py",
+          "version": 8,
+          "sha256": "b3eee510935ccb16dc45a50653f9f375b4f004da67cca18a8e2a6d7e54531f90",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/tests/test_massgis_arrival_drift_audit_v9.py",
+          "version": 9,
+          "sha256": "c9ff2d5e5f3f199fc9bf85c64ac6527911df7208ced8e0d03a0e3817fcd6ece3",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/tests/test_massgis_arrival_drift_audit_v10.py",
+          "version": 10,
+          "sha256": "6775b754a173148c03f781bfe7e618c6ee73a7f734cf391616d0563047fa4676",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/tests/test_massgis_arrival_drift_audit_v11.py",
+          "version": 11,
+          "sha256": "e510c1ca05df5ab31684b161866224084c60b312f9ebd0f21d56bdf715300a6b",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        }
+      ]
+    },
+    {
+      "family": "project/src/tests/test_spatial_area_confirmation_audit",
+      "items": [
+        {
+          "path": "project/src/tests/test_spatial_area_confirmation_audit_v2.py",
+          "version": 2,
+          "sha256": "5e129f207f00f05a5706d16b6a777c493e95b69c10c9ac814448862ed8b8b21e",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        },
+        {
+          "path": "project/src/tests/test_spatial_area_confirmation_audit_v3.py",
+          "version": 3,
+          "sha256": "e43acd69f6e7304f7173ef722389548ebea6d814060010624cce1e4a8ac25837",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [],
+          "unused_not_proven": true
+        }
+      ]
+    },
+    {
+      "family": "project/src/webapp/batch",
+      "items": [
+        {
+          "path": "project/src/webapp/batch_v2.py",
+          "version": 2,
+          "sha256": "c5688f9218b054f66159795506b525fe769da3050bbf493a3eec7c8bab9ce0ff",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [
+            "project/src/tests/test_cloud_platform_v2.py",
+            "project/src/webapp/server_v2.py"
+          ],
+          "unused_not_proven": false
+        },
+        {
+          "path": "project/src/webapp/batch_v3.py",
+          "version": 3,
+          "sha256": "b4fa6110b2913dd73228c5ad31a4001a29f7eead4e931411fa13bcce6add6a27",
+          "merged_platform_dependency": true,
+          "replay_dependency": false,
+          "imported_by": [
+            "project/src/webapp/server_v3.py",
+            "project/src/webapp/server_v5.py"
+          ],
+          "unused_not_proven": false
+        }
+      ]
+    },
+    {
+      "family": "project/src/webapp/cloud",
+      "items": [
+        {
+          "path": "project/src/webapp/cloud_v2.py",
+          "version": 2,
+          "sha256": "e7af3b35e5288be7dfada8118cb41b80297813fe2fbd8355d7639a8cbdcd4dca",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [
+            "project/src/tests/test_cloud_platform_v2.py",
+            "project/src/webapp/batch_v2.py",
+            "project/src/webapp/server_v2.py"
+          ],
+          "unused_not_proven": false
+        },
+        {
+          "path": "project/src/webapp/cloud_v3.py",
+          "version": 3,
+          "sha256": "1eff9f99510f0592b6938b8fe7d99d79dfe68130867f4df50251d5e5244bb7c5",
+          "merged_platform_dependency": true,
+          "replay_dependency": false,
+          "imported_by": [
+            "project/src/tests/test_platform_review_fixes_v3.py",
+            "project/src/webapp/batch_v3.py",
+            "project/src/webapp/server_v3.py",
+            "project/src/webapp/server_v5.py"
+          ],
+          "unused_not_proven": false
+        }
+      ]
+    },
+    {
+      "family": "project/src/webapp/live",
+      "items": [
+        {
+          "path": "project/src/webapp/live_v2.py",
+          "version": 2,
+          "sha256": "359cca8233bcf143b5493334d829faa3b03abae81c955654e9bad45b7da7ab84",
+          "merged_platform_dependency": true,
+          "replay_dependency": false,
+          "imported_by": [
+            "project/src/tests/test_live_platform_v2.py",
+            "project/src/webapp/batch_v2.py",
+            "project/src/webapp/binding_v3.py",
+            "project/src/webapp/live_v4.py",
+            "project/src/webapp/server_v2.py",
+            "project/src/webapp/verify_delivery_v3.py"
+          ],
+          "unused_not_proven": false
+        },
+        {
+          "path": "project/src/webapp/live_v3.py",
+          "version": 3,
+          "sha256": "c3d0425ff05af859deb28b1bd261a3a1d299a52c8a600e45c7a41cdb425a9afc",
+          "merged_platform_dependency": true,
+          "replay_dependency": false,
+          "imported_by": [
+            "project/src/tests/test_merged_platform_v5.py",
+            "project/src/tests/test_platform_review_fixes_v3.py",
+            "project/src/webapp/batch_v3.py",
+            "project/src/webapp/server_v3.py",
+            "project/src/webapp/server_v5.py"
+          ],
+          "unused_not_proven": false
+        },
+        {
+          "path": "project/src/webapp/live_v4.py",
+          "version": 4,
+          "sha256": "c9bf012cd90ce6f0199490c361e183ad017594b3392d37d9776f8f6d3f0904ff",
+          "merged_platform_dependency": true,
+          "replay_dependency": false,
+          "imported_by": [
+            "project/src/tests/test_merged_platform_v5.py",
+            "project/src/tests/test_upload_platform_v4.py",
+            "project/src/webapp/server_v4.py",
+            "project/src/webapp/server_v5.py"
+          ],
+          "unused_not_proven": false
+        }
+      ]
+    },
+    {
+      "family": "project/src/webapp/server",
+      "items": [
+        {
+          "path": "project/src/webapp/server_v1.py",
+          "version": 1,
+          "sha256": "b2d931b55168d05be2637d5b7378f711963f849e8f507283ae467a8a27230a43",
+          "merged_platform_dependency": false,
+          "replay_dependency": true,
+          "imported_by": [
+            "project/src/tests/test_replay_platform_v1.py"
+          ],
+          "unused_not_proven": false
+        },
+        {
+          "path": "project/src/webapp/server_v2.py",
+          "version": 2,
+          "sha256": "7227c3e1963501490b80716f9bf7510f1044e49ff0f5e3ffff7e3cd0c6f1261c",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [
+            "project/src/tests/test_live_platform_v2.py"
+          ],
+          "unused_not_proven": false
+        },
+        {
+          "path": "project/src/webapp/server_v3.py",
+          "version": 3,
+          "sha256": "23b5b9de5ba697dcebe1dcccdbee4d0ea54545a409182ddb63c2e7358cae4708",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [
+            "project/src/tests/test_platform_review_fixes_v3.py"
+          ],
+          "unused_not_proven": false
+        },
+        {
+          "path": "project/src/webapp/server_v4.py",
+          "version": 4,
+          "sha256": "0998d280b18338bea0fb35c1bb7abf38c0241d7291642c0afa2a54bff163edcc",
+          "merged_platform_dependency": false,
+          "replay_dependency": false,
+          "imported_by": [
+            "project/src/tests/test_upload_platform_v4.py"
+          ],
+          "unused_not_proven": false
+        },
+        {
+          "path": "project/src/webapp/server_v5.py",
+          "version": 5,
+          "sha256": "36fc7d4757ae441bc87e01506c9adec91a5a206389b9a2065b07c91bdc1bf917",
+          "merged_platform_dependency": true,
+          "replay_dependency": false,
+          "imported_by": [
+            "project/src/tests/test_merged_platform_v5.py"
+          ],
+          "unused_not_proven": false
+        }
+      ]
+    }
+  ],
+  "source_family_count": 12,
+  "versioned_source_count": 49,
+  "merged_platform_dependencies": [
+    "project/src/agents/area_policy.py",
+    "project/src/agents/boundary_policy.py",
+    "project/src/agents/decoupled_cue.py",
+    "project/src/agents/edge_cue.py",
+    "project/src/agents/frozen_edge_navigator.py",
+    "project/src/agents/massgis_edge_bridge_v1.py",
+    "project/src/agents/massgis_navigator_v1.py",
+    "project/src/agents/parameterized_coverage.py",
+    "project/src/agents/scaled_edge_navigator.py",
+    "project/src/agents/spatial_relation.py",
+    "project/src/agents/target_cue.py",
+    "project/src/data/make_episodes.py",
+    "project/src/data/process_masa.py",
+    "project/src/env/area_protocol.py",
+    "project/src/env/environment.py",
+    "project/src/env/episode.py",
+    "project/src/env/massgis_native_area_v2.py",
+    "project/src/env/parameterized_area.py",
+    "project/src/env/scaled_grid.py",
+    "project/src/train/dyncur_tiny.py",
+    "project/src/webapp/batch_v3.py",
+    "project/src/webapp/binding_v3.py",
+    "project/src/webapp/cloud_v3.py",
+    "project/src/webapp/live_v2.py",
+    "project/src/webapp/live_v3.py",
+    "project/src/webapp/live_v4.py",
+    "project/src/webapp/server_v5.py",
+    "project/src/webapp/upload_v4.py"
+  ],
+  "replay_dependencies": [
+    "project/src/webapp/replay_v1.py",
+    "project/src/webapp/server_v1.py"
+  ],
+  "dependency_scope": "Static import reachability, including function imports; cannot prove absence of dynamic references, config paths or evidence bindings",
+  "experiment_directory_families": [
+    {
+      "dataset": "Masa",
+      "kind": "训练结果",
+      "family": "tiny_curiosity",
+      "items": [
+        {
+          "path": "DATA/processed_data/Masa/训练结果/tiny_curiosity_v1",
+          "version": 1
+        },
+        {
+          "path": "DATA/processed_data/Masa/训练结果/tiny_curiosity_v2",
+          "version": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Masa",
+      "kind": "训练结果",
+      "family": "tiny_pbrs",
+      "items": [
+        {
+          "path": "DATA/processed_data/Masa/训练结果/tiny_pbrs_v1",
+          "version": 1
+        },
+        {
+          "path": "DATA/processed_data/Masa/训练结果/tiny_pbrs_v2",
+          "version": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Masa",
+      "kind": "评测结果",
+      "family": "DeepSeek接口检查",
+      "items": [
+        {
+          "path": "DATA/processed_data/Masa/评测结果/DeepSeek接口检查_v1",
+          "version": 1
+        },
+        {
+          "path": "DATA/processed_data/Masa/评测结果/DeepSeek接口检查_v2",
+          "version": 2
+        }
+      ]
+    },
+    {
+      "dataset": "Masa",
+      "kind": "评测结果",
+      "family": "Gemma与DeepSeek同策略对照",
+      "items": [
+        {
+          "path": "DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v1",
+          "version": 1
+        },
+        {
+          "path": "DATA/processed_data/Masa/评测结果/Gemma与DeepSeek同策略对照_v2",
+          "version": 2
+        }
+      ]
+    },
+    {
+      "dataset": "MassGIS",
+      "kind": "评测结果",
+      "family": "十五乘十五到达能力漂移诊断",
+      "items": [
+        {
+          "path": "DATA/processed_data/MassGIS/评测结果/十五乘十五到达能力漂移诊断_v1",
+          "version": 1
+        },
+        {
+          "path": "DATA/processed_data/MassGIS/评测结果/十五乘十五到达能力漂移诊断_v2",
+          "version": 2
+        },
+        {
+          "path": "DATA/processed_data/MassGIS/评测结果/十五乘十五到达能力漂移诊断_v3",
+          "version": 3
+        },
+        {
+          "path": "DATA/processed_data/MassGIS/评测结果/十五乘十五到达能力漂移诊断_v4",
+          "version": 4
+        },
+        {
+          "path": "DATA/processed_data/MassGIS/评测结果/十五乘十五到达能力漂移诊断_v5",
+          "version": 5
+        },
+        {
+          "path": "DATA/processed_data/MassGIS/评测结果/十五乘十五到达能力漂移诊断_v6",
+          "version": 6
+        }
+      ]
+    }
+  ],
+  "experiment_family_count": 5,
+  "platform_directories": [
+    {
+      "path": "平台/主动探索演示_v1",
+      "small_files": [
+        "平台/主动探索演示_v1/README.md",
+        "平台/主动探索演示_v1/启动平台.ps1"
+      ],
+      "recursive_files": 25,
+      "bytes": 2579460
+    },
+    {
+      "path": "平台/实时导航平台_v2",
+      "small_files": [
+        "平台/实时导航平台_v2/README.md",
+        "平台/实时导航平台_v2/启动平台.ps1"
+      ],
+      "recursive_files": 25,
+      "bytes": 1264004
+    },
+    {
+      "path": "平台/实时导航平台_v3",
+      "small_files": [
+        "平台/实时导航平台_v3/README.md",
+        "平台/实时导航平台_v3/启动平台.ps1"
+      ],
+      "recursive_files": 6,
+      "bytes": 1098905
+    },
+    {
+      "path": "平台/实时导航平台_上传测试_v1",
+      "small_files": [
+        "平台/实时导航平台_上传测试_v1/README.md"
+      ],
+      "recursive_files": 8,
+      "bytes": 1697526
+    }
+  ],
+  "known_bound_webapp_references": [
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/batch_v2.py",
+      "sha256": "c5688f9218b054f66159795506b525fe769da3050bbf493a3eec7c8bab9ce0ff",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/batch_v3.py",
+      "sha256": "b4fa6110b2913dd73228c5ad31a4001a29f7eead4e931411fa13bcce6add6a27",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/binding_v3.py",
+      "sha256": "586e830c3a5d50c09c31abed9e4bd1e9925910ed6bb57664b375dd788f69978b",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/cloud_v2.py",
+      "sha256": "e7af3b35e5288be7dfada8118cb41b80297813fe2fbd8355d7639a8cbdcd4dca",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/cloud_v3.py",
+      "sha256": "1eff9f99510f0592b6938b8fe7d99d79dfe68130867f4df50251d5e5244bb7c5",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/live_v2.py",
+      "sha256": "359cca8233bcf143b5493334d829faa3b03abae81c955654e9bad45b7da7ab84",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/live_v3.py",
+      "sha256": "c3d0425ff05af859deb28b1bd261a3a1d299a52c8a600e45c7a41cdb425a9afc",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/server_v2.py",
+      "sha256": "7227c3e1963501490b80716f9bf7510f1044e49ff0f5e3ffff7e3cd0c6f1261c",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/server_v3.py",
+      "sha256": "23b5b9de5ba697dcebe1dcccdbee4d0ea54545a409182ddb63c2e7358cae4708",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/verify_delivery_v3.py",
+      "sha256": "f8e2d5074590df8970034c1a1eb56168d6ef61e1737496a2beb561f8939df9f4",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/static_v2/app.js",
+      "sha256": "44bfba193b9e934813e87c3617b53c0ee5ffe63dc46306291100340c94da186f",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/static_v2/index.html",
+      "sha256": "32ea4ef647bf3cdb4ef998437c6a2c7a121f20430ae35e6085fff2cd115fbb21",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/static_v2/style.css",
+      "sha256": "24c6e8373c1b9c4ebd03ffdaf0cf1ffb58e070bb65a8683e1649aecc53d7f673",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/server_v3.py",
+      "sha256": "23b5b9de5ba697dcebe1dcccdbee4d0ea54545a409182ddb63c2e7358cae4708",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/cloud_v3.py",
+      "sha256": "1eff9f99510f0592b6938b8fe7d99d79dfe68130867f4df50251d5e5244bb7c5",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/batch_v3.py",
+      "sha256": "b4fa6110b2913dd73228c5ad31a4001a29f7eead4e931411fa13bcce6add6a27",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/live_v3.py",
+      "sha256": "c3d0425ff05af859deb28b1bd261a3a1d299a52c8a600e45c7a41cdb425a9afc",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/binding_v3.py",
+      "sha256": "586e830c3a5d50c09c31abed9e4bd1e9925910ed6bb57664b375dd788f69978b",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/实时导航平台_v2/核验/最终交付复核_v3.json",
+      "path": "project/src/webapp/live_v2.py",
+      "sha256": "359cca8233bcf143b5493334d829faa3b03abae81c955654e9bad45b7da7ab84",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/主动探索演示_v1/核验/平台数据与保护复核_v3.json",
+      "path": "project/src/webapp/replay_v1.py",
+      "sha256": "a10404d07080539c82038a2e19ca158432d29fb668326efa75be39cbd7f45a4b",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/主动探索演示_v1/核验/平台数据与保护复核_v3.json",
+      "path": "project/src/webapp/server_v1.py",
+      "sha256": "b2d931b55168d05be2637d5b7378f711963f849e8f507283ae467a8a27230a43",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/主动探索演示_v1/核验/平台数据与保护复核_v3.json",
+      "path": "project/src/webapp/verify_v1.py",
+      "sha256": "87b5f1f921a915d02f8ca69ce49392211274e21a0e12098007bbe7939b1d96e4",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/主动探索演示_v1/核验/平台数据与保护复核_v3.json",
+      "path": "project/src/webapp/static/app.js",
+      "sha256": "e8b763e506b6913c84f295abff687f63db8368c6708a7e6c6388a087d370f141",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/主动探索演示_v1/核验/平台数据与保护复核_v3.json",
+      "path": "project/src/webapp/static/index.html",
+      "sha256": "07ab78feb685aafd84af50d69b38c66f6ae05c109c1a404e7bd7ab1a0aa40638",
+      "current_sha_matches": true
+    },
+    {
+      "manifest": "平台/主动探索演示_v1/核验/平台数据与保护复核_v3.json",
+      "path": "project/src/webapp/static/style.css",
+      "sha256": "765bf733893fab395504f3f61fa41705184e2a565ff72e9423e3fe34fa61126f",
+      "current_sha_matches": true
+    }
+  ],
+  "input_sha256": {
+    ".agents/HANDOFF.md": "8706bdeaeef775bfb6a3d294b945777bef401bd430057ca243d3bf815e0990d0",
+    ".agents/TASKS.md": "a56091e77da6a1637f0411a7145b1b39a85c40543492d125f8d847337773fbb6",
+    "AGENTS.md": "36cc77e6a20c5a8399a77d19f9c77a6e341bb60dd57f817ae32bbe3a48db282c",
+    "docs/PROJECT_STATE.md": "335352e1f18dd3ef9339477d66f8beedb104a0753f8cf0b94ebdf92a997a804a",
+    "project/src/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "project/src/agents/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "project/src/agents/area_policy.py": "0f9b1bb3e232332bd9eb36349a91f4a62bdf0c158f87c0bb1f6cf0dcb8d31216",
+    "project/src/agents/boundary_policy.py": "f670350464f2774dff67f2352f55492d8d6b8898b8f9be03cd05284319f80c79",
+    "project/src/agents/candidate_reliability.py": "caeed4eef9906029f8692d79cd06eb718170fe2f1d8254815f042423145fd19f",
+    "project/src/agents/cloud_gateway.py": "4fa84341ef935efa3fed5a5790ef6351cffebaec0a8553f931f984807884c287",
+    "project/src/agents/collaboration_pilot.py": "cd74b17e4ceb03af7289948435246039c090b58f86c21a7f8db81a00c6bf4e36",
+    "project/src/agents/coverage_lookahead.py": "a5b1eb7b4229d5c29e27ef7eeea54d9e2cae462a48ac0db792c73af00fe02d9f",
+    "project/src/agents/coverage_radial_guard.py": "e6c36a1ad244c005a2e15f6b114e7ce6e20801e0f4df0cbec07fa6e06e11d696",
+    "project/src/agents/curl_transport.py": "9d8c2546c31995ff54f8011d905c0e4e3f6415d9ec469640eccda10d4f6fbabf",
+    "project/src/agents/decoupled_cue.py": "b646a95c1018e3971c20d92620d3e6edd1e5885a307b7597b1d8d317ac504403",
+    "project/src/agents/edge_cue.py": "3e4fc82dc123b3f397c2f50f9e475909cd0a3642a8ae2765af0fdb45b2b4ba0c",
+    "project/src/agents/evidence_budget.py": "ccb4685deda85da375c2e8012f04dc90f5b9a835b838f54d63d15ac257e3b9e7",
+    "project/src/agents/evidence_budget_vlm.py": "62b463c8939241e35a74bbf10283715918fe283672c08ff169e205711d161e2f",
+    "project/src/agents/evidence_compact_adapter.py": "79b345b8a692d7d49f32596b629ad3fe06da0d85676771c20da6e0974c250576",
+    "project/src/agents/evidence_reference_repair.py": "d97d249bba7604b8c34ebc230fd6d8b053d8db1290313df3be872a784bee300b",
+    "project/src/agents/evidence_source_clarification.py": "2c510de2dde40d151808cab0cc2df99550dcbbc988848e0f8053c48056e540ca",
+    "project/src/agents/exploration.py": "bfa9c3bddddc354e794ce27ad000fb24d41e77e804b42805d1b7a2ca00b9596e",
+    "project/src/agents/fresh_alternative.py": "b61df6226df59cde30e140e5e35fa767a97791b8dd593c3f9bb6066f424554f6",
+    "project/src/agents/frozen_edge_navigator.py": "5c1e23bc34f2c907bcab1697ceeba8fadd370273fee2bfbaf54303cee3e38202",
+    "project/src/agents/governor.py": "b72e43b046a861506f4bbb9703a7b3f20d3203c574bbe478e4c42fcda962e72e",
+    "project/src/agents/local_ledger_option.py": "cf58a69359cf6c6400284beb74fe4a1daaa070e4ef83464cd9598946ee6b995e",
+    "project/src/agents/massgis_confirm_navigator_v1.py": "0d8275b54214ccc0548ced77fbf6a16724a80da9cd824c0a313024e11f3b28b8",
+    "project/src/agents/massgis_edge_bridge_v1.py": "9e9e3ab337e5e648229e1a2d745d1e8e145deead046f89cf42b01cfdc57ad614",
+    "project/src/agents/massgis_navigator_v1.py": "1ff1081d3f4c1b4de706199bef914c36d666a0e73fe2bd727d10323c5ffbb0bc",
+    "project/src/agents/massgis_threshold_navigator_v1.py": "4f269e723dc7fd09f87d2f2d71be115ef15475537bcf3020d4d7780f38fa7356",
+    "project/src/agents/neighborhood_ledger_option.py": "87ae784640ffd2f388eb5cfe6d1a5942f351b39d8929de907b59c4b571978faa",
+    "project/src/agents/parameterized_coverage.py": "086fb81e057738e14dfe786c2387d3e980f2e01a63191eb05cacba848610b556",
+    "project/src/agents/precomputed_frozen_edge.py": "955186dec5781208a1c488866c3a38e6c4810f04f33f95f32238af4956874321",
+    "project/src/agents/precomputed_scaled_edge.py": "93d38dd58b3707a51936b9a4f7851f071fc3ab9d69546fdb3df1e671a3da9586",
+    "project/src/agents/protected_ledger_option.py": "1e151b030393d343eb1a1c8b72d78f92d7a60b64266d31fbae7ce6149be43e92",
+    "project/src/agents/rotation_candidate.py": "9e1785c70e7187bd661801e28e9febacc3ec232e59ede21adc4ca58ebd2b69f9",
+    "project/src/agents/scaled_edge_navigator.py": "012cab624c2d86854204c5b77d3d85f79a799336a241c4a61e2a42b7f39a1975",
+    "project/src/agents/spatial_relation.py": "18c924e19d4a9181ff01e10e12bfed881922568d23718f28eac9c0637490010b",
+    "project/src/agents/target_cue.py": "09e8aa69114a0c7a5efc8c56743987febccd619849c77d8a53d7a257bdca2693",
+    "project/src/agents/vlm.py": "135dde6ee4cd79f5dd104a3b11f4effc61e32a1f2f743ec1383dc37bf83356dc",
+    "project/src/data/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "project/src/data/area_catalog_links_v2.py": "bd45751183d2ba479726f6be63070040192ab51c363febeb626a1371643520f8",
+    "project/src/data/area_catalog_v1.py": "ae3ca864c48ea6a484e04b3e4adac2d2fc81071882de378f242299fcf896c475",
+    "project/src/data/area_windows_v1.py": "486ab543a5c53e36f07a72476c914dd46f69e4f3d2c8b12ad1412cedc58d1faa",
+    "project/src/data/continuous_area.py": "69e451d32d5005c08f185455840e65ced500cf774760f2bf4b40a5546f9669e5",
+    "project/src/data/hard_rotation_negative.py": "15eadbb74a10025163906c7e4b3ec53cf036f051e03616ab16c0c766b5efe123",
+    "project/src/data/make_episodes.py": "2d82caf923a0073bdb111e0b673127a9fa4945ca281117d2d114dc1b4598420e",
+    "project/src/data/massgis_confirmation_pool_v1.py": "fde33d53591106a12782e9a4b7b9641b30425adc5889376cd84d22807f535830",
+    "project/src/data/massgis_geometry_v1.py": "42515c30001da98399cfd9c43facdf7b6ba02a05490f761b73d043278e698017",
+    "project/src/data/massgis_header_v2.py": "f4f308e1686ba9cddf0d7a700cb48710ffe32b69615f9b5903b654c06aed5ec7",
+    "project/src/data/massgis_jp2_v1.py": "d727c3731afbd112f6bb83b50c9f195174d0281a119628848e1891177f3c73e7",
+    "project/src/data/massgis_native_v1.py": "aef3f2c269009e90b287ebab2e8a7051b16fbfbb73cc2848e4e55f0717831c93",
+    "project/src/data/massgis_native_v2.py": "19b64901ed0cce3b534240e10436501862ad6a382812e39e2fef31f27d285bb3",
+    "project/src/data/massgis_native_v3.py": "5595195f9fae3620a72249fae1cbd90a3591c880066b8b97e7af630b2eb6ed20",
+    "project/src/data/massgis_pool_v1.py": "0a30472bddd86c416ed961a5194b4492c0fb95d085e5b03d6721312b234dd48b",
+    "project/src/data/orientation_views.py": "2deec78ac88d3ad96c0332f00f5f9c57b2a1b224ac6de744efbb779fbf041376",
+    "project/src/data/process_masa.py": "0ddce87481edb98a7cb6ca6563fdcca9fa6488acfab8226b01ec3222f7caaba6",
+    "project/src/data/protocol_fit_cache.py": "e33c563e7104f077a35b60f3a551ff328016f1da534aeb2665116ef598c570eb",
+    "project/src/data/radial_confirmation_areas.py": "fbada2d5c64bf39af2409add7b677f5a4eb3d8a2131b82fb29361a4a0e6b18fd",
+    "project/src/data/real_area15.py": "4c2a4574e51ff4dc2b33b764a92b8829cb942c5e525fdc76fc33e0f72357a517",
+    "project/src/data/rotation_negative.py": "6f200669dd87da13a95fd6f23e376ba029607dfa6dd880bd2174bf4208a51df6",
+    "project/src/data/scaled_masa.py": "e1469a13a567a76aa3294f609775b3f63d2d8dd6bcaff122b32597b5611f7591",
+    "project/src/data/spatial_continuous.py": "08241e63b9cca0ef33d24826f037e328ec1c102557b0a4a65320391ae49fa8e5",
+    "project/src/data/spatial_continuous_v2.py": "572d5134cb5d05e6e9f8ce3273fab290c7f7f99fbbe5c43160495a448731e395",
+    "project/src/data/swissview_grid.py": "ed0826487b77860e39d5582855a3586c6ebf254dd3f7dc4521b940c11c53ac31",
+    "project/src/data/target_perturbations.py": "733c07d0f8acd602566f62a3f917a522e0c48c560e8c67981936d20f54772114",
+    "project/src/documents/build_midterm_materials_v2.py": "7e3d4b763da80860707b461915c88073a368ecd623fb256f65c3d8d5a577b824",
+    "project/src/documents/build_midterm_report.py": "a071f64d86f19856a1f562777ad966a09be71a913ca5f4c56985acc527c639c6",
+    "project/src/documents/build_platform_midterm_v1.py": "cb2ed51b4c88b9b4f8219919f9540788a52ce688536c4f1e61b4f89e105173ad",
+    "project/src/documents/build_template_report.py": "ab1e5ea4b93aaf3ff263ac47ca1e5c9964d9d2ab5e4e8d13afd32b5e37d85888",
+    "project/src/documents/calibration_offline_report.py": "b877f4c7308d7abe8e4b253093157ed66950af202d90586f0a8cd156db0e5876",
+    "project/src/documents/check_actual_area_pilot_delivery.py": "06068909afbc2ab4482ead9de88c7e7448c463ab56329876700f06fcbc4902aa",
+    "project/src/documents/check_spatial_area_delivery.py": "7cf79ce2af1f19328213e03989b141abca9030618c574d2e47181a90b01fd2fd",
+    "project/src/documents/check_spatial_confirmation_delivery.py": "8d445f9978c70b7925d2e1ae03cf1dac2d2a85e2c69ccaba2dc02bbb7be0fc48",
+    "project/src/documents/close_area_compatibility.py": "f56329c82de494402fd13fdf1d774fe45a846be412b38804b0108258245fb6d4",
+    "project/src/documents/close_coverage_lookahead.py": "0aa9d8336f51428032f7f27a4b3cbd8025c7f64f9be824a90bac03c2b682c2ae",
+    "project/src/documents/close_coverage_radial.py": "7442974aea0b3394441fd234751c954902b50761b1e3b0a51a2fdd474e6d1fa4",
+    "project/src/documents/close_radial_area_confirmation.py": "f7296f39dfe9f3a4e04c85ff14bfb3eb1ee48b188f36520330003ee449bf8264",
+    "project/src/documents/close_radial_confirmation_data.py": "e3e14151fd6e4eb09fb2e728366bfa07d1b9c98e744b00b924350712ed5abe7f",
+    "project/src/documents/correct_report.py": "0725d9cfd0b5d1a5142c4f12236cbbefeae89d2cf296f235def0cfef4fc422ad",
+    "project/src/documents/current_progress.py": "08bcd6a3b63fb78ae7f98c5db97c4bc8bb412c1f0ffe78ecf29be15a32073246",
+    "project/src/documents/export_review.py": "e316939a96136f7445d349df9cb91c631e7dc314791b5758409b658269f7d7e5",
+    "project/src/documents/finalize_evidence_compact_figure.py": "3d4980a7e28881a1e7cc3f38c95aac5c7ca7118ed6385ae88509a7de14030b09",
+    "project/src/documents/finalize_midterm_delivery_v2.py": "31296ac6cf696c180eda39e4d246e720ea4584bfa5b4140eb78f09be3a74d121",
+    "project/src/documents/finish_massgis_navigation_compat_v1.py": "496a42315f6ccc3aa20d2559ceae9ba5e0f0f77edda6ca1e792c3507705d6b37",
+    "project/src/documents/index_candidate_calibration.py": "43674fcc1e3ddf52bf10423a5e5d134e9837d57cbb8cae6df3b5aab37b30d7ca",
+    "project/src/documents/index_hard_rotation.py": "b1cb11d0e1fd93c008791e04fe187cb6cfd1bb67475db3d052cd32888d51c8ea",
+    "project/src/documents/index_orientation.py": "b02d16977386e606d7c61bbac50f1780a59b06822d55c8858bf12c9f04a71c4a",
+    "project/src/documents/index_rotation_negative.py": "54901d4360278b4e2ffbbe94d0985d1b088bc00228cffc9e8b69316fdad02aa4",
+    "project/src/documents/index_spatial_confirmation.py": "e4810256ffa6f4bb859abf8a443de85e5af093019215fced5df846a6efeb9868",
+    "project/src/documents/inspect_report.py": "6fba511bffb5250329f744ea9e8fd42d14ef2b041cd59c1cf1ecd9dd8bf14476",
+    "project/src/documents/orientation_failure_diagnosis.py": "956e18f8997cf2bec61f9127146847e26a4206dc00129a36b6322a94296f68de",
+    "project/src/documents/polish_platform_midterm_v2.py": "a809d7c37f4f435cabfd20187b8a58a9e4a85714bdd68b0a622365ef0dd9bee6",
+    "project/src/documents/prepare_coverage_radial_confirmation_draft.py": "9b33b3f7abb7d97d1028f473c6f6c0fc0d60a946eb07c776ab0a3f8e8c879658",
+    "project/src/documents/project_materials_organizer.py": "5218eb9bc9402429018566f2f0a33ed9a29c20e93f8e874313675e94584600cc",
+    "project/src/documents/refine_actual_area_figure.py": "88f5515d0355727eeae0565a8496df98c84625db9162e06963b3d2ed4926124d",
+    "project/src/documents/refine_continued_source_figure.py": "831174ae6954300b26cdec2e9f1e03e73ab896011d2cdfefd31598e5af0b9b2b",
+    "project/src/documents/refine_radial_confirmation_data_figure_v2.py": "327139ee7e378ef745d6ae5cbd4baaa2aa1edc2e80ac57c280a85e97e0f6974b",
+    "project/src/documents/refine_spatial_confirmation_figures.py": "3b4a37a8ee5b4cfc78fb7449f92792f2d96a0ca47f6c7e111d325661ddc89917",
+    "project/src/documents/refine_spatial_coverage_figure.py": "79d14185e317dcae56512ad17ee04c4af7262a0d2dd1ced159ce77a8422930de",
+    "project/src/documents/render_midterm_materials_v2.py": "1b6555b957dce337b40a74bb948c3174b2e10c71a47d03b73641668185960e39",
+    "project/src/documents/render_report_figure.py": "2adabb8e2bf3d2e8d4e0ebc0d2f60c98a3075108e4ab4511edd4ac7af7bad7f7",
+    "project/src/documents/repair_massgis_compat_report_v2.py": "d8af4a13ba7078409a9050826f008081ac382b22e10d6ed3fcd71eefcd70a7c4",
+    "project/src/documents/report_massgis_confirmation_run_v1.py": "106f816e33a63b0bdb56cd8b3202704a7777589ab6a55cac8535c34771a9fdc7",
+    "project/src/documents/stage_closeout.py": "be227502dae85dc56e614e72e09735a670faee6712b0a62045c209f510f6eb26",
+    "project/src/documents/stage_figures.py": "6eeefaa84f1ce6a7e8701f2c725c45e055e8f0ff2460b27d0d0041e96777deab",
+    "project/src/documents/summarize_actual_area_pilot.py": "017e4c755168d86d7aa9450b7b96550cbdf4b8abc9cd779aad180e6247cd586a",
+    "project/src/documents/summarize_area_data.py": "28437ac4803cfaa725e6e8cfda25028411e72073936926904b0e6cf1320f6900",
+    "project/src/documents/summarize_candidate_calibration.py": "a229bae5bbf4fe308e66a7d367a72de869a69b850727db7e3c4beb170207ccad",
+    "project/src/documents/summarize_collaboration_pilot.py": "33096f0baaf165e88fc6ac26ec721653ab482398c56f86e83c330cc5179be43d",
+    "project/src/documents/summarize_continued_validation.py": "53bdb5b96f27888a304e3fe5dbcf08303e027dd06d8889ae595a44337891f0ad",
+    "project/src/documents/summarize_coverage_lookahead.py": "5e252d66ec6156ccefab53155301651ef491fbd21f44229638136feb8ecf85b0",
+    "project/src/documents/summarize_coverage_radial.py": "035f8f7b7bf1431870b3e3a79ab11d32269fbeb36d2fface31e58ed46d506bea",
+    "project/src/documents/summarize_edge_s2.py": "1147ad8d3ac05a54b347fb23664a484f1d36ad5d2f3a03d15966c43634f05147",
+    "project/src/documents/summarize_edge_s3.py": "36c9acbcd65627fac1d1e600f8738e98506a3174afb143259ae85946740b354a",
+    "project/src/documents/summarize_evidence_budget.py": "ff15c30450b25277f395395a157b0dfa743ddd3ef07a44c2c92e5e24a526e760",
+    "project/src/documents/summarize_evidence_compact.py": "e1bb89cf720480518c1dc3f3d72a8a3009c330fdff420beaae0033d145e9b402",
+    "project/src/documents/summarize_fresh_alternative.py": "736036f94ace47af442a4021a7cf3538bac4dea00190c9ddde05270179a74cfb",
+    "project/src/documents/summarize_fresh_source.py": "7fa0fcdd5fbd911399b0b6267d3f78a398dfc0fb88ed760b3d4029b1e79bb394",
+    "project/src/documents/summarize_hard_rotation.py": "cc3d0313ed1c5af8580de875d062301a8fe7622ef5645ba776e629f6c07a367a",
+    "project/src/documents/summarize_ledger_protection.py": "2c6697d4a8aeb4b87c99b8d86e99f40937d424afff55b0b0c26468f0a66957b1",
+    "project/src/documents/summarize_local_ledger_expansion.py": "411fdffd44502ad3d2a0ac3c7fa09409aaded87dbcb67a9ec81ce454ff659a9f",
+    "project/src/documents/summarize_neighborhood_coverage.py": "6481015145c83c6c3a1cda796f0797fdd72464c3c0c71d775f3228ae69eb78f2",
+    "project/src/documents/summarize_orientation.py": "174ee4d1e0c1f7dad0923a49d11344e59ebd6bd07bd6b4fa67253b7c743561bb",
+    "project/src/documents/summarize_protocol_adaptation.py": "4717b15a2b7d104ed3c3b0ca8dd45c82c008062d870e316bfd0f6ca838259805",
+    "project/src/documents/summarize_radial_confirmation_data.py": "4fb58f1fdaecf9173b1179ccf89b60cd8de0b6be007f90856ccf709648272d77",
+    "project/src/documents/summarize_rotation_negative.py": "0bc47e69fe968fc9cc73ce4ac39e972a6f12c2bc555c4f1a3057a14dd5a3c67c",
+    "project/src/documents/summarize_scaled_edge.py": "331e6819c757539eef0f3ed6796e1d9787b8fa83d2d4a7db60d04d7ac20914c5",
+    "project/src/documents/summarize_spatial_area_confirmation.py": "e1a0eb40520a6230c51c5b8b92762e77c8b096705bd5f675e9c198b7c2d18961",
+    "project/src/documents/summarize_spatial_area_data.py": "cc91918ab083980d1dc724f13fed708f6daf28c26e65656d0629c3a4575665c6",
+    "project/src/documents/summarize_swissview.py": "2ee77bad9978bb6bed8eb423f7efd90bd280f82f80549f67bf746720ea4c66a2",
+    "project/src/documents/summarize_target_robustness.py": "0ab90031d6beb471df01edd2c3d87f36ac87a475faf55debfa6d15a94b801ceb",
+    "project/src/documents/verify_candidate_calibration_delivery.py": "c2bd62bd769c667beab89d6f4ba928d90a20863ea8713df592424644ed99bee5",
+    "project/src/documents/verify_evidence_compact_delivery.py": "3e27ce67fc2357bcd1dcec343dad0cb282918af15b364248b1c5b03c5d7a172e",
+    "project/src/documents/verify_hard_rotation_delivery.py": "52d8cad866a8b5a7115e1aa8cbc267f6dba57383a55267ca049e8a634ad4fca1",
+    "project/src/documents/verify_ledger_protection_delivery.py": "702d18410721d501cd1fcf90c7e2288c1cbc3c5b8a436092ad40bc55929d8894",
+    "project/src/documents/verify_local_ledger_delivery.py": "9c479e6f87b8fbd8a19c4373cd233a73d3e261a143c6ae89afec7b884ee97dbe",
+    "project/src/documents/verify_neighborhood_delivery.py": "bfb331cb15eeb1b859d02344c7e3dc9951d4c928cbfc51c3c039714db9d215a3",
+    "project/src/documents/verify_orientation_delivery.py": "0822984590ad96481c2676d6bbbf9ec3ad37fddf2aac9c0cf9b1fb78dbab1eea",
+    "project/src/documents/verify_protocol_delivery.py": "b9665f39099991258247e8fde5ecb1ed33c37029451a0050b0c03ef09a1d3439",
+    "project/src/documents/verify_report.py": "bc9f91a2621ed64a6d5545e38e9c6b10e7edc640997c241f7be0c4fb083c8fcf",
+    "project/src/documents/verify_rotation_negative_delivery.py": "2b471a414a5c7bb76ebca88137dc81aa25a3c1e1d50f80d57e1e1f507bac462a",
+    "project/src/documents/verify_stage_closeout.py": "f9a5205d7c5bab4aaa6c2fa09a61bc48ebbc99f844c9f277cfb623b510d558dc",
+    "project/src/documents/verify_swissview_delivery.py": "c94f73ecf2f60e917181818b48e0c75ce1acce59c21594c20e711d55585de3a7",
+    "project/src/documents/verify_target_robustness_delivery.py": "f80e3af1d8e791d43627dd00670703c4b70287c3b9781d065d5422fff35dab93",
+    "project/src/env/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "project/src/env/actual_area.py": "c16c53991cf75fbd89e177c375bf34b0d02ad3418c8469606bfc6979ce4bc546",
+    "project/src/env/area_protocol.py": "5242a47aba99330f9dadb32212d38ca640b72dbb6d7adcad821ee4a46a2e0972",
+    "project/src/env/environment.py": "ad19a173945f86ed04b18c0f5365e543217688d124271f51bc05f2747af92b5b",
+    "project/src/env/episode.py": "3c85105ae7bf8efb90f1726e695c8db90e03544de342c874c08eb166e8019502",
+    "project/src/env/massgis_area_v1.py": "e59902ae0d161671850055f5649289df1917085e92fcb7b2d1d1d9103e2ba039",
+    "project/src/env/massgis_confirm_area_v1.py": "5ed3f3ca0db4515b3c77ee112b196a3acc747c3410500bf96f7dbea5a99b2ab0",
+    "project/src/env/massgis_native_area_v2.py": "9ee967151e66292a89d4eda9e36d38e2ef9dae305644e52d84b375275f7f6858",
+    "project/src/env/parameterized_area.py": "a39ec73e3f69e46f3feded068cbe55e57c523f60d457a419d5228b8214900993",
+    "project/src/env/scaled_grid.py": "39c1ba2a60affbf3421aaf0806ac4a807c9b461d66ef6de792302c9ba7c454ee",
+    "project/src/env/spatial_area.py": "4df266e61b8b19bdeae81365d5340ad65f72d404c691735346f3774e6ae062dd",
+    "project/src/eval/__init__.py": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "project/src/eval/actual_area_pilot.py": "41559f55940db8558cc79e2cb94a61ab7068282704f8d4058a8759287d47c081",
+    "project/src/eval/area_candidate_packing.py": "f3d3d994f92e1914f42325778e99e8d586d19a97221ab0746b54c65c1f619f1e",
+    "project/src/eval/area_compatibility.py": "0ae95877badce10372f913fad37faf19c7071e41aacda17226423232026d5676",
+    "project/src/eval/area_compatibility_catalog_v2.py": "f7e4b88f120e96f5218a7af6c680515eaa8cc7885c3714c37a1628d2eee727de",
+    "project/src/eval/audit_actual_area_pilot.py": "53fc1ab3d1752722e64fed1464fc8cbc0341e15466d1ccc99c696a1f20f15ec1",
+    "project/src/eval/audit_area_catalog_links_v2.py": "cea9ac5a63a69c90650bc572d95a32cdd768fa40bf155e73a8039eff8e693888",
+    "project/src/eval/audit_area_catalog_v1.py": "cbecb76672ccdf50291d5f6a17515e4de443d8850fa8b8a91f99ddc5838fe09c",
+    "project/src/eval/audit_area_compatibility.py": "9c293ba3f68803e954193d3c8a2e6dc80a5220e6124d066435144d26e7e4ac70",
+    "project/src/eval/audit_area_data.py": "6f8b64eb9ea80c473004e4eca7c4920276cc86c626a7645409370fd204438456",
+    "project/src/eval/audit_area_windows_v1.py": "a5d17f6776fd4c7b92995046567fa4179e9ebb5c2c115f1f042959a86f903970",
+    "project/src/eval/audit_candidate_calibration.py": "1324d19d99263f9f47316921717f2aa4706c2a8d69ea013203dcca51aef78ea4",
+    "project/src/eval/audit_collaboration_pilot.py": "ea426024d0a79b02d82a5e63adb9a87262d1c57bc9c46274da9a35fb88f7d274",
+    "project/src/eval/audit_continued_failure.py": "eaca589b48489fba2141245abddc231b9b199ca72cdb170d531b3d6fe42b3faf",
+    "project/src/eval/audit_continued_source.py": "d453560488caa87061aedfcaf186aa692eb2530e542f86124a3d9a9fb53b68f9",
+    "project/src/eval/audit_continued_target.py": "579f332dba030987093c0a3491df189eb800d549262ffb512011de3e550ab0ce",
+    "project/src/eval/audit_coverage_bias_diagnosis.py": "f63749dca1388d821a4ac5552c326baa2948225bab35bcacef875673c54e3ab1",
+    "project/src/eval/audit_coverage_lookahead.py": "40bca73ce65df948f21bb737ff6c33670799c1e3e61e71994f07e9f463735878",
+    "project/src/eval/audit_coverage_radial.py": "9837b7a018fc3e23a89b9a1050f733679384021591bf01000172fae54e0957bd",
+    "project/src/eval/audit_coverage_radial_diagnosis.py": "fc03e646b477757822b053f9913dbdcd8ca7dff399dd74a84bf46f3e7a987e80",
+    "project/src/eval/audit_decoupled_cue.py": "3eb3e5522e428a4926d8c98dd2587e4342d155ea8a78bdfd662477f604087901",
+    "project/src/eval/audit_edge_cue.py": "6019d5c6fd80f9c84fafd15b642f42ea2f12597dbe0054d73ad73d1ff7c3fe8e",
+    "project/src/eval/audit_edge_s2_confirmation.py": "8448f3a582404ff762816101245ebfcc5e9f25aa240ff89b6cb5f1ea59b7ec2f",
+    "project/src/eval/audit_edge_s3_confirmation.py": "b72cd70b38ffb6b4042a9209524c0f10955b0d0e9f0f6276778af807835db6b5",
+    "project/src/eval/audit_evidence_budget_d.py": "faa1b2c555bc56af89383c359f66e7111b7ee7a6a3fc2633d088537892608926",
+    "project/src/eval/audit_evidence_budget_t.py": "24cf5ceeccfe0380c11859eaa8a4da1256e03e2dd3fcb8d2c23501e2b661195d",
+    "project/src/eval/audit_evidence_compact.py": "64c6e430ee8830d4602bb64dd85f477f7df1a693c64d80fc0d53255c0b533796",
+    "project/src/eval/audit_evidence_compact_g.py": "44f94086127760f889f41b6b880bdb7afcdf07085abb0deefbe8af624e8f067f",
+    "project/src/eval/audit_evidence_compact_g_count_correction.py": "c8c013b26e3fdb720951a37b55283a45f908eeada70114fc0fbc6a00b03c1ff1",
+    "project/src/eval/audit_four_arm.py": "f241bb9000f89a9228d311c10d260981f098df06d2ff84cc1261a52390f9ab6e",
+    "project/src/eval/audit_fresh_alternative.py": "5eced6ea5b9f9ef764c8d7cb0736cabaf1cc28a62e2a6b98b8ff74d93b66c5e7",
+    "project/src/eval/audit_fresh_source.py": "07f6f99e299a4b6be67b5612588924928e6237215ce8431df53e8cd7630a3633",
+    "project/src/eval/audit_hard_rotation_navigation.py": "3adbcefc2bec3294917b9654f6d830e7240daf1fc961ad814eeb8a8f183227fa",
+    "project/src/eval/audit_hard_rotation_training.py": "53b16f4d1749eeadb61e1159bd866d792f0e6b26e70d31c67c89f4d4012cc5b3",
+    "project/src/eval/audit_hard_rotation_training_receipt.py": "0cee29109da7c80ec0039102a105a13e0e3934702c19913a319e28e3d539caf5",
+    "project/src/eval/audit_ledger_protection.py": "b4e980639ac56b0db8361622f66d361e1a6538ab3b3800725dc3bf1e95716352",
+    "project/src/eval/audit_local_capacity.py": "83e689530b0b75aca778fb129e6c1a5373e837808e2e39e876f85ce8217950eb",
+    "project/src/eval/audit_local_ledger_expansion.py": "33ae7cf4240341265b9513f021e465174b7cb3c12feac8c9ae28114b5b88b51f",
+    "project/src/eval/audit_local_s2_confirmation.py": "7ab3ce348206e32afcbb802b6e2c6cb64e0ce868d3916c30233da3acfb21bb03",
+    "project/src/eval/audit_massgis_arrival_drift_v1.py": "74ca90649b2f1d5e1ae30658647a968733a8f30cf9239a9b45f228f8571cc9f3",
+    "project/src/eval/audit_massgis_arrival_drift_v10.py": "fe7642913d74d71cd1f79003ce026fcaa8dee803b5a134ed5c78f9007b1f12d1",
+    "project/src/eval/audit_massgis_arrival_drift_v11.py": "5ee608a2ee0b02cd7a291bca31dbb0e75f583fbfbe7c68634bf071673fe58bb9",
+    "project/src/eval/audit_massgis_arrival_drift_v2.py": "e5fc8bd2adff953e7032b810e5b7cf418a0ac0708b8b0bd1af26fb44ce6d627e",
+    "project/src/eval/audit_massgis_arrival_drift_v3.py": "721c520662b60db98e4b2dd7afe068b4b9a0739cd152136d2486852b1b2d1249",
+    "project/src/eval/audit_massgis_arrival_drift_v4.py": "726bbafcecd1de34eee088ad98c666b50a3c82089b3222ac185eb41b68a73f4f",
+    "project/src/eval/audit_massgis_arrival_drift_v5.py": "fe7e07fcf5136b2fe5d507f3fe9e7d57eba08ec5201ad707e209eeffe66aba0c",
+    "project/src/eval/audit_massgis_arrival_drift_v6.py": "4a50bd15fe49356741520e56c520c7b76dfe059dae4c31724032eede8cb94e7d",
+    "project/src/eval/audit_massgis_arrival_drift_v7.py": "7b5791d808efc036558fedddba7be212473a3a8cf679a5abfd8679ba8a2ca9f4",
+    "project/src/eval/audit_massgis_arrival_drift_v8.py": "5964ab5e8e702904e2f52ef8a4c73c97ae2c47aba0b3dc9140266087afa60457",
+    "project/src/eval/audit_massgis_arrival_drift_v9.py": "da015ce75e4cfa389a1bb3e590bb4f96f3f4e7d407c2faf343769e5ddee27f60",
+    "project/src/eval/audit_massgis_bridge_v1.py": "58ffcb584940a47395b1562925aeab9286830b0094ef4d3c2f1d8e7e24b40039",
+    "project/src/eval/audit_massgis_confirmation_pool_v1.py": "1076e3c26491ad1f3b142653153fa8d19fcec33a3583b3b6e6c82157493ead5a",
+    "project/src/eval/audit_massgis_confirmation_protocol_v1.py": "14028f31e77ffac34bfb2b80fd669242bb8dff34d4c8919a2b55e8cda5ece0a5",
+    "project/src/eval/audit_massgis_confirmation_run_v1.py": "1117055ac80872e879de7be5e7daa19575bcba798616c9dbc493b4069257c340",
+    "project/src/eval/audit_massgis_native_v1.py": "16ddbc382302b2e0ff603a7a1744c4e186aa55581288532f23198b8ce3ed0ad6",
+    "project/src/eval/audit_massgis_navigation_compat_v1.py": "465e4ea2c21ac974d100e5f5b48c85d27485073e6cd14a39cc2a07de1256c145",
+    "project/src/eval/audit_massgis_navigation_compat_v2.py": "fe3b5319ddf2043de883526b822534d6871ecf0edf63667b354eb6ff86aeab9c",
+    "project/src/eval/audit_massgis_pool_v1.py": "943f2d06f470b42193f3ad24ac77192f8697f48553fe68dded7149c1ed6d72be",
+    "project/src/eval/audit_model_comparison.py": "569e56ce2e8558d833fc5cc809bd51a6ee4d9d18ded77d2d9a608c82f948557e",
+    "project/src/eval/audit_navigation_spatial.py": "cbcc8d18b4dff493e1cd994fab4cc53740a76c0eceb6465a84c14cc2ab077de4",
+    "project/src/eval/audit_navigation_spatial_repair.py": "0797e9f133fe6f69c0d5c29722f7e1150b89bac03dc27afcafb2c27c96f76db2",
+    "project/src/eval/audit_neighborhood_coverage.py": "6c959a2a507bb1fca7d8a4497032647db196bde7fe75dafa266c5145c56ae70d",
+    "project/src/eval/audit_orientation_confirmation.py": "e25ebcde22971bee4597b527f4ab8fb9db038f90e1afa141502e8b4a7179a4f1",
+    "project/src/eval/audit_orientation_confirmation_repair.py": "eee777c2532d3d3e55050f00511dfc48f2351bae25650ba7628930d2f5629e8b",
+    "project/src/eval/audit_protocol_navigation.py": "f55f9f5b06e13eec68e1bb0dd973bf96ff5608763e28cf8fa9a63a823c66c79e",
+    "project/src/eval/audit_protocol_training.py": "2e23725f52fc4d828c4dd0190ea395b081f3841fe1356af174d91fb94c7372d1",
+    "project/src/eval/audit_radial_area_confirmation.py": "cf99cac9c97bad5a64020e371d478e97547561b6883a926778f469dbb98ffec9",
+    "project/src/eval/audit_radial_confirmation_areas.py": "97a5d2c04aa9174a07f7f2e4e8c4e5e904d2b92049e95eca6a85ee601fe5ddfd",
+    "project/src/eval/audit_real_area15.py": "14b964fccfee00842650437f7128a1b6fd0121b083d37c9329cd0684e510abd9",
+    "project/src/eval/audit_rotation_negative_navigation.py": "63ae672a4b047f0536f9a4af9981b9dcf90ba2c85ff68109ef8154bfde6896d5",
+    "project/src/eval/audit_rotation_negative_training.py": "84de561354faac649688940b60accd6f69bddddc68c30f58ea1f822feeb497cd",
+    "project/src/eval/audit_scaled_edge_confirmation.py": "52e4427a389e42962de0d092921349e3e45a3d955b90fd76231a89c3c66fea9c",
+    "project/src/eval/audit_scaled_edge_confirmation_repair.py": "8206cdccce9ba7816b799853c2074b1eced6bff2c82dbc98d4e6e7c8f060d0c5",
+    "project/src/eval/audit_scaled_edge_pilot.py": "11036cea8b546ce845531ea568311d8c8ee1eb15f8f545431c6baca817f1836b",
+    "project/src/eval/audit_source_holdout.py": "bd61e384d85f54631fcd704b407877f9f825efc355590eefb36de4fe225d0aaf",
+    "project/src/eval/audit_spatial_area_confirmation.py": "5a9971deebd8764240bd103a4d9629383f1f1dd108044e12c6ac561447b028f0",
+    "project/src/eval/audit_spatial_area_confirmation_v2.py": "43b2a641f9baee578457b00235b6559cb8e40cad9c31a506b1f859a9c48079da",
+    "project/src/eval/audit_spatial_area_confirmation_v3.py": "1f1be235da7bb229c3c57db8ca995c6455afea5eaabcf60f3c1c29cf3b481e90",
+    "project/src/eval/audit_spatial_area_data.py": "b642dff9ed807d243dc5862fd93b4ce585d634798d61a2a9383ab4b04d879759",
+    "project/src/eval/audit_spatial_area_data_v2.py": "b55ea91bb9e9116ea879a05b2cab789fb70ca9692c61a60b37396554614974dc",
+    "project/src/eval/audit_swissview_confirmation.py": "4cd9191fe941a907cfbab7af649929f982354ee9e7ede260627596f327cb8ca2",
+    "project/src/eval/audit_target_robustness.py": "5e1bd1d1cf13bea7b1cc805cbdd75086fc7089b926e30d272397c4521bc9a236",
+    "project/src/eval/audit_trusted_cue.py": "177b49822c83dbd6c28e1e5549e2062acdaeab49b4e221766e5ae0ee6bb944c9",
+    "project/src/eval/audit_validation.py": "caae1bd5dc682b27d19cb603c2cf37aa39a909e9e280ceebe1db30f003001ae5",
+    "project/src/eval/build_eval003_input_binding_v1.py": "787bf06ecf3502bfe7e200f7cf82705a46791401f5f50737edb565ab15eb8087",
+    "project/src/eval/candidate_calibration.py": "e7b398a8834c40a4b98acf8a28add61c4c8ee2698b6e3d44c63b97959ff35133",
+    "project/src/eval/check_scaled_fast_execution.py": "5dd77f4e0623adcc2c3f739a55b7a6ef35f921c70d290a814c561c3625a9f42b",
+    "project/src/eval/check_scaled_runtime.py": "aff55401cf4cbb4d92ea9aa4ecdcafc81590de86ac682dfef73ed84f187184d6",
+    "project/src/eval/collaboration_pilot.py": "815c22c23ac28e94668b9abf59e8520a93054cacf4e72d2b628d040c560f6298",
+    "project/src/eval/continued_failure_diagnosis.py": "563eb12a73d225407149330b2ce87a920e826c05ab44737270b69cfa624c58ac",
+    "project/src/eval/continued_source_confirmation.py": "bdf86ede1f750c1cb3911d2236a08e6cc46c6e3c66a397449042fb34effea1f8",
+    "project/src/eval/continued_target_evidence.py": "851f11e67d2a6b2e3057fb9829975a78b3090ca9349529f7a7f4c6c54eebb31c",
+    "project/src/eval/coverage_bias_diagnosis.py": "80689191cadf7a1a753ea20fb5963fd190aac7db4ae8c1349dc0ab463e5b34c7",
+    "project/src/eval/coverage_lookahead_validation.py": "eca911f9f234ff4d217eee999ed77591e796945a958d34daa25e854552c13996",
+    "project/src/eval/coverage_radial_diagnosis.py": "a69b1d909e6820a8a5d2c6949136b6d2268e82135eadbce9030f1c3ac1400743",
+    "project/src/eval/coverage_radial_validation.py": "5908f4bfc4f997358b8abf5c5763e096295378bb9fa3639e757952aadaa6aa45",
+    "project/src/eval/diagnose_massgis_arrival_drift_v1.py": "50d6fcd288f75b8cbba683c0b3793d8909048529429a795937ad95a192619b16",
+    "project/src/eval/diagnose_massgis_arrival_drift_v2.py": "6164bd105d7144cc1636da7e7e75730c2d1942a2192e9dd33f7d64f41b35ba58",
+    "project/src/eval/diagnose_massgis_arrival_drift_v3.py": "71115cce64116ae94bd9c7f4440d68494c4bf7bef23a5687f80df3e80226d9c1",
+    "project/src/eval/diagnose_massgis_arrival_drift_v4.py": "031845076af140bb403c63d3a8a52f91a705cc205dce49c7e850dc3fcce5af03",
+    "project/src/eval/diagnose_massgis_arrival_drift_v5.py": "d6b227b7839cfe4b390c5ce0c35430a82affaa4146df7d883acfb3ff8774f8d8",
+    "project/src/eval/diagnose_massgis_arrival_drift_v6.py": "5172fb62dbb19548884e4b82e9e1112a73275a85e621b22a02d75d52d9d3a152",
+    "project/src/eval/diagnose_massgis_mistrigger_v1.py": "b62370a2f69d9c0978340c52fd82f717a456f119387b9de4cc74ff354632ab59",
+    "project/src/eval/diagnostics.py": "679106b56be23641ae9800ec896eb397af08b7f34fa1c586ef358d5d3117b1d9",
+    "project/src/eval/edge_s2_confirmation.py": "d203c9e145feaa9c67b9583d65c9efcd39444610e234864adba823c450ef4f75",
+    "project/src/eval/edge_s3_confirmation.py": "3d2bffce762b1426a7114752a7b482f6c36d89524379745912f1e35ca01a9570",
+    "project/src/eval/evaluate.py": "c8ba4f434d0b3ed2bff24c09af368431b42d503e64233228e9d8c4fa42de7279",
+    "project/src/eval/evidence_budget_d_clarification.py": "e6b1ab1a322028c03d992e5e9d2da9eabb9c965bc88b706465361da336f8c08c",
+    "project/src/eval/evidence_budget_d_repair.py": "9fa4cc5fc59b134459b79a80adf84344b41f0e6c83a40ecf3ddbbaf961ce9a4c",
+    "project/src/eval/evidence_budget_stage_d.py": "fa700cf8b58f678424af02a96ff3d58f792a974f8d0f561637ad36faf5a3c9d3",
+    "project/src/eval/evidence_budget_stage_t.py": "786236510cfdd430da9a1e2a0e197955f48c0efb07dd8b4c0924ff61c07e8441",
+    "project/src/eval/evidence_compact_count_correction.py": "c8db9eadf61989d4514d93ac1232fa1211c80cc5520e66aff5065124a2ef2109",
+    "project/src/eval/evidence_compact_d.py": "c0568e56c2fe8e6146ce5e18bc72535487b5a49112b38ec4c77c1a283ef888ba",
+    "project/src/eval/evidence_compact_g.py": "19ddc968815f623880a7e3e76007bc3b8e9b9ab94cb86299e13d348d0c66099d",
+    "project/src/eval/four_arm_suite.py": "7e872bbc8df0648cf865ddf2c79260a5d953c76e0d0b12d8532c53c7be05da99",
+    "project/src/eval/fresh_alternative_validation.py": "afd41b451471970336aac2d6661945448fab9f74a3e7157a705185d30131bbc4",
+    "project/src/eval/fresh_source_confirmation.py": "832d0a144e7db8006d535f1e4386a4e769669b3b007d20c5718671e2122ff25d",
+    "project/src/eval/gateway_smoke.py": "c0352f3ca3ccc084034d0b35895bbbdcd0c767577c2a226529461861459f472e",
+    "project/src/eval/hard_rotation_navigation.py": "b6160a9669b0aa8f692f17c30a89759e742f2a2fa39ce7d8e6b98dd32627487c",
+    "project/src/eval/ledger_protection.py": "2e7f7625863a1cc1e450a912b1d1938290714ef392642025f9fdac02b83558ed",
+    "project/src/eval/local_ledger_expansion.py": "024ec7afd4fd13bcb05164658f8ce3c5801f015953280261e72994fb30a28537",
+    "project/src/eval/local_s2_confirmation.py": "7ec35cddac5358cf8875eb387d3363a2618d0471bd39a1db0d7ccd15e60c0509",
+    "project/src/eval/massgis_confirmation_protocol_v1.py": "19d2ce9c1164b9c142f7d57204fb2007c6d422d9656c0ea9409e555a4f1a4ca6",
+    "project/src/eval/massgis_confirmation_run_v1.py": "514cba3a4541855ec9adf66014381495a1b9e639cf25573a1c950b20ca21fea3",
+    "project/src/eval/massgis_navigation_compat_v1.py": "703e6563702aeddaec5be8461717f6c191858dc444bb6faa756eb163dc75d376",
+    "project/src/eval/massgis_threshold_calibration_v1.py": "78364d416ba82c3886e6f31e6a0bb30928b79a516afb50ced286e1e4a0653993",
+    "project/src/eval/massgis_threshold_dev_run_v1.py": "4153a32ca5327f99eacdedefd64082005c0faeba0609bc244e5f3ec0ef25f57b",
+    "project/src/eval/model_comparison.py": "45d0cd1c1be04a0ce3c57f9fb4aed1bdc95bd72d2efcd44ee035704614bb7535",
+    "project/src/eval/model_comparison_repair.py": "258b01b8223c08f0c859d250c4c8f9c146fd2eab8e341cb6c29c35f8bf7aecb1",
+    "project/src/eval/neighborhood_coverage.py": "d11b08599f36309e771ff9475ec40cad24f32f8456b9173ce7c139f8f2b6d43a",
+    "project/src/eval/orientation_confirmation.py": "2a760bde08ec2e7e7e3905e50ed0d364547d583a5f9e8d02ed44f0728bee7f45",
+    "project/src/eval/pilot.py": "cb00e5fec94a0a7fc2dc7bd04aeb1468eb724d8bd26155000c4fa1c270af22b6",
+    "project/src/eval/probe_candidate_vision.py": "064a4b9a1badbbd3a2f60f555bc3c0648f8a48f3b9ef89c59ba8ec1c58d8da0b",
+    "project/src/eval/protocol_adaptation_navigation.py": "e73f0a4132d8c25aa4f4c6acea81b4d0025f579ddd35a20bff19e43ed3275194",
+    "project/src/eval/radial_area_confirmation.py": "13b8dd538f8002b6ea97859b4a91a52d1f0cce29f21b001f22e0c8c74923fe01",
+    "project/src/eval/replay_responses.py": "129c2578f51e4f5de9f2408e2c512c5e4b527c04d59541a91cef71f4da850ca3",
+    "project/src/eval/report_confirmation.py": "e522057d0199d2ec2cc1b38accc034fd4a4cf1848669a755c101edbad29544b4",
+    "project/src/eval/report_curiosity.py": "8d5e7c84d9c908755d2d168c71ff4f91905a428bb43a2a4fb02e26bc654a23c8",
+    "project/src/eval/report_four_arm.py": "d2eb18bce1101a513675a70f055db242bfda118e2f29f4f0eac5af1dcd81660c",
+    "project/src/eval/report_hierarchical.py": "c885ad1820beb80c8e9213db9532748c7a1221b4e7bede12fa36b18bc58f91c1",
+    "project/src/eval/report_spatial_memory.py": "6a2a3270a5164172affd416e71362b0c443aad2a5c1364fe35c4831d38e5633d",
+    "project/src/eval/report_validation.py": "4e8dbf535f44225e2a7a6931f74a7fff0501900bae4b7e5d3f38d7a37fad256e",
+    "project/src/eval/rotation_negative_navigation.py": "d05e5cf5952c4a53559f6e98c7489d9ab7e0f0f9f4041e130224e1f038ea3dfe",
+    "project/src/eval/s2_metrics.py": "0f976c5dc756705ed5eaf548db3b90fb32a9f87f806da847d608f7e22ee1df3c",
+    "project/src/eval/s2_suite.py": "36302dc9617b2696b73ab7673be1aa9244017275445893f5aa357f103ea96813",
+    "project/src/eval/scaled_edge_confirmation.py": "1922fbd02a5ee398698cfbc86e9766a3303549a64ee5b27ef3949b60154e416f",
+    "project/src/eval/scaled_edge_pilot.py": "42f4cc5fd7c20443142f0e1cf1f49f18c53e3f5a9fecaed30ee8636f8f135b04",
+    "project/src/eval/scaled_fast_execution.py": "72bef111e1394671784fef16c22103a632c025ad84fa243583f6bf05b450b07f",
+    "project/src/eval/spatial_area_confirmation.py": "d771eebdce917ea802c77bca848dad0582e489ca32381b29711e3779806a52a4",
+    "project/src/eval/swissview_confirmation.py": "0a74307ecd92a93df9eb416f02e26b747567dccede1b448ddeb9290f793459ca",
+    "project/src/eval/target_robustness.py": "2398c1b8cfa661e6c385bf3d4471736c85843df27f17fd0f8f55a2beeae9c58e",
+    "project/src/eval/validation_suite.py": "1f0472f993437519e9cb53d5bcad832b7137ac8e1d5f37920b544ea7b973e670",
+    "project/src/tests/test_actual_area.py": "647bd43ae0cc354a382e09a67e9a2232c281b9b53cfc3a5cb0317a154a5d7b88",
+    "project/src/tests/test_actual_area_pilot.py": "2a863b2c1bc44b346fba92d1b4d5d26966028f90c37e1f5bbb664c80d9421448",
+    "project/src/tests/test_area_catalog_links_v2.py": "c4303a0691a201bc7d0a178e8a4862ab9f62d03adba1423d910c3008ab454705",
+    "project/src/tests/test_area_catalog_v1.py": "3f65b18cb0f4251024729afd917d9647f3e30fd423facfc719a57761c7f1edc5",
+    "project/src/tests/test_area_compatibility.py": "db1c5c5b853bba5e44eaccb0606d6ece2a5f656e68798416a8cdaee846f2340e",
+    "project/src/tests/test_area_windows_v1.py": "e9d933e1e9ebc9ebd636aee84fadfd4a7885bb7edb4dcacd4a2218d343a7e919",
+    "project/src/tests/test_boundary_policy.py": "201d614fabe6941bfdcb601d6750fc3ae377130e1f66a9e92faa99bc231c0283",
+    "project/src/tests/test_candidate_reliability.py": "9290d02bd9df260085b8499ab994fd9ab84dccd19800c547a6a631d6b04eeeae",
+    "project/src/tests/test_cloud_platform_v2.py": "298629a0be17a7e915d2a9da27e9a194e9b824ca4dd6c1db02eee3d4320858c3",
+    "project/src/tests/test_collaboration_pilot.py": "8945fb3dee83ae811d2c8dbcf001aa79e1b4e8c0e8ebbaf12cfdc0f83e43899e",
+    "project/src/tests/test_continued_failure_diagnosis.py": "351229422901ea406288e59784085fab3044bcb81b8aae9f7a0f114b6d946f03",
+    "project/src/tests/test_continued_source.py": "939740a128d9b874c0ef1bdc35fe783aea5ea500b407a12a7f414a3909118c69",
+    "project/src/tests/test_continued_target.py": "58cf1ac1b3cd0813aba7684cf7c9cc0912bef3c4bf126844bd3a467e96991d02",
+    "project/src/tests/test_coverage_lookahead.py": "480eb7f42bd048c9b1cc1b33cb00978b72bb23d3f3817d09bd5010de9a6b246a",
+    "project/src/tests/test_coverage_radial_guard.py": "9a52685a671be44137780170b2c9ffcfa24a1ecaca25d8068e61b3467151319c",
+    "project/src/tests/test_curiosity_controlled.py": "79f13b065f7849d7e7ca0f79fee4a3d6e22110fd29520c7f7532e0ad53eee614",
+    "project/src/tests/test_decoupled_cue.py": "62c95b6d3e5fb27f1aeffaa798424c1bc2921e939227bd4f099845c462911c4f",
+    "project/src/tests/test_diagnose_massgis_mistrigger_v1.py": "d74e57caa02ccff6a1b89365374d466f9e4b7a0a541583666d12ea16efc264d5",
+    "project/src/tests/test_edge_cue.py": "df1a3427b6cf1343e49d58fd268e10e3f77d00074aaae430e1813fbdd234b25d",
+    "project/src/tests/test_edge_s2_confirmation.py": "d5f27805d3532cc03e67b72c4563d6c85b2cc5719c0d8a6076d1e15e27675fa4",
+    "project/src/tests/test_edge_s3_confirmation.py": "cb33bf127e68e2e50482388ecee58dc2801f343d6dae715bee053a068f5f7039",
+    "project/src/tests/test_evidence_budget.py": "864102783664253d0ab7528fd31b57068e245edbb243e44165c8f8c3c0f02d6c",
+    "project/src/tests/test_evidence_budget_vlm.py": "21877f3e331b899a7403e37b2501b5c055420b266eeea1d93dafc5f855feeaad",
+    "project/src/tests/test_evidence_compact_adapter.py": "8fb11df0535fe34534245c92cbbac0e6d31182e51eec98af34229081fb53243d",
+    "project/src/tests/test_evidence_compact_g.py": "f6e1235533b8fe4a89d477053534cdb0d08be79da5c16019cb4d40597b7b4e8d",
+    "project/src/tests/test_evidence_reference_repair.py": "4990a999e39beefbfc88c7cc4003b89cffc8d5dc59038393ec0ff31c3bda6e42",
+    "project/src/tests/test_evidence_source_clarification.py": "262442ab42ae46bae3e0baed3797a705d7796e1c7a2d17b4acaf57f650f42edf",
+    "project/src/tests/test_foundation.py": "491321aedb4a54eef88db00fb8a0dcdd5c3442793b8527b51a8585500f0ec1ba",
+    "project/src/tests/test_fresh_alternative.py": "c9f858b5f3043ffc08c32357d0b9a1809dcf6f87950f700890615cdcd996d0fc",
+    "project/src/tests/test_fresh_source.py": "96ff6008b90f9a2c4290b0749bbb270e5b1f3631ae2b574bb1fdd0050b621e9f",
+    "project/src/tests/test_gateway_and_protection.py": "87245e59daa138a34e30d350abfebb388c30786cc8a5d913ab0e04af267fb280",
+    "project/src/tests/test_governor.py": "8389118ba4c27960cd6c9a157df3562a7d881bd0ef48e76d8425090b1a9c19c6",
+    "project/src/tests/test_hard_rotation_negative.py": "0de8b22b61ef5d0c045eeb9347503b6909045e49830bba5c794b36bedf8f82d4",
+    "project/src/tests/test_live_platform_v2.py": "3669c541ac15216a11fe21b5a286cb7971ccaec48aad29e7aa0552c782e2a3b2",
+    "project/src/tests/test_local_capacity.py": "a75f3dbde2ea0cf6310a828be86191dd5646f24f5e56b39753fbb30bf67583b7",
+    "project/src/tests/test_local_ledger_option.py": "e219893f702152f32212ce2a8e5f724bedffd6bfcd80608f0ce47db331f68108",
+    "project/src/tests/test_local_s2_confirmation.py": "50c8ef725d4f583c2e128e8405a2ff22571fb760be5227ce702381c6c63eca0b",
+    "project/src/tests/test_massgis_arrival_drift_audit_v10.py": "6775b754a173148c03f781bfe7e618c6ee73a7f734cf391616d0563047fa4676",
+    "project/src/tests/test_massgis_arrival_drift_audit_v11.py": "e510c1ca05df5ab31684b161866224084c60b312f9ebd0f21d56bdf715300a6b",
+    "project/src/tests/test_massgis_arrival_drift_audit_v7.py": "45168c3d64e49afce466c7f9fd409b65af49619702010c0d831d5f81f760060d",
+    "project/src/tests/test_massgis_arrival_drift_audit_v8.py": "b3eee510935ccb16dc45a50653f9f375b4f004da67cca18a8e2a6d7e54531f90",
+    "project/src/tests/test_massgis_arrival_drift_audit_v9.py": "c9ff2d5e5f3f199fc9bf85c64ac6527911df7208ced8e0d03a0e3817fcd6ece3",
+    "project/src/tests/test_massgis_arrival_drift_v1.py": "e5f2b437474ae0e3edccb781a9c4b0880ee15faadb27df4224a29915557fd0c8",
+    "project/src/tests/test_massgis_arrival_drift_v2.py": "d1eb6abf994aa2937c40f56f23181f7c937022cbee8d4ed640c1fb06b96ed449",
+    "project/src/tests/test_massgis_arrival_drift_v3.py": "b019b789d8fa442692f701053e2e3415db757d246b9cf989eb99eaca16ba4408",
+    "project/src/tests/test_massgis_arrival_drift_v4.py": "63b4fc74da7301d135e2201f36aac779d5427003265e48d8591cdff44a826947",
+    "project/src/tests/test_massgis_arrival_drift_v5.py": "4cea3aee56c0cfcc8d74d767eb4b7bbfbed7de4f81d9f72a0560bebffd9c9b29",
+    "project/src/tests/test_massgis_arrival_drift_v6.py": "52d0e328cd90e5dab479f4c2596fc1693f9c6bf6f119be7458d0c58680c176d8",
+    "project/src/tests/test_massgis_audit_scope_v2.py": "ef2363655c1213c5aa19ebd0e8ed712907cace6cb1985b0e8d4a6aba7d03a180",
+    "project/src/tests/test_massgis_bridge_v1.py": "32399f5aaff7de022529329e2550767db56191d3b41a734e4db7341fe594a71a",
+    "project/src/tests/test_massgis_confirmation_pool_v1.py": "0cde7b95089a7fc5dda264cd2751999d9608fe6364ca8502db3bd460c6b566ca",
+    "project/src/tests/test_massgis_confirmation_protocol_v1.py": "bbb43050fd13e313a71803ba10225305f8b85e46ceb9c89651ebda4226e2ab81",
+    "project/src/tests/test_massgis_confirmation_run_v1.py": "8accdf2bfba9ba28f8dfb74eebe1032921451e072862d7bdf622f73abb9cd9f7",
+    "project/src/tests/test_massgis_geometry_v1.py": "8c6ac751f3658dc46acae2719078c22b5c081c7db3e0339fa9797ff29537cd66",
+    "project/src/tests/test_massgis_native_v1.py": "3cca1c03c80805fcc85ca6b6d44543e1e8fd890ff5a3c087b126b3f21fa3b345",
+    "project/src/tests/test_massgis_navigation_compat_v1.py": "69ee430a090002cafff1525b9fb176e6e6101eb61bcc30ee507b9e6fa4b5691f",
+    "project/src/tests/test_massgis_pool_v1.py": "319b651b5bccea02f007cba8a8115e1593fe8f446a190fc9316289e0e988c194",
+    "project/src/tests/test_massgis_threshold_navigator_v1.py": "d4d4d3bf64922b249828eb8162d07e77d3b0d0491318d00c63aa6c4cc860e9a8",
+    "project/src/tests/test_merged_platform_v5.py": "50221d920d12a3c17c95a5d9634c8f7d8a9be21188f09c3af2f0f8c14a3ad43e",
+    "project/src/tests/test_model_comparison.py": "2a22338592fddbab5187f955d61e51b1dc7ce94208a62aedb606a3bfbdf614e1",
+    "project/src/tests/test_model_comparison_repair.py": "ac708a2bff7ba19393c1e1172cd8f00520f7ee86a59ee09314c00614d07ba399",
+    "project/src/tests/test_navigation_rule_audit.py": "d1bd2424e18822f921e790a30287e8d879318e110fc7948f190e4f8b77eac17a",
+    "project/src/tests/test_navigation_spatial.py": "c541ff8a484e35997154dc182563decb6ae17d875c5ba464630dd138400b4b53",
+    "project/src/tests/test_neighborhood_ledger.py": "b9205a1610cf79f50ad922083d768879753258576beab6dfb65de9a71f0aa573",
+    "project/src/tests/test_platform_review_fixes_v3.py": "61f1dec3f0f239efd9a770d84ebb70875fbe80b526fc3af420279ed9c0ad034d",
+    "project/src/tests/test_protocol_adaptation.py": "3f9844f6564430b4d9fb57d936bff6cdcd0d86e372119525a4ba85b00a6923c4",
+    "project/src/tests/test_radial_area_confirmation.py": "620fd5a46f481b124cf306a6f967b618264903de5afeb45a539573cb7a45700b",
+    "project/src/tests/test_radial_confirmation_areas.py": "009e04a691affc95dd37373a920fbd61b9f9086719c1165b56f48c183e4015e4",
+    "project/src/tests/test_real_area15.py": "449417dd4e0fa778995b9390bc67809202274620896f14f4d1f026c8298d41d0",
+    "project/src/tests/test_replay_platform_v1.py": "5a5b4b3d00fbeb450ac2995fa10e447c55bac8bc618d91858a087b4aa8a8416c",
+    "project/src/tests/test_repository_release_v1.py": "8cbe14c1b7e5c06fa92d5329dcbb8311fa610677cab392b8a694a19f02336b49",
+    "project/src/tests/test_rotation_candidate.py": "6bc26561d8cec1e5744d86437b3d2b687a00c1074d58ca65b96738d03f20a2a9",
+    "project/src/tests/test_rotation_negative.py": "9f3e124bc38a9de9fe0258139a21a328e7db12d0b4f48e9ff8ed3dae20697065",
+    "project/src/tests/test_s2.py": "6b897814993027c9ecab65c9fdda327e8090676df35d3fa9b947c30118d96760",
+    "project/src/tests/test_scaled_confirmation.py": "2cffcbb2bd5a92683bf926c4b3c8d0142a203640a4c5a4b8b1d2b4526d3a1780",
+    "project/src/tests/test_scaled_grid.py": "8a2bc57204890b8901b00cf5555237a58a55c5d156c4f1206156f0c404d53a09",
+    "project/src/tests/test_source_holdout_probe.py": "02068a009888c1408157eeed7fd4a3f2e310a7b08709ae4661a4e7c39dac954c",
+    "project/src/tests/test_spatial_area_confirmation.py": "6a24498af47c95a337951576fb0626598e0d6c19490b7c392c44748b655588f4",
+    "project/src/tests/test_spatial_area_confirmation_audit.py": "2e446b790aa438ae04f2a2d365362e32eacb6df391aeec3130c4ed939e2b706f",
+    "project/src/tests/test_spatial_area_confirmation_audit_v2.py": "5e129f207f00f05a5706d16b6a777c493e95b69c10c9ac814448862ed8b8b21e",
+    "project/src/tests/test_spatial_area_confirmation_audit_v3.py": "e43acd69f6e7304f7173ef722389548ebea6d814060010624cce1e4a8ac25837",
+    "project/src/tests/test_spatial_area_data.py": "e7c523b445364c083859dc8843f58e94627ca8c34c04e7eb6ecb437925d14b2a",
+    "project/src/tests/test_spatial_area_v2_resources.py": "cdf28099a9c860811c9cc3898c732e0a115f1817061b0140eb4d7a61b63afe94",
+    "project/src/tests/test_swissview_confirmation.py": "45182c1445563e113f7ecef6146d0b990c5b3f13fe9c588ea468231501360ba1",
+    "project/src/tests/test_target_pairs.py": "2a7424bf62d553e1f0f3c6b9bb7ae1d110aa5829ccbd9c0936f27f86467c7d29",
+    "project/src/tests/test_target_robustness.py": "f115b1f9938fafb5485b5a9da78784286bc15f3d3cfc264d9477a8ded2919488",
+    "project/src/tests/test_tiny_dyncur.py": "888a010c76b9b4b3f0de0ff3db18d60c4303f4369e657473ff930bcd9c5f1185",
+    "project/src/tests/test_trusted_cue.py": "65983e077e948425ba02fc34ab48a41a8f6f6d7373d96e7ef79f01a0721156d2",
+    "project/src/tests/test_upload_platform_v4.py": "7e6b2415e6b415585e4a43bf334ac7a5dc16627159efdcb13c4149569fc1b1ea",
+    "project/src/tests/test_validation.py": "7c14c1404a723c6787b5e4dbdc9e270b7f3b850cef8f52fb415d57035eb101e0",
+    "project/src/tests/test_vlm.py": "079e0fda5fb4cf8660661bde336760a7506a9df3d78b9eef6dff66682e3ebd57",
+    "project/src/tools/repository_release_v1.py": "5bf2b74015c2507c4a429781f4af8184140005215b2675eb1e39c82c847c1b58",
+    "project/src/tools/version_inventory_v1.py": "3d897b3cafcb4e39fd79055ead064181b82e3bdbbd07524de0372a2306a4e19a",
+    "project/src/train/__init__.py": "876af8af8be92a56fa350ef4dedb6ddc37e78b1e6f57b3fc3c62dd231da87516",
+    "project/src/train/boundary_controlled.py": "3dc2270c3e348b7e5ad6ca5bd7f3177d0381ed566d7b84efd3d318a435be2270",
+    "project/src/train/curiosity_controlled.py": "52b8b3e4583370e7b5cc0a5c793781483bd12b71b4d55a1db97a0b41e0141ebb",
+    "project/src/train/decoupled_cue.py": "55a216d168442d383e78dc9752ebab91b7e19849a0c121abf2cfd7ea71c347c9",
+    "project/src/train/dyncur_tiny.py": "5dc0d7ecef17ef0f067504215ecf6b379ddb0df32005c1f2590dba03e996a5e1",
+    "project/src/train/edge_cue.py": "58e4a814e31fc9488312d5f4d5e475351c26167172edb088c47ce915dce82d15",
+    "project/src/train/hard_rotation_negative.py": "3e1d502a1f33ad352a7db053368b0b6fb3d5f21b9047f2a9adc70bddd2b9b396",
+    "project/src/train/local_capacity.py": "f916318e99e19d20fc14ecb00476167828a28e32d81e5e268751aaf108d46e9b",
+    "project/src/train/navigation_spatial.py": "93ad2bf9b59a62b1e1f659deaf6be2b4616da01f387245a97f75e20bc45f55cb",
+    "project/src/train/protocol_adaptation.py": "a5dd2aeffdf0b59399b7652f7661f8349ffd515917eed647ff2a32412de2e1f8",
+    "project/src/train/rotation_negative.py": "8c8d85fb0792c7849124c78ac67349314e1499c06a4bd932a34e157c32298d4f",
+    "project/src/train/source_holdout_probe.py": "be76bf57ad14aeaf712134194e70b55d2c2d2fa2a3947facffb874e93bf43a93",
+    "project/src/train/target_controlled.py": "c0691db61fbf3b905df6b8da505d26970104a572f5efc81306d4382b497897da",
+    "project/src/train/target_pairs.py": "ebf984af8f815ec93684efa520ef4a5291067134cb796779e008707ea5bf02f2",
+    "project/src/train/trusted_cue.py": "cf613dd93f36965a6a51db230dfeb0bdfad72c3a45e8899583bab3bb588b6762",
+    "project/src/webapp/batch_v2.py": "c5688f9218b054f66159795506b525fe769da3050bbf493a3eec7c8bab9ce0ff",
+    "project/src/webapp/batch_v3.py": "b4fa6110b2913dd73228c5ad31a4001a29f7eead4e931411fa13bcce6add6a27",
+    "project/src/webapp/binding_v3.py": "586e830c3a5d50c09c31abed9e4bd1e9925910ed6bb57664b375dd788f69978b",
+    "project/src/webapp/cloud_v2.py": "e7af3b35e5288be7dfada8118cb41b80297813fe2fbd8355d7639a8cbdcd4dca",
+    "project/src/webapp/cloud_v3.py": "1eff9f99510f0592b6938b8fe7d99d79dfe68130867f4df50251d5e5244bb7c5",
+    "project/src/webapp/live_v2.py": "359cca8233bcf143b5493334d829faa3b03abae81c955654e9bad45b7da7ab84",
+    "project/src/webapp/live_v3.py": "c3d0425ff05af859deb28b1bd261a3a1d299a52c8a600e45c7a41cdb425a9afc",
+    "project/src/webapp/live_v4.py": "c9bf012cd90ce6f0199490c361e183ad017594b3392d37d9776f8f6d3f0904ff",
+    "project/src/webapp/replay_v1.py": "a10404d07080539c82038a2e19ca158432d29fb668326efa75be39cbd7f45a4b",
+    "project/src/webapp/server_v1.py": "b2d931b55168d05be2637d5b7378f711963f849e8f507283ae467a8a27230a43",
+    "project/src/webapp/server_v2.py": "7227c3e1963501490b80716f9bf7510f1044e49ff0f5e3ffff7e3cd0c6f1261c",
+    "project/src/webapp/server_v3.py": "23b5b9de5ba697dcebe1dcccdbee4d0ea54545a409182ddb63c2e7358cae4708",
+    "project/src/webapp/server_v4.py": "0998d280b18338bea0fb35c1bb7abf38c0241d7291642c0afa2a54bff163edcc",
+    "project/src/webapp/server_v5.py": "36fc7d4757ae441bc87e01506c9adec91a5a206389b9a2065b07c91bdc1bf917",
+    "project/src/webapp/upload_v4.py": "1d9cdab3c4a598f1fbe69db1d7d503a7cd1b4495b9311eb0a2c993a7279fe918",
+    "project/src/webapp/verify_delivery_v3.py": "f8e2d5074590df8970034c1a1eb56168d6ef61e1737496a2beb561f8939df9f4",
+    "project/src/webapp/verify_v1.py": "87b5f1f921a915d02f8ca69ce49392211274e21a0e12098007bbe7939b1d96e4",
+    "README.md": "21d6950e4732136a6aafba09a19c63250a49cad74ad75013f772472525e74cf2",
+    "中期报告相关/README.md": "ec04d3d693dddaf0b442a1f81144503dcc01abf055a100cd8f845a7efa926342",
+    "平台/主动探索演示_v1/README.md": "99666acc171c494208081303abcc94eac0239eb3df1080a4b84e53d10714620f",
+    "平台/主动探索演示_v1/核验/平台数据与保护复核_v3.json": "45328410c5ec20261f098e57842a72fe92696056bcbf5c9779aec757b537c00a",
+    "平台/实时导航平台_v2/README.md": "6d36c8165a00b742fb0e7fd254d91b98063d26da6b8cc5d5b7ce926545613e8c",
+    "平台/实时导航平台_v2/核验/最终交付复核_v3.json": "c2a627b5ff546ea82552ac353a3ef5c332bb1742eb874a23296524e4b2e29940",
+    "平台/实时导航平台_v3/README.md": "ee4a9521ed40c8b1c11167f0dbfecd6d73b39f01c2c43753371790efe1fc162a",
+    "平台/实时导航平台_上传测试_v1/README.md": "80fb5755e8745380757a71aac2cf8308b997f188ef087678775344cc7f7457d7",
+    "总结报告相关/平台交付_v1/README.md": "6d5ec5ebb9b6424796ee8878a8a15826b2260a539d2fabab02ff32e8c631bd0a",
+    "项目导航/实验索引.json": "4cc5dca0d18bc17c66c0b4e4b1caa6b3a8edeafdc758c306a4033e8457b162e7",
+    "项目导航/目录结构与维护.md": "da5c115b6524f1e1bc486ef9a2ee17d669e706a29ac7aa8f9aca47faf06fb8ff"
+  },
+  "git_status": " M .agents/HANDOFF.md\n M .agents/TASKS.md\n M README.md\n M docs/PROJECT_STATE.md\n M 平台/实时导航平台_v2/README.md\n?? project/src/tests/test_merged_platform_v5.py\n?? project/src/tests/test_upload_platform_v4.py\n?? project/src/tools/version_inventory_v1.py\n?? project/src/webapp/live_v4.py\n?? project/src/webapp/server_v4.py\n?? project/src/webapp/server_v5.py\n?? project/src/webapp/static_v3/\n?? project/src/webapp/static_v4/\n?? project/src/webapp/upload_v4.py\n?? 平台/实时导航平台_v3/\n?? 平台/实时导航平台_上传测试_v1/\n"
+}

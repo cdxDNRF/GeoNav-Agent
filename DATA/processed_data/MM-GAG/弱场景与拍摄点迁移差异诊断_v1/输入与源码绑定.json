@@ -1,0 +1,365 @@
+{
+  "task": "CV-009",
+  "date": "2026-10-17",
+  "inputs": [
+    {
+      "path": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/逐题排序结果.json",
+      "sha256": "2953a524a645bac7edbafd05c555ac5bdaa6ce8bd99b4c66954be09d5d580633",
+      "bytes": 1172146
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/感知对照汇总.json",
+      "sha256": "ab6018875baca7b1aa40c0b1ff3104a93f6069a89a388f696b11b9ef6e980f05",
+      "bytes": 17640
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/训练日志.json",
+      "sha256": "91e7faaec114fe0d1a9b26cd391301e58ca0dd48741df559ad3d8ef4cba8ae6a",
+      "bytes": 86878
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/冻结评测任务.json",
+      "sha256": "d85dce12f694c4440ebb79dfba63cd9092addcabba2d4c8d3c11ed44299aa944",
+      "bytes": 76097
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/首更新前特征与训练绑定.json",
+      "sha256": "2978611d127c94bb6827911afb34c18c3d8220eb9fede8cca4ff93e228b34b28",
+      "bytes": 11559
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/执行状态.json",
+      "sha256": "2e5ddc7e7a8d9a3e12f6a74c1dc10cc0e05a03ce6b34504da98f16b437d98b39",
+      "bytes": 16219
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/核验/门槛判定.json",
+      "sha256": "c26e6b49c1cd736e72f944b929754df409fd40bcc4c6f14b58f42f3490331c25",
+      "bytes": 826
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/核验/另实现复核.json",
+      "sha256": "6fece293834e4bae135aeca0e72ba6e365e47c7e03a3678c63fcde154137eb30",
+      "bytes": 817
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/特征/ground.npy",
+      "sha256": "1709eec2783d1c8b9431bec6665cb5db80b787256333c976ddea4264233d57ea",
+      "bytes": 28800
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/特征/aerial.npy",
+      "sha256": "e1d78fface71b440e3f3013c44ee464e5b2270ee084d1f217239840931f84e99",
+      "bytes": 2322560
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/权重/initial.npz",
+      "sha256": "d8735cffaef2be71cc7467191cc42c874c2c9e61b8fc5dba8790a3fd763d5f61",
+      "bytes": 33258
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/权重/final.npz",
+      "sha256": "c2ce5c91d5bf4e4275e8be3d80d51b7552e046dcc697047bb3554c6ad888ca3c",
+      "bytes": 33258
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/训练设计冻结.json",
+      "sha256": "b029678531b2316c9274a7637d784ac1a1ed990e1a4f6c50a2b86ed9a484171d",
+      "bytes": 8960
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/唯一训练查询与图块引用.json",
+      "sha256": "0fb44a86c09511f051115e171294739561887e076c268c3aa7e53b01b1528cda",
+      "bytes": 595494
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/派生素材清单.json",
+      "sha256": "98a29d6fedea1d01e59184e870361fee596f72daaa36c724a7dc03b28c387f04",
+      "bytes": 542846
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/来源分组与用途.json",
+      "sha256": "290e9c31511f795d9289d8515b4423dffbef5ef61aeeda5d1e87e7fd5f92f38a",
+      "bytes": 366
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/视觉语义审查.json",
+      "sha256": "a6b056efc9504a142a2c9ac92b3c7ccfbcec13f0692e1a89c745ad70db900a27",
+      "bytes": 8108
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/地面特征.npy",
+      "sha256": "38e6b3e4900dec1b96bbf763b826d1344552802ee35f1cfdf1dd10c0bc5a942a",
+      "bytes": 32896
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/航拍特征.npy",
+      "sha256": "63c732c94cd5d02c6ae500125b729036e301818e3a56301659cfe2c794b10565",
+      "bytes": 819328
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/冻结执行任务.json",
+      "sha256": "d2f6e933c1764bb00b70af3feb0986a12127364ea335e33a3dc0293089967283",
+      "bytes": 37680
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/划分与任务.json",
+      "sha256": "35861887a82bb3eae0d706af12a0a144ebf7ecbfc40b67746116996c54dad6d0",
+      "bytes": 7764
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/目标格定义与视觉尺度审查_v1/逐对视觉观察.json",
+      "sha256": "9e33a0b79955b9fc5a7e1105426c96277198d59b57aad2b01b11b4a2aa866e52",
+      "bytes": 11436
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/目标格定义与视觉尺度审查_v1/审查汇总.json",
+      "sha256": "c1180fb688c7c44e7d289f025d577d891bdd9cf1897e0b3b63b98f1d38b29037",
+      "bytes": 5258
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/目标格定义与视觉尺度审查_v1/静态审查结果.json",
+      "sha256": "42e369713c4a97956454ba1c5a513aed1273c58e64186970626ab73b7d95d015",
+      "bytes": 54508
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/拍摄点语义与完整目标图验证_v1/目标语义约定.json",
+      "sha256": "cd9ab739abc06a4bd5c6ae5f3b8f902e10491faf9a5ba1272c17915aec50f702",
+      "bytes": 826
+    }
+  ],
+  "sources": [
+    {
+      "path": "project/src/eval/weak_transfer_diagnosis_v1.py",
+      "sha256": "1f65aa0cc8c1decee6e21ce93587b431fbc396916451115d0af16ee27520aec1",
+      "bytes": 20976
+    },
+    {
+      "path": "project/src/eval/audit_weak_transfer_diagnosis_v1.py",
+      "sha256": "7bbddb434a93a05e663ed9a5a66b455105235afb0dba23fb5c127576d7c67653",
+      "bytes": 14256
+    },
+    {
+      "path": "project/src/tests/test_weak_transfer_diagnosis_v1.py",
+      "sha256": "96fecfd8d809197e3e4d3dd525166e3a713e427672790796ba2055480aed1b9b",
+      "bytes": 3685
+    },
+    {
+      "path": "project/src/documents/close_weak_transfer_diagnosis_v1.py",
+      "sha256": "f26df6ac8fd4b30e658c9b1bf0e2d21210bcc4ad5285fb54a1f9a45dcc67e691",
+      "bytes": 16849
+    }
+  ],
+  "previous_seals": [
+    {
+      "path": "DATA/processed_data/MM-GAG/数据核验与跨视角准入_v1/阶段封存.json",
+      "sha256": "5d405f37514b6ac42a9ace3ac44858021197645e60e9275fdf69f57b9147c270",
+      "bytes": 3589
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/阶段封存.json",
+      "sha256": "5a2b38205dd1b1c50a2aa5546cf2f5464e84faec0a7b2de79647e8f84af305f4",
+      "bytes": 7524
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/局部语义匹配单因素验证_v1/阶段封存.json",
+      "sha256": "d968204a7634aa6f9c4d9fbea8d88171ad359893c6b98a2ca36de573f3eb0718",
+      "bytes": 5880
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/目标格定义与视觉尺度审查_v1/阶段封存.json",
+      "sha256": "775a4d2e8d29f26fc7b43566320f6da3d189fcf37b67fdb3cd5ae3178059bfe3",
+      "bytes": 8335
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/拍摄点语义与完整目标图验证_v1/阶段封存.json",
+      "sha256": "75d9a63be07ad000f1fc0ba0e6a2fae2b9b9d9c017ec3a635a1a668208e3f065",
+      "bytes": 6020
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/对齐头训练素材准入_v1/阶段封存.json",
+      "sha256": "eb4e2befcb91adbc97b533da6c611e74de2e37aee670182f12deb15d79c2cb0f",
+      "bytes": 4414
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/阶段封存.json",
+      "sha256": "fa48ed7108a2c72de493a12fe74378a7f4764f33626553d6f74cf45f74105590",
+      "bytes": 8132
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/阶段封存.json",
+      "sha256": "09d98fc3f59636b8b080028e2a44754832d0c6be2920990db0fba55591c5470b",
+      "bytes": 53396
+    }
+  ],
+  "protected": [
+    {
+      "path": "project/local_policy_default.json",
+      "sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b"
+    },
+    {
+      "path": "project/local_policy_defaults_v1.json",
+      "sha256": "8e1b85eb74021ac18f8246f8146f7db451d68f423d7152f6c3a5d7c86b4d16fa"
+    },
+    {
+      "path": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.docx",
+      "sha256": "8529c55fb53823d88201dc7f485b3b5c43e5fb2113ddf7d1ead7321f2eea409f"
+    },
+    {
+      "path": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.pdf",
+      "sha256": "e127eac96ad85bdce079e1813e15fcea82fb80ee0cb61a7d80e958427167c4b2"
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/config.json",
+      "sha256": "b575ef3c36f2a057fa19e221650105052d61cc9c1a972ec15019c6261ec98770",
+      "bytes": 4186
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/preprocessor_config.json",
+      "sha256": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd",
+      "bytes": 316
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/pytorch_model.bin",
+      "sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+      "bytes": 605247071
+    },
+    {
+      "path": "models/Sat2Cap/config.json",
+      "sha256": "0a9cffa477a4bfc9682da841841b7e4227ad0cd06ad81d3eb1a831d5557976c5",
+      "bytes": 559
+    },
+    {
+      "path": "models/Sat2Cap/model.safetensors",
+      "sha256": "fec6802fbf27664ddd556fc445ff7d8e7ab0f05fea160c2e16680642dcebf3e0",
+      "bytes": 351420784
+    }
+  ],
+  "plan": {
+    "path": "DATA/processed_data/MM-GAG/弱场景与拍摄点迁移差异诊断_v1/冻结诊断范围.json",
+    "sha256": "9b989720993bda1ed74c51b95dfb9141dfb039e094b6810ef1dc4de4414131a1",
+    "bytes": 1239
+  },
+  "index_values_before": [
+    "dda678cd6a4bb69219aefb02ffa851c3eb06528697a2ab939e3263d0f13ffc4f",
+    "801cf4a5da9d8bf9f3159214ebea811de135c35794da1f49a354403177a7e2fb",
+    "3f47afd50d946ba5f14b79e24b110498214c52e4389eac54ff2cfd884cb79480",
+    "9dadbc8c035a7bfd5a83f1b0faf6ea38a5fca85906db203c5923226aacd905bb",
+    "5bfb3f3977f51bf80bbaa909db29b8cb0bc8e15ca03d7ba18c2817c21c771b1d",
+    "621fca433d66478914644efc0cd26d842f81e80cfe1e61536b4f46915189deb7",
+    "4f5ef0f855faf81c16865e2ffa151013e41bb84fe66b9418342d8e646e089257",
+    "16be19435a9a69b4714f79bf44e12aa3b0b29a2112e38ad883aea2d7d11c6c1a",
+    "255db35bdb1ea136faddd31c4dc68a1f5543e301570aa6f0c1b6f2f4dfbc389f",
+    "d0411d9041fc3dab23b93885b6c43fe1430cf8cb01fc7396491aa6a4ce9b0582",
+    "92c14ddb7f97443c2da18af1a1e62d7e8bd21a084e5e3562c184e1a76ed0bf5f",
+    "7841af505a33e4d3a6940545a2ab1bc96640c6ea74fa4aea3d5e353a074d6d85",
+    "2fb56178cec3c0524e718a569c6ad44e0f832126982a6b925ac0a6af97ad6a36",
+    "46fce6422cfe0bbf4dd36fdbfe17bca0129686f04b82a4f391f70bed01f957ab",
+    "7d5b485efd491d92b6b70ff4c0a37d41a491c1a6385bf283d18b2a88ab26131a",
+    "a8e63278ca2d242192903e5bf8bea34dd9e61d9b07139cbab99f92d2f559c045",
+    "46a16133d39c5b2d0ff179bb5acacaf19091f0c3baf1e1a7c5349593f062c421",
+    "91a4ee09a26bdbd0fa6e745ccc95857e8a1dc0862c840c15478c0ded0cee9274",
+    "9bc4e64ea0bde99db26059dce2d90af03cf77f2db3bd031a75237490c1045d1c",
+    "c99fd17dad897c36e5be2f63869ab69323779dc7b872a79546719f3923cae799",
+    "aa8acf89de7cc0fde0d4e82be8d1de353f6e2b5e2a9003e7c838d98b33f5d132",
+    "d1f2bf9a239bd92266b7db66b5d0004c029adc9d756fa497b078cc12feb4a86f",
+    "2c32d9b0a81e1292bc492b474e89ffaddb5a596a17a0ebb4a869c9943e50a2d6",
+    "66939fc59ee835712f5e31b4f5d463418c9b425b52a93d869c369d8ce89ca0a6",
+    "eb9235c44992bc8344d9b0e8ac2291cc572432f72fe785431e78472b9a38fc02",
+    "eade5ce0b96c3347d1f10b75b2cee2fd5718c6bb0e35642ebe89b7b033e795d1",
+    "97873fdd3fd51874256eb2502501592856ce576e33651777e368884c4a418960",
+    "7a0be84a64ab931c5f9611d034ec951b965cfa78aa6f94b1835c1274f7538513",
+    "59471d45d488640957bd587e56a6d9c4834e4f0cd377f4145af71ceef0f19f12",
+    "4603386c43b90e8c7d52c776ade80543f8ae710c0bc4a7af1305175c0b6a18e4",
+    "bf7a59a8d2d8c8e5616773bdc4eb6c106b997ada889fada6a9e1779f5c630e88",
+    "d8f9155f510b656f83f58e6e72168dab9b30d0e0e9bcaa5106ffb74ed3506594",
+    "1f1bcd925cdf9f0f058040de5d8104b3c0f159c7ccd6a618f5560bdc15d0151b",
+    "ccf27ff8f1952ed176ef9856ced9a13271377d69751b7d964a38092777d5bccb",
+    "18740295465ca40c23a504963bfe4b7f64e7f4702cb355bc78a62ae564faab8f",
+    "fb3d3edad7060d48c9c05656192023349f82eb5337855f7084af31e78aaec2c8",
+    "5d8cb66bdfd9021d8cb68128ab63b0a2ed0b0c876e0a7e8c74e56fcc2ef41ba5",
+    "caf412d83561272eb5b668e1c8d629bd7670c1c04b36aba5333ab4529d0b7e33",
+    "6da69d1f3a6f4bd2c06c31839e868126a9f2294f7d740273a5a0603d774342bd",
+    "2cd59cbd568812c837606c7888421d9149e26ce332af90201dcc94c2a7486dcf",
+    "fa5fefb98eab85ef2a484286709cfc403689e7bae123f897ed0b8d61221af9df",
+    "decf3f764d70395e59aab0018a5dbf9c6bf30ce9bdbb30c203ca91c0b6b32256",
+    "bc868646beb3067f748b49e2f16129b2be8858794a48f77cfe140f25814664d1",
+    "543a4817e735bf9999af4e35cfa67033c7b099172b3c517d3f52bd6cc4043868",
+    "a4b8fe5d06fef22d1e52c00cd9a8517fa3fd1f274fde4db65582294fec450f80",
+    "c889469c3853ab42c044c0b7d48c52118b165c402c663d0537e62b68f5f63639",
+    "4cc0cdb00cb448a341c9155b20e433445f1b7a0e078a8b4a753f047f4d1e8cfc",
+    "2ea1438f204be69781fb1d14781c15e18251321f693d30b1de28b26d33278a2d",
+    "a1aad3c1cf4c545eaf10a6dc5d4fdeade78f2fc0c6b8de407a9225b2688ced8f",
+    "8144c207b847764d18e92ae959b31322384aff698e7914de64adb1c36adc8fa4",
+    "92537bc35d7a58cee58e5f378e591e365a269c54af85b64b75aead86bcf324bf",
+    "89c81a3176b6ddb16de650a9fb198f441553a34f4c7b5100ce3ac045e4f84dfe",
+    "0523fa967cb6367b31e2962b77fc8a6621439133cd66c85eef1f4beeb837a614",
+    "316f8a2a4ea09c24d7f79d3f91bf8a6e2e31cfe15a8005f6c2105a31a1a059d0",
+    "a4c4a52eca60bb1988d83841672c6bb802249695cc137b9fa3fc649ea15a3b58",
+    "8d01a2c4417d9eddad34f22ec472a16ba46cbf006bdf0682e8b9d74acde0b1de",
+    "db089eda67cdd41d65f0dfd4346971b66fdb27c4531b50aca7d635990e356b7d",
+    "ce55e45d76f1b5abc821b4b90e199b3c7c105e8956ae9c7c8810412cedf97d87",
+    "ac36e5a1d2ec3fb58cdf8180af956e9c667e2e625b0b6d85b861352510960d65",
+    "aa38998a538d4209a7bd01ae43155164eb016f9c0106333936901fbd2341c024",
+    "8fcbbc9c523b31eee8214413ced40fcf371c8e9488ab1ac7b6afff1eec20c2c3",
+    "444ea72ebbd3738fc5c329c42bd7590abcf3e799c86e9182f15fef89f1a20248",
+    "d8da0e0cfb8db6cf7118945fb32feb6d865a6e6deb0b1d2f7893cce2eedc5ba8",
+    "4d22adf3040e0a3bcb024999cd8c49ab21b33819ea50bcb9142837de0337b273",
+    "89ba68c8c90db853fa0c88615a8ebbeae2931e2de6d5cfd9310c02bce082daa1",
+    "df53eecd412c28fc06795e3c85decb923c001019c952028e8a38abff94084a06",
+    "becdfcc9975f0b9c439b0fe7201d67707b4b1c80f9ccc061562b65a07ca23e6d",
+    "481d9ca466d8b87ca8f06c4284f396bab839d430a320bd10c6684b27eefebefc",
+    "5e032a4f0cc8ae1857c2fcea775f83200bc53b96ae4c2bb35d0d8fc327ac754c",
+    "7fb4c923a762aec22fb21a85d216c4c545593bc2a661e94a8c1983c15b4d9c44",
+    "c422cd4cb269b9ad5dd91a27dfc4c9eab8f1ba9d384cb40bf6c8cff380657d80",
+    "de635e3e7fa84bfb0a2ab35d0f07ed92142cc6ea650d1b754beca6926a8e49b8",
+    "df4189101ee6460a2622b535c3842c797d852a9dd265e1bb19173cf5b17e2604",
+    "8171057efc0d34440a014d08f1be753c38a90786988b89d7c226cca5e346917c",
+    "54bef522ddbea9897c70befd2033c7f17f9020de001a35e8dc0a0144512fe6a4",
+    "fb7ad6bb4a65e049083975b871e76eb085566cc153c0b704d90daf59ddb33696",
+    "3920d58e5880bb330843675d9cf523aaee305667a196dee887327b63ec3237dd",
+    "99414ba5426da36a112bdaafa87923f3fc5d8f81da8f7b2663a122e161273cb9",
+    "9bea658e21cec8d9da3c928b6820bd58747b914ff708a0aa841b87ea5686a5fc",
+    "8e27a0e781bdabab8a3523fc43b951ab6c1a3c3228fffc48e7bf26966fec3022",
+    "77741ebd9a5059fad737a7bbbd3315c644b0979f51e3e0eaf5766dcb5cc4a905",
+    "c242e5b2e07683a4f87f04d2eeb1277f38f11e80c8d1ea64249e8e86f67bec57",
+    "964fdf367434ee98e0b92df4369f27e705a5b0762fa55f6d66da4b8af4127508",
+    "961b4da786574583755bd9beaa358ea156687090f1b22f6145fbde552a0410b0",
+    "62245a8b29d1c247f02784eb088a577b33e8e1bdbccbc9cdef6d9e9182291a13",
+    "feb7c398367d25716839cadf9a931f4de8f92e6653be4dc77bf8badc1933bfd2",
+    "102197c6fde288df0b91785ce79b7334bc54fde8ded6e460041c0dad7d32a79a",
+    "ef974c7dab40b342243079ba98fdba25689ef13a3120392030f7b54588b0b04f",
+    "adfec000ca6eb5163735b66fcf13b9e4f0686d7364cf310245aa4b310e850ea8",
+    "f866ae0a9d0fa1e6490bfcabff41c9557f574e2c7acf3e1704ac3290f1ae859e",
+    "68068bc654d51f2da2164a3c8707a305bb9714c3706068f32993db7d8b137a39",
+    "74e7479d19bae1201d99a5ef4e8a84937f59336c8dcc45756d9db577fc8da9d3",
+    "76a0dccf7af97a06b5269bc23d8c854a58c28afd113594ba415c86ee47656731",
+    "c16b7d2692f68622e567b4b3ce2726dfba1e5633d688292113f3737b0b816077",
+    "58921630e2e39108d3bdee16dacd17cec625c840f3207bedb6baaeb7ea31d11b",
+    "37ccb922b3f641616fec79ff869d2832bab8c7cf9211ca8f5e3252f559451fed",
+    "8e8b55a183ee0488e8a7356225333b12cd2da1f7401eca1eb8ce75abbff15d44",
+    "09ac43aedd0d943c093db2f94c2318c0330304500f0e5b29b0aca3e8cbb763fa",
+    "a385dbf079a885d7f75b505240fc3084c90284d3b42cd95136ce2022812e4338",
+    "4e756f6bc14213ddda1abc9589fd9bef3ce746969e05b853058721abb863317c",
+    "0eb4647933fc6ce89425542ecd70bab9c089d825b5127c14271daef8d4414f84",
+    "ccfc76ba9e2e20337d5a182dddd23f800e509ee411f6f9d06cdd542d0618eaf3",
+    "1741d76f03e08bf3f56a79fcc9bad0ed479e3c00ef4646188a10858e57ac1687",
+    "1c9f05779a95c53db2c73d9ab599ba961175bf757ee1dd72b0587881d1554d58",
+    "464a17405ae8599341eee0724a595f4cd4e566312edac7593e36ec427202e47a",
+    "8d1d04e42ae939e4074c1bebf0a435794726f9ca2538da86d6eaa849294e5a17",
+    "022b8836bf8ba8e689115e287bdcd84811e511ccf0b4363064e189505dfcdbd6",
+    "d2fb05a06eb2d5e507761cf452b8af6eb68ec8f27e82a161239258cf853ff420",
+    "9ff771c77840d4c87dbd00a23f92c5312c201c861a3d7b5935379ec7f9dcfc81",
+    "95740eb70c18104a238f7c068c0b45b3b1fca1196aaaa84d1da450bc01eed935",
+    "bb4f053c52b93e3184248ca10a44b4a90494a01c533c22d1c2018acb07b01883",
+    "ff001670334ca7b6ee8a45639065feabb79ac6d9232726eaca13f21d07146f08",
+    "49ecd53cc39478f3deaa4143a73672b24343446c2226a947d500b9bb37ff6e58",
+    "8791dd7ec70187b022d340f4ce362324c87d5ac5e5ebde5e1f4a64cddc1c9248",
+    "b2199977a1fd9354d1b51558d7b5f739e8a69d2ca55d4cb95d59b965f3ae2e32",
+    "09646ac4c2914f69c88426d63f9580980938dd1f56fe5d9b6fb292a57425ae7a",
+    "ba9c3b4c03b9ef41e79c360d1845728c34f70eec4ded00a06071b5a0ddfbbe03",
+    "930b619e5aea20be7ef30ef3e8b4970d34d32e28881fa61750906bef67cf5f15",
+    "aa2246194dd2470c45dcdef7f9db6a8b19b1c408c0d37a2269801058b581ec74",
+    "8d0e823e3253a2ef714b6d41f14d35b08c77063c91190c5aabe42afc340d436e"
+  ]
+}

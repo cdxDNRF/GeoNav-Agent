@@ -1,0 +1,208 @@
+{
+  "task": "CV-007",
+  "date": "2026-10-17",
+  "protocol_id": "weak-scene-rank8-pilot-v1",
+  "research_design_frozen": true,
+  "execution_admitted": false,
+  "training_started": false,
+  "execution_source_binding": null,
+  "execution_requirements": [
+    "implement/bind actual extractor/head trainer/auditor in a new task",
+    "pass synthetic math/grad/resume/input-permission tests and limited real engineering with existing models",
+    "freeze all runtime sources/configs and first-forward input hashes",
+    "save actual feature hashes after extraction before optimizer steps; train only within authorized run"
+  ],
+  "dataset_semantics": "weak_scene_common_cell_proxy",
+  "capture_point_labels_verified": false,
+  "main_project_goal_unchanged": "capture_point CSV/code proxy; do not replace MM-GAG success cells with visible landmarks",
+  "hypothesis": "one low-rank ground-feature residual projection may improve weak same-scene association and transfer to existing capture-point development; neither is established",
+  "only_new_factor": "train ground512D residual rank8 projection; all encoders/preprocessing/scoring/data splits fixed, no simultaneous full-frame processor",
+  "data_bindings": [
+    {
+      "path": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/派生素材清单.json",
+      "sha256": "98a29d6fedea1d01e59184e870361fee596f72daaa36c724a7dc03b28c387f04"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/场景几何与异常隔离.json",
+      "sha256": "5b7740135626dbc78be13d69646fb4489dc3237b8d4d87dec437f34266de9994"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/来源分组与用途.json",
+      "sha256": "290e9c31511f795d9289d8515b4423dffbef5ef61aeeda5d1e87e7fd5f92f38a"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/唯一训练查询与图块引用.json",
+      "sha256": "0fb44a86c09511f051115e171294739561887e076c268c3aa7e53b01b1528cda"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/视觉语义审查.json",
+      "sha256": "a6b056efc9504a142a2c9ac92b3c7ccfbcec13f0692e1a89c745ad70db900a27"
+    }
+  ],
+  "cached_MMGAG_features": [
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/地面特征.npy",
+      "sha256": "38e6b3e4900dec1b96bbf763b826d1344552802ee35f1cfdf1dd10c0bc5a942a"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/航拍特征.npy",
+      "sha256": "63c732c94cd5d02c6ae500125b729036e301818e3a56301659cfe2c794b10565"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/冻结执行任务.json",
+      "sha256": "d2f6e933c1764bb00b70af3feb0986a12127364ea335e33a3dc0293089967283"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/划分与任务.json",
+      "sha256": "35861887a82bb3eae0d706af12a0a144ebf7ecbfc40b67746116996c54dad6d0"
+    }
+  ],
+  "frozen_encoder_assets": [
+    {
+      "path": "models/clip_vit_b32_public_v1/config.json",
+      "sha256": "b575ef3c36f2a057fa19e221650105052d61cc9c1a972ec15019c6261ec98770",
+      "bytes": 4186
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/preprocessor_config.json",
+      "sha256": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd",
+      "bytes": 316
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/pytorch_model.bin",
+      "sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+      "bytes": 605247071
+    },
+    {
+      "path": "models/Sat2Cap/config.json",
+      "sha256": "0a9cffa477a4bfc9682da841841b7e4227ad0cd06ad81d3eb1a831d5557976c5",
+      "bytes": 559
+    },
+    {
+      "path": "models/Sat2Cap/model.safetensors",
+      "sha256": "fec6802fbf27664ddd556fc445ff7d8e7ab0f05fea160c2e16680642dcebf3e0",
+      "bytes": 351420784
+    }
+  ],
+  "preprocessing": "exact CV-002 PIL center-crop CLIP target and Sat2Cap aerial_pixels with224 input; extract only single300px crops, never whole1500 windows",
+  "head": {
+    "formula": "normalize(g + U @ V @ g)",
+    "input": "normalized512D ground feature only",
+    "rank": 8,
+    "U_shape": [
+      512,
+      8
+    ],
+    "V_shape": [
+      8,
+      512
+    ],
+    "trainable_parameters": 8192,
+    "bias": false,
+    "U_init": "zeros",
+    "V_init": "normal mean0 std0.02 using seed0",
+    "norm_epsilon": 1e-12,
+    "encoders_frozen": true
+  },
+  "training": {
+    "seed": 0,
+    "source_groups": [
+      "RhineGlacier",
+      "Geneve",
+      "Zurich",
+      "Tseuzier",
+      "Cilion",
+      "GrosseScheidegg",
+      "Spiez",
+      "Iseltwald",
+      "Lausanne"
+    ],
+    "unique_ground_queries": 9,
+    "positive_cells": 9,
+    "aerial_candidates_per_query": 81,
+    "updates": 500,
+    "loss": "mean over9 fit queries of -log_softmax(cosine(projected_ground, each81 same-scene aerial)/0.1)[shared_proxy_positive]",
+    "temperature": 0.1,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 1.0,
+    "schedule": "none",
+    "batch": "all9 unique source queries per update; each normalized query counted once, not25 times",
+    "evaluation_timing": "after final500 only, no best-checkpoint selection",
+    "negative_caveat": "neighboring views may share scene content; exact-cell negatives are weak supervision and may contain semantic false negatives; do not tune away after scores"
+  },
+  "evaluation": {
+    "arms": [
+      "Identity",
+      "Rank8Final"
+    ],
+    "conditions": [
+      "Full",
+      "Mean",
+      "Wrong"
+    ],
+    "weak_dev_groups": [
+      "Sion",
+      "Bern",
+      "Rolex",
+      "LacBleu",
+      "Luzern"
+    ],
+    "weak_dev_window_records": 125,
+    "weak_dev_unique_queries": 5,
+    "MMGAG_original_development_pairs": 16,
+    "planned_rankings": 846,
+    "score": "normalized512D cosine, all decisions reconstructed from saved features/checkpoint, unchanged CV-002 hash ties",
+    "Full": "apply same arm h to genuine normalized ground feature",
+    "weak_Mean": "fixed mean of9 fit normalized ground features then normalize and apply h; no dev mean for weak scene control",
+    "MMGAG_Mean": "original mean of16 normalized ground features then normalize and apply h, preserving CV-002 control definition at identity",
+    "weak_Wrong": "next development group cyclically in frozen development list, no same-source wrong target",
+    "MMGAG_Wrong": "exact original different-group mapping",
+    "metrics": [
+      "Top1",
+      "Top5",
+      "true rank",
+      "Full vs Mean/Wrong recovered/harmed",
+      "Rank8 vs Identity recovered/harmed",
+      "source-wise effects"
+    ],
+    "sampling_unit": "five weak-development groups and ten existing MM-GAG development groups reported separately;25 variants do not add geography; geographic independence not proven",
+    "navigation_SR": null
+  },
+  "required_effect_gates": {
+    "MMGAG_all16_complete": true,
+    "MMGAG_Full_top1_minimum": 4,
+    "MMGAG_Full_minus_Mean_minimum": 2,
+    "MMGAG_Full_minus_Wrong_minimum": 2,
+    "MMGAG_groups_positive_against_both_minimum": 3,
+    "weak_dev_Full_top1_macro_gain_minimum": 0.04,
+    "weak_dev_source_groups_improving_minimum": 3,
+    "all_audits_pass": true
+  },
+  "resources": {
+    "maximum_encoder_inputs": 1148,
+    "maximum_encoder_forward_calls": 144,
+    "batch_size": 8,
+    "CPU_fallback_if_initial_GPU_free_MiB_below": 2560,
+    "maximum_CUDA_allocated_bytes": 2147483648,
+    "feature_cache_limit_bytes": 33554432,
+    "head_checkpoint_limit_bytes": 1048576,
+    "whole_batch_outputs_limit_bytes": 41943040,
+    "maximum_train_minutes": 30,
+    "engineering": "initial subset from same1148 bound images, saved successful features reused; engineering calls count toward total, no hidden re-extraction",
+    "retention": "no raw/encoder copies; initial and final head, one active recovery, features/configs/logs; no unbounded optimizer checkpoints"
+  },
+  "engineering_gates": [
+    "initial U0 head reproduces identity to1e-6 on frozen features",
+    "encoders no gradients and tensor identities unchanged",
+    "finite nonzero head gradient and bounded head-only updates",
+    "checkpoint resume exactly reproduces uninterrupted synthetic run",
+    "candidate bank/source/label never part of head input"
+  ],
+  "stopping": "one seed and one fixed500-update budget; any effect gate fails closes factor; no rank/loss/temperature/source sweeps or fourth zero-training probe, no navigation/default upgrade",
+  "MMGAG_reserved_groups_consumed": 0,
+  "external_model_api_calls": 0,
+  "downloads": 0,
+  "status": "design_frozen_pending_executor_engineering_and_run_authorization"
+}

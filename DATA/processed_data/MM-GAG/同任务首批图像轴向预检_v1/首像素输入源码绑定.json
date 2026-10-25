@@ -1,0 +1,104 @@
+{
+  "sources": [
+    {
+      "path": "project/src/tools/preflight_capturepoint_sources_v1.py",
+      "sha256": "7d604e258a65a75e7eb11bd334bfef696d1721e659c88d25ceead3fe6cde4164",
+      "bytes": 11651
+    },
+    {
+      "path": "project/src/eval/audit_capturepoint_preflight_v1.py",
+      "sha256": "b24e3a314040afb6eea907e8a18f6f375c87c121324db70a70132457be2c307f",
+      "bytes": 5299
+    },
+    {
+      "path": "project/src/tests/test_capturepoint_preflight_v1.py",
+      "sha256": "78c3cbec31c3fdcc10e685be8dbdb67029be86bf535b211370c57a70a342873b",
+      "bytes": 1518
+    },
+    {
+      "path": "project/src/documents/close_capturepoint_preflight_v1.py",
+      "sha256": "f6a1d14a3094b6b19eff6b8f171933928bf5975f77d6f13a326a1d6c0549fa49",
+      "bytes": 5399
+    }
+  ],
+  "inputs": [
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/阶段封存.json",
+      "sha256": "8d0d114b86dc9416ba0336c9764e32aa49527c6ed5a3e27ae3030be6157e5a37",
+      "bytes": 4346
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/待审九五六分组.json",
+      "sha256": "597cdde49bcbbc2b11a125c4c808d0d22eafde8d9fc40bb607652918027d5f26",
+      "bytes": 7878
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/候选代表与监督引用.json",
+      "sha256": "37a7a092540447701749427fe5b654ec87c92a9f62aef69950e2d41ae052f19f",
+      "bytes": 861639
+    }
+  ],
+  "protocol": {
+    "path": "DATA/processed_data/MM-GAG/同任务首批图像轴向预检_v1/首像素冻结协议.json",
+    "sha256": "b074dc5c9a0e938d61641c562ed38a236476df1a6d356caade330d391f6ffbdb",
+    "bytes": 504711
+  },
+  "approval": {
+    "path": "DATA/processed_data/MM-GAG/同任务首批图像轴向预检_v1/用户授权记录.json",
+    "sha256": "b95a70592862d59bcaaec644f8846311978e0c37dba15310eba38f6427afa5ca",
+    "bytes": 653
+  },
+  "role_snapshot": {
+    "path": "DATA/processed_data/MM-GAG/同任务首批图像轴向预检_v1/用途激活快照.json",
+    "sha256": "3a55e4fc09542b88de3229576bab5f3e89bac7fbde274aa840ba4ed3ea5cf3c3",
+    "bytes": 16244
+  },
+  "current_role_at_start": {
+    "path": "DATA/processed_data/MM-GAG/同任务来源用途账本_v1.json",
+    "sha256": "3a55e4fc09542b88de3229576bab5f3e89bac7fbde274aa840ba4ed3ea5cf3c3",
+    "bytes": 16244
+  },
+  "protected": [
+    {
+      "path": "project/local_policy_default.json",
+      "sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b"
+    },
+    {
+      "path": "project/local_policy_defaults_v1.json",
+      "sha256": "8e1b85eb74021ac18f8246f8146f7db451d68f423d7152f6c3a5d7c86b4d16fa"
+    },
+    {
+      "path": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.docx",
+      "sha256": "8529c55fb53823d88201dc7f485b3b5c43e5fb2113ddf7d1ead7321f2eea409f"
+    },
+    {
+      "path": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.pdf",
+      "sha256": "e127eac96ad85bdce079e1813e15fcea82fb80ee0cb61a7d80e958427167c4b2"
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/config.json",
+      "sha256": "b575ef3c36f2a057fa19e221650105052d61cc9c1a972ec15019c6261ec98770",
+      "bytes": 4186
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/preprocessor_config.json",
+      "sha256": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd",
+      "bytes": 316
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/pytorch_model.bin",
+      "sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+      "bytes": 605247071
+    },
+    {
+      "path": "models/Sat2Cap/config.json",
+      "sha256": "0a9cffa477a4bfc9682da841841b7e4227ad0cd06ad81d3eb1a831d5557976c5",
+      "bytes": 559
+    },
+    {
+      "path": "models/Sat2Cap/model.safetensors",
+      "sha256": "fec6802fbf27664ddd556fc445ff7d8e7ab0f05fea160c2e16680642dcebf3e0",
+      "bytes": 351420784
+    }
+  ]
+}

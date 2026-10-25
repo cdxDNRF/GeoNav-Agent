@@ -1,0 +1,94 @@
+{
+  "sources": [
+    {
+      "name": "opencvl_tools/dataset.py",
+      "url": "https://github.com/Open-CVL/opencvl/blob/4838d1627cf28b28e81d2dd830995fe1fd3a1e2c/opencvl_tools/dataset.py",
+      "bytes": 9637,
+      "sha256": "60f6cabc18599c7dd4d805d100015288497bcf92ddbe4476acb17399f19f3125",
+      "snippets": [
+        {
+          "line": 10,
+          "text": ""
+        },
+        {
+          "line": 11,
+          "text": "LABEL_LIST_KEYS = (\"labels\", \"images\", \"samples\", \"data\")"
+        },
+        {
+          "line": 12,
+          "text": "GROUND_FIELD_CANDIDATES = (\"ground_image\", \"mapil_image\")"
+        },
+        {
+          "line": 13,
+          "text": "AERIAL_FIELD = \"aerial_image\""
+        },
+        {
+          "line": 14,
+          "text": ""
+        },
+        {
+          "line": 15,
+          "text": ""
+        },
+        {
+          "line": 181,
+          "text": ""
+        },
+        {
+          "line": 182,
+          "text": "    if dataset == \"mapillary\":"
+        },
+        {
+          "line": 183,
+          "text": "        if split == \"cities\" and len(parts) >= 5:"
+        },
+        {
+          "line": 184,
+          "text": "            country = parts[2]"
+        },
+        {
+          "line": 185,
+          "text": "            group = parts[3]"
+        },
+        {
+          "line": 186,
+          "text": "        elif split == \"in_the_wild_test\" and len(parts) >= 4:"
+        },
+        {
+          "line": 227,
+          "text": "    )"
+        },
+        {
+          "line": 228,
+          "text": "    sample_id = ("
+        },
+        {
+          "line": 229,
+          "text": "        _string(record.get(\"mapil_image_id\"))"
+        },
+        {
+          "line": 230,
+          "text": "        or _stem_from_path(_string(record.get(ground_field)) if ground_field else None)"
+        },
+        {
+          "line": 231,
+          "text": "        or f\"{label_file.relative_path}:{index}\""
+        },
+        {
+          "line": 232,
+          "text": "    )"
+        }
+      ]
+    },
+    {
+      "name": "opencvl_tools/splits.py",
+      "url": "https://github.com/Open-CVL/opencvl/blob/4838d1627cf28b28e81d2dd830995fe1fd3a1e2c/opencvl_tools/splits.py",
+      "bytes": 6274,
+      "sha256": "b26715b3f8da9ef5f59216508f8092fabe90848d7985fa5b1944881d25c1351d",
+      "snippets": []
+    }
+  ],
+  "proxy": "http://127.0.0.1:7897",
+  "remote_code_executed": false,
+  "tree_API": "403 rate limit exceeded;official raw fallback"
+}

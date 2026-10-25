@@ -1,0 +1,238 @@
+{
+  "task": "CV-012",
+  "date": "2026-10-18",
+  "protocol_id": "capturepoint-rank8-same-task-v1",
+  "research_design_frozen": true,
+  "execution_admitted": false,
+  "training_authorized": false,
+  "training_started": false,
+  "actual_executor_binding": null,
+  "actual_feature_binding": null,
+  "hypothesis": "same-task capture-point-proxy training data may improve source-disjoint development association versus identity and frozen Swiss training",
+  "only_new_factor": "training data regime: nine MM-GAG camera-proxy pairs instead of nine Swiss common-scene pairs; this also changes domain/content, not a pure causal label-only test",
+  "label_semantics": "CSV/code camera-center proxy, not surveyed geographic point or visible-landmark label",
+  "head": {
+    "formula": "normalize(g + U @ V @ g)",
+    "input": "normalized512D ground feature only",
+    "rank": 8,
+    "U_shape": [
+      512,
+      8
+    ],
+    "V_shape": [
+      8,
+      512
+    ],
+    "trainable_parameters": 8192,
+    "bias": false,
+    "U_init": "zeros",
+    "V_init": "normal mean0 std0.02 using seed0",
+    "norm_epsilon": 1e-12,
+    "encoders_frozen": true
+  },
+  "training": {
+    "seed": 0,
+    "source_groups": [
+      "cp_051fd603c27d",
+      "cp_0b697bbbd36f",
+      "cp_0ba97ce156ca",
+      "cp_0d03875fbde2",
+      "cp_0da17d201ccf",
+      "cp_189f8f7945e1",
+      "cp_1a5a192d5446",
+      "cp_6064860b53f7",
+      "cp_718cbae06243"
+    ],
+    "unique_ground_queries": 9,
+    "positive_cells": 9,
+    "aerial_candidates_per_query": 81,
+    "updates": 500,
+    "loss": "mean over9 distinct MM-GAG fit queries: -log_softmax(cos(h(g),a81)/0.1)[40]",
+    "temperature": 0.1,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 1.0,
+    "schedule": "none",
+    "batch": "all9 unique source queries per update; each normalized query counted once, not25 times",
+    "evaluation_timing": "final500 only, no development scores or intermediate head selection",
+    "negative_caveat": "neighboring views may share scene content; exact-cell negatives are weak supervision and may contain semantic false negatives; do not tune away after scores",
+    "source_ids_evaluator_only": [
+      "mmgag_063",
+      "mmgag_051",
+      "mmgag_058",
+      "mmgag_061",
+      "mmgag_052",
+      "mmgag_042",
+      "mmgag_066",
+      "mmgag_080",
+      "mmgag_075"
+    ],
+    "source_semantics": "CSV/code capture-point proxy; no Swiss common-cell labels in new training",
+    "initialization": "fresh seed0 U=zeros, V=Normal(0,.02), never continue Swiss optimizer or weights"
+  },
+  "encoder_assets": [
+    {
+      "path": "models/clip_vit_b32_public_v1/config.json",
+      "sha256": "b575ef3c36f2a057fa19e221650105052d61cc9c1a972ec15019c6261ec98770",
+      "bytes": 4186
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/preprocessor_config.json",
+      "sha256": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd",
+      "bytes": 316
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/pytorch_model.bin",
+      "sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+      "bytes": 605247071
+    },
+    {
+      "path": "models/Sat2Cap/config.json",
+      "sha256": "0a9cffa477a4bfc9682da841841b7e4227ad0cd06ad81d3eb1a831d5557976c5",
+      "bytes": 559
+    },
+    {
+      "path": "models/Sat2Cap/model.safetensors",
+      "sha256": "fec6802fbf27664ddd556fc445ff7d8e7ab0f05fea160c2e16680642dcebf3e0",
+      "bytes": 351420784
+    }
+  ],
+  "preprocessing": "exact original CV-002 PIL CLIP center crop and Sat2Cap224 processing, both frozen; no full-frame/padding/local-token changes",
+  "baselines": {
+    "Identity": {
+      "weight": {
+        "path": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/权重/initial.npz",
+        "sha256": "d8735cffaef2be71cc7467191cc42c874c2c9e61b8fc5dba8790a3fd763d5f61",
+        "bytes": 33258
+      },
+      "role": "U0 identity, no target adaptation"
+    },
+    "SwissRank8Frozen": {
+      "weight": {
+        "path": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/权重/final.npz",
+        "sha256": "c2ce5c91d5bf4e4275e8be3d80d51b7552e046dcc697047bb3554c6ad888ca3c",
+        "bytes": 33258
+      },
+      "role": "frozen CV-008 final500,9Swiss queries, same head/optimizer/update budget; never retrain"
+    },
+    "MMRank8Final": {
+      "weight": null,
+      "role": "one future same-task seed0 final500 checkpoint",
+      "binding_required_after_training": true
+    }
+  },
+  "queue": {
+    "path": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/固定编码与训练开发队列.json",
+    "sha256": "15b9cf7d44d3a65cc5a4104f73116fdf28b0f0ee8171c646fb02007544f77415",
+    "bytes": 348018
+  },
+  "controls": {
+    "Full": "genuine normalized ground feature passed through each arm h",
+    "Mean": "one fixed mean of9 normalized MM fit ground vectors, normalize then each arm h; never mean over dev/confirmation/old16/Swiss queries",
+    "Wrong": "next of5 frozen development source groups cyclically, fixed once per source and reused for25 windows",
+    "Disabled": "one shared evaluator-only constant-zero25-score control per pair with CV-002/tie/v1 ordering; head is not called, zero features not passed into normalized head"
+  },
+  "evaluation": {
+    "arms": [
+      "Identity",
+      "SwissRank8Frozen",
+      "MMRank8Final"
+    ],
+    "conditions_per_arm": [
+      "Full",
+      "Mean",
+      "Wrong"
+    ],
+    "shared_disabled_condition": true,
+    "unique_development_sources": 5,
+    "windows_per_source": 25,
+    "planned_windows": 125,
+    "planned_rankings": 1250,
+    "independent_source_unit": "5 provisional grouped sources;25 shifted windows share same target/center and do not add geography",
+    "scoring": "saved/reloaded float32 global features, float64 normalized cosine and head evaluation; CV-002/tie/v1:pair_id:cell_index",
+    "metrics": [
+      "Top1",
+      "Top5",
+      "true rank",
+      "Full minus Mean/Wrong/Disabled",
+      "recovered/harmed for Top1 and Top5",
+      "per-source and paired-source uncertainty"
+    ],
+    "paired_source_interval": "all5^5=3125 source bootstrap resamples of unweighted paired source rates, percentile95; mandatory report, not a pass gate",
+    "navigation_SR": null,
+    "old16_legacy_development": "not rerun in this batch; past failed results retained, not new confirmation"
+  },
+  "required_development_gates": {
+    "all1250_rankings_and_all_audits": true,
+    "Full_top1_minimum": 32,
+    "Full_minus_Mean_minimum": 16,
+    "Full_minus_Wrong_minimum": 16,
+    "Full_minus_Disabled_minimum": 16,
+    "Full_minus_Identity_minimum": 5,
+    "Full_minus_SwissFrozen_minimum": 5,
+    "source_groups_Full_above_both_controls_minimum": 3,
+    "source_groups_Full_above_both_baselines_minimum": 3
+  },
+  "threshold_rationale": {
+    "absolute": ">=25%,ceil(125/4)=32; bounded association-development floor, follows original4/16 level, not SR or publication acceptance",
+    "target_controls": ">=12.5pp,ceil(125/8)=16; original2/16 contrast scale; plus3/5 source benefit to address prior2/5 weakness",
+    "training_data_effect": ">=4pp,5/125 over EACH identity and SwissFrozen, plus3/5 sources positive versus BOTH; seed0 only",
+    "report_only": "Top5/ranks/recovered-harmed/intervals all mandatory; no hidden post-score criteria or generalization claim"
+  },
+  "resources": {
+    "maximum_encoder_inputs": 1148,
+    "maximum_encoder_forward_calls": 144,
+    "batch_size": 8,
+    "CPU_fallback_if_initial_GPU_free_MiB_below": 2560,
+    "maximum_CUDA_allocated_bytes": 2147483648,
+    "feature_cache_limit_bytes": 33554432,
+    "head_checkpoint_limit_bytes": 1048576,
+    "whole_batch_outputs_limit_bytes": 41943040,
+    "maximum_train_minutes": 30,
+    "engineering": "initial subset from same1148 bound images, saved successful features reused; engineering calls count toward total, no hidden re-extraction",
+    "retention": "no raw/encoder copies; initial and final head, one active recovery, features/configs/logs; no unbounded optimizer checkpoints",
+    "head_training_device": "cpu",
+    "one_future_run_only": true
+  },
+  "engineering_requirements": [
+    "strict encoder loading/frozen tensors/no gradients; hash and save engineering evidence immediately per encoder and first batch",
+    "identity<=1e-6,head-only finite gradients, serialized synthetic resume exactly equal, real head resets fresh seed0 after engineering",
+    "engineering subsets are part of1148inputs/144encoder calls; saved successful features reused, no blind retry",
+    "append-only forward/update events and per-batch feature coverage; no fragile overwriting of shared status file",
+    "runtime/extractor/trainer/scorer/auditor sources bound before first forward; actual feature hashes and fit-only tensors bound before first update",
+    "do not call old consumed CV-008 runners/generators; immutable math/helpers may be imported only with hashes"
+  ],
+  "information_permissions": {
+    "head_input": [
+      "normalized_ground_feature_512"
+    ],
+    "evaluator_or_offline_loss_only": [
+      "source/group IDs",
+      "GPS",
+      "goal/positive index",
+      "candidate feature library",
+      "crop origin"
+    ],
+    "online_navigation": "not implemented/authorized by this association protocol; unseen images/maps never given to a policy"
+  },
+  "confirmation": {
+    "groups": 6,
+    "sources": 24,
+    "pixel_or_model_access_this_protocol": false,
+    "later_confirmation_requires_new_protocol": true,
+    "known_gap": "mmgag_011 representative lacks full stitch reference; do not rescue by changing source after development scores"
+  },
+  "retention": "future caches<=32MiB,initial/final heads+oneactive recovery<=1MiB,whole execution<=40MiB;no raw/encoder copies",
+  "stopping": "one seed/500updates/final only; any necessary gate fails closes this data-regime factor, no rank/loss/temperature/source/epoch sweep; passing yields development candidate only, no default/ground GUI or navigation upgrade",
+  "current_task_activity": {
+    "model_calls": 0,
+    "training_steps": 0,
+    "new_predictions": 0,
+    "raw_image_reads": 0,
+    "navigation_episodes": 0,
+    "API_calls": 0,
+    "downloads": 0,
+    "confirmation_pixels": 0
+  }
+}

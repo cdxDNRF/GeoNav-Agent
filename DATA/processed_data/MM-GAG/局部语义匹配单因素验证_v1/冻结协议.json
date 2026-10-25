@@ -1,0 +1,51 @@
+{
+  "task": "CV-003",
+  "date": "2026-10-17",
+  "hypothesis": "single-image local features may distinguish neighboring aerial cells better than global cosine",
+  "only_new_factor": "49-token symmetric MaxSim replacing global vector cosine; no edge/global mixture, layer sweep or new parameters",
+  "planned_pairs": 16,
+  "development_groups": 10,
+  "reserved_groups": 20,
+  "input_images": {
+    "ground": 16,
+    "aerial": 400
+  },
+  "maximum_input_attempts": 416,
+  "batch_size": 8,
+  "global_baseline": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/感知对照汇总.json",
+  "global_reference_files": [
+    "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/地面特征.npy",
+    "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/航拍特征.npy"
+  ],
+  "global_replay_tolerance": 1e-05,
+  "cls_reconstruction_tolerance": 1e-05,
+  "fail_before_scoring_on_replay_error": true,
+  "projection": "apply each frozen vision_model.post_layernorm and visual_projection to final 50 hidden tokens; exclude CLS from matching",
+  "local_token_count": 49,
+  "dimension": 512,
+  "storage": "normalize projected tokens in float32 then cast float16; reload float16 values as float64 and renormalize before all scores",
+  "score": "0.5*(mean_i max_j cos(current_i,target_j)+mean_j max_i cos(current_i,target_j))",
+  "mean_control": "normalize reloaded tokens of each dev target; mean across16 at each token position; renormalize each mean token",
+  "wrong_control": "exact CV-002 wrong_target_pair_id from a different development group",
+  "ties": "unchanged CV-002/tie/v1:pair_id:cell_index SHA ordering after decreasing float64 scores; no truth input",
+  "cuda_allocation_limit_bytes": 2147483648,
+  "device_rule": "CUDA if free>=2560MiB at start, else CPU; no post-score model/device selection",
+  "output_limit_bytes": 33554432,
+  "new_training_parameters": 0,
+  "training_steps": 0,
+  "navigation_episodes": 0,
+  "model_api_calls": 0,
+  "downloads": 0,
+  "gates": {
+    "all16_complete": true,
+    "full_top1_minimum": 4,
+    "full_minus_mean_minimum": 2,
+    "full_minus_wrong_minimum": 2,
+    "positive_groups_against_both_minimum": 3
+  },
+  "secondary_reporting": "same-queue Full local vs CV-002 Full global recovered/harmed; Top-5, true rank, all per-source/group results",
+  "stopping": "one fixed candidate; keep failure if any necessary gate fails; no score-driven rerun/pooling/layer/model tuning or reserved encoding",
+  "scope": "offline association, not navigation SR or formal confirmation; full 25-cell bank is evaluator-only",
+  "label_scope": "CV-002 row-first numeric indices and code-implied center(5,5); no newly verified GPS-to-pixel survey or metric SG",
+  "local_alignment_caveat": "projection is trained for global CLS; patch-token cross-view alignment remains an experimental hypothesis"
+}

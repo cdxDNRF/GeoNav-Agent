@@ -1,0 +1,41 @@
+{
+  "task": "CV-006",
+  "date": "2026-10-17",
+  "scope": "existing MM-GAG roles/hash metadata + all SwissViewMonuments existing raw files; no MM-GAG image pixels opened",
+  "output_limit_bytes": 4194304,
+  "quality": "decode existing auxiliary images, canonical RGB SHA including size, JPEG EXIF transpose; cache equal byte-hash decoding",
+  "grouping": "conservative named scenes plus connected components sharing byte/pixel-identical ground or aerial 300px cells; no random row split",
+  "common_anchor": "for each named25-variant scene compute intersection of exact300px tile hashes; record common pixels only, never promote to capture-point labels",
+  "alias_policy": "strict metadata paths reported separately; only explicit candidate path aliases/extensions recorded, no raw metadata repair or automatic label approval",
+  "candidate_aliases": {
+    "Cilion": {
+      "ground": "CilionCastle",
+      "aerial": "Chillon"
+    },
+    "Geneve": {
+      "ground": "Geneva",
+      "aerial": "Geneve"
+    },
+    "LacBleu": {
+      "ground": "LacBlue",
+      "aerial": "LacBleu"
+    },
+    "RhineGlacier": {
+      "ground": "RhoneGlacier",
+      "aerial": "RhineGlacier"
+    }
+  },
+  "roles": "MM-GAG10groups23sources remain development;20groups42sources reserved; other same-group sources cannot become train while preserving16 dev",
+  "admission_levels": [
+    "mechanical pairs/duplicate-aware pilot capacity",
+    "same capture-point-cell task label evidence",
+    "source/group isolation for further confirmation"
+  ],
+  "negative_result_policy": "if same-task labels or isolation unknown, no formal training admission; optional conditional engineering proposal only, no training",
+  "new_forward_calls": 0,
+  "training_steps": 0,
+  "navigation_episodes": 0,
+  "downloads": 0,
+  "model_api_calls": 0,
+  "reserved_pixels_opened": 0
+}

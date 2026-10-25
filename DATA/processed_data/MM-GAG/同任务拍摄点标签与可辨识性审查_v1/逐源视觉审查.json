@@ -1,0 +1,220 @@
+{
+  "task": "CV-016",
+  "sources": [
+    {
+      "source_id": "mmgag_063",
+      "scene_correspondence": "plausible",
+      "camera_point_identifiable": "unknown",
+      "independent_geographic_label_verified": false,
+      "basis": "posthoc_nonblind_observer_panel",
+      "panel_sha256": "4122dc1594d6c5936574c5a5e2edec3895d832fffbfce199e8dd4be0f1fc4568",
+      "observation": "地面主体为双塔教堂立面与广场上的透明锥体，航拍中心包含教堂屋顶和庭院，支持建筑群/广场场景关联；夜间地面外观与俯视屋顶差异大，无法确认相机脚下对应像素。",
+      "risks": [
+        "distant_subject",
+        "viewpoint_difference",
+        "day_night_appearance_difference"
+      ],
+      "not_used_for_rescoring_or_relabeling": true
+    },
+    {
+      "source_id": "mmgag_051",
+      "scene_correspondence": "plausible",
+      "camera_point_identifiable": "unknown",
+      "independent_geographic_label_verified": false,
+      "basis": "posthoc_nonblind_observer_panel",
+      "panel_sha256": "6aae21fd143d3eefa7105e205c399cda5e6995aab18494ccef2c0afe9dcf86ce",
+      "observation": "地面圆形塔楼、旁侧穹顶与大片草地在完整拼图中有可关联的建筑/草地布局；中心格却主要是道路和红顶院落，照片主体不自动等于拍摄点格，缺少朝向和地理映射。",
+      "risks": [
+        "subject_outside_center_dominant_content",
+        "large_sky",
+        "viewpoint_difference"
+      ],
+      "not_used_for_rescoring_or_relabeling": true
+    },
+    {
+      "source_id": "mmgag_058",
+      "scene_correspondence": "unclear",
+      "camera_point_identifiable": "unknown",
+      "independent_geographic_label_verified": false,
+      "basis": "posthoc_nonblind_observer_panel",
+      "panel_sha256": "21359a1cb1fb163af189c04bac4dba6b9e939aee5922231f58a3efea1c61b5c4",
+      "observation": "夜间照片主要显示远处双尖塔、近处砖路和遮挡建筑，中心航拍格为铁路线/道路；拼图虽有桥和大型建筑，面板不足以可靠连接照片视线与具体相机位置。",
+      "risks": [
+        "distant_subject",
+        "occlusion",
+        "day_night_appearance_difference"
+      ],
+      "not_used_for_rescoring_or_relabeling": true
+    },
+    {
+      "source_id": "mmgag_061",
+      "scene_correspondence": "unclear",
+      "camera_point_identifiable": "unknown",
+      "independent_geographic_label_verified": false,
+      "basis": "posthoc_nonblind_observer_panel",
+      "panel_sha256": "1b53f9ba9fb29e4875a194d1afd3d4ae9624a0dbe7bcc94f91a4bf38e1d5d095",
+      "observation": "地面是林间导览牌与近处树木，中心格及拼图被树冠覆盖，牌和相机脚下步道无法从上方核对；文字可能提供场景线索，但不能在本审查中代替地理定位证据。",
+      "risks": [
+        "canopy_occlusion",
+        "repetitive_vegetation",
+        "text_sign_not_overhead_visible"
+      ],
+      "not_used_for_rescoring_or_relabeling": true
+    },
+    {
+      "source_id": "mmgag_052",
+      "scene_correspondence": "plausible",
+      "camera_point_identifiable": "unknown",
+      "independent_geographic_label_verified": false,
+      "basis": "posthoc_nonblind_observer_panel",
+      "panel_sha256": "0c71176e937f3749e2ecea11881201eb8368e1157808ac3f57591b01c306cbf4",
+      "observation": "地面街巷尽头的教堂正面及周边红顶建筑，与航拍中心邻近广场和建筑群形态可关联；立面、屋顶与拍摄街道不是同一视觉对象，不能仅据外观确认拍摄点格。",
+      "risks": [
+        "distant_subject",
+        "street_occlusion",
+        "viewpoint_difference"
+      ],
+      "not_used_for_rescoring_or_relabeling": true
+    },
+    {
+      "source_id": "mmgag_042",
+      "scene_correspondence": "plausible",
+      "camera_point_identifiable": "unknown",
+      "independent_geographic_label_verified": false,
+      "basis": "posthoc_nonblind_observer_panel",
+      "panel_sha256": "726835d819c3ef1239e2d3a980365d1fab31d44d6b7f000def7cfdf318874ae6",
+      "observation": "地面圆顶和钟塔建筑临街，航拍中心可见圆顶、广场及周围道路，提供场景层关联；相机位于街道另一侧的具体位置/朝向未测绘，建筑对应不等于相机点对应。",
+      "risks": [
+        "subject_camera_offset",
+        "viewpoint_difference",
+        "partial_occlusion"
+      ],
+      "not_used_for_rescoring_or_relabeling": true
+    },
+    {
+      "source_id": "mmgag_066",
+      "scene_correspondence": "unclear",
+      "camera_point_identifiable": "unknown",
+      "independent_geographic_label_verified": false,
+      "basis": "posthoc_nonblind_observer_panel",
+      "panel_sha256": "69a46cebe7652f29b3e045f1007c727cda69ddb7530db4d8dc389a2e1574cfd3",
+      "observation": "地面照为室内展板、顶棚及灯光，航拍中心为城市道路/建筑边缘和深色矩形区域；没有共同可见外部轮廓可核对室内位置，无法从本面板确定相机所属格。",
+      "risks": [
+        "indoor_scene",
+        "roof_occlusion",
+        "no_shared_visible_exterior"
+      ],
+      "not_used_for_rescoring_or_relabeling": true
+    },
+    {
+      "source_id": "mmgag_080",
+      "scene_correspondence": "plausible",
+      "camera_point_identifiable": "unknown",
+      "independent_geographic_label_verified": false,
+      "basis": "posthoc_nonblind_observer_panel",
+      "panel_sha256": "1ad933e5d3e2d77ab374d19b72c8da3d86bad34acb4c3103d11adc7b2b52db7e",
+      "observation": "地面沙滩、遮阳伞和背后绿化/建筑，与航拍中心的海岸、沙滩和泳池邻域可作粗场景关联；照片近景沙堡是暂时小物体，航拍中无法据此确认相机点。",
+      "risks": [
+        "temporary_foreground_subject",
+        "scale_difference",
+        "repetitive_beach_texture"
+      ],
+      "not_used_for_rescoring_or_relabeling": true
+    },
+    {
+      "source_id": "mmgag_075",
+      "scene_correspondence": "plausible",
+      "camera_point_identifiable": "unknown",
+      "independent_geographic_label_verified": false,
+      "basis": "posthoc_nonblind_observer_panel",
+      "panel_sha256": "c1d55b93819322405f9a9e4cc414ca3767ee1cb48ecaeaa0a8aac58be7eaa860",
+      "observation": "地面为公共建筑正面及前广场，航拍中心显示围合建筑、庭院和道路，支持建筑群/广场场景关联；立面朝向、院落边界和相机所在位置仍无法独立核验。",
+      "risks": [
+        "facade_roof_difference",
+        "camera_heading_unknown",
+        "partial_scene_overlap"
+      ],
+      "not_used_for_rescoring_or_relabeling": true
+    },
+    {
+      "source_id": "mmgag_062",
+      "scene_correspondence": "plausible",
+      "camera_point_identifiable": "unknown",
+      "independent_geographic_label_verified": false,
+      "basis": "posthoc_nonblind_observer_panel",
+      "panel_sha256": "4695c6a9ddd93289231042e910ac80a810d574bb8b798f0e3f11c127de4c96f5",
+      "observation": "地面照片可见海上栈桥的步道、停车位和海面，完整航拍拼图可关联栈桥与岸线；原中心格大部分为海水，步道仅在左下边缘，不能从主体/场景匹配直接证明相机点落在该格。",
+      "risks": [
+        "center_proxy_mostly_water",
+        "subject_camera_offset",
+        "camera_point_near_structure_edge"
+      ],
+      "not_used_for_rescoring_or_relabeling": true
+    },
+    {
+      "source_id": "mmgag_073",
+      "scene_correspondence": "plausible",
+      "camera_point_identifiable": "unknown",
+      "independent_geographic_label_verified": false,
+      "basis": "posthoc_nonblind_observer_panel",
+      "panel_sha256": "4ae4840350ba6ae126e46429ad930972e22b49a92ea7f00a41152cb81144fd37",
+      "observation": "地面圆顶建筑、草地与步道可在拼图的建筑/山坡邻域作场景关联，中心格主要为道路、草地和树木；建筑主体与相机脚下不是同一目标，缺少地理边界和朝向来确定拍摄点。",
+      "risks": [
+        "subject_outside_center_dominant_content",
+        "large_sky",
+        "camera_heading_unknown"
+      ],
+      "not_used_for_rescoring_or_relabeling": true
+    },
+    {
+      "source_id": "mmgag_079",
+      "scene_correspondence": "unclear",
+      "camera_point_identifiable": "unknown",
+      "independent_geographic_label_verified": false,
+      "basis": "posthoc_nonblind_observer_panel",
+      "panel_sha256": "9e262e29c049848fd548e12f12bf290c7b4a9a22bb0ccf863f855bee0afa94bb",
+      "observation": "地面主体是近处雕像，背景为海岸草坪与棕榈；航拍中心主要是草坪/沙坑，拼图只有宽泛海岸景观线索，雕像与具体拍摄点在现有尺度不可核对。",
+      "risks": [
+        "foreground_statue",
+        "scale_difference",
+        "repetitive_resort_landscape"
+      ],
+      "not_used_for_rescoring_or_relabeling": true
+    },
+    {
+      "source_id": "mmgag_039",
+      "scene_correspondence": "unclear",
+      "camera_point_identifiable": "unknown",
+      "independent_geographic_label_verified": false,
+      "basis": "posthoc_nonblind_observer_panel",
+      "panel_sha256": "3f2bf3bf15e06dc13538fe1af7663ba8c19f006efeef80c1dc8d88c23735b9c5",
+      "observation": "地面为浅蓝色教堂塔楼与近处街边设施，航拍中心是屋顶、庭院和树木；城市场景可兼容，但塔楼立面与中心屋顶的具体对应不足以在此面板独立确认。",
+      "risks": [
+        "facade_roof_difference",
+        "dense_roof_layout",
+        "camera_heading_unknown"
+      ],
+      "not_used_for_rescoring_or_relabeling": true
+    },
+    {
+      "source_id": "mmgag_081",
+      "scene_correspondence": "unclear",
+      "camera_point_identifiable": "unknown",
+      "independent_geographic_label_verified": false,
+      "basis": "posthoc_nonblind_observer_panel",
+      "panel_sha256": "90bf474bb541d99029bd69d768e81f3389cb3dc0b66e260366c22cd789bd1f1c",
+      "observation": "地面远景山体、云层和灌丛占主导，中心航拍格则为道路及稀疏植被；缺少可核对的近处道路视野或独特地物，不能由相似山地纹理确定相机点。",
+      "risks": [
+        "distant_landscape",
+        "large_sky",
+        "repetitive_terrain"
+      ],
+      "not_used_for_rescoring_or_relabeling": true
+    }
+  ],
+  "reviewed_all14_saved_panels": true,
+  "independent_person_review": false,
+  "visual_compatibility_not_ground_truth": true,
+  "new_model_calls": 0,
+  "new_predictions": 0
+}

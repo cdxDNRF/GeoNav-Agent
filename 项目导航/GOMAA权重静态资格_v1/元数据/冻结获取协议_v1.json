@@ -1,0 +1,48 @@
+{
+  "task": "BENCH-017",
+  "created_at_utc": "2026-10-09T08:51:36.891065+00:00",
+  "weights": [
+    {
+      "repo": "Gomaa-Geo/gomma-geo-falcon",
+      "revision": "ccbd2b734b6e64369dba6c21c89aa4364d32b716",
+      "file": "ppo_falcon.pt",
+      "bytes": 955903920,
+      "remote_lfs_sha256": "f987246c7e0575e7d7ee85eab823d965dcfc0cac421ec05235cae323bf09be4d",
+      "downloaded": false,
+      "loaded": false,
+      "compatible": null,
+      "training_sources": null,
+      "model_card_license": "apache-2.0"
+    },
+    {
+      "repo": "Gomaa-Geo/falcon-pretrain",
+      "revision": "7c24d04050cfe57c41f268b2356a0b3850cb2175",
+      "file": "sat2cap_optimal_action_falcon.pt.ckpt",
+      "bytes": 2264331389,
+      "remote_lfs_sha256": "195351ae83654415faa03c500fe4ec912e07f3567d3f8c2ecb3f4c8a1bc2c3d2",
+      "downloaded": false,
+      "loaded": false,
+      "compatible": null,
+      "training_sources": null,
+      "model_card_license": "apache-2.0"
+    }
+  ],
+  "network_cap_bytes": 6500000000,
+  "disk_cap_bytes": 8589934592,
+  "time_cap_seconds": 7200,
+  "attempts_per_file": 2,
+  "requested_bytes": 3220235309,
+  "static_only": true,
+  "torch_load": {
+    "weights_only": true,
+    "map_location": "meta",
+    "custom_globals": false
+  },
+  "source_only_inference": false,
+  "forward": 0,
+  "cuda_initialization": 0,
+  "training": 0,
+  "navigation": 0,
+  "reserve_consumption": 0,
+  "runtime": "project/.runtime/geoexplorer_probe_v1/venv/Scripts/python.exe"
+}

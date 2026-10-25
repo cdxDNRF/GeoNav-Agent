@@ -1,0 +1,434 @@
+{
+  "task": "BENCH-020",
+  "date": "2026-10-10",
+  "model_calls": 0,
+  "default_upgrade": false,
+  "claims": [
+    {
+      "id": "encoder_file",
+      "title": "本地视觉编码器工件",
+      "status": "confirmed",
+      "description": "本地model.safetensors与MVRL/Sat2Cap @8b377450f91d…完全相同：351420784字节、SHA fec6802f…bf3e0；配置559字节和卡5174字节也逐字节一致。",
+      "references": [
+        {
+          "path": "models/Sat2Cap/model.safetensors",
+          "sha256": "fec6802fbf27664ddd556fc445ff7d8e7ab0f05fea160c2e16680642dcebf3e0"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/HF_ENCODER_MVRL_info.json",
+          "sha256": "a3a7142ec522fc293ed0843dbd44ea29c5d3faf1cd956a46fa4a895e32222e17",
+          "url": "https://huggingface.co/api/models/MVRL/sat2cap?blobs=true",
+          "lines": [
+            1,
+            1
+          ],
+          "contains": "fec6802f"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/HF_ENCODER_MVRL_config.json",
+          "sha256": "0a9cffa477a4bfc9682da841841b7e4227ad0cd06ad81d3eb1a831d5557976c5",
+          "url": "https://huggingface.co/MVRL/Sat2Cap/resolve/8b377450f91dc970a71ee5194806857298c34cf3/config.json"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/HF_ENCODER_MVRL_README.md",
+          "sha256": "0336368f8274a5ed09f54cee8d56a851ecee96026d9f391a6735762c16608a60",
+          "url": "https://huggingface.co/MVRL/Sat2Cap/resolve/8b377450f91dc970a71ee5194806857298c34cf3/README.md"
+        }
+      ]
+    },
+    {
+      "id": "name_label",
+      "title": "EOS配置名称与身份",
+      "status": "confirmed",
+      "description": "同一MVRL发布配置内也保存EOS-ITC/Sat2Cap旧_name_or_path，不能据此认定本地用错公开权重。EOS gated旧bin跨容器关系本轮未知，401访问不绕过。",
+      "references": [
+        {
+          "path": "models/Sat2Cap/config.json",
+          "sha256": "0a9cffa477a4bfc9682da841841b7e4227ad0cd06ad81d3eb1a831d5557976c5",
+          "lines": [
+            2,
+            2
+          ],
+          "contains": "EOS-ITC/Sat2Cap"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/HF_ENCODER_MVRL_config.json",
+          "sha256": "0a9cffa477a4bfc9682da841841b7e4227ad0cd06ad81d3eb1a831d5557976c5",
+          "url": "https://huggingface.co/MVRL/Sat2Cap/resolve/8b377450f91dc970a71ee5194806857298c34cf3/config.json",
+          "lines": [
+            2,
+            2
+          ],
+          "contains": "EOS-ITC/Sat2Cap"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/HF_ENCODER_EOS_info.json",
+          "sha256": "a58ee74c3858c024a31aa811ccf8286d346c9e706c53053ab61748278dc2913c",
+          "url": "https://huggingface.co/api/models/EOS-ITC/Sat2Cap?blobs=true",
+          "lines": [
+            1,
+            1
+          ],
+          "contains": "gated"
+        }
+      ]
+    },
+    {
+      "id": "geo_recipe",
+      "title": "Geo公开编码器调用",
+      "status": "confirmed",
+      "description": "固定GeoExplorer提交明确加载MVRL/Sat2Cap，Resize224/BICUBIC、0.3670等均值与0.2209等标准差和本地源码相符。没有重编码或证明历史缓存逐值等价。",
+      "references": [
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/GeoExplorer_get_sat_embeddings.py",
+          "sha256": "f98e000c55a454addc577dd33a7e71bbdc4b22832ebbe592b3074ec1e491cb82",
+          "url": "https://raw.githubusercontent.com/limirs/GeoExplorer/2d9fc71a7151ec4060950cc6ae639880a74f6201/data_utils/get_sat_embeddings.py",
+          "lines": [
+            43,
+            43
+          ],
+          "contains": "from_pretrained(\"MVRL/Sat2Cap\")"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/GeoExplorer_get_sat_embeddings.py",
+          "sha256": "f98e000c55a454addc577dd33a7e71bbdc4b22832ebbe592b3074ec1e491cb82",
+          "url": "https://raw.githubusercontent.com/limirs/GeoExplorer/2d9fc71a7151ec4060950cc6ae639880a74f6201/data_utils/get_sat_embeddings.py",
+          "lines": [
+            25,
+            25
+          ],
+          "contains": "transforms.Normalize"
+        },
+        {
+          "path": "project/src/data/process_masa.py",
+          "sha256": "0ddce87481edb98a7cb6ca6563fdcca9fa6488acfab8226b01ec3222f7caaba6",
+          "lines": [
+            43,
+            43
+          ],
+          "contains": "MEAN ="
+        }
+      ]
+    },
+    {
+      "id": "gomaa_encoder_binding",
+      "title": "GOMAA训练所用编码器/缓存",
+      "status": "unknown",
+      "description": "GOMAA固定源码仍仅使用本地目录Sat2Cap；所查两导航模型卡只有许可字段，没有revision/SHA、训练embedding或对应地图清单。结构/名称/同机构不能补实际训练绑定。",
+      "references": [
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/GOMAA_get_sat_embeddings.py",
+          "sha256": "58d318fe79f250ba4b9ff7e6c382db127d0bbdcd15d3dd793223ad5af17d824c",
+          "url": "https://raw.githubusercontent.com/mvrl/GOMAA-Geo/1faa1eee1608529eae95cc0af1d76330c9e46e60/data_utils/get_sat_embeddings_sat2cap.py",
+          "lines": [
+            38,
+            38
+          ],
+          "contains": "from_pretrained(\"Sat2Cap\")"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/HF_GOMAA_PPO_README.md",
+          "sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+          "url": "https://huggingface.co/Gomaa-Geo/gomma-geo-falcon/resolve/ccbd2b734b6e64369dba6c21c89aa4364d32b716/README.md"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/HF_GOMAA_PRETRAIN_README.md",
+          "sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+          "url": "https://huggingface.co/Gomaa-Geo/falcon-pretrain/resolve/7c24d04050cfe57c41f268b2356a0b3850cb2175/README.md"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/HF_GOMAA_PPO_info.json",
+          "sha256": "3c40a551d7760369f9ad3a94fb7d9ceb2f7873ff0706514a71f2faf3073d6b8a",
+          "url": "https://huggingface.co/api/models/Gomaa-Geo/gomma-geo-falcon?blobs=true"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/HF_GOMAA_PRETRAIN_info.json",
+          "sha256": "99f66d8020ed92961d00fc5ce12637f8a828b6a763279ba0abcb6ed167960023",
+          "url": "https://huggingface.co/api/models/Gomaa-Geo/falcon-pretrain?blobs=true"
+        }
+      ]
+    },
+    {
+      "id": "nav_assets",
+      "title": "公开导航资产版本",
+      "status": "confirmed",
+      "description": "两权重repo/revision/文件LFS SHA与BENCH-017/018使用的资产保持；没有新成品权重或训练配置由这两模型卡提供。文件已可核验，不等于论文最终成绩映射。",
+      "references": [
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/HF_GOMAA_PPO_info.json",
+          "sha256": "3c40a551d7760369f9ad3a94fb7d9ceb2f7873ff0706514a71f2faf3073d6b8a",
+          "url": "https://huggingface.co/api/models/Gomaa-Geo/gomma-geo-falcon?blobs=true"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/HF_GOMAA_PRETRAIN_info.json",
+          "sha256": "99f66d8020ed92961d00fc5ce12637f8a828b6a763279ba0abcb6ed167960023",
+          "url": "https://huggingface.co/api/models/Gomaa-Geo/falcon-pretrain?blobs=true"
+        },
+        {
+          "path": "项目导航/GOMAA权重静态资格_v1/下载记录/获取结果_v2.json",
+          "sha256": "118054e3345805e7214770e43afb9668b957f2c8fcd71a9b71c1c6018506d7a9"
+        }
+      ]
+    },
+    {
+      "id": "training_maps",
+      "title": "论文Masa地图与切分",
+      "status": "unknown",
+      "description": "所查MM-GAG固定目录7998项，仅含图像及coordinates.csv/README/.gitattributes；没有Masa训练特征或导航checkpoint映射。本地137/4/10与论文1188差异仍不解释为内部重切；Geo数据issue未获回复。",
+      "references": [
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/HF_GOMAA_dataset_info.json",
+          "sha256": "146c81dde14f1465e2574c94d1f77f94fd698ebf876f883cd334d6135b08c916",
+          "url": "https://huggingface.co/api/datasets/Gomaa-Geo/MM-GAG?blobs=true"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/HF_GOMAA_dataset_README.md",
+          "sha256": "4bcf87ecfbbb8e07a01b21415a970c8b53a5283bf6872b657040d3f45c9241f7",
+          "url": "https://huggingface.co/datasets/Gomaa-Geo/MM-GAG/resolve/a0d6b12df62dda5c6dac29a00fa27f0fb8672b57/README.md"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/GeoExplorer_issue10.html",
+          "sha256": "1d9e1c6218cf821d530ea9802267a4df00cf3f47551dcb68e2de897982761282",
+          "url": "https://github.com/limirs/GeoExplorer/issues/10",
+          "lines": [
+            1,
+            1
+          ],
+          "contains": "totalCommentsCount"
+        },
+        {
+          "path": "项目导航/学习基线资格核查_v1/资格核查与决策_v1.md",
+          "sha256": "31716b8d32e433fd2f31d0fd08433343d70c8cb632b0e98412ffea13b9c1df57",
+          "lines": [
+            28,
+            28
+          ],
+          "contains": "本地metadata.csv"
+        }
+      ]
+    },
+    {
+      "id": "training_budget",
+      "title": "实际PPO停止量与选型",
+      "status": "unknown",
+      "description": "GOMAA/Geo cfg仍是1e8上限，路径名和配置不是检查点实际步数/论文表对应证明；GOMAA issue4有协作者说明和未解决追问，不将其解释成已核实最终训练预算。",
+      "references": [
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/GOMAA_config.py",
+          "sha256": "3e846abc8f413e9c80a1c95e3239fd85952f1ee1c52337de3acac8f84485b837",
+          "url": "https://raw.githubusercontent.com/mvrl/GOMAA-Geo/1faa1eee1608529eae95cc0af1d76330c9e46e60/config.py",
+          "lines": [
+            49,
+            49
+          ],
+          "contains": "max_training_timesteps"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/GeoExplorer_config.py",
+          "sha256": "c166826736b40a99e4fad4c851f9068844c40e2f04880d0478e72c4d933cebc9",
+          "url": "https://raw.githubusercontent.com/limirs/GeoExplorer/2d9fc71a7151ec4060950cc6ae639880a74f6201/config.py",
+          "lines": [
+            99,
+            99
+          ],
+          "contains": "max_training_timesteps"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/GOMAA_issue4.html",
+          "sha256": "667bc78996a0484e247e08b7bab910fd2e413e1db7399684381e3d69457fd5ff",
+          "url": "https://github.com/mvrl/GOMAA-Geo/issues/4",
+          "lines": [
+            1,
+            1
+          ],
+          "contains": "totalCommentsCount"
+        }
+      ]
+    },
+    {
+      "id": "evaluation_paths",
+      "title": "原公开评测配置差异",
+      "status": "confirmed",
+      "description": "当前GOMAA cfg的test_path指向val文件；Geo cfg包含895样本数和多个数据集分支。必须冻结实际执行队列，不能直接把默认配置当论文精确复现；本轮不改原代码。",
+      "references": [
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/GOMAA_config.py",
+          "sha256": "3e846abc8f413e9c80a1c95e3239fd85952f1ee1c52337de3acac8f84485b837",
+          "url": "https://raw.githubusercontent.com/mvrl/GOMAA-Geo/1faa1eee1608529eae95cc0af1d76330c9e46e60/config.py",
+          "lines": [
+            15,
+            15
+          ],
+          "contains": "cfg.data.test_path"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/GeoExplorer_config.py",
+          "sha256": "c166826736b40a99e4fad4c851f9068844c40e2f04880d0478e72c4d933cebc9",
+          "url": "https://raw.githubusercontent.com/limirs/GeoExplorer/2d9fc71a7151ec4060950cc6ae639880a74f6201/config.py",
+          "lines": [
+            26,
+            26
+          ],
+          "contains": "cfg.sample_number = 895"
+        }
+      ]
+    },
+    {
+      "id": "new_loader",
+      "title": "新Sat2Cap加载示例",
+      "status": "confirmed",
+      "description": "Sat2Cap最新README/load_model示例选择sat2cap.ckpt，但当前所查同名HF固定目录只有Transformers格式model.safetensors；不能把新GeoMoCo/ckpt加载器直接套入旧导航。仅静态核对、不执行该代码。",
+      "references": [
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/Sat2Cap_README.md",
+          "sha256": "7fe902187576fd80a8ab24900fdfe4911e1ccb0a4b3355536b2ed923d610b99c",
+          "url": "https://raw.githubusercontent.com/mvrl/Sat2Cap/b08e2c61515192637bf8b7d3f5160254a0d3836c/README.md",
+          "lines": [
+            32,
+            32
+          ],
+          "contains": "filename='sat2cap.ckpt'"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/Sat2Cap_load_model.py",
+          "sha256": "ca48d0af8f95a02aeb25442b0cfba42522eab2bd1d31d65ccb08a1f4cf024abb",
+          "url": "https://raw.githubusercontent.com/mvrl/Sat2Cap/b08e2c61515192637bf8b7d3f5160254a0d3836c/sat2cap/utils/load_model.py",
+          "lines": [
+            28,
+            28
+          ],
+          "contains": "def load_sat2cap"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/HF_ENCODER_MVRL_tree.json",
+          "sha256": "5a9faabfd0a6032ca0a4996f5b3b097ebf9f58179a275e8c2250c2f500ec3ff6",
+          "url": "https://huggingface.co/api/models/MVRL/Sat2Cap/tree/8b377450f91dc970a71ee5194806857298c34cf3?recursive=true"
+        }
+      ]
+    },
+    {
+      "id": "qualification",
+      "title": "现有学习基线资格",
+      "status": "not_qualified",
+      "description": "BENCH-019的GOMAA Full19/64低于Mean21/64和Wrong22/64，目标开发资格失败保持；本地Geo继续有限预算机制复现。源码/工件身份进展不回写科学判定，也不宣称原论文失效。",
+      "references": [
+        {
+          "path": "DATA/processed_data/Masa/评测结果/GOMAA开发闭环目标诊断_v1/核验/闭环另实现复核_v2.json",
+          "sha256": "2cc8b84e2d818d69ee51cb5921c3a2d4b83ae26dc7bcf5fd13535f32821a1842"
+        },
+        {
+          "path": "DATA/processed_data/Masa/评测结果/共同学习基线对照_v1/同题对照报告_v2.md",
+          "sha256": "df5e7bb9c001daac4fec6a8731019609a1d77ff2b7643860ed4178be36c287b8"
+        }
+      ]
+    },
+    {
+      "id": "geo_weights",
+      "title": "Geo成品与作者讨论",
+      "status": "unknown",
+      "description": "已查官方README没有导航权重链接，#9/#10当前各0回复；这是指定公开位置核查，不能据此宣称所有渠道不存在权重。没有联系作者。",
+      "references": [
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/GeoExplorer_README.md",
+          "sha256": "1ce1f03cd12f4ca927334d8a2968bf080296557cc28eb29a477d13286e0704a7",
+          "url": "https://raw.githubusercontent.com/limirs/GeoExplorer/2d9fc71a7151ec4060950cc6ae639880a74f6201/README.md"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/GeoExplorer_issue9.html",
+          "sha256": "c3bb7cf4ee0d244361fa33c11881c10a94785798caadcd5ba8d1167f715d7937",
+          "url": "https://github.com/limirs/GeoExplorer/issues/9",
+          "lines": [
+            1,
+            1
+          ],
+          "contains": "totalCommentsCount"
+        },
+        {
+          "path": "项目导航/学习基线来源与编码器补证据_v1/公开来源/GeoExplorer_issue10.html",
+          "sha256": "1d9e1c6218cf821d530ea9802267a4df00cf3f47551dcb68e2de897982761282",
+          "url": "https://github.com/limirs/GeoExplorer/issues/10",
+          "lines": [
+            1,
+            1
+          ],
+          "contains": "totalCommentsCount"
+        }
+      ]
+    },
+    {
+      "id": "paper_gaps",
+      "title": "后续G2/G3",
+      "status": "unknown",
+      "description": "新来源共同确认与干净环境完整复跑尚未执行；重复权重/队列不增加地理样本，上一批失效权重不消费新源或3备用。",
+      "references": [
+        {
+          "path": "总结报告相关/论文复现交付_v1/论文证据与缺项清单_v1.md",
+          "sha256": "12cc9689206d21f2eaec4c143ddbb9924f8fe07ddf03c5c5d4e4a3e28a4fe78c"
+        },
+        {
+          "path": "DATA/processed_data/Masa/评测结果/GOMAA开发闭环目标诊断_v1/下一项决策_v1.md",
+          "sha256": "fce89cc470d885f9826a9b2c4d54c2c7ed591d76381f12a6f8dab02f071c4d60"
+        }
+      ]
+    }
+  ],
+  "public_revisions": [
+    {
+      "repo": "mvrl/GOMAA-Geo",
+      "revision": "1faa1eee1608529eae95cc0af1d76330c9e46e60",
+      "scope": "published_source_only",
+      "root_evidence": "项目导航/学习基线来源与编码器补证据_v1/公开来源/GOMAA_root.html"
+    },
+    {
+      "repo": "limirs/GeoExplorer",
+      "revision": "2d9fc71a7151ec4060950cc6ae639880a74f6201",
+      "scope": "published_source_only",
+      "root_evidence": "项目导航/学习基线来源与编码器补证据_v1/公开来源/GeoExplorer_root.html"
+    },
+    {
+      "repo": "mvrl/Sat2Cap",
+      "revision": "b08e2c61515192637bf8b7d3f5160254a0d3836c",
+      "scope": "published_source_only",
+      "root_evidence": "项目导航/学习基线来源与编码器补证据_v1/公开来源/Sat2Cap_root.html"
+    }
+  ],
+  "encoder_files": {
+    "same_serialization_matches": [
+      {
+        "repo": "MVRL/Sat2Cap",
+        "revision": "8b377450f91dc970a71ee5194806857298c34cf3",
+        "file": "model.safetensors",
+        "bytes": 351420784,
+        "sha256": "fec6802fbf27664ddd556fc445ff7d8e7ab0f05fea160c2e16680642dcebf3e0"
+      }
+    ],
+    "remote_lfs_candidates": [
+      {
+        "repo": "EOS-ITC/Sat2Cap",
+        "revision": "9554f60c9961ae9ebaf7d0f65dc7f7ec34d211a3",
+        "file": "pytorch_model.bin",
+        "bytes": 351463409,
+        "sha256": "c8f430cb950cae78c439d0aced7199d1ab41d7e2398be8c3fdea5b010353b289"
+      },
+      {
+        "repo": "MVRL/Sat2Cap",
+        "revision": "8b377450f91dc970a71ee5194806857298c34cf3",
+        "file": "model.safetensors",
+        "bytes": 351420784,
+        "sha256": "fec6802fbf27664ddd556fc445ff7d8e7ab0f05fea160c2e16680642dcebf3e0"
+      }
+    ],
+    "config_and_card_same_bytes": true,
+    "local_matches_geo_public_recipe": true,
+    "checkpoint_training_encoder_binding": "unknown"
+  },
+  "qualification": {
+    "G1": false,
+    "G2": false,
+    "G3": false
+  },
+  "summary": "已确认本地视觉编码器就是公开MVRL/Sat2Cap固定版本的同一权重工件，配置和卡也一致，Geo官方源码明确引用该repo；EOS名称不能作为拿错编码器的依据。仍未取得GOMAA公开导航权重实际训练特征/地图/编码器绑定及最终训练预算/论文表映射；科学目标有效性失败保持，来源补证据不自动成为可靠基线。",
+  "short_summary": "本地权重/配置/卡与公开MVRL/Sat2Cap同工件已核实；原导航训练特征/切分映射仍缺",
+  "decision": "收束本轮公开检索，现阶段不追加训练、不换编码器、不扩源追分。优先取得原导航权重对应的训练特征、源地图/切分、编码器与配置清单；若仍缺，保持公开迁移/有限预算基线标签，课程成果与论文缺项分开。公开检索的缺项不是总体不存在，作者资料请求仅整理未发送。",
+  "next_proposal": "唯一后续建议是“原训练资产与评测协议的可核验绑定”：先整理作者需提供的文件/SHA和本地已满足项；不因为EOS旧名称再换编码器。若获得明确的原训练表征差异，再另立一个同题开发因素；没有绑定证据时，不盲重跑旧GOMAA或追加Geo训练。G2/G3留待可靠基线及配置冻结后分别开展。"
+}

@@ -1,0 +1,11 @@
+{
+  "status": "failed_before_forward",
+  "runtime": "project/src/agents/gomaa_runtime_v1.py",
+  "error": "NotImplementedError: Cannot copy out of meta tensor; no data!",
+  "cause": "nonpersistent original rotary buffers were created on meta and are absent in state_dict",
+  "strict_parameter_load_succeeded": true,
+  "model_forward": 0,
+  "navigation": 0,
+  "cuda_initialized": false,
+  "repair": "construct original modules on CPU, then strictly assign original checkpoint; no to_empty after loading"
+}

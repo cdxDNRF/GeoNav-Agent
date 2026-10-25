@@ -1,0 +1,83 @@
+{
+  "task": "CV-015",
+  "entries": [
+    {
+      "id": "E01",
+      "claim": "编码器、行列映射、冻结与小头训练工程可执行",
+      "status": "verified_engineering_only",
+      "evidence": [
+        "../同任务对齐执行器工程_v2/README.md",
+        "../同任务拍摄点对齐执行_v1/核验/另实现复核.json"
+      ],
+      "missing": "不能代替目标关联和真实导航有效性"
+    },
+    {
+      "id": "E02",
+      "claim": "地面照片可稳定区分局部拍摄点代理格",
+      "status": "not_demonstrated_effect_gates_failed",
+      "evidence": [
+        "../同任务拍摄点对齐执行_v1/核验/最终门槛判定.json",
+        "证据重计汇总.json"
+      ],
+      "missing": "真实目标需稳定胜Mean/Wrong/Disabled及同题基线"
+    },
+    {
+      "id": "E03",
+      "claim": "训练关系覆盖充分",
+      "status": "not_demonstrated",
+      "evidence": [
+        "证据重计汇总.json",
+        "../同任务对齐训练与目标对照协议_v1/固定编码与训练开发队列.json"
+      ],
+      "missing": "9个fit查询/正格；缺少同域同区域多拍摄点对照及更丰富且可信的正配对"
+    },
+    {
+      "id": "E04",
+      "claim": "拍摄点标签已独立地理校核且可从照片观察",
+      "status": "unverified",
+      "evidence": [
+        "../目标格定义与视觉尺度审查_v1/审查汇总.json",
+        "../同任务首批图像轴向预检_v1/README.md"
+      ],
+      "missing": "原16可见地标关系未知；新14质量/轴向过不等于地理footprint/拍摄方向和目标可观测性过"
+    },
+    {
+      "id": "E05",
+      "claim": "跨视角主动探索与导航SR已验证",
+      "status": "not_run",
+      "evidence": [
+        "../同任务拍摄点对齐执行_v1/执行完成.json"
+      ],
+      "missing": "逐步公开观察下目标判断/方向或访问后识别→真实动作→预算内到达→同题目标对照"
+    },
+    {
+      "id": "E06",
+      "claim": "新来源泛化/统计单位充分",
+      "status": "not_confirmed",
+      "evidence": [
+        "../同任务来源用途账本_v1.json",
+        "证据重计汇总.json"
+      ],
+      "missing": "6确认组未用；5开发查询与125重复窗不可冒充独立区域确认"
+    },
+    {
+      "id": "E07",
+      "claim": "失败唯一由标签错误或骨干容量引起",
+      "status": "not_identified",
+      "evidence": [
+        "跨视角阶段证据与失败边界.md"
+      ],
+      "missing": "未隔离标签/数据域/监督覆盖/表征，禁止按分数重标或直接扩参"
+    },
+    {
+      "id": "E08",
+      "claim": "航拍平台和原协议仍可用",
+      "status": "preserved_not_retested_here",
+      "evidence": [
+        "../../../../平台/实验工作台_v4/README.md"
+      ],
+      "missing": "现有航拍通过结论不外推到地面模式；本轮无生产GUI或服务变更"
+    }
+  ],
+  "new_candidate_admitted": false
+}

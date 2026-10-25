@@ -1,0 +1,193 @@
+{
+  "task": "CV-020",
+  "review_checks_passed": true,
+  "candidate_passed": false,
+  "sealed_text_and_source_hashes_verified": 38,
+  "sealed_binary_presence_size_only": [
+    "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/权重/final.npz",
+    "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/权重/initial.npz",
+    "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/权重/recovery.pt",
+    "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/核验/真实头算子输出.npz",
+    "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/特征/new_aerial.npy",
+    "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/特征/new_ground.npy"
+  ],
+  "binary_integrity_limit": "No fresh binary SHA or tensor/score recomputation; CV019 original alternate-equation audit retained, not rerun.",
+  "fit_ground_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    14,
+    15,
+    16
+  ],
+  "development_ground_indices": [
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "reused_old_train_aerial_rows": 35,
+  "updates": 500,
+  "query_uses": 4500,
+  "uses_per_query": 375,
+  "head_parameters": 8192,
+  "ranking_records": 1625,
+  "planned_windows": 125,
+  "target_photos_and_source_units": 5,
+  "control_counts": {
+    "Full": {
+      "planned": 125,
+      "top1": 0,
+      "top5": 11,
+      "median_rank": 12.0
+    },
+    "Mean": {
+      "planned": 125,
+      "top1": 1,
+      "top5": 21,
+      "median_rank": 11.0
+    },
+    "Wrong": {
+      "planned": 125,
+      "top1": 0,
+      "top5": 24,
+      "median_rank": 9.0
+    }
+  },
+  "all_full_counts": {
+    "Identity": {
+      "planned": 125,
+      "top1": 0,
+      "top5": 50,
+      "median_rank": 7.0
+    },
+    "SwissRank8Frozen": {
+      "planned": 125,
+      "top1": 2,
+      "top5": 94,
+      "median_rank": 4.0
+    },
+    "MMRank8Final": {
+      "planned": 125,
+      "top1": 0,
+      "top5": 23,
+      "median_rank": 11.0
+    },
+    "MMRank8Coverage12": {
+      "planned": 125,
+      "top1": 0,
+      "top5": 11,
+      "median_rank": 12.0
+    }
+  },
+  "source_full_counts": {
+    "cp_90e82d3f1b4a": {
+      "planned": 25,
+      "top1": 0,
+      "top5": 8
+    },
+    "cp_9aebd6834001": {
+      "planned": 25,
+      "top1": 0,
+      "top5": 0
+    },
+    "cp_9e8fdb82d71d": {
+      "planned": 25,
+      "top1": 0,
+      "top5": 0
+    },
+    "cp_b2dde602d621": {
+      "planned": 25,
+      "top1": 0,
+      "top5": 0
+    },
+    "cp_b34c205adc4a": {
+      "planned": 25,
+      "top1": 0,
+      "top5": 3
+    }
+  },
+  "MM12_vs_MM9": {
+    "top1": {
+      "recovered": 0,
+      "harmed": 0,
+      "net": 0,
+      "source_units": 5,
+      "resamples": 3125,
+      "per_source_rate_differences": {
+        "cp_90e82d3f1b4a": 0.0,
+        "cp_9aebd6834001": 0.0,
+        "cp_9e8fdb82d71d": 0.0,
+        "cp_b2dde602d621": 0.0,
+        "cp_b34c205adc4a": 0.0
+      },
+      "paired_source_percentile95": [
+        0.0,
+        0.0
+      ]
+    },
+    "top5": {
+      "recovered": 1,
+      "harmed": 13,
+      "net": -12,
+      "source_units": 5,
+      "resamples": 3125,
+      "per_source_rate_differences": {
+        "cp_90e82d3f1b4a": 0.0,
+        "cp_9aebd6834001": 0.0,
+        "cp_9e8fdb82d71d": -0.44,
+        "cp_b2dde602d621": 0.0,
+        "cp_b34c205adc4a": -0.04
+      },
+      "paired_source_percentile95": [
+        -0.272,
+        0.0
+      ]
+    }
+  },
+  "gates": {
+    "all1625_planned_rankings_complete": true,
+    "all_engineering_and_audit_passed": true,
+    "Full_top1_at_least32": false,
+    "Full_minus_Mean_at_least16": false,
+    "Full_minus_Wrong_at_least16": false,
+    "Full_minus_Disabled_at_least16": false,
+    "Full_minus_Identity_at_least5": false,
+    "Full_minus_Swiss_at_least5": false,
+    "sources_above_both_controls_at_least3": false,
+    "sources_above_both_baselines_at_least3": false,
+    "Full_minus_MM9_at_least5": false,
+    "sources_above_MM9_at_least3": false
+  },
+  "reserved_groups": 6,
+  "reserved_records": 24,
+  "finding_count": 1,
+  "findings": [
+    {
+      "priority": "P2",
+      "file": "project/src/tools/run_capturepoint_coverage_v1.py",
+      "line": 122,
+      "title": "Per-batch features survive interruption without their pixel receipts",
+      "rule": "AGENTS.md:49",
+      "proof": "中断注入证据.json",
+      "impact": "Reproducibility/recovery gap on a future interrupted encoding run; completed CV019 receipts all present, negative result not invalidated."
+    }
+  ],
+  "scope": {
+    "real_model_forward_calls": 0,
+    "new_model_scores": 0,
+    "raw_images_opened": 0,
+    "feature_or_parameter_files_opened": 0,
+    "training_updates": 0,
+    "navigation": 0,
+    "confirmation_consumption": 0
+  },
+  "same_agent_review_not_independent_person": true
+}

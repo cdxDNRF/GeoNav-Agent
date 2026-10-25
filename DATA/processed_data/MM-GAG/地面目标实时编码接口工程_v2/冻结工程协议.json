@@ -1,0 +1,53 @@
+{
+  "task": "CV-025",
+  "date": "2026-10-22",
+  "purpose": "real image→local features interface/cache consistency only",
+  "device": "cpu",
+  "threads": 4,
+  "max_forward_calls": 8,
+  "max_seconds": 422.77234670000325,
+  "max_rss_bytes": 4294967296,
+  "output_limit_bytes": 6291456,
+  "images": "4paired known-dev ground/current aerial, one target+one current/frame per independent session;no environment movement",
+  "ground_preprocessing": "EXIF transpose thenPIL shortest edge224 BICUBIC/center224/officialCLIP mean/std",
+  "aerial_preprocessing": "PIL square224 BICUBIC/originalSat2Cap mean/std",
+  "input_permissions": "RGB only to encoder;session only current/public geometry;explicit target overrides old aerial target",
+  "cache_reference": [
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/特征/ground.npy",
+      "sha256": "447a116113e1900acffbb0d123de43fc64c487d60833954392743de6da68fea7",
+      "bytes": 28800
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/特征/aerial.npy",
+      "sha256": "1edb8ab5b0057372ca9ae1146356dc309b5ac5dbc54e244c62759547d672d924",
+      "bytes": 2322560
+    }
+  ],
+  "gates": {
+    "all8_complete": true,
+    "preprocess_max_abs": 1e-06,
+    "embedding_max_abs": 5e-05,
+    "embedding_cosine_min": 0.999999,
+    "frozen_tensors_and_files_required": true,
+    "resource_limits_required": true
+  },
+  "stopping": "single run, record attempts before forward;on failure retain prefix and no automatic retry/tuning",
+  "training": 0,
+  "navigation": 0,
+  "API": 0,
+  "download": 0,
+  "confirmation": 0,
+  "reopens_failed_CV024": false,
+  "evidence_scope": "engineering compatibility does not establish goal effectiveness or navigation SR;no GUI/default release",
+  "prior_elapsed_seconds": 177.22765329999675,
+  "cumulative_time_limit_seconds": 600,
+  "prior_actual_forward_calls": 1,
+  "max_cumulative_actual_forward_calls": 9,
+  "changes": [
+    "explicit user-authorized 4GiB RSS cap",
+    "durable per-success vector journal"
+  ],
+  "original_3GiB_judgment": "failed;not reclassified",
+  "max_live_encoders": 1
+}

@@ -1,0 +1,24 @@
+{
+  "localization_target": "capture_point",
+  "evaluation_label": "existing CSV/code-implied center proxy cell",
+  "decision": "carry forward original task meaning as project convention, not a new object annotation or measured geolocation claim",
+  "unchanged_pairs": 16,
+  "source_center": [
+    5,
+    5
+  ],
+  "visible_landmark_role": "possible evidence about capture location; not automatically the success cell",
+  "geographic_footprint": "unverified, all16 retained",
+  "public_fields": [
+    "target_rgb",
+    "modality",
+    "localization_target"
+  ],
+  "evaluator_only_fields": [
+    "goal_index",
+    "CSV_lat_lon",
+    "source_id",
+    "candidate_bank"
+  ],
+  "new_landmark_task_rule": "requires explicit object labels and a new data/protocol version; never relabel these16 based on scores"
+}

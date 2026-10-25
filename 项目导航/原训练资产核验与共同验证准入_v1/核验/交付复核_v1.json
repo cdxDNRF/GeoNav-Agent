@@ -1,0 +1,68 @@
+{
+  "passed": true,
+  "initial_static_audit": {
+    "passed": true,
+    "bindings_checked": 181,
+    "checkpoint_scalars_alternate": {
+      "ppo_falcon.pt": {},
+      "sat2cap_optimal_action_falcon.pt.ckpt": {
+        "epoch": 202,
+        "global_step": 812,
+        "pytorch-lightning_version": "2.2.1"
+      }
+    },
+    "network_requests": 14,
+    "network_bytes": 319686,
+    "source_checks": [
+      "project/src/tools/original_training_assets_v1.py",
+      "project/src/eval/audit_original_training_assets_v1.py",
+      "project/src/tests/test_original_training_assets_v1.py"
+    ],
+    "gate": {
+      "asset_readiness": false,
+      "missing": [
+        "source_split",
+        "encoder_recipe",
+        "feature_bank",
+        "training_run",
+        "checkpoint_run_map",
+        "paper_evaluation_map"
+      ],
+      "development_target_qualified": false,
+      "formal_execution_allowed": false,
+      "does_not_prove_author_attribution_or_target_effect": true
+    },
+    "independent_implementation_same_developer": true,
+    "model_calls": 0,
+    "tensor_values_loaded": false,
+    "defaults_changed": false
+  },
+  "complete_tree_audit": {
+    "passed": true,
+    "requests": 24,
+    "bytes": 2602486,
+    "dataset_tree_complete": true,
+    "dataset_tree_entries": 8065,
+    "dataset_files": 7998,
+    "nonimage_files": [
+      ".gitattributes",
+      "README.md",
+      "coordinates.csv"
+    ],
+    "external_git_fetch_failure_separately_recorded": true
+  },
+  "prior_bindings_checked": 535,
+  "independent_scalars": {
+    "lr": 3.4549150281252635e-06,
+    "epochs_in_snapshot": 203,
+    "train_microbatches": 168693,
+    "optimizer_steps": 812,
+    "val_batches": 178
+  },
+  "source_snapshots": 5,
+  "local_links": 799,
+  "index_batches": 103,
+  "same_developer_separate_implementation": true,
+  "model_calls": 0,
+  "formal_execution_allowed": false
+}

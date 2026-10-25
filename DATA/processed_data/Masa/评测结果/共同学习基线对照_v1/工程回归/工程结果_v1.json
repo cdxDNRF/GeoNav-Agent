@@ -1,0 +1,92 @@
+{
+  "status": "passed",
+  "m0_episodes": 3000,
+  "geo_episodes": 48,
+  "action_mismatches": 0,
+  "input_mismatches": 0,
+  "numeric_mismatches": 0,
+  "reset_mismatches": 0,
+  "public_decisions": 24321,
+  "policy_errors": 0,
+  "examples": [],
+  "statistics": [
+    {
+      "method": "M0",
+      "seed": 0,
+      "device": "cuda:0",
+      "model_load_seconds": 0.0688916000071913,
+      "parameters": 934538,
+      "decisions": 7972,
+      "resets": 1000,
+      "inference_seconds": 18.092975800085696,
+      "peak_reserved_mib": 26.0,
+      "forward_hooks_checked": 7972
+    },
+    {
+      "method": "M0",
+      "seed": 1,
+      "device": "cuda:0",
+      "model_load_seconds": 0.020141699991654605,
+      "parameters": 934538,
+      "decisions": 7999,
+      "resets": 1000,
+      "inference_seconds": 17.063163500279188,
+      "peak_reserved_mib": 26.0,
+      "forward_hooks_checked": 7999
+    },
+    {
+      "method": "M0",
+      "seed": 2,
+      "device": "cuda:0",
+      "model_load_seconds": 0.021571299992501736,
+      "parameters": 934538,
+      "decisions": 7950,
+      "resets": 1000,
+      "inference_seconds": 18.038736900052754,
+      "peak_reserved_mib": 26.0,
+      "forward_hooks_checked": 7950
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 0,
+      "device": "cuda:0",
+      "model_load_seconds": 14.341209100006381,
+      "parameters": 238794245,
+      "decisions": 152,
+      "resets": 16,
+      "inference_seconds": 2.4461929999961285,
+      "peak_reserved_mib": 1020.0,
+      "forward_hooks_checked": 304
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 1,
+      "device": "cuda:0",
+      "model_load_seconds": 5.019100099991192,
+      "parameters": 238794245,
+      "decisions": 136,
+      "resets": 16,
+      "inference_seconds": 1.879354000033345,
+      "peak_reserved_mib": 1020.0,
+      "forward_hooks_checked": 272
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 2,
+      "device": "cuda:0",
+      "model_load_seconds": 4.890108899999177,
+      "parameters": 238794245,
+      "decisions": 112,
+      "resets": 16,
+      "inference_seconds": 1.5148267000477063,
+      "peak_reserved_mib": 1020.0,
+      "forward_hooks_checked": 224
+    }
+  ],
+  "elapsed_seconds": 269.10970559999987,
+  "scientific_sr": false,
+  "new_training": 0,
+  "cloud_calls": 0,
+  "reserve_consumed": 0,
+  "scope": "old consumed S3 regression and public original-model probes; no performance claims"
+}

@@ -1,0 +1,341 @@
+{
+  "date": "2026-10-07",
+  "selection": "GeoExplorer original-structure mechanism reproduction candidate",
+  "selection_status": "selected for adapter feasibility; training/evaluation not reproduced",
+  "backup": "GOMAA-Geo",
+  "source_anchors": [
+    {
+      "path": "GOMAA-Geo/config.py",
+      "sha256": "3e846abc8f413e9c80a1c95e3239fd85952f1ee1c52337de3acac8f84485b837",
+      "needle": "cfg.data.test_path = 'gomaa_geo/data/papr_val",
+      "lines": [
+        15
+      ]
+    },
+    {
+      "path": "GOMAA-Geo/validate.py",
+      "sha256": "2cc0d8a200520468b114969f7f1c902a4b487e5089252e58088135e5643a8641",
+      "needle": "cur_val_success/890",
+      "lines": [
+        71
+      ]
+    },
+    {
+      "path": "GOMAA-Geo/models/pretrain_model.py",
+      "sha256": "726004c4db8cdb8b52566db736104b3e7cba01fe64e5b57707c477081d86ab04",
+      "needle": "from .model_falcon import get_model",
+      "lines": [
+        7
+      ]
+    },
+    {
+      "path": "GOMAA-Geo/models/model_falcon.py",
+      "sha256": "4d5fe7d126efcadf0c30b44493cd4de9b339642fbc13bfd03640f10feec06358",
+      "needle": "model = FalconForCausalLM(config)",
+      "lines": [
+        1417
+      ]
+    },
+    {
+      "path": "项目导航/论文对标准备_v1/公开来源/GeoExplorer__models__pretrain_model.py",
+      "sha256": "bdc8ee91ea570bb1e92d4ec3b726c0a3aec0c3e3f67c34589b2e0002cf478d77",
+      "needle": "loss = loss_action + loss_state",
+      "lines": [
+        41
+      ]
+    },
+    {
+      "path": "项目导航/论文对标准备_v1/公开来源/GeoExplorer__train.py",
+      "sha256": "ca62c336f1eafcb852eb86cab0c7a183b1bdbb921b9eafc8c221b40692b11932",
+      "needle": "reward_in = (2*",
+      "lines": [
+        120
+      ]
+    },
+    {
+      "path": "项目导航/论文对标准备_v1/公开来源/GeoExplorer__config.py",
+      "sha256": "c166826736b40a99e4fad4c851f9068844c40e2f04880d0478e72c4d933cebc9",
+      "needle": "int(1e8)",
+      "lines": [
+        99
+      ]
+    },
+    {
+      "path": "项目导航/论文对标准备_v1/公开来源/GeoExplorer__config.py",
+      "sha256": "c166826736b40a99e4fad4c851f9068844c40e2f04880d0478e72c4d933cebc9",
+      "needle": "hparams.epochs = 300",
+      "lines": [
+        74
+      ]
+    },
+    {
+      "path": "项目导航/论文对标准备_v1/公开来源/GeoExplorer__models__ppo.py",
+      "sha256": "666f940f0c5a5b292de5e32cf3f755f3dc470f6b4447a3795d5cd8dd8e56114e",
+      "needle": "import wandb",
+      "lines": [
+        12
+      ]
+    }
+  ],
+  "resource_estimates": {
+    "GOMAA-Geo": {
+      "source": "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__models__model_falcon.py",
+      "source_sha256": "4d5fe7d126efcadf0c30b44493cd4de9b339642fbc13bfd03640f10feec06358",
+      "dimensions": {
+        "patch_size": 5,
+        "word_embed_proj_dim": 512,
+        "hidden_size": 1152,
+        "num_angles": 47,
+        "num_attention_heads": 12,
+        "num_hidden_layers": 12,
+        "num_key_value_heads": 12,
+        "intermediate_size": 3072,
+        "use_cache": false,
+        "_attn_implementation": "sdpa"
+      },
+      "decoder_matrix_params_MQA": 161906688,
+      "decoder_matrix_params_MHA": 191102976,
+      "decoder_FP32_weights_GiB_range": [
+        0.6031494140625,
+        0.7119140625
+      ],
+      "decoder_FP32_weights_grad_Adam_GiB_range": [
+        2.41259765625,
+        2.84765625
+      ],
+      "formula_MQA": "N*(10*H^2+2*H*(H/heads))",
+      "formula_MHA": "N*12*H^2",
+      "excluded": [
+        "norm/bias",
+        "vocabulary embeddings and lm_head",
+        "projection and prediction heads",
+        "encoder",
+        "activation",
+        "CUDA allocator",
+        "optimizer temporary buffers"
+      ],
+      "total_params": null,
+      "measured_peak_vram": null,
+      "measured_training_time": null,
+      "warning": "conditional decoder-only static arithmetic; not whole-model VRAM or a fit guarantee"
+    },
+    "GeoExplorer": {
+      "source": "项目导航/论文对标准备_v1/公开来源/GeoExplorer__models__model_falcon.py",
+      "source_sha256": "0d932acbe0ce08eb8a4a3e962b6762068758eec49d8a8b08df7d68aa4eb432ef",
+      "dimensions": {
+        "patch_size": 5,
+        "word_embed_proj_dim": 512,
+        "hidden_size": 1152,
+        "num_angles": 47,
+        "num_attention_heads": 12,
+        "num_hidden_layers": 12,
+        "num_key_value_heads": 12,
+        "intermediate_size": 3072,
+        "use_cache": false,
+        "_attn_implementation": "sdpa"
+      },
+      "decoder_matrix_params_MQA": 161906688,
+      "decoder_matrix_params_MHA": 191102976,
+      "decoder_FP32_weights_GiB_range": [
+        0.6031494140625,
+        0.7119140625
+      ],
+      "decoder_FP32_weights_grad_Adam_GiB_range": [
+        2.41259765625,
+        2.84765625
+      ],
+      "formula_MQA": "N*(10*H^2+2*H*(H/heads))",
+      "formula_MHA": "N*12*H^2",
+      "excluded": [
+        "norm/bias",
+        "vocabulary embeddings and lm_head",
+        "projection and prediction heads",
+        "encoder",
+        "activation",
+        "CUDA allocator",
+        "optimizer temporary buffers"
+      ],
+      "total_params": null,
+      "measured_peak_vram": null,
+      "measured_training_time": null,
+      "warning": "conditional decoder-only static arithmetic; not whole-model VRAM or a fit guarantee"
+    }
+  },
+  "evidence_files": [
+    {
+      "scope": "Masa S3",
+      "files": {
+        "report": {
+          "path": "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/独立源图确认报告.md",
+          "exists": true,
+          "sha256": "7fcda5c6dfe34d5774d201225c7b40ba33e2b17d03646b783635e64bcd7e2c5c"
+        },
+        "audit": {
+          "path": "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/独立复核.json",
+          "exists": true,
+          "sha256": "d33c2ded9847bfcb7f93b0a7252c5f2da1aefe37e073bc72b04f969c5f3157a7"
+        },
+        "summary": {
+          "path": "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/对照汇总.json",
+          "exists": true,
+          "sha256": "6cb563c30efec47d41a986901283f2dfc35de144e077b7d9c17cafd4d3a1b3d1"
+        },
+        "verdict": {
+          "path": "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/验收结论.json",
+          "exists": true,
+          "sha256": "da4d5b62b71205edebfa4b78d5171ebfd053b84197eb10826b4ced0ebba3a958"
+        }
+      }
+    },
+    {
+      "scope": "SwissView5",
+      "files": {
+        "report": {
+          "path": "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/迁移验证报告.md",
+          "exists": true,
+          "sha256": "ce5ff6295a5d60b9ebed70d3b8726d466835504130b3c268dd0d422b1e010282"
+        },
+        "audit": {
+          "path": "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/独立复核.json",
+          "exists": true,
+          "sha256": "1584909598a51a541d49d946492d1dc8176a427369edfa85a0015d85cf8687e0"
+        },
+        "summary": {
+          "path": "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/对照汇总.json",
+          "exists": true,
+          "sha256": "e314d81fe09425e9d37c8538efa067ad2035671435f939c395943561c8809c10"
+        },
+        "verdict": {
+          "path": "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/验收结论.json",
+          "exists": true,
+          "sha256": "f08a6f91d11acd14389c5f21f52f503a964cb6e95e9cc82a668df37449327895"
+        }
+      }
+    },
+    {
+      "scope": "Roads9km2",
+      "files": {
+        "report": {
+          "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/径向保护独立新区域导航确认报告.md",
+          "exists": true,
+          "sha256": "57d91e58e96a5a46ee90e6b36288c007d10bdef4d8167a7ec51ccd9db7adfc86"
+        },
+        "audit": {
+          "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/独立复核.json",
+          "exists": false
+        },
+        "summary": {
+          "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/主对照/汇总.json",
+          "exists": false
+        },
+        "verdict": {
+          "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/验收结论.json",
+          "exists": true,
+          "sha256": "6a0c03af26fd3a4d07de29d9013e56b4efbcfc59fef79cc66e4c8f8885458e9d"
+        }
+      }
+    },
+    {
+      "scope": "MassGIS10/15",
+      "files": {
+        "report": {
+          "path": "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/正式双网格确认报告.md",
+          "exists": true,
+          "sha256": "37203f7c02f31beea2268726a0e38fb287599b824c0cf22bd06c936cf596ea3b"
+        },
+        "audit": {
+          "path": "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/核验/最终独立复核.json",
+          "exists": true,
+          "sha256": "04fbcdb5bdc7a3450d96bd441e16f2f637ed56324143dddee932423828019dfb"
+        },
+        "summary": {
+          "path": "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/主对照/汇总.json",
+          "exists": true,
+          "sha256": "278e167b36eb3e903f7bbfd394d73d34b86201f48652a46ce305ceb65f6bc772"
+        },
+        "verdict": {
+          "path": "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/验收结论.json",
+          "exists": true,
+          "sha256": "8e9c98870d9b8e75595f1a048b76fa8336d392843c3a89f8f72317072b30779e"
+        }
+      }
+    }
+  ],
+  "bindings": {
+    "GOMAA-Geo/config.py": "3e846abc8f413e9c80a1c95e3239fd85952f1ee1c52337de3acac8f84485b837",
+    "GOMAA-Geo/data_utils/__init__.py": "5af6d0494fa23afa54ae60a7b096539284abef44a5f78eff16fadbe874a9030e",
+    "GOMAA-Geo/data_utils/get_patches.py": "29e78c3d427ce45293bd9c339e16f14633a8eff986593cf19d44de03c95d86fc",
+    "GOMAA-Geo/data_utils/get_sat_embeddings_sat2cap.py": "58d318fe79f250ba4b9ff7e6c382db127d0bbdcd15d3dd793223ad5af17d824c",
+    "GOMAA-Geo/data_utils/get_text_embeddings.py": "ed3dc38f09df50f66156330776edd104c7ff5b33539dfdf1876497688866283a",
+    "GOMAA-Geo/data_utils/sequence.py": "8c0f8d035677527220ad30681cb40ffa388ee3822e2be27b7422fb17ff154c2e",
+    "GOMAA-Geo/models/decision_transformer.py": "03552c7a440d47bc1e61b52add0f300f7231236875809ac7ccf871bee608b287",
+    "GOMAA-Geo/models/model_falcon.py": "4d5fe7d126efcadf0c30b44493cd4de9b339642fbc13bfd03640f10feec06358",
+    "GOMAA-Geo/models/model_gemma.py": "de19cd71dd6df734d5bac895e5bd8d13275ca46cdd880034d18efe2660288286",
+    "GOMAA-Geo/models/model_gpt.py": "09eab7563f6d60e687f205a15b1e79e0352f173be753a82cafaf042534819005",
+    "GOMAA-Geo/models/model_llama2.py": "db5d9c041ac48a03460d8838a9deec56b77c0ce786a0955a303df110ee3700e1",
+    "GOMAA-Geo/models/model_mamba.py": "0c62b054df399d0aaf13c7a8ab930d28248ebc7649efa2f1cbf81a0e4e0c6db4",
+    "GOMAA-Geo/models/model_mixtral.py": "07c9fc02c7fa7c05240ec0c50dc4feb8b19326579ef59467f19122ba57b9646d",
+    "GOMAA-Geo/models/ppo.py": "b2ee21811ab223bb5dbace3aa1f5822d7194dbdcc11a656400aef39ffa430883",
+    "GOMAA-Geo/models/pretrain_model.py": "726004c4db8cdb8b52566db736104b3e7cba01fe64e5b57707c477081d86ab04",
+    "GOMAA-Geo/pretrain.py": "80c4864134de0fa60fa9c2f593fac66f886e1167f9db8c75bdfb962f0a0c9f91",
+    "GOMAA-Geo/README.md": "c001a96d0e013924c8c5ecfaebba49d0cdc9f603340c8a9d46fe1f9465d04a63",
+    "GOMAA-Geo/requirements.txt": "85f272a2c1560bc278f6c8c13315a50dc435be721d17a8e22e729aa253225179",
+    "GOMAA-Geo/train.py": "94e93672fa9f6febaff38aaf84204f863448f15ac8bbc1aa0b457b5b22eda030",
+    "GOMAA-Geo/utils/__init__.py": "62f24155cc5d8619d0ce13c7909c69a6bd2bb749bc47150c8daa6e6fd6f27da0",
+    "GOMAA-Geo/utils/get_test_config.py": "3bae6dc19b1e339343e02bb975e4e3f62caabf25f95cedfeae06325a6482871a",
+    "GOMAA-Geo/utils/pca_plots.py": "4682bf47b77e71f50c429b21e9c5fe82c5c5cc6590c471d4dcb0984aecd88706",
+    "GOMAA-Geo/utils/random_seed.py": "ab1e632a345ffee512d0dbe6a9bb39e61ab2d9627b3d374c51ed50119f846395",
+    "GOMAA-Geo/validate.py": "2cc0d8a200520468b114969f7f1c902a4b487e5089252e58088135e5643a8641",
+    "GOMAA-Geo/viz_path.py": "57f8e730d648bcd5f64237ae83174ecdb04832b9af089b2cb08e97caf6257901",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer_commit.json": "4f50d9f2e9ad5c0ed42f6934551450dee67fe14773ad3a3ed17d5b22d66f8afc",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer_tree.json": "060d2d8bd099bfc8c6ff4398f8803657e895add6fb84078a8971682be986a976",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__config.py": "c166826736b40a99e4fad4c851f9068844c40e2f04880d0478e72c4d933cebc9",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__data_utils__sequence.py": "7539e2dfda50569939126a64fdb31ead779359933a949990a04b5bbbe248739e",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__environment.yml": "3b69ed9ea8e39dd80a0304e90715bab43ce8eadac2ffc5bc053ea03f132179b8",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__models__model_falcon.py": "0d932acbe0ce08eb8a4a3e962b6762068758eec49d8a8b08df7d68aa4eb432ef",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__models__ppo.py": "666f940f0c5a5b292de5e32cf3f755f3dc470f6b4447a3795d5cd8dd8e56114e",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__models__pretrain_model.py": "bdc8ee91ea570bb1e92d4ec3b726c0a3aec0c3e3f67c34589b2e0002cf478d77",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__pretrain.py": "4591d718f8d54a9a8cad59ed016320b7fb76d01040bdcbaf9958f5d869bee23b",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__README.md": "1ce1f03cd12f4ca927334d8a2968bf080296557cc28eb29a477d13286e0704a7",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__train.py": "ca62c336f1eafcb852eb86cab0c7a183b1bdbb921b9eafc8c221b40692b11932",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__validate.py": "edf4da65573987729ed9ab32489fcbb9d694da3aaa0cde460ad4452efee0df88",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo_commit.json": "86f613bf5d59bd4d3022c51a89617870abb57150c187c9a5f74d35aac6b0058e",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo_tree.json": "76499b0bcac4edeb1a0f57889dea00654a21453a57c13a0654f142c5d24acb07",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__config.py": "3e846abc8f413e9c80a1c95e3239fd85952f1ee1c52337de3acac8f84485b837",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__data_utils__sequence.py": "8c0f8d035677527220ad30681cb40ffa388ee3822e2be27b7422fb17ff154c2e",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__models__model_falcon.py": "4d5fe7d126efcadf0c30b44493cd4de9b339642fbc13bfd03640f10feec06358",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__models__model_gpt.py": "09eab7563f6d60e687f205a15b1e79e0352f173be753a82cafaf042534819005",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__models__ppo.py": "b2ee21811ab223bb5dbace3aa1f5822d7194dbdcc11a656400aef39ffa430883",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__models__pretrain_model.py": "726004c4db8cdb8b52566db736104b3e7cba01fe64e5b57707c477081d86ab04",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__pretrain.py": "80c4864134de0fa60fa9c2f593fac66f886e1167f9db8c75bdfb962f0a0c9f91",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__README.md": "c001a96d0e013924c8c5ecfaebba49d0cdc9f603340c8a9d46fe1f9465d04a63",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__requirements.txt": "85f272a2c1560bc278f6c8c13315a50dc435be721d17a8e22e729aa253225179",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__train.py": "94e93672fa9f6febaff38aaf84204f863448f15ac8bbc1aa0b457b5b22eda030",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__validate.py": "2cc0d8a200520468b114969f7f1c902a4b487e5089252e58088135e5643a8641",
+    "项目导航/论文对标准备_v1/公开来源/获取记录.json": "ab0ee2f06eb27ef7362c3f45bb791c57f48644e2f094daa96c60b152da18cdad",
+    "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/验收结论.json": "96694ff74c206e1b062eed8a2ca6a1aa54891ec499a540ea79db6b39fc7e9500",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/验收结论.json": "da4d5b62b71205edebfa4b78d5171ebfd053b84197eb10826b4ced0ebba3a958",
+    "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/验收结论.json": "2c80528498810091bf844c869ef35d6a074fff4750dbc2a988e0f0723c60840c",
+    "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/验收结论.json": "f08a6f91d11acd14389c5f21f52f503a964cb6e95e9cc82a668df37449327895",
+    "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/验收结论.json": "6a0c03af26fd3a4d07de29d9013e56b4efbcfc59fef79cc66e4c8f8885458e9d",
+    "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/验收结论.json": "8e9c98870d9b8e75595f1a048b76fa8336d392843c3a89f8f72317072b30779e",
+    "project/local_policy_default.json": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b",
+    "project/local_policy_defaults_v1.json": "8e1b85eb74021ac18f8246f8146f7db451d68f423d7152f6c3a5d7c86b4d16fa",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/独立源图确认报告.md": "7fcda5c6dfe34d5774d201225c7b40ba33e2b17d03646b783635e64bcd7e2c5c",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/独立复核.json": "d33c2ded9847bfcb7f93b0a7252c5f2da1aefe37e073bc72b04f969c5f3157a7",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/对照汇总.json": "6cb563c30efec47d41a986901283f2dfc35de144e077b7d9c17cafd4d3a1b3d1",
+    "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/迁移验证报告.md": "ce5ff6295a5d60b9ebed70d3b8726d466835504130b3c268dd0d422b1e010282",
+    "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/独立复核.json": "1584909598a51a541d49d946492d1dc8176a427369edfa85a0015d85cf8687e0",
+    "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/对照汇总.json": "e314d81fe09425e9d37c8538efa067ad2035671435f939c395943561c8809c10",
+    "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/径向保护独立新区域导航确认报告.md": "57d91e58e96a5a46ee90e6b36288c007d10bdef4d8167a7ec51ccd9db7adfc86",
+    "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/正式双网格确认报告.md": "37203f7c02f31beea2268726a0e38fb287599b824c0cf22bd06c936cf596ea3b",
+    "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/核验/最终独立复核.json": "04fbcdb5bdc7a3450d96bd441e16f2f637ed56324143dddee932423828019dfb",
+    "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/主对照/汇总.json": "278e167b36eb3e903f7bbfd394d73d34b86201f48652a46ce305ceb65f6bc772",
+    "项目导航/论文对标准备_v1/资源与证据清单.json": "592e7c09a58234afb4005557bb31c67642a93e70cbabca70c69e0731092d1a9c",
+    "project/src/tools/paper_baseline_analysis_v1.py": "4decdfa356148b3caeb6942e6a8876f31a79220c3221caa5aec2de2d7c965535",
+    "project/src/tools/paper_baseline_inventory_v1.py": "0fba1af234295056b3f37a3afe2fb0de618b6be33f5eda156ae27a04c5d5dae8"
+  },
+  "zero_model_forward": true,
+  "zero_training": true,
+  "zero_navigation": true
+}

@@ -1,0 +1,227 @@
+{
+  "task": "CV-005",
+  "target_semantics": "capture_point_proxy_cell",
+  "planned_pairs": 16,
+  "development_groups": 10,
+  "reserved_groups": 20,
+  "arms": {
+    "CropReplay": {
+      "top1_counts": {
+        "Full": 0,
+        "Mean": 0,
+        "Wrong": 1
+      },
+      "top5_counts": {
+        "Full": 4,
+        "Mean": 3,
+        "Wrong": 2
+      },
+      "median_true_rank": {
+        "Full": 14.0,
+        "Mean": 11.5,
+        "Wrong": 17.0
+      },
+      "per_group": {
+        "dev_00": {
+          "planned": 1,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 0
+        },
+        "dev_01": {
+          "planned": 1,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 0
+        },
+        "dev_02": {
+          "planned": 2,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 0
+        },
+        "dev_03": {
+          "planned": 1,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 0
+        },
+        "dev_04": {
+          "planned": 2,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 1
+        },
+        "dev_05": {
+          "planned": 1,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 0
+        },
+        "dev_06": {
+          "planned": 2,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 0
+        },
+        "dev_07": {
+          "planned": 2,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 0
+        },
+        "dev_08": {
+          "planned": 2,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 0
+        },
+        "dev_09": {
+          "planned": 2,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 0
+        }
+      },
+      "positive_groups_against_both": 0,
+      "gates": {
+        "all16_complete": true,
+        "full_top1_at_least4": false,
+        "full_minus_mean_at_least2": false,
+        "full_minus_wrong_at_least2": false,
+        "positive_groups_at_least3": false
+      },
+      "candidate_passed": false,
+      "target_contrasts": {
+        "Mean": {
+          "recovered": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "Wrong": {
+          "recovered": 0,
+          "harmed": 1,
+          "net": -1
+        }
+      }
+    },
+    "FullFrame": {
+      "top1_counts": {
+        "Full": 0,
+        "Mean": 1,
+        "Wrong": 1
+      },
+      "top5_counts": {
+        "Full": 5,
+        "Mean": 4,
+        "Wrong": 1
+      },
+      "median_true_rank": {
+        "Full": 10.0,
+        "Mean": 10.5,
+        "Wrong": 13.5
+      },
+      "per_group": {
+        "dev_00": {
+          "planned": 1,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 0
+        },
+        "dev_01": {
+          "planned": 1,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 0
+        },
+        "dev_02": {
+          "planned": 2,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 0
+        },
+        "dev_03": {
+          "planned": 1,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 0
+        },
+        "dev_04": {
+          "planned": 2,
+          "Full": 0,
+          "Mean": 1,
+          "Wrong": 1
+        },
+        "dev_05": {
+          "planned": 1,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 0
+        },
+        "dev_06": {
+          "planned": 2,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 0
+        },
+        "dev_07": {
+          "planned": 2,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 0
+        },
+        "dev_08": {
+          "planned": 2,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 0
+        },
+        "dev_09": {
+          "planned": 2,
+          "Full": 0,
+          "Mean": 0,
+          "Wrong": 0
+        }
+      },
+      "positive_groups_against_both": 0,
+      "gates": {
+        "all16_complete": true,
+        "full_top1_at_least4": false,
+        "full_minus_mean_at_least2": false,
+        "full_minus_wrong_at_least2": false,
+        "positive_groups_at_least3": false
+      },
+      "candidate_passed": false,
+      "target_contrasts": {
+        "Mean": {
+          "recovered": 0,
+          "harmed": 1,
+          "net": -1
+        },
+        "Wrong": {
+          "recovered": 0,
+          "harmed": 1,
+          "net": -1
+        }
+      }
+    }
+  },
+  "fullframe_vs_crop": {
+    "top1": {
+      "recovered": 0,
+      "harmed": 0,
+      "net": 0
+    },
+    "top5": {
+      "recovered": 1,
+      "harmed": 0,
+      "net": 1
+    }
+  },
+  "candidate_passed": false,
+  "navigation_SR": null,
+  "training_steps": 0,
+  "new_training_parameters": 0,
+  "single_candidate": true,
+  "formal_confirmation": false
+}

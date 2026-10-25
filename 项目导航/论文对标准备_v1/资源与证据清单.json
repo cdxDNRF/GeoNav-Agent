@@ -1,0 +1,913 @@
+{
+  "date": "2026-10-07",
+  "public_sources": {
+    "mvrl/GOMAA-Geo": {
+      "commit": "1faa1eee1608529eae95cc0af1d76330c9e46e60",
+      "tree_complete": false,
+      "file_count": 11,
+      "weight_files_in_tree": [],
+      "inspected_python_ast": [
+        "GOMAA-Geo__config.py",
+        "GOMAA-Geo__data_utils__sequence.py",
+        "GOMAA-Geo__models__model_falcon.py",
+        "GOMAA-Geo__models__model_gpt.py",
+        "GOMAA-Geo__models__ppo.py",
+        "GOMAA-Geo__models__pretrain_model.py",
+        "GOMAA-Geo__pretrain.py",
+        "GOMAA-Geo__train.py",
+        "GOMAA-Geo__validate.py"
+      ],
+      "readme_has_weight_download_link": "manual assessment required",
+      "absence_scope": "selected public files only; full tree unavailable; no global absence claim"
+    },
+    "limirs/GeoExplorer": {
+      "commit": "2d9fc71a7151ec4060950cc6ae639880a74f6201",
+      "tree_complete": false,
+      "file_count": 10,
+      "weight_files_in_tree": [],
+      "inspected_python_ast": [
+        "GeoExplorer__config.py",
+        "GeoExplorer__data_utils__sequence.py",
+        "GeoExplorer__models__model_falcon.py",
+        "GeoExplorer__models__ppo.py",
+        "GeoExplorer__models__pretrain_model.py",
+        "GeoExplorer__pretrain.py",
+        "GeoExplorer__train.py",
+        "GeoExplorer__validate.py"
+      ],
+      "readme_has_weight_download_link": "manual assessment required",
+      "absence_scope": "selected public files only; full tree unavailable; no global absence claim"
+    }
+  },
+  "dependencies": {
+    "torch": "2.6.0+cu124",
+    "torchvision": "0.21.0+cu124",
+    "transformers": "5.9.0",
+    "numpy": "2.4.6",
+    "pytorch-lightning": null,
+    "easydict": "1.13",
+    "fire": "0.7.1",
+    "matplotlib": "3.10.8",
+    "scikit-learn": "1.8.0",
+    "scikit-image": "0.26.0",
+    "pandas": "3.0.1"
+  },
+  "gpu_snapshot": "NVIDIA GeForce RTX 4060 Laptop GPU, 8188 MiB, 1310 MiB",
+  "gpu_peak_measured": false,
+  "local_gomaa_source_files": 25,
+  "local_gomaa_weights": [],
+  "existing_verdicts": {
+    "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/验收结论.json": {
+      "audit_sha256": "1b99142ff02a1cdc9a24aa0cdae8d9f43d951736e1ea8890321a50c69b08fd35",
+      "default_arm": "EdgeTargetCue",
+      "default_changed": true,
+      "default_config_sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b",
+      "default_loading_audit_sha256": "5f9e7a9bb1c119f77b194a3483e860e365c2dcd98b77f293a9f6962cc29d0921",
+      "formal_S2_passed": true,
+      "independent_map_confirmation_completed": false,
+      "large_grid_used": false,
+      "status": "completed_and_audited",
+      "summary_sha256": "85d043ff63f838e18700037427518c643de3c7c06d0eeb0d50ba48db8e03a2a7",
+      "test_used": false
+    },
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/验收结论.json": {
+      "S2_result_unchanged": true,
+      "SR_gain_CI_positive": {
+        "FixedRegion": true,
+        "Frontier": true,
+        "MeanCue": true,
+        "NoTargetBaseline": true,
+        "WrongCue": true,
+        "ZeroEdgeFull": true
+      },
+      "audit_sha256": "d33c2ded9847bfcb7f93b0a7252c5f2da1aefe37e073bc72b04f969c5f3157a7",
+      "default_changed": false,
+      "default_config_sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b",
+      "default_loading_audit_sha256": "c6ef6cc22510e4a44972f2028927e8e0328a1b0c8f5993f4fbf6e9a3dc570ef9",
+      "formal_S3_passed": true,
+      "future_methods_require_new_unseen_confirmation_data": true,
+      "geographic_nonoverlap_verified": false,
+      "independent_source_files_confirmed": true,
+      "large_grid_used": false,
+      "planned_tasks_per_seed": 250,
+      "source_count": 10,
+      "status": "completed_and_audited",
+      "summary_sha256": "6cb563c30efec47d41a986901283f2dfc35de144e077b7d9c17cafd4d3a1b3d1",
+      "target_transfer_passed": true,
+      "test_used": true
+    },
+    "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/验收结论.json": {
+      "audit_sha256": "d6f5987436ec262cd0b2a5238b48bb3f0719b459d55a70fd87b750dd8d72756f",
+      "cloud_calls": 0,
+      "cross_dataset_confirmed": false,
+      "default_changed": false,
+      "default_sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b",
+      "formal_S4_passed": true,
+      "formal_size_met": true,
+      "geographic_area_expanded": false,
+      "new_unseen_source_files": 0,
+      "planned_tasks_per_seed": 500,
+      "scope": "local10x10 density/B20 engineering confirmation; previously-used source-file groups",
+      "source_count": 20,
+      "status": "completed_and_audited",
+      "summary_sha256": "4361a8de2169db926d48afd7dea457596ac0f3c7ae264a50cea59c1e5843f9b4",
+      "target_transfer_passed": true,
+      "training_steps": 0
+    },
+    "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/验收结论.json": {
+      "SR_gain_CI_positive": {
+        "FixedRegion": true,
+        "Frontier": true,
+        "MeanCue": true,
+        "NoTargetBaseline": true,
+        "WrongCue": true,
+        "ZeroEdgeFull": true
+      },
+      "allow_formal_expansion": false,
+      "audit_sha256": "1584909598a51a541d49d946492d1dc8176a427369edfa85a0015d85cf8687e0",
+      "cloud_calls": 0,
+      "cross_view_confirmed": false,
+      "dataset": "SwissView100",
+      "default_changed": false,
+      "default_sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b",
+      "engineering_passed": true,
+      "formal_cross_dataset_passed": true,
+      "geographic_nonoverlap_confirmed": false,
+      "mode": "formal",
+      "planned_tasks_per_seed": 500,
+      "scope": "Frozen Masa task-trained weights on native contiguous same-source SwissView100 aerial crops; no task adaptation",
+      "source_count": 20,
+      "status": "completed_and_audited",
+      "summary_sha256": "e314d81fe09425e9d37c8538efa067ad2035671435f939c395943561c8809c10",
+      "target_transfer_passed": true,
+      "training_steps": 0
+    },
+    "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/验收结论.json": {
+      "candidate": "Coverage3Radial",
+      "cloud_calls": 0,
+      "completed": true,
+      "controls_started": true,
+      "default_changed": false,
+      "default_sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b",
+      "eligible_for_default_upgrade": true,
+      "harmed": 88,
+      "independent_audit_passed": true,
+      "independent_main_passed": true,
+      "independent_target_evidence_passed": true,
+      "limitation": "same Massachusetts imagery family; pretrained geography unknown; frozen cohort, not real-flight validation",
+      "main_audit_sha256": "00181742dcd7333d32b30e4709d530a02fece8016c36fed24949a30541bf81fd",
+      "main_checks": {
+        "mixed_SG_no_worse": true,
+        "mixed_SR_gain2pp": true,
+        "source95_SR_lower_positive": true,
+        "strata": {
+          "interior_target": {
+            "SG_no_worse": true,
+            "SR_loss_at_most2pp": true
+          },
+          "long_distance": {
+            "SG_no_worse": true,
+            "SR_loss_at_most2pp": true
+          },
+          "seam_target": {
+            "SG_no_worse": true,
+            "SR_loss_at_most2pp": true
+          }
+        },
+        "two_positive_weights": true
+      },
+      "main_summary_sha256": "8604190f266df130869a2b25e5c81f9a8dadd2736b4206f816b87e97d08fd3db",
+      "new_training_steps": 0,
+      "records": 11250,
+      "recovered": 295
+    },
+    "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/验收结论.json": {
+      "execution_completed": true,
+      "engineering_audits_passed": true,
+      "formal_geographic_regions": 10,
+      "per_grid": {
+        "10": {
+          "main_gate_passed": false,
+          "raw": {
+            "accepted": 21104,
+            "correct": 10789,
+            "adjacent": 10800,
+            "precision": 0.5112300985595147,
+            "recall": 0.9989814814814815,
+            "regions": {
+              "img_7005": {
+                "accepted": 2016,
+                "correct": 1077,
+                "adjacent": 1080,
+                "precision": 0.5342261904761905,
+                "recall": 0.9972222222222222
+              },
+              "img_7008": {
+                "accepted": 1575,
+                "correct": 1080,
+                "adjacent": 1080,
+                "precision": 0.6857142857142857,
+                "recall": 1.0
+              },
+              "img_7009": {
+                "accepted": 1785,
+                "correct": 1078,
+                "adjacent": 1080,
+                "precision": 0.6039215686274509,
+                "recall": 0.9981481481481481
+              },
+              "img_7010": {
+                "accepted": 2128,
+                "correct": 1080,
+                "adjacent": 1080,
+                "precision": 0.5075187969924813,
+                "recall": 1.0
+              },
+              "img_7011": {
+                "accepted": 2729,
+                "correct": 1080,
+                "adjacent": 1080,
+                "precision": 0.395749358739465,
+                "recall": 1.0
+              },
+              "img_7012": {
+                "accepted": 2606,
+                "correct": 1080,
+                "adjacent": 1080,
+                "precision": 0.41442824251726784,
+                "recall": 1.0
+              },
+              "img_7013": {
+                "accepted": 2309,
+                "correct": 1080,
+                "adjacent": 1080,
+                "precision": 0.4677349501948896,
+                "recall": 1.0
+              },
+              "img_7014": {
+                "accepted": 2364,
+                "correct": 1080,
+                "adjacent": 1080,
+                "precision": 0.45685279187817257,
+                "recall": 1.0
+              },
+              "img_7015": {
+                "accepted": 1611,
+                "correct": 1074,
+                "adjacent": 1080,
+                "precision": 0.6666666666666666,
+                "recall": 0.9944444444444445
+              },
+              "img_7016": {
+                "accepted": 1981,
+                "correct": 1080,
+                "adjacent": 1080,
+                "precision": 0.5451792024230186,
+                "recall": 1.0
+              }
+            }
+          },
+          "mean_raw": {
+            "accepted": 18503,
+            "correct": 1181,
+            "adjacent": 10800,
+            "precision": 0.06382748743447009,
+            "recall": 0.10935185185185185,
+            "regions": {
+              "img_7005": {
+                "accepted": 1668,
+                "correct": 116,
+                "adjacent": 1080,
+                "precision": 0.06954436450839328,
+                "recall": 0.10740740740740741
+              },
+              "img_7008": {
+                "accepted": 1194,
+                "correct": 77,
+                "adjacent": 1080,
+                "precision": 0.06448911222780569,
+                "recall": 0.0712962962962963
+              },
+              "img_7009": {
+                "accepted": 1217,
+                "correct": 73,
+                "adjacent": 1080,
+                "precision": 0.0599835661462613,
+                "recall": 0.06759259259259259
+              },
+              "img_7010": {
+                "accepted": 2059,
+                "correct": 128,
+                "adjacent": 1080,
+                "precision": 0.06216610004856726,
+                "recall": 0.11851851851851852
+              },
+              "img_7011": {
+                "accepted": 2634,
+                "correct": 162,
+                "adjacent": 1080,
+                "precision": 0.06150341685649203,
+                "recall": 0.15
+              },
+              "img_7012": {
+                "accepted": 2659,
+                "correct": 171,
+                "adjacent": 1080,
+                "precision": 0.06430989093644227,
+                "recall": 0.15833333333333333
+              },
+              "img_7013": {
+                "accepted": 2168,
+                "correct": 144,
+                "adjacent": 1080,
+                "precision": 0.06642066420664207,
+                "recall": 0.13333333333333333
+              },
+              "img_7014": {
+                "accepted": 1591,
+                "correct": 99,
+                "adjacent": 1080,
+                "precision": 0.06222501571338781,
+                "recall": 0.09166666666666666
+              },
+              "img_7015": {
+                "accepted": 1526,
+                "correct": 102,
+                "adjacent": 1080,
+                "precision": 0.06684141546526867,
+                "recall": 0.09444444444444444
+              },
+              "img_7016": {
+                "accepted": 1787,
+                "correct": 109,
+                "adjacent": 1080,
+                "precision": 0.060996082820369335,
+                "recall": 0.10092592592592593
+              }
+            }
+          },
+          "actual_full": {
+            "planned": 2250,
+            "successes": 1229,
+            "SR": 0.5462222222222223,
+            "SG_m": 883.4666666666667,
+            "movement_m": 4998.4,
+            "steps": 37488,
+            "revisit_rate": 0.01997972684592403,
+            "oob": 0,
+            "accepted_cues": 8608,
+            "correct_true_cues": 1229,
+            "false_cues": 7379,
+            "accepted_precision": 0.14277416356877323,
+            "false_cue_action_rate": 0.19683632095603926
+          },
+          "actual_seam": {
+            "planned": 720,
+            "successes": 409,
+            "SR": 0.5680555555555555,
+            "SG_m": 968.3333333333334,
+            "movement_m": 4761.666666666667,
+            "steps": 11428,
+            "revisit_rate": 0.020388519425971297,
+            "oob": 0,
+            "accepted_cues": 2627,
+            "correct_true_cues": 409,
+            "false_cues": 2218,
+            "accepted_precision": 0.1556909021697754,
+            "false_cue_action_rate": 0.19408470423521176
+          },
+          "reliability_gates": {
+            "raw_precision": false,
+            "raw_recall": true,
+            "correct_count": true,
+            "mean_recall_gap": true,
+            "false_action_budget": false,
+            "seam_false_action_budget": false,
+            "disabled_success_harm": null
+          },
+          "targets": {},
+          "controls_run": false,
+          "target_gate_passed": null,
+          "eligible_for_default_upgrade": false
+        },
+        "15": {
+          "main_gate_passed": false,
+          "raw": {
+            "accepted": 48320,
+            "correct": 25182,
+            "adjacent": 25200,
+            "precision": 0.5211506622516556,
+            "recall": 0.9992857142857143,
+            "regions": {
+              "img_7005": {
+                "accepted": 4245,
+                "correct": 2515,
+                "adjacent": 2520,
+                "precision": 0.5924617196702002,
+                "recall": 0.998015873015873
+              },
+              "img_7008": {
+                "accepted": 3572,
+                "correct": 2520,
+                "adjacent": 2520,
+                "precision": 0.7054871220604704,
+                "recall": 1.0
+              },
+              "img_7009": {
+                "accepted": 4157,
+                "correct": 2518,
+                "adjacent": 2520,
+                "precision": 0.6057252826557614,
+                "recall": 0.9992063492063492
+              },
+              "img_7010": {
+                "accepted": 4750,
+                "correct": 2520,
+                "adjacent": 2520,
+                "precision": 0.5305263157894737,
+                "recall": 1.0
+              },
+              "img_7011": {
+                "accepted": 6095,
+                "correct": 2520,
+                "adjacent": 2520,
+                "precision": 0.41345365053322397,
+                "recall": 1.0
+              },
+              "img_7012": {
+                "accepted": 5819,
+                "correct": 2520,
+                "adjacent": 2520,
+                "precision": 0.4330641003608868,
+                "recall": 1.0
+              },
+              "img_7013": {
+                "accepted": 5273,
+                "correct": 2520,
+                "adjacent": 2520,
+                "precision": 0.47790631519059357,
+                "recall": 1.0
+              },
+              "img_7014": {
+                "accepted": 5522,
+                "correct": 2520,
+                "adjacent": 2520,
+                "precision": 0.4563563926113727,
+                "recall": 1.0
+              },
+              "img_7015": {
+                "accepted": 3812,
+                "correct": 2514,
+                "adjacent": 2520,
+                "precision": 0.6594963273871983,
+                "recall": 0.9976190476190476
+              },
+              "img_7016": {
+                "accepted": 5075,
+                "correct": 2515,
+                "adjacent": 2520,
+                "precision": 0.49556650246305417,
+                "recall": 0.998015873015873
+              }
+            }
+          },
+          "mean_raw": {
+            "accepted": 41764,
+            "correct": 2643,
+            "adjacent": 25200,
+            "precision": 0.06328416818312423,
+            "recall": 0.10488095238095238,
+            "regions": {
+              "img_7005": {
+                "accepted": 3454,
+                "correct": 225,
+                "adjacent": 2520,
+                "precision": 0.06514186450492183,
+                "recall": 0.08928571428571429
+              },
+              "img_7008": {
+                "accepted": 2863,
+                "correct": 168,
+                "adjacent": 2520,
+                "precision": 0.05867970660146699,
+                "recall": 0.06666666666666667
+              },
+              "img_7009": {
+                "accepted": 3096,
+                "correct": 199,
+                "adjacent": 2520,
+                "precision": 0.0642764857881137,
+                "recall": 0.07896825396825397
+              },
+              "img_7010": {
+                "accepted": 4650,
+                "correct": 301,
+                "adjacent": 2520,
+                "precision": 0.06473118279569892,
+                "recall": 0.11944444444444445
+              },
+              "img_7011": {
+                "accepted": 5385,
+                "correct": 339,
+                "adjacent": 2520,
+                "precision": 0.06295264623955432,
+                "recall": 0.13452380952380952
+              },
+              "img_7012": {
+                "accepted": 5484,
+                "correct": 345,
+                "adjacent": 2520,
+                "precision": 0.06291028446389496,
+                "recall": 0.13690476190476192
+              },
+              "img_7013": {
+                "accepted": 4602,
+                "correct": 294,
+                "adjacent": 2520,
+                "precision": 0.06388526727509779,
+                "recall": 0.11666666666666667
+              },
+              "img_7014": {
+                "accepted": 4213,
+                "correct": 263,
+                "adjacent": 2520,
+                "precision": 0.062425824827913604,
+                "recall": 0.10436507936507937
+              },
+              "img_7015": {
+                "accepted": 3834,
+                "correct": 251,
+                "adjacent": 2520,
+                "precision": 0.06546687532603025,
+                "recall": 0.0996031746031746
+              },
+              "img_7016": {
+                "accepted": 4183,
+                "correct": 258,
+                "adjacent": 2520,
+                "precision": 0.06167822137222089,
+                "recall": 0.10238095238095238
+              }
+            }
+          },
+          "actual_full": {
+            "planned": 3000,
+            "successes": 608,
+            "SR": 0.20266666666666666,
+            "SG_m": 2267.8,
+            "movement_m": 5609.4,
+            "steps": 56094,
+            "revisit_rate": 0.008931436517274575,
+            "oob": 0,
+            "accepted_cues": 12365,
+            "correct_true_cues": 605,
+            "false_cues": 11760,
+            "accepted_precision": 0.04892842701172665,
+            "false_cue_action_rate": 0.2096480907048882
+          },
+          "actual_seam": {
+            "planned": 960,
+            "successes": 234,
+            "SR": 0.24375,
+            "SG_m": 2515.0,
+            "movement_m": 5495.0,
+            "steps": 17584,
+            "revisit_rate": 0.008530482256596906,
+            "oob": 0,
+            "accepted_cues": 3872,
+            "correct_true_cues": 231,
+            "false_cues": 3641,
+            "accepted_precision": 0.05965909090909091,
+            "false_cue_action_rate": 0.20706323930846224
+          },
+          "reliability_gates": {
+            "raw_precision": false,
+            "raw_recall": true,
+            "correct_count": true,
+            "mean_recall_gap": true,
+            "false_action_budget": false,
+            "seam_false_action_budget": false,
+            "disabled_success_harm": null
+          },
+          "targets": {},
+          "controls_run": false,
+          "target_gate_passed": null,
+          "eligible_for_default_upgrade": false
+        },
+        "common_area_expansion": {
+          "M0": {
+            "candidate": {
+              "planned": 2250,
+              "successes": 478,
+              "SR": 0.21244444444444444,
+              "SG_m": 2500.9333333333334,
+              "movement_m": 5523.866666666667,
+              "steps": 41429,
+              "revisit_rate": 0.02548939148905356,
+              "oob": 0,
+              "accepted_cues": 8682,
+              "correct_true_cues": 476,
+              "false_cues": 8206,
+              "accepted_precision": 0.05482607694079705,
+              "false_cue_action_rate": 0.19807381302952037
+            },
+            "baseline": {
+              "planned": 2250,
+              "successes": 1151,
+              "SR": 0.5115555555555555,
+              "SG_m": 893.3333333333334,
+              "movement_m": 5111.2,
+              "steps": 38334,
+              "revisit_rate": 0.03049512182396828,
+              "oob": 0,
+              "accepted_cues": 8088,
+              "correct_true_cues": 1151,
+              "false_cues": 6937,
+              "accepted_precision": 0.14230959446092978,
+              "false_cue_action_rate": 0.18096207022486566
+            },
+            "SR_difference": -0.2991111111111111,
+            "SG_m_difference": 1607.6,
+            "seed_SR_differences": [
+              -0.3413333333333334,
+              -0.3253333333333333,
+              -0.2306666666666667
+            ],
+            "region_SR_differences": {
+              "img_7005": -0.3466666666666667,
+              "img_7008": -0.4622222222222222,
+              "img_7009": -0.32000000000000006,
+              "img_7010": -0.3155555555555556,
+              "img_7011": -0.2533333333333333,
+              "img_7012": -0.2,
+              "img_7013": -0.3422222222222222,
+              "img_7014": -0.19555555555555557,
+              "img_7015": -0.2977777777777778,
+              "img_7016": -0.2577777777777777
+            },
+            "region95_SR_difference": [
+              -0.3453333333333333,
+              -0.2546666666666667
+            ],
+            "restored": 128,
+            "harmed": 801
+          },
+          "Coverage3Radial": {
+            "candidate": {
+              "planned": 2250,
+              "successes": 504,
+              "SR": 0.224,
+              "SG_m": 2380.9333333333334,
+              "movement_m": 5499.066666666667,
+              "steps": 41243,
+              "revisit_rate": 0.0087772470479839,
+              "oob": 0,
+              "accepted_cues": 9179,
+              "correct_true_cues": 502,
+              "false_cues": 8677,
+              "accepted_precision": 0.054690053382721426,
+              "false_cue_action_rate": 0.21038721722474116
+            },
+            "baseline": {
+              "planned": 2250,
+              "successes": 1229,
+              "SR": 0.5462222222222223,
+              "SG_m": 883.4666666666667,
+              "movement_m": 4998.4,
+              "steps": 37488,
+              "revisit_rate": 0.01997972684592403,
+              "oob": 0,
+              "accepted_cues": 8608,
+              "correct_true_cues": 1229,
+              "false_cues": 7379,
+              "accepted_precision": 0.14277416356877323,
+              "false_cue_action_rate": 0.19683632095603926
+            },
+            "SR_difference": -0.3222222222222223,
+            "SG_m_difference": 1497.4666666666667,
+            "seed_SR_differences": [
+              -0.3666666666666667,
+              -0.33599999999999997,
+              -0.264
+            ],
+            "region_SR_differences": {
+              "img_7005": -0.38222222222222224,
+              "img_7008": -0.45777777777777773,
+              "img_7009": -0.3911111111111112,
+              "img_7010": -0.32444444444444437,
+              "img_7011": -0.24888888888888888,
+              "img_7012": -0.1866666666666667,
+              "img_7013": -0.3244444444444445,
+              "img_7014": -0.2577777777777777,
+              "img_7015": -0.37333333333333335,
+              "img_7016": -0.27555555555555555
+            },
+            "region95_SR_difference": [
+              -0.3693333333333334,
+              -0.27509999999999996
+            ],
+            "restored": 121,
+            "harmed": 846
+          }
+        }
+      },
+      "default_upgraded": false,
+      "new_training_steps": 0,
+      "network_requests": 0,
+      "cloud_calls": 0,
+      "main_audit_sha256": "0963d47b89b251150805e4f50e783ee4d5fbb9de4bc4d62e4190a9f1ee41566a",
+      "final_audit_sha256": "04fbcdb5bdc7a3450d96bd441e16f2f637ed56324143dddee932423828019dfb"
+    },
+    "project/local_policy_default.json": {
+      "architecture": "Small256",
+      "checkpoints": [
+        {
+          "path": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/Small256_NoTarget_s0/model.pt",
+          "seed": 0,
+          "sha256": "b35b0f87865530e8965e561eeda450c481af9d87ba5ab0dcfb9a4932bf4179bd"
+        },
+        {
+          "path": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/Small256_NoTarget_s1/model.pt",
+          "seed": 1,
+          "sha256": "d734ab8d9e755e697e7dd1cc8f8eb8b4055aae1780e1fc16d27749eab3115dfa"
+        },
+        {
+          "path": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/Small256_NoTarget_s2/model.pt",
+          "seed": 2,
+          "sha256": "8ca13f1829f35f2e18dd002c6f661129ccaaa2e11fc1bd72d8751819d14b999b"
+        }
+      ],
+      "cue_architecture": "EdgeTargetCueHead",
+      "cue_heads": [
+        {
+          "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s0/head.pt",
+          "seed": 0,
+          "sha256": "2c2e4167b14a9a439b81efd78e80436ffde75d35d5c6d75274c3d60ecaa59b2c"
+        },
+        {
+          "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s1/head.pt",
+          "seed": 1,
+          "sha256": "f37734c1d19b38a99b7d589eac004a801d1571ae46df55cbf8161d97ea3bbb53"
+        },
+        {
+          "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/Edge_s2/head.pt",
+          "seed": 2,
+          "sha256": "045984f575be3e660f04c7237fc65a515abf6d2f1a0d660adb93a4e812925a53"
+        }
+      ],
+      "ensemble": false,
+      "evidence": {
+        "audit_path": "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/独立复核.json",
+        "audit_sha256": "1b99142ff02a1cdc9a24aa0cdae8d9f43d951736e1ea8890321a50c69b08fd35",
+        "previous_default_path": "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/原默认配置.json",
+        "previous_default_sha256": "1158008e2896b6e1eadfcbb43f8bb1f0813f0fa379aa7b81f46f0ce0d9b24b52",
+        "registration_path": "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/预登记.json",
+        "registration_sha256": "9d371171213ec6bf55f5b0f821ca010b682df87caf77f8f3e510db68f1ad625e"
+      },
+      "formal_S2_passed": true,
+      "independent_map_confirmation_completed": false,
+      "inference_condition": "CueFull",
+      "loader": "agents.frozen_edge_navigator.load_frozen_edge_default",
+      "means": {
+        "全局拟合均值.npy": {
+          "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/全局拟合均值.npy",
+          "sha256": "3bb5233fc6fbef7eece51ee78979b37dfaadfcb98d310e6f1b5de7b3d25a8158"
+        },
+        "头部拟合全局均值.npy": {
+          "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/头部拟合全局均值.npy",
+          "sha256": "3e1fb063c11ffef2c130f93f3288d3eb38ff219a21d7cfa9c3759f8623cc2cbd"
+        },
+        "头部拟合局部均值.npy": {
+          "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/头部拟合局部均值.npy",
+          "sha256": "5423d400987f35117d3835ab8ea9daf2153cdef03ab85ba6b6b0eda6f705978d"
+        },
+        "头部拟合边缘均值.npy": {
+          "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/头部拟合边缘均值.npy",
+          "sha256": "367e7499bfc6c5e71992042fac74507c5bcab9cd4de84f1f7482a35a2ab1ee62"
+        }
+      },
+      "protocol": {
+        "actions": [
+          "up",
+          "right",
+          "down",
+          "left"
+        ],
+        "boundary_filter": true,
+        "budget": 10,
+        "decode": "argmax",
+        "grid_size": 5,
+        "legal_and_unvisited_top_cue_only": true,
+        "memory": "episode_isolated",
+        "profile_bins": 64,
+        "profile_widths": [
+          1,
+          4,
+          8
+        ],
+        "raw_joint_probability": true
+      },
+      "reference_seed": 0,
+      "scope": "Formal localS2 passed on known val100/4source maps; independent S3 confirmation pending.",
+      "selected_arm": "EdgeTargetCue",
+      "selected_by_best_seed": false,
+      "thresholds": {
+        "0": 0.5,
+        "1": 0.5,
+        "2": 0.5
+      },
+      "trained_condition": "NoTargetExplorer_plus_EdgeCue",
+      "version": "local-policy-default-v2",
+      "vision_target_contribution_proven_in_local_S2": true
+    },
+    "project/local_policy_defaults_v1.json": {
+      "cross_dataset_default_changed": false,
+      "defaults": {
+        "masa-roads-grid10-spatial-v1": {
+          "path": "project/defaults/masa_roads_grid10_radial_v1.json",
+          "sha256": "7d7563cad6b09214eddb74c7a0e4555ef940e023606654b3308f6a59676380ae"
+        }
+      },
+      "experimental": {
+        "masa-roads-grid15-area-v1": {
+          "path": "project/defaults/masa_roads_grid15_compat_v1.json",
+          "sha256": "a896fd9f9c4dfca9675033189397c5cbf6cef363f85870445d66e6ac9d7f2114"
+        }
+      },
+      "legacy_grid5_default": {
+        "path": "project/local_policy_default.json",
+        "sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b"
+      },
+      "original_configuration_preserved": true,
+      "version": "protocol-default-registry-v1"
+    }
+  },
+  "input_bindings": {
+    "GOMAA-Geo/config.py": "3e846abc8f413e9c80a1c95e3239fd85952f1ee1c52337de3acac8f84485b837",
+    "GOMAA-Geo/data_utils/__init__.py": "5af6d0494fa23afa54ae60a7b096539284abef44a5f78eff16fadbe874a9030e",
+    "GOMAA-Geo/data_utils/get_patches.py": "29e78c3d427ce45293bd9c339e16f14633a8eff986593cf19d44de03c95d86fc",
+    "GOMAA-Geo/data_utils/get_sat_embeddings_sat2cap.py": "58d318fe79f250ba4b9ff7e6c382db127d0bbdcd15d3dd793223ad5af17d824c",
+    "GOMAA-Geo/data_utils/get_text_embeddings.py": "ed3dc38f09df50f66156330776edd104c7ff5b33539dfdf1876497688866283a",
+    "GOMAA-Geo/data_utils/sequence.py": "8c0f8d035677527220ad30681cb40ffa388ee3822e2be27b7422fb17ff154c2e",
+    "GOMAA-Geo/models/decision_transformer.py": "03552c7a440d47bc1e61b52add0f300f7231236875809ac7ccf871bee608b287",
+    "GOMAA-Geo/models/model_falcon.py": "4d5fe7d126efcadf0c30b44493cd4de9b339642fbc13bfd03640f10feec06358",
+    "GOMAA-Geo/models/model_gemma.py": "de19cd71dd6df734d5bac895e5bd8d13275ca46cdd880034d18efe2660288286",
+    "GOMAA-Geo/models/model_gpt.py": "09eab7563f6d60e687f205a15b1e79e0352f173be753a82cafaf042534819005",
+    "GOMAA-Geo/models/model_llama2.py": "db5d9c041ac48a03460d8838a9deec56b77c0ce786a0955a303df110ee3700e1",
+    "GOMAA-Geo/models/model_mamba.py": "0c62b054df399d0aaf13c7a8ab930d28248ebc7649efa2f1cbf81a0e4e0c6db4",
+    "GOMAA-Geo/models/model_mixtral.py": "07c9fc02c7fa7c05240ec0c50dc4feb8b19326579ef59467f19122ba57b9646d",
+    "GOMAA-Geo/models/ppo.py": "b2ee21811ab223bb5dbace3aa1f5822d7194dbdcc11a656400aef39ffa430883",
+    "GOMAA-Geo/models/pretrain_model.py": "726004c4db8cdb8b52566db736104b3e7cba01fe64e5b57707c477081d86ab04",
+    "GOMAA-Geo/pretrain.py": "80c4864134de0fa60fa9c2f593fac66f886e1167f9db8c75bdfb962f0a0c9f91",
+    "GOMAA-Geo/README.md": "c001a96d0e013924c8c5ecfaebba49d0cdc9f603340c8a9d46fe1f9465d04a63",
+    "GOMAA-Geo/requirements.txt": "85f272a2c1560bc278f6c8c13315a50dc435be721d17a8e22e729aa253225179",
+    "GOMAA-Geo/train.py": "94e93672fa9f6febaff38aaf84204f863448f15ac8bbc1aa0b457b5b22eda030",
+    "GOMAA-Geo/utils/__init__.py": "62f24155cc5d8619d0ce13c7909c69a6bd2bb749bc47150c8daa6e6fd6f27da0",
+    "GOMAA-Geo/utils/get_test_config.py": "3bae6dc19b1e339343e02bb975e4e3f62caabf25f95cedfeae06325a6482871a",
+    "GOMAA-Geo/utils/pca_plots.py": "4682bf47b77e71f50c429b21e9c5fe82c5c5cc6590c471d4dcb0984aecd88706",
+    "GOMAA-Geo/utils/random_seed.py": "ab1e632a345ffee512d0dbe6a9bb39e61ab2d9627b3d374c51ed50119f846395",
+    "GOMAA-Geo/validate.py": "2cc0d8a200520468b114969f7f1c902a4b487e5089252e58088135e5643a8641",
+    "GOMAA-Geo/viz_path.py": "57f8e730d648bcd5f64237ae83174ecdb04832b9af089b2cb08e97caf6257901",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer_commit.json": "4f50d9f2e9ad5c0ed42f6934551450dee67fe14773ad3a3ed17d5b22d66f8afc",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer_tree.json": "060d2d8bd099bfc8c6ff4398f8803657e895add6fb84078a8971682be986a976",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__config.py": "c166826736b40a99e4fad4c851f9068844c40e2f04880d0478e72c4d933cebc9",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__data_utils__sequence.py": "7539e2dfda50569939126a64fdb31ead779359933a949990a04b5bbbe248739e",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__environment.yml": "3b69ed9ea8e39dd80a0304e90715bab43ce8eadac2ffc5bc053ea03f132179b8",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__models__model_falcon.py": "0d932acbe0ce08eb8a4a3e962b6762068758eec49d8a8b08df7d68aa4eb432ef",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__models__ppo.py": "666f940f0c5a5b292de5e32cf3f755f3dc470f6b4447a3795d5cd8dd8e56114e",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__models__pretrain_model.py": "bdc8ee91ea570bb1e92d4ec3b726c0a3aec0c3e3f67c34589b2e0002cf478d77",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__pretrain.py": "4591d718f8d54a9a8cad59ed016320b7fb76d01040bdcbaf9958f5d869bee23b",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__README.md": "1ce1f03cd12f4ca927334d8a2968bf080296557cc28eb29a477d13286e0704a7",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__train.py": "ca62c336f1eafcb852eb86cab0c7a183b1bdbb921b9eafc8c221b40692b11932",
+    "项目导航/论文对标准备_v1/公开来源/GeoExplorer__validate.py": "edf4da65573987729ed9ab32489fcbb9d694da3aaa0cde460ad4452efee0df88",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo_commit.json": "86f613bf5d59bd4d3022c51a89617870abb57150c187c9a5f74d35aac6b0058e",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo_tree.json": "76499b0bcac4edeb1a0f57889dea00654a21453a57c13a0654f142c5d24acb07",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__config.py": "3e846abc8f413e9c80a1c95e3239fd85952f1ee1c52337de3acac8f84485b837",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__data_utils__sequence.py": "8c0f8d035677527220ad30681cb40ffa388ee3822e2be27b7422fb17ff154c2e",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__models__model_falcon.py": "4d5fe7d126efcadf0c30b44493cd4de9b339642fbc13bfd03640f10feec06358",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__models__model_gpt.py": "09eab7563f6d60e687f205a15b1e79e0352f173be753a82cafaf042534819005",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__models__ppo.py": "b2ee21811ab223bb5dbace3aa1f5822d7194dbdcc11a656400aef39ffa430883",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__models__pretrain_model.py": "726004c4db8cdb8b52566db736104b3e7cba01fe64e5b57707c477081d86ab04",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__pretrain.py": "80c4864134de0fa60fa9c2f593fac66f886e1167f9db8c75bdfb962f0a0c9f91",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__README.md": "c001a96d0e013924c8c5ecfaebba49d0cdc9f603340c8a9d46fe1f9465d04a63",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__requirements.txt": "85f272a2c1560bc278f6c8c13315a50dc435be721d17a8e22e729aa253225179",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__train.py": "94e93672fa9f6febaff38aaf84204f863448f15ac8bbc1aa0b457b5b22eda030",
+    "项目导航/论文对标准备_v1/公开来源/GOMAA-Geo__validate.py": "2cc0d8a200520468b114969f7f1c902a4b487e5089252e58088135e5643a8641",
+    "项目导航/论文对标准备_v1/公开来源/获取记录.json": "ab0ee2f06eb27ef7362c3f45bb791c57f48644e2f094daa96c60b152da18cdad",
+    "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/验收结论.json": "96694ff74c206e1b062eed8a2ca6a1aa54891ec499a540ea79db6b39fc7e9500",
+    "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/验收结论.json": "da4d5b62b71205edebfa4b78d5171ebfd053b84197eb10826b4ced0ebba3a958",
+    "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/验收结论.json": "2c80528498810091bf844c869ef35d6a074fff4750dbc2a988e0f0723c60840c",
+    "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/验收结论.json": "f08a6f91d11acd14389c5f21f52f503a964cb6e95e9cc82a668df37449327895",
+    "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/验收结论.json": "6a0c03af26fd3a4d07de29d9013e56b4efbcfc59fef79cc66e4c8f8885458e9d",
+    "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/验收结论.json": "8e9c98870d9b8e75595f1a048b76fa8336d392843c3a89f8f72317072b30779e",
+    "project/local_policy_default.json": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b",
+    "project/local_policy_defaults_v1.json": "8e1b85eb74021ac18f8246f8146f7db451d68f423d7152f6c3a5d7c86b4d16fa"
+  },
+  "source_path": "project/src/tools/paper_baseline_inventory_v1.py",
+  "source_sha256": "0fba1af234295056b3f37a3afe2fb0de618b6be33f5eda156ae27a04c5d5dae8",
+  "training": 0,
+  "navigation": 0,
+  "model_forward": 0,
+  "model_api_calls": 0,
+  "reserve_regions_consumed": 0
+}

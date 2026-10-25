@@ -1,0 +1,38 @@
+{
+  "status": "static_label_contract_verified",
+  "references": [
+    {
+      "path": "project\\src\\train\\geoexplorer_training_math_v1.py",
+      "function": "optimal_actions",
+      "start": 22,
+      "end": 23,
+      "sha256": "60a15cf3923053eae81aa8bbf99ff0359e560f9865f4863058589692180cba48"
+    },
+    {
+      "path": "project\\src\\train\\geoexplorer_training_math_v1.py",
+      "function": "random_path",
+      "start": 34,
+      "end": 40,
+      "sha256": "60a15cf3923053eae81aa8bbf99ff0359e560f9865f4863058589692180cba48"
+    },
+    {
+      "path": "project\\src\\train\\geoexplorer_training_v1.py",
+      "function": "pretrain_loss",
+      "start": 106,
+      "end": 112,
+      "sha256": "1b5d09d0405cd7f586053aab526f64b16fd304664a3327ef16ac5be11b9c3f46"
+    }
+  ],
+  "model_source": "项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__models__model_falcon.py",
+  "model_source_sha256": "0d932acbe0ce08eb8a4a3e962b6762068758eec49d8a8b08df7d68aa4eb432ef",
+  "torch_functional_path": "D:\\PYTHON\\Lib\\site-packages\\torch\\nn\\functional.py",
+  "torch_functional_sha256": "0af69ca566d95e20abf038761893b2c0b4daf349f45dc42469eba5a8151187ea",
+  "observations": "each recorded observation index once in its own microbatch; repeated exposure across microbatches retained",
+  "labels": "four Bernoulli labels per position, one or two positive except all zero at goal",
+  "positional_alignment": "goal feature token0; observed states at 1+2*i; directional predictions hidden_states[:,1::2]",
+  "weighting": "BCE default mean over 1*N*4; pretrain loss divided by256; per-position weight1/N, per-component1/(4*N*256)",
+  "history": "prefix classification: goal in future does not count as observed; no future action or image used",
+  "causal_scope": "Bound alibi=false/SDPA causal branches statically checked; no runtime/model-forward proof in this task",
+  "reduction_default_line": 3572,
+  "model_forward": 0
+}

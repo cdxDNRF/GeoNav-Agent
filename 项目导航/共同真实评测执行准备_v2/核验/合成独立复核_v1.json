@@ -1,0 +1,1835 @@
+{
+  "status": "passed",
+  "engineering_passed": true,
+  "scientific_sr": false,
+  "normal_episodes": 96,
+  "episodes_checked": 96,
+  "public_decisions_checked": 480,
+  "policy_errors": 0,
+  "configuration_sha256": "224f0f88166c8ce5a400596b1d5b10cb756ded8929a0a7974fcd78d2bec4ca91",
+  "file_seals_checked": 26,
+  "registered_files_checked": 12,
+  "fit_manifest_bindings": {
+    "M0": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+    "GeoExplorer": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+  },
+  "aggregate_metrics": [
+    {
+      "method": "M0",
+      "condition": "Full",
+      "planned": 12,
+      "successes": 12,
+      "sr": 1.0,
+      "normal_terminals": 12,
+      "sg_cells_all_planned": 0.0,
+      "movement_cells_all_planned": 1.0,
+      "policy_errors": 0
+    },
+    {
+      "method": "M0",
+      "condition": "Disabled",
+      "planned": 12,
+      "successes": 12,
+      "sr": 1.0,
+      "normal_terminals": 12,
+      "sg_cells_all_planned": 0.0,
+      "movement_cells_all_planned": 1.0,
+      "policy_errors": 0
+    },
+    {
+      "method": "M0",
+      "condition": "Mean",
+      "planned": 12,
+      "successes": 12,
+      "sr": 1.0,
+      "normal_terminals": 12,
+      "sg_cells_all_planned": 0.0,
+      "movement_cells_all_planned": 1.0,
+      "policy_errors": 0
+    },
+    {
+      "method": "M0",
+      "condition": "Wrong",
+      "planned": 12,
+      "successes": 12,
+      "sr": 1.0,
+      "normal_terminals": 12,
+      "sg_cells_all_planned": 0.0,
+      "movement_cells_all_planned": 1.0,
+      "policy_errors": 0
+    },
+    {
+      "method": "GeoExplorer",
+      "condition": "Full",
+      "planned": 12,
+      "successes": 12,
+      "sr": 1.0,
+      "normal_terminals": 12,
+      "sg_cells_all_planned": 0.0,
+      "movement_cells_all_planned": 9.0,
+      "policy_errors": 0
+    },
+    {
+      "method": "GeoExplorer",
+      "condition": "Disabled",
+      "planned": 12,
+      "successes": 12,
+      "sr": 1.0,
+      "normal_terminals": 12,
+      "sg_cells_all_planned": 0.0,
+      "movement_cells_all_planned": 9.0,
+      "policy_errors": 0
+    },
+    {
+      "method": "GeoExplorer",
+      "condition": "Mean",
+      "planned": 12,
+      "successes": 12,
+      "sr": 1.0,
+      "normal_terminals": 12,
+      "sg_cells_all_planned": 0.0,
+      "movement_cells_all_planned": 9.0,
+      "policy_errors": 0
+    },
+    {
+      "method": "GeoExplorer",
+      "condition": "Wrong",
+      "planned": 12,
+      "successes": 12,
+      "sr": 1.0,
+      "normal_terminals": 12,
+      "sg_cells_all_planned": 0.0,
+      "movement_cells_all_planned": 9.0,
+      "policy_errors": 0
+    }
+  ],
+  "arms": [
+    {
+      "method": "M0",
+      "seed": 0,
+      "condition": "Full",
+      "file": "M0_s0_Full.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 1.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 0,
+      "condition": "Disabled",
+      "file": "M0_s0_Disabled.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 1.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 0,
+      "condition": "Mean",
+      "file": "M0_s0_Mean.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 1.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 0,
+      "condition": "Wrong",
+      "file": "M0_s0_Wrong.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 1.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 1,
+      "condition": "Full",
+      "file": "M0_s1_Full.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 1.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 1,
+      "condition": "Disabled",
+      "file": "M0_s1_Disabled.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 1.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 1,
+      "condition": "Mean",
+      "file": "M0_s1_Mean.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 1.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 1,
+      "condition": "Wrong",
+      "file": "M0_s1_Wrong.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 1.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 2,
+      "condition": "Full",
+      "file": "M0_s2_Full.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 1.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 2,
+      "condition": "Disabled",
+      "file": "M0_s2_Disabled.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 1.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 2,
+      "condition": "Mean",
+      "file": "M0_s2_Mean.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 1.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "M0",
+      "seed": 2,
+      "condition": "Wrong",
+      "file": "M0_s2_Wrong.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 1.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 1.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 0,
+      "condition": "Full",
+      "file": "GeoExplorer_s0_Full.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 9.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 0,
+      "condition": "Disabled",
+      "file": "GeoExplorer_s0_Disabled.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 9.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 0,
+      "condition": "Mean",
+      "file": "GeoExplorer_s0_Mean.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 9.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 0,
+      "condition": "Wrong",
+      "file": "GeoExplorer_s0_Wrong.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 9.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 1,
+      "condition": "Full",
+      "file": "GeoExplorer_s1_Full.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 9.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 1,
+      "condition": "Disabled",
+      "file": "GeoExplorer_s1_Disabled.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 9.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 1,
+      "condition": "Mean",
+      "file": "GeoExplorer_s1_Mean.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 9.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 1,
+      "condition": "Wrong",
+      "file": "GeoExplorer_s1_Wrong.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 9.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 2,
+      "condition": "Full",
+      "file": "GeoExplorer_s2_Full.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 9.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 2,
+      "condition": "Disabled",
+      "file": "GeoExplorer_s2_Disabled.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 9.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 2,
+      "condition": "Mean",
+      "file": "GeoExplorer_s2_Mean.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 9.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      }
+    },
+    {
+      "method": "GeoExplorer",
+      "seed": 2,
+      "condition": "Wrong",
+      "file": "GeoExplorer_s2_Wrong.jsonl",
+      "metrics": {
+        "planned": 4,
+        "successes": 4,
+        "sr": 1.0,
+        "normal_terminals": 4,
+        "sg_cells_all_planned": 0.0,
+        "movement_cells_all_planned": 9.0,
+        "policy_errors": 0
+      },
+      "by_area": {
+        "one": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        },
+        "two": {
+          "planned": 2,
+          "successes": 2,
+          "sr": 1.0,
+          "normal_terminals": 2,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 4,
+          "successes": 4,
+          "sr": 1.0,
+          "normal_terminals": 4,
+          "sg_cells_all_planned": 0.0,
+          "movement_cells_all_planned": 9.0,
+          "policy_errors": 0
+        }
+      }
+    }
+  ],
+  "contrasts": [
+    {
+      "left": [
+        "M0",
+        "Full"
+      ],
+      "right": [
+        "GeoExplorer",
+        "Full"
+      ],
+      "source_file_groups": 2,
+      "paired_observations": 12,
+      "sr_difference": 0.0,
+      "sg_difference": 0.0,
+      "movement_difference": -8.0,
+      "sr_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "sg_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        },
+        {
+          "seed": 1,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        },
+        {
+          "seed": 2,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        }
+      ],
+      "recovered": 0,
+      "harmed": 0,
+      "by_area": {
+        "one": {
+          "planned": 6,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        },
+        "two": {
+          "planned": 6,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 12,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        }
+      },
+      "bootstrap": {
+        "repeats": 2000,
+        "seed": 20261008,
+        "unit": "source file; all seeds/route repeats together"
+      },
+      "errors_present": false,
+      "claim_gate": {
+        "passed": false,
+        "minimum_sr_gain": 0.02,
+        "checks": {
+          "sr_gain_at_least": false,
+          "at_least_two_positive_seeds": false,
+          "source_ci_lower_positive": false,
+          "sg_not_worse": true,
+          "engineering_passed": true,
+          "real_retrospective_scope": false
+        }
+      }
+    },
+    {
+      "left": [
+        "M0",
+        "Full"
+      ],
+      "right": [
+        "M0",
+        "Disabled"
+      ],
+      "source_file_groups": 2,
+      "paired_observations": 12,
+      "sr_difference": 0.0,
+      "sg_difference": 0.0,
+      "movement_difference": 0.0,
+      "sr_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "sg_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        },
+        {
+          "seed": 1,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        },
+        {
+          "seed": 2,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        }
+      ],
+      "recovered": 0,
+      "harmed": 0,
+      "by_area": {
+        "one": {
+          "planned": 6,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        },
+        "two": {
+          "planned": 6,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 12,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        }
+      },
+      "bootstrap": {
+        "repeats": 2000,
+        "seed": 20261008,
+        "unit": "source file; all seeds/route repeats together"
+      },
+      "errors_present": false,
+      "claim_gate": {
+        "passed": false,
+        "minimum_sr_gain": 0.05,
+        "checks": {
+          "sr_gain_at_least": false,
+          "at_least_two_positive_seeds": false,
+          "source_ci_lower_positive": false,
+          "sg_not_worse": true,
+          "engineering_passed": true,
+          "real_retrospective_scope": false
+        }
+      }
+    },
+    {
+      "left": [
+        "M0",
+        "Full"
+      ],
+      "right": [
+        "M0",
+        "Mean"
+      ],
+      "source_file_groups": 2,
+      "paired_observations": 12,
+      "sr_difference": 0.0,
+      "sg_difference": 0.0,
+      "movement_difference": 0.0,
+      "sr_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "sg_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        },
+        {
+          "seed": 1,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        },
+        {
+          "seed": 2,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        }
+      ],
+      "recovered": 0,
+      "harmed": 0,
+      "by_area": {
+        "one": {
+          "planned": 6,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        },
+        "two": {
+          "planned": 6,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 12,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        }
+      },
+      "bootstrap": {
+        "repeats": 2000,
+        "seed": 20261008,
+        "unit": "source file; all seeds/route repeats together"
+      },
+      "errors_present": false,
+      "claim_gate": {
+        "passed": false,
+        "minimum_sr_gain": 0.05,
+        "checks": {
+          "sr_gain_at_least": false,
+          "at_least_two_positive_seeds": false,
+          "source_ci_lower_positive": false,
+          "sg_not_worse": true,
+          "engineering_passed": true,
+          "real_retrospective_scope": false
+        }
+      }
+    },
+    {
+      "left": [
+        "M0",
+        "Full"
+      ],
+      "right": [
+        "M0",
+        "Wrong"
+      ],
+      "source_file_groups": 2,
+      "paired_observations": 12,
+      "sr_difference": 0.0,
+      "sg_difference": 0.0,
+      "movement_difference": 0.0,
+      "sr_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "sg_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        },
+        {
+          "seed": 1,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        },
+        {
+          "seed": 2,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        }
+      ],
+      "recovered": 0,
+      "harmed": 0,
+      "by_area": {
+        "one": {
+          "planned": 6,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        },
+        "two": {
+          "planned": 6,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 12,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        }
+      },
+      "bootstrap": {
+        "repeats": 2000,
+        "seed": 20261008,
+        "unit": "source file; all seeds/route repeats together"
+      },
+      "errors_present": false,
+      "claim_gate": {
+        "passed": false,
+        "minimum_sr_gain": 0.05,
+        "checks": {
+          "sr_gain_at_least": false,
+          "at_least_two_positive_seeds": false,
+          "source_ci_lower_positive": false,
+          "sg_not_worse": true,
+          "engineering_passed": true,
+          "real_retrospective_scope": false
+        }
+      }
+    },
+    {
+      "left": [
+        "GeoExplorer",
+        "Full"
+      ],
+      "right": [
+        "GeoExplorer",
+        "Disabled"
+      ],
+      "source_file_groups": 2,
+      "paired_observations": 12,
+      "sr_difference": 0.0,
+      "sg_difference": 0.0,
+      "movement_difference": 0.0,
+      "sr_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "sg_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        },
+        {
+          "seed": 1,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        },
+        {
+          "seed": 2,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        }
+      ],
+      "recovered": 0,
+      "harmed": 0,
+      "by_area": {
+        "one": {
+          "planned": 6,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        },
+        "two": {
+          "planned": 6,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 12,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        }
+      },
+      "bootstrap": {
+        "repeats": 2000,
+        "seed": 20261008,
+        "unit": "source file; all seeds/route repeats together"
+      },
+      "errors_present": false,
+      "claim_gate": {
+        "passed": false,
+        "minimum_sr_gain": 0.05,
+        "checks": {
+          "sr_gain_at_least": false,
+          "at_least_two_positive_seeds": false,
+          "source_ci_lower_positive": false,
+          "sg_not_worse": true,
+          "engineering_passed": true,
+          "real_retrospective_scope": false
+        }
+      }
+    },
+    {
+      "left": [
+        "GeoExplorer",
+        "Full"
+      ],
+      "right": [
+        "GeoExplorer",
+        "Mean"
+      ],
+      "source_file_groups": 2,
+      "paired_observations": 12,
+      "sr_difference": 0.0,
+      "sg_difference": 0.0,
+      "movement_difference": 0.0,
+      "sr_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "sg_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        },
+        {
+          "seed": 1,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        },
+        {
+          "seed": 2,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        }
+      ],
+      "recovered": 0,
+      "harmed": 0,
+      "by_area": {
+        "one": {
+          "planned": 6,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        },
+        "two": {
+          "planned": 6,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 12,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        }
+      },
+      "bootstrap": {
+        "repeats": 2000,
+        "seed": 20261008,
+        "unit": "source file; all seeds/route repeats together"
+      },
+      "errors_present": false,
+      "claim_gate": {
+        "passed": false,
+        "minimum_sr_gain": 0.05,
+        "checks": {
+          "sr_gain_at_least": false,
+          "at_least_two_positive_seeds": false,
+          "source_ci_lower_positive": false,
+          "sg_not_worse": true,
+          "engineering_passed": true,
+          "real_retrospective_scope": false
+        }
+      }
+    },
+    {
+      "left": [
+        "GeoExplorer",
+        "Full"
+      ],
+      "right": [
+        "GeoExplorer",
+        "Wrong"
+      ],
+      "source_file_groups": 2,
+      "paired_observations": 12,
+      "sr_difference": 0.0,
+      "sg_difference": 0.0,
+      "movement_difference": 0.0,
+      "sr_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "sg_difference_ci95": [
+        0.0,
+        0.0
+      ],
+      "by_seed": [
+        {
+          "seed": 0,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        },
+        {
+          "seed": 1,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        },
+        {
+          "seed": 2,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0,
+          "recovered": 0,
+          "harmed": 0
+        }
+      ],
+      "recovered": 0,
+      "harmed": 0,
+      "by_area": {
+        "one": {
+          "planned": 6,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        },
+        "two": {
+          "planned": 6,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        }
+      },
+      "by_stratum": {
+        "C1": {
+          "planned": 12,
+          "sr_difference": 0.0,
+          "sg_difference": 0.0
+        }
+      },
+      "bootstrap": {
+        "repeats": 2000,
+        "seed": 20261008,
+        "unit": "source file; all seeds/route repeats together"
+      },
+      "errors_present": false,
+      "claim_gate": {
+        "passed": false,
+        "minimum_sr_gain": 0.05,
+        "checks": {
+          "sr_gain_at_least": false,
+          "at_least_two_positive_seeds": false,
+          "source_ci_lower_positive": false,
+          "sg_not_worse": true,
+          "engineering_passed": true,
+          "real_retrospective_scope": false
+        }
+      }
+    }
+  ],
+  "local_advantage_gate_passed": false,
+  "target_effect_gates": {
+    "M0": {
+      "controls": {
+        "Disabled": false,
+        "Mean": false,
+        "Wrong": false
+      },
+      "all_passed": false
+    },
+    "GeoExplorer": {
+      "controls": {
+        "Disabled": false,
+        "Mean": false,
+        "Wrong": false
+      },
+      "all_passed": false
+    }
+  },
+  "source_file_groups": 2,
+  "geographic_nonoverlap_verified": false,
+  "independent_person_review": false,
+  "model_forward": 0,
+  "new_navigation": 0,
+  "scope": "same agent; separately implemented public-input/geometry/counts/metrics; CPU only",
+  "audit_source_sha256": "ca571ca0a13deeb5f6427675a2ca11dfa11a1690f423ba8e1b026a29df2f307a"
+}

@@ -1,0 +1,59 @@
+{
+  "task": "BENCH-021",
+  "status": "assets_incomplete",
+  "requirements": [
+    {
+      "id": "source_split",
+      "status": "missing",
+      "expected": "完整原图身份/SHA/空间足迹与train/val/test清单",
+      "currently_verified": "只有snapshot批次计数831/178，不能等同源文件身份",
+      "artifact_bindings": [],
+      "relation_evidence": []
+    },
+    {
+      "id": "encoder_recipe",
+      "status": "partial",
+      "expected": "实际导航训练encoder/revision/输出/预处理转换与bank绑定",
+      "currently_verified": "本地MVRL工件已匹配；导航训练所用身份未绑定",
+      "artifact_bindings": [],
+      "relation_evidence": []
+    },
+    {
+      "id": "feature_bank",
+      "status": "missing",
+      "expected": "原bank SHA/shape/条目到原图及格子映射或可核验重建",
+      "currently_verified": "完整MM-GAG公开树未包含Masa训练bank",
+      "artifact_bindings": [],
+      "relation_evidence": []
+    },
+    {
+      "id": "training_run",
+      "status": "partial",
+      "expected": "完整预训练/PPO配置/停止/种子/资源/日志",
+      "currently_verified": "预训练保存点202/812及optimizer/scheduler状态可读，PPO无run metadata",
+      "artifact_bindings": [],
+      "relation_evidence": []
+    },
+    {
+      "id": "checkpoint_run_map",
+      "status": "partial",
+      "expected": "两权重SHA到run/split/encoder/bank关系证明",
+      "currently_verified": "发布文件身份已核实；发布历史只有上传，不建立run关系",
+      "artifact_bindings": [],
+      "relation_evidence": []
+    },
+    {
+      "id": "paper_evaluation_map",
+      "status": "missing",
+      "expected": "论文表/行到权重/任务/协议/源码映射",
+      "currently_verified": "没有原固定任务与精确论文成绩对应",
+      "artifact_bindings": [],
+      "relation_evidence": []
+    }
+  ],
+  "development_target_qualified": false,
+  "development_evidence": "DATA/processed_data/Masa/评测结果/GOMAA开发闭环目标诊断_v1/核验/闭环另实现复核_v2.json",
+  "new_source_isolation_verified": false,
+  "execute_allowed": false,
+  "automatic_checker_scope": "structure/SHA/review-presence only; not author authentication or numerical/target validation"
+}

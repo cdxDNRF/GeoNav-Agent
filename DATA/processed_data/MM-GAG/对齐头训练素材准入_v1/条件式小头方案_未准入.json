@@ -1,0 +1,39 @@
+{
+  "task": "CV-006",
+  "status": "conditional_design_only_not_training_admitted",
+  "only_candidate": "rank8 residual projection on frozen ground512D features",
+  "formula": "normalize(g + U @ V @ g), U512x8,V8x512; U starts0 so initial prediction equals identity baseline",
+  "trainable_parameters": 8192,
+  "frozen_assets": [
+    "existing CLIP ViT-B/32 vision",
+    "existing Sat2Cap"
+  ],
+  "baseline": "identity target projection, existing CV-002 center-crop/global-cosine protocol; no simultaneous fullframe change",
+  "hard_prerequisites": [
+    "review candidate aliases into a new derived manifest without editing raw metadata",
+    "explicitly establish each positive300px cell and its capture-point or alternative task meaning",
+    "group all25 shifted views and identical/shared tiles before any train/dev split",
+    "training source roles cannot overlap the existing16 development pairs or their groups, and MM-GAG20reserved remain protected",
+    "declare semantic/geographic limits if a weak scene/object task is adopted instead of capture-point localization"
+  ],
+  "training_manifest": null,
+  "development_manifest": null,
+  "confirmation_manifest": null,
+  "sources_assigned": false,
+  "geographic_nonoverlap_confirmed": false,
+  "proposed_engineering_budget_only": {
+    "seed": 0,
+    "maximum_updates": 500,
+    "maximum_wall_minutes": 30,
+    "CUDA_allocation_bytes": 2147483648,
+    "feature_cache_bytes": 33554432,
+    "head_checkpoint_bytes": 1048576,
+    "retention": "initial/final head and one active recovery only; no duplicate encoder/optimizer bundles"
+  },
+  "protocol_not_frozen": "loss, exact feature bindings/source assignments/negative construction and all stop gates must be frozen after eligibility; no model execution allowed by this file",
+  "candidate_acceptance_proposal": "same admitted development queue Full/Mean/Wrong, recovered/harmed and source groups; preserve prior gates for any original16 diagnostic, no weaker post-score thresholds",
+  "stop": "at most one authorized pilot budget; no rank/loss/temperature sweep or automatic navigation; insufficient data closes proposal",
+  "training_started": false,
+  "new_model_calls": 0,
+  "navigation_started": false
+}

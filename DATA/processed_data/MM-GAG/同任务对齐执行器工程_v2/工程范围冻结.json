@@ -1,0 +1,102 @@
+{
+  "task": "CV-013",
+  "date": "2026-10-18",
+  "user_request": "continue implement/bind executor and real model engineering",
+  "encoder_inputs": 16,
+  "encoder_forward_calls": 2,
+  "subset": "first8fit ground and first8fit aerial; no development sources",
+  "inputs": [
+    {
+      "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3551.jpg",
+      "bytes": 1131548,
+      "sha256": "ef6c84aa5443535ea41289265cc4418cf193379d3ba5d947c79deee4c12cff99"
+    },
+    {
+      "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2586.jpg",
+      "bytes": 1399723,
+      "sha256": "b229ba3279661565851c64a05deab9c93385d69a7c59921c3aae379aba6eae37"
+    },
+    {
+      "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2938.jpg",
+      "bytes": 1442613,
+      "sha256": "3f7dc864a78ea299bf52636189a9dc38e263f7575bc09e5e375adf8aead687ba"
+    },
+    {
+      "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3349.jpg",
+      "bytes": 2169939,
+      "sha256": "95e947cc1df70861f50c57546b873e15681a4eb1a6502e8e4da2bcedb8f73871"
+    },
+    {
+      "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2598.jpg",
+      "bytes": 1453772,
+      "sha256": "bcfed31b0d96c894668ab537710a2f28eb4d6cd82c8602fe2f4f51c14ff5b1ad"
+    },
+    {
+      "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_2445.jpg",
+      "bytes": 1309619,
+      "sha256": "2a003c48d43fb8ea2ebdaeac1343010c7b96ac95972e6c0670885eb7baf274dc"
+    },
+    {
+      "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3726.jpg",
+      "bytes": 1474467,
+      "sha256": "ddbf75111d98a8b3291ec917aca59917539b4fb605033e4088062d5a980b3bb2"
+    },
+    {
+      "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_4404.jpg",
+      "bytes": 3127030,
+      "sha256": "567e5e84ae357607d3458277386015892fed25c3df56c722a084116b8c7f4ca6"
+    },
+    {
+      "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3551.HEIC/sat_1_1.jpg",
+      "bytes": 24113,
+      "sha256": "5c5fb113c1100870ad462f29af6e3f0e6161c47de3ffee7766bd3aaa2760a322"
+    },
+    {
+      "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3551.HEIC/sat_1_2.jpg",
+      "bytes": 18384,
+      "sha256": "c72dd6a0223ba7d08a84fd4fdd86d8dc1e9ce5360af00de13138d66f96f8e617"
+    },
+    {
+      "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3551.HEIC/sat_1_3.jpg",
+      "bytes": 13359,
+      "sha256": "b4a43b6646503566b0d3bd16ef61987da267c0d57d5a48d6c65abd86beb44663"
+    },
+    {
+      "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3551.HEIC/sat_1_4.jpg",
+      "bytes": 22953,
+      "sha256": "0f403f721962cfd568c8e65e49b92a69b1ed291d09d249ce4c083fe47eaf9a03"
+    },
+    {
+      "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3551.HEIC/sat_1_5.jpg",
+      "bytes": 26461,
+      "sha256": "26b9f808ebd1d04aabcc304326daaf41f6a4c382fdca600bbc0d32edd7eceb12"
+    },
+    {
+      "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3551.HEIC/sat_1_6.jpg",
+      "bytes": 23686,
+      "sha256": "e76fab463f7af2304d8f087408d427758c75c415959cec1227a4821c6faec02f"
+    },
+    {
+      "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3551.HEIC/sat_1_7.jpg",
+      "bytes": 22476,
+      "sha256": "d0f24fd78663a153d062d817214878885d518f0dba09407af16d1513d64b823f"
+    },
+    {
+      "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3551.HEIC/sat_1_8.jpg",
+      "bytes": 21935,
+      "sha256": "8256feff12a050ae8e21066bf81bfa7e7981a67d7ecd4979c74a328bc30d8c67"
+    }
+  ],
+  "raw_decodes_main": 16,
+  "raw_decodes_independent_audit_max": 16,
+  "CUDA_allocation_limit_bytes": 2147483648,
+  "engineering_output_limit_bytes": 8388608,
+  "real_training_authorized": false,
+  "development_scoring_authorized": false,
+  "failed_prior_raw_preprocessing": 8,
+  "remaining_full_run_inputs": 1132,
+  "remaining_full_run_encoder_calls": 142,
+  "successful_shards_immutable_and_reused": true,
+  "six_confirmation_groups": "no access",
+  "full_run_requires_separate_user_authorization": true
+}

@@ -1,0 +1,31 @@
+{
+  "weak_sources_better_than_both_controls": 2,
+  "weak_total_sources": 5,
+  "MMGAG_groups_better_than_both_controls": 0,
+  "MMGAG_total_groups": 10,
+  "flags": {
+    "weak_dev": {
+      "Bern": false,
+      "LacBleu": true,
+      "Luzern": false,
+      "Rolex": true,
+      "Sion": false
+    },
+    "MMGAG": {
+      "dev_00": false,
+      "dev_01": false,
+      "dev_02": false,
+      "dev_03": false,
+      "dev_04": false,
+      "dev_05": false,
+      "dev_06": false,
+      "dev_07": false,
+      "dev_08": false,
+      "dev_09": false
+    }
+  },
+  "basis": "strict Full Top1 > Mean Top1 AND > Wrong Top1, per existing source; not a new acceptance threshold",
+  "interpretation": "4/5 sources improve vs Identity but only2/5 surpass both controls; mean-target successes can explain part of non-specific benefit",
+  "new_predictions": 0,
+  "new_candidate": false
+}

@@ -1,0 +1,60 @@
+{
+  "task": "CV-020",
+  "files": [
+    {
+      "path": "DATA/processed_data/MM-GAG/配对覆盖复查与后续计划_v1/README.md",
+      "sha256": "a1461d9db8336541ef3bd9e9f71477e33f91f46aa55edca47015cd19ced74e63",
+      "bytes": 1744
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/配对覆盖复查与后续计划_v1/下一阶段计划.md",
+      "sha256": "3bf0d63b05dc997b9253e1dfac214416ab99aca9273c8fc291e079169d7a0eae",
+      "bytes": 6711
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/配对覆盖复查与后续计划_v1/中断注入证据.json",
+      "sha256": "7754f8dfed7cb1704cdb0c410286418c654b1f010ba8a142e6748ab3e4c4dfe9",
+      "bytes": 615
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/配对覆盖复查与后续计划_v1/交付检查.json",
+      "sha256": "37351000228d29c2b5a60f1a8ed9c42c9bc20816f9c4065687c3305b5aee4c8c",
+      "bytes": 814
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/配对覆盖复查与后续计划_v1/复查汇总.json",
+      "sha256": "6e00456c323df0f090929be7e6578faa2c008ba001c0c6aad533f0736c0d8a62",
+      "bytes": 4738
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/配对覆盖复查与后续计划_v1/复查结论.md",
+      "sha256": "fe48541134f08ca5d3d49df7a71f7e3f434cf601d4d05561081fe7bd44feb4e4",
+      "bytes": 5347
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/配对覆盖复查与后续计划_v1/输入与源码绑定.json",
+      "sha256": "bb8f781a9d2ef721aa2c3055697fe700eec78ce60b51337a25841c8c0c9ca13e",
+      "bytes": 11214
+    }
+  ],
+  "sources": [
+    {
+      "path": "project/src/eval/review_capturepoint_coverage_v1.py",
+      "sha256": "f2d5ba3a62564c1bbe03ab71588c0649ec4612b47b78d8311cf4c6a58c010447",
+      "bytes": 17696
+    }
+  ],
+  "sealed_bytes": 48879,
+  "mutable_coordination_entries_excluded": true,
+  "finding_count": 1,
+  "findings_fixed": false,
+  "CV019_effect_failure_unchanged": true,
+  "new_experiment_started": false,
+  "actual_model_forward_calls": 0,
+  "new_model_scores": 0,
+  "training_updates": 0,
+  "confirmation_consumption": 0,
+  "navigation_SR": null,
+  "default_upgraded": false,
+  "retention": "<=1MiB small review/plan text and JSON only; no binary copies"
+}

@@ -1,0 +1,34 @@
+{
+  "status": "development_screen_failed_factor_closed",
+  "necessary_gate_count": 13,
+  "passed_gate_count": 8,
+  "gate_checks": {
+    "full_DA_delta_at_least_2pp": true,
+    "full_two_positive_seeds": true,
+    "full_source_CI_positive": true,
+    "target_effect_delta_at_least_2pp": true,
+    "target_two_positive_seeds": true,
+    "target_source_CI_positive": true,
+    "candidate_mean_effect_at_least_2pp": false,
+    "candidate_mean_CI_positive": false,
+    "candidate_wrong_effect_at_least_2pp": false,
+    "candidate_wrong_CI_positive": false,
+    "candidate_mean_two_positive_seeds": false,
+    "candidate_wrong_two_positive_seeds": true,
+    "wrong_effect_not_worse": true
+  },
+  "failed_gates": [
+    "candidate_mean_effect_at_least_2pp",
+    "candidate_mean_CI_positive",
+    "candidate_wrong_effect_at_least_2pp",
+    "candidate_wrong_CI_positive",
+    "candidate_mean_two_positive_seeds"
+  ],
+  "frozen_protocol_sha256": "fb13ab585d1b1060e6048277e586afaf3616ad874c3787b8b78b5e8077557b0e",
+  "metrics_sha256": "d675e8750249db96da5896ccf0ae065e98872f8368e54a4cd8c1684d8f1d2101",
+  "development_screen_passed": false,
+  "PPO_allowed": false,
+  "default_upgrade": false,
+  "new_sr": false,
+  "conclusion": "Direction DA improves under the same budget, but absolute target usefulness fails the original necessary gates. Close this factor at this protocol and budget; do not continue PPO, tune gates, or select a favorable stratum."
+}

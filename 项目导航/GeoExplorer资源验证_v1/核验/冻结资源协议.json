@@ -1,0 +1,93 @@
+{
+  "mode": "synthetic_resource",
+  "date": "2026-10-07",
+  "total_optimizer_steps": 8,
+  "phases": [
+    {
+      "name": "pretrain",
+      "batch": 1,
+      "warmup": 2,
+      "measured": 3
+    },
+    {
+      "name": "ppo_head",
+      "batch": 2,
+      "warmup": 1,
+      "measured": 2
+    }
+  ],
+  "tokens": 32,
+  "dtype": "float32",
+  "deadline_seconds": 180,
+  "reserved_cap_mib": 4617,
+  "output_cap_bytes": 104857600,
+  "seed": 321,
+  "gpu_before": {
+    "total_mib": 8188,
+    "used_mib": 2803,
+    "headroom_mib": 768
+  },
+  "dimensions": {
+    "hidden_size": 1152,
+    "num_hidden_layers": 12,
+    "num_attention_heads": 12,
+    "word_embed_proj_dim": 512,
+    "num_actions": 4,
+    "patch_size": 5,
+    "num_angles": 47,
+    "num_key_value_heads": 12,
+    "intermediate_size": 3072,
+    "use_cache": false
+  },
+  "model_source": "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__models__model_falcon.py",
+  "ppo_source": "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__models__ppo.py",
+  "falcon_config": "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\config.json",
+  "tokenizer_dir": "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源",
+  "bindings": {
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\project\\src\\tools\\prepare_geoexplorer_resource_v1.py": "9c48bd46400f537e844d12f18655af5f711a035ef32b248c2718014fb82dd405",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\project\\src\\train\\geoexplorer_resource_probe_v1.py": "a046f2bff504f70561e07bbe3a8dd4ab4bbacc42c67f8834e3e5b55bab4efe81",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\project\\src\\tests\\test_geoexplorer_resource_v1.py": "b3de9205825d1103c1b993e9b2f1f8507496ed5a6d60b63754afb9a85873840e",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\config.json": "ef0b96fb53bf7627eb115138bdfd36edb5661891816546f41ed91fb80f19ab31",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\falcon_hub_metadata.json": "190e8e182715fe116da1a6ac8eba9c823810dffb650a2120942188da348de147",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__config.py": "c166826736b40a99e4fad4c851f9068844c40e2f04880d0478e72c4d933cebc9",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__data_utils__get_grd_embeddings.py": "82cd97bdada6a040d5522b7f1ccc1d47d794b45684d205c385d2423b70b3a278",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__data_utils__get_patches.py": "c01d62b479f9fb610220936b374ba05a4d1f0b27be3ec2546d751a54f550ba1d",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__data_utils__get_sat_embeddings.py": "f98e000c55a454addc577dd33a7e71bbdc4b22832ebbe592b3074ec1e491cb82",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__data_utils__sequence.py": "7539e2dfda50569939126a64fdb31ead779359933a949990a04b5bbbe248739e",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__data_utils____init__.py": "5af6d0494fa23afa54ae60a7b096539284abef44a5f78eff16fadbe874a9030e",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__environment.yml": "3b69ed9ea8e39dd80a0304e90715bab43ce8eadac2ffc5bc053ea03f132179b8",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__models__decision_transformer.py": "03552c7a440d47bc1e61b52add0f300f7231236875809ac7ccf871bee608b287",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__models__model_falcon.py": "0d932acbe0ce08eb8a4a3e962b6762068758eec49d8a8b08df7d68aa4eb432ef",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__models__ppo.py": "666f940f0c5a5b292de5e32cf3f755f3dc470f6b4447a3795d5cd8dd8e56114e",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__models__pretrain_model.py": "bdc8ee91ea570bb1e92d4ec3b726c0a3aec0c3e3f67c34589b2e0002cf478d77",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__pretrain.py": "4591d718f8d54a9a8cad59ed016320b7fb76d01040bdcbaf9958f5d869bee23b",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__README.md": "1ce1f03cd12f4ca927334d8a2968bf080296557cc28eb29a477d13286e0704a7",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__train.py": "ca62c336f1eafcb852eb86cab0c7a183b1bdbb921b9eafc8c221b40692b11932",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__utils__get_test_config.py": "0a7e6e7b17f964e965382e0e414cfdd2a8034dad1dcc80dd3f93071d0a43b944",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__utils__random_seed.py": "ab1e632a345ffee512d0dbe6a9bb39e61ab2d9627b3d374c51ed50119f846395",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__utils____init__.py": "35038d21c04d3991475e9c1c60a64640a7546688e8fa3aaa6b727b4dfda4d832",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\GeoExplorer__validate.py": "edf4da65573987729ed9ab32489fcbb9d694da3aaa0cde460ad4452efee0df88",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\special_tokens_map.json": "c0bf83db1644ea3fdcd1a8a68172a0a6c8c3956da922e1e75c47b97e8315433a",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\tokenizer.json": "d6c5cdac1421ea998722aa88ea1cb630b2a9ec63bf8a85331bb3d9d321507186",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\tokenizer_config.json": "956d99c7b9a195e5c3eea5074cb3571b761282f2e621d804817b86dbcf6e2385",
+    "D:\\桌面\\XDUCS-courses\\大四\\大数据工程\\项目导航\\GeoExplorer资源验证_v1\\公开来源\\完整来源绑定.json": "6ddd8ff1619d763b42014787ef73c30c147e9bba39dff3715ad0153cd13667d4"
+  },
+  "environment": {
+    "torch": "2.6.0+cu124",
+    "transformers": "4.46.3",
+    "tokenizers": "0.20.3",
+    "huggingface-hub": "0.26.5",
+    "numpy": "2.5.3",
+    "safetensors": "0.8.0"
+  },
+  "limitations": [
+    "Python3.13/torch2.6/transformers4.46 compatibility environment, not original paper versions",
+    "standalone original Falcon + ActorCritic; Lightning and WandB not executed",
+    "pretraining immediate AdamW steps instead of gradient accumulation256 for worst-case memory; timings split",
+    "PPO frozen model forward and head clipped loss on synthetic rewards; no navigation/rollout",
+    "32-token upper profile exceeds original random pretraining maximum22 tokens",
+    "whole repo has no top-level LICENSE; do not redistribute as a licensed complete implementation"
+  ],
+  "full_navigation_training": false,
+  "reserve_regions_consumed": 0
+}

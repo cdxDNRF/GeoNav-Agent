@@ -1,0 +1,5 @@
+/* Layout-only correction: prevent intrinsic content from expanding grid tracks. */
+.ground-app .layout>aside,.ground-app .layout>section,.ground-app .target-layout>*,.ground-app .stats>article{min-width:0;max-width:100%}
+.ground-app .list button,.ground-app pre{overflow-wrap:anywhere}
+.ground-app .table-wrap{min-width:0;max-width:100%}
+@media(max-width:700px){.ground-app .layout,.ground-app .target-layout{grid-template-columns:minmax(0,1fr)}}

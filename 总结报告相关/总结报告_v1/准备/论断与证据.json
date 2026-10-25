@@ -1,0 +1,1442 @@
+{
+  "task": "FINAL-001",
+  "claims": [
+    {
+      "id": "C01",
+      "section": "1.3/5.2",
+      "statement": "原方案包含零训练、多智能体与多模态/25格扩展目标；实际路线有所调整。",
+      "scope": "原承诺与实际交付分开核对，不能写成全部达成。",
+      "evidence": [
+        "proposal",
+        "m0",
+        "platform12"
+      ],
+      "facts": [],
+      "source_anchors": []
+    },
+    {
+      "id": "C02",
+      "section": "2.2/3.1",
+      "statement": "执行策略使用公开局部Observation；评测器持有真值。",
+      "scope": "源码约束与工程验证，不构成恶意代码安全沙箱。",
+      "evidence": [
+        "navigator",
+        "environment",
+        "episode",
+        "core"
+      ],
+      "facts": [],
+      "source_anchors": [
+        {
+          "source": "navigator",
+          "marker": "class FrozenEdgeNavigator",
+          "line": 15
+        },
+        {
+          "source": "navigator",
+          "marker": "def act(",
+          "line": 40
+        }
+      ]
+    },
+    {
+      "id": "C03",
+      "section": "3.2/3.3",
+      "statement": "当前M0是Small256无目标探索器加Edge目标线索头，三种子独立运行而非集成。",
+      "scope": "总体已训练；固定均值用于探索器目标通道，目标作用主要由线索头介入。",
+      "evidence": [
+        "m0",
+        "navigator",
+        "head"
+      ],
+      "facts": [
+        {
+          "source": "m0",
+          "pointer": "/architecture",
+          "value": "Small256",
+          "unit": "配置"
+        },
+        {
+          "source": "m0",
+          "pointer": "/trained_condition",
+          "value": "NoTargetExplorer_plus_EdgeCue",
+          "unit": "配置"
+        },
+        {
+          "source": "m0",
+          "pointer": "/ensemble",
+          "value": false,
+          "unit": "布尔"
+        },
+        {
+          "source": "m0",
+          "pointer": "/thresholds",
+          "value": {
+            "0": 0.5,
+            "1": 0.5,
+            "2": 0.5
+          },
+          "unit": "各种子阈值"
+        }
+      ],
+      "source_anchors": []
+    },
+    {
+      "id": "C04",
+      "section": "2.4/3.3",
+      "statement": "线索头输出邻接概率与条件方向的联合分布，最高类不合法或已访问时放弃。",
+      "scope": "阈值0.50来自当前冻结配置；不能复活已收束0.95候选。",
+      "evidence": [
+        "cue",
+        "decoupled",
+        "head",
+        "m0"
+      ],
+      "facts": [
+        {
+          "source": "head_training",
+          "pointer": "/parameters",
+          "value": 136837,
+          "unit": "已登记头参数"
+        },
+        {
+          "source": "head_training",
+          "pointer": "/edge_features",
+          "value": 20,
+          "unit": "边缘维数"
+        }
+      ],
+      "source_anchors": [
+        {
+          "source": "decoupled",
+          "marker": "def forward(",
+          "line": 20
+        },
+        {
+          "source": "cue",
+          "marker": "def choose_cue(",
+          "line": 39
+        }
+      ]
+    },
+    {
+      "id": "C05",
+      "section": "2.5/3.2/4.1",
+      "statement": "所用探索器训练登记为随机初始化的PPO/PBRS，BC_warmstart=false。",
+      "scope": "描述已选中训练分支，不把早期BC试验套到当前模型；不宣称完整复现DynCur。",
+      "evidence": [
+        "policy_training",
+        "training_code"
+      ],
+      "facts": [
+        {
+          "source": "policy_training",
+          "pointer": "/BC_warmstart",
+          "value": false,
+          "unit": "布尔"
+        },
+        {
+          "source": "policy_training",
+          "pointer": "/steps_per_model",
+          "value": 163840,
+          "unit": "环境步/模型"
+        },
+        {
+          "source": "policy_training",
+          "pointer": "/PPO/gamma",
+          "value": 0.99,
+          "unit": "系数"
+        },
+        {
+          "source": "policy_training",
+          "pointer": "/PPO/lr",
+          "value": 0.0003,
+          "unit": "学习率"
+        },
+        {
+          "source": "policy_training",
+          "pointer": "/reward",
+          "value": {
+            "intrinsic": 0,
+            "pbrs_beta": 0.5,
+            "progress": 0.1,
+            "success": 1,
+            "terminal_potential": 0
+          },
+          "unit": "训练奖励登记"
+        }
+      ],
+      "source_anchors": [
+        {
+          "source": "training_code",
+          "marker": "def _transition_reward(",
+          "line": 167
+        }
+      ]
+    },
+    {
+      "id": "C06",
+      "section": "3.3/4.1",
+      "statement": "目标线索头在单独的源划分和配对监督上训练。",
+      "scope": "数据池、策略拟合、线索头拟合/校准与确认清单不可混称一个训练集。",
+      "evidence": [
+        "head_training",
+        "head_split"
+      ],
+      "facts": [
+        {
+          "source": "head_training",
+          "pointer": "/epochs",
+          "value": 16,
+          "unit": "轮"
+        },
+        {
+          "source": "head_training",
+          "pointer": "/pair_uses_per_head",
+          "value": 835200,
+          "unit": "配对使用次数/头"
+        },
+        {
+          "source": "head_training",
+          "pointer": "/direction_pair_uses_per_head",
+          "value": 111360,
+          "unit": "方向配对使用次数/头"
+        }
+      ],
+      "source_anchors": []
+    },
+    {
+      "id": "C07",
+      "section": "4.2/4.4",
+      "statement": "S2稳定验证按对应批次最终验收通过。",
+      "scope": "4个已知验证源、100题/种子；不是独立测试。",
+      "evidence": [
+        "s2",
+        "s2_verdict",
+        "s2_audit"
+      ],
+      "facts": [
+        {
+          "source": "s2",
+          "pointer": "/averages/Edge/CueFull/sr_mean",
+          "value": 0.8933333333333334,
+          "unit": "SR比例"
+        },
+        {
+          "source": "s2",
+          "pointer": "/averages/Edge/CueFull/sg_mean",
+          "value": 0.32,
+          "unit": "SG格"
+        },
+        {
+          "source": "s2",
+          "pointer": "/averages/Edge/CueFull/planned_each",
+          "value": 100,
+          "unit": "计划题/种子"
+        },
+        {
+          "source": "s2",
+          "pointer": "/averages/Edge/CueFull/successes_by_seed",
+          "value": [
+            92,
+            90,
+            86
+          ],
+          "unit": "各种子成功数"
+        },
+        {
+          "source": "s2_verdict",
+          "pointer": "/formal_S2_passed",
+          "value": true,
+          "unit": "最终验收布尔"
+        }
+      ],
+      "source_anchors": []
+    },
+    {
+      "id": "C08",
+      "section": "4.2/4.4",
+      "statement": "S3测试源文件确认按对应批次最终验收通过。",
+      "scope": "10个测试源文件、250题/种子；地理足迹不重叠未核实。",
+      "evidence": [
+        "s3",
+        "s3_verdict",
+        "s3_audit"
+      ],
+      "facts": [
+        {
+          "source": "s3",
+          "pointer": "/averages/Edge/CueFull/sr_mean",
+          "value": 0.868,
+          "unit": "SR比例"
+        },
+        {
+          "source": "s3",
+          "pointer": "/averages/Edge/CueFull/sg_mean",
+          "value": 0.3,
+          "unit": "SG格"
+        },
+        {
+          "source": "s3",
+          "pointer": "/averages/Edge/CueFull/planned_each",
+          "value": 250,
+          "unit": "计划题/种子"
+        },
+        {
+          "source": "s3",
+          "pointer": "/averages/Edge/CueFull/successes_by_seed",
+          "value": [
+            216,
+            223,
+            212
+          ],
+          "unit": "各种子成功数"
+        },
+        {
+          "source": "s3_verdict",
+          "pointer": "/formal_S3_passed",
+          "value": true,
+          "unit": "最终验收布尔"
+        }
+      ],
+      "source_anchors": []
+    },
+    {
+      "id": "C09",
+      "section": "4.2/4.4",
+      "statement": "S4密度扩展按对应批次最终验收通过。",
+      "scope": "20个已消费源、500题/种子、10格B20；切图密度增加，搜索面积未扩大。",
+      "evidence": [
+        "s4",
+        "s4_verdict",
+        "s4_audit"
+      ],
+      "facts": [
+        {
+          "source": "s4",
+          "pointer": "/averages/Edge/CueFull/sr_mean",
+          "value": 0.7713333333333333,
+          "unit": "SR比例"
+        },
+        {
+          "source": "s4",
+          "pointer": "/averages/Edge/CueFull/sg_mean",
+          "value": 1.2013333333333334,
+          "unit": "SG格"
+        },
+        {
+          "source": "s4",
+          "pointer": "/averages/Edge/CueFull/planned_each",
+          "value": 500,
+          "unit": "计划题/种子"
+        },
+        {
+          "source": "s4",
+          "pointer": "/averages/Edge/CueFull/successes_by_seed",
+          "value": [
+            385,
+            407,
+            365
+          ],
+          "unit": "各种子成功数"
+        },
+        {
+          "source": "s4_verdict",
+          "pointer": "/formal_S4_passed",
+          "value": true,
+          "unit": "最终验收布尔"
+        }
+      ],
+      "source_anchors": []
+    },
+    {
+      "id": "C10",
+      "section": "4.2/4.4",
+      "statement": "SwissView同模态迁移按对应批次最终验收通过。",
+      "scope": "20个源、500题/种子、航拍目标；跨视角与预训练地理隔离未确认。",
+      "evidence": [
+        "swiss",
+        "swiss_verdict",
+        "swiss_audit"
+      ],
+      "facts": [
+        {
+          "source": "swiss",
+          "pointer": "/averages/Edge/CueFull/sr_mean",
+          "value": 0.868,
+          "unit": "SR比例"
+        },
+        {
+          "source": "swiss",
+          "pointer": "/averages/Edge/CueFull/sg_mean",
+          "value": 0.3806666666666667,
+          "unit": "SG格"
+        },
+        {
+          "source": "swiss",
+          "pointer": "/averages/Edge/CueFull/planned_each",
+          "value": 500,
+          "unit": "计划题/种子"
+        },
+        {
+          "source": "swiss",
+          "pointer": "/averages/Edge/CueFull/successes_by_seed",
+          "value": [
+            430,
+            434,
+            438
+          ],
+          "unit": "各种子成功数"
+        },
+        {
+          "source": "swiss_verdict",
+          "pointer": "/formal_cross_dataset_passed",
+          "value": true,
+          "unit": "最终验收布尔"
+        }
+      ],
+      "source_anchors": []
+    },
+    {
+      "id": "C11",
+      "section": "4.3",
+      "statement": "同题目标干预支持M0使用给定目标；有限复现GeoExplorer未通过该目标资格。",
+      "scope": "10源文件、250题×3权重；M0和Geo表征/监督/资源不完全相同，不写优于原论文。",
+      "evidence": [
+        "common"
+      ],
+      "facts": [
+        {
+          "source": "common",
+          "pointer": "/aggregate_metrics",
+          "value": [
+            {
+              "method": "M0",
+              "condition": "Full",
+              "planned": 750,
+              "successes": 651,
+              "sr": 0.868,
+              "normal_terminals": 750,
+              "sg_cells_all_planned": 0.3,
+              "movement_cells_all_planned": 7.596,
+              "policy_errors": 0
+            },
+            {
+              "method": "M0",
+              "condition": "Disabled",
+              "planned": 750,
+              "successes": 552,
+              "sr": 0.736,
+              "normal_terminals": 750,
+              "sg_cells_all_planned": 0.7186666666666667,
+              "movement_cells_all_planned": 8.033333333333333,
+              "policy_errors": 0
+            },
+            {
+              "method": "M0",
+              "condition": "Mean",
+              "planned": 750,
+              "successes": 549,
+              "sr": 0.732,
+              "normal_terminals": 750,
+              "sg_cells_all_planned": 0.6986666666666667,
+              "movement_cells_all_planned": 8.074666666666667,
+              "policy_errors": 0
+            },
+            {
+              "method": "M0",
+              "condition": "Wrong",
+              "planned": 750,
+              "successes": 521,
+              "sr": 0.6946666666666667,
+              "normal_terminals": 750,
+              "sg_cells_all_planned": 0.8306666666666667,
+              "movement_cells_all_planned": 8.190666666666667,
+              "policy_errors": 0
+            },
+            {
+              "method": "GeoExplorer",
+              "condition": "Full",
+              "planned": 750,
+              "successes": 267,
+              "sr": 0.356,
+              "normal_terminals": 750,
+              "sg_cells_all_planned": 2.5893333333333333,
+              "movement_cells_all_planned": 8.941333333333333,
+              "policy_errors": 0
+            },
+            {
+              "method": "GeoExplorer",
+              "condition": "Disabled",
+              "planned": 750,
+              "successes": 265,
+              "sr": 0.35333333333333333,
+              "normal_terminals": 750,
+              "sg_cells_all_planned": 2.526666666666667,
+              "movement_cells_all_planned": 8.937333333333333,
+              "policy_errors": 0
+            },
+            {
+              "method": "GeoExplorer",
+              "condition": "Mean",
+              "planned": 750,
+              "successes": 265,
+              "sr": 0.35333333333333333,
+              "normal_terminals": 750,
+              "sg_cells_all_planned": 2.526666666666667,
+              "movement_cells_all_planned": 8.937333333333333,
+              "policy_errors": 0
+            },
+            {
+              "method": "GeoExplorer",
+              "condition": "Wrong",
+              "planned": 750,
+              "successes": 276,
+              "sr": 0.368,
+              "normal_terminals": 750,
+              "sg_cells_all_planned": 2.466666666666667,
+              "movement_cells_all_planned": 8.882666666666667,
+              "policy_errors": 0
+            }
+          ],
+          "unit": "逐方法条件的原指标表"
+        },
+        {
+          "source": "common",
+          "pointer": "/target_effect_gates",
+          "value": {
+            "M0": {
+              "controls": {
+                "Disabled": true,
+                "Mean": true,
+                "Wrong": true
+              },
+              "all_passed": true
+            },
+            "GeoExplorer": {
+              "controls": {
+                "Disabled": false,
+                "Mean": false,
+                "Wrong": false
+              },
+              "all_passed": false
+            }
+          },
+          "unit": "目标作用验收"
+        },
+        {
+          "source": "common",
+          "pointer": "/source_file_groups",
+          "value": 10,
+          "unit": "源文件组"
+        }
+      ],
+      "source_anchors": []
+    },
+    {
+      "id": "C12",
+      "section": "4.3",
+      "statement": "M0真实目标相对Disabled的同题配对变化。",
+      "scope": "配对单位按源文件组保留全部种子；区间不是地理无重叠证明。",
+      "evidence": [
+        "common"
+      ],
+      "facts": [
+        {
+          "source": "common",
+          "pointer": "/contrasts/1/sr_difference",
+          "value": 0.132,
+          "unit": "SR差比例"
+        },
+        {
+          "source": "common",
+          "pointer": "/contrasts/1/sr_difference_ci95",
+          "value": [
+            0.112,
+            0.15066666666666667
+          ],
+          "unit": "95%源组区间比例"
+        },
+        {
+          "source": "common",
+          "pointer": "/contrasts/1/recovered",
+          "value": 100,
+          "unit": "恢复条数"
+        },
+        {
+          "source": "common",
+          "pointer": "/contrasts/1/harmed",
+          "value": 1,
+          "unit": "损伤条数"
+        }
+      ],
+      "source_anchors": []
+    },
+    {
+      "id": "C13",
+      "section": "4.3",
+      "statement": "M0真实目标相对Mean的同题配对变化。",
+      "scope": "配对单位按源文件组保留全部种子；区间不是地理无重叠证明。",
+      "evidence": [
+        "common"
+      ],
+      "facts": [
+        {
+          "source": "common",
+          "pointer": "/contrasts/2/sr_difference",
+          "value": 0.136,
+          "unit": "SR差比例"
+        },
+        {
+          "source": "common",
+          "pointer": "/contrasts/2/sr_difference_ci95",
+          "value": [
+            0.116,
+            0.15733333333333333
+          ],
+          "unit": "95%源组区间比例"
+        },
+        {
+          "source": "common",
+          "pointer": "/contrasts/2/recovered",
+          "value": 103,
+          "unit": "恢复条数"
+        },
+        {
+          "source": "common",
+          "pointer": "/contrasts/2/harmed",
+          "value": 1,
+          "unit": "损伤条数"
+        }
+      ],
+      "source_anchors": []
+    },
+    {
+      "id": "C14",
+      "section": "4.3",
+      "statement": "M0真实目标相对Wrong的同题配对变化。",
+      "scope": "配对单位按源文件组保留全部种子；区间不是地理无重叠证明。",
+      "evidence": [
+        "common"
+      ],
+      "facts": [
+        {
+          "source": "common",
+          "pointer": "/contrasts/3/sr_difference",
+          "value": 0.17333333333333334,
+          "unit": "SR差比例"
+        },
+        {
+          "source": "common",
+          "pointer": "/contrasts/3/sr_difference_ci95",
+          "value": [
+            0.14133333333333334,
+            0.20666666666666667
+          ],
+          "unit": "95%源组区间比例"
+        },
+        {
+          "source": "common",
+          "pointer": "/contrasts/3/recovered",
+          "value": 132,
+          "unit": "恢复条数"
+        },
+        {
+          "source": "common",
+          "pointer": "/contrasts/3/harmed",
+          "value": 2,
+          "unit": "损伤条数"
+        }
+      ],
+      "source_anchors": []
+    },
+    {
+      "id": "C15",
+      "section": "3.4/4.4",
+      "statement": "Coverage3Radial使用公开拓扑的3步机会覆盖与径向保护，接受线索优先。",
+      "scope": "只说明此协议的确定性控制，不称第二自主Agent或真实目标位置规划。",
+      "evidence": [
+        "radial",
+        "coverage"
+      ],
+      "facts": [
+        {
+          "source": "radial",
+          "pointer": "/controller",
+          "value": {
+            "accepted_cue_priority": true,
+            "guard": "one_step_radius_not_less_than_original",
+            "horizon": 3,
+            "minimum_gain": 2,
+            "no_second_candidate_selection": true,
+            "radius_reference": "public_visited_first_cell",
+            "replan_each_observation": true
+          },
+          "unit": "冻结控制参数"
+        },
+        {
+          "source": "radial",
+          "pointer": "/protocol",
+          "value": {
+            "budget": 20,
+            "cell_size_m": 300,
+            "epsg": 26986,
+            "grid_size": 10,
+            "name": "masa-roads-grid10-spatial-v1",
+            "native_cell_pixels": 300,
+            "pixel_size_m": 1,
+            "source_family": "MassachusettsRoads"
+          },
+          "unit": "物理网格协议"
+        }
+      ],
+      "source_anchors": [
+        {
+          "source": "coverage",
+          "marker": "def choose_area_coverage(",
+          "line": 22
+        }
+      ]
+    },
+    {
+      "id": "C16",
+      "section": "4.4",
+      "statement": "空间隔离9km²区域同题确认支持Coverage3Radial相对M0的收益。",
+      "scope": "10完整区域、750不同任务×3冻结权重、300米/格、10格B20；不外推所有新域。",
+      "evidence": [
+        "roads",
+        "roads_verdict",
+        "roads_main_audit",
+        "roads_target_audit"
+      ],
+      "facts": [
+        {
+          "source": "roads",
+          "pointer": "/reference/metrics",
+          "value": {
+            "episodes": 2250,
+            "failed_episodes": 926,
+            "last_step_successes": 83,
+            "mean_failed_sg": 6.116630669546436,
+            "mean_failed_sg_m": 1834.9892008639308,
+            "mean_sg_all_episodes": 2.517333333333333,
+            "mean_sg_m": 755.2,
+            "mean_steps": 16.71377777777778,
+            "mean_valid_travel_m": 5014.133333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.014250723579825748,
+            "repeat_visit_rate_micro": 0.016566505344891774,
+            "sr": 0.5884444444444444,
+            "successes": 1324,
+            "terminations": {
+              "budget_exhausted": 926,
+              "goal_reached": 1324
+            },
+            "total_oob": 0,
+            "total_revisits": 623,
+            "total_steps": 37606,
+            "total_valid_travel_m": 11281800
+          },
+          "unit": "M0原指标"
+        },
+        {
+          "source": "roads",
+          "pointer": "/candidate/metrics",
+          "value": {
+            "episodes": 2250,
+            "failed_episodes": 719,
+            "last_step_successes": 87,
+            "mean_failed_sg": 6.764951321279555,
+            "mean_failed_sg_m": 2029.4853963838664,
+            "mean_sg_all_episodes": 2.1617777777777776,
+            "mean_sg_m": 648.5333333333333,
+            "mean_steps": 15.897777777777778,
+            "mean_valid_travel_m": 4769.333333333333,
+            "out_of_bounds_rate": 0.0,
+            "repeat_visit_rate_macro": 0.01122276497343577,
+            "repeat_visit_rate_micro": 0.014006150405367627,
+            "sr": 0.6804444444444444,
+            "successes": 1531,
+            "terminations": {
+              "budget_exhausted": 719,
+              "goal_reached": 1531
+            },
+            "total_oob": 0,
+            "total_revisits": 501,
+            "total_steps": 35770,
+            "total_valid_travel_m": 10731000
+          },
+          "unit": "候选原指标"
+        },
+        {
+          "source": "roads",
+          "pointer": "/effects/all/sr_gain",
+          "value": 0.09200000000000001,
+          "unit": "SR差比例"
+        },
+        {
+          "source": "roads",
+          "pointer": "/effects/all/source95_SR",
+          "value": [
+            0.07066666666666667,
+            0.11022222222222222
+          ],
+          "unit": "区域95%差区间比例"
+        },
+        {
+          "source": "roads",
+          "pointer": "/recovered",
+          "value": 295,
+          "unit": "恢复条数"
+        },
+        {
+          "source": "roads",
+          "pointer": "/harmed",
+          "value": 88,
+          "unit": "损伤条数"
+        },
+        {
+          "source": "roads_verdict",
+          "pointer": "/independent_main_passed",
+          "value": true,
+          "unit": "主对照验收"
+        },
+        {
+          "source": "roads_verdict",
+          "pointer": "/independent_target_evidence_passed",
+          "value": true,
+          "unit": "目标证据验收"
+        }
+      ],
+      "source_anchors": []
+    },
+    {
+      "id": "C17",
+      "section": "4.5",
+      "statement": "MassGIS 10格新产品确认未通过，不能升级该新域默认。",
+      "scope": "同10区域但不同任务计划分母；全队列10格和15格不作直接配对，SG单位米。",
+      "evidence": [
+        "massgis",
+        "massgis_verdict"
+      ],
+      "facts": [
+        {
+          "source": "massgis",
+          "pointer": "/10/comparison/baseline",
+          "value": {
+            "planned": 2250,
+            "successes": 1151,
+            "SR": 0.5115555555555555,
+            "SG_m": 893.3333333333334,
+            "movement_m": 5111.2,
+            "steps": 38334,
+            "revisit_rate": 0.03049512182396828,
+            "oob": 0,
+            "accepted_cues": 8088,
+            "correct_true_cues": 1151,
+            "false_cues": 6937,
+            "accepted_precision": 0.14230959446092978,
+            "false_cue_action_rate": 0.18096207022486566
+          },
+          "unit": "M0原指标"
+        },
+        {
+          "source": "massgis",
+          "pointer": "/10/comparison/candidate",
+          "value": {
+            "planned": 2250,
+            "successes": 1229,
+            "SR": 0.5462222222222223,
+            "SG_m": 883.4666666666667,
+            "movement_m": 4998.4,
+            "steps": 37488,
+            "revisit_rate": 0.01997972684592403,
+            "oob": 0,
+            "accepted_cues": 8608,
+            "correct_true_cues": 1229,
+            "false_cues": 7379,
+            "accepted_precision": 0.14277416356877323,
+            "false_cue_action_rate": 0.19683632095603926
+          },
+          "unit": "Coverage原指标"
+        },
+        {
+          "source": "massgis_verdict",
+          "pointer": "/per_grid/10/main_gate_passed",
+          "value": false,
+          "unit": "主门槛布尔"
+        },
+        {
+          "source": "massgis_verdict",
+          "pointer": "/per_grid/10/eligible_for_default_upgrade",
+          "value": false,
+          "unit": "默认升级资格"
+        }
+      ],
+      "source_anchors": []
+    },
+    {
+      "id": "C18",
+      "section": "4.5",
+      "statement": "MassGIS 15格新产品确认未通过，不能升级该新域默认。",
+      "scope": "同10区域但不同任务计划分母；全队列10格和15格不作直接配对，SG单位米。",
+      "evidence": [
+        "massgis",
+        "massgis_verdict"
+      ],
+      "facts": [
+        {
+          "source": "massgis",
+          "pointer": "/15/comparison/baseline",
+          "value": {
+            "planned": 3000,
+            "successes": 575,
+            "SR": 0.19166666666666668,
+            "SG_m": 2342.8,
+            "movement_m": 5633.0,
+            "steps": 56330,
+            "revisit_rate": 0.023877152494230426,
+            "oob": 0,
+            "accepted_cues": 11693,
+            "correct_true_cues": 572,
+            "false_cues": 11121,
+            "accepted_precision": 0.04891815616180621,
+            "false_cue_action_rate": 0.19742588318835433
+          },
+          "unit": "M0原指标"
+        },
+        {
+          "source": "massgis",
+          "pointer": "/15/comparison/candidate",
+          "value": {
+            "planned": 3000,
+            "successes": 608,
+            "SR": 0.20266666666666666,
+            "SG_m": 2267.8,
+            "movement_m": 5609.4,
+            "steps": 56094,
+            "revisit_rate": 0.008931436517274575,
+            "oob": 0,
+            "accepted_cues": 12365,
+            "correct_true_cues": 605,
+            "false_cues": 11760,
+            "accepted_precision": 0.04892842701172665,
+            "false_cue_action_rate": 0.2096480907048882
+          },
+          "unit": "Coverage原指标"
+        },
+        {
+          "source": "massgis_verdict",
+          "pointer": "/per_grid/15/main_gate_passed",
+          "value": false,
+          "unit": "主门槛布尔"
+        },
+        {
+          "source": "massgis_verdict",
+          "pointer": "/per_grid/15/eligible_for_default_upgrade",
+          "value": false,
+          "unit": "默认升级资格"
+        }
+      ],
+      "source_anchors": []
+    },
+    {
+      "id": "C19",
+      "section": "4.5/5.2",
+      "statement": "已有只读诊断支持坐标/访问桶漂移作为15格退化的合理贡献因素。",
+      "scope": "观察性机制证据，不能写成唯一原因或已修复；未执行候选不能进入已完成表。",
+      "evidence": [
+        "drift"
+      ],
+      "facts": [],
+      "source_anchors": []
+    },
+    {
+      "id": "C20",
+      "section": "4.6",
+      "statement": "PPO分布一致性修正有开发收益，但候选必要目标/规则门槛未过。",
+      "scope": "28个已知开发源、140题×3权重；与早期S3 Geo35.60%不是同队列，不累计连线。",
+      "evidence": [
+        "geo",
+        "geo_audit"
+      ],
+      "facts": [
+        {
+          "source": "geo",
+          "pointer": "/full",
+          "value": {
+            "LegacyUnmaskedEvaluate": {
+              "planned": 420,
+              "successes": 53,
+              "sr": 0.1261904761904762,
+              "normal_terminals": 420,
+              "sg_cells_all_planned": 3.3119047619047617,
+              "movement_cells_all_planned": 9.55,
+              "policy_errors": 0
+            },
+            "ConsistentMaskedEvaluate": {
+              "planned": 420,
+              "successes": 125,
+              "sr": 0.2976190476190476,
+              "normal_terminals": 420,
+              "sg_cells_all_planned": 2.6404761904761904,
+              "movement_cells_all_planned": 9.054761904761905,
+              "policy_errors": 0
+            }
+          },
+          "unit": "两臂Full原指标"
+        },
+        {
+          "source": "geo",
+          "pointer": "/frontier",
+          "value": {
+            "planned": 140,
+            "successes": 64,
+            "sr": 0.45714285714285713,
+            "normal_terminals": 140,
+            "sg_cells_all_planned": 2.2071428571428573,
+            "movement_cells_all_planned": 8.592857142857143,
+            "policy_errors": 0
+          },
+          "unit": "规则指标"
+        },
+        {
+          "source": "geo",
+          "pointer": "/gates",
+          "value": {
+            "all_normal_terminals": true,
+            "sr_gain_3pp": true,
+            "positive_seed_gains_2of3": true,
+            "sg_no_worse": true,
+            "target_deltas_5pp": false,
+            "target_source_ci_positive": false,
+            "sr_at_least_frontier": false
+          },
+          "unit": "必要门槛"
+        },
+        {
+          "source": "geo",
+          "pointer": "/passed",
+          "value": false,
+          "unit": "总判定"
+        },
+        {
+          "source": "geo",
+          "pointer": "/target_contrasts/Mean/delta",
+          "value": 0.009523809523809526,
+          "unit": "目标对照SR差比例"
+        },
+        {
+          "source": "geo",
+          "pointer": "/target_contrasts/Wrong/delta",
+          "value": 0.011904761904761906,
+          "unit": "目标对照SR差比例"
+        }
+      ],
+      "source_anchors": []
+    },
+    {
+      "id": "C21",
+      "section": "3.5/4.7",
+      "statement": "平台已经实现可见GUI到内核的有限真实交互闭环。",
+      "scope": "只覆盖登记/适配的协议，未把所有历史脚本变为实时任务。",
+      "evidence": [
+        "core",
+        "service",
+        "server",
+        "platform12"
+      ],
+      "facts": [
+        {
+          "source": "platform12",
+          "pointer": "/trajectories",
+          "value": 2,
+          "unit": "工程轨迹"
+        },
+        {
+          "source": "platform12",
+          "pointer": "/actions",
+          "value": 40,
+          "unit": "工程动作"
+        },
+        {
+          "source": "platform12",
+          "pointer": "/maximum_delta",
+          "value": 0,
+          "unit": "原封存数值差"
+        },
+        {
+          "source": "platform12",
+          "pointer": "/browser_js_errors",
+          "value": 0,
+          "unit": "浏览器异常"
+        }
+      ],
+      "source_anchors": []
+    },
+    {
+      "id": "C22",
+      "section": "4.7",
+      "statement": "独立目录与同机新venv最小闭环通过，但完整科研G3未完成。",
+      "scope": "小型已消费队列的工程一致性，不是新机器/训练/全科研队列复跑。",
+      "evidence": [
+        "platform10",
+        "platform11"
+      ],
+      "facts": [
+        {
+          "source": "platform10",
+          "pointer": "/trajectories",
+          "value": 8,
+          "unit": "工程轨迹"
+        },
+        {
+          "source": "platform10",
+          "pointer": "/actions",
+          "value": 160,
+          "unit": "工程动作"
+        },
+        {
+          "source": "platform10",
+          "pointer": "/clean_machine",
+          "value": false,
+          "unit": "新机器布尔"
+        },
+        {
+          "source": "platform11",
+          "pointer": "/execution/maximum_delta",
+          "value": 0.0,
+          "unit": "数值差"
+        },
+        {
+          "source": "platform11",
+          "pointer": "/environment/runtime_bytes",
+          "value": 1270941993,
+          "unit": "当批最终环境字节"
+        },
+        {
+          "source": "platform11",
+          "pointer": "/scientific_g3_complete",
+          "value": false,
+          "unit": "完整G3布尔"
+        }
+      ],
+      "source_anchors": []
+    },
+    {
+      "id": "C23",
+      "section": "5.2",
+      "statement": "某些历史恢复状态/影像已经按授权删除，应披露可复现性保存边界。",
+      "scope": "不可声称所有历史实验仍能按旧SHA重算；当前配置/日志/结论证据继续存在。",
+      "evidence": [
+        "retention"
+      ],
+      "facts": [],
+      "source_anchors": []
+    }
+  ],
+  "sources": {
+    "template": {
+      "path": "课程相关报告模版/综合工程设计-3-总结报告.docx",
+      "sha256": "669eae2df76c4442aea5e1c809413fad3b2e24253e63843bf80a386c810a2891",
+      "bytes": 78671,
+      "mutable_reference": false
+    },
+    "proposal": {
+      "path": "选题报告相关/最新版选题报告/18-基于主动探索的视觉地理定位方法设计与实现-陈德昕-李世显-陈龙辉.docx",
+      "sha256": "26ca1b139e68c86924a0b63a6bef00cfe70661708b45caf4121549eb27cef8ef",
+      "bytes": 385334,
+      "mutable_reference": false
+    },
+    "metadata": {
+      "path": "DATA/processed_data/Masa/metadata.csv",
+      "sha256": "564491fd8be5120274b4999e73a676096a361ede51de12ef05642eaa5610b5a9",
+      "bytes": 4551,
+      "mutable_reference": false
+    },
+    "m0": {
+      "path": "project/local_policy_default.json",
+      "sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b",
+      "bytes": 4143,
+      "mutable_reference": false
+    },
+    "radial": {
+      "path": "project/defaults/masa_roads_grid10_radial_v1.json",
+      "sha256": "7d7563cad6b09214eddb74c7a0e4555ef940e023606654b3308f6a59676380ae",
+      "bytes": 4604,
+      "mutable_reference": false
+    },
+    "policy_training": {
+      "path": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/预登记.json",
+      "sha256": "43176d0d41cf0d544d2336a11c10d17abd00f244e76c5de8e8b2ebc2a2c2fd07",
+      "bytes": 20091,
+      "mutable_reference": false
+    },
+    "head_training": {
+      "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/预登记.json",
+      "sha256": "b534d8a27cf7c795fc7fe5d2d947952c3e93b26a7e3950845b64bf5a4d7540ca",
+      "bytes": 25653,
+      "mutable_reference": false
+    },
+    "head_split": {
+      "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/源图划分.json",
+      "sha256": "15eb5b79da10a006efaee65037027b944d1b1e7d9f7adb6b919b1b59632bce04",
+      "bytes": 32323,
+      "mutable_reference": false
+    },
+    "s2": {
+      "path": "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/对照汇总.json",
+      "sha256": "85d043ff63f838e18700037427518c643de3c7c06d0eeb0d50ba48db8e03a2a7",
+      "bytes": 13342,
+      "mutable_reference": false
+    },
+    "s2_verdict": {
+      "path": "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/验收结论.json",
+      "sha256": "96694ff74c206e1b062eed8a2ca6a1aa54891ec499a540ea79db6b39fc7e9500",
+      "bytes": 600,
+      "mutable_reference": false
+    },
+    "s2_audit": {
+      "path": "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/独立复核.json",
+      "sha256": "1b99142ff02a1cdc9a24aa0cdae8d9f43d951736e1ea8890321a50c69b08fd35",
+      "bytes": 17685,
+      "mutable_reference": false
+    },
+    "s3": {
+      "path": "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/对照汇总.json",
+      "sha256": "6cb563c30efec47d41a986901283f2dfc35de144e077b7d9c17cafd4d3a1b3d1",
+      "bytes": 27801,
+      "mutable_reference": false
+    },
+    "s3_verdict": {
+      "path": "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/验收结论.json",
+      "sha256": "da4d5b62b71205edebfa4b78d5171ebfd053b84197eb10826b4ced0ebba3a958",
+      "bytes": 964,
+      "mutable_reference": false
+    },
+    "s3_audit": {
+      "path": "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/独立复核.json",
+      "sha256": "d33c2ded9847bfcb7f93b0a7252c5f2da1aefe37e073bc72b04f969c5f3157a7",
+      "bytes": 18259,
+      "mutable_reference": false
+    },
+    "s4": {
+      "path": "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/对照汇总.json",
+      "sha256": "4361a8de2169db926d48afd7dea457596ac0f3c7ae264a50cea59c1e5843f9b4",
+      "bytes": 49867,
+      "mutable_reference": false
+    },
+    "s4_verdict": {
+      "path": "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/验收结论.json",
+      "sha256": "2c80528498810091bf844c869ef35d6a074fff4750dbc2a988e0f0723c60840c",
+      "bytes": 719,
+      "mutable_reference": false
+    },
+    "s4_audit": {
+      "path": "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/独立复核.json",
+      "sha256": "d6f5987436ec262cd0b2a5238b48bb3f0719b459d55a70fd87b750dd8d72756f",
+      "bytes": 20179,
+      "mutable_reference": false
+    },
+    "swiss": {
+      "path": "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/对照汇总.json",
+      "sha256": "e314d81fe09425e9d37c8538efa067ad2035671435f939c395943561c8809c10",
+      "bytes": 43078,
+      "mutable_reference": false
+    },
+    "swiss_verdict": {
+      "path": "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/验收结论.json",
+      "sha256": "f08a6f91d11acd14389c5f21f52f503a964cb6e95e9cc82a668df37449327895",
+      "bytes": 994,
+      "mutable_reference": false
+    },
+    "swiss_audit": {
+      "path": "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/独立复核.json",
+      "sha256": "1584909598a51a541d49d946492d1dc8176a427369edfa85a0015d85cf8687e0",
+      "bytes": 19547,
+      "mutable_reference": false
+    },
+    "roads": {
+      "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/主对照/对照汇总.json",
+      "sha256": "8604190f266df130869a2b25e5c81f9a8dadd2736b4206f816b87e97d08fd3db",
+      "bytes": 49197,
+      "mutable_reference": false
+    },
+    "roads_verdict": {
+      "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/验收结论.json",
+      "sha256": "6a0c03af26fd3a4d07de29d9013e56b4efbcfc59fef79cc66e4c8f8885458e9d",
+      "bytes": 1283,
+      "mutable_reference": false
+    },
+    "roads_main_audit": {
+      "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/主对照/独立复核.json",
+      "sha256": "00181742dcd7333d32b30e4709d530a02fece8016c36fed24949a30541bf81fd",
+      "bytes": 2954,
+      "mutable_reference": false
+    },
+    "roads_target_audit": {
+      "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/目标对照/独立复核.json",
+      "sha256": "592f882910b2ea67ac534d3470f3c970f73085b5ad91084832f63267842025aa",
+      "bytes": 4368,
+      "mutable_reference": false
+    },
+    "massgis": {
+      "path": "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/主对照/汇总.json",
+      "sha256": "278e167b36eb3e903f7bbfd394d73d34b86201f48652a46ce305ceb65f6bc772",
+      "bytes": 37976,
+      "mutable_reference": false
+    },
+    "massgis_verdict": {
+      "path": "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/验收结论.json",
+      "sha256": "8e9c98870d9b8e75595f1a048b76fa8336d392843c3a89f8f72317072b30779e",
+      "bytes": 16103,
+      "mutable_reference": false
+    },
+    "common": {
+      "path": "DATA/processed_data/Masa/评测结果/共同学习基线对照_v1/核验/正式独立复核_v1.json",
+      "sha256": "c3745b719b1429ca94ea95002001722c23b1a93a4e04d5bb671c9e0a40f9a216",
+      "bytes": 135120,
+      "mutable_reference": false
+    },
+    "geo": {
+      "path": "DATA/processed_data/Masa/训练结果/GeoExplorer分布一致性成对开发_v1/开发评测/开发汇总.json",
+      "sha256": "a32b518d10bbdc28f9a8f3d140bd28b07b6866ad0d6a24892c8761211e6ff9b3",
+      "bytes": 13998,
+      "mutable_reference": false
+    },
+    "geo_audit": {
+      "path": "DATA/processed_data/Masa/训练结果/GeoExplorer分布一致性成对开发_v1/核验/开发另实现复核.json",
+      "sha256": "e5eeba636abc9533dec8265226d7b1e5a8d840bb3fe84da3e6bf96272558a4b1",
+      "bytes": 307,
+      "mutable_reference": false
+    },
+    "drift": {
+      "path": "DATA/processed_data/MassGIS/评测结果/十五乘十五到达能力漂移诊断_v6/EVAL-004诊断与复核补充说明_v1.md",
+      "sha256": "8417ef8b966b6e86d55f4555bb70f4c2b80c109ac17f23fd97df63563fdba45a",
+      "bytes": 7817,
+      "mutable_reference": false
+    },
+    "platform10": {
+      "path": "平台/实验工作台_v4/便携闭环_v1/核验/最终交付复核_v1.json",
+      "sha256": "c8963c12b5a346611a52ea17005a5d43682a77604dfc2bc5d384bf15e994c721",
+      "bytes": 549,
+      "mutable_reference": false
+    },
+    "platform11": {
+      "path": "平台/实验工作台_v4/干净环境最小复跑_v1/核验/最终交付复核.json",
+      "sha256": "8d71da2d9fcf4b9be3ce7c05a208d7c7e9717ad1a7fb960be28a09e6a8f730da",
+      "bytes": 1092,
+      "mutable_reference": false
+    },
+    "platform12": {
+      "path": "平台/实验工作台_v4/发布彩排_v1/核验/最终交付复核.json",
+      "sha256": "9b27f3d39cf94f9e64641ad4a6a46614922f32ce7688597a5b857b45c933ec7e",
+      "bytes": 1499,
+      "mutable_reference": false
+    },
+    "retention": {
+      "path": "项目导航/归档永久清理_20261012_v1/README.md",
+      "sha256": "f8e470547231bb6dcb3ab95089aedb5be310b2e824aecfffff68f09e263d6cb8",
+      "bytes": 1855,
+      "mutable_reference": true
+    },
+    "navigator": {
+      "path": "project/src/agents/frozen_edge_navigator.py",
+      "sha256": "5c1e23bc34f2c907bcab1697ceeba8fadd370273fee2bfbaf54303cee3e38202",
+      "bytes": 5856,
+      "mutable_reference": false
+    },
+    "head": {
+      "path": "project/src/agents/edge_cue.py",
+      "sha256": "3e4fc82dc123b3f397c2f50f9e475909cd0a3642a8ae2765af0fdb45b2b4ba0c",
+      "bytes": 3597,
+      "mutable_reference": false
+    },
+    "cue": {
+      "path": "project/src/agents/target_cue.py",
+      "sha256": "09e8aa69114a0c7a5efc8c56743987febccd619849c77d8a53d7a257bdca2693",
+      "bytes": 2637,
+      "mutable_reference": false
+    },
+    "decoupled": {
+      "path": "project/src/agents/decoupled_cue.py",
+      "sha256": "b646a95c1018e3971c20d92620d3e6edd1e5885a307b7597b1d8d317ac504403",
+      "bytes": 1895,
+      "mutable_reference": false
+    },
+    "coverage": {
+      "path": "project/src/agents/parameterized_coverage.py",
+      "sha256": "086fb81e057738e14dfe786c2387d3e980f2e01a63191eb05cacba848610b556",
+      "bytes": 4546,
+      "mutable_reference": false
+    },
+    "training_code": {
+      "path": "project/src/train/dyncur_tiny.py",
+      "sha256": "5dc0d7ecef17ef0f067504215ecf6b379ddb0df32005c1f2590dba03e996a5e1",
+      "bytes": 17468,
+      "mutable_reference": false
+    },
+    "environment": {
+      "path": "project/src/env/environment.py",
+      "sha256": "ad19a173945f86ed04b18c0f5365e543217688d124271f51bc05f2747af92b5b",
+      "bytes": 5646,
+      "mutable_reference": false
+    },
+    "episode": {
+      "path": "project/src/env/episode.py",
+      "sha256": "3c85105ae7bf8efb90f1726e695c8db90e03544de342c874c08eb166e8019502",
+      "bytes": 4706,
+      "mutable_reference": false
+    },
+    "core": {
+      "path": "project/src/platform_core/engine_v2.py",
+      "sha256": "320cfafe0b5dffea7202b16d9faf0945a649d2833e17d458ba4af000a651d831",
+      "bytes": 32054,
+      "mutable_reference": false
+    },
+    "service": {
+      "path": "project/src/platform_core/service_v3.py",
+      "sha256": "6ab2d47b63ecf1031b3b413a65c302f9d7ba51b7c93868bbac7941021613b1b0",
+      "bytes": 1420,
+      "mutable_reference": false
+    },
+    "method_catalog": {
+      "path": "project/src/platform_core/method_catalog_v1.py",
+      "sha256": "f56abe9c6897756681af237004a5c7e8c3025ac71012428e4c8aa307da7b7093",
+      "bytes": 10847,
+      "mutable_reference": false
+    },
+    "server": {
+      "path": "project/src/webapp/workbench_server_v7.py",
+      "sha256": "a0cef0377596e968c9a4f0be53c5d3b3111132486af34d01b341c87fbb57e892",
+      "bytes": 3297,
+      "mutable_reference": false
+    },
+    "launcher": {
+      "path": "平台/启动平台.ps1",
+      "sha256": "92de86c540c40e49314a1cc6d1b990e48a2c3960e6f3befafe73c633f1e3bf83",
+      "bytes": 2474,
+      "mutable_reference": false
+    },
+    "gomaa_pdf": {
+      "path": "论文/GOMAA-Geo.pdf",
+      "sha256": "c3066cbb11f0e53d36e4a7e414a77a1a959b9053ea5467e1a6eeaeaf33a0287e",
+      "bytes": 14051742,
+      "mutable_reference": false
+    },
+    "geo_pdf": {
+      "path": "论文/GeoExplorer.pdf",
+      "sha256": "391d6e67618689522fc4aa19097abe1b24dbfbc74732babdc247cbe32e1de09f",
+      "bytes": 36935614,
+      "mutable_reference": false
+    },
+    "dyncur_pdf": {
+      "path": "论文/DynCur-Geo.pdf",
+      "sha256": "abbf401ac45daa1b27e4d90aef5a084357623bd1834f8ef402591835c9650301",
+      "bytes": 18817179,
+      "mutable_reference": false
+    }
+  },
+  "verdict_rule": "summary gives numbers; latest final verdict plus bound audit gives qualification",
+  "proposal_gap": "zero-training/multi-agent/multimodal/25-grid goals are not all delivered"
+}

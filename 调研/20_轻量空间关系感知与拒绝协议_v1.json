@@ -1,0 +1,1431 @@
+{
+  "task": "CV-029",
+  "date": "2026-10-23",
+  "research_design_frozen": true,
+  "actual_artifact_binding": false,
+  "actual_executor_binding": false,
+  "inference_authorized": false,
+  "training_authorized": false,
+  "navigation_admitted": false,
+  "candidate": {
+    "name": "CCVPE_KITTI_no_orientation_prior",
+    "repo": "https://github.com/tudelft-iv/CCVPE",
+    "commit": "3028aa5c1585d3c274c3a531bdce19846c9c3bd2",
+    "class_name": "CVM_KITTI",
+    "expected_upstream_weight_path": "models/KITTI/no_orientation_prior/model.pt",
+    "checkpoint_SHA256": null,
+    "forward_arguments": [
+      "grd",
+      "sat"
+    ],
+    "no_true_heading_GPS_rotation": true,
+    "training": "none;strictly frozen public checkpoint",
+    "unresolved": [
+      "exact official checkpoint file identity and byte size",
+      "complete dependency closure",
+      "measured parameter/RSS/VRAM",
+      "faithful Full and all-scale control adapter",
+      "actual inference results"
+    ]
+  },
+  "hypothesis": "a frozen spatial matcher can localize within a visible current tile and reject outside/unrelated pairs;does not estimate outside bearing or autonomous action",
+  "public_input_fields": [
+    "given_target_rgb",
+    "current_crop_rgb",
+    "public_cell",
+    "grid_size",
+    "parent_size"
+  ],
+  "forbidden_inputs": [
+    "goal_index",
+    "camera_xy",
+    "dx",
+    "dy",
+    "GPS",
+    "heading",
+    "source_id",
+    "case_id",
+    "unvisited_pixels",
+    "full_parent_RGB_in_local_screen"
+  ],
+  "preprocessing": {
+    "ground_size_hw": [
+      256,
+      1024
+    ],
+    "ground_mode": "aspect-preserving letterbox,bilinear resize,ImageNet-mean float padding;no FoV/rotation search",
+    "aerial_size_hw": [
+      512,
+      512
+    ],
+    "parent_native_hw": [
+      625,
+      625
+    ],
+    "local_mode": "evaluator cuts one125x125 tile;adapter receives only that tile and public rectangle;places it into mean-filled625x625 canvas then resizes512x512",
+    "normalize_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "normalize_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "deliberate_reproduction_difference": "ground letterbox instead of upstream anisotropic resize;local sparse canvas instead of complete aerial scene;not paper reproduction or isolated adapter ablation",
+    "no_padding_with_unvisited_texture": true,
+    "peak_native_mapping": "((col+0.5)*625/512,(row+0.5)*625/512)",
+    "visible_mask": "include output pixel centers only if native point lies in current tile half-open bounds"
+  },
+  "roles": {
+    "calibration": [
+      "opencvl_engineering_0",
+      "opencvl_engineering_1"
+    ],
+    "development_screen": [
+      "opencvl_engineering_2",
+      "opencvl_engineering_3"
+    ],
+    "confirmation": [],
+    "all4_previously_consumed_engineering": true,
+    "known_bias": "first2 images are dark;2/2 split fixed by original order,not score-based;not an independent confirmation",
+    "pretraining_geography": "unknown"
+  },
+  "cases": {
+    "calibration": [
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_0/12",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 12,
+        "current_crop_bounds": [
+          250,
+          250,
+          375,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "inside",
+          "query_xy_native": [
+            347.5,
+            342.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_0/7",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 7,
+        "current_crop_bounds": [
+          250,
+          125,
+          375,
+          250
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            347.5,
+            342.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_0/13",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 13,
+        "current_crop_bounds": [
+          375,
+          250,
+          500,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            347.5,
+            342.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_0/17",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 17,
+        "current_crop_bounds": [
+          250,
+          375,
+          375,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            347.5,
+            342.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_0/11",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 11,
+        "current_crop_bounds": [
+          125,
+          250,
+          250,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            347.5,
+            342.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_1/13",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 13,
+        "current_crop_bounds": [
+          375,
+          250,
+          500,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_1/8",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 8,
+        "current_crop_bounds": [
+          375,
+          125,
+          500,
+          250
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_1/14",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 14,
+        "current_crop_bounds": [
+          500,
+          250,
+          625,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_1/18",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 18,
+        "current_crop_bounds": [
+          375,
+          375,
+          500,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_0/opencvl_engineering_1/12",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_0",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 12,
+        "current_crop_bounds": [
+          250,
+          250,
+          375,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_0_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_1"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_0/12",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 12,
+        "current_crop_bounds": [
+          250,
+          250,
+          375,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_0/7",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 7,
+        "current_crop_bounds": [
+          250,
+          125,
+          375,
+          250
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_0/13",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 13,
+        "current_crop_bounds": [
+          375,
+          250,
+          500,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_0/17",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 17,
+        "current_crop_bounds": [
+          250,
+          375,
+          375,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_0/11",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_0",
+        "public_cell": 11,
+        "current_crop_bounds": [
+          125,
+          250,
+          250,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_0_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_1/13",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 13,
+        "current_crop_bounds": [
+          375,
+          250,
+          500,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "inside",
+          "query_xy_native": [
+            385.5,
+            268.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_1/8",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 8,
+        "current_crop_bounds": [
+          375,
+          125,
+          500,
+          250
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            385.5,
+            268.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_1/14",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 14,
+        "current_crop_bounds": [
+          500,
+          250,
+          625,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            385.5,
+            268.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_1/18",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 18,
+        "current_crop_bounds": [
+          375,
+          375,
+          500,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            385.5,
+            268.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      },
+      {
+        "case_id": "calibration/opencvl_engineering_1/opencvl_engineering_1/12",
+        "fold": "calibration",
+        "query_evaluator_only": "opencvl_engineering_1",
+        "reference_evaluator_only": "opencvl_engineering_1",
+        "public_cell": 12,
+        "current_crop_bounds": [
+          250,
+          250,
+          375,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_1_ground.png",
+        "parent_file_evaluator_only": "输入/pair_1_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            385.5,
+            268.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_0"
+      }
+    ],
+    "development_screen": [
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/17",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 17,
+        "current_crop_bounds": [
+          250,
+          375,
+          375,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "inside",
+          "query_xy_native": [
+            293.5,
+            383.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/12",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 12,
+        "current_crop_bounds": [
+          250,
+          250,
+          375,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            293.5,
+            383.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/18",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 18,
+        "current_crop_bounds": [
+          375,
+          375,
+          500,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            293.5,
+            383.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/22",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 22,
+        "current_crop_bounds": [
+          250,
+          500,
+          375,
+          625
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            293.5,
+            383.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_2/16",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 16,
+        "current_crop_bounds": [
+          125,
+          375,
+          250,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            293.5,
+            383.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/13",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 13,
+        "current_crop_bounds": [
+          375,
+          250,
+          500,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/8",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 8,
+        "current_crop_bounds": [
+          375,
+          125,
+          500,
+          250
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/14",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 14,
+        "current_crop_bounds": [
+          500,
+          250,
+          625,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/18",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 18,
+        "current_crop_bounds": [
+          375,
+          375,
+          500,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_2/opencvl_engineering_3/12",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_2",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 12,
+        "current_crop_bounds": [
+          250,
+          250,
+          375,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_2_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_3"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/17",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 17,
+        "current_crop_bounds": [
+          250,
+          375,
+          375,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/12",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 12,
+        "current_crop_bounds": [
+          250,
+          250,
+          375,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/18",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 18,
+        "current_crop_bounds": [
+          375,
+          375,
+          500,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/22",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 22,
+        "current_crop_bounds": [
+          250,
+          500,
+          375,
+          625
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_2/16",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_2",
+        "public_cell": 16,
+        "current_crop_bounds": [
+          125,
+          375,
+          250,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_2_aerial.png",
+        "evaluator_only": {
+          "relation": "unrelated",
+          "query_xy_native": null,
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/13",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 13,
+        "current_crop_bounds": [
+          375,
+          250,
+          500,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "inside",
+          "query_xy_native": [
+            405.5,
+            298.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/8",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 8,
+        "current_crop_bounds": [
+          375,
+          125,
+          500,
+          250
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            405.5,
+            298.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/14",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 14,
+        "current_crop_bounds": [
+          500,
+          250,
+          625,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            405.5,
+            298.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/18",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 18,
+        "current_crop_bounds": [
+          375,
+          375,
+          500,
+          500
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            405.5,
+            298.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      },
+      {
+        "case_id": "development_screen/opencvl_engineering_3/opencvl_engineering_3/12",
+        "fold": "development_screen",
+        "query_evaluator_only": "opencvl_engineering_3",
+        "reference_evaluator_only": "opencvl_engineering_3",
+        "public_cell": 12,
+        "current_crop_bounds": [
+          250,
+          250,
+          375,
+          375
+        ],
+        "target_file_evaluator_only": "输入/pair_3_ground.png",
+        "parent_file_evaluator_only": "输入/pair_3_aerial.png",
+        "evaluator_only": {
+          "relation": "outside",
+          "query_xy_native": [
+            405.5,
+            298.5
+          ],
+          "resolution_m_per_pixel": 0.16
+        },
+        "wrong_query_evaluator_only": "opencvl_engineering_2"
+      }
+    ]
+  },
+  "arms": [
+    "Full",
+    "Disabled",
+    "Mean",
+    "Wrong"
+  ],
+  "controls": {
+    "Full": "correct given ground photo",
+    "Disabled": "bypass all goal-matching maps as exact zeros before aerial decoder;do not normalize zero goal vectors or reuse hidden ground influence",
+    "Mean": "arithmetic mean of ground branch feature/descriptor tensors at every matching level from calibration0/1 only;no refit,developer labels or development images",
+    "Wrong": "fixed swap within own partition:0<->1,2<->3;original case labels unchanged"
+  },
+  "rejection": {
+    "score": "maximum raw finest-scale matching cosine over yaw bins and visible output pixels,not softmax maximum",
+    "score_range": [
+      -1,
+      1
+    ],
+    "accept": "Python float64 score>=float64 tau;do not cast threshold to model dtype",
+    "calibration": "Full20 cases only;maximize source-macro mean(TPR_inside,TNR_outside,TNR_unrelated)",
+    "tau_candidates": "midpoints between unique calibration scores plus finite nextafter(min,-inf)/nextafter(max,+inf)",
+    "tie_break": "largest tau",
+    "shared_tau_all_conditions": true,
+    "development_scores_cannot_recalibrate": true
+  },
+  "metrics": {
+    "main": "2/2 positive detection+<=5m localization,per-source false accepts,goal controls and provenance",
+    "planned_calibration_full": 20,
+    "planned_screen_base": 20,
+    "planned_screen_outputs": 80,
+    "strata_per_source": {
+      "inside": 1,
+      "outside": 4,
+      "unrelated": 5
+    },
+    "location": "native parent coordinates converted with0.16m/pixel;all positive prediction error reported including rejected ones",
+    "recovery_harm": "joint correct = accepted+<=5m for positives,rejected for negatives;report each class separately",
+    "baselines": [
+      "always_reject BA=2/3",
+      "always_accept BA=1/3",
+      "public whole-parent center",
+      "public current-tile center;no goal"
+    ],
+    "source_confidence": "only2 known development sources;exact4 source-resample supports,not independent statistical superiority",
+    "navigation_SR": "not applicable",
+    "outside_bearing_established": false
+  },
+  "gates": {
+    "complete_screen_outputs": 80,
+    "positive_accepted_within5m": 2,
+    "per_source_outside_false_accept_max": 0.1,
+    "per_source_unrelated_false_accept_max": 0.1,
+    "per_control_positive_recovery_minus_harm_min": 1,
+    "per_control_BA_gain_min": 0.05,
+    "audit_and_information_tests_required": true,
+    "engineering_required": true
+  },
+  "engineering": {
+    "pipeline_evaluations": 8,
+    "synthetic_warmup_evaluations_max": 4,
+    "inputs": "4 full paired references x original/wrapper equality;privileged engineering only",
+    "equality_abs_max": 1e-06,
+    "frozen_weight_SHA_before_after": true,
+    "strict_keys_shapes_dtypes": true,
+    "invalid_or_missing_case": "required completeness gate fails;do not silently drop",
+    "full_parent_geometry": "diagnostic only,not part of local-screen performance or an input allowed to an Agent"
+  },
+  "resources": {
+    "actual_current_model_loads": 0,
+    "actual_current_forward": 0,
+    "actual_current_raw_decodes": 0,
+    "actual_current_navigation": 0,
+    "max_complete_pipeline_evaluations": 112,
+    "planned_complete_pipeline_evaluations": 108,
+    "max_backbone_module_calls_without_caching": 224,
+    "max_parameters": 100000000,
+    "max_checkpoint_bytes": 402653184,
+    "max_new_checkpoint_copies": 1,
+    "max_CPU_RSS_bytes": 4294967296,
+    "max_CUDA_allocated_bytes": 2147483648,
+    "batch_size": 1,
+    "max_wall_seconds": 1800,
+    "retain_results_bytes": 16777216,
+    "weights_download_authorized": false,
+    "training_steps": 0,
+    "cloud_API": 0,
+    "MMGAG_reserved_groups": 0,
+    "memory_policy": "measure before main screen;never stop ComfyUI or another process;no automatic batch/model/cap increase",
+    "retention": "one public inference checkpoint,no optimizer;store scalar outputs and visible-region matching summaries only,not full multiyaw maps or duplicated datasets",
+    "future_original_decodes_max": 8,
+    "image_references_verified_now": "metadata references only;real executor must verify bytes and bind decoder before first use"
+  },
+  "stop": "one candidate/one calibrated threshold/one frozen screen;any failed gate closes this attempt,no tau/source/crop/architecture/seed search or autonomous-navigation/default upgrade",
+  "required_before_first_real_call": [
+    "user-authorized exact weight/directory/resource acquisition scope",
+    "official single checkpoint strict SHA and tensor binding",
+    "actual executor/preprocessor/control adapter source hashes",
+    "all original image SHA verified",
+    "engineering gradient-free/frozen/resource/input/control tests"
+  ],
+  "image_references": [
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_0_ground.png",
+      "bytes": 411632,
+      "sha256": "37347e32331d4f0cf24c2f6f9d0b8d5560b1b06f19c73621bb695cd9b3f0a980"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_0_aerial.png",
+      "bytes": 514417,
+      "sha256": "12c19dd4c69c2f4b1685b69ac46fab1ee723a55b3e05c648fdd74a527381d19a"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_1_ground.png",
+      "bytes": 530824,
+      "sha256": "60fb6d9c6c12d8a044e4cada2c64a491cfa2bcc799b61cf4c948c4a04f311b03"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_1_aerial.png",
+      "bytes": 585650,
+      "sha256": "a1fd06eb9c7ff450d15f7b1fea0c28c4da88dcade79705c44d1fc0429cc74b4b"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_2_ground.png",
+      "bytes": 455963,
+      "sha256": "82f2ea3ee5d0e941d5402fbb0a000c99e6b00acbfa6c158afe5f66a2b48d8863"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_2_aerial.png",
+      "bytes": 625106,
+      "sha256": "15abce257837caedae90edb4330405353c72117581660365b5f9fb79564ed87d"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_3_ground.png",
+      "bytes": 348980,
+      "sha256": "be9c12ded75f6a7329b2291152aaeffc4f6616a44209eb87a8f6a2aa590fbe75"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/pair_3_aerial.png",
+      "bytes": 626017,
+      "sha256": "88cad3a9ab9072268c574fe53835acbba6dc652546076229403b710fef842f18"
+    }
+  ],
+  "local_inputs": [
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/阶段封存.json",
+      "bytes": 7783,
+      "sha256": "f4a7901c8e1d55562b6a73d929b3897927a93497d174a97cf1a289d8ad733936"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/固定四对清单.json",
+      "bytes": 7646,
+      "sha256": "2cd22af6db31c62a22b2d1b44e086c9f926e6e0ff46cdf59827f15b1a79a854b"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/空间监督检查.json",
+      "bytes": 36609,
+      "sha256": "870fe1203664aba6964fd855bbb524a89416b6d18812e3a15ff31b72cc3588f3"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/像素质量回执.json",
+      "bytes": 5372,
+      "sha256": "7c0bda9ba9b17ed24cb3201189112d6c561c8c2fb1103e8846a1670d3eaa8c54"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/另实现核验.json",
+      "bytes": 734,
+      "sha256": "bc656979185375ee392ef10675ffe7338ddcf172622fff2fc9bf23a8db39253d"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/下一步边界.json",
+      "bytes": 370,
+      "sha256": "0ca1533d672a23d5529b9cf92e2b5abf728318e39018c0f4e9be7070ee4d3ab5"
+    },
+    {
+      "path": "调研/19_跨视角空间方案准入证据_v1.json",
+      "bytes": 35809,
+      "sha256": "cbae356b46285a02443e5de4f259853f8c7e337a4996fe0683dccdb7c6fbcff4"
+    },
+    {
+      "path": "调研/19_跨视角空间方案准入与后续执行_v1.md",
+      "bytes": 9237,
+      "sha256": "d748ceea52a2ca11d3e373bef8f121361ba620415196792fdf1a66fd919db258"
+    }
+  ],
+  "source_bindings": [
+    {
+      "path": "project/src/data/spatial_perception_protocol_v1.py",
+      "bytes": 16594,
+      "sha256": "9ea43fcc2452416e7bdde4561d412ceab2f2300ad4ad89db529f602011c69f9c"
+    },
+    {
+      "path": "project/src/eval/audit_spatial_perception_protocol_v1.py",
+      "bytes": 5263,
+      "sha256": "54f7fc3322f9d2a773e3dc93a20772571ebdf2d756f8b0e41e796c6096ab2f3c"
+    },
+    {
+      "path": "project/src/tests/test_spatial_perception_protocol_v1.py",
+      "bytes": 5808,
+      "sha256": "08ccf294b96d2bc53acac2078b1cffc18c652e6435769c6903eab318047fd62a"
+    },
+    {
+      "path": "project/src/documents/close_spatial_perception_protocol_v1.py",
+      "bytes": 14467,
+      "sha256": "66b8f572288d6516a4d63bcc746a0e9578f752e7cea737dac74157bc0f689247"
+    }
+  ],
+  "tests": {
+    "tests": 11,
+    "passed": true,
+    "synthetic_only": true,
+    "actual_model_call": 0
+  },
+  "public_static_verification": {
+    "train_KITTI.py": {
+      "sha256": "3e0e98fd3a7cdea77ed5fc5aca766b005fe517f6ff38ceb68979eec12e5a7872",
+      "bytes": 24250,
+      "model_class_line": 17,
+      "unknown_orientation_range_line": 32,
+      "checkpoint_locator_line": 282,
+      "url": "https://raw.githubusercontent.com/tudelft-iv/CCVPE/3028aa5c1585d3c274c3a531bdce19846c9c3bd2/train_KITTI.py"
+    },
+    "models.py": {
+      "sha256": "672b46aaf2a2f22c19b5ae18789831a4c5a97d52e171bfa1f1ef919b80ce32c4",
+      "bytes": 64638,
+      "class_start": 655,
+      "class_end": 950,
+      "forward_parameters": [
+        "self",
+        "grd",
+        "sat"
+      ],
+      "url": "https://raw.githubusercontent.com/tudelft-iv/CCVPE/3028aa5c1585d3c274c3a531bdce19846c9c3bd2/models.py"
+    },
+    "datasets.py": {
+      "sha256": "ad50e707c228b659958ae14f51a5203f7b67b47a3ad94b5ae1da2e62762800be",
+      "bytes": 28897,
+      "data_loader_truth_transform_lines": [
+        443,
+        577
+      ],
+      "not_used_as_current_inference_loader": true,
+      "url": "https://raw.githubusercontent.com/tudelft-iv/CCVPE/3028aa5c1585d3c274c3a531bdce19846c9c3bd2/datasets.py"
+    }
+  },
+  "upstream_constants": {
+    "GrdImg_H": 256,
+    "GrdImg_W": 1024,
+    "SatMap_original_sidelength": 512,
+    "SatMap_process_sidelength": 512,
+    "Default_lat": 49.015,
+    "Satmap_zoom": 18
+  },
+  "index_before": {
+    "count": 153,
+    "canonical_sha256": "a30530174400527b4ef25fcdbae5b0a161f836623235177c45bdd82c35552b20"
+  },
+  "runtime_current_before": {
+    "platform": "平台/实验工作台_v4/README.md",
+    "launcher": "平台/启动平台.ps1",
+    "server": "project/src/webapp/workbench_server_v18.py",
+    "static": "project/src/webapp/static_v10/",
+    "report": "中期报告相关/中期成果冻结版_v1/中期报告_基于主动探索的视觉地理定位方法设计与实现_冻结版_v2.docx",
+    "report_pdf": "中期报告相关/中期成果冻结版_v1/中期报告_基于主动探索的视觉地理定位方法设计与实现_冻结版_v2.pdf",
+    "midterm_freeze": "中期报告相关/中期成果冻结版_v1/README.md",
+    "benchmark_preparation": "项目导航/共同真实评测执行准备_v2/README.md",
+    "benchmark_training": "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v2/README.md",
+    "benchmark_evaluation": "DATA/processed_data/Masa/评测结果/共同学习基线对照_v1/README.md",
+    "benchmark_figures": "绘图/共同学习基线对照_v1/论文图_v2/README.md",
+    "benchmark_diagnosis": "DATA/processed_data/Masa/评测结果/GeoExplorer目标利用诊断_v1/README.md",
+    "benchmark_gradient_diagnosis": "DATA/processed_data/Masa/评测结果/GeoExplorer梯度贡献诊断_v1/README.md",
+    "benchmark_learning_curve": "DATA/processed_data/Masa/评测结果/GeoExplorer目标学习曲线诊断_v1/README.md",
+    "benchmark_supervision_context": "DATA/processed_data/Masa/评测结果/GeoExplorer监督情境覆盖诊断_v1/README.md",
+    "benchmark_evidence_close": "项目导航/GeoExplorer复现差异与诊断收束_v1/README.md",
+    "benchmark_position_engineering": "项目导航/GeoExplorer位置编码工程验证_v1/README.md",
+    "benchmark_position_development": "DATA/processed_data/Masa/训练结果/GeoExplorer位置编码同预算对照_v1/README.md",
+    "benchmark_position_development_report": "DATA/processed_data/Masa/训练结果/GeoExplorer位置编码同预算对照_v1/训练完成与开发对照报告_v2.md",
+    "paper_repro_materials": "总结报告相关/论文复现交付_v1/README.md",
+    "baseline_eligibility": "项目导航/学习基线资格核查_v1/README.md",
+    "gomaa_static_eligibility": "项目导航/GOMAA权重静态资格_v1/README.md",
+    "gomaa_engineering": "项目导航/GOMAA工程推理验证_v1/README.md",
+    "gomaa_development_navigation": "DATA/processed_data/Masa/评测结果/GOMAA开发闭环目标诊断_v1/README.md",
+    "baseline_provenance_followup": "项目导航/学习基线来源与编码器补证据_v1/README.md",
+    "benchmark_original_assets": "项目导航/原训练资料接收_v1/README.md",
+    "benchmark_joint_admission": "项目导航/原训练资产核验与共同验证准入_v1/共同验证条件草案_v1.md",
+    "benchmark_original_asset_intake": "项目导航/原训练资料接收_v1/README.md",
+    "platform_release": "平台/实验工作台_v4/地面目标连续观测与人工探索_v1/README.md",
+    "platform_validation": "平台/实验工作台_v4/方案与模型_v1/README.md",
+    "kernel": "project/src/platform_core/service_v11.py",
+    "launcher_cmd": "平台/启动平台.cmd",
+    "platform_maintenance": "平台/实验工作台_v4/入口清理_v1/README.md",
+    "storage_retention": "项目导航/归档永久清理_20261012_v1/README.md",
+    "launcher_validation": "平台/实验工作台_v4/启动修复_v1/README.md",
+    "transfer_asset_manifest": "平台/实验工作台_v4/地面目标连续观测与人工探索_v1/搬迁发布清单_v2.json",
+    "benchmark_independent_development": "项目导航/GeoExplorer策略分布一致性核查_v1/README.md",
+    "benchmark_mask_engineering": "项目导航/GeoExplorer分布一致性工程验证_v1/README.md",
+    "benchmark_mask_training": "DATA/processed_data/Masa/训练结果/GeoExplorer分布一致性成对开发_v1/README.md",
+    "benchmark_mask_driver": "project/src/tools/run_geoexplorer_mask_v3.py",
+    "benchmark_mask_continuation": "project/src/tools/finish_geoexplorer_mask_v2.py",
+    "benchmark_mask_report": "DATA/processed_data/Masa/训练结果/GeoExplorer分布一致性成对开发_v1/训练完成与开发对照报告_v1.md",
+    "method_catalog": "project/src/platform_core/method_catalog_v1.py",
+    "transfer_builder": "project/src/tools/package_workbench_v21.py",
+    "portable_validation": "平台/实验工作台_v4/便携闭环_v1/README.md",
+    "release_rehearsal": "平台/实验工作台_v4/发布彩排_v1/README.md",
+    "migration_guide": "平台/实验工作台_v4/发布彩排_v1/迁移与启动说明.md",
+    "demonstration_card": "平台/实验工作台_v4/发布彩排_v1/答辩操作卡.html",
+    "midterm_entry": "中期报告相关/README.md",
+    "final_report_preparation": "总结报告相关/总结准备_v1/README.md",
+    "final_report_plan": "总结报告相关/总结准备_v1/总结阶段计划_v1.md",
+    "final_report_template": "课程相关报告模版/综合工程设计-3-总结报告.docx",
+    "final_report_workspace": "总结报告相关/总结报告_v1/README.md",
+    "final_report_outline": "总结报告相关/总结报告_v1/准备/详细大纲_v1.md",
+    "final_claim_evidence": "总结报告相关/总结报告_v1/准备/论断与证据表.md",
+    "final_report": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.docx",
+    "final_report_pdf": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.pdf",
+    "final_report_entry": "总结报告相关/总结报告_v1/README.md",
+    "final_report_content": "project/src/documents/final_report_content_v3.json",
+    "final_report_audit": "总结报告相关/总结报告_v1/核验/初稿_v1/修订_v2/终校_v4/最终交付复核.json",
+    "crossview_entry": "DATA/processed_data/MM-GAG/跨视角公开资产准入_v1/README.md",
+    "crossview_inventory": "DATA/processed_data/MM-GAG/数据核验与跨视角准入_v1/数据准入汇总.json",
+    "crossview_next_plan": "DATA/processed_data/MM-GAG/跨视角公开资产准入_v1/下一项权重获取与工程条件.md",
+    "final_report_role": "stage snapshot; final integration postponed for ground-goal cross-view mainline",
+    "crossview_probe": "DATA/processed_data/MM-GAG/拍摄点语义与完整目标图验证_v1/完整目标图对照汇总.json",
+    "ground_encoder": "models/clip_vit_b32_public_v1",
+    "ground_encoder_provenance": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/模型获取回执.json",
+    "crossview_global_probe": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/感知对照汇总.json",
+    "crossview_local_probe": "DATA/processed_data/MM-GAG/局部语义匹配单因素验证_v1/局部匹配对照汇总.json",
+    "crossview_label_scale": "DATA/processed_data/MM-GAG/目标格定义与视觉尺度审查_v1/审查汇总.json",
+    "crossview_case_gallery": "DATA/processed_data/MM-GAG/目标格定义与视觉尺度审查_v1/样例审查.html",
+    "crossview_fullframe_probe": "DATA/processed_data/MM-GAG/拍摄点语义与完整目标图验证_v1/完整目标图对照汇总.json",
+    "crossview_goal_semantics": "DATA/processed_data/MM-GAG/拍摄点语义与完整目标图验证_v1/目标语义约定.json",
+    "crossview_goal_contract": "project/src/data/crossview_goal_semantics_v1.py",
+    "crossview_training_inventory": "DATA/processed_data/MM-GAG/对齐头训练素材准入_v1/素材核验汇总.json",
+    "crossview_data_admission_page": "DATA/processed_data/MM-GAG/对齐头训练素材准入_v1/数据可用性.html",
+    "crossview_conditional_head_design": "DATA/processed_data/MM-GAG/对齐头训练素材准入_v1/条件式小头方案_未准入.json",
+    "crossview_weak_manifest": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/派生素材清单.json",
+    "crossview_training_design": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/训练设计冻结.json",
+    "crossview_weak_pair_adapter": "project/src/data/weak_scene_pairs_v1.py",
+    "crossview_weak_pair_QA": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/弱配对审查.html",
+    "crossview_weak_alignment": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/感知对照汇总.json",
+    "crossview_weak_alignment_report": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/工程训练与目标对照报告.md",
+    "crossview_weak_alignment_audit": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/核验/另实现复核.json",
+    "crossview_weak_alignment_driver": "project/src/tools/run_weak_alignment_v3.py",
+    "crossview_weak_alignment_head": "project/src/agents/weak_alignment_head_v1.py",
+    "crossview_transfer_diagnosis": "DATA/processed_data/MM-GAG/弱场景与拍摄点迁移差异诊断_v1/迁移差异诊断报告.md",
+    "crossview_transfer_diagnosis_page": "DATA/processed_data/MM-GAG/弱场景与拍摄点迁移差异诊断_v1/诊断阅读页.html",
+    "crossview_transfer_diagnosis_audit": "DATA/processed_data/MM-GAG/弱场景与拍摄点迁移差异诊断_v1/核验/另实现复核.json",
+    "crossview_source_proposal": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/待审九五六分组.json",
+    "crossview_source_proposal_page": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/来源规划阅读页.html",
+    "crossview_source_roles": "DATA/processed_data/MM-GAG/同任务来源用途账本_v1.json",
+    "crossview_pixel_preflight": "DATA/processed_data/MM-GAG/同任务首批图像轴向预检_v1/工程汇总.json",
+    "crossview_pixel_preflight_audit": "DATA/processed_data/MM-GAG/同任务首批图像轴向预检_v1/核验/另实现复核.json",
+    "crossview_pixel_preflight_authorization": "DATA/processed_data/MM-GAG/同任务首批图像轴向预检_v1/用户授权记录.json",
+    "crossview_same_task_protocol": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/配对覆盖同预算冻结协议.json",
+    "crossview_same_task_queue": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/固定训练与开发队列.json",
+    "crossview_same_task_protocol_audit": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/核验/协议另实现复核.json",
+    "crossview_actual_executor": "project/src/tools/run_capturepoint_coverage_v1.py",
+    "crossview_actual_auditor": "project/src/eval/audit_capturepoint_coverage_execution_v1.py",
+    "crossview_target_head": "project/src/agents/capturepoint_target_head_v1.py",
+    "crossview_actual_scoring": "project/src/eval/capturepoint_coverage_scoring_v1.py",
+    "crossview_executor_engineering": "DATA/processed_data/MM-GAG/同任务对齐执行器工程_v2/工程结果.json",
+    "crossview_executor_binding": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/首forward绑定.json",
+    "crossview_same_task_execution": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/执行完成.json",
+    "crossview_same_task_report": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/十二配对同预算训练与目标对照报告.md",
+    "crossview_same_task_result": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/开发对照汇总.json",
+    "crossview_same_task_decision": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/核验/最终门槛判定.json",
+    "crossview_same_task_audit": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/核验/完整另实现复核.json",
+    "crossview_evidence_close": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/跨视角阶段证据与失败边界.md",
+    "crossview_evidence_gaps": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/证据与缺项表.json",
+    "crossview_platform_boundary": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/平台接入边界.md",
+    "crossview_evidence_close_driver": "project/src/eval/crossview_evidence_close_v2.py",
+    "crossview_label_admission_review": "DATA/processed_data/MM-GAG/同任务拍摄点标签与可辨识性审查_v1/审查汇总与收束判定.json",
+    "crossview_label_gallery": "DATA/processed_data/MM-GAG/同任务拍摄点标签与可辨识性审查_v1/README.md",
+    "crossview_label_review_driver": "project/src/tools/capturepoint_label_review_v1.py",
+    "crossview_current_material_training_branch_status": "frozen_representation_grid_signal_failed_route_closed_no_more_head_training",
+    "crossview_training_capacity": "DATA/processed_data/MM-GAG/训练正配对容量与划分追溯_v1/训练容量与取样追溯汇总.json",
+    "crossview_training_capacity_report": "DATA/processed_data/MM-GAG/训练正配对容量与划分追溯_v1/九对限制来源与训练配对容量报告.md",
+    "crossview_training_capacity_driver": "project/src/eval/capturepoint_training_capacity_v1.py",
+    "crossview_coverage_protocol": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/配对覆盖同预算冻结协议.json",
+    "crossview_coverage_queue": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/固定训练与开发队列.json",
+    "crossview_coverage_preparer": "project/src/tools/prepare_capturepoint_coverage_v1.py",
+    "crossview_coverage_protocol_auditor": "project/src/eval/audit_capturepoint_coverage_v1.py",
+    "crossview_coverage_gate": "project/src/data/capturepoint_coverage_protocol_v1.py",
+    "crossview_legacy9_executor": "project/src/tools/run_capturepoint_execution_v2.py",
+    "crossview_legacy9_auditor": "project/src/eval/audit_capturepoint_execution_v2.py",
+    "crossview_legacy9_actual_scoring": "project/src/eval/capturepoint_execution_scoring_v1.py",
+    "crossview_legacy9_executor_binding": "DATA/processed_data/MM-GAG/同任务对齐执行器工程_v2/首forward输入源码绑定.json",
+    "crossview_legacy9_same_task_protocol": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/同任务对齐训练冻结协议.json",
+    "crossview_legacy9_same_task_queue": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/固定编码与训练开发队列.json",
+    "crossview_legacy9_same_task_protocol_audit": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/核验/另实现复核.json",
+    "crossview_legacy9_same_task_execution": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/执行完成.json",
+    "crossview_legacy9_same_task_result": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/开发对照汇总.json",
+    "crossview_legacy9_same_task_decision": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/核验/最终门槛判定.json",
+    "crossview_legacy9_same_task_audit": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/核验/另实现复核.json",
+    "crossview_legacy9_same_task_report": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/同任务训练与目标对照报告.md",
+    "crossview_review": "DATA/processed_data/MM-GAG/配对覆盖复查与后续计划_v1/复查结论.md",
+    "crossview_review_evidence": "DATA/processed_data/MM-GAG/配对覆盖复查与后续计划_v1/复查汇总.json",
+    "crossview_review_driver": "project/src/eval/review_capturepoint_coverage_v1.py",
+    "crossview_signal_diagnosis": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/场景与精确格诊断报告.md",
+    "crossview_signal_result": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/开发信号筛选.json",
+    "crossview_signal_audit": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/另实现复核.json",
+    "crossview_signal_runner": "project/src/tools/run_crossview_signal_v1.py",
+    "crossview_platform_evidence": "平台/实验工作台_v4/地面目标证据_v1/README.md",
+    "ground_task_core": "project/src/platform_core/ground_tasks_v2.py",
+    "ground_task_CLI": "project/src/platform_core/cli_v4.py",
+    "ground_workbench": "平台/实验工作台_v4/地面任务可靠性修复_v1/README.md",
+    "ground_release_report": "平台/实验工作台_v4/地面任务可靠性修复_v1/发布与验收报告.md",
+    "ground_static": "project/src/webapp/static_ground_v1/",
+    "ground_layout": "project/src/webapp/ground_layout_v2.css",
+    "platform_service": "project/src/platform_core/service_v5.py",
+    "ground_workbench_review": "平台/实验工作台_v4/地面任务复查与后续规划_v1/README.md",
+    "ground_recovery_ui": "project/src/webapp/ground_recovery_v1.js",
+    "historical_platform_auditor": "project/src/tools/audit_ground_release_v2.py",
+    "crossview_asset_admission": "DATA/processed_data/MM-GAG/跨视角公开资产准入_v1/准入判定.json",
+    "local_goal_evidence_contract": "project/src/platform_core/local_goal_evidence_v1.py",
+    "local_goal_interface_preparation": "平台/实验工作台_v4/局部目标接口准备_v1/README.md",
+    "crossview_local_loop_engineering": "DATA/processed_data/MM-GAG/目标语义与局部闭环工程_v1/README.md",
+    "crossview_local_loop_status": "engineering_passed_semantic_trend_screen_failed_closed_no_default_upgrade",
+    "scene_kernel": "project/src/platform_core/scene_workspace_v2.py",
+    "scene_delivery": "平台/实验工作台_v4/场景交互复查与修复_v1/README.md",
+    "ground_encoding_engineering": "DATA/processed_data/MM-GAG/地面目标实时编码接口工程_v2/README.md",
+    "ground_encoding_interface": "project/src/platform_core/ground_encoding_v1.py",
+    "ground_encoding_loader": "project/src/agents/frozen_crossview_encoder_v2.py",
+    "ground_live": "平台/实验工作台_v4/地面证据四项修复与回归_v1/README.md",
+    "ground_walk": "平台/实验工作台_v4/地面目标连续观测与人工探索_v1/README.md"
+  },
+  "report_binding": {
+    "path": "调研/20_轻量空间关系感知与拒绝协议_v1.md",
+    "bytes": 9248,
+    "sha256": "dccd00437b03284a1877b440f071b0012dca6e16b2d207ad3700fcf5019d0444"
+  }
+}

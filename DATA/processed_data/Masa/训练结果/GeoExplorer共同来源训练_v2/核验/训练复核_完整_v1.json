@@ -1,0 +1,987 @@
+{
+  "status": "passed",
+  "checked_at": "2026-10-08T17:42:54.403298+08:00",
+  "training_completed": true,
+  "completed_seeds": [
+    0,
+    1,
+    2
+  ],
+  "runs": [
+    {
+      "seed": 0,
+      "status": "completed_verified",
+      "counts": {
+        "microbatches": 32700,
+        "epochs": 300,
+        "environment_steps": 163840,
+        "ppo_updates": 256,
+        "pretrain_optimizer_updates": 300,
+        "ppo_optimizer_updates": 1024,
+        "fit_sources_seen": 109,
+        "events": {
+          "start": 1,
+          "microbatch": 32700,
+          "epoch": 300,
+          "environment_step": 163840,
+          "ppo_update": 256
+        },
+        "peak_reserved_mib": 3784.0,
+        "last_committed_progress": {
+          "seed": 0,
+          "phase": "ppo",
+          "epoch": 300,
+          "microbatches": 32700,
+          "pretrain_updates": 300,
+          "environment_steps": 163840,
+          "ppo_updates": 256
+        }
+      },
+      "result": {
+        "status": "completed",
+        "seed": 0,
+        "phase": "ppo",
+        "epoch": 300,
+        "microbatches": 32700,
+        "pretrain_updates": 300,
+        "environment_steps": 163840,
+        "ppo_updates": 256,
+        "scientific_sr": false,
+        "elapsed_seconds": 10739.800040000002,
+        "checkpoint_selection": "final budget",
+        "protocol_sha256": "7d3415f60a29efe85da3d8daaf285b2f43cac542cdf9f2a82de2fbbeb0b8a7eb"
+      },
+      "log_prefix_sha256": "e474429fc51730731bfdace0a2143b2895eb0547f7034218ececcf0ae3b11981",
+      "checkpoint_seals": [
+        {
+          "file": "navigation_final.pt",
+          "sha256": "0725e42e8e529c3a9a4e6013c8afd222a677b7ff6550f7c5578f33f3b4ceb582",
+          "progress": {
+            "seed": 0,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 163840,
+            "ppo_updates": 256
+          }
+        },
+        {
+          "file": "ppo_update_112.pt",
+          "sha256": "e8f15a1e3352493c0aa03a46a6e035e2f3083940bdf69ad86b1f353e0f1fe166",
+          "progress": {
+            "seed": 0,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 71680,
+            "ppo_updates": 112
+          }
+        },
+        {
+          "file": "ppo_update_128.pt",
+          "sha256": "48dbd32d4492eb76e9aead14b79ce209a8981da44a12c61a195ad21788ae86e3",
+          "progress": {
+            "seed": 0,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 81920,
+            "ppo_updates": 128
+          }
+        },
+        {
+          "file": "ppo_update_144.pt",
+          "sha256": "10d465007f42ed091d7013aa310bbcfabfeceb30313dae4afe13f809d8b9f490",
+          "progress": {
+            "seed": 0,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 92160,
+            "ppo_updates": 144
+          }
+        },
+        {
+          "file": "ppo_update_16.pt",
+          "sha256": "96bbf29ea82a30b2f11b85d94b0962ce7896d1201b87e43593fceace82de7b13",
+          "progress": {
+            "seed": 0,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 10240,
+            "ppo_updates": 16
+          }
+        },
+        {
+          "file": "ppo_update_160.pt",
+          "sha256": "e05880b424c3d4d9f0e0d1c842a7e194c20a7f6f9386bcda6eaa8ecdbcfbaf8b",
+          "progress": {
+            "seed": 0,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 102400,
+            "ppo_updates": 160
+          }
+        },
+        {
+          "file": "ppo_update_176.pt",
+          "sha256": "5a8b2d08fcec5f8cf95d41a2ac15280b9bcf436526de180fe7fc324615a926c4",
+          "progress": {
+            "seed": 0,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 112640,
+            "ppo_updates": 176
+          }
+        },
+        {
+          "file": "ppo_update_192.pt",
+          "sha256": "c7346adb92e4d79059b7afac9cf1605c40f709ce19a89579ef1e9a86ccfac33d",
+          "progress": {
+            "seed": 0,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 122880,
+            "ppo_updates": 192
+          }
+        },
+        {
+          "file": "ppo_update_208.pt",
+          "sha256": "eae52fd217f3c9638ffea24c49e589bf57eb9fb4211894ba7430cf543fe3ad99",
+          "progress": {
+            "seed": 0,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 133120,
+            "ppo_updates": 208
+          }
+        },
+        {
+          "file": "ppo_update_224.pt",
+          "sha256": "71bb5093be711f9943c15a986df2f180e9bb30ec202bf03d3f025a9c5b3492ae",
+          "progress": {
+            "seed": 0,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 143360,
+            "ppo_updates": 224
+          }
+        },
+        {
+          "file": "ppo_update_240.pt",
+          "sha256": "399e92aaad56d49ebcd10f6a76cd2724bd19f403b30b2d01f1f1c2c8d27bb1dc",
+          "progress": {
+            "seed": 0,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 153600,
+            "ppo_updates": 240
+          }
+        },
+        {
+          "file": "ppo_update_256.pt",
+          "sha256": "50c3ad67b3ff3e02fbecffc2b635ee5cd6695389a543eaac1bcb29e1fb192126",
+          "progress": {
+            "seed": 0,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 163840,
+            "ppo_updates": 256
+          }
+        },
+        {
+          "file": "ppo_update_32.pt",
+          "sha256": "bee34b1461d7f03bb8afdbc0166ab0d42c8e4cbef17ddb27424d36f76d13e3e0",
+          "progress": {
+            "seed": 0,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 20480,
+            "ppo_updates": 32
+          }
+        },
+        {
+          "file": "ppo_update_48.pt",
+          "sha256": "e1af1e705df1bec9f36a36ba1d02f70f0dda6a26571a66193eece782e7caec23",
+          "progress": {
+            "seed": 0,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 30720,
+            "ppo_updates": 48
+          }
+        },
+        {
+          "file": "ppo_update_64.pt",
+          "sha256": "de145d6f8235b779a6abb39a32fee49c4571b79be552713febd4d142a2c55cfd",
+          "progress": {
+            "seed": 0,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 40960,
+            "ppo_updates": 64
+          }
+        },
+        {
+          "file": "ppo_update_80.pt",
+          "sha256": "f470fc46c5bff828b21f74e22b34fabc642b2146bf5fbcc49d05579bdeee2524",
+          "progress": {
+            "seed": 0,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 51200,
+            "ppo_updates": 80
+          }
+        },
+        {
+          "file": "ppo_update_96.pt",
+          "sha256": "853cb3e518733c2d6957c37b0f3643c645bd5ab80c3fcf69179064307df93b6f",
+          "progress": {
+            "seed": 0,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 61440,
+            "ppo_updates": 96
+          }
+        },
+        {
+          "file": "pretrain_epoch_150.pt",
+          "sha256": "227d9826a56826aa495aa4202134618e7607b55e0dad760781061b41f6d0006a",
+          "progress": {
+            "seed": 0,
+            "phase": "pretrain",
+            "epoch": 150,
+            "microbatches": 16350,
+            "pretrain_updates": 150,
+            "environment_steps": 0,
+            "ppo_updates": 0
+          }
+        },
+        {
+          "file": "pretrain_epoch_300.pt",
+          "sha256": "69387a8d0b8a6e18e823a33834137f26b0675a357802f08ea6ef380a407aabb8",
+          "progress": {
+            "seed": 0,
+            "phase": "pretrain",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 0,
+            "ppo_updates": 0
+          }
+        }
+      ]
+    },
+    {
+      "seed": 1,
+      "status": "completed_verified",
+      "counts": {
+        "microbatches": 32700,
+        "epochs": 300,
+        "environment_steps": 163840,
+        "ppo_updates": 256,
+        "pretrain_optimizer_updates": 300,
+        "ppo_optimizer_updates": 1024,
+        "fit_sources_seen": 109,
+        "events": {
+          "start": 1,
+          "microbatch": 32700,
+          "epoch": 300,
+          "environment_step": 163840,
+          "ppo_update": 256
+        },
+        "peak_reserved_mib": 3784.0,
+        "last_committed_progress": {
+          "seed": 1,
+          "phase": "ppo",
+          "epoch": 300,
+          "microbatches": 32700,
+          "pretrain_updates": 300,
+          "environment_steps": 163840,
+          "ppo_updates": 256
+        }
+      },
+      "result": {
+        "status": "completed",
+        "seed": 1,
+        "phase": "ppo",
+        "epoch": 300,
+        "microbatches": 32700,
+        "pretrain_updates": 300,
+        "environment_steps": 163840,
+        "ppo_updates": 256,
+        "scientific_sr": false,
+        "elapsed_seconds": 14394.4644234,
+        "checkpoint_selection": "final budget",
+        "protocol_sha256": "7d3415f60a29efe85da3d8daaf285b2f43cac542cdf9f2a82de2fbbeb0b8a7eb"
+      },
+      "log_prefix_sha256": "e03ecf9589c8650f10237f670f4a4995d3e1623f6e5542202cc46801713215de",
+      "checkpoint_seals": [
+        {
+          "file": "navigation_final.pt",
+          "sha256": "0350cccf32ead97f834878b6eb1b91ffb0c444b958f181b9453fc7f888bba000",
+          "progress": {
+            "seed": 1,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 163840,
+            "ppo_updates": 256
+          }
+        },
+        {
+          "file": "ppo_update_112.pt",
+          "sha256": "a0be8dda33c7c4433c45dff3aee4fa6c0ac13a1ea996d0408410ad09dce90a5d",
+          "progress": {
+            "seed": 1,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 71680,
+            "ppo_updates": 112
+          }
+        },
+        {
+          "file": "ppo_update_128.pt",
+          "sha256": "92868c82e44f0c30b1827bacb92fda110a64c674d886b98f497aa95e534e6410",
+          "progress": {
+            "seed": 1,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 81920,
+            "ppo_updates": 128
+          }
+        },
+        {
+          "file": "ppo_update_144.pt",
+          "sha256": "36e353f988fd3fb2ca5cab60df50a9c5d8d8560bbd4b4432e07b4e9ba5337e35",
+          "progress": {
+            "seed": 1,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 92160,
+            "ppo_updates": 144
+          }
+        },
+        {
+          "file": "ppo_update_16.pt",
+          "sha256": "c60e2aa0cddcc5c4fb6d2ec5ed448b5aac48a85a0ff10098900ac105c2aa41d4",
+          "progress": {
+            "seed": 1,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 10240,
+            "ppo_updates": 16
+          }
+        },
+        {
+          "file": "ppo_update_160.pt",
+          "sha256": "0fce7702bc880a5edbf83cc7c09065bd8dbc40b2462eab973fa3559323b2a4f2",
+          "progress": {
+            "seed": 1,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 102400,
+            "ppo_updates": 160
+          }
+        },
+        {
+          "file": "ppo_update_176.pt",
+          "sha256": "ec56e49acde5c94786aefc6ccaa12c065d9d99f5ff4002e8ec3ab7cfa39394cc",
+          "progress": {
+            "seed": 1,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 112640,
+            "ppo_updates": 176
+          }
+        },
+        {
+          "file": "ppo_update_192.pt",
+          "sha256": "41e43576fe2cf6d9f62145aef8a968fbac91f59c59b76bbccbde188ff970588a",
+          "progress": {
+            "seed": 1,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 122880,
+            "ppo_updates": 192
+          }
+        },
+        {
+          "file": "ppo_update_208.pt",
+          "sha256": "9bf29f6346557ea51f37d6233a5c602aabbe95e591c44ddfa2d53c7f516bdd1b",
+          "progress": {
+            "seed": 1,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 133120,
+            "ppo_updates": 208
+          }
+        },
+        {
+          "file": "ppo_update_224.pt",
+          "sha256": "d341848d0c76f1df6d9e6277425e6802e05b462b8e5059eae657b54d84cb1e79",
+          "progress": {
+            "seed": 1,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 143360,
+            "ppo_updates": 224
+          }
+        },
+        {
+          "file": "ppo_update_240.pt",
+          "sha256": "66c7c7f331f2b96d331d5ba97c8d50cc4bd1a4f3ba6f71af080676d5a61f96b9",
+          "progress": {
+            "seed": 1,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 153600,
+            "ppo_updates": 240
+          }
+        },
+        {
+          "file": "ppo_update_256.pt",
+          "sha256": "868d81ad31ec2626c8b0e0f4b04cc4a9fcc2dfadbe1f0c7fde76fba6118709b6",
+          "progress": {
+            "seed": 1,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 163840,
+            "ppo_updates": 256
+          }
+        },
+        {
+          "file": "ppo_update_32.pt",
+          "sha256": "7dca3414e012e5d7991b80eb1e1c1e250bcde17a05a99dee0d7f4ffe9aa245aa",
+          "progress": {
+            "seed": 1,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 20480,
+            "ppo_updates": 32
+          }
+        },
+        {
+          "file": "ppo_update_48.pt",
+          "sha256": "cf9057e223c28b89b058b4f17315be39cff8f6e9413e1371e7847c2140107d94",
+          "progress": {
+            "seed": 1,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 30720,
+            "ppo_updates": 48
+          }
+        },
+        {
+          "file": "ppo_update_64.pt",
+          "sha256": "97c5fd881bf6f357074c9c5be40c1e1daf1b7dcab27fa4c77ee0095e7865dd10",
+          "progress": {
+            "seed": 1,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 40960,
+            "ppo_updates": 64
+          }
+        },
+        {
+          "file": "ppo_update_80.pt",
+          "sha256": "a93bcd718866a595debab61fb42b4bf2df0c63154d95a98265e24f8d8bd6549c",
+          "progress": {
+            "seed": 1,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 51200,
+            "ppo_updates": 80
+          }
+        },
+        {
+          "file": "ppo_update_96.pt",
+          "sha256": "a98fb3cf61d24b78a117f717169eac403db625cf61a9f26a6981be5cd20f8065",
+          "progress": {
+            "seed": 1,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 61440,
+            "ppo_updates": 96
+          }
+        },
+        {
+          "file": "pretrain_epoch_150.pt",
+          "sha256": "6386c6eb6765980162249572da841ec395a5f74cd106f0d083cb95fb01c9b512",
+          "progress": {
+            "seed": 1,
+            "phase": "pretrain",
+            "epoch": 150,
+            "microbatches": 16350,
+            "pretrain_updates": 150,
+            "environment_steps": 0,
+            "ppo_updates": 0
+          }
+        },
+        {
+          "file": "pretrain_epoch_300.pt",
+          "sha256": "f2af56de10dd37ae13c2d420581106aecdb87dbfcc56cf9a87cbfab3fa2eb731",
+          "progress": {
+            "seed": 1,
+            "phase": "pretrain",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 0,
+            "ppo_updates": 0
+          }
+        }
+      ]
+    },
+    {
+      "seed": 2,
+      "status": "completed_verified",
+      "counts": {
+        "microbatches": 32700,
+        "epochs": 300,
+        "environment_steps": 163840,
+        "ppo_updates": 256,
+        "pretrain_optimizer_updates": 300,
+        "ppo_optimizer_updates": 1024,
+        "fit_sources_seen": 109,
+        "events": {
+          "start": 1,
+          "microbatch": 32700,
+          "epoch": 300,
+          "environment_step": 163840,
+          "ppo_update": 256
+        },
+        "peak_reserved_mib": 3784.0,
+        "last_committed_progress": {
+          "seed": 2,
+          "phase": "ppo",
+          "epoch": 300,
+          "microbatches": 32700,
+          "pretrain_updates": 300,
+          "environment_steps": 163840,
+          "ppo_updates": 256
+        }
+      },
+      "result": {
+        "status": "completed",
+        "seed": 2,
+        "phase": "ppo",
+        "epoch": 300,
+        "microbatches": 32700,
+        "pretrain_updates": 300,
+        "environment_steps": 163840,
+        "ppo_updates": 256,
+        "scientific_sr": false,
+        "elapsed_seconds": 19776.70489159999,
+        "checkpoint_selection": "final budget",
+        "protocol_sha256": "7d3415f60a29efe85da3d8daaf285b2f43cac542cdf9f2a82de2fbbeb0b8a7eb"
+      },
+      "log_prefix_sha256": "9169ed0d7642eaa954756124a5cd85c049f6ec2344853d44bcd88270e2962aac",
+      "checkpoint_seals": [
+        {
+          "file": "navigation_final.pt",
+          "sha256": "86b7912242cf61122c0cca68811a1a3823ed364aeb2bac1dc1db97084eb6ce2a",
+          "progress": {
+            "seed": 2,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 163840,
+            "ppo_updates": 256
+          }
+        },
+        {
+          "file": "ppo_update_112.pt",
+          "sha256": "0f16e5bacfe1940364541835566bdd2d1c1491a37958a374ebf0e4b24453aaf1",
+          "progress": {
+            "seed": 2,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 71680,
+            "ppo_updates": 112
+          }
+        },
+        {
+          "file": "ppo_update_128.pt",
+          "sha256": "c3243df729f6d5b6ad28902f5a38a73c84ba5e7a73367272c7689d32d43e64fc",
+          "progress": {
+            "seed": 2,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 81920,
+            "ppo_updates": 128
+          }
+        },
+        {
+          "file": "ppo_update_144.pt",
+          "sha256": "5938788ba6fb05ae7fcc5885840c04495832340a6cbbe6dbc7134e4ec16bfe0c",
+          "progress": {
+            "seed": 2,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 92160,
+            "ppo_updates": 144
+          }
+        },
+        {
+          "file": "ppo_update_16.pt",
+          "sha256": "ea72c4b17ed8417140a2513e548daeed8660baef0844b95ae22bef58c2785a8a",
+          "progress": {
+            "seed": 2,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 10240,
+            "ppo_updates": 16
+          }
+        },
+        {
+          "file": "ppo_update_160.pt",
+          "sha256": "b36e77eeeed447d55de841306e446b5bff83ca5b33e0789fb31446c4c5c659bd",
+          "progress": {
+            "seed": 2,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 102400,
+            "ppo_updates": 160
+          }
+        },
+        {
+          "file": "ppo_update_176.pt",
+          "sha256": "de990b8560203b51b9a6fd694576be5bd93993ae097f9e1fd021a1d4379bf29b",
+          "progress": {
+            "seed": 2,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 112640,
+            "ppo_updates": 176
+          }
+        },
+        {
+          "file": "ppo_update_192.pt",
+          "sha256": "13673aed5550cda6de859b47a9884b2ccf85c3d7421fa463aeab655179c80bed",
+          "progress": {
+            "seed": 2,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 122880,
+            "ppo_updates": 192
+          }
+        },
+        {
+          "file": "ppo_update_208.pt",
+          "sha256": "488ed224cf7f54aa3515fb80536469e8df48e8bb79f3ac15f385b6e3186e6beb",
+          "progress": {
+            "seed": 2,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 133120,
+            "ppo_updates": 208
+          }
+        },
+        {
+          "file": "ppo_update_224.pt",
+          "sha256": "786c7c1c21485386d316f20b71adc17f460510843d8218661886fc371bb9381a",
+          "progress": {
+            "seed": 2,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 143360,
+            "ppo_updates": 224
+          }
+        },
+        {
+          "file": "ppo_update_240.pt",
+          "sha256": "3709ef539da9374645913778119a878abe3b152270795908e4a7573191e9c170",
+          "progress": {
+            "seed": 2,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 153600,
+            "ppo_updates": 240
+          }
+        },
+        {
+          "file": "ppo_update_256.pt",
+          "sha256": "20c2350a39958b61e22126a7d44d4682627d89df01e490e74568aa1118a4360d",
+          "progress": {
+            "seed": 2,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 163840,
+            "ppo_updates": 256
+          }
+        },
+        {
+          "file": "ppo_update_32.pt",
+          "sha256": "e8c95bb648b365320efe3dd8529eea740c3e98b9d2dcccab5e7e2701635e2f53",
+          "progress": {
+            "seed": 2,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 20480,
+            "ppo_updates": 32
+          }
+        },
+        {
+          "file": "ppo_update_48.pt",
+          "sha256": "ef025da8417e61d477405c6f4607a0c1bcec5c0a0d3c06df9cabef6fcaa855cf",
+          "progress": {
+            "seed": 2,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 30720,
+            "ppo_updates": 48
+          }
+        },
+        {
+          "file": "ppo_update_64.pt",
+          "sha256": "c89f60d5e98ccb3153b716dc05599e1cafacb8c45950631c724de34d3e296e6b",
+          "progress": {
+            "seed": 2,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 40960,
+            "ppo_updates": 64
+          }
+        },
+        {
+          "file": "ppo_update_80.pt",
+          "sha256": "44a5abcbfbf26d7e6ed3b67c66be5e42445780189d4fee99baecd575b1138254",
+          "progress": {
+            "seed": 2,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 51200,
+            "ppo_updates": 80
+          }
+        },
+        {
+          "file": "ppo_update_96.pt",
+          "sha256": "3acfa78fb65fa61aa0cd446847c56bf0392d97124971b211c6110b152c94a0f8",
+          "progress": {
+            "seed": 2,
+            "phase": "ppo",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 61440,
+            "ppo_updates": 96
+          }
+        },
+        {
+          "file": "pretrain_epoch_150.pt",
+          "sha256": "8b975cb002f9a5e52bdce38ab770438dcb1df3baae2612698bcd7d23211101c1",
+          "progress": {
+            "seed": 2,
+            "phase": "pretrain",
+            "epoch": 150,
+            "microbatches": 16350,
+            "pretrain_updates": 150,
+            "environment_steps": 0,
+            "ppo_updates": 0
+          }
+        },
+        {
+          "file": "pretrain_epoch_300.pt",
+          "sha256": "0b233cafb9d92478906cca40c35b0b8888ae5d9085cc8212a8242dc6e1c24580",
+          "progress": {
+            "seed": 2,
+            "phase": "pretrain",
+            "epoch": 300,
+            "microbatches": 32700,
+            "pretrain_updates": 300,
+            "environment_steps": 0,
+            "ppo_updates": 0
+          }
+        }
+      ]
+    }
+  ],
+  "input_bindings_checked": 2785,
+  "original_failed_files_unchanged": 24,
+  "protocol_sha256": "7d3415f60a29efe85da3d8daaf285b2f43cac542cdf9f2a82de2fbbeb0b8a7eb",
+  "output_bytes_observed": 13929047989,
+  "driver_summary": {
+    "status": "completed",
+    "runs": [
+      {
+        "seed": 0,
+        "status": "completed",
+        "timed_out": false,
+        "child_pid": 160716,
+        "exit_code": 0,
+        "gpu_free_before_mib": 7049,
+        "active_seconds": 10749.234096500004,
+        "result": {
+          "status": "completed",
+          "seed": 0,
+          "phase": "ppo",
+          "epoch": 300,
+          "microbatches": 32700,
+          "pretrain_updates": 300,
+          "environment_steps": 163840,
+          "ppo_updates": 256,
+          "scientific_sr": false,
+          "elapsed_seconds": 10739.800040000002,
+          "checkpoint_selection": "final budget",
+          "protocol_sha256": "7d3415f60a29efe85da3d8daaf285b2f43cac542cdf9f2a82de2fbbeb0b8a7eb"
+        }
+      },
+      {
+        "seed": 1,
+        "status": "completed",
+        "timed_out": false,
+        "child_pid": 137996,
+        "exit_code": 0,
+        "gpu_free_before_mib": 7188,
+        "active_seconds": 14403.7935401,
+        "result": {
+          "status": "completed",
+          "seed": 1,
+          "phase": "ppo",
+          "epoch": 300,
+          "microbatches": 32700,
+          "pretrain_updates": 300,
+          "environment_steps": 163840,
+          "ppo_updates": 256,
+          "scientific_sr": false,
+          "elapsed_seconds": 14394.4644234,
+          "checkpoint_selection": "final budget",
+          "protocol_sha256": "7d3415f60a29efe85da3d8daaf285b2f43cac542cdf9f2a82de2fbbeb0b8a7eb"
+        }
+      },
+      {
+        "seed": 2,
+        "status": "completed",
+        "timed_out": false,
+        "child_pid": 117544,
+        "exit_code": 0,
+        "gpu_free_before_mib": 7183,
+        "active_seconds": 19787.60894579999,
+        "result": {
+          "status": "completed",
+          "seed": 2,
+          "phase": "ppo",
+          "epoch": 300,
+          "microbatches": 32700,
+          "pretrain_updates": 300,
+          "environment_steps": 163840,
+          "ppo_updates": 256,
+          "scientific_sr": false,
+          "elapsed_seconds": 19776.70489159999,
+          "checkpoint_selection": "final budget",
+          "protocol_sha256": "7d3415f60a29efe85da3d8daaf285b2f43cac542cdf9f2a82de2fbbeb0b8a7eb"
+        }
+      }
+    ],
+    "failure": null,
+    "active_seconds": 44940.636582399995,
+    "resource_wait_seconds": 0.2862728000036441,
+    "scientific_sr": false,
+    "confirmation_navigation": 0,
+    "reserve_regions_consumed": 0,
+    "previous_failed_attempt": "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1",
+    "extra_failed_compute_reported_separately": true
+  },
+  "audit_source_sha256": "d3f713f730de616ad72623c4ab8e74b0d8abd49188d4fad081920e514b4395d9",
+  "audit_model_forward": 0,
+  "new_navigation": 0,
+  "scientific_sr": false,
+  "reserve_regions_consumed": 0,
+  "independent_person_review": false,
+  "scope": "same agent, separate counters/paths/reward equation/seal arithmetic; not independent personnel"
+}

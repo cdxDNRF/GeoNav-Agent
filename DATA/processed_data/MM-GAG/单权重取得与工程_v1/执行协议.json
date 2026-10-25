@@ -1,0 +1,81 @@
+{
+  "task": "CV-023A",
+  "date": "2026-10-20",
+  "authorization": "用户开始有预算上限的权重取得与工程检查；内部团队使用，不再分发",
+  "candidate": "Sample4Geo/CVUSA",
+  "commit": "498c6511478053ddb4a43f24a9f4942fab238f09",
+  "file_id": "1dZ9itDjS-h5KHc23OQb8oHqJ3KoSaPyS",
+  "canonical_url": "https://drive.google.com/file/d/1dZ9itDjS-h5KHc23OQb8oHqJ3KoSaPyS/view",
+  "archive_bytes": 1626048556,
+  "member": "pretrained/cvusa/convnext_base.fb_in22k_ft_in1k_384/weights_e40_98.6830.pth",
+  "network_body_cap_bytes": 536870912,
+  "member_uncompressed_cap_bytes": 402653184,
+  "member_compressed_cap_bytes": 402653184,
+  "total_new_disk_cap_bytes": 1073741824,
+  "evidence_cap_bytes": 8388608,
+  "dependency_cap_bytes": 33554432,
+  "range_requests_cap": 8,
+  "acquisition_wall_seconds": 1200,
+  "full_archive_fallback": false,
+  "retention": "single verified inference checkpoint; no full archive; successful compressed member removed after SHA+CRC receipt; failed partial retained for audit, no automatic retry",
+  "dependency_candidate": "isolated timm==1.0.20 --no-deps --no-cache-dir; existing torch/torchvision/huggingface-hub/safetensors",
+  "backbone": "convnext_base.fb_in22k_ft_in1k_384",
+  "pretrained_download": false,
+  "strict_load": true,
+  "weights_only": true,
+  "device": "cpu",
+  "max_simultaneous_model_parameters": 100000000,
+  "max_input_forwards": 6,
+  "max_raw_images": 2,
+  "max_engineering_wall_seconds": 600,
+  "fixed_preprocess": {
+    "ground_hw": [
+      140,
+      768
+    ],
+    "aerial_hw": [
+      384,
+      384
+    ],
+    "resize": "cv2.INTER_LINEAR_EXACT; RGB; no crop/padding/cutting",
+    "normalize_mean": [
+      0.485,
+      0.456,
+      0.406
+    ],
+    "normalize_std": [
+      0.229,
+      0.224,
+      0.225
+    ],
+    "exif": "PIL ImageOps.exif_transpose before RGB for ordinary photo; documented adaptation vs original cv2 loader"
+  },
+  "engineering_source_id": "mmgag_063",
+  "raw_inputs": [
+    {
+      "path": "DATA/raw_data/MM-GAG/ground_images_jpg/IMG_3551.jpg",
+      "bytes": 1131548,
+      "sha256": "ef6c84aa5443535ea41289265cc4418cf193379d3ba5d947c79deee4c12cff99"
+    },
+    {
+      "path": "DATA/raw_data/MM-GAG/sat_images_patches/IMG_3551.HEIC/sat_1_1.jpg",
+      "bytes": 24113,
+      "sha256": "5c5fb113c1100870ad462f29af6e3f0e6161c47de3ffee7766bd3aaa2760a322"
+    }
+  ],
+  "source_selection": "first tile in old manifest; not selected by scores or target label",
+  "training": 0,
+  "navigation": 0,
+  "development_scores": 0,
+  "confirmation_access": 0,
+  "model_APIs": 0,
+  "ground_truth_used_by_model": false,
+  "permission_status": "no redistribution permission established; no external sharing",
+  "stop_conditions": [
+    "HTTP range not206/exact",
+    "archive/member bounds or CRC/SHA failure",
+    "strict key/shape incompatibility",
+    "resource/time cap",
+    "nonfinite/nondeterministic output or model mutation"
+  ]
+}

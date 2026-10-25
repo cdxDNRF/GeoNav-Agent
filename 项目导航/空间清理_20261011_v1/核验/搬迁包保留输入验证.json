@@ -1,0 +1,26 @@
+{
+  "passed": true,
+  "packages": [
+    {
+      "original": {
+        "path": "平台/实验工作台_v4/便携交付/GeoNav工作台V4_完整包.zip",
+        "bytes": 417741550,
+        "sha256": "27c1a25d83b1a37e971408ce858ab6afaf05c5b018a33cdc811d6352d7d28e67"
+      },
+      "retained_inputs": 193,
+      "backup_manifest": "项目导航/空间清理_20261011_v1/备份/完整包_搬迁清单.json"
+    },
+    {
+      "original": {
+        "path": "平台/实验工作台_v4/便携交付/GeoNav工作台V4_轻量包.zip",
+        "bytes": 91614791,
+        "sha256": "070a582f1c9e641c3284941df2454f33fc66794f278a8893b6d79dc5184de378"
+      },
+      "retained_inputs": 191,
+      "backup_manifest": "项目导航/空间清理_20261011_v1/备份/轻量包_搬迁清单.json"
+    }
+  ],
+  "rebuild_container_sha_not_guaranteed": true,
+  "python": "D:/PYTHON/python.exe",
+  "rebuild": "python -B -m project.src.tools.package_workbench_v1 NEW_PATH.zip [--with-encoder]"
+}

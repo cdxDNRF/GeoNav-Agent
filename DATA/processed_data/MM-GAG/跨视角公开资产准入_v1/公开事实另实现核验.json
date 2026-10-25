@@ -1,0 +1,90 @@
+{
+  "task": "CV-022",
+  "passed": true,
+  "configuration_literals_with_actual_lines": {
+    "model": {
+      "value": "convnext_base.fb_in22k_ft_in1k_384",
+      "line": 16
+    },
+    "img_size": {
+      "value": 384,
+      "line": 19
+    },
+    "batch_size": {
+      "value": 128,
+      "line": 22
+    },
+    "normalize_features": {
+      "value": true,
+      "line": 25
+    },
+    "checkpoint_start": {
+      "value": "pretrained/cvusa/convnext_base.fb_in22k_ft_in1k_384/weights_e40_98.6830.pth",
+      "line": 31
+    }
+  },
+  "ground_resize_derived_height_width": [
+    140,
+    768
+  ],
+  "public_drive_entries": [
+    {
+      "id": "1dZ9itDjS-h5KHc23OQb8oHqJ3KoSaPyS",
+      "name": "pretrained.zip",
+      "mime_type": "application/zip",
+      "numeric_metadata_uninterpreted": {
+        "4": 0,
+        "6": 0,
+        "7": 0,
+        "8": 0,
+        "9": 1695738919136,
+        "10": 1695738413000,
+        "13": 1626048556,
+        "21": 1,
+        "24": 2,
+        "25": 0,
+        "27": 1626048556,
+        "30": 0,
+        "35": 0,
+        "43": 0,
+        "60": "691301496089",
+        "69": 1695738413000,
+        "70": 3,
+        "74": 207,
+        "89": 0,
+        "93": 0,
+        "107": 0,
+        "143": 0,
+        "151": 0,
+        "152": 0,
+        "159": 0,
+        "165": 0
+      }
+    }
+  ],
+  "visible_size_mentions": [
+    "1.51 GB"
+  ],
+  "regex_mentions_are_not_authoritative_filenames": true,
+  "literal_filename_pretrained_zip_verified": true,
+  "code_tree_was_parsed_not_executed": true,
+  "requests": [
+    {
+      "url": "https://raw.githubusercontent.com/Skyy93/Sample4Geo/498c6511478053ddb4a43f24a9f4942fab238f09/eval_cvusa.py",
+      "sha256": "0a8779610daf7b7ee3268ce69c28998fa0503d6f008e1fb0f62467ede0757a65",
+      "bytes": 5639,
+      "status": 200
+    },
+    {
+      "url": "https://drive.google.com/drive/folders/1PMuUqvDnCb216D8_ZDDJzDD3FxeH5BoA",
+      "sha256": "feef7c60ab4b83e0bf915eb532fe92f1cefe2aa051c9ba9e6d107079990a577a",
+      "bytes": 307374,
+      "status": 200
+    }
+  ],
+  "checkpoint_tensor_SHA_unverified": true,
+  "model_or_dataset_downloads": 0,
+  "navigation": 0,
+  "training": 0,
+  "same_agent_independent_parser_not_person_review": true
+}

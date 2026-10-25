@@ -1,0 +1,52 @@
+{
+  "passed": true,
+  "checks": {
+    "source_and_input_bindings": true,
+    "target_blind_geometric_path": true,
+    "step_and_budget": true,
+    "all_cases_labels_and_prefixes": true,
+    "planned_output_denominator": true,
+    "source_strata_nonempty": true,
+    "no_inference_admission": true,
+    "roles_kept": true,
+    "one_new_factor_and_common_ROI": true,
+    "artifact_identity": true,
+    "limits_and_stop": true,
+    "only2_dev_groups": true,
+    "old159_preserved": true,
+    "runtime_preserved": true
+  },
+  "source_strata": {
+    "opencvl_engineering_0": {
+      "inside": 9,
+      "outside": 2,
+      "unrelated": 11
+    },
+    "opencvl_engineering_1": {
+      "inside": 8,
+      "outside": 3,
+      "unrelated": 11
+    },
+    "opencvl_engineering_2": {
+      "inside": 4,
+      "outside": 7,
+      "unrelated": 11
+    },
+    "opencvl_engineering_3": {
+      "inside": 8,
+      "outside": 3,
+      "unrelated": 11
+    }
+  },
+  "planned_main_outputs": 440,
+  "complete_future_calls": 448,
+  "synthetic_tests": {
+    "count": 10,
+    "passed": true,
+    "actual_model_calls": 0
+  },
+  "actual_model_calls": 0,
+  "actual_image_reads": 0,
+  "same_agent_alternate_implementation": true,
+  "independent_person_review": false
+}

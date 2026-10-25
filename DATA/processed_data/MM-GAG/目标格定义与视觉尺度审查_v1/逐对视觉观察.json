@@ -1,0 +1,290 @@
+{
+  "task": "CV-004",
+  "date": "2026-10-17",
+  "reviewer": "Codex / crossview-label-scale-20261017",
+  "prediction_ranks_visible_during_review": false,
+  "reviewer_had_prior_access_to_aggregate_and_pair_results": true,
+  "strict_blind_or_independent_person_review": false,
+  "method": "all16 panels viewed before writing observations, no ranks/scores in panels, no label changes or model calls; subjective observations not annotation ground truth",
+  "pairs": [
+    {
+      "pair_id": "cvp_00",
+      "group_id": "dev_00",
+      "ground_scene": "商场室内装置与中庭",
+      "aerial_center_scene": "密集街区边缘及大型屋顶",
+      "shared_semantic_evidence": "not_clear",
+      "risk_flags": [
+        "viewpoint_and_scale",
+        "building_occlusion",
+        "center_crop"
+      ],
+      "camera_vs_landmark_cell": "unknown",
+      "notes": "室内装置/商铺招牌在俯视屋顶中不可直接观察；不能用无共同外观判定地理标签错误。",
+      "panel_path": "面板/cvp_00.jpg",
+      "panel_visually_reviewed": true,
+      "independent_geographic_label": false
+    },
+    {
+      "pair_id": "cvp_01",
+      "group_id": "dev_01",
+      "ground_scene": "夜间柱廊式门楼正立面",
+      "aerial_center_scene": "大型建筑旁广场及狭长门楼状结构",
+      "shared_semantic_evidence": "plausible",
+      "risk_flags": [
+        "viewpoint_and_scale",
+        "center_crop"
+      ],
+      "camera_vs_landmark_cell": "unknown",
+      "notes": "门楼与广场布局提供候选关联，但夜景立面与俯视轮廓不同；裁剪去掉两侧柱廊，不能独立确认拍摄点。",
+      "panel_path": "面板/cvp_01.jpg",
+      "panel_visually_reviewed": true,
+      "independent_geographic_label": false
+    },
+    {
+      "pair_id": "cvp_02",
+      "group_id": "dev_02",
+      "ground_scene": "桥上雕塑近景与河岸背景",
+      "aerial_center_scene": "河面及桥梁一段",
+      "shared_semantic_evidence": "plausible",
+      "risk_flags": [
+        "viewpoint_and_scale",
+        "sky",
+        "center_crop"
+      ],
+      "camera_vs_landmark_cell": "unknown",
+      "notes": "桥/河提供场景线索，但近景雕塑在航拍尺度中极小；中心裁剪还截去雕塑顶部部分。",
+      "panel_path": "面板/cvp_02.jpg",
+      "panel_visually_reviewed": true,
+      "independent_geographic_label": false
+    },
+    {
+      "pair_id": "cvp_03",
+      "group_id": "dev_03",
+      "ground_scene": "夜间商铺正面与棕榈树",
+      "aerial_center_scene": "空地道路及小型游乐设施",
+      "shared_semantic_evidence": "not_clear",
+      "risk_flags": [
+        "viewpoint_and_scale",
+        "center_crop"
+      ],
+      "camera_vs_landmark_cell": "unknown",
+      "notes": "照片中的招牌/立面不是中心格的直接俯视外观；主体与拍摄点可能不同，不能由图像差异改标签。",
+      "panel_path": "面板/cvp_03.jpg",
+      "panel_visually_reviewed": true,
+      "independent_geographic_label": false
+    },
+    {
+      "pair_id": "cvp_04",
+      "group_id": "dev_04",
+      "ground_scene": "白色肋状结构的室内大厅",
+      "aerial_center_scene": "深阴影中的城市建筑区",
+      "shared_semantic_evidence": "not_clear",
+      "risk_flags": [
+        "viewpoint_and_scale",
+        "building_occlusion",
+        "center_crop"
+      ],
+      "camera_vs_landmark_cell": "unknown",
+      "notes": "内部大厅结构不等于屋顶表面；航拍阴影与可见室内缺少直接对应，采集时相也没有证据可核验。",
+      "panel_path": "面板/cvp_04.jpg",
+      "panel_visually_reviewed": true,
+      "independent_geographic_label": false
+    },
+    {
+      "pair_id": "cvp_05",
+      "group_id": "dev_05",
+      "ground_scene": "水岸广场上的拱门与人群",
+      "aerial_center_scene": "临水大型屋顶建筑",
+      "shared_semantic_evidence": "not_clear",
+      "risk_flags": [
+        "viewpoint_and_scale",
+        "distant_landmark",
+        "sky",
+        "center_crop"
+      ],
+      "camera_vs_landmark_cell": "unknown",
+      "notes": "地面主体为拱门，中心格主要是相邻大屋顶；邻域可见广场/水岸，拍摄点与拱门占地是否同格未知。",
+      "panel_path": "面板/cvp_05.jpg",
+      "panel_visually_reviewed": true,
+      "independent_geographic_label": false
+    },
+    {
+      "pair_id": "cvp_06",
+      "group_id": "dev_06",
+      "ground_scene": "城市路口与远处建筑立面",
+      "aerial_center_scene": "相连屋顶及街道",
+      "shared_semantic_evidence": "not_clear",
+      "risk_flags": [
+        "viewpoint_and_scale",
+        "distant_landmark",
+        "sky",
+        "building_occlusion",
+        "center_crop"
+      ],
+      "camera_vs_landmark_cell": "unknown",
+      "notes": "照片包含视线远端建筑，俯视中心格则由屋顶主导；不能把远端立面自动当作相机所在格的外观。",
+      "panel_path": "面板/cvp_06.jpg",
+      "panel_visually_reviewed": true,
+      "independent_geographic_label": false
+    },
+    {
+      "pair_id": "cvp_07",
+      "group_id": "dev_07",
+      "ground_scene": "办公室内部桌椅与楼梯",
+      "aerial_center_scene": "建筑与停车场",
+      "shared_semantic_evidence": "not_clear",
+      "risk_flags": [
+        "viewpoint_and_scale",
+        "building_occlusion",
+        "center_crop"
+      ],
+      "camera_vs_landmark_cell": "unknown",
+      "notes": "室内桌椅/楼梯被屋顶遮蔽，仅凭当前俯视格无法直接确认办公空间身份。",
+      "panel_path": "面板/cvp_07.jpg",
+      "panel_visually_reviewed": true,
+      "independent_geographic_label": false
+    },
+    {
+      "pair_id": "cvp_08",
+      "group_id": "dev_08",
+      "ground_scene": "临时舞台与活动背景板",
+      "aerial_center_scene": "空地草地及屋顶边缘",
+      "shared_semantic_evidence": "not_clear",
+      "risk_flags": [
+        "viewpoint_and_scale",
+        "sky",
+        "center_crop"
+      ],
+      "camera_vs_landmark_cell": "unknown",
+      "notes": "活动舞台可能是临时设施，固定航拍无可辨同物证据；没有采集日期，不能断言是时相错误。",
+      "panel_path": "面板/cvp_08.jpg",
+      "panel_visually_reviewed": true,
+      "independent_geographic_label": false
+    },
+    {
+      "pair_id": "cvp_09",
+      "group_id": "dev_09",
+      "ground_scene": "沿街建筑旗帜立面与人行道",
+      "aerial_center_scene": "宽道路及两侧屋顶边缘",
+      "shared_semantic_evidence": "plausible",
+      "risk_flags": [
+        "viewpoint_and_scale",
+        "sky",
+        "vegetation_occlusion",
+        "center_crop"
+      ],
+      "camera_vs_landmark_cell": "unknown",
+      "notes": "道路/建筑邻接提供弱场景关联，旗帜及藤蔓立面在俯视中不可直接辨认；不把此观察当地理验证。",
+      "panel_path": "面板/cvp_09.jpg",
+      "panel_visually_reviewed": true,
+      "independent_geographic_label": false
+    },
+    {
+      "pair_id": "cvp_10",
+      "group_id": "dev_02",
+      "ground_scene": "窄街尽头教堂立面与塔楼",
+      "aerial_center_scene": "密集街区内建筑屋顶与道路",
+      "shared_semantic_evidence": "plausible",
+      "risk_flags": [
+        "viewpoint_and_scale",
+        "sky",
+        "building_occlusion",
+        "center_crop"
+      ],
+      "camera_vs_landmark_cell": "unknown",
+      "notes": "建筑与窄街布局可能有关联，但屋顶和教堂正面差异显著；尚无逐对象地理标注确认。",
+      "panel_path": "面板/cvp_10.jpg",
+      "panel_visually_reviewed": true,
+      "independent_geographic_label": false
+    },
+    {
+      "pair_id": "cvp_11",
+      "group_id": "dev_04",
+      "ground_scene": "方形下沉水池及背景高楼",
+      "aerial_center_scene": "建筑屋顶和深阴影",
+      "shared_semantic_evidence": "not_clear",
+      "risk_flags": [
+        "viewpoint_and_scale",
+        "distant_landmark",
+        "vegetation_occlusion",
+        "building_occlusion",
+        "center_crop"
+      ],
+      "camera_vs_landmark_cell": "unknown",
+      "notes": "5×5邻格可见方形池，约定目标格主要是建筑/阴影；不能把池的主体格直接改作原拍摄点答案。",
+      "panel_path": "面板/cvp_11.jpg",
+      "panel_visually_reviewed": true,
+      "independent_geographic_label": false
+    },
+    {
+      "pair_id": "cvp_12",
+      "group_id": "dev_06",
+      "ground_scene": "狭窄建筑间隙与路灯台阶",
+      "aerial_center_scene": "教堂状屋顶及周边街区",
+      "shared_semantic_evidence": "not_clear",
+      "risk_flags": [
+        "viewpoint_and_scale",
+        "building_occlusion",
+        "sky",
+        "center_crop"
+      ],
+      "camera_vs_landmark_cell": "unknown",
+      "notes": "地面只能看到局部墙面与通道，顶部视野被建筑遮挡；缺少足以从俯视精确确认通道的位置证据。",
+      "panel_path": "面板/cvp_12.jpg",
+      "panel_visually_reviewed": true,
+      "independent_geographic_label": false
+    },
+    {
+      "pair_id": "cvp_13",
+      "group_id": "dev_07",
+      "ground_scene": "室内或温室植物近景",
+      "aerial_center_scene": "围合建筑屋顶及绿地",
+      "shared_semantic_evidence": "not_clear",
+      "risk_flags": [
+        "viewpoint_and_scale",
+        "vegetation_occlusion",
+        "building_occlusion",
+        "center_crop"
+      ],
+      "camera_vs_landmark_cell": "unknown",
+      "notes": "画面主信息是室内植物，屋顶/园区视图缺少直接对应；不能从植物类别推断精确地理格。",
+      "panel_path": "面板/cvp_13.jpg",
+      "panel_visually_reviewed": true,
+      "independent_geographic_label": false
+    },
+    {
+      "pair_id": "cvp_14",
+      "group_id": "dev_08",
+      "ground_scene": "夜间小型塔楼建筑与灯饰",
+      "aerial_center_scene": "道路树木及小建筑",
+      "shared_semantic_evidence": "not_clear",
+      "risk_flags": [
+        "viewpoint_and_scale",
+        "vegetation_occlusion",
+        "center_crop"
+      ],
+      "camera_vs_landmark_cell": "unknown",
+      "notes": "暗光立面和树木使地面细节有限，俯视难以确认同一栋建筑；没有根据修改夜间照片或标签。",
+      "panel_path": "面板/cvp_14.jpg",
+      "panel_visually_reviewed": true,
+      "independent_geographic_label": false
+    },
+    {
+      "pair_id": "cvp_15",
+      "group_id": "dev_09",
+      "ground_scene": "大型圆形古建筑外立面近景",
+      "aerial_center_scene": "道路与绿地，邻格有圆形古建筑",
+      "shared_semantic_evidence": "not_clear",
+      "risk_flags": [
+        "viewpoint_and_scale",
+        "distant_landmark",
+        "center_crop"
+      ],
+      "camera_vs_landmark_cell": "unknown",
+      "notes": "圆形建筑在5×5邻格可辨，约定目标格在其西侧道路/绿地；这是拍摄点与主体可能跨格的直观风险，不是已测绘错标。",
+      "panel_path": "面板/cvp_15.jpg",
+      "panel_visually_reviewed": true,
+      "independent_geographic_label": false
+    }
+  ]
+}

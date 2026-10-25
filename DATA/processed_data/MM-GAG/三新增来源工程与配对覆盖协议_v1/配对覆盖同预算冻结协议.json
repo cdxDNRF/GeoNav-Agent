@@ -1,0 +1,238 @@
+{
+  "task": "CV-018",
+  "status": "research_design_frozen_engineering_passed_not_executed",
+  "hypothesis": "additional distinct positive-pair coverage within the same9fit source groups may improve target-specific development association",
+  "only_new_factor": "9->12 distinct training pairs in unchanged9fit groups; identical batch9/500updates/4500query uses and frozen8192head/encoders",
+  "baseline": "frozen CV-014 final9-pair head and saved1250 records; no baseline retraining or re-encoding",
+  "ordered12_training_sources": [
+    "mmgag_063",
+    "mmgag_051",
+    "mmgag_058",
+    "mmgag_061",
+    "mmgag_052",
+    "mmgag_042",
+    "mmgag_066",
+    "mmgag_080",
+    "mmgag_075",
+    "mmgag_031",
+    "mmgag_050",
+    "mmgag_065"
+  ],
+  "additional_sources": [
+    "mmgag_031",
+    "mmgag_050",
+    "mmgag_065"
+  ],
+  "source_groups": 9,
+  "head": {
+    "formula": "normalize(g + U @ V @ g)",
+    "input": "normalized512D ground feature only",
+    "rank": 8,
+    "U_shape": [
+      512,
+      8
+    ],
+    "V_shape": [
+      8,
+      512
+    ],
+    "trainable_parameters": 8192,
+    "bias": false,
+    "U_init": "zeros",
+    "V_init": "normal mean0 std0.02 using seed0",
+    "norm_epsilon": 1e-12,
+    "encoders_frozen": true
+  },
+  "training": {
+    "seed": 0,
+    "updates": 500,
+    "temperature": 0.1,
+    "optimizer": "AdamW",
+    "learning_rate": 0.001,
+    "weight_decay": 0.0001,
+    "gradient_clip_norm": 1.0,
+    "schedule": "none"
+  },
+  "sampler": {
+    "batch_size": 9,
+    "total_query_uses": 4500,
+    "rule": "zero-based step t=0..499, select ordered12[(9*t+j)%12] for j=0..8",
+    "new_pair_uses_per_query": [
+      375,
+      375,
+      375,
+      375,
+      375,
+      375,
+      375,
+      375,
+      375,
+      375,
+      375,
+      375
+    ],
+    "baseline9_pair_uses_per_query": [
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500,
+      500
+    ],
+    "baseline_equivalence": "same formula with N=9 yields original fixed0..8 batch every update",
+    "actual_training_executed_here": false,
+    "mathematically_verified_uses": [
+      375,
+      375,
+      375,
+      375,
+      375,
+      375,
+      375,
+      375,
+      375,
+      375,
+      375,
+      375
+    ]
+  },
+  "evaluation": {
+    "same_known_dev_sources": 5,
+    "same_windows": 125,
+    "existing_records_reused": 1250,
+    "new_candidate_rankings": 375,
+    "planned_total_records": 1625,
+    "Mean": "original9 fit target mean shared by all arms; fixed to keep controls comparable",
+    "Wrong": "same frozen5-development-group cyclic mapping",
+    "Disabled": "reuse original shared zero-score records",
+    "required_effect_thresholds_from_CV012": {
+      "Full_top1_minimum": 32,
+      "Full_minus_Mean_minimum": 16,
+      "Full_minus_Wrong_minimum": 16,
+      "Full_minus_Disabled_minimum": 16,
+      "Full_minus_Identity_minimum": 5,
+      "Full_minus_SwissFrozen_minimum": 5,
+      "source_groups_Full_above_both_controls_minimum": 3,
+      "source_groups_Full_above_both_baselines_minimum": 3
+    },
+    "additional_gate": "candidate Full minus frozen MM9 Full >=5/125, and positive Full differences in >=3/5 source groups",
+    "complete_and_audit_gate": "all1625 planned records and all engineering/alternate audits pass",
+    "mandatory_reports": [
+      "Top1/Top5/rank",
+      "target controls",
+      "per-source",
+      "recovery/harm",
+      "paired5-source intervals"
+    ],
+    "navigation_SR": null,
+    "new_source_confirmation": false,
+    "actual_new_rankings": 0
+  },
+  "resource_upper_bounds_proposed": {
+    "new_raw_engineering_images": 249,
+    "new_encoder_inputs_before_optional_SHA_cache_reuse": 246,
+    "new_encoder_calls_batch8_upper_bound": 32,
+    "CUDA_allocated_bytes": 2147483648,
+    "head_CPU_seconds": 1800,
+    "new_output_bytes": 8388608,
+    "feature_bytes": 2097152,
+    "head_initial_final_one_recovery_bytes": 1048576
+  },
+  "prerequisites": [
+    "register and byte/quality/axis-check only3 new fit representatives; no repeat14-source visual audit",
+    "freeze executor, actual input/features, sampler and all gates before candidate training",
+    "verify all reused old tensors/checkpoints/source bindings and saved task identity"
+  ],
+  "stopping": "one fixed final checkpoint/seed0, no rank/epoch/threshold/source sweep; required gate failure closes this factor, no confirmation consumption or default upgrade",
+  "protocol_id": "capturepoint-rank8-coverage12-v1",
+  "research_design_frozen": true,
+  "source_engineering_passed": true,
+  "training_authorized": false,
+  "model_forward_authorized": false,
+  "actual_executor_binding": null,
+  "actual_feature_binding": null,
+  "candidate_final_checkpoint": null,
+  "engineers": {
+    "path": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/像素工程汇总.json",
+    "sha256": "0be01fe0ed6878e8bd92d7536b3373d944ba780c90cb0f6abd59364242d622ae",
+    "bytes": 3517
+  },
+  "engineering_audit": {
+    "path": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/核验/工程另实现复核.json",
+    "sha256": "208bdc070d9a4e996191c8637b05d27259d6d29b4140d510991b29f4bd321632",
+    "bytes": 367
+  },
+  "fixed_queue": {
+    "path": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/固定训练与开发队列.json",
+    "sha256": "08ee93f0106d456c30a9a6de2135ca599e0410a80b83614bd40b6ec677bbf7b9",
+    "bytes": 390693
+  },
+  "gate_function": "project/src/data/capturepoint_coverage_protocol_v1.py::coverage_gate",
+  "mean_ground_indices": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "labels": "original CSV/code center proxy; not visible-landmark relabel or independent geographic survey",
+  "encoder_assets_reference_only": [
+    {
+      "path": "models/clip_vit_b32_public_v1/config.json",
+      "sha256": "b575ef3c36f2a057fa19e221650105052d61cc9c1a972ec15019c6261ec98770",
+      "bytes": 4186
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/preprocessor_config.json",
+      "sha256": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd",
+      "bytes": 316
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/pytorch_model.bin",
+      "sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+      "bytes": 605247071
+    },
+    {
+      "path": "models/Sat2Cap/config.json",
+      "sha256": "0a9cffa477a4bfc9682da841841b7e4227ad0cd06ad81d3eb1a831d5557976c5",
+      "bytes": 559
+    },
+    {
+      "path": "models/Sat2Cap/model.safetensors",
+      "sha256": "fec6802fbf27664ddd556fc445ff7d8e7ab0f05fea160c2e16680642dcebf3e0",
+      "bytes": 351420784
+    }
+  ],
+  "preprocessing": "exact original CV-002 PIL CLIP center crop and Sat2Cap224 processing, both frozen; no full-frame/padding/local-token changes",
+  "prior_feature_binding_reference_only": {
+    "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/首更新前特征绑定.json",
+    "sha256": "433587bf31697f08969053ae21604711babd9b127a3d525357b5d4f45d5cea15",
+    "bytes": 10330
+  },
+  "baseline_seal_reference": {
+    "path": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/阶段封存.json",
+    "sha256": "edbf6b4048fbb3484b17dcb103e2b49a634e10223c04ef0e225d346957711048",
+    "bytes": 8226
+  },
+  "current_activity": {
+    "new_encoder_inputs": 0,
+    "new_model_forward_calls": 0,
+    "new_training_steps": 0,
+    "new_rankings": 0,
+    "navigation_SR": null,
+    "confirmation_access": 0
+  },
+  "execution_admission_required": [
+    "implement/bind real sampler-aware executor and engineering tests before model forward",
+    "reuse and verify old features/checkpoints/1250 saved rankings with matching tensor/raw/preprocessing/model identities",
+    "bind all actual new feature tensors/fit12/mean9 before first update",
+    "explicit later runtime authorization; one fixed final run, no development-driven tuning or confirmation consumption"
+  ]
+}

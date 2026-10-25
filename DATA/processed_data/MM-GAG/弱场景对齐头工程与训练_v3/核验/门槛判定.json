@@ -1,0 +1,21 @@
+{
+  "task": "CV-008",
+  "engineering_passed": true,
+  "alternate_audit_passed": true,
+  "effect_gates": {
+    "MMGAG_all16_complete": true,
+    "MMGAG_Full_top1_minimum4": false,
+    "MMGAG_Full_minus_Mean_minimum2": false,
+    "MMGAG_Full_minus_Wrong_minimum2": false,
+    "MMGAG_groups_positive_against_both_minimum3": false,
+    "weak_macro_top1_gain_minimum004": true,
+    "weak_groups_improving_minimum3": true
+  },
+  "all_required_gates_passed": false,
+  "status": "closed_failed_no_sweep",
+  "default_upgraded": false,
+  "ground_navigation_validated": false,
+  "reserved_groups_consumed": 0,
+  "stop_rule": "No rank/source/temperature/loss/encoder search. No navigation or deployment without new protocol.",
+  "training_semantics": "weak same-scene common-cell proxy, not verified camera location"
+}

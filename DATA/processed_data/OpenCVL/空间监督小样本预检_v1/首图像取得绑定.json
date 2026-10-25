@@ -1,0 +1,494 @@
+{
+  "task": "CV-028",
+  "sources": [
+    {
+      "path": "project/src/tools/opencvl_sample_preflight_v1.py",
+      "bytes": 21643,
+      "sha256": "6dd7fb514a80527fc1c885a0a6218c7acc19316b9e7f69e324c07960f8a56b83"
+    },
+    {
+      "path": "project/src/eval/audit_opencvl_sample_preflight_v1.py",
+      "bytes": 6950,
+      "sha256": "be4b8708fdd369fb8a0ffef6cc90553c4f5cfb8ea0ec10f922f6b41c69400616"
+    },
+    {
+      "path": "project/src/tests/test_opencvl_sample_preflight_v1.py",
+      "bytes": 3546,
+      "sha256": "ffb2de579a4f3d665b19a37a07550412c8e8c289111ec6a43c20b78f37898dd2"
+    },
+    {
+      "path": "project/src/documents/close_opencvl_sample_preflight_v1.py",
+      "bytes": 10812,
+      "sha256": "9fb07d3d7b4ea0ed74638810d0ba66e80d16bb0ac6dd39d2b7eb4c56752cc84e"
+    }
+  ],
+  "inputs": [
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/目录清单.json",
+      "bytes": 55183,
+      "sha256": "44077ce09b54fb42aff6e5fd07b6354c744f7cbce1f444288ccc0aca24961ba0"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/核验/ZIP中央目录.bin",
+      "bytes": 25680,
+      "sha256": "a4eb127503dd4a05b58921bcf8609aa578a990db14272e4247de7a2e4df490dd"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/取得前范围与探测.json",
+      "bytes": 2006,
+      "sha256": "f455148707d74f6c3f2f14bcc90d3ceb663ae7599b1cfa3eafa8d495045e2a6f"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/标签取得完成.json",
+      "bytes": 1966,
+      "sha256": "62ab659a143e171923c447fe0ce645cf39901e4563a52706dda592226dfa1d90"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/labels_af2cf0a3ac273ac1.json",
+      "bytes": 2328,
+      "sha256": "c7462175a07f5ba9193618de26bec4a348f5be15786e17286d9874f3404dc29f"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/labels_e2bd73f2ab1a7553.json",
+      "bytes": 1931,
+      "sha256": "ed96e1d1ebee7f96c3f33c9cebdbde2ee172354969beefedd5bf4ac891a3daa5"
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/输入/labels_3ee1423614ef9e61.json",
+      "bytes": 2345,
+      "sha256": "7d0a4d002723aa81814181279bfac7ce7dd8403d01bb64992cdeb1813cd46953"
+    }
+  ],
+  "protected": [
+    {
+      "path": "调研/19_跨视角空间方案准入证据_v1.json",
+      "bytes": 35809,
+      "sha256": "cbae356b46285a02443e5de4f259853f8c7e337a4996fe0683dccdb7c6fbcff4"
+    },
+    {
+      "path": "调研/19_跨视角空间方案准入与后续执行_v1.md",
+      "bytes": 9237,
+      "sha256": "d748ceea52a2ca11d3e373bef8f121361ba620415196792fdf1a66fd919db258"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/同任务来源用途账本_v1.json",
+      "bytes": 16244,
+      "sha256": "3a55e4fc09542b88de3229576bab5f3e89bac7fbde274aa840ba4ed3ea5cf3c3"
+    },
+    {
+      "path": "平台/启动平台.ps1",
+      "bytes": 2624,
+      "sha256": "26fab7c920ad0a086ab300520fa878cfeb7335fde03db298a76d149e3c62009e"
+    },
+    {
+      "path": "project/src/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "project/src/agents/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "project/src/agents/area_policy.py",
+      "bytes": 9189,
+      "sha256": "0f9b1bb3e232332bd9eb36349a91f4a62bdf0c158f87c0bb1f6cf0dcb8d31216"
+    },
+    {
+      "path": "project/src/agents/boundary_policy.py",
+      "bytes": 1058,
+      "sha256": "f670350464f2774dff67f2352f55492d8d6b8898b8f9be03cd05284319f80c79"
+    },
+    {
+      "path": "project/src/agents/decoupled_cue.py",
+      "bytes": 1895,
+      "sha256": "b646a95c1018e3971c20d92620d3e6edd1e5885a307b7597b1d8d317ac504403"
+    },
+    {
+      "path": "project/src/agents/edge_cue.py",
+      "bytes": 3597,
+      "sha256": "3e4fc82dc123b3f397c2f50f9e475909cd0a3642a8ae2765af0fdb45b2b4ba0c"
+    },
+    {
+      "path": "project/src/agents/exploration.py",
+      "bytes": 1474,
+      "sha256": "bfa9c3bddddc354e794ce27ad000fb24d41e77e804b42805d1b7a2ca00b9596e"
+    },
+    {
+      "path": "project/src/agents/frozen_crossview_encoder_v1.py",
+      "bytes": 6126,
+      "sha256": "a3f804f009378cc1aef2e317be6cbf6eb8019b58b4e257ad017a1868874f6906"
+    },
+    {
+      "path": "project/src/agents/frozen_crossview_encoder_v2.py",
+      "bytes": 4260,
+      "sha256": "43331f592492458228c417987207fc47dbee1a262f7c116c800526a6c66360bc"
+    },
+    {
+      "path": "project/src/agents/frozen_edge_navigator.py",
+      "bytes": 5856,
+      "sha256": "5c1e23bc34f2c907bcab1697ceeba8fadd370273fee2bfbaf54303cee3e38202"
+    },
+    {
+      "path": "project/src/agents/massgis_edge_bridge_v1.py",
+      "bytes": 692,
+      "sha256": "9e9e3ab337e5e648229e1a2d745d1e8e145deead046f89cf42b01cfdc57ad614"
+    },
+    {
+      "path": "project/src/agents/massgis_navigator_v1.py",
+      "bytes": 1705,
+      "sha256": "1ff1081d3f4c1b4de706199bef914c36d666a0e73fe2bd727d10323c5ffbb0bc"
+    },
+    {
+      "path": "project/src/agents/parameterized_coverage.py",
+      "bytes": 4546,
+      "sha256": "086fb81e057738e14dfe786c2387d3e980f2e01a63191eb05cacba848610b556"
+    },
+    {
+      "path": "project/src/agents/scaled_edge_navigator.py",
+      "bytes": 3901,
+      "sha256": "012cab624c2d86854204c5b77d3d85f79a799336a241c4a61e2a42b7f39a1975"
+    },
+    {
+      "path": "project/src/agents/spatial_relation.py",
+      "bytes": 1909,
+      "sha256": "18c924e19d4a9181ff01e10e12bfed881922568d23718f28eac9c0637490010b"
+    },
+    {
+      "path": "project/src/agents/target_cue.py",
+      "bytes": 2637,
+      "sha256": "09e8aa69114a0c7a5efc8c56743987febccd619849c77d8a53d7a257bdca2693"
+    },
+    {
+      "path": "project/src/data/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "project/src/data/make_episodes.py",
+      "bytes": 5987,
+      "sha256": "2d82caf923a0073bdb111e0b673127a9fa4945ca281117d2d114dc1b4598420e"
+    },
+    {
+      "path": "project/src/data/mmgag_views_v1.py",
+      "bytes": 4069,
+      "sha256": "89ff8000978d494274c819fbf44d4a8abc4a3b07614fcd357166c4637e3f157e"
+    },
+    {
+      "path": "project/src/data/process_masa.py",
+      "bytes": 5109,
+      "sha256": "0ddce87481edb98a7cb6ca6563fdcca9fa6488acfab8226b01ec3222f7caaba6"
+    },
+    {
+      "path": "project/src/documents/close_ground_walk_v1.py",
+      "bytes": 8047,
+      "sha256": "4c870a918b7aaa47e8071edc77ef826814cfdb6d97e0bff85ed143031aed065f"
+    },
+    {
+      "path": "project/src/env/__init__.py",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "project/src/env/area_protocol.py",
+      "bytes": 1347,
+      "sha256": "5242a47aba99330f9dadb32212d38ca640b72dbb6d7adcad821ee4a46a2e0972"
+    },
+    {
+      "path": "project/src/env/environment.py",
+      "bytes": 5646,
+      "sha256": "ad19a173945f86ed04b18c0f5365e543217688d124271f51bc05f2747af92b5b"
+    },
+    {
+      "path": "project/src/env/episode.py",
+      "bytes": 4706,
+      "sha256": "3c85105ae7bf8efb90f1726e695c8db90e03544de342c874c08eb166e8019502"
+    },
+    {
+      "path": "project/src/env/massgis_native_area_v2.py",
+      "bytes": 3760,
+      "sha256": "9ee967151e66292a89d4eda9e36d38e2ef9dae305644e52d84b375275f7f6858"
+    },
+    {
+      "path": "project/src/env/parameterized_area.py",
+      "bytes": 5922,
+      "sha256": "a39ec73e3f69e46f3feded068cbe55e57c523f60d457a419d5228b8214900993"
+    },
+    {
+      "path": "project/src/env/scaled_grid.py",
+      "bytes": 6106,
+      "sha256": "39c1ba2a60affbf3421aaf0806ac4a807c9b461d66ef6de792302c9ba7c454ee"
+    },
+    {
+      "path": "project/src/platform_core/engine_v2.py",
+      "bytes": 32054,
+      "sha256": "320cfafe0b5dffea7202b16d9faf0945a649d2833e17d458ba4af000a651d831"
+    },
+    {
+      "path": "project/src/platform_core/ground_encoding_v1.py",
+      "bytes": 6395,
+      "sha256": "c43307df9f632e2e3409db93172a72320ce2b441e398e398df6d968e5b59bb0f"
+    },
+    {
+      "path": "project/src/platform_core/ground_frame_encoder_v1.py",
+      "bytes": 4443,
+      "sha256": "771dc8c159d5c6a63035e65bce3a136d1fae00a064eeffd5c2880617065cf042"
+    },
+    {
+      "path": "project/src/platform_core/ground_live_v1.py",
+      "bytes": 14361,
+      "sha256": "bdaef19df935a024258489533f55fb466a7666cb30d002cf2a255e68654ffd29"
+    },
+    {
+      "path": "project/src/platform_core/ground_live_v2.py",
+      "bytes": 14821,
+      "sha256": "8b1290cfda8d3d9a7244ddf85d0451f871b512c601d717aa114d7a6e3000fc79"
+    },
+    {
+      "path": "project/src/platform_core/ground_tasks_v1.py",
+      "bytes": 19905,
+      "sha256": "51f78ab5772e42ced8663eeba367f2df1fe3a51c300136feef88c31765ecd106"
+    },
+    {
+      "path": "project/src/platform_core/ground_tasks_v2.py",
+      "bytes": 10311,
+      "sha256": "454dc7fe6a547c3f6abc3955fe621706331dc5989fa14d95fe5cc245355dee73"
+    },
+    {
+      "path": "project/src/platform_core/ground_walk_scene_v1.json",
+      "bytes": 5977,
+      "sha256": "bd159960d4580ca9c4eb9d0a0fcd8301add6fcb6b5edcb2b98047c0c4582bb18"
+    },
+    {
+      "path": "project/src/platform_core/ground_walk_v1.py",
+      "bytes": 14451,
+      "sha256": "6fbac9e8fd45a95a1a10463b283475bfd75908cefb24ac57b340cf8c7968a98a"
+    },
+    {
+      "path": "project/src/platform_core/local_goal_evidence_v1.py",
+      "bytes": 8796,
+      "sha256": "b38d11b235249daf31529348860b7128d7ed10088de3b75d7029516dfade885b"
+    },
+    {
+      "path": "project/src/platform_core/method_catalog_v1.py",
+      "bytes": 10847,
+      "sha256": "f56abe9c6897756681af237004a5c7e8c3025ac71012428e4c8aa307da7b7093"
+    },
+    {
+      "path": "project/src/platform_core/scene_workspace_v1.py",
+      "bytes": 15118,
+      "sha256": "33c3b0e0192d23161638f5cf8954200b20418935f43c1f1558d89f8aacdb1f25"
+    },
+    {
+      "path": "project/src/platform_core/scene_workspace_v2.py",
+      "bytes": 6848,
+      "sha256": "876ac9a12eb63ec7f0bc4c8cf12d80eff400b1347d8b8f62f1321902d1328013"
+    },
+    {
+      "path": "project/src/platform_core/service_v10.py",
+      "bytes": 742,
+      "sha256": "3dbfba497a22ce0980bcd35ee991494ddf066edb1a262247ccd16ec3d1dbfae2"
+    },
+    {
+      "path": "project/src/platform_core/service_v11.py",
+      "bytes": 917,
+      "sha256": "cb86f78995cb925161b2855702c45791b2eff1ef74d28f84781f2b9e818cf28f"
+    },
+    {
+      "path": "project/src/platform_core/service_v2.py",
+      "bytes": 14778,
+      "sha256": "ea01ba4ec2acbecabe3a06e7624c193d0ae5e3454311ecc7431ed76b8c967b3a"
+    },
+    {
+      "path": "project/src/platform_core/service_v3.py",
+      "bytes": 1420,
+      "sha256": "6ab2d47b63ecf1031b3b413a65c302f9d7ba51b7c93868bbac7941021613b1b0"
+    },
+    {
+      "path": "project/src/platform_core/service_v4.py",
+      "bytes": 1929,
+      "sha256": "3521c85ba0e6084b4c3db5121654f0c4b970f4f6625f655f8e8bd91ef9e21172"
+    },
+    {
+      "path": "project/src/platform_core/service_v5.py",
+      "bytes": 991,
+      "sha256": "65951e0e91d18644de8a0fa87343f50e7674545349d32aec3d3dab7808d6a233"
+    },
+    {
+      "path": "project/src/platform_core/service_v6.py",
+      "bytes": 1192,
+      "sha256": "2d89825a0df4d6d9f9d1050b1bf399e21d8021c87bc32e9f103cf29c8850e40c"
+    },
+    {
+      "path": "project/src/platform_core/service_v7.py",
+      "bytes": 4245,
+      "sha256": "6303ff08798fdece36bc346ba5f1165482da292385af7aad9a2691d9ef54c7fb"
+    },
+    {
+      "path": "project/src/platform_core/service_v8.py",
+      "bytes": 797,
+      "sha256": "e2770973f6aa03f287b302ea957d4da041cf7ddd4b7cc5c15467b06e0715cf15"
+    },
+    {
+      "path": "project/src/platform_core/service_v9.py",
+      "bytes": 1100,
+      "sha256": "87581817a62013ca14cab66600330d0ca6e60a60a041567e0332d5c9b66144fc"
+    },
+    {
+      "path": "project/src/platform_core/storage_v1.py",
+      "bytes": 930,
+      "sha256": "afe1d5a33acde6af9abdc90a0f05d49061432b583085f6793c8bcd60705640a8"
+    },
+    {
+      "path": "project/src/platform_core/trial_workflow_v1.py",
+      "bytes": 9533,
+      "sha256": "3bdff88c118c6bd97c3aafdd31092c75c64a815c1662549de1ec0fddd877ad96"
+    },
+    {
+      "path": "project/src/tests/test_ground_walk_ui_v1.js",
+      "bytes": 2417,
+      "sha256": "868bdc0a19e392cf1cb07b635a160996a186cb7a8cb02676c1f7b2aa696b555b"
+    },
+    {
+      "path": "project/src/tests/test_ground_walk_v1.py",
+      "bytes": 9527,
+      "sha256": "9f99baf2747ef1d01ed52fa0b5f395cc772d3ad89be532e12717cb3916813b77"
+    },
+    {
+      "path": "project/src/tools/ground_frame_worker_v1.py",
+      "bytes": 1505,
+      "sha256": "096cd538533cc1002e4122fae2940a0b6f88bf3f16b712f122198e66630d23c7"
+    },
+    {
+      "path": "project/src/tools/package_workbench_v20.py",
+      "bytes": 9595,
+      "sha256": "45c9444bc268724ab4b11bd93d1bfdd3d12a2868d2659cabe1e618739414ffee"
+    },
+    {
+      "path": "project/src/tools/verify_ground_walk_v1.py",
+      "bytes": 12517,
+      "sha256": "d845dfb3307e6b46a2270ecd4ad2d75ec3fe3eedb64932a61e12791344764943"
+    },
+    {
+      "path": "project/src/train/__init__.py",
+      "bytes": 49,
+      "sha256": "876af8af8be92a56fa350ef4dedb6ddc37e78b1e6f57b3fc3c62dd231da87516"
+    },
+    {
+      "path": "project/src/train/dyncur_tiny.py",
+      "bytes": 17468,
+      "sha256": "5dc0d7ecef17ef0f067504215ecf6b379ddb0df32005c1f2590dba03e996a5e1"
+    },
+    {
+      "path": "project/src/webapp/binding_v3.py",
+      "bytes": 3187,
+      "sha256": "586e830c3a5d50c09c31abed9e4bd1e9925910ed6bb57664b375dd788f69978b"
+    },
+    {
+      "path": "project/src/webapp/cloud_v3.py",
+      "bytes": 7166,
+      "sha256": "1eff9f99510f0592b6938b8fe7d99d79dfe68130867f4df50251d5e5244bb7c5"
+    },
+    {
+      "path": "project/src/webapp/ground_walk_v1.css",
+      "bytes": 2061,
+      "sha256": "12e9666ab7923cefe75fac8de82e1a06665b45551d61160f11d062306b4702f2"
+    },
+    {
+      "path": "project/src/webapp/ground_walk_v1.html",
+      "bytes": 4818,
+      "sha256": "1e12a62577e3f258c87cfcc8cc868b4b2614512f1093931b31628fc99cdb598a"
+    },
+    {
+      "path": "project/src/webapp/ground_walk_v1.js",
+      "bytes": 7658,
+      "sha256": "2dd8132a1d28e0b8e7b68eb281b3332522471374d2e0900b9b950d30fa079251"
+    },
+    {
+      "path": "project/src/webapp/live_v2.py",
+      "bytes": 10616,
+      "sha256": "359cca8233bcf143b5493334d829faa3b03abae81c955654e9bad45b7da7ab84"
+    },
+    {
+      "path": "project/src/webapp/live_v3.py",
+      "bytes": 11097,
+      "sha256": "c3d0425ff05af859deb28b1bd261a3a1d299a52c8a600e45c7a41cdb425a9afc"
+    },
+    {
+      "path": "project/src/webapp/live_v4.py",
+      "bytes": 14164,
+      "sha256": "c9bf012cd90ce6f0199490c361e183ad017594b3392d37d9776f8f6d3f0904ff"
+    },
+    {
+      "path": "project/src/webapp/masa_workbench_v1.py",
+      "bytes": 12835,
+      "sha256": "62f0dd242fee3e113cf440a7c666c767579abd1c1148d53f49242db52d3b5b67"
+    },
+    {
+      "path": "project/src/webapp/upload_v4.py",
+      "bytes": 10225,
+      "sha256": "1d9cdab3c4a598f1fbe69db1d7d503a7cd1b4495b9311eb0a2c993a7279fe918"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v10.py",
+      "bytes": 2605,
+      "sha256": "fbb2149f75f5f53c47fca24dab12de9891ae070b051f8832b66a85c930fba876"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v11.py",
+      "bytes": 5268,
+      "sha256": "d69d281ca082de736341d244f018f51482b1845547b0c7850ea9ffa7dd7615e3"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v12.py",
+      "bytes": 1987,
+      "sha256": "d28d060e231c07891c5362a78f512768c13fdbe51fd5abc013aee539681187e1"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v18.py",
+      "bytes": 16762,
+      "sha256": "c4c7563e4c83cfd25712cf57eca9ca54f22740a58f2b26d1aa3bbc82c52a0704"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v6.py",
+      "bytes": 9517,
+      "sha256": "b4f65e912dc243fedd09d6cb7363c1e292b4926e76a1d6f2e0c5a3aefd7e6980"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v7.py",
+      "bytes": 3297,
+      "sha256": "a0cef0377596e968c9a4f0be53c5d3b3111132486af34d01b341c87fbb57e892"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v8.py",
+      "bytes": 6095,
+      "sha256": "2d70a264fe0ace58d80d98a734e4111479485cc83cd6ee0de950e18fddebe952"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v9.py",
+      "bytes": 1690,
+      "sha256": "f6f3e82eb2345a75fb9db955303a54758c22323006fdf89ee143b638ec487dcb"
+    },
+    {
+      "path": "project/src/tools/package_workbench_v21.py",
+      "bytes": 9604,
+      "sha256": "3583752baee13865e1e5aa59daad52b810bddf0f4a28c5cf4549027133de1c22"
+    },
+    {
+      "path": "project/src/documents/close_ground_walk_v2.py",
+      "bytes": 8196,
+      "sha256": "97e1d1ed0a3d27ec98e239eecf6c923ef49fb68ef42ac6b25a05fcb4ddb95c49"
+    }
+  ],
+  "protocol": {
+    "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/冻结工程协议.json",
+    "bytes": 2099,
+    "sha256": "5d04aba9197ae65b8bc9a9d42282057bca3ae11a4dc0cb79b938c5a40077ce2c"
+  },
+  "queue": {
+    "path": "DATA/processed_data/OpenCVL/空间监督小样本预检_v1/固定四对清单.json",
+    "bytes": 7646,
+    "sha256": "2cd22af6db31c62a22b2d1b44e086c9f926e6e0ff46cdf59827f15b1a79a854b"
+  }
+}

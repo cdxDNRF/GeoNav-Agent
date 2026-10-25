@@ -1,0 +1,21 @@
+{
+  "fit": [
+    "RhineGlacier",
+    "Geneve",
+    "Zurich",
+    "Tseuzier",
+    "Cilion",
+    "GrosseScheidegg",
+    "Spiez",
+    "Iseltwald",
+    "Lausanne"
+  ],
+  "development": [
+    "Sion",
+    "Bern",
+    "Rolex",
+    "LacBleu",
+    "Luzern"
+  ],
+  "rule": "SHA256(CV-007/scene-split/v1:name), first9 fit, last5 dev; not geographic proof"
+}

@@ -1,0 +1,8029 @@
+{
+  "task": "CV-019",
+  "updates": 500,
+  "seed": 0,
+  "unique_queries": 12,
+  "source_groups": 9,
+  "supervision_uses": 4500,
+  "uses_per_query": [
+    375,
+    375,
+    375,
+    375,
+    375,
+    375,
+    375,
+    375,
+    375,
+    375,
+    375,
+    375
+  ],
+  "seconds": 5.367016499993042,
+  "initial_fit12_loss": 4.516538619995117,
+  "final_fit12_loss": 0.3893446922302246,
+  "trainable_parameters": 8192,
+  "encoder_optimizer_parameters": 0,
+  "log": [
+    {
+      "step": 1,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 4.521767616271973,
+      "gradient_norm_before_clip": 0.15104427933692932
+    },
+    {
+      "step": 2,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 4.632569789886475,
+      "gradient_norm_before_clip": 0.14450417459011078
+    },
+    {
+      "step": 3,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 4.555580139160156,
+      "gradient_norm_before_clip": 0.23864340782165527
+    },
+    {
+      "step": 4,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 4.321369647979736,
+      "gradient_norm_before_clip": 0.2429780215024948
+    },
+    {
+      "step": 5,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 4.482442855834961,
+      "gradient_norm_before_clip": 0.3597734868526459
+    },
+    {
+      "step": 6,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 4.586023330688477,
+      "gradient_norm_before_clip": 0.40227922797203064
+    },
+    {
+      "step": 7,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 4.482868671417236,
+      "gradient_norm_before_clip": 0.5644699335098267
+    },
+    {
+      "step": 8,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 4.260748863220215,
+      "gradient_norm_before_clip": 0.5123672485351562
+    },
+    {
+      "step": 9,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 4.390036106109619,
+      "gradient_norm_before_clip": 0.6703050136566162
+    },
+    {
+      "step": 10,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 4.482336044311523,
+      "gradient_norm_before_clip": 0.7175541520118713
+    },
+    {
+      "step": 11,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 4.33969259262085,
+      "gradient_norm_before_clip": 0.9276599287986755
+    },
+    {
+      "step": 12,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 4.147505760192871,
+      "gradient_norm_before_clip": 0.8043114542961121
+    },
+    {
+      "step": 13,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 4.232575416564941,
+      "gradient_norm_before_clip": 0.9922864437103271
+    },
+    {
+      "step": 14,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 4.308950424194336,
+      "gradient_norm_before_clip": 1.0417449474334717
+    },
+    {
+      "step": 15,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 4.115499019622803,
+      "gradient_norm_before_clip": 1.2819465398788452
+    },
+    {
+      "step": 16,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 3.975735664367676,
+      "gradient_norm_before_clip": 1.07846999168396
+    },
+    {
+      "step": 17,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 4.006527900695801,
+      "gradient_norm_before_clip": 1.2805323600769043
+    },
+    {
+      "step": 18,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 4.0646748542785645,
+      "gradient_norm_before_clip": 1.3181238174438477
+    },
+    {
+      "step": 19,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 3.815133810043335,
+      "gradient_norm_before_clip": 1.556154727935791
+    },
+    {
+      "step": 20,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 3.753110647201538,
+      "gradient_norm_before_clip": 1.2746905088424683
+    },
+    {
+      "step": 21,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 3.7282495498657227,
+      "gradient_norm_before_clip": 1.4621986150741577
+    },
+    {
+      "step": 22,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 3.772477865219116,
+      "gradient_norm_before_clip": 1.4640114307403564
+    },
+    {
+      "step": 23,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 3.470914125442505,
+      "gradient_norm_before_clip": 1.66254723072052
+    },
+    {
+      "step": 24,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 3.5082290172576904,
+      "gradient_norm_before_clip": 1.334547519683838
+    },
+    {
+      "step": 25,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 3.434699535369873,
+      "gradient_norm_before_clip": 1.4832992553710938
+    },
+    {
+      "step": 26,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 3.4749557971954346,
+      "gradient_norm_before_clip": 1.4364792108535767
+    },
+    {
+      "step": 27,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 3.132082223892212,
+      "gradient_norm_before_clip": 1.5765410661697388
+    },
+    {
+      "step": 28,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 3.277698516845703,
+      "gradient_norm_before_clip": 1.2653409242630005
+    },
+    {
+      "step": 29,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 3.166825532913208,
+      "gradient_norm_before_clip": 1.3703380823135376
+    },
+    {
+      "step": 30,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 3.212970495223999,
+      "gradient_norm_before_clip": 1.2866339683532715
+    },
+    {
+      "step": 31,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 2.8392481803894043,
+      "gradient_norm_before_clip": 1.3761751651763916
+    },
+    {
+      "step": 32,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 3.085618734359741,
+      "gradient_norm_before_clip": 1.1419379711151123
+    },
+    {
+      "step": 33,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 2.947631359100342,
+      "gradient_norm_before_clip": 1.2121506929397583
+    },
+    {
+      "step": 34,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 3.004338026046753,
+      "gradient_norm_before_clip": 1.111469030380249
+    },
+    {
+      "step": 35,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 2.605318784713745,
+      "gradient_norm_before_clip": 1.1692310571670532
+    },
+    {
+      "step": 36,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 2.9345216751098633,
+      "gradient_norm_before_clip": 1.0322569608688354
+    },
+    {
+      "step": 37,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 2.77644681930542,
+      "gradient_norm_before_clip": 1.0786256790161133
+    },
+    {
+      "step": 38,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 2.84407639503479,
+      "gradient_norm_before_clip": 0.9706076979637146
+    },
+    {
+      "step": 39,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 2.4210619926452637,
+      "gradient_norm_before_clip": 1.0117772817611694
+    },
+    {
+      "step": 40,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 2.814340114593506,
+      "gradient_norm_before_clip": 0.9565255045890808
+    },
+    {
+      "step": 41,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 2.6405539512634277,
+      "gradient_norm_before_clip": 0.9882574677467346
+    },
+    {
+      "step": 42,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 2.718785285949707,
+      "gradient_norm_before_clip": 0.8752754926681519
+    },
+    {
+      "step": 43,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 2.271042585372925,
+      "gradient_norm_before_clip": 0.908490777015686
+    },
+    {
+      "step": 44,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 2.714449882507324,
+      "gradient_norm_before_clip": 0.9080507159233093
+    },
+    {
+      "step": 45,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 2.5270652770996094,
+      "gradient_norm_before_clip": 0.9317935109138489
+    },
+    {
+      "step": 46,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 2.6170549392700195,
+      "gradient_norm_before_clip": 0.8176104426383972
+    },
+    {
+      "step": 47,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 2.143651247024536,
+      "gradient_norm_before_clip": 0.846481442451477
+    },
+    {
+      "step": 48,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 2.6266820430755615,
+      "gradient_norm_before_clip": 0.8765327334403992
+    },
+    {
+      "step": 49,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 2.4271605014801025,
+      "gradient_norm_before_clip": 0.8970150351524353
+    },
+    {
+      "step": 50,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 2.5289831161499023,
+      "gradient_norm_before_clip": 0.7869895100593567
+    },
+    {
+      "step": 51,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 2.0295724868774414,
+      "gradient_norm_before_clip": 0.8126585483551025
+    },
+    {
+      "step": 52,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 2.545104503631592,
+      "gradient_norm_before_clip": 0.8554560542106628
+    },
+    {
+      "step": 53,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 2.334434986114502,
+      "gradient_norm_before_clip": 0.8754270672798157
+    },
+    {
+      "step": 54,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 2.44697642326355,
+      "gradient_norm_before_clip": 0.7750591039657593
+    },
+    {
+      "step": 55,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 1.9219450950622559,
+      "gradient_norm_before_clip": 0.7979221343994141
+    },
+    {
+      "step": 56,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 2.46557879447937,
+      "gradient_norm_before_clip": 0.8414942622184753
+    },
+    {
+      "step": 57,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 2.244614362716675,
+      "gradient_norm_before_clip": 0.8619129657745361
+    },
+    {
+      "step": 58,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 2.3654582500457764,
+      "gradient_norm_before_clip": 0.7755163908004761
+    },
+    {
+      "step": 59,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 1.8158615827560425,
+      "gradient_norm_before_clip": 0.7959110736846924
+    },
+    {
+      "step": 60,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 2.385047435760498,
+      "gradient_norm_before_clip": 0.8327780961990356
+    },
+    {
+      "step": 61,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 2.154939889907837,
+      "gradient_norm_before_clip": 0.8531520366668701
+    },
+    {
+      "step": 62,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 2.2805025577545166,
+      "gradient_norm_before_clip": 0.7832234501838684
+    },
+    {
+      "step": 63,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 1.7079488039016724,
+      "gradient_norm_before_clip": 0.8014406561851501
+    },
+    {
+      "step": 64,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 2.301145315170288,
+      "gradient_norm_before_clip": 0.8277743458747864
+    },
+    {
+      "step": 65,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 2.063789129257202,
+      "gradient_norm_before_clip": 0.8465558886528015
+    },
+    {
+      "step": 66,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 2.1896848678588867,
+      "gradient_norm_before_clip": 0.7935758829116821
+    },
+    {
+      "step": 67,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 1.5962653160095215,
+      "gradient_norm_before_clip": 0.8096123337745667
+    },
+    {
+      "step": 68,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 2.2121477127075195,
+      "gradient_norm_before_clip": 0.8246917724609375
+    },
+    {
+      "step": 69,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 1.9705145359039307,
+      "gradient_norm_before_clip": 0.8397359251976013
+    },
+    {
+      "step": 70,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 2.0920815467834473,
+      "gradient_norm_before_clip": 0.8021385669708252
+    },
+    {
+      "step": 71,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 1.4803776741027832,
+      "gradient_norm_before_clip": 0.815510094165802
+    },
+    {
+      "step": 72,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 2.1171388626098633,
+      "gradient_norm_before_clip": 0.8212646842002869
+    },
+    {
+      "step": 73,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 1.8753700256347656,
+      "gradient_norm_before_clip": 0.830324113368988
+    },
+    {
+      "step": 74,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 1.98829984664917,
+      "gradient_norm_before_clip": 0.8046088218688965
+    },
+    {
+      "step": 75,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 1.3614540100097656,
+      "gradient_norm_before_clip": 0.8144717216491699
+    },
+    {
+      "step": 76,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 2.01627516746521,
+      "gradient_norm_before_clip": 0.8149051070213318
+    },
+    {
+      "step": 77,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 1.7794513702392578,
+      "gradient_norm_before_clip": 0.8160735368728638
+    },
+    {
+      "step": 78,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 1.880434513092041,
+      "gradient_norm_before_clip": 0.7973355054855347
+    },
+    {
+      "step": 79,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 1.2421714067459106,
+      "gradient_norm_before_clip": 0.8029945492744446
+    },
+    {
+      "step": 80,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 1.9109570980072021,
+      "gradient_norm_before_clip": 0.8031444549560547
+    },
+    {
+      "step": 81,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 1.684546709060669,
+      "gradient_norm_before_clip": 0.79524165391922
+    },
+    {
+      "step": 82,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 1.7717729806900024,
+      "gradient_norm_before_clip": 0.7783437371253967
+    },
+    {
+      "step": 83,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 1.1262471675872803,
+      "gradient_norm_before_clip": 0.7799120545387268
+    },
+    {
+      "step": 84,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 1.8037335872650146,
+      "gradient_norm_before_clip": 0.7841099500656128
+    },
+    {
+      "step": 85,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 1.5928399562835693,
+      "gradient_norm_before_clip": 0.7670783996582031
+    },
+    {
+      "step": 86,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 1.6661858558654785,
+      "gradient_norm_before_clip": 0.7481294274330139
+    },
+    {
+      "step": 87,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 1.017562747001648,
+      "gradient_norm_before_clip": 0.7468633055686951
+    },
+    {
+      "step": 88,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 1.6978938579559326,
+      "gradient_norm_before_clip": 0.7568672299385071
+    },
+    {
+      "step": 89,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 1.5064674615859985,
+      "gradient_norm_before_clip": 0.7320253252983093
+    },
+    {
+      "step": 90,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 1.567307949066162,
+      "gradient_norm_before_clip": 0.7094322443008423
+    },
+    {
+      "step": 91,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.9191781282424927,
+      "gradient_norm_before_clip": 0.7074412703514099
+    },
+    {
+      "step": 92,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 1.596832513809204,
+      "gradient_norm_before_clip": 0.7217843532562256
+    },
+    {
+      "step": 93,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 1.4270766973495483,
+      "gradient_norm_before_clip": 0.6915811896324158
+    },
+    {
+      "step": 94,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 1.477799892425537,
+      "gradient_norm_before_clip": 0.6661635637283325
+    },
+    {
+      "step": 95,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.8326832056045532,
+      "gradient_norm_before_clip": 0.6656075119972229
+    },
+    {
+      "step": 96,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 1.503355622291565,
+      "gradient_norm_before_clip": 0.6807820200920105
+    },
+    {
+      "step": 97,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 1.3555481433868408,
+      "gradient_norm_before_clip": 0.6480591893196106
+    },
+    {
+      "step": 98,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 1.3989109992980957,
+      "gradient_norm_before_clip": 0.6221640110015869
+    },
+    {
+      "step": 99,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.7581307291984558,
+      "gradient_norm_before_clip": 0.6243694424629211
+    },
+    {
+      "step": 100,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 1.4191441535949707,
+      "gradient_norm_before_clip": 0.636843204498291
+    },
+    {
+      "step": 101,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 1.2919420003890991,
+      "gradient_norm_before_clip": 0.604139506816864
+    },
+    {
+      "step": 102,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 1.3304812908172607,
+      "gradient_norm_before_clip": 0.580229640007019
+    },
+    {
+      "step": 103,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.6944676041603088,
+      "gradient_norm_before_clip": 0.5853084921836853
+    },
+    {
+      "step": 104,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 1.344638466835022,
+      "gradient_norm_before_clip": 0.5929245352745056
+    },
+    {
+      "step": 105,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 1.2356743812561035,
+      "gradient_norm_before_clip": 0.562170147895813
+    },
+    {
+      "step": 106,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 1.2713502645492554,
+      "gradient_norm_before_clip": 0.5417687296867371
+    },
+    {
+      "step": 107,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.6401548385620117,
+      "gradient_norm_before_clip": 0.5489433407783508
+    },
+    {
+      "step": 108,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 1.2793500423431396,
+      "gradient_norm_before_clip": 0.5512271523475647
+    },
+    {
+      "step": 109,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 1.1858283281326294,
+      "gradient_norm_before_clip": 0.5236823558807373
+    },
+    {
+      "step": 110,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 1.2199376821517944,
+      "gradient_norm_before_clip": 0.5071235299110413
+    },
+    {
+      "step": 111,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.5936483144760132,
+      "gradient_norm_before_clip": 0.5153548121452332
+    },
+    {
+      "step": 112,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 1.2223107814788818,
+      "gradient_norm_before_clip": 0.5131419897079468
+    },
+    {
+      "step": 113,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 1.1414339542388916,
+      "gradient_norm_before_clip": 0.48936569690704346
+    },
+    {
+      "step": 114,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 1.1746946573257446,
+      "gradient_norm_before_clip": 0.47609326243400574
+    },
+    {
+      "step": 115,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.5536165237426758,
+      "gradient_norm_before_clip": 0.4845516085624695
+    },
+    {
+      "step": 116,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 1.1724003553390503,
+      "gradient_norm_before_clip": 0.4794125258922577
+    },
+    {
+      "step": 117,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 1.1016212701797485,
+      "gradient_norm_before_clip": 0.4592760503292084
+    },
+    {
+      "step": 118,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 1.1343246698379517,
+      "gradient_norm_before_clip": 0.4482996165752411
+    },
+    {
+      "step": 119,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.518974781036377,
+      "gradient_norm_before_clip": 0.45654600858688354
+    },
+    {
+      "step": 120,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 1.1285117864608765,
+      "gradient_norm_before_clip": 0.4502386152744293
+    },
+    {
+      "step": 121,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 1.0656598806381226,
+      "gradient_norm_before_clip": 0.4330689013004303
+    },
+    {
+      "step": 122,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 1.097824215888977,
+      "gradient_norm_before_clip": 0.42336514592170715
+    },
+    {
+      "step": 123,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.48884090781211853,
+      "gradient_norm_before_clip": 0.43131932616233826
+    },
+    {
+      "step": 124,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 1.0896170139312744,
+      "gradient_norm_before_clip": 0.42537474632263184
+    },
+    {
+      "step": 125,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 1.0329517126083374,
+      "gradient_norm_before_clip": 0.4102170765399933
+    },
+    {
+      "step": 126,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 1.0644476413726807,
+      "gradient_norm_before_clip": 0.40098586678504944
+    },
+    {
+      "step": 127,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.4624854326248169,
+      "gradient_norm_before_clip": 0.40878623723983765
+    },
+    {
+      "step": 128,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 1.0548043251037598,
+      "gradient_norm_before_clip": 0.40429362654685974
+    },
+    {
+      "step": 129,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 1.0030064582824707,
+      "gradient_norm_before_clip": 0.39018064737319946
+    },
+    {
+      "step": 130,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 1.03364098072052,
+      "gradient_norm_before_clip": 0.38093820214271545
+    },
+    {
+      "step": 131,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.4392964243888855,
+      "gradient_norm_before_clip": 0.3887846767902374
+    },
+    {
+      "step": 132,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 1.0232970714569092,
+      "gradient_norm_before_clip": 0.38636404275894165
+    },
+    {
+      "step": 133,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.9754208326339722,
+      "gradient_norm_before_clip": 0.37249812483787537
+    },
+    {
+      "step": 134,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 1.0049865245819092,
+      "gradient_norm_before_clip": 0.3630507290363312
+    },
+    {
+      "step": 135,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.4187570810317993,
+      "gradient_norm_before_clip": 0.3710825443267822
+    },
+    {
+      "step": 136,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.9944517612457275,
+      "gradient_norm_before_clip": 0.37097886204719543
+    },
+    {
+      "step": 137,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.9498562216758728,
+      "gradient_norm_before_clip": 0.35680386424064636
+    },
+    {
+      "step": 138,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.9781575798988342,
+      "gradient_norm_before_clip": 0.3471675515174866
+    },
+    {
+      "step": 139,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.4004330039024353,
+      "gradient_norm_before_clip": 0.3553983271121979
+    },
+    {
+      "step": 140,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.9677520394325256,
+      "gradient_norm_before_clip": 0.3576200604438782
+    },
+    {
+      "step": 141,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.9260218739509583,
+      "gradient_norm_before_clip": 0.3428092300891876
+    },
+    {
+      "step": 142,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.9528889060020447,
+      "gradient_norm_before_clip": 0.3331202268600464
+    },
+    {
+      "step": 143,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.3839642107486725,
+      "gradient_norm_before_clip": 0.3414323329925537
+    },
+    {
+      "step": 144,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.9427886605262756,
+      "gradient_norm_before_clip": 0.34587258100509644
+    },
+    {
+      "step": 145,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.903666615486145,
+      "gradient_norm_before_clip": 0.3302777111530304
+    },
+    {
+      "step": 146,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.928959846496582,
+      "gradient_norm_before_clip": 0.32071828842163086
+    },
+    {
+      "step": 147,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.3690563440322876,
+      "gradient_norm_before_clip": 0.32889512181282043
+    },
+    {
+      "step": 148,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.9192429780960083,
+      "gradient_norm_before_clip": 0.33541786670684814
+    },
+    {
+      "step": 149,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.8825700283050537,
+      "gradient_norm_before_clip": 0.3190069794654846
+    },
+    {
+      "step": 150,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.9061862230300903,
+      "gradient_norm_before_clip": 0.30975285172462463
+    },
+    {
+      "step": 151,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.3554747700691223,
+      "gradient_norm_before_clip": 0.31753143668174744
+    },
+    {
+      "step": 152,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.8968693614006042,
+      "gradient_norm_before_clip": 0.3260159492492676
+    },
+    {
+      "step": 153,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.862541913986206,
+      "gradient_norm_before_clip": 0.3088206648826599
+    },
+    {
+      "step": 154,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.8844146728515625,
+      "gradient_norm_before_clip": 0.30000653862953186
+    },
+    {
+      "step": 155,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.3430339992046356,
+      "gradient_norm_before_clip": 0.3071308732032776
+    },
+    {
+      "step": 156,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.8754790425300598,
+      "gradient_norm_before_clip": 0.3174864649772644
+    },
+    {
+      "step": 157,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.8434191346168518,
+      "gradient_norm_before_clip": 0.2995625138282776
+    },
+    {
+      "step": 158,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.8635213375091553,
+      "gradient_norm_before_clip": 0.29126468300819397
+    },
+    {
+      "step": 159,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.33158957958221436,
+      "gradient_norm_before_clip": 0.29753127694129944
+    },
+    {
+      "step": 160,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.8549290895462036,
+      "gradient_norm_before_clip": 0.3096909523010254
+    },
+    {
+      "step": 161,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.8250660300254822,
+      "gradient_norm_before_clip": 0.29109299182891846
+    },
+    {
+      "step": 162,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.8434083461761475,
+      "gradient_norm_before_clip": 0.2833248972892761
+    },
+    {
+      "step": 163,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.32102805376052856,
+      "gradient_norm_before_clip": 0.2886146605014801
+    },
+    {
+      "step": 164,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.8351122736930847,
+      "gradient_norm_before_clip": 0.30251646041870117
+    },
+    {
+      "step": 165,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.8073731660842896,
+      "gradient_norm_before_clip": 0.2832852602005005
+    },
+    {
+      "step": 166,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.8240026235580444,
+      "gradient_norm_before_clip": 0.2760026156902313
+    },
+    {
+      "step": 167,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.3112599551677704,
+      "gradient_norm_before_clip": 0.2802993953227997
+    },
+    {
+      "step": 168,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.8159491419792175,
+      "gradient_norm_before_clip": 0.29586437344551086
+    },
+    {
+      "step": 169,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.7902554273605347,
+      "gradient_norm_before_clip": 0.27602240443229675
+    },
+    {
+      "step": 170,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.8052533268928528,
+      "gradient_norm_before_clip": 0.2691361606121063
+    },
+    {
+      "step": 171,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.30221205949783325,
+      "gradient_norm_before_clip": 0.27253207564353943
+    },
+    {
+      "step": 172,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.7973846197128296,
+      "gradient_norm_before_clip": 0.28964370489120483
+    },
+    {
+      "step": 173,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.7736524939537048,
+      "gradient_norm_before_clip": 0.26919636130332947
+    },
+    {
+      "step": 174,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.7871297001838684,
+      "gradient_norm_before_clip": 0.2625882923603058
+    },
+    {
+      "step": 175,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.29382264614105225,
+      "gradient_norm_before_clip": 0.26527708768844604
+    },
+    {
+      "step": 176,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.779382586479187,
+      "gradient_norm_before_clip": 0.2837669551372528
+    },
+    {
+      "step": 177,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.757526159286499,
+      "gradient_norm_before_clip": 0.26270782947540283
+    },
+    {
+      "step": 178,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.7696179747581482,
+      "gradient_norm_before_clip": 0.2562474310398102
+    },
+    {
+      "step": 179,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.28603750467300415,
+      "gradient_norm_before_clip": 0.2585095465183258
+    },
+    {
+      "step": 180,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.7619261145591736,
+      "gradient_norm_before_clip": 0.2781504690647125
+    },
+    {
+      "step": 181,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.7418590784072876,
+      "gradient_norm_before_clip": 0.2564670145511627
+    },
+    {
+      "step": 182,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.7527183890342712,
+      "gradient_norm_before_clip": 0.250027060508728
+    },
+    {
+      "step": 183,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.27880752086639404,
+      "gradient_norm_before_clip": 0.2522069215774536
+    },
+    {
+      "step": 184,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.7450125813484192,
+      "gradient_norm_before_clip": 0.27271443605422974
+    },
+    {
+      "step": 185,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.7266523241996765,
+      "gradient_norm_before_clip": 0.2503949701786041
+    },
+    {
+      "step": 186,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.7364428043365479,
+      "gradient_norm_before_clip": 0.24386385083198547
+    },
+    {
+      "step": 187,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.2720867395401001,
+      "gradient_norm_before_clip": 0.24634353816509247
+    },
+    {
+      "step": 188,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.7286540269851685,
+      "gradient_norm_before_clip": 0.2673864960670471
+    },
+    {
+      "step": 189,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.711921751499176,
+      "gradient_norm_before_clip": 0.24442532658576965
+    },
+    {
+      "step": 190,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.7208102941513062,
+      "gradient_norm_before_clip": 0.23771622776985168
+    },
+    {
+      "step": 191,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.2658326029777527,
+      "gradient_norm_before_clip": 0.2408888190984726
+    },
+    {
+      "step": 192,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.7128726243972778,
+      "gradient_norm_before_clip": 0.26210328936576843
+    },
+    {
+      "step": 193,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.697693943977356,
+      "gradient_norm_before_clip": 0.23850654065608978
+    },
+    {
+      "step": 194,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.7058446407318115,
+      "gradient_norm_before_clip": 0.2315625697374344
+    },
+    {
+      "step": 195,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.2600051164627075,
+      "gradient_norm_before_clip": 0.2358051836490631
+    },
+    {
+      "step": 196,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.6976996660232544,
+      "gradient_norm_before_clip": 0.25681471824645996
+    },
+    {
+      "step": 197,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.6840033531188965,
+      "gradient_norm_before_clip": 0.23260363936424255
+    },
+    {
+      "step": 198,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.6915709972381592,
+      "gradient_norm_before_clip": 0.22539903223514557
+    },
+    {
+      "step": 199,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.2545676529407501,
+      "gradient_norm_before_clip": 0.23105035722255707
+    },
+    {
+      "step": 200,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.6831704378128052,
+      "gradient_norm_before_clip": 0.2514861524105072
+    },
+    {
+      "step": 201,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.6708863377571106,
+      "gradient_norm_before_clip": 0.22669942677021027
+    },
+    {
+      "step": 202,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.6780117154121399,
+      "gradient_norm_before_clip": 0.21923711895942688
+    },
+    {
+      "step": 203,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.2494869977235794,
+      "gradient_norm_before_clip": 0.226579487323761
+    },
+    {
+      "step": 204,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.6693210601806641,
+      "gradient_norm_before_clip": 0.24610038101673126
+    },
+    {
+      "step": 205,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.6583777070045471,
+      "gradient_norm_before_clip": 0.22079426050186157
+    },
+    {
+      "step": 206,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.6651847958564758,
+      "gradient_norm_before_clip": 0.21310104429721832
+    },
+    {
+      "step": 207,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.2447337508201599,
+      "gradient_norm_before_clip": 0.22234801948070526
+    },
+    {
+      "step": 208,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.6561853885650635,
+      "gradient_norm_before_clip": 0.24065853655338287
+    },
+    {
+      "step": 209,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.6465073823928833,
+      "gradient_norm_before_clip": 0.21490485966205597
+    },
+    {
+      "step": 210,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.6531000733375549,
+      "gradient_norm_before_clip": 0.20702306926250458
+    },
+    {
+      "step": 211,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.24028189480304718,
+      "gradient_norm_before_clip": 0.2183147668838501
+    },
+    {
+      "step": 212,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.6437893509864807,
+      "gradient_norm_before_clip": 0.2351781576871872
+    },
+    {
+      "step": 213,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.6352946758270264,
+      "gradient_norm_before_clip": 0.20906022191047668
+    },
+    {
+      "step": 214,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.641758382320404,
+      "gradient_norm_before_clip": 0.20104072988033295
+    },
+    {
+      "step": 215,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.23610848188400269,
+      "gradient_norm_before_clip": 0.21444319188594818
+    },
+    {
+      "step": 216,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.6321499943733215,
+      "gradient_norm_before_clip": 0.229690819978714
+    },
+    {
+      "step": 217,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.6247507929801941,
+      "gradient_norm_before_clip": 0.20329919457435608
+    },
+    {
+      "step": 218,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.6311509013175964,
+      "gradient_norm_before_clip": 0.19519180059432983
+    },
+    {
+      "step": 219,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.23219364881515503,
+      "gradient_norm_before_clip": 0.21070323884487152
+    },
+    {
+      "step": 220,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.6212727427482605,
+      "gradient_norm_before_clip": 0.22423748672008514
+    },
+    {
+      "step": 221,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.6148731708526611,
+      "gradient_norm_before_clip": 0.19766394793987274
+    },
+    {
+      "step": 222,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.6212590336799622,
+      "gradient_norm_before_clip": 0.1895115226507187
+    },
+    {
+      "step": 223,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.22851957380771637,
+      "gradient_norm_before_clip": 0.20707137882709503
+    },
+    {
+      "step": 224,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.6111505031585693,
+      "gradient_norm_before_clip": 0.21886371076107025
+    },
+    {
+      "step": 225,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.6056492924690247,
+      "gradient_norm_before_clip": 0.19219642877578735
+    },
+    {
+      "step": 226,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.6120553612709045,
+      "gradient_norm_before_clip": 0.18403013050556183
+    },
+    {
+      "step": 227,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.22507047653198242,
+      "gradient_norm_before_clip": 0.20353004336357117
+    },
+    {
+      "step": 228,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.6017648577690125,
+      "gradient_norm_before_clip": 0.2136143147945404
+    },
+    {
+      "step": 229,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5970563888549805,
+      "gradient_norm_before_clip": 0.18693406879901886
+    },
+    {
+      "step": 230,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.6035053730010986,
+      "gradient_norm_before_clip": 0.1787710338830948
+    },
+    {
+      "step": 231,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.22183167934417725,
+      "gradient_norm_before_clip": 0.20006735622882843
+    },
+    {
+      "step": 232,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5930869579315186,
+      "gradient_norm_before_clip": 0.20852911472320557
+    },
+    {
+      "step": 233,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5890638828277588,
+      "gradient_norm_before_clip": 0.18190737068653107
+    },
+    {
+      "step": 234,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5955691337585449,
+      "gradient_norm_before_clip": 0.17375056445598602
+    },
+    {
+      "step": 235,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.21879015862941742,
+      "gradient_norm_before_clip": 0.19667617976665497
+    },
+    {
+      "step": 236,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5850797891616821,
+      "gradient_norm_before_clip": 0.20363974571228027
+    },
+    {
+      "step": 237,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5816356539726257,
+      "gradient_norm_before_clip": 0.17713803052902222
+    },
+    {
+      "step": 238,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5882036685943604,
+      "gradient_norm_before_clip": 0.1689782291650772
+    },
+    {
+      "step": 239,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.2159336358308792,
+      "gradient_norm_before_clip": 0.19335328042507172
+    },
+    {
+      "step": 240,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5777006149291992,
+      "gradient_norm_before_clip": 0.19896815717220306
+    },
+    {
+      "step": 241,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5747313499450684,
+      "gradient_norm_before_clip": 0.17263875901699066
+    },
+    {
+      "step": 242,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.581364631652832,
+      "gradient_norm_before_clip": 0.164457306265831
+    },
+    {
+      "step": 243,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.21325090527534485,
+      "gradient_norm_before_clip": 0.19009825587272644
+    },
+    {
+      "step": 244,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.570903480052948,
+      "gradient_norm_before_clip": 0.19452644884586334
+    },
+    {
+      "step": 245,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5683108568191528,
+      "gradient_norm_before_clip": 0.1684138923883438
+    },
+    {
+      "step": 246,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5750076770782471,
+      "gradient_norm_before_clip": 0.16018617153167725
+    },
+    {
+      "step": 247,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.21073125302791595,
+      "gradient_norm_before_clip": 0.18691283464431763
+    },
+    {
+      "step": 248,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5646409392356873,
+      "gradient_norm_before_clip": 0.19031764566898346
+    },
+    {
+      "step": 249,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.562333345413208,
+      "gradient_norm_before_clip": 0.16446056962013245
+    },
+    {
+      "step": 250,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5690903663635254,
+      "gradient_norm_before_clip": 0.15615880489349365
+    },
+    {
+      "step": 251,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.2083648294210434,
+      "gradient_norm_before_clip": 0.18380005657672882
+    },
+    {
+      "step": 252,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5588666796684265,
+      "gradient_norm_before_clip": 0.18633784353733063
+    },
+    {
+      "step": 253,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5567603707313538,
+      "gradient_norm_before_clip": 0.1607699692249298
+    },
+    {
+      "step": 254,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5635724663734436,
+      "gradient_norm_before_clip": 0.15236636996269226
+    },
+    {
+      "step": 255,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.20614248514175415,
+      "gradient_norm_before_clip": 0.18076425790786743
+    },
+    {
+      "step": 256,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5535361170768738,
+      "gradient_norm_before_clip": 0.1825777143239975
+    },
+    {
+      "step": 257,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.551555871963501,
+      "gradient_norm_before_clip": 0.1573295146226883
+    },
+    {
+      "step": 258,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5584169030189514,
+      "gradient_norm_before_clip": 0.14879819750785828
+    },
+    {
+      "step": 259,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.2040557861328125,
+      "gradient_norm_before_clip": 0.17780955135822296
+    },
+    {
+      "step": 260,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5486080050468445,
+      "gradient_norm_before_clip": 0.17902503907680511
+    },
+    {
+      "step": 261,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.546686589717865,
+      "gradient_norm_before_clip": 0.15412402153015137
+    },
+    {
+      "step": 262,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5535900592803955,
+      "gradient_norm_before_clip": 0.1454424262046814
+    },
+    {
+      "step": 263,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.20209625363349915,
+      "gradient_norm_before_clip": 0.17493946850299835
+    },
+    {
+      "step": 264,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.544043779373169,
+      "gradient_norm_before_clip": 0.1756659299135208
+    },
+    {
+      "step": 265,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5421229600906372,
+      "gradient_norm_before_clip": 0.15113720297813416
+    },
+    {
+      "step": 266,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5490617156028748,
+      "gradient_norm_before_clip": 0.14228717982769012
+    },
+    {
+      "step": 267,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.2002563327550888,
+      "gradient_norm_before_clip": 0.172157421708107
+    },
+    {
+      "step": 268,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.539808988571167,
+      "gradient_norm_before_clip": 0.17248621582984924
+    },
+    {
+      "step": 269,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5378386378288269,
+      "gradient_norm_before_clip": 0.14835262298583984
+    },
+    {
+      "step": 270,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5448047518730164,
+      "gradient_norm_before_clip": 0.13932016491889954
+    },
+    {
+      "step": 271,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.19852839410305023,
+      "gradient_norm_before_clip": 0.1694653034210205
+    },
+    {
+      "step": 272,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5358721613883972,
+      "gradient_norm_before_clip": 0.16947199404239655
+    },
+    {
+      "step": 273,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5338099002838135,
+      "gradient_norm_before_clip": 0.14575442671775818
+    },
+    {
+      "step": 274,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.540795087814331,
+      "gradient_norm_before_clip": 0.13652993738651276
+    },
+    {
+      "step": 275,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.19690561294555664,
+      "gradient_norm_before_clip": 0.1668645143508911
+    },
+    {
+      "step": 276,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5322058200836182,
+      "gradient_norm_before_clip": 0.16661056876182556
+    },
+    {
+      "step": 277,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5300161838531494,
+      "gradient_norm_before_clip": 0.14332768321037292
+    },
+    {
+      "step": 278,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5370120406150818,
+      "gradient_norm_before_clip": 0.13390548527240753
+    },
+    {
+      "step": 279,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.1953813135623932,
+      "gradient_norm_before_clip": 0.16435527801513672
+    },
+    {
+      "step": 280,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5287851095199585,
+      "gradient_norm_before_clip": 0.16389015316963196
+    },
+    {
+      "step": 281,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.526439368724823,
+      "gradient_norm_before_clip": 0.14105865359306335
+    },
+    {
+      "step": 282,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5334368348121643,
+      "gradient_norm_before_clip": 0.131436288356781
+    },
+    {
+      "step": 283,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.1939489245414734,
+      "gradient_norm_before_clip": 0.16193713247776031
+    },
+    {
+      "step": 284,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5255882740020752,
+      "gradient_norm_before_clip": 0.16130034625530243
+    },
+    {
+      "step": 285,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5230630040168762,
+      "gradient_norm_before_clip": 0.1389344036579132
+    },
+    {
+      "step": 286,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5300527215003967,
+      "gradient_norm_before_clip": 0.12911267578601837
+    },
+    {
+      "step": 287,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.1926027536392212,
+      "gradient_norm_before_clip": 0.15960878133773804
+    },
+    {
+      "step": 288,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5225955843925476,
+      "gradient_norm_before_clip": 0.1588316708803177
+    },
+    {
+      "step": 289,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5198732018470764,
+      "gradient_norm_before_clip": 0.13694344460964203
+    },
+    {
+      "step": 290,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.526845395565033,
+      "gradient_norm_before_clip": 0.12692540884017944
+    },
+    {
+      "step": 291,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.19133682548999786,
+      "gradient_norm_before_clip": 0.157368466258049
+    },
+    {
+      "step": 292,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5197893381118774,
+      "gradient_norm_before_clip": 0.1564755141735077
+    },
+    {
+      "step": 293,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5168570280075073,
+      "gradient_norm_before_clip": 0.13507524132728577
+    },
+    {
+      "step": 294,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5238019227981567,
+      "gradient_norm_before_clip": 0.12486591190099716
+    },
+    {
+      "step": 295,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.1901460438966751,
+      "gradient_norm_before_clip": 0.1552141010761261
+    },
+    {
+      "step": 296,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5171542763710022,
+      "gradient_norm_before_clip": 0.1542247235774994
+    },
+    {
+      "step": 297,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5140027403831482,
+      "gradient_norm_before_clip": 0.13331949710845947
+    },
+    {
+      "step": 298,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5209105014801025,
+      "gradient_norm_before_clip": 0.12292607128620148
+    },
+    {
+      "step": 299,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.18902532756328583,
+      "gradient_norm_before_clip": 0.1531432569026947
+    },
+    {
+      "step": 300,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5146764516830444,
+      "gradient_norm_before_clip": 0.15207237005233765
+    },
+    {
+      "step": 301,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5112996697425842,
+      "gradient_norm_before_clip": 0.13166743516921997
+    },
+    {
+      "step": 302,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5181605219841003,
+      "gradient_norm_before_clip": 0.12109825015068054
+    },
+    {
+      "step": 303,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.1879698485136032,
+      "gradient_norm_before_clip": 0.15115337073802948
+    },
+    {
+      "step": 304,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.512343168258667,
+      "gradient_norm_before_clip": 0.15001247823238373
+    },
+    {
+      "step": 305,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5087389349937439,
+      "gradient_norm_before_clip": 0.13011056184768677
+    },
+    {
+      "step": 306,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5155429244041443,
+      "gradient_norm_before_clip": 0.11937519162893295
+    },
+    {
+      "step": 307,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.18697544932365417,
+      "gradient_norm_before_clip": 0.1492416262626648
+    },
+    {
+      "step": 308,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5101435780525208,
+      "gradient_norm_before_clip": 0.1480397880077362
+    },
+    {
+      "step": 309,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5063111782073975,
+      "gradient_norm_before_clip": 0.1286412626504898
+    },
+    {
+      "step": 310,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5130485892295837,
+      "gradient_norm_before_clip": 0.1177501529455185
+    },
+    {
+      "step": 311,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.1860377937555313,
+      "gradient_norm_before_clip": 0.147405207157135
+    },
+    {
+      "step": 312,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5080673694610596,
+      "gradient_norm_before_clip": 0.14614921808242798
+    },
+    {
+      "step": 313,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5040088295936584,
+      "gradient_norm_before_clip": 0.12725219130516052
+    },
+    {
+      "step": 314,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5106699466705322,
+      "gradient_norm_before_clip": 0.11621662229299545
+    },
+    {
+      "step": 315,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.18515294790267944,
+      "gradient_norm_before_clip": 0.14564122259616852
+    },
+    {
+      "step": 316,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5061053037643433,
+      "gradient_norm_before_clip": 0.1443362981081009
+    },
+    {
+      "step": 317,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.5018242001533508,
+      "gradient_norm_before_clip": 0.12593689560890198
+    },
+    {
+      "step": 318,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5084001421928406,
+      "gradient_norm_before_clip": 0.11476857215166092
+    },
+    {
+      "step": 319,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.18431758880615234,
+      "gradient_norm_before_clip": 0.1439467817544937
+    },
+    {
+      "step": 320,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5042492747306824,
+      "gradient_norm_before_clip": 0.14259694516658783
+    },
+    {
+      "step": 321,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4997507333755493,
+      "gradient_norm_before_clip": 0.12468968331813812
+    },
+    {
+      "step": 322,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5062319040298462,
+      "gradient_norm_before_clip": 0.11340034008026123
+    },
+    {
+      "step": 323,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.1835281103849411,
+      "gradient_norm_before_clip": 0.1423187106847763
+    },
+    {
+      "step": 324,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5024915337562561,
+      "gradient_norm_before_clip": 0.14092721045017242
+    },
+    {
+      "step": 325,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4977811574935913,
+      "gradient_norm_before_clip": 0.12350480258464813
+    },
+    {
+      "step": 326,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5041596293449402,
+      "gradient_norm_before_clip": 0.11210671812295914
+    },
+    {
+      "step": 327,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.18278098106384277,
+      "gradient_norm_before_clip": 0.14075393974781036
+    },
+    {
+      "step": 328,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.5008252263069153,
+      "gradient_norm_before_clip": 0.13932344317436218
+    },
+    {
+      "step": 329,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4959101676940918,
+      "gradient_norm_before_clip": 0.12237750738859177
+    },
+    {
+      "step": 330,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5021772980690002,
+      "gradient_norm_before_clip": 0.11088249832391739
+    },
+    {
+      "step": 331,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.18207356333732605,
+      "gradient_norm_before_clip": 0.13924995064735413
+    },
+    {
+      "step": 332,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4992440640926361,
+      "gradient_norm_before_clip": 0.13778218626976013
+    },
+    {
+      "step": 333,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4941316246986389,
+      "gradient_norm_before_clip": 0.1213030070066452
+    },
+    {
+      "step": 334,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.5002802610397339,
+      "gradient_norm_before_clip": 0.10972320288419724
+    },
+    {
+      "step": 335,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.18140286207199097,
+      "gradient_norm_before_clip": 0.13780352473258972
+    },
+    {
+      "step": 336,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.49774202704429626,
+      "gradient_norm_before_clip": 0.1363002359867096
+    },
+    {
+      "step": 337,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4924403429031372,
+      "gradient_norm_before_clip": 0.12027744948863983
+    },
+    {
+      "step": 338,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.49846330285072327,
+      "gradient_norm_before_clip": 0.10862435400485992
+    },
+    {
+      "step": 339,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.1807662844657898,
+      "gradient_norm_before_clip": 0.13641208410263062
+    },
+    {
+      "step": 340,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.49631446599960327,
+      "gradient_norm_before_clip": 0.13487455248832703
+    },
+    {
+      "step": 341,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.49083104729652405,
+      "gradient_norm_before_clip": 0.11929682642221451
+    },
+    {
+      "step": 342,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.49672210216522217,
+      "gradient_norm_before_clip": 0.1075819581747055
+    },
+    {
+      "step": 343,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.18016140162944794,
+      "gradient_norm_before_clip": 0.1350727528333664
+    },
+    {
+      "step": 344,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4949558675289154,
+      "gradient_norm_before_clip": 0.13350217044353485
+    },
+    {
+      "step": 345,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4892994165420532,
+      "gradient_norm_before_clip": 0.11835775524377823
+    },
+    {
+      "step": 346,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4950523376464844,
+      "gradient_norm_before_clip": 0.10659205168485641
+    },
+    {
+      "step": 347,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17958569526672363,
+      "gradient_norm_before_clip": 0.1337830275297165
+    },
+    {
+      "step": 348,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4936620891094208,
+      "gradient_norm_before_clip": 0.13218015432357788
+    },
+    {
+      "step": 349,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4878403842449188,
+      "gradient_norm_before_clip": 0.11745703220367432
+    },
+    {
+      "step": 350,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.49345070123672485,
+      "gradient_norm_before_clip": 0.10565123707056046
+    },
+    {
+      "step": 351,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17903724312782288,
+      "gradient_norm_before_clip": 0.13254041969776154
+    },
+    {
+      "step": 352,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.49242889881134033,
+      "gradient_norm_before_clip": 0.13090625405311584
+    },
+    {
+      "step": 353,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.48645004630088806,
+      "gradient_norm_before_clip": 0.11659187078475952
+    },
+    {
+      "step": 354,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.49191248416900635,
+      "gradient_norm_before_clip": 0.10475610941648483
+    },
+    {
+      "step": 355,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17851418256759644,
+      "gradient_norm_before_clip": 0.13134264945983887
+    },
+    {
+      "step": 356,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.49125227332115173,
+      "gradient_norm_before_clip": 0.12967748939990997
+    },
+    {
+      "step": 357,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.48512426018714905,
+      "gradient_norm_before_clip": 0.11575952917337418
+    },
+    {
+      "step": 358,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.49043524265289307,
+      "gradient_norm_before_clip": 0.10390348732471466
+    },
+    {
+      "step": 359,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17801421880722046,
+      "gradient_norm_before_clip": 0.13018713891506195
+    },
+    {
+      "step": 360,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4901290535926819,
+      "gradient_norm_before_clip": 0.12849199771881104
+    },
+    {
+      "step": 361,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.48385927081108093,
+      "gradient_norm_before_clip": 0.11495757102966309
+    },
+    {
+      "step": 362,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4890155792236328,
+      "gradient_norm_before_clip": 0.10309053957462311
+    },
+    {
+      "step": 363,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17753607034683228,
+      "gradient_norm_before_clip": 0.12907205522060394
+    },
+    {
+      "step": 364,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4890556335449219,
+      "gradient_norm_before_clip": 0.12734724581241608
+    },
+    {
+      "step": 365,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4826512932777405,
+      "gradient_norm_before_clip": 0.11418375372886658
+    },
+    {
+      "step": 366,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4876501262187958,
+      "gradient_norm_before_clip": 0.10231456905603409
+    },
+    {
+      "step": 367,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.1770779937505722,
+      "gradient_norm_before_clip": 0.1279953420162201
+    },
+    {
+      "step": 368,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4880291521549225,
+      "gradient_norm_before_clip": 0.12624110281467438
+    },
+    {
+      "step": 369,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.48149728775024414,
+      "gradient_norm_before_clip": 0.11343611031770706
+    },
+    {
+      "step": 370,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4863368272781372,
+      "gradient_norm_before_clip": 0.1015729308128357
+    },
+    {
+      "step": 371,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.1766383945941925,
+      "gradient_norm_before_clip": 0.12695491313934326
+    },
+    {
+      "step": 372,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4870467782020569,
+      "gradient_norm_before_clip": 0.12517179548740387
+    },
+    {
+      "step": 373,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4803939461708069,
+      "gradient_norm_before_clip": 0.11271295696496964
+    },
+    {
+      "step": 374,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4850725531578064,
+      "gradient_norm_before_clip": 0.10086347907781601
+    },
+    {
+      "step": 375,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17621614038944244,
+      "gradient_norm_before_clip": 0.1259489804506302
+    },
+    {
+      "step": 376,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.48610612750053406,
+      "gradient_norm_before_clip": 0.12413736432790756
+    },
+    {
+      "step": 377,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.47933804988861084,
+      "gradient_norm_before_clip": 0.11201246827840805
+    },
+    {
+      "step": 378,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4838551878929138,
+      "gradient_norm_before_clip": 0.10018396377563477
+    },
+    {
+      "step": 379,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.1758098006248474,
+      "gradient_norm_before_clip": 0.12497593462467194
+    },
+    {
+      "step": 380,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4852043688297272,
+      "gradient_norm_before_clip": 0.12313591688871384
+    },
+    {
+      "step": 381,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.47832733392715454,
+      "gradient_norm_before_clip": 0.11133327335119247
+    },
+    {
+      "step": 382,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.48268234729766846,
+      "gradient_norm_before_clip": 0.09953232854604721
+    },
+    {
+      "step": 383,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17541831731796265,
+      "gradient_norm_before_clip": 0.12403403967618942
+    },
+    {
+      "step": 384,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4843399226665497,
+      "gradient_norm_before_clip": 0.12216586619615555
+    },
+    {
+      "step": 385,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.47735896706581116,
+      "gradient_norm_before_clip": 0.11067385226488113
+    },
+    {
+      "step": 386,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4815516471862793,
+      "gradient_norm_before_clip": 0.09890663623809814
+    },
+    {
+      "step": 387,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17504079639911652,
+      "gradient_norm_before_clip": 0.12312187999486923
+    },
+    {
+      "step": 388,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4835098087787628,
+      "gradient_norm_before_clip": 0.12122564762830734
+    },
+    {
+      "step": 389,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4764302670955658,
+      "gradient_norm_before_clip": 0.11003321409225464
+    },
+    {
+      "step": 390,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4804612696170807,
+      "gradient_norm_before_clip": 0.09830520302057266
+    },
+    {
+      "step": 391,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17467576265335083,
+      "gradient_norm_before_clip": 0.12223762273788452
+    },
+    {
+      "step": 392,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.48271268606185913,
+      "gradient_norm_before_clip": 0.120313860476017
+    },
+    {
+      "step": 393,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.47553905844688416,
+      "gradient_norm_before_clip": 0.10941003262996674
+    },
+    {
+      "step": 394,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4794096350669861,
+      "gradient_norm_before_clip": 0.09772663563489914
+    },
+    {
+      "step": 395,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17432299256324768,
+      "gradient_norm_before_clip": 0.12138030678033829
+    },
+    {
+      "step": 396,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4819466769695282,
+      "gradient_norm_before_clip": 0.11942892521619797
+    },
+    {
+      "step": 397,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4746834337711334,
+      "gradient_norm_before_clip": 0.10880322009325027
+    },
+    {
+      "step": 398,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.47839435935020447,
+      "gradient_norm_before_clip": 0.09716911613941193
+    },
+    {
+      "step": 399,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17398101091384888,
+      "gradient_norm_before_clip": 0.12054834514856339
+    },
+    {
+      "step": 400,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.48120996356010437,
+      "gradient_norm_before_clip": 0.11856970936059952
+    },
+    {
+      "step": 401,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.47386088967323303,
+      "gradient_norm_before_clip": 0.10821196436882019
+    },
+    {
+      "step": 402,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4774141311645508,
+      "gradient_norm_before_clip": 0.0966314747929573
+    },
+    {
+      "step": 403,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.1736493557691574,
+      "gradient_norm_before_clip": 0.11974066495895386
+    },
+    {
+      "step": 404,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.48050132393836975,
+      "gradient_norm_before_clip": 0.11773492395877838
+    },
+    {
+      "step": 405,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4730699360370636,
+      "gradient_norm_before_clip": 0.10763541609048843
+    },
+    {
+      "step": 406,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.47646719217300415,
+      "gradient_norm_before_clip": 0.09611239284276962
+    },
+    {
+      "step": 407,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17332738637924194,
+      "gradient_norm_before_clip": 0.11895604431629181
+    },
+    {
+      "step": 408,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4798186719417572,
+      "gradient_norm_before_clip": 0.11692335456609726
+    },
+    {
+      "step": 409,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4723086357116699,
+      "gradient_norm_before_clip": 0.10707271099090576
+    },
+    {
+      "step": 410,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.47555220127105713,
+      "gradient_norm_before_clip": 0.09561067074537277
+    },
+    {
+      "step": 411,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17301435768604279,
+      "gradient_norm_before_clip": 0.11819328367710114
+    },
+    {
+      "step": 412,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4791610538959503,
+      "gradient_norm_before_clip": 0.11613395810127258
+    },
+    {
+      "step": 413,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.47157540917396545,
+      "gradient_norm_before_clip": 0.1065230444073677
+    },
+    {
+      "step": 414,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.47466742992401123,
+      "gradient_norm_before_clip": 0.09512528777122498
+    },
+    {
+      "step": 415,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.1727096289396286,
+      "gradient_norm_before_clip": 0.11745143681764603
+    },
+    {
+      "step": 416,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.47852766513824463,
+      "gradient_norm_before_clip": 0.11536581069231033
+    },
+    {
+      "step": 417,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.470868855714798,
+      "gradient_norm_before_clip": 0.10598599165678024
+    },
+    {
+      "step": 418,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4738117754459381,
+      "gradient_norm_before_clip": 0.09465517848730087
+    },
+    {
+      "step": 419,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17241299152374268,
+      "gradient_norm_before_clip": 0.11672969162464142
+    },
+    {
+      "step": 420,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4779163897037506,
+      "gradient_norm_before_clip": 0.11461780965328217
+    },
+    {
+      "step": 421,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.47018712759017944,
+      "gradient_norm_before_clip": 0.10546061396598816
+    },
+    {
+      "step": 422,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.47298404574394226,
+      "gradient_norm_before_clip": 0.09419935196638107
+    },
+    {
+      "step": 423,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17212346196174622,
+      "gradient_norm_before_clip": 0.11602678149938583
+    },
+    {
+      "step": 424,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.47732651233673096,
+      "gradient_norm_before_clip": 0.11388915032148361
+    },
+    {
+      "step": 425,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4695294201374054,
+      "gradient_norm_before_clip": 0.10494653880596161
+    },
+    {
+      "step": 426,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.47218289971351624,
+      "gradient_norm_before_clip": 0.09375707805156708
+    },
+    {
+      "step": 427,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.1718408614397049,
+      "gradient_norm_before_clip": 0.11534208804368973
+    },
+    {
+      "step": 428,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4767569899559021,
+      "gradient_norm_before_clip": 0.11317896097898483
+    },
+    {
+      "step": 429,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4688938558101654,
+      "gradient_norm_before_clip": 0.10444321483373642
+    },
+    {
+      "step": 430,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.47140705585479736,
+      "gradient_norm_before_clip": 0.09332733601331711
+    },
+    {
+      "step": 431,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17156487703323364,
+      "gradient_norm_before_clip": 0.11467473953962326
+    },
+    {
+      "step": 432,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4762069880962372,
+      "gradient_norm_before_clip": 0.11248663067817688
+    },
+    {
+      "step": 433,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.46827995777130127,
+      "gradient_norm_before_clip": 0.10395004600286484
+    },
+    {
+      "step": 434,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4706554412841797,
+      "gradient_norm_before_clip": 0.09290958940982819
+    },
+    {
+      "step": 435,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17129507660865784,
+      "gradient_norm_before_clip": 0.11402392387390137
+    },
+    {
+      "step": 436,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4756752550601959,
+      "gradient_norm_before_clip": 0.11181101202964783
+    },
+    {
+      "step": 437,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.46768584847450256,
+      "gradient_norm_before_clip": 0.10346665233373642
+    },
+    {
+      "step": 438,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4699273705482483,
+      "gradient_norm_before_clip": 0.092503122985363
+    },
+    {
+      "step": 439,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17103096842765808,
+      "gradient_norm_before_clip": 0.11338909715414047
+    },
+    {
+      "step": 440,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.47516095638275146,
+      "gradient_norm_before_clip": 0.11115173995494843
+    },
+    {
+      "step": 441,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4671113193035126,
+      "gradient_norm_before_clip": 0.10299275815486908
+    },
+    {
+      "step": 442,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4692215323448181,
+      "gradient_norm_before_clip": 0.09210718423128128
+    },
+    {
+      "step": 443,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.1707724779844284,
+      "gradient_norm_before_clip": 0.11276928335428238
+    },
+    {
+      "step": 444,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4746638834476471,
+      "gradient_norm_before_clip": 0.11050814390182495
+    },
+    {
+      "step": 445,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.46655479073524475,
+      "gradient_norm_before_clip": 0.1025276631116867
+    },
+    {
+      "step": 446,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.46853727102279663,
+      "gradient_norm_before_clip": 0.0917213037610054
+    },
+    {
+      "step": 447,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17051903903484344,
+      "gradient_norm_before_clip": 0.11216385662555695
+    },
+    {
+      "step": 448,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4741826057434082,
+      "gradient_norm_before_clip": 0.10987933725118637
+    },
+    {
+      "step": 449,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.46601560711860657,
+      "gradient_norm_before_clip": 0.1020711287856102
+    },
+    {
+      "step": 450,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4678734540939331,
+      "gradient_norm_before_clip": 0.09134496003389359
+    },
+    {
+      "step": 451,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.17027069628238678,
+      "gradient_norm_before_clip": 0.1115725114941597
+    },
+    {
+      "step": 452,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.47371652722358704,
+      "gradient_norm_before_clip": 0.10926499217748642
+    },
+    {
+      "step": 453,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.46549293398857117,
+      "gradient_norm_before_clip": 0.10162288695573807
+    },
+    {
+      "step": 454,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4672292172908783,
+      "gradient_norm_before_clip": 0.09097741544246674
+    },
+    {
+      "step": 455,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.1700270175933838,
+      "gradient_norm_before_clip": 0.11099426448345184
+    },
+    {
+      "step": 456,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4732651114463806,
+      "gradient_norm_before_clip": 0.10866444557905197
+    },
+    {
+      "step": 457,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.46498584747314453,
+      "gradient_norm_before_clip": 0.10118269175291061
+    },
+    {
+      "step": 458,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4666040241718292,
+      "gradient_norm_before_clip": 0.09061834216117859
+    },
+    {
+      "step": 459,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.16978782415390015,
+      "gradient_norm_before_clip": 0.11042886972427368
+    },
+    {
+      "step": 460,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4728275537490845,
+      "gradient_norm_before_clip": 0.10807730257511139
+    },
+    {
+      "step": 461,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.46449387073516846,
+      "gradient_norm_before_clip": 0.10075011104345322
+    },
+    {
+      "step": 462,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.46599695086479187,
+      "gradient_norm_before_clip": 0.09026732295751572
+    },
+    {
+      "step": 463,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.16955305635929108,
+      "gradient_norm_before_clip": 0.10987579077482224
+    },
+    {
+      "step": 464,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.47240346670150757,
+      "gradient_norm_before_clip": 0.10750292241573334
+    },
+    {
+      "step": 465,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4640161693096161,
+      "gradient_norm_before_clip": 0.10032492130994797
+    },
+    {
+      "step": 466,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4654073715209961,
+      "gradient_norm_before_clip": 0.08992394059896469
+    },
+    {
+      "step": 467,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.16932246088981628,
+      "gradient_norm_before_clip": 0.10933445394039154
+    },
+    {
+      "step": 468,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.47199228405952454,
+      "gradient_norm_before_clip": 0.10694096237421036
+    },
+    {
+      "step": 469,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4635520577430725,
+      "gradient_norm_before_clip": 0.0999067947268486
+    },
+    {
+      "step": 470,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4648347496986389,
+      "gradient_norm_before_clip": 0.0895877406001091
+    },
+    {
+      "step": 471,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.1690959334373474,
+      "gradient_norm_before_clip": 0.10880441963672638
+    },
+    {
+      "step": 472,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.47159311175346375,
+      "gradient_norm_before_clip": 0.10639093071222305
+    },
+    {
+      "step": 473,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.46310117840766907,
+      "gradient_norm_before_clip": 0.09949559718370438
+    },
+    {
+      "step": 474,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4642779529094696,
+      "gradient_norm_before_clip": 0.08925843983888626
+    },
+    {
+      "step": 475,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.16887322068214417,
+      "gradient_norm_before_clip": 0.10828512907028198
+    },
+    {
+      "step": 476,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.47120577096939087,
+      "gradient_norm_before_clip": 0.10585246980190277
+    },
+    {
+      "step": 477,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4626624286174774,
+      "gradient_norm_before_clip": 0.0990910530090332
+    },
+    {
+      "step": 478,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.46373695135116577,
+      "gradient_norm_before_clip": 0.08893568068742752
+    },
+    {
+      "step": 479,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.16865414381027222,
+      "gradient_norm_before_clip": 0.10777624696493149
+    },
+    {
+      "step": 480,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.47082969546318054,
+      "gradient_norm_before_clip": 0.10532495379447937
+    },
+    {
+      "step": 481,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.46223556995391846,
+      "gradient_norm_before_clip": 0.09869295358657837
+    },
+    {
+      "step": 482,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4632106423377991,
+      "gradient_norm_before_clip": 0.08861911296844482
+    },
+    {
+      "step": 483,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.16843880712985992,
+      "gradient_norm_before_clip": 0.10727750509977341
+    },
+    {
+      "step": 484,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.47046470642089844,
+      "gradient_norm_before_clip": 0.10480847209692001
+    },
+    {
+      "step": 485,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4618206024169922,
+      "gradient_norm_before_clip": 0.09830113500356674
+    },
+    {
+      "step": 486,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.46269872784614563,
+      "gradient_norm_before_clip": 0.08830844610929489
+    },
+    {
+      "step": 487,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.16822701692581177,
+      "gradient_norm_before_clip": 0.1067885234951973
+    },
+    {
+      "step": 488,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.47010982036590576,
+      "gradient_norm_before_clip": 0.10430215299129486
+    },
+    {
+      "step": 489,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.46141624450683594,
+      "gradient_norm_before_clip": 0.09791544824838638
+    },
+    {
+      "step": 490,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.4622008502483368,
+      "gradient_norm_before_clip": 0.0880034863948822
+    },
+    {
+      "step": 491,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.1680184006690979,
+      "gradient_norm_before_clip": 0.10630875080823898
+    },
+    {
+      "step": 492,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.4697648286819458,
+      "gradient_norm_before_clip": 0.10380593687295914
+    },
+    {
+      "step": 493,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.4610223174095154,
+      "gradient_norm_before_clip": 0.09753574430942535
+    },
+    {
+      "step": 494,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.46171632409095764,
+      "gradient_norm_before_clip": 0.08770397305488586
+    },
+    {
+      "step": 495,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.16781336069107056,
+      "gradient_norm_before_clip": 0.1058381125330925
+    },
+    {
+      "step": 496,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.46942955255508423,
+      "gradient_norm_before_clip": 0.10331963002681732
+    },
+    {
+      "step": 497,
+      "query_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "loss_before_update": 0.46063879132270813,
+      "gradient_norm_before_clip": 0.09716179966926575
+    },
+    {
+      "step": 498,
+      "query_indices": [
+        9,
+        10,
+        11,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "loss_before_update": 0.46124470233917236,
+      "gradient_norm_before_clip": 0.08740958571434021
+    },
+    {
+      "step": 499,
+      "query_indices": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        0,
+        1,
+        2
+      ],
+      "loss_before_update": 0.16761140525341034,
+      "gradient_norm_before_clip": 0.10537600517272949
+    },
+    {
+      "step": 500,
+      "query_indices": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "loss_before_update": 0.46910345554351807,
+      "gradient_norm_before_clip": 0.10284261405467987
+    }
+  ]
+}

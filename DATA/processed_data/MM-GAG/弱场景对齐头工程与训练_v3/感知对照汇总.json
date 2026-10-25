@@ -1,0 +1,830 @@
+{
+  "task": "CV-008",
+  "counts": {
+    "weak_dev": {
+      "Identity": {
+        "Full": {
+          "planned": 125,
+          "top1": 20,
+          "top5": 113,
+          "median_true_rank": 2.0
+        },
+        "Mean": {
+          "planned": 125,
+          "top1": 4,
+          "top5": 41,
+          "median_true_rank": 7.0
+        },
+        "Wrong": {
+          "planned": 125,
+          "top1": 22,
+          "top5": 46,
+          "median_true_rank": 14.0
+        }
+      },
+      "Rank8Final": {
+        "Full": {
+          "planned": 125,
+          "top1": 70,
+          "top5": 115,
+          "median_true_rank": 1.0
+        },
+        "Mean": {
+          "planned": 125,
+          "top1": 36,
+          "top5": 95,
+          "median_true_rank": 3.0
+        },
+        "Wrong": {
+          "planned": 125,
+          "top1": 9,
+          "top5": 41,
+          "median_true_rank": 11.0
+        }
+      }
+    },
+    "MMGAG": {
+      "Identity": {
+        "Full": {
+          "planned": 16,
+          "top1": 0,
+          "top5": 4,
+          "median_true_rank": 14.0
+        },
+        "Mean": {
+          "planned": 16,
+          "top1": 0,
+          "top5": 3,
+          "median_true_rank": 11.5
+        },
+        "Wrong": {
+          "planned": 16,
+          "top1": 1,
+          "top5": 2,
+          "median_true_rank": 17.0
+        }
+      },
+      "Rank8Final": {
+        "Full": {
+          "planned": 16,
+          "top1": 0,
+          "top5": 4,
+          "median_true_rank": 10.5
+        },
+        "Mean": {
+          "planned": 16,
+          "top1": 2,
+          "top5": 6,
+          "median_true_rank": 9.5
+        },
+        "Wrong": {
+          "planned": 16,
+          "top1": 1,
+          "top5": 6,
+          "median_true_rank": 15.0
+        }
+      }
+    }
+  },
+  "per_source": {
+    "weak_dev": {
+      "Bern": {
+        "Identity": {
+          "Full": {
+            "planned": 25,
+            "top1": 0,
+            "top5": 13
+          },
+          "Mean": {
+            "planned": 25,
+            "top1": 0,
+            "top5": 1
+          },
+          "Wrong": {
+            "planned": 25,
+            "top1": 0,
+            "top5": 0
+          }
+        },
+        "Rank8Final": {
+          "Full": {
+            "planned": 25,
+            "top1": 1,
+            "top5": 15
+          },
+          "Mean": {
+            "planned": 25,
+            "top1": 6,
+            "top5": 25
+          },
+          "Wrong": {
+            "planned": 25,
+            "top1": 0,
+            "top5": 0
+          }
+        }
+      },
+      "LacBleu": {
+        "Identity": {
+          "Full": {
+            "planned": 25,
+            "top1": 5,
+            "top5": 25
+          },
+          "Mean": {
+            "planned": 25,
+            "top1": 4,
+            "top5": 23
+          },
+          "Wrong": {
+            "planned": 25,
+            "top1": 21,
+            "top5": 25
+          }
+        },
+        "Rank8Final": {
+          "Full": {
+            "planned": 25,
+            "top1": 17,
+            "top5": 25
+          },
+          "Mean": {
+            "planned": 25,
+            "top1": 0,
+            "top5": 5
+          },
+          "Wrong": {
+            "planned": 25,
+            "top1": 0,
+            "top5": 0
+          }
+        }
+      },
+      "Luzern": {
+        "Identity": {
+          "Full": {
+            "planned": 25,
+            "top1": 5,
+            "top5": 25
+          },
+          "Mean": {
+            "planned": 25,
+            "top1": 0,
+            "top5": 9
+          },
+          "Wrong": {
+            "planned": 25,
+            "top1": 1,
+            "top5": 21
+          }
+        },
+        "Rank8Final": {
+          "Full": {
+            "planned": 25,
+            "top1": 2,
+            "top5": 25
+          },
+          "Mean": {
+            "planned": 25,
+            "top1": 0,
+            "top5": 15
+          },
+          "Wrong": {
+            "planned": 25,
+            "top1": 9,
+            "top5": 25
+          }
+        }
+      },
+      "Rolex": {
+        "Identity": {
+          "Full": {
+            "planned": 25,
+            "top1": 1,
+            "top5": 25
+          },
+          "Mean": {
+            "planned": 25,
+            "top1": 0,
+            "top5": 0
+          },
+          "Wrong": {
+            "planned": 25,
+            "top1": 0,
+            "top5": 0
+          }
+        },
+        "Rank8Final": {
+          "Full": {
+            "planned": 25,
+            "top1": 25,
+            "top5": 25
+          },
+          "Mean": {
+            "planned": 25,
+            "top1": 5,
+            "top5": 25
+          },
+          "Wrong": {
+            "planned": 25,
+            "top1": 0,
+            "top5": 0
+          }
+        }
+      },
+      "Sion": {
+        "Identity": {
+          "Full": {
+            "planned": 25,
+            "top1": 9,
+            "top5": 25
+          },
+          "Mean": {
+            "planned": 25,
+            "top1": 0,
+            "top5": 8
+          },
+          "Wrong": {
+            "planned": 25,
+            "top1": 0,
+            "top5": 0
+          }
+        },
+        "Rank8Final": {
+          "Full": {
+            "planned": 25,
+            "top1": 25,
+            "top5": 25
+          },
+          "Mean": {
+            "planned": 25,
+            "top1": 25,
+            "top5": 25
+          },
+          "Wrong": {
+            "planned": 25,
+            "top1": 0,
+            "top5": 16
+          }
+        }
+      }
+    },
+    "MMGAG": {
+      "dev_00": {
+        "Identity": {
+          "Full": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 0
+          },
+          "Mean": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 1
+          },
+          "Wrong": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 0
+          }
+        },
+        "Rank8Final": {
+          "Full": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 0
+          },
+          "Mean": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 0
+          },
+          "Wrong": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 0
+          }
+        }
+      },
+      "dev_01": {
+        "Identity": {
+          "Full": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 1
+          },
+          "Mean": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 0
+          },
+          "Wrong": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 1
+          }
+        },
+        "Rank8Final": {
+          "Full": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 1
+          },
+          "Mean": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 1
+          },
+          "Wrong": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 1
+          }
+        }
+      },
+      "dev_02": {
+        "Identity": {
+          "Full": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 1
+          },
+          "Mean": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 1
+          },
+          "Wrong": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          }
+        },
+        "Rank8Final": {
+          "Full": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 1
+          },
+          "Mean": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          },
+          "Wrong": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          }
+        }
+      },
+      "dev_03": {
+        "Identity": {
+          "Full": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 0
+          },
+          "Mean": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 0
+          },
+          "Wrong": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 0
+          }
+        },
+        "Rank8Final": {
+          "Full": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 0
+          },
+          "Mean": {
+            "planned": 1,
+            "top1": 1,
+            "top5": 1
+          },
+          "Wrong": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 0
+          }
+        }
+      },
+      "dev_04": {
+        "Identity": {
+          "Full": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          },
+          "Mean": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          },
+          "Wrong": {
+            "planned": 2,
+            "top1": 1,
+            "top5": 1
+          }
+        },
+        "Rank8Final": {
+          "Full": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          },
+          "Mean": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          },
+          "Wrong": {
+            "planned": 2,
+            "top1": 1,
+            "top5": 2
+          }
+        }
+      },
+      "dev_05": {
+        "Identity": {
+          "Full": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 0
+          },
+          "Mean": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 0
+          },
+          "Wrong": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 0
+          }
+        },
+        "Rank8Final": {
+          "Full": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 0
+          },
+          "Mean": {
+            "planned": 1,
+            "top1": 1,
+            "top5": 1
+          },
+          "Wrong": {
+            "planned": 1,
+            "top1": 0,
+            "top5": 1
+          }
+        }
+      },
+      "dev_06": {
+        "Identity": {
+          "Full": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 1
+          },
+          "Mean": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          },
+          "Wrong": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          }
+        },
+        "Rank8Final": {
+          "Full": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 1
+          },
+          "Mean": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 1
+          },
+          "Wrong": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 1
+          }
+        }
+      },
+      "dev_07": {
+        "Identity": {
+          "Full": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          },
+          "Mean": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          },
+          "Wrong": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          }
+        },
+        "Rank8Final": {
+          "Full": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          },
+          "Mean": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          },
+          "Wrong": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          }
+        }
+      },
+      "dev_08": {
+        "Identity": {
+          "Full": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          },
+          "Mean": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          },
+          "Wrong": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          }
+        },
+        "Rank8Final": {
+          "Full": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          },
+          "Mean": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          },
+          "Wrong": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          }
+        }
+      },
+      "dev_09": {
+        "Identity": {
+          "Full": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 1
+          },
+          "Mean": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 1
+          },
+          "Wrong": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 0
+          }
+        },
+        "Rank8Final": {
+          "Full": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 1
+          },
+          "Mean": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 2
+          },
+          "Wrong": {
+            "planned": 2,
+            "top1": 0,
+            "top5": 1
+          }
+        }
+      }
+    }
+  },
+  "contrasts": {
+    "weak_dev": {
+      "Identity_Full_vs_Mean": {
+        "top1": {
+          "recovered": 20,
+          "harmed": 4,
+          "net": 16
+        },
+        "top5": {
+          "recovered": 72,
+          "harmed": 0,
+          "net": 72
+        }
+      },
+      "Identity_Full_vs_Wrong": {
+        "top1": {
+          "recovered": 17,
+          "harmed": 19,
+          "net": -2
+        },
+        "top5": {
+          "recovered": 67,
+          "harmed": 0,
+          "net": 67
+        }
+      },
+      "Rank8Final_Full_vs_Mean": {
+        "top1": {
+          "recovered": 40,
+          "harmed": 6,
+          "net": 34
+        },
+        "top5": {
+          "recovered": 30,
+          "harmed": 10,
+          "net": 20
+        }
+      },
+      "Rank8Final_Full_vs_Wrong": {
+        "top1": {
+          "recovered": 68,
+          "harmed": 7,
+          "net": 61
+        },
+        "top5": {
+          "recovered": 74,
+          "harmed": 0,
+          "net": 74
+        }
+      },
+      "Final_vs_Identity_Full": {
+        "top1": {
+          "recovered": 57,
+          "harmed": 7,
+          "net": 50
+        },
+        "top5": {
+          "recovered": 10,
+          "harmed": 8,
+          "net": 2
+        }
+      },
+      "Final_vs_Identity_Mean": {
+        "top1": {
+          "recovered": 36,
+          "harmed": 4,
+          "net": 32
+        },
+        "top5": {
+          "recovered": 76,
+          "harmed": 22,
+          "net": 54
+        }
+      },
+      "Final_vs_Identity_Wrong": {
+        "top1": {
+          "recovered": 8,
+          "harmed": 21,
+          "net": -13
+        },
+        "top5": {
+          "recovered": 20,
+          "harmed": 25,
+          "net": -5
+        }
+      }
+    },
+    "MMGAG": {
+      "Identity_Full_vs_Mean": {
+        "top1": {
+          "recovered": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "top5": {
+          "recovered": 2,
+          "harmed": 1,
+          "net": 1
+        }
+      },
+      "Identity_Full_vs_Wrong": {
+        "top1": {
+          "recovered": 0,
+          "harmed": 1,
+          "net": -1
+        },
+        "top5": {
+          "recovered": 3,
+          "harmed": 1,
+          "net": 2
+        }
+      },
+      "Rank8Final_Full_vs_Mean": {
+        "top1": {
+          "recovered": 0,
+          "harmed": 2,
+          "net": -2
+        },
+        "top5": {
+          "recovered": 1,
+          "harmed": 3,
+          "net": -2
+        }
+      },
+      "Rank8Final_Full_vs_Wrong": {
+        "top1": {
+          "recovered": 0,
+          "harmed": 1,
+          "net": -1
+        },
+        "top5": {
+          "recovered": 2,
+          "harmed": 4,
+          "net": -2
+        }
+      },
+      "Final_vs_Identity_Full": {
+        "top1": {
+          "recovered": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "top5": {
+          "recovered": 1,
+          "harmed": 1,
+          "net": 0
+        }
+      },
+      "Final_vs_Identity_Mean": {
+        "top1": {
+          "recovered": 2,
+          "harmed": 0,
+          "net": 2
+        },
+        "top5": {
+          "recovered": 5,
+          "harmed": 2,
+          "net": 3
+        }
+      },
+      "Final_vs_Identity_Wrong": {
+        "top1": {
+          "recovered": 0,
+          "harmed": 0,
+          "net": 0
+        },
+        "top5": {
+          "recovered": 4,
+          "harmed": 0,
+          "net": 4
+        }
+      }
+    }
+  },
+  "weak_source_top1_gains": {
+    "Bern": 0.04,
+    "LacBleu": 0.48,
+    "Luzern": -0.12,
+    "Rolex": 0.96,
+    "Sion": 0.64
+  },
+  "MMGAG_groups_positive_against_both": 0,
+  "effect_gates": {
+    "MMGAG_all16_complete": true,
+    "MMGAG_Full_top1_minimum4": false,
+    "MMGAG_Full_minus_Mean_minimum2": false,
+    "MMGAG_Full_minus_Wrong_minimum2": false,
+    "MMGAG_groups_positive_against_both_minimum3": false,
+    "weak_macro_top1_gain_minimum004": true,
+    "weak_groups_improving_minimum3": true
+  },
+  "effect_gates_passed": false,
+  "navigation_SR": null,
+  "independent_geographic_samples_added": 0,
+  "scope": "5 weak-development groups and10 known MMGAG development groups; geographic independence unknown"
+}

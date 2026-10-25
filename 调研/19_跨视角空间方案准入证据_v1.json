@@ -1,0 +1,662 @@
+{
+  "task": "CV-027",
+  "date": "2026-10-23",
+  "stage": "bounded_asset_and_task_admission_not_experiment",
+  "selected_next_routes": [
+    "OpenCVL_small_supervision_precheck"
+  ],
+  "actual_calls": {
+    "model_load": 0,
+    "forward": 0,
+    "training": 0,
+    "navigation": 0,
+    "model_API": 0,
+    "raw_pixel_read": 0,
+    "weight_or_dataset_download": 0,
+    "reserved_group_consumption": 0,
+    "external_registration_or_author_messages": 0
+  },
+  "public_receipts": {
+    "opencvl_readme": {
+      "url": "https://raw.githubusercontent.com/Open-CVL/opencvl/4838d1627cf28b28e81d2dd830995fe1fd3a1e2c/README.md",
+      "status": 200,
+      "bytes": 5502,
+      "sha256": "8290d5e5633692413739602720cf5b2a005cbe8db3462cf65c16d17e8dfac45d",
+      "transport": "existing127.0.0.1:7897",
+      "matched_lines": [
+        30,
+        45,
+        47,
+        61,
+        84,
+        93,
+        94,
+        97,
+        101
+      ]
+    },
+    "opencvl_notice": {
+      "url": "https://raw.githubusercontent.com/Open-CVL/opencvl/4838d1627cf28b28e81d2dd830995fe1fd3a1e2c/NOTICE.md",
+      "status": 200,
+      "bytes": 1439,
+      "sha256": "3a850efbbab804162a2bfc09e068296a3c2016770980c3aa3487d1b70d81f0b6",
+      "transport": "existing127.0.0.1:7897",
+      "matched_lines": [
+        3,
+        9,
+        10,
+        17,
+        18,
+        20,
+        24,
+        25
+      ]
+    },
+    "ccvpe_models": {
+      "url": "https://raw.githubusercontent.com/tudelft-iv/CCVPE/3028aa5c1585d3c274c3a531bdce19846c9c3bd2/models.py",
+      "status": 200,
+      "bytes": 64638,
+      "sha256": "672b46aaf2a2f22c19b5ae18789831a4c5a97d52e171bfa1f1ef919b80ce32c4",
+      "transport": "existing127.0.0.1:7897",
+      "matched_lines": [
+        1,
+        19,
+        55,
+        99,
+        320,
+        353,
+        397,
+        629,
+        660,
+        701,
+        927,
+        959,
+        1000,
+        1221
+      ]
+    },
+    "sat2cap_blobs": {
+      "url": "https://huggingface.co/api/models/MVRL/Sat2Cap/revision/8b377450f91dc970a71ee5194806857298c34cf3?blobs=true",
+      "status": 200,
+      "bytes": 1310,
+      "sha256": "363222deeab182b01d6b1fdfc94907ec2a713e0145d467e478567594670844b3",
+      "transport": "existing127.0.0.1:7897",
+      "model_id": "MVRL/Sat2Cap",
+      "commit": "8b377450f91dc970a71ee5194806857298c34cf3",
+      "siblings": [
+        {
+          "rfilename": ".gitattributes",
+          "blobId": "a6344aac8c09253b3b630fb776ae94478aa0275b",
+          "size": 1519
+        },
+        {
+          "rfilename": "README.md",
+          "blobId": "bc5f30d6632ac0efdc7be2e9095e9e9579af2e33",
+          "size": 5174
+        },
+        {
+          "rfilename": "config.json",
+          "blobId": "30f395ad668e3dee833319a594db0523bd45715f",
+          "size": 559
+        },
+        {
+          "rfilename": "model.safetensors",
+          "blobId": "250303b5096a18ececa4c1e54a6114db74659cb3",
+          "size": 351420784,
+          "lfs": {
+            "sha256": "fec6802fbf27664ddd556fc445ff7d8e7ab0f05fea160c2e16680642dcebf3e0",
+            "size": 351420784,
+            "pointerSize": 134
+          }
+        }
+      ],
+      "gated": false
+    },
+    "opencvl_access": {
+      "url": "https://open-cvl.github.io/access.html",
+      "status": 200,
+      "bytes": 4955,
+      "sha256": "9ab9491f26161d615c3f7a5ecb130edfbf1a6e728f4cd00d6cc04d7c53e7e833",
+      "transport": "existing127.0.0.1:7897",
+      "matched_lines": [
+        8,
+        36,
+        40,
+        41,
+        42,
+        45,
+        47,
+        53,
+        54,
+        84,
+        85,
+        87,
+        96,
+        100,
+        104
+      ]
+    }
+  },
+  "network_failures": {
+    "opencvl_commit": {
+      "url": "https://api.github.com/repos/Open-CVL/opencvl/commits/main",
+      "transport": "existing127.0.0.1:7897",
+      "error": "HTTPError:HTTP Error 403: rate limit exceeded"
+    },
+    "ccvpe_commit": {
+      "url": "https://api.github.com/repos/tudelft-iv/CCVPE/commits/main",
+      "transport": "existing127.0.0.1:7897",
+      "error": "HTTPError:HTTP Error 403: rate limit exceeded"
+    },
+    "opencvl_tree": {
+      "url": "https://api.github.com/repos/Open-CVL/opencvl/git/trees/main?recursive=1",
+      "transport": "existing127.0.0.1:7897",
+      "error": "HTTPError:HTTP Error 403: rate limit exceeded"
+    },
+    "sat2cap_metadata": {
+      "url": "https://huggingface.co/api/models/MVRL/sat2cap",
+      "status": 200,
+      "transport": "existing127.0.0.1:7897",
+      "response_bytes": 931,
+      "body_sha256": "9238cbdbd13246d8798f40ad9520517fc811c5c1e14ba81c6f5b467ec5b15730",
+      "model_id": "MVRL/Sat2Cap",
+      "commit": "8b377450f91dc970a71ee5194806857298c34cf3",
+      "gated": false,
+      "files": [
+        ".gitattributes",
+        "README.md",
+        "config.json",
+        "model.safetensors"
+      ]
+    }
+  },
+  "git_reference_checks": {
+    "opencvl": {
+      "commit": "4838d1627cf28b28e81d2dd830995fe1fd3a1e2c",
+      "command": "git -c http.proxy=http://127.0.0.1:7897 ls-remote https://github.com/Open-CVL/opencvl.git HEAD"
+    },
+    "ccvpe": {
+      "commit": "3028aa5c1585d3c274c3a531bdce19846c9c3bd2",
+      "command": "git -c http.proxy=http://127.0.0.1:7897 ls-remote https://github.com/tudelft-iv/CCVPE.git HEAD"
+    }
+  },
+  "public_sources": [
+    {
+      "id": "CCVPE_paper",
+      "title": "Convolutional Cross-View Pose Estimation",
+      "year": 2024,
+      "authors": [
+        "Zimin Xia",
+        "Olaf Booij",
+        "Julian F. P. Kooij"
+      ],
+      "url": "https://arxiv.org/html/2303.05915v3",
+      "claim": "3DoF within provided local aerial reference; not an unknown-region action policy"
+    },
+    {
+      "id": "CCVPE_code",
+      "url": "https://github.com/tudelft-iv/CCVPE/blob/3028aa5c1585d3c274c3a531bdce19846c9c3bd2/models.py",
+      "claim": "EfficientNet.from_pretrained may initiate downloads; image-normalized heatmap at fixed source line320; weights not fetched or measured"
+    },
+    {
+      "id": "TUCVPE",
+      "title": "Towards Unconstrained Cross-View Pose Estimation",
+      "year": 2026,
+      "venue": "WACV",
+      "url": "https://atwollam.github.io/TUCVPE/",
+      "claim": "Unknown FoV/pitch/roll/rectilinear input considered; author page checked, executable code/checkpoint entry not verified"
+    },
+    {
+      "id": "SliceMatch",
+      "title": "SliceMatch: Geometry-guided Aggregation for Cross-View Pose Estimation",
+      "year": 2023,
+      "url": "https://github.com/tudelft-iv/SliceMatch",
+      "claim": "Inside-reference camera pose; training/testing sections currently Coming soon"
+    },
+    {
+      "id": "ViewBridge",
+      "title": "ViewBridge: Revisiting Cross-View Localization from Image Matching",
+      "year": 2025,
+      "url": "https://arxiv.org/html/2508.10716v2",
+      "claim": "Fine correspondences and pose; not verified as an ordinary-photo active local-observation pipeline"
+    },
+    {
+      "id": "GAGeo",
+      "year": 2026,
+      "url": "https://cipual.github.io/GAGeo-project-page/",
+      "claim": "Prompted object grounding is different from camera-point/paired-proxy target"
+    },
+    {
+      "id": "OpenCVL_paper",
+      "title": "OpenCVL: An Open, Diverse, and Large-Scale Dataset for Fine-Grained Cross-View Localization",
+      "year": 2026,
+      "authors": [
+        "Zimin Xia",
+        "Mubariz Zaffar",
+        "Junsheng Fu",
+        "Alexandre Alahi",
+        "Julian F. P. Kooij"
+      ],
+      "url": "https://arxiv.org/html/2608.25274v1",
+      "claim": "100m north-aligned aerial pairs, central40m camera offset range, ordinary ground images and multiple source-quality levels"
+    },
+    {
+      "id": "OpenCVL_SDK",
+      "url": "https://raw.githubusercontent.com/Open-CVL/opencvl/4838d1627cf28b28e81d2dd830995fe1fd3a1e2c/README.md",
+      "claim": "labels.json and pixel offset axes documented; actual labels not acquired"
+    },
+    {
+      "id": "OpenCVL_notice",
+      "url": "https://raw.githubusercontent.com/Open-CVL/opencvl/4838d1627cf28b28e81d2dd830995fe1fd3a1e2c/NOTICE.md",
+      "claim": "Wrapper and third-party data/dependency terms separated; no redistribution inference from README"
+    },
+    {
+      "id": "Sat2Cap_official",
+      "url": "https://github.com/mvrl/Sat2Cap",
+      "claim": "Official repository points to MVRL public models; original run/teacher preprocessing identity still unresolved"
+    },
+    {
+      "id": "Sat2Cap_pointer",
+      "url": "https://huggingface.co/api/models/MVRL/Sat2Cap/revision/8b377450f91dc970a71ee5194806857298c34cf3?blobs=true",
+      "claim": "Public LFS sha matches prior local binding; no local weight byte read this task"
+    }
+  ],
+  "model_routes": [
+    {
+      "id": "CCVPE",
+      "facts": {
+        "official_code_verified": true,
+        "checkpoint_identity_verified": null,
+        "ordinary_photo_adapter_verified": null,
+        "goal_semantics_verified": null,
+        "local_information_only_verified": null,
+        "outside_or_negative_behavior_verified": null,
+        "resource_measurement_passed": null,
+        "requires_target_inside_reference": true,
+        "outside_direction_evidence": null
+      },
+      "stage": "reference_only_not_navigation_admitted"
+    },
+    {
+      "id": "TUCVPE",
+      "facts": {
+        "official_code_verified": null,
+        "checkpoint_identity_verified": null,
+        "ordinary_photo_adapter_verified": null,
+        "goal_semantics_verified": null,
+        "local_information_only_verified": null,
+        "outside_or_negative_behavior_verified": null,
+        "resource_measurement_passed": null,
+        "requires_target_inside_reference": true,
+        "outside_direction_evidence": null
+      },
+      "stage": "paper_input_fit_assets_not_verified"
+    },
+    {
+      "id": "SliceMatch",
+      "facts": {
+        "official_code_verified": null,
+        "checkpoint_identity_verified": null,
+        "ordinary_photo_adapter_verified": null,
+        "goal_semantics_verified": null,
+        "local_information_only_verified": null,
+        "outside_or_negative_behavior_verified": null,
+        "resource_measurement_passed": null,
+        "requires_target_inside_reference": true,
+        "outside_direction_evidence": null
+      },
+      "stage": "public_readme_incomplete_execution_sections"
+    },
+    {
+      "id": "ViewBridge",
+      "facts": {
+        "official_code_verified": null,
+        "checkpoint_identity_verified": null,
+        "ordinary_photo_adapter_verified": null,
+        "goal_semantics_verified": null,
+        "local_information_only_verified": null,
+        "outside_or_negative_behavior_verified": null,
+        "resource_measurement_passed": null,
+        "requires_target_inside_reference": true,
+        "outside_direction_evidence": null
+      },
+      "stage": "spatial_correspondence_reference_only"
+    },
+    {
+      "id": "GAGeo",
+      "facts": {
+        "official_code_verified": null,
+        "checkpoint_identity_verified": null,
+        "ordinary_photo_adapter_verified": null,
+        "goal_semantics_verified": false,
+        "local_information_only_verified": null,
+        "outside_or_negative_behavior_verified": null,
+        "resource_measurement_passed": null,
+        "requires_target_inside_reference": true,
+        "outside_direction_evidence": null
+      },
+      "stage": "object_target_semantics_differ"
+    }
+  ],
+  "supervision_route": {
+    "id": "OpenCVL_small_supervision_precheck",
+    "facts": {
+      "ordinary_photos_documented": true,
+      "camera_xy_convention_documented": true,
+      "reference_scale_documented": true,
+      "official_access_route_documented": true,
+      "local_examples_hash_verified": null,
+      "local_label_mapping_verified": null,
+      "project_source_roles_frozen": null,
+      "outside_and_unrelated_labels_verified": null
+    },
+    "reference_side_m": 100,
+    "proposed_grid": 5,
+    "derived_cell_side_m": 20,
+    "derived_area_km2": 0.01,
+    "camera_offset_half_range_m": 20,
+    "label_centrality_bias_acknowledged": true,
+    "new_assets_acquired": false,
+    "upstream_split_is_not_project_split": true
+  },
+  "next_stage_draft": {
+    "id": "CV-028_proposed",
+    "automatic_execution_authorized": false,
+    "max_pairs": 4,
+    "max_download_bytes": 67108864,
+    "training": 0,
+    "forward": 0,
+    "navigation": 0,
+    "model_API": 0,
+    "old_reserved_groups": 0,
+    "selection": "public small examples, prefer ZOD with explicit geometry and provenance, no automatic form submission",
+    "new_directories_require_user_authorization": true,
+    "target_semantics": "camera location for new derived protocol, historical MM-GAG proxy unchanged",
+    "conditions": [
+      "verify SHA and label origin",
+      "verify dx/dy units, dimensions and north-up mapping",
+      "derive inside/outside/unrelated evaluator labels without clipping",
+      "record geography/sequence groups and consumed development role",
+      "do not assume all25 goals or C4-8 strata from central-biased labels",
+      "preserve current/visited-only policy visibility"
+    ],
+    "stop": [
+      "unbounded archive acquisition",
+      "missing or inconsistent camera mapping",
+      "unknown label provenance",
+      "unverifiable source grouping"
+    ],
+    "next_after_engineering": "select at most one bounded lightweight spatial relation method; preregister goal controls before actual model calls"
+  },
+  "local_weight_bytes_read_this_task": 0,
+  "tests": {
+    "tests": 9,
+    "passed": true,
+    "command": "D:/PYTHON/python.exe -B -m unittest project.src.tests.test_crossview_spatial_admission_v1 -v",
+    "in_memory_only": true
+  },
+  "scope": {
+    "existing_directory_only": true,
+    "max_evidence_bytes": 524288,
+    "no_default_or_service_change": true,
+    "no_contact_authors": true,
+    "no_system_or_package_configuration_change": true,
+    "C_drive_task_outputs": 0,
+    "scholarly_MCP_available": false,
+    "proxy_used": "http://127.0.0.1:7897",
+    "third_party_mirror_used": false,
+    "third_party_code_saved_or_executed": false
+  },
+  "local_inputs": [
+    {
+      "path": "DATA/processed_data/MM-GAG/连续观测空间证据诊断_v1/阶段封存.json",
+      "bytes": 3113,
+      "sha256": "16bebe504cbcbd0bba91e293bbf5a056f442c2f5162c828ac77cfa5e4fbbe8f4"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/连续观测空间证据诊断_v1/诊断汇总.json",
+      "bytes": 135337,
+      "sha256": "8095e34c7dc17296d073632c074eb011d4f3bfcf79b777e825974e127c86b8c8"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/连续观测空间证据诊断_v1/下一步决策.json",
+      "bytes": 570,
+      "sha256": "d3e2ac8e681b32585e47354140f1a8fe78c0d897928ae735953d4e3cc37f8128"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/目标语义与局部闭环工程_v1/首动作绑定.json",
+      "bytes": 34588,
+      "sha256": "902423bcf9ef63f104a5e38604c8a5af2bd7b0d6e86928870f61058b745508fb"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/目标语义与局部闭环工程_v1/目标语义与资产核验.json",
+      "bytes": 1098,
+      "sha256": "1b87b907509a7a667e9dadb91e56303b41543aad94b9aff75cfb13525917a1bc"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/对照汇总.json",
+      "bytes": 46118,
+      "sha256": "a4dfde3fa9e7fe023a9974855ebb0dcd582e4b4bc4be922a1f8972d112a5e702"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/单表征目标对照开发_v1/README.md",
+      "bytes": 3318,
+      "sha256": "8964d372908fcfd57fcb3731a3036736321fb0cf87a17f5cf6e004a9bf75d67c"
+    },
+    {
+      "path": "DATA/processed_data/MM-GAG/跨视角公开资产准入_v1/README.md",
+      "bytes": 2007,
+      "sha256": "1cbfb5610d9ed658d4bf69d86f2839c6d79f25d73f09d4bc93492de6b57c3630"
+    },
+    {
+      "path": "平台/实验工作台_v4/地面目标连续观测与人工探索_v1/阶段封存.json",
+      "bytes": 23457,
+      "sha256": "9d905cec522ea506ab5a21b8ca7fb68f9f76215d4ffd9325694b365bb5d92240"
+    },
+    {
+      "path": "models/Sat2Cap/config.json",
+      "bytes": 559,
+      "sha256": "0a9cffa477a4bfc9682da841841b7e4227ad0cd06ad81d3eb1a831d5557976c5"
+    },
+    {
+      "path": "models/Sat2Cap/README.md",
+      "bytes": 5174,
+      "sha256": "0336368f8274a5ed09f54cee8d56a851ecee96026d9f391a6735762c16608a60"
+    },
+    {
+      "path": "平台/启动平台.ps1",
+      "bytes": 2624,
+      "sha256": "26fab7c920ad0a086ab300520fa878cfeb7335fde03db298a76d149e3c62009e"
+    }
+  ],
+  "source_bindings": [
+    {
+      "path": "project/src/eval/audit_crossview_spatial_admission_v1.py",
+      "bytes": 6505,
+      "sha256": "b79433f72d629aa4fa0f7553b91dfd29da16c92505922c73ec1d4b8e8ae279d6"
+    },
+    {
+      "path": "project/src/tests/test_crossview_spatial_admission_v1.py",
+      "bytes": 2839,
+      "sha256": "1fd2577aad9017f13e9189935fab37c2ce9ccb79632b39bcaeb6eb9de7304591"
+    }
+  ],
+  "report_binding": {
+    "path": "调研/19_跨视角空间方案准入与后续执行_v1.md",
+    "bytes": 9237,
+    "sha256": "d748ceea52a2ca11d3e373bef8f121361ba620415196792fdf1a66fd919db258"
+  },
+  "index_before": {
+    "count": 151,
+    "canonical_sha256": "f5ae952ae8bb5cb81e16f603718987b5029a7bd6ff028faf715c814a823b6054"
+  },
+  "runtime_current_before": {
+    "platform": "平台/实验工作台_v4/README.md",
+    "launcher": "平台/启动平台.ps1",
+    "server": "project/src/webapp/workbench_server_v18.py",
+    "static": "project/src/webapp/static_v10/",
+    "report": "中期报告相关/中期成果冻结版_v1/中期报告_基于主动探索的视觉地理定位方法设计与实现_冻结版_v2.docx",
+    "report_pdf": "中期报告相关/中期成果冻结版_v1/中期报告_基于主动探索的视觉地理定位方法设计与实现_冻结版_v2.pdf",
+    "midterm_freeze": "中期报告相关/中期成果冻结版_v1/README.md",
+    "benchmark_preparation": "项目导航/共同真实评测执行准备_v2/README.md",
+    "benchmark_training": "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v2/README.md",
+    "benchmark_evaluation": "DATA/processed_data/Masa/评测结果/共同学习基线对照_v1/README.md",
+    "benchmark_figures": "绘图/共同学习基线对照_v1/论文图_v2/README.md",
+    "benchmark_diagnosis": "DATA/processed_data/Masa/评测结果/GeoExplorer目标利用诊断_v1/README.md",
+    "benchmark_gradient_diagnosis": "DATA/processed_data/Masa/评测结果/GeoExplorer梯度贡献诊断_v1/README.md",
+    "benchmark_learning_curve": "DATA/processed_data/Masa/评测结果/GeoExplorer目标学习曲线诊断_v1/README.md",
+    "benchmark_supervision_context": "DATA/processed_data/Masa/评测结果/GeoExplorer监督情境覆盖诊断_v1/README.md",
+    "benchmark_evidence_close": "项目导航/GeoExplorer复现差异与诊断收束_v1/README.md",
+    "benchmark_position_engineering": "项目导航/GeoExplorer位置编码工程验证_v1/README.md",
+    "benchmark_position_development": "DATA/processed_data/Masa/训练结果/GeoExplorer位置编码同预算对照_v1/README.md",
+    "benchmark_position_development_report": "DATA/processed_data/Masa/训练结果/GeoExplorer位置编码同预算对照_v1/训练完成与开发对照报告_v2.md",
+    "paper_repro_materials": "总结报告相关/论文复现交付_v1/README.md",
+    "baseline_eligibility": "项目导航/学习基线资格核查_v1/README.md",
+    "gomaa_static_eligibility": "项目导航/GOMAA权重静态资格_v1/README.md",
+    "gomaa_engineering": "项目导航/GOMAA工程推理验证_v1/README.md",
+    "gomaa_development_navigation": "DATA/processed_data/Masa/评测结果/GOMAA开发闭环目标诊断_v1/README.md",
+    "baseline_provenance_followup": "项目导航/学习基线来源与编码器补证据_v1/README.md",
+    "benchmark_original_assets": "项目导航/原训练资料接收_v1/README.md",
+    "benchmark_joint_admission": "项目导航/原训练资产核验与共同验证准入_v1/共同验证条件草案_v1.md",
+    "benchmark_original_asset_intake": "项目导航/原训练资料接收_v1/README.md",
+    "platform_release": "平台/实验工作台_v4/地面目标连续观测与人工探索_v1/README.md",
+    "platform_validation": "平台/实验工作台_v4/方案与模型_v1/README.md",
+    "kernel": "project/src/platform_core/service_v11.py",
+    "launcher_cmd": "平台/启动平台.cmd",
+    "platform_maintenance": "平台/实验工作台_v4/入口清理_v1/README.md",
+    "storage_retention": "项目导航/归档永久清理_20261012_v1/README.md",
+    "launcher_validation": "平台/实验工作台_v4/启动修复_v1/README.md",
+    "transfer_asset_manifest": "平台/实验工作台_v4/地面目标连续观测与人工探索_v1/搬迁发布清单_v2.json",
+    "benchmark_independent_development": "项目导航/GeoExplorer策略分布一致性核查_v1/README.md",
+    "benchmark_mask_engineering": "项目导航/GeoExplorer分布一致性工程验证_v1/README.md",
+    "benchmark_mask_training": "DATA/processed_data/Masa/训练结果/GeoExplorer分布一致性成对开发_v1/README.md",
+    "benchmark_mask_driver": "project/src/tools/run_geoexplorer_mask_v3.py",
+    "benchmark_mask_continuation": "project/src/tools/finish_geoexplorer_mask_v2.py",
+    "benchmark_mask_report": "DATA/processed_data/Masa/训练结果/GeoExplorer分布一致性成对开发_v1/训练完成与开发对照报告_v1.md",
+    "method_catalog": "project/src/platform_core/method_catalog_v1.py",
+    "transfer_builder": "project/src/tools/package_workbench_v21.py",
+    "portable_validation": "平台/实验工作台_v4/便携闭环_v1/README.md",
+    "release_rehearsal": "平台/实验工作台_v4/发布彩排_v1/README.md",
+    "migration_guide": "平台/实验工作台_v4/发布彩排_v1/迁移与启动说明.md",
+    "demonstration_card": "平台/实验工作台_v4/发布彩排_v1/答辩操作卡.html",
+    "midterm_entry": "中期报告相关/README.md",
+    "final_report_preparation": "总结报告相关/总结准备_v1/README.md",
+    "final_report_plan": "总结报告相关/总结准备_v1/总结阶段计划_v1.md",
+    "final_report_template": "课程相关报告模版/综合工程设计-3-总结报告.docx",
+    "final_report_workspace": "总结报告相关/总结报告_v1/README.md",
+    "final_report_outline": "总结报告相关/总结报告_v1/准备/详细大纲_v1.md",
+    "final_claim_evidence": "总结报告相关/总结报告_v1/准备/论断与证据表.md",
+    "final_report": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.docx",
+    "final_report_pdf": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.pdf",
+    "final_report_entry": "总结报告相关/总结报告_v1/README.md",
+    "final_report_content": "project/src/documents/final_report_content_v3.json",
+    "final_report_audit": "总结报告相关/总结报告_v1/核验/初稿_v1/修订_v2/终校_v4/最终交付复核.json",
+    "crossview_entry": "DATA/processed_data/MM-GAG/跨视角公开资产准入_v1/README.md",
+    "crossview_inventory": "DATA/processed_data/MM-GAG/数据核验与跨视角准入_v1/数据准入汇总.json",
+    "crossview_next_plan": "DATA/processed_data/MM-GAG/跨视角公开资产准入_v1/下一项权重获取与工程条件.md",
+    "final_report_role": "stage snapshot; final integration postponed for ground-goal cross-view mainline",
+    "crossview_probe": "DATA/processed_data/MM-GAG/拍摄点语义与完整目标图验证_v1/完整目标图对照汇总.json",
+    "ground_encoder": "models/clip_vit_b32_public_v1",
+    "ground_encoder_provenance": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/模型获取回执.json",
+    "crossview_global_probe": "DATA/processed_data/MM-GAG/跨视角感知最小验证_v1/感知对照汇总.json",
+    "crossview_local_probe": "DATA/processed_data/MM-GAG/局部语义匹配单因素验证_v1/局部匹配对照汇总.json",
+    "crossview_label_scale": "DATA/processed_data/MM-GAG/目标格定义与视觉尺度审查_v1/审查汇总.json",
+    "crossview_case_gallery": "DATA/processed_data/MM-GAG/目标格定义与视觉尺度审查_v1/样例审查.html",
+    "crossview_fullframe_probe": "DATA/processed_data/MM-GAG/拍摄点语义与完整目标图验证_v1/完整目标图对照汇总.json",
+    "crossview_goal_semantics": "DATA/processed_data/MM-GAG/拍摄点语义与完整目标图验证_v1/目标语义约定.json",
+    "crossview_goal_contract": "project/src/data/crossview_goal_semantics_v1.py",
+    "crossview_training_inventory": "DATA/processed_data/MM-GAG/对齐头训练素材准入_v1/素材核验汇总.json",
+    "crossview_data_admission_page": "DATA/processed_data/MM-GAG/对齐头训练素材准入_v1/数据可用性.html",
+    "crossview_conditional_head_design": "DATA/processed_data/MM-GAG/对齐头训练素材准入_v1/条件式小头方案_未准入.json",
+    "crossview_weak_manifest": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/派生素材清单.json",
+    "crossview_training_design": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/训练设计冻结.json",
+    "crossview_weak_pair_adapter": "project/src/data/weak_scene_pairs_v1.py",
+    "crossview_weak_pair_QA": "DATA/processed_data/MM-GAG/配对派生清单与弱目标准入_v1/弱配对审查.html",
+    "crossview_weak_alignment": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/感知对照汇总.json",
+    "crossview_weak_alignment_report": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/工程训练与目标对照报告.md",
+    "crossview_weak_alignment_audit": "DATA/processed_data/MM-GAG/弱场景对齐头工程与训练_v3/核验/另实现复核.json",
+    "crossview_weak_alignment_driver": "project/src/tools/run_weak_alignment_v3.py",
+    "crossview_weak_alignment_head": "project/src/agents/weak_alignment_head_v1.py",
+    "crossview_transfer_diagnosis": "DATA/processed_data/MM-GAG/弱场景与拍摄点迁移差异诊断_v1/迁移差异诊断报告.md",
+    "crossview_transfer_diagnosis_page": "DATA/processed_data/MM-GAG/弱场景与拍摄点迁移差异诊断_v1/诊断阅读页.html",
+    "crossview_transfer_diagnosis_audit": "DATA/processed_data/MM-GAG/弱场景与拍摄点迁移差异诊断_v1/核验/另实现复核.json",
+    "crossview_source_proposal": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/待审九五六分组.json",
+    "crossview_source_proposal_page": "DATA/processed_data/MM-GAG/同任务来源与监督资料规划_v1/来源规划阅读页.html",
+    "crossview_source_roles": "DATA/processed_data/MM-GAG/同任务来源用途账本_v1.json",
+    "crossview_pixel_preflight": "DATA/processed_data/MM-GAG/同任务首批图像轴向预检_v1/工程汇总.json",
+    "crossview_pixel_preflight_audit": "DATA/processed_data/MM-GAG/同任务首批图像轴向预检_v1/核验/另实现复核.json",
+    "crossview_pixel_preflight_authorization": "DATA/processed_data/MM-GAG/同任务首批图像轴向预检_v1/用户授权记录.json",
+    "crossview_same_task_protocol": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/配对覆盖同预算冻结协议.json",
+    "crossview_same_task_queue": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/固定训练与开发队列.json",
+    "crossview_same_task_protocol_audit": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/核验/协议另实现复核.json",
+    "crossview_actual_executor": "project/src/tools/run_capturepoint_coverage_v1.py",
+    "crossview_actual_auditor": "project/src/eval/audit_capturepoint_coverage_execution_v1.py",
+    "crossview_target_head": "project/src/agents/capturepoint_target_head_v1.py",
+    "crossview_actual_scoring": "project/src/eval/capturepoint_coverage_scoring_v1.py",
+    "crossview_executor_engineering": "DATA/processed_data/MM-GAG/同任务对齐执行器工程_v2/工程结果.json",
+    "crossview_executor_binding": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/首forward绑定.json",
+    "crossview_same_task_execution": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/执行完成.json",
+    "crossview_same_task_report": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/十二配对同预算训练与目标对照报告.md",
+    "crossview_same_task_result": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/开发对照汇总.json",
+    "crossview_same_task_decision": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/核验/最终门槛判定.json",
+    "crossview_same_task_audit": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/核验/完整另实现复核.json",
+    "crossview_evidence_close": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/跨视角阶段证据与失败边界.md",
+    "crossview_evidence_gaps": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/证据与缺项表.json",
+    "crossview_platform_boundary": "DATA/processed_data/MM-GAG/跨视角阶段证据收束_v2/平台接入边界.md",
+    "crossview_evidence_close_driver": "project/src/eval/crossview_evidence_close_v2.py",
+    "crossview_label_admission_review": "DATA/processed_data/MM-GAG/同任务拍摄点标签与可辨识性审查_v1/审查汇总与收束判定.json",
+    "crossview_label_gallery": "DATA/processed_data/MM-GAG/同任务拍摄点标签与可辨识性审查_v1/README.md",
+    "crossview_label_review_driver": "project/src/tools/capturepoint_label_review_v1.py",
+    "crossview_current_material_training_branch_status": "frozen_representation_grid_signal_failed_route_closed_no_more_head_training",
+    "crossview_training_capacity": "DATA/processed_data/MM-GAG/训练正配对容量与划分追溯_v1/训练容量与取样追溯汇总.json",
+    "crossview_training_capacity_report": "DATA/processed_data/MM-GAG/训练正配对容量与划分追溯_v1/九对限制来源与训练配对容量报告.md",
+    "crossview_training_capacity_driver": "project/src/eval/capturepoint_training_capacity_v1.py",
+    "crossview_coverage_protocol": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/配对覆盖同预算冻结协议.json",
+    "crossview_coverage_queue": "DATA/processed_data/MM-GAG/三新增来源工程与配对覆盖协议_v1/固定训练与开发队列.json",
+    "crossview_coverage_preparer": "project/src/tools/prepare_capturepoint_coverage_v1.py",
+    "crossview_coverage_protocol_auditor": "project/src/eval/audit_capturepoint_coverage_v1.py",
+    "crossview_coverage_gate": "project/src/data/capturepoint_coverage_protocol_v1.py",
+    "crossview_legacy9_executor": "project/src/tools/run_capturepoint_execution_v2.py",
+    "crossview_legacy9_auditor": "project/src/eval/audit_capturepoint_execution_v2.py",
+    "crossview_legacy9_actual_scoring": "project/src/eval/capturepoint_execution_scoring_v1.py",
+    "crossview_legacy9_executor_binding": "DATA/processed_data/MM-GAG/同任务对齐执行器工程_v2/首forward输入源码绑定.json",
+    "crossview_legacy9_same_task_protocol": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/同任务对齐训练冻结协议.json",
+    "crossview_legacy9_same_task_queue": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/固定编码与训练开发队列.json",
+    "crossview_legacy9_same_task_protocol_audit": "DATA/processed_data/MM-GAG/同任务对齐训练与目标对照协议_v1/核验/另实现复核.json",
+    "crossview_legacy9_same_task_execution": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/执行完成.json",
+    "crossview_legacy9_same_task_result": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/开发对照汇总.json",
+    "crossview_legacy9_same_task_decision": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/核验/最终门槛判定.json",
+    "crossview_legacy9_same_task_audit": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/核验/另实现复核.json",
+    "crossview_legacy9_same_task_report": "DATA/processed_data/MM-GAG/同任务拍摄点对齐执行_v1/同任务训练与目标对照报告.md",
+    "crossview_review": "DATA/processed_data/MM-GAG/配对覆盖复查与后续计划_v1/复查结论.md",
+    "crossview_review_evidence": "DATA/processed_data/MM-GAG/配对覆盖复查与后续计划_v1/复查汇总.json",
+    "crossview_review_driver": "project/src/eval/review_capturepoint_coverage_v1.py",
+    "crossview_signal_diagnosis": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/场景与精确格诊断报告.md",
+    "crossview_signal_result": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/开发信号筛选.json",
+    "crossview_signal_audit": "DATA/processed_data/MM-GAG/场景与精确格信号分解_v1/另实现复核.json",
+    "crossview_signal_runner": "project/src/tools/run_crossview_signal_v1.py",
+    "crossview_platform_evidence": "平台/实验工作台_v4/地面目标证据_v1/README.md",
+    "ground_task_core": "project/src/platform_core/ground_tasks_v2.py",
+    "ground_task_CLI": "project/src/platform_core/cli_v4.py",
+    "ground_workbench": "平台/实验工作台_v4/地面任务可靠性修复_v1/README.md",
+    "ground_release_report": "平台/实验工作台_v4/地面任务可靠性修复_v1/发布与验收报告.md",
+    "ground_static": "project/src/webapp/static_ground_v1/",
+    "ground_layout": "project/src/webapp/ground_layout_v2.css",
+    "platform_service": "project/src/platform_core/service_v5.py",
+    "ground_workbench_review": "平台/实验工作台_v4/地面任务复查与后续规划_v1/README.md",
+    "ground_recovery_ui": "project/src/webapp/ground_recovery_v1.js",
+    "historical_platform_auditor": "project/src/tools/audit_ground_release_v2.py",
+    "crossview_asset_admission": "DATA/processed_data/MM-GAG/跨视角公开资产准入_v1/准入判定.json",
+    "local_goal_evidence_contract": "project/src/platform_core/local_goal_evidence_v1.py",
+    "local_goal_interface_preparation": "平台/实验工作台_v4/局部目标接口准备_v1/README.md",
+    "crossview_local_loop_engineering": "DATA/processed_data/MM-GAG/目标语义与局部闭环工程_v1/README.md",
+    "crossview_local_loop_status": "engineering_passed_semantic_trend_screen_failed_closed_no_default_upgrade",
+    "scene_kernel": "project/src/platform_core/scene_workspace_v2.py",
+    "scene_delivery": "平台/实验工作台_v4/场景交互复查与修复_v1/README.md",
+    "ground_encoding_engineering": "DATA/processed_data/MM-GAG/地面目标实时编码接口工程_v2/README.md",
+    "ground_encoding_interface": "project/src/platform_core/ground_encoding_v1.py",
+    "ground_encoding_loader": "project/src/agents/frozen_crossview_encoder_v2.py",
+    "ground_live": "平台/实验工作台_v4/地面证据四项修复与回归_v1/README.md",
+    "ground_walk": "平台/实验工作台_v4/地面目标连续观测与人工探索_v1/README.md"
+  }
+}

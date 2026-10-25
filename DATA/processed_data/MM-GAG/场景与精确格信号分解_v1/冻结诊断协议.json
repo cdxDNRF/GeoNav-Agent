@@ -1,0 +1,55 @@
+{
+  "task": "CV-021",
+  "date": "2026-10-18",
+  "user_authorized": "开始：CV-021缓存诊断、条件式闭环及平台证据展示",
+  "arms": [
+    "Identity",
+    "SwissRank8Frozen",
+    "MMRank8Final",
+    "MMRank8Coverage12"
+  ],
+  "source_order": [
+    "mmgag_062",
+    "mmgag_073",
+    "mmgag_079",
+    "mmgag_039",
+    "mmgag_081"
+  ],
+  "planned_windows_reference": 125,
+  "source_units": 5,
+  "stored_score_slots": 4860,
+  "new_scene_scores": 120,
+  "head_projections": 24,
+  "Mean": "unit(mean(unit(original_ground[0:9])))",
+  "scene_bank": "unit(mean(unit(81_aerial_vectors_per_source)))",
+  "Wrong": "cyclic5, reuse Full rows; no additional scores",
+  "rank_ties": "descending score, sha256(CV-002/tie/v1:{source_id}:{physical_local_index}); source-query key independent of hidden goal",
+  "spatial_screen_interpretation": "at least3 same sources Full81-rank strictly better than both Mean and Wrong",
+  "gates": {
+    "Full_scene_correct_min": 3,
+    "Full_minus_each_control_scene_correct_min": 2,
+    "Full_cell_rank_above_both_controls_min_sources": 3
+  },
+  "selection_priority_if_multiple_pass": [
+    "Identity",
+    "SwissRank8Frozen",
+    "MMRank8Final",
+    "MMRank8Coverage12"
+  ],
+  "not_formal_method_acceptance": true,
+  "resource_cap": {
+    "CPU_seconds": 1800,
+    "research_output_bytes": 4194304,
+    "platform_output_bytes": 2097152,
+    "backbone_forward": 0,
+    "train_updates": 0,
+    "raw_image_reads": 0,
+    "navigation": 0,
+    "API_calls": 0,
+    "confirmation_consumption": 0
+  },
+  "audit_budget": "Alternate arithmetic may verify the same120 values/24 projected targets; no new conditions or head forward calls.",
+  "stop": "single frozen calculation; error keeps partial records; no pass closes current representation/head route, pass only freezes one next hypothesis",
+  "evaluator_only_bank": true,
+  "defaults_unchanged": true
+}

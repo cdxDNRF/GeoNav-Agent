@@ -1,0 +1,71 @@
+{
+  "status": "passed_interruption_audit_not_training_completion",
+  "counts": {
+    "start": 1,
+    "microbatch": 22762,
+    "epoch": 208
+  },
+  "last_progress": {
+    "seed": 0,
+    "phase": "pretrain",
+    "epoch": 208,
+    "microbatches": 22762,
+    "pretrain_updates": 208,
+    "environment_steps": 0,
+    "ppo_updates": 0,
+    "epoch_cursor": 90
+  },
+  "fit_sources": 109,
+  "finite_losses": 22762,
+  "peak_reserved_mib": 3784.0,
+  "checkpoint": {
+    "file": "pretrain_epoch_150.pt",
+    "sha256": "8d9d081c78c5c67d23c5387e26ce3473dd2fbfdefb070196fb2a062750adcc98",
+    "protocol_sha256": "4c8cf7455172ee770fa1c74edf3c2844674dc6bf5a13eae3fa61d78e267c44bc",
+    "progress": {
+      "seed": 0,
+      "phase": "pretrain",
+      "epoch": 150,
+      "microbatches": 16350,
+      "pretrain_updates": 150,
+      "environment_steps": 0,
+      "ppo_updates": 0
+    }
+  },
+  "uncheckpointed_microbatches": 6412,
+  "direct_resume_allowed": false,
+  "exit_cause": "unknown: no traceback or graceful-stop event",
+  "original_bindings_checked": 2777,
+  "default_bindings_checked": 2,
+  "original_attempt_bindings": {
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/README.md": "67ce6e52b91cafda341af002a47a6e1e14cab613c5f1a7f00a23c2f515e54726",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/seed_0/events.jsonl": "83da615aece52b4edb038fc1ba192e6295d5430e9ef0d7d0c0cbceeb30c8427d",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/seed_0/pretrain_epoch_150.pt": "8d9d081c78c5c67d23c5387e26ce3473dd2fbfdefb070196fb2a062750adcc98",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/seed_0/pretrain_epoch_150.pt.seal.json": "85db79564b8b8ad834aaf73e1cf871826d8f4e5e29d0f4beed10b45b483bfca0",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/元数据/保护默认.json": "4b2d08abe1545ff61b063f1b13f99c9579de25ce059c58fca68617b5876ee72b",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/元数据/冻结执行协议.json": "4c8cf7455172ee770fa1c74edf3c2844674dc6bf5a13eae3fa61d78e267c44bc",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/元数据/拟合均值.npy": "3bb5233fc6fbef7eece51ee78979b37dfaadfcb98d310e6f1b5de7b3d25a8158",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/元数据/拟合特征109.npz": "2d000fed8c965daab8bbbdd6e21d47d65c8089f0b13534a413dfba72134e0dd6",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/核验/seed_0_stdout.log": "05b11817f9aadac364f94e3a0c1f9fec60ccca5e490c879360fa984347b5b372",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/核验/启动核验.json": "11311e6115bf967eb3c6d32d6272259555262ce937ad9d8175fcb7a594661586",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/源码快照/agents__benchmark_contract_v1.py": "920b7d346f5f715f72bfb3c1dd5fab6e9924853d9eecb31cb8732e8467ae1a2f",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/源码快照/agents__geoexplorer_contract_v1.py": "a936e8c27adc9ccf0cb7b1ed421de8bba8ec5fdb2822a97af271ecce35506ec6",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/源码快照/agents__geoexplorer_policy_v1.py": "3125a0f10efea74efc592a9b32714f3c751fff8e5da10bb35d341e6e70b0ad76",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/源码快照/eval__audit_geoexplorer_training_run_v1.py": "31e273bc184101dc3895944f799088c2bb3315fa0bd458938bbf1f16939d50a8",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/源码快照/eval__audit_geoexplorer_training_v1.py": "73f26d6a95bef1d55e23c0d1529008fc3153f8c3d8e2ecf4bd9c98694b6b43aa",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/源码快照/tests__test_geoexplorer_resource_v1.py": "b3de9205825d1103c1b993e9b2f1f8507496ed5a6d60b63754afb9a85873840e",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/源码快照/tests__test_geoexplorer_training_v1.py": "6e2e77671888dc2c64c747b642e533c48840dcb84ef41f4d215c14082dbe0a0b",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/源码快照/tools__prepare_geoexplorer_resource_v1.py": "9c48bd46400f537e844d12f18655af5f711a035ef32b248c2718014fb82dd405",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/源码快照/tools__prepare_geoexplorer_training_v1.py": "a2fabfd1456e4732c9c4b8e39eafb57b64ba1f1b7c9611a233ea09b343f8093c",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/源码快照/train__check_geoexplorer_training_v1.py": "af013820e6aed57465f83a92669bdd95b067c082258ff744bfe980e50a6a6aef",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/源码快照/train__geoexplorer_resource_probe_v1.py": "a046f2bff504f70561e07bbe3a8dd4ab4bbacc42c67f8834e3e5b55bab4efe81",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/源码快照/train__geoexplorer_training_math_v1.py": "60a15cf3923053eae81aa8bbf99ff0359e560f9865f4863058589692180cba48",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/源码快照/train__geoexplorer_training_v1.py": "1b5d09d0405cd7f586053aab526f64b16fd304664a3327ef16ac5be11b9c3f46",
+    "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v1/源码快照/train__run_geoexplorer_training_v1.py": "af0c45e262b7b3b280f0759c39b2a9c13f991e5a043ef2707e5266add87e2342"
+  },
+  "independent_person_review": false,
+  "verification": "same agent; separate geometry/count/mean/SHA implementation",
+  "model_forward": 0,
+  "new_navigation": 0,
+  "scientific_sr": false
+}

@@ -1,0 +1,74 @@
+{
+  "task": "BENCH-022",
+  "status": "candidate_original_split_received_full_relations_incomplete",
+  "requirements": [
+    {
+      "id": "source_split",
+      "status": "partial",
+      "expected": "完整原图身份/SHA/空间足迹与train/val/test清单",
+      "currently_verified": "Geo OWNER指向的Airloc真实1188-ID切分831/178/179已取得；GOMAA实际bank及本地父图/地理映射未知",
+      "artifact_bindings": [
+        {
+          "path": "项目导航/原训练资料接收_v1/公开来源/Airloc_list_eval_partition.csv",
+          "sha256": "fcf8106d9e33c912064258804f242dd7135c69a1ba16f5fcbe2b16c4893e23e8"
+        },
+        {
+          "path": "项目导航/原训练资料接收_v1/公开来源/Airloc_list_eval_partition_grid.csv",
+          "sha256": "0e6a2335d09c4ec116cd291fc7412640a839f590521e5cb79ac87d4eb5d8350b"
+        }
+      ],
+      "relation_evidence": []
+    },
+    {
+      "id": "encoder_recipe",
+      "status": "partial",
+      "expected": "实际导航训练encoder/revision/输出/预处理转换与bank绑定",
+      "currently_verified": "本地MVRL工件已匹配；导航训练所用身份未绑定",
+      "artifact_bindings": [],
+      "relation_evidence": []
+    },
+    {
+      "id": "feature_bank",
+      "status": "missing",
+      "expected": "原bank SHA/shape/条目到原图及格子映射或可核验重建",
+      "currently_verified": "完整MM-GAG公开树未包含Masa训练bank",
+      "artifact_bindings": [],
+      "relation_evidence": []
+    },
+    {
+      "id": "training_run",
+      "status": "partial",
+      "expected": "完整预训练/PPO配置/停止/种子/资源/日志",
+      "currently_verified": "Geo OWNER确认预训练300轮与4090；AiRloc原run config/info已取得但Completed=false；GOMAA PPO实际run仍未知",
+      "artifact_bindings": [],
+      "relation_evidence": []
+    },
+    {
+      "id": "checkpoint_run_map",
+      "status": "partial",
+      "expected": "两权重SHA到run/split/encoder/bank关系证明",
+      "currently_verified": "GOMAA MEMBER指认已验真HF仓库是最佳Falcon发布；具体run/encoder/bank/论文表关系仍未知",
+      "artifact_bindings": [],
+      "relation_evidence": []
+    },
+    {
+      "id": "paper_evaluation_map",
+      "status": "missing",
+      "expected": "论文表/行到权重/任务/协议/源码映射",
+      "currently_verified": "已收到上游716题Chebyshev1–4的任务文件，非895题曼哈顿C4–8清单；GOMAA原评测映射仍未知",
+      "artifact_bindings": [],
+      "relation_evidence": []
+    }
+  ],
+  "development_target_qualified": false,
+  "development_evidence": "DATA/processed_data/Masa/评测结果/GOMAA开发闭环目标诊断_v1/核验/闭环另实现复核_v2.json",
+  "new_source_isolation_verified": false,
+  "execute_allowed": false,
+  "automatic_checker_scope": "structure/SHA/review-presence only; not author authentication or numerical/target validation",
+  "original_gate_sha256": "715f675aa97942c44a7f1a236a9253f2f2564590ef150ac06883200ebc63db75",
+  "best_falcon_publication_identified": true,
+  "source_split_candidate_received": true,
+  "asset_readiness": false,
+  "execution_configuration_frozen": false,
+  "external_message_sent": false
+}

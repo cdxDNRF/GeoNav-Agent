@@ -1,0 +1,30 @@
+{
+  "passed": false,
+  "reason": "both runs exceeded original 3GiB RSS guard",
+  "failures": [
+    {
+      "error_type": "RuntimeError",
+      "attempts": 0,
+      "completed_pairs": 0,
+      "elapsed_seconds": 101.96288279999862,
+      "peak_RSS_bytes": 3571990528,
+      "no_auto_retry": true
+    },
+    {
+      "error_type": "RuntimeError",
+      "attempts": 1,
+      "completed_pairs": 0,
+      "elapsed_seconds": 75.26477049999812,
+      "peak_RSS_bytes": 3247542272,
+      "no_auto_retry": true
+    }
+  ],
+  "actual_forward_calls": 1,
+  "successful_ground_encodings": 1,
+  "complete_pairs": 0,
+  "ground_vector_not_persisted": true,
+  "cache_consistency_not_assessed": true,
+  "assets_sources_protected_verified": 160,
+  "no_navigation_SR": true,
+  "separate_user_authorization": "4GiB new v2 batch; same8images; at most8 additional forwards; cumulative9"
+}
