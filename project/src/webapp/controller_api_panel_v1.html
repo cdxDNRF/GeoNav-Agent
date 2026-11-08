@@ -1,0 +1,10 @@
+<section class="panel batch-panel" id="api-comparison-panel"><div class="section-head"><h2>06 / 单模型API同题对照</h2><span>FIXED 10 TASKS / B10</span></div>
+<p id="api-config-info" class="context">读取现有API配置…</p><a href="/">原工作台API设置 →</a>
+<p class="hint">云端只接收给定目标图、当前已观测图和公开历史，不接收M0建议。每步计算本地M0备用；请求或解析失败才回退，连续3次错误停止。此方案是“单API＋M0失败回退”，不是纯云模型或多Agent。</p>
+<label class="hint"><input id="api-consent" type="checkbox">我确认调用会将目标与当前航拍图发送至上述服务，并保留不含图片正文/密钥的小型审计。单题≤10请求，固定十题组≤100请求，失败也计数，0自动重试。</label>
+<p class="hint">单题可在左侧控制器选择API；固定对照使用原10道已消费Masa S2题、seed0/B10，复用经核验的原M0/Frontier结果，不重复运行基线。不消耗地面确认组。</p>
+<div class="batch-controls"><button id="api-create" class="primary" disabled>创建并保存十题API对照</button><label>已保存API对照<select id="api-saved"></select></label><button id="api-open" class="secondary">打开API对照</button></div>
+<div class="batch-controls"><button id="api-step" disabled>API单步</button><button id="api-current" class="primary" disabled>自动当前一题</button><button id="api-all" disabled>自动整个API组</button><button id="api-pause" disabled>暂停</button><button id="api-export" disabled>导出对照JSON</button><button id="api-csv" disabled>导出对照CSV</button></div>
+<label id="api-restart-label" class="hint" hidden><input id="api-restart" type="checkbox">明确从未完成轨迹起点另开；原API消耗不清零，未决请求不自动重试。</label>
+<p id="api-single-info" class="hint">尚未运行API。配置沿用工作台的单模型API设置；密钥只保存在配置中。</p>
+<p id="api-summary" class="result">尚未创建。API可用性、正常完成数和导航成功数分别报告。</p><div class="table-scroll"><table id="api-table"><thead><tr><th>任务</th><th>M0（复用）</th><th>Frontier（复用）</th><th>API状态</th><th>API成功 / SG格</th></tr></thead><tbody></tbody></table></div></section>

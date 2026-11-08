@@ -1,0 +1,225 @@
+{
+  "date": "2026-10-25",
+  "title": "基于主动探索的视觉地理定位方法设计与实现",
+  "authors": [
+    "陈德昕",
+    "李世显",
+    "陈龙辉"
+  ],
+  "advisor": "王笛",
+  "platform": "4.13.1",
+  "aerial": [
+    {
+      "name": "Masa S2",
+      "protocol": "5×5 / B10",
+      "sr": 0.8933333333333334,
+      "sg": 0.32,
+      "sources": 4,
+      "tasks_per_seed": 100,
+      "weights": 3,
+      "source": "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/对照汇总.json",
+      "sg_unit": "格"
+    },
+    {
+      "name": "Masa S3",
+      "protocol": "5×5 / B10",
+      "sr": 0.868,
+      "sg": 0.3,
+      "sources": 10,
+      "tasks_per_seed": 250,
+      "weights": 3,
+      "source": "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/对照汇总.json",
+      "sg_unit": "格"
+    },
+    {
+      "name": "Masa S4",
+      "protocol": "10×10 / B20",
+      "sr": 0.7713333333333333,
+      "sg": 1.2013333333333334,
+      "sources": 20,
+      "tasks_per_seed": 500,
+      "weights": 3,
+      "source": "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/对照汇总.json",
+      "sg_unit": "格"
+    },
+    {
+      "name": "SwissView",
+      "protocol": "5×5 / B10",
+      "sr": 0.868,
+      "sg": 0.3806666666666667,
+      "sources": 20,
+      "tasks_per_seed": 500,
+      "weights": 3,
+      "source": "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/对照汇总.json",
+      "sg_unit": "格"
+    }
+  ],
+  "area": {
+    "reference": {
+      "episodes": 2250,
+      "failed_episodes": 926,
+      "last_step_successes": 83,
+      "mean_failed_sg": 6.116630669546436,
+      "mean_failed_sg_m": 1834.9892008639308,
+      "mean_sg_all_episodes": 2.517333333333333,
+      "mean_sg_m": 755.2,
+      "mean_steps": 16.71377777777778,
+      "mean_valid_travel_m": 5014.133333333333,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.014250723579825748,
+      "repeat_visit_rate_micro": 0.016566505344891774,
+      "sr": 0.5884444444444444,
+      "successes": 1324,
+      "terminations": {
+        "budget_exhausted": 926,
+        "goal_reached": 1324
+      },
+      "total_oob": 0,
+      "total_revisits": 623,
+      "total_steps": 37606,
+      "total_valid_travel_m": 11281800
+    },
+    "candidate": {
+      "episodes": 2250,
+      "failed_episodes": 719,
+      "last_step_successes": 87,
+      "mean_failed_sg": 6.764951321279555,
+      "mean_failed_sg_m": 2029.4853963838664,
+      "mean_sg_all_episodes": 2.1617777777777776,
+      "mean_sg_m": 648.5333333333333,
+      "mean_steps": 15.897777777777778,
+      "mean_valid_travel_m": 4769.333333333333,
+      "out_of_bounds_rate": 0.0,
+      "repeat_visit_rate_macro": 0.01122276497343577,
+      "repeat_visit_rate_micro": 0.014006150405367627,
+      "sr": 0.6804444444444444,
+      "successes": 1531,
+      "terminations": {
+        "budget_exhausted": 719,
+        "goal_reached": 1531
+      },
+      "total_oob": 0,
+      "total_revisits": 501,
+      "total_steps": 35770,
+      "total_valid_travel_m": 10731000
+    },
+    "recovered": 295,
+    "harmed": 88,
+    "source": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/主对照/对照汇总.json",
+    "ci95_sr_gain_pp": [
+      7.07,
+      11.02
+    ],
+    "regions": 10,
+    "unique_tasks": 750,
+    "weights": 3,
+    "budget": 20,
+    "cell_m": 300,
+    "area_km2": 9
+  },
+  "new_domain": [
+    {
+      "grid": 10,
+      "sr": 0.5462222222222223,
+      "sg_m": 883.4666666666667,
+      "planned": 2250,
+      "successes": 1229
+    },
+    {
+      "grid": 15,
+      "sr": 0.20266666666666666,
+      "sg_m": 2267.8,
+      "planned": 3000,
+      "successes": 608
+    }
+  ],
+  "crossview": {
+    "positive_joint": 0,
+    "positive_n": 9,
+    "macro_joint": 0.6666666666666666,
+    "sources": 3,
+    "independent_confirmation_sources": 0,
+    "by_source": {
+      "amsterdam": {
+        "joint": 0,
+        "n": 3,
+        "macro_joint": 0.6666666666666666,
+        "positive_errors_m_all": [
+          18.306401788248497,
+          20.383704372530094,
+          18.306401788248497
+        ]
+      },
+      "krakow": {
+        "joint": 0,
+        "n": 3,
+        "macro_joint": 0.6666666666666666,
+        "positive_errors_m_all": [
+          6.438310083763743,
+          6.438310083763743,
+          6.438310083763743
+        ]
+      },
+      "stockholm": {
+        "joint": 0,
+        "n": 3,
+        "macro_joint": 0.6666666666666666,
+        "positive_errors_m_all": [
+          1.4309874907904552,
+          1.4309874907904552,
+          1.4309874907904552
+        ]
+      }
+    },
+    "controls": {
+      "Spatial/Full": {
+        "positive_joint": 0,
+        "positive_n": 9,
+        "source_macro_joint": 0.6666666666666666
+      },
+      "Spatial/Disabled": {
+        "positive_joint": 0,
+        "positive_n": 9,
+        "source_macro_joint": 0.6666666666666666
+      },
+      "Spatial/Mean": {
+        "positive_joint": 0,
+        "positive_n": 9,
+        "source_macro_joint": 0.6666666666666666
+      },
+      "Spatial/Wrong": {
+        "positive_joint": 0,
+        "positive_n": 9,
+        "source_macro_joint": 0.6666666666666666
+      },
+      "TrainedMean/NoTarget": {
+        "positive_joint": 0,
+        "positive_n": 9,
+        "source_macro_joint": 0.6533333333333333
+      },
+      "RawCos/Full": {
+        "positive_joint": 0,
+        "positive_n": 3,
+        "source_macro_joint": 0.6025925925925926
+      }
+    },
+    "training_heads": 18,
+    "updates": 3600,
+    "training_uses": 21600,
+    "nontraining_predictions": 6750,
+    "source": "DATA/processed_data/OpenCVL/普通RGB空间小头固定开发对照_v1/主对照汇总.json"
+  },
+  "parameters": {
+    "explorer": 797701,
+    "edge_head": 136837,
+    "task_total": 934538,
+    "encoder": "Sat2Cap frozen"
+  },
+  "current_ground_status": "人工连续观测与证据查阅；未完成可靠自主导航",
+  "assets": {
+    "method": "中期报告相关/中期成果冻结版_v1/图表/01_M0方法与评测边界.png",
+    "area": "绘图/数据结果图/50_径向保护独立新区域的分层确认结果.png",
+    "platform": "图表/平台当前工作台.png",
+    "ground": "图表/地面目标与空间证据.png"
+  }
+}

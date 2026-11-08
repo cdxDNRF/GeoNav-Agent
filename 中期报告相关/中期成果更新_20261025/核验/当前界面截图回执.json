@@ -1,0 +1,44 @@
+{
+  "passed": true,
+  "version": "4.13.1",
+  "captured": 3,
+  "source": "http://127.0.0.1:8769",
+  "allowed_GETs": [
+    "http://127.0.0.1:8769/",
+    "http://127.0.0.1:8769/style.css",
+    "http://127.0.0.1:8769/methods.css",
+    "http://127.0.0.1:8769/ground/style.css",
+    "http://127.0.0.1:8769/workflow/style.css",
+    "http://127.0.0.1:8769/assets/geonav-terrain.png",
+    "http://127.0.0.1:8769/app.js",
+    "http://127.0.0.1:8769/methods.js",
+    "http://127.0.0.1:8769/workflow/app.js",
+    "http://127.0.0.1:8769/api/meta",
+    "http://127.0.0.1:8769/api/methods",
+    "http://127.0.0.1:8769/ground-walk",
+    "http://127.0.0.1:8769/ground-walk/base.css",
+    "http://127.0.0.1:8769/ground-walk/style.css",
+    "http://127.0.0.1:8769/ground-walk/app.js",
+    "http://127.0.0.1:8769/api/meta",
+    "http://127.0.0.1:8769/api/ground-walk/catalog",
+    "http://127.0.0.1:8769/spatial-evidence",
+    "http://127.0.0.1:8769/spatial-evidence/style.css",
+    "http://127.0.0.1:8769/spatial-evidence/app.js",
+    "http://127.0.0.1:8769/api/spatial-evidence/catalog",
+    "http://127.0.0.1:8769/api/spatial-evidence/detail",
+    "http://127.0.0.1:8769/api/spatial-evidence/image",
+    "http://127.0.0.1:8769/api/spatial-evidence/image"
+  ],
+  "blocked_non_GET_or_external": [
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8769/api/session/release"
+    },
+    {
+      "method": "POST",
+      "url": "http://127.0.0.1:8769/api/ground-walk/release"
+    }
+  ],
+  "model_calls": 0,
+  "actions": 0
+}

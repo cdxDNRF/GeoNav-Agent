@@ -8,10 +8,16 @@ if (-not $PythonExe) {
 }
 if (-not $PythonExe -or -not (Test-Path -LiteralPath $PythonExe -PathType Leaf)) { throw '未找到Python。请通过 -PythonExe 指定已安装Python；搬迁包不含运行时。' }
 $taskUrl="http://127.0.0.1:$Port"
-$taskProbeRaw=& $PythonExe -B (Join-Path $taskRoot 'project/src/tools/release_maintenance_v1.py') probe --port $Port
-if ($LASTEXITCODE -ne 0) { throw '端口检查失败，未启动服务。' }
+# Reuse the exact current version before the preserved free-port checker.
+$taskExisting=$null
+try { $taskExisting=Invoke-RestMethod -Uri "$taskUrl/api/meta" -TimeoutSec 2 } catch { }
+if ($taskExisting.version -eq 'geonav-workbench-v4.18') { if (-not $NoBrowser) { Start-Process "$taskUrl/controllers" }; Write-Host '已使用现有GeoNav4.18服务'; return }
+Push-Location -LiteralPath $taskRoot
+try {
+    $taskProbeRaw=& $PythonExe -B -m project.src.tools.release_controller_workbench_v1 probe --port $Port
+    if ($LASTEXITCODE -ne 0) { throw '端口检查失败，未启动服务。' }
+} finally { Pop-Location }
 $taskProbe=$taskProbeRaw | ConvertFrom-Json
-if ($taskProbe.state -eq 'current') { if (-not $NoBrowser) { Start-Process $taskUrl }; Write-Host '已使用现有GeoNav4.13.1服务'; return }
 if ($taskProbe.state -ne 'free') { throw "端口已有服务或无法核实空闲；原服务保留。状态：$($taskProbe.state)/$($taskProbe.reason)。可通过 -Port 另选端口。" }
 Push-Location -LiteralPath $taskRoot
 try {
@@ -22,10 +28,10 @@ try {
     $taskLog=Join-Path $taskRoot 'DATA/processed_data/平台实验/工作台_v1'
     New-Item -ItemType Directory -Path $taskLog -Force | Out-Null
     $taskStamp=Get-Date -Format 'yyyyMMdd-HHmmss'
-    $taskProcess=Start-Process -FilePath $PythonExe -ArgumentList @('-B','-m','project.src.webapp.workbench_server_v21','--port',"$Port") -WorkingDirectory $taskRoot -RedirectStandardOutput (Join-Path $taskLog "server-$taskStamp.log") -RedirectStandardError (Join-Path $taskLog "server-$taskStamp.error.log") -WindowStyle Hidden -PassThru
+    $taskProcess=Start-Process -FilePath $PythonExe -ArgumentList @('-B','-m','project.src.webapp.workbench_server_v27','--port',"$Port") -WorkingDirectory $taskRoot -RedirectStandardOutput (Join-Path $taskLog "server-$taskStamp.log") -RedirectStandardError (Join-Path $taskLog "server-$taskStamp.error.log") -WindowStyle Hidden -PassThru
     for ($taskTry=0; $taskTry -lt 40; $taskTry++) {
         if ($taskProcess.HasExited) { throw '工作台启动失败，请检查工作台目录中的error.log。' }
-        try { $taskMeta=Invoke-RestMethod -Uri "$taskUrl/api/meta" -TimeoutSec 2; if ($taskMeta.version -eq 'geonav-workbench-v4.13.1') { if (-not $NoBrowser) { Start-Process $taskUrl }; Write-Host "GeoNav工作台已启动：$taskUrl · PID $($taskProcess.Id)"; return } } catch { }
+        try { $taskMeta=Invoke-RestMethod -Uri "$taskUrl/api/meta" -TimeoutSec 2; if ($taskMeta.version -eq 'geonav-workbench-v4.18') { if (-not $NoBrowser) { Start-Process "$taskUrl/controllers" }; Write-Host "GeoNav工作台已启动：$taskUrl · PID $($taskProcess.Id)"; return } } catch { }
         Start-Sleep -Milliseconds 500
     }
     throw '服务仍在初始化，请检查日志；不要盲目启动第二份。'

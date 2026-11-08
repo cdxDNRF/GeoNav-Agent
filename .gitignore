@@ -33,6 +33,10 @@ Thumbs.db
 *.safetensors
 
 # Developer-machine helpers and one-off handoff prompts are not project deliverables.
+/temp/
+/归档/
+/demo/
+/.codex/
 /.agents/本地/
 /project/src/tools/local/
 /DATA/processed_data/**/源码快照/**/pi_*
@@ -124,8 +128,17 @@ Thumbs.db
 /DATA/processed_data/
 /平台/实验工作台_v4/
 /项目导航/
-/绘图/
-/中期报告相关/
+/绘图/*
+!/绘图/README.md
+!/绘图/架构与方法图/
+!/绘图/架构与方法图/**
+!/绘图/数据结果图/
+!/绘图/数据结果图/**
+/中期报告相关/*
+!/中期报告相关/README.md
+!/中期报告相关/中期汇报准备.md
+!/中期报告相关/中期成果更新_20261025/
+!/中期报告相关/中期成果更新_20261025/**
 /总结报告相关/
 /选题报告相关/
 /调研/

@@ -1,14 +1,14 @@
 {
-  "updated": "2026-10-25",
+  "updated": "2026-10-29",
   "policy": "登记替代关系，不按最大版本号或无静态引用判删除",
   "current": {
     "platform": "平台/实验工作台_v4/README.md",
     "launcher": "平台/启动平台.ps1",
-    "server": "project/src/webapp/workbench_server_v21.py",
+    "server": "project/src/webapp/workbench_server_v27.py",
     "static": "project/src/webapp/static_v10/",
-    "report": "中期报告相关/中期成果冻结版_v1/中期报告_基于主动探索的视觉地理定位方法设计与实现_冻结版_v2.docx",
-    "report_pdf": "中期报告相关/中期成果冻结版_v1/中期报告_基于主动探索的视觉地理定位方法设计与实现_冻结版_v2.pdf",
-    "midterm_freeze": "中期报告相关/中期成果冻结版_v1/README.md",
+    "report": "中期报告相关/中期成果更新_20261025/交付/中期报告.docx",
+    "report_pdf": "中期报告相关/中期成果更新_20261025/交付/中期报告.pdf",
+    "midterm_freeze": "中期报告相关/中期成果更新_20261025/README.md",
     "benchmark_preparation": "项目导航/共同真实评测执行准备_v2/README.md",
     "benchmark_training": "DATA/processed_data/Masa/训练结果/GeoExplorer共同来源训练_v2/README.md",
     "benchmark_evaluation": "DATA/processed_data/Masa/评测结果/共同学习基线对照_v1/README.md",
@@ -30,14 +30,14 @@
     "benchmark_original_assets": "项目导航/原训练资料接收_v1/README.md",
     "benchmark_joint_admission": "项目导航/原训练资产核验与共同验证准入_v1/共同验证条件草案_v1.md",
     "benchmark_original_asset_intake": "项目导航/原训练资料接收_v1/README.md",
-    "platform_release": "平台/实验工作台_v4/发布修复与存储收束_v1/README.md",
+    "platform_release": "平台/实验工作台_v4/单模型API统一接入与同题对照_v1/README.md",
     "platform_validation": "平台/实验工作台_v4/方案与模型_v1/README.md",
-    "kernel": "project/src/platform_core/service_v11.py",
+    "kernel": "project/src/platform_core/service_v16.py",
     "launcher_cmd": "平台/启动平台.cmd",
-    "platform_maintenance": "平台/实验工作台_v4/发布修复与存储收束_v1/README.md",
+    "platform_maintenance": "平台/实验工作台_v4/单模型API统一接入与同题对照_v1/README.md",
     "storage_retention": "项目导航/归档永久清理_20261012_v1/README.md",
     "launcher_validation": "平台/实验工作台_v4/启动修复_v1/README.md",
-    "transfer_asset_manifest": "平台/实验工作台_v4/发布修复与存储收束_v1/搬迁发布清单.json",
+    "transfer_asset_manifest": "平台/实验工作台_v4/单模型API统一接入与同题对照_v1/搬迁发布清单_最终.json",
     "benchmark_independent_development": "项目导航/GeoExplorer策略分布一致性核查_v1/README.md",
     "benchmark_mask_engineering": "项目导航/GeoExplorer分布一致性工程验证_v1/README.md",
     "benchmark_mask_training": "DATA/processed_data/Masa/训练结果/GeoExplorer分布一致性成对开发_v1/README.md",
@@ -45,11 +45,11 @@
     "benchmark_mask_continuation": "project/src/tools/finish_geoexplorer_mask_v2.py",
     "benchmark_mask_report": "DATA/processed_data/Masa/训练结果/GeoExplorer分布一致性成对开发_v1/训练完成与开发对照报告_v1.md",
     "method_catalog": "project/src/platform_core/method_catalog_v1.py",
-    "transfer_builder": "project/src/tools/package_workbench_v25.py",
+    "transfer_builder": "project/src/tools/package_workbench_v33.py",
     "portable_validation": "平台/实验工作台_v4/便携闭环_v1/README.md",
     "release_rehearsal": "平台/实验工作台_v4/发布彩排_v1/README.md",
-    "migration_guide": "平台/实验工作台_v4/发布修复与存储收束_v1/使用与恢复.md",
-    "demonstration_card": "平台/实验工作台_v4/发布彩排_v1/答辩操作卡.html",
+    "migration_guide": "平台/实验工作台_v4/单模型API统一接入与同题对照_v1/使用与恢复.md",
+    "demonstration_card": "中期报告相关/中期成果更新_20261025/交付/演示操作卡.html",
     "midterm_entry": "中期报告相关/README.md",
     "final_report_preparation": "总结报告相关/总结准备_v1/README.md",
     "final_report_plan": "总结报告相关/总结准备_v1/总结阶段计划_v1.md",
@@ -153,7 +153,7 @@
     "ground_release_report": "平台/实验工作台_v4/地面任务可靠性修复_v1/发布与验收报告.md",
     "ground_static": "project/src/webapp/static_ground_v1/",
     "ground_layout": "project/src/webapp/ground_layout_v2.css",
-    "platform_service": "project/src/platform_core/service_v5.py",
+    "platform_service": "project/src/platform_core/service_v13.py",
     "ground_workbench_review": "平台/实验工作台_v4/地面任务复查与后续规划_v1/README.md",
     "ground_recovery_ui": "project/src/webapp/ground_recovery_v1.js",
     "historical_platform_auditor": "project/src/tools/audit_ground_release_v2.py",
@@ -169,7 +169,30 @@
     "ground_encoding_loader": "project/src/agents/frozen_crossview_encoder_v2.py",
     "ground_live": "平台/实验工作台_v4/地面证据四项修复与回归_v1/README.md",
     "ground_walk": "平台/实验工作台_v4/地面目标连续观测与人工探索_v1/README.md",
-    "perception_evidence": "平台/实验工作台_v4/局部感知证据查阅_v1/README.md"
+    "perception_evidence": "平台/实验工作台_v4/局部感知证据查阅_v1/README.md",
+    "midterm_delivery": "中期报告相关/中期成果更新_20261025/README.md",
+    "midterm_showcase": "中期报告相关/中期成果更新_20261025/交付/中期成果汇报.pptx",
+    "midterm_showcase_pdf": "中期报告相关/中期成果更新_20261025/交付/中期成果汇报.pdf",
+    "crossview_data_queue": "DATA/processed_data/OpenCVL/拍摄点开发任务队列_v1/README.md",
+    "crossview_task_queue": "DATA/processed_data/OpenCVL/拍摄点开发任务队列_v1/导航任务清单_v2.json",
+    "crossview_intake_tool": "project/src/tools/inspect_capturepoint_intake_v1.py",
+    "crossview_intake_guide": "docs/维护/拍摄点资料接收.md",
+    "crossview_intake_evidence": "调研/25_接收预检_另实现复核_v1.json",
+    "capturepoint_ui": "project/src/webapp/capturepoint_tasks_v2.html",
+    "capturepoint_controller": "project/src/platform_core/capturepoint_sessions_v1.py",
+    "confirmation_source_review": "调研/26_确认来源与任务匹配核查_v1.md",
+    "confirmation_source_evidence": "调研/26_来源证据_v1.json",
+    "confirmation_candidate_precheck": "DATA/processed_data/OpenCVL/公开瑞典三候选校正标签预检_v1/README.md",
+    "protected_confirmation_candidates": "DATA/processed_data/OpenCVL/公开瑞典三候选校正标签预检_v1/候选来源与封存用途.json",
+    "confirmation_protocol": "调研/27_三源确认协议_v1.md",
+    "confirmation_protocol_machine": "调研/27_三源确认协议_v1.json",
+    "translated_window_preparation": "调研/28_真实上下文与同尺度取窗准备_v1.md",
+    "translated_window_phase_decision": "调研/28_用户答复与阶段收束_v1.json",
+    "controller_contract": "project/src/platform_core/navigation_controller_v1.py",
+    "controller_cli": "project/src/platform_core/controller_cli_v3.py",
+    "controller_hub": "project/src/platform_core/controller_hub_v2.py",
+    "API_CLI": "project/src/platform_core/controller_cli_v4.py",
+    "midterm_brief": "中期报告相关/中期汇报准备.md"
   },
   "auxiliary": {
     "replay": "平台/主动探索演示_v1/README.md"
@@ -210,9 +233,12 @@
     },
     {
       "path": "平台/实验工作台_v4",
-      "status": "current_delivery",
-      "release": "4.13.1",
-      "replacement": null
+      "status": "current",
+      "release": "4.15",
+      "replacement": null,
+      "application_version": "4.18",
+      "current_release": "平台/实验工作台_v4/单模型API统一接入与同题对照_v1/README.md",
+      "server": "project/src/webapp/workbench_server_v27.py"
     }
   ],
   "sources": [
@@ -2621,8 +2647,9 @@
     {
       "path": "project/src/webapp/workbench_server_v21.py",
       "sha256": "40f49bdb112455a3114dc5817c8a5f4c7643335d4e002c280952206eae9be791",
-      "status": "current_entry_or_verification",
-      "task": "PLATFORM-029"
+      "status": "historical_bound_rollback",
+      "task": "PLATFORM-029",
+      "replacement": "project/src/webapp/workbench_server_v22.py"
     },
     {
       "path": "project/src/webapp/spatial_evidence_v2.js",
@@ -2633,8 +2660,9 @@
     {
       "path": "project/src/tools/package_workbench_v25.py",
       "sha256": "f33421e29ce05d8444cb63153b1ee738df8d985ea0233ab268bd2d267326ba4a",
-      "status": "current_entry_or_verification",
-      "task": "PLATFORM-029"
+      "status": "retained_recovery_guide_dependency",
+      "task": "PLATFORM-029",
+      "replacement": "project/src/tools/package_workbench_v27.py"
     },
     {
       "path": "project/src/tools/release_maintenance_v1.py",
@@ -2653,6 +2681,611 @@
       "sha256": "40b21f4de3147227f4e6a1f9f761ef48525a619eb262dab21cdf4c4874ba050b",
       "status": "current_entry_or_verification",
       "task": "PLATFORM-029"
+    },
+    {
+      "path": "project/src/platform_core/capturepoint_catalog_v1.py",
+      "sha256": "cc48e62b8fe6d267132947b082a04623f70ff018f5788ff896523b6b04fa435c",
+      "bytes": 5949,
+      "status": "current_entry_or_verification",
+      "task": "PLATFORM-030"
+    },
+    {
+      "path": "project/src/platform_core/capturepoint_workspace_v1.py",
+      "sha256": "b68503a91ce681a1738538b0d3c5c3cba32ec0093ec6ffc58a38cae4c8e76fc8",
+      "bytes": 11416,
+      "status": "current_entry_or_verification",
+      "task": "PLATFORM-030"
+    },
+    {
+      "path": "project/src/platform_core/service_v12.py",
+      "sha256": "e27ea2017ab3745ba2e97efe67fcf0907207cd25dc3eca8bcd92830ab49b014a",
+      "bytes": 1274,
+      "status": "current_inherited_dependency",
+      "task": "PLATFORM-030",
+      "replacement": null
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v22.py",
+      "sha256": "2943835313a28aa161ec3cc4dbfef4214813d95b36c5168e4152edff9d78dec3",
+      "bytes": 27378,
+      "status": "historical_bound_rollback",
+      "task": "PLATFORM-030",
+      "replacement": "project/src/webapp/workbench_server_v23.py"
+    },
+    {
+      "path": "project/src/webapp/capturepoint_tasks_v1.html",
+      "sha256": "3ec6883dc7d64aa0dc1cab3a17b3a0fd5e87b61c3c87de4cf81bbe061589a2e0",
+      "bytes": 6265,
+      "status": "historical_bound_ui_replaced",
+      "task": "PLATFORM-030",
+      "replacement": "project/src/webapp/capturepoint_tasks_v2.html"
+    },
+    {
+      "path": "project/src/webapp/capturepoint_tasks_v1.js",
+      "sha256": "2c2a9354c1983775df4fb93a6a20bb3939cefef7a7ece2782d21bb7dd0430c3c",
+      "bytes": 11879,
+      "status": "historical_bound_ui_replaced",
+      "task": "PLATFORM-030",
+      "replacement": "project/src/webapp/capturepoint_tasks_v2.js"
+    },
+    {
+      "path": "project/src/webapp/capturepoint_tasks_v1.css",
+      "sha256": "67bd8fc73fa71a0b48fa819825f75fad982209383cdc5bbede97f983278ea59a",
+      "bytes": 7806,
+      "status": "current_base_style_dependency",
+      "task": "PLATFORM-030",
+      "replacement": null
+    },
+    {
+      "path": "project/src/tools/package_workbench_v26.py",
+      "sha256": "c031c41274a1461a4cc4a1d2931fce44189e043d66f75bfb1e85e305dc09951a",
+      "bytes": 12880,
+      "status": "bound_candidate_manifest_failed_retained",
+      "task": "PLATFORM-030"
+    },
+    {
+      "path": "project/src/tools/release_capturepoint_tasks_v1.py",
+      "sha256": "fc128e6c5f05a91b3331893bbacd745e09957723ba29b3a885bbd0edc835b38e",
+      "bytes": 9622,
+      "status": "current_entry_or_verification",
+      "task": "PLATFORM-030"
+    },
+    {
+      "path": "project/src/tests/test_capturepoint_workspace_v1.py",
+      "sha256": "df6d8124623485af09d0b458167b0de256e03f2b1dc443acf766203c3bd0a5dc",
+      "bytes": 11290,
+      "status": "current_entry_or_verification",
+      "task": "PLATFORM-030"
+    },
+    {
+      "path": "project/src/tests/browser_capturepoint_tasks_v1.js",
+      "sha256": "e967dc103e366d23c82b79a10940bda6f563e68d98235cc76c93e1ecfaca573e",
+      "bytes": 9039,
+      "status": "current_entry_or_verification",
+      "task": "PLATFORM-030"
+    },
+    {
+      "path": "project/src/tools/package_workbench_v27.py",
+      "sha256": "05f2a4c294387b499be8672a077c31125915524581ff810857bd0c14f400c6a9",
+      "bytes": 12985,
+      "status": "historical_bound_transfer_builder",
+      "task": "PLATFORM-030",
+      "replacement": "project/src/tools/package_workbench_v28.py"
+    },
+    {
+      "path": "project/src/platform_core/navigation_controller_v1.py",
+      "sha256": "b822ef1db125c7dec6a665d9203e9fa79c49454715e1a36b6fab1273265bc037",
+      "bytes": 2958,
+      "version": 1,
+      "family": "project/src/platform_core/navigation_controller.py",
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM031 first-action source binding; preserve original bytes",
+      "reason": "4.15 unified controller/runtime or bounded acceptance",
+      "replacement": null
+    },
+    {
+      "path": "project/src/platform_core/capturepoint_sessions_v1.py",
+      "sha256": "b4d619c73a86081a19b1aaad189f258e3ed21bd025b6b8eb8f1ca047e5dd36e1",
+      "bytes": 12912,
+      "version": 1,
+      "family": "project/src/platform_core/capturepoint_sessions.py",
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM031 first-action source binding; preserve original bytes",
+      "reason": "4.15 unified controller/runtime or bounded acceptance",
+      "replacement": null
+    },
+    {
+      "path": "project/src/platform_core/service_v13.py",
+      "sha256": "15eac4e4a530b0e7e08e524796afbee77c22c790b8985510ed52e60e4f790530",
+      "bytes": 1296,
+      "version": 13,
+      "family": "project/src/platform_core/service.py",
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM031 first-action source binding; preserve original bytes",
+      "reason": "4.15 unified controller/runtime or bounded acceptance",
+      "replacement": null
+    },
+    {
+      "path": "project/src/platform_core/controller_cli_v1.py",
+      "sha256": "7b959cd875c303f327dda0a177bc0365913561638060fa3039f5048fb3c29a1f",
+      "bytes": 1815,
+      "version": 1,
+      "family": "project/src/platform_core/controller_cli.py",
+      "status": "superseded_current_entry_protected_evidence_or_dependency",
+      "retention": "Original frozen bytes retained; legacy guide/record dependency, no parallel current UI",
+      "reason": "4.15 unified controller/runtime or bounded acceptance",
+      "replacement": "project/src/platform_core/controller_cli_v2.py"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v23.py",
+      "sha256": "352d0effefb93afcc450f8201a1098ac6f3bf376fd35e4f383b40c223a1dee59",
+      "bytes": 31395,
+      "version": 23,
+      "family": "project/src/webapp/workbench_server.py",
+      "status": "superseded_current_entry_protected_evidence_or_dependency",
+      "retention": "Original frozen bytes retained; legacy guide/record dependency, no parallel current UI",
+      "reason": "4.15 unified controller/runtime or bounded acceptance",
+      "replacement": "project/src/webapp/workbench_server_v24.py"
+    },
+    {
+      "path": "project/src/webapp/capturepoint_tasks_v2.html",
+      "sha256": "892a8c00aef3d9d1fd747f2ab5d42d2709982b53083220563b5ab0931a4c6df6",
+      "bytes": 7612,
+      "version": 2,
+      "family": "project/src/webapp/capturepoint_tasks.html",
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM031 first-action source binding; preserve original bytes",
+      "reason": "4.15 unified controller/runtime or bounded acceptance",
+      "replacement": null
+    },
+    {
+      "path": "project/src/webapp/capturepoint_tasks_v2.js",
+      "sha256": "69a7e97881e689b58e3fad8d07412371b41b3e20cb154f4cbeba533af1ffeee7",
+      "bytes": 15515,
+      "version": 2,
+      "family": "project/src/webapp/capturepoint_tasks.js",
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM031 first-action source binding; preserve original bytes",
+      "reason": "4.15 unified controller/runtime or bounded acceptance",
+      "replacement": null
+    },
+    {
+      "path": "project/src/webapp/capturepoint_tasks_v2.css",
+      "sha256": "094ad30874293297d15a963fa89bce34da182ab073b56d42d4ed0eb8bec1d1fe",
+      "bytes": 682,
+      "version": 2,
+      "family": "project/src/webapp/capturepoint_tasks.css",
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM031 first-action source binding; preserve original bytes",
+      "reason": "4.15 unified controller/runtime or bounded acceptance",
+      "replacement": null
+    },
+    {
+      "path": "project/src/tests/test_capturepoint_sessions_v1.py",
+      "sha256": "7dd3cdd2007bb4944085bd8f05d3f3b33b19cfa81e6c46bea3e07bbf8dee2b33",
+      "bytes": 11296,
+      "version": 1,
+      "family": "project/src/tests/test_capturepoint_sessions.py",
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM031 first-action source binding; preserve original bytes",
+      "reason": "4.15 unified controller/runtime or bounded acceptance",
+      "replacement": null
+    },
+    {
+      "path": "project/src/tests/browser_controller_workbench_v1.js",
+      "sha256": "4612a517fc727b9854112c4bd96c7a075d61e3aee1d9c040e7ce41a3e5d3de9a",
+      "bytes": 11727,
+      "version": 1,
+      "family": "project/src/tests/browser_controller_workbench.js",
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM031 first-action source binding; preserve original bytes",
+      "reason": "4.15 unified controller/runtime or bounded acceptance",
+      "replacement": null
+    },
+    {
+      "path": "project/src/tools/package_workbench_v28.py",
+      "sha256": "4aec88981d0881ae4099c6270c8913aaa5cfed7ccb4c3248833b229d92307ddc",
+      "bytes": 13414,
+      "version": 28,
+      "family": "project/src/tools/package_workbench.py",
+      "status": "superseded_current_entry_protected_evidence_or_dependency",
+      "retention": "Original frozen bytes retained; legacy guide/record dependency, no parallel current UI",
+      "reason": "4.15 unified controller/runtime or bounded acceptance",
+      "replacement": "project/src/tools/package_workbench_v30.py"
+    },
+    {
+      "path": "project/src/tools/release_controller_workbench_v1.py",
+      "sha256": "5c5a57499136ef4e1bf150b0844c44fc8fe18d26238dc1d1d7741c04267effc1",
+      "bytes": 8448,
+      "version": 1,
+      "family": "project/src/tools/release_controller_workbench.py",
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM031 first-action source binding; preserve original bytes",
+      "reason": "4.15 unified controller/runtime or bounded acceptance",
+      "replacement": null
+    },
+    {
+      "path": "project/src/platform_core/controller_hub_v1.py",
+      "sha256": "2ba491c0fd1cf716439b97c69b7114f7669d919643557cc2b968407d14dc50a0",
+      "bytes": 14390,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM032 source/evidence; preserve original bytes",
+      "replacement": null,
+      "reason": "4.16 unified aerial controller, current release or bounded QA"
+    },
+    {
+      "path": "project/src/platform_core/controller_batch_v1.py",
+      "sha256": "ba130ed8a68854e79f302967cdd8fc6e4e58bb82a99923707f9d616c90d3025f",
+      "bytes": 13894,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM032 source/evidence; preserve original bytes",
+      "replacement": null,
+      "reason": "4.16 unified aerial controller, current release or bounded QA"
+    },
+    {
+      "path": "project/src/platform_core/controller_cli_v2.py",
+      "sha256": "0c267cc86a1dc484e755daa668ca9d3ca21b9ba0477ec408982ef7b5c99fa062",
+      "bytes": 4246,
+      "status": "superseded_entry_protected_evidence",
+      "retention": "PLATFORM032 source/evidence; preserve original bytes",
+      "replacement": "project/src/platform_core/controller_cli_v3.py",
+      "reason": "4.16 unified aerial controller, current release or bounded QA"
+    },
+    {
+      "path": "project/src/platform_core/service_v14.py",
+      "sha256": "669cea5bf4947dff0ccff4067cfeb6a57c1478c6ccb1a0911f8e4a8522b2d441",
+      "bytes": 1267,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM032 source/evidence; preserve original bytes",
+      "replacement": null,
+      "reason": "4.16 unified aerial controller, current release or bounded QA"
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v24.py",
+      "sha256": "0b402ae29c9c5a69c4484139f86a661e86708fd9ffe9c94a921f06d5fd0947ab",
+      "bytes": 38296,
+      "status": "superseded_entry_protected_evidence",
+      "retention": "PLATFORM032 source/evidence; preserve original bytes",
+      "replacement": "project/src/webapp/workbench_server_v25.py",
+      "reason": "4.16 unified aerial controller, current release or bounded QA"
+    },
+    {
+      "path": "project/src/webapp/controller_console_v1.html",
+      "sha256": "7bb4971172bcb705853040f85dfd77259e6e2509915f34701cb35cd07808514e",
+      "bytes": 9609,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM032 source/evidence; preserve original bytes",
+      "replacement": null,
+      "reason": "4.16 unified aerial controller, current release or bounded QA"
+    },
+    {
+      "path": "project/src/webapp/controller_console_v1.js",
+      "sha256": "6ba9d4b86783d47f09715390c76e66682ecc5ab90cdac72863cf324a0e40f5fd",
+      "bytes": 19697,
+      "status": "superseded_entry_protected_evidence",
+      "retention": "PLATFORM032 source/evidence; preserve original bytes",
+      "replacement": "project/src/webapp/controller_console_v2.js",
+      "reason": "4.16 unified aerial controller, current release or bounded QA"
+    },
+    {
+      "path": "project/src/webapp/controller_console_v1.css",
+      "sha256": "de15247c75770fd5f368d9368a1f1e5a0cf114de95f9b534026d48f6c408f253",
+      "bytes": 1451,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM032 source/evidence; preserve original bytes",
+      "replacement": null,
+      "reason": "4.16 unified aerial controller, current release or bounded QA"
+    },
+    {
+      "path": "project/src/tests/test_controller_hub_v1.py",
+      "sha256": "21383beb6d61e482ca7d6c6e414c46a621a79cb13c25871bc969d4a9bbcd4938",
+      "bytes": 15710,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM032 source/evidence; preserve original bytes",
+      "replacement": null,
+      "reason": "4.16 unified aerial controller, current release or bounded QA"
+    },
+    {
+      "path": "project/src/tests/browser_aerial_controller_v1.js",
+      "sha256": "8bf2c8210c41eef046f20bea64e83d752b352e945b55f43d1991c4bb110cf222",
+      "bytes": 14134,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM032 source/evidence; preserve original bytes",
+      "replacement": null,
+      "reason": "4.16 unified aerial controller, current release or bounded QA"
+    },
+    {
+      "path": "project/src/tools/release_aerial_controller_v1.py",
+      "sha256": "1c25e98b2e1502116e42be433dfafae4ad63160d05c6a282e9f415e73df693b1",
+      "bytes": 13692,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM032 source/evidence; preserve original bytes",
+      "replacement": null,
+      "reason": "4.16 unified aerial controller, current release or bounded QA"
+    },
+    {
+      "path": "project/src/tools/package_workbench_v29.py",
+      "sha256": "be66e0df696115a1a42a6dc2bc3b8aa0ebe426d3b3efda1f92c08dc81a30b83c",
+      "bytes": 13976,
+      "status": "bound_candidate_not_released",
+      "retention": "PLATFORM032 source/evidence; preserve original bytes",
+      "replacement": "project/src/tools/package_workbench_v30.py",
+      "reason": "4.16 unified aerial controller, current release or bounded QA"
+    },
+    {
+      "path": "project/src/tools/package_workbench_v30.py",
+      "sha256": "eae1df514ed13861418ca08a4c9beb0386820fb4400fb577263301bc8150f8d3",
+      "bytes": 14839,
+      "status": "superseded_entry_protected_evidence",
+      "retention": "PLATFORM032 source/evidence; preserve original bytes",
+      "replacement": "project/src/tools/package_workbench_v31.py",
+      "reason": "4.16 unified aerial controller, current release or bounded QA"
+    },
+    {
+      "path": "project/src/tools/audit_aerial_acceptance_v1.py",
+      "sha256": "d0cf65989ad54f4b15da743271c9e102fd75efa988888e3b876104fef7b741c1",
+      "bytes": 4666,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM032 source/evidence; preserve original bytes",
+      "replacement": null,
+      "reason": "4.16 unified aerial controller, current release or bounded QA"
+    },
+    {
+      "path": "project/src/tests/browser_aerial_release_readonly_v1.js",
+      "sha256": "c0e8dad1d4973dc9b05617fdafe143e0cf32bebfbe3631f748eaff862ffb51a2",
+      "bytes": 2969,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM032 source/evidence; preserve original bytes",
+      "replacement": null,
+      "reason": "4.16 unified aerial controller, current release or bounded QA"
+    },
+    {
+      "path": "project/src/platform_core/controller_batch_v2.py",
+      "sha256": "f830d50207faddd678aaed383ffa866d3f84be592120afc1934f46c7b1c11b42",
+      "bytes": 9395,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM033 software fix evidence; original4.16 unchanged",
+      "replacement": null
+    },
+    {
+      "path": "project/src/platform_core/service_v15.py",
+      "sha256": "a5f462ec23d1dc5b4648b67f7aa027cc52077a9dc267e4b0c4a2c8b8f5eb6ae1",
+      "bytes": 761,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM033 software fix evidence; original4.16 unchanged",
+      "replacement": null
+    },
+    {
+      "path": "project/src/platform_core/controller_cli_v3.py",
+      "sha256": "f427fc2ea24bc7873d022332e68f511082713aa81ef2ab91c4732deb2062ec51",
+      "bytes": 4306,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM033 software fix evidence; original4.16 unchanged",
+      "replacement": null
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v25.py",
+      "sha256": "f3e6268c1657a03b464c545382a3ffd4e1312cac00164aa4792896e5e782fd04",
+      "bytes": 38386,
+      "status": "superseded_current_entry_protected_evidence",
+      "retention": "PLATFORM033 software fix evidence; original4.16 unchanged",
+      "replacement": "project/src/webapp/workbench_server_v27.py"
+    },
+    {
+      "path": "project/src/webapp/controller_console_v2.js",
+      "sha256": "013df3b427dc4af04a56db426193beca9745e26a81371cbcd29c1dad2c452d8e",
+      "bytes": 20634,
+      "status": "superseded_current_entry_protected_evidence",
+      "retention": "PLATFORM033 software fix evidence; original4.16 unchanged",
+      "replacement": "project/src/webapp/controller_console_v3.js"
+    },
+    {
+      "path": "project/src/tests/test_controller_batch_v2.py",
+      "sha256": "0c64a62b6b3c58a344dbde52bef9413dbc8a4a2563312d157a04efe20974362b",
+      "bytes": 7337,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM033 software fix evidence; original4.16 unchanged",
+      "replacement": null
+    },
+    {
+      "path": "project/src/tests/browser_controller_fixes_v1.js",
+      "sha256": "1196e2e1bc3e3048e58d6086ebbfa02032e48211bef7f3221473278b786e1d17",
+      "bytes": 7060,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM033 software fix evidence; original4.16 unchanged",
+      "replacement": null
+    },
+    {
+      "path": "project/src/tools/release_controller_fixes_v1.py",
+      "sha256": "373901323357add1ecabbcc0446fbac7ff3ffbb1770e9c47bfecb1d86c7512f5",
+      "bytes": 5289,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM033 software fix evidence; original4.16 unchanged",
+      "replacement": null
+    },
+    {
+      "path": "project/src/tools/package_workbench_v31.py",
+      "sha256": "42d51300e01fdd5ddd774a34feee5bb09d23a065fd5eabe46ac138df1df2c7c9",
+      "bytes": 15629,
+      "status": "superseded_current_entry_protected_evidence",
+      "retention": "PLATFORM033 software fix evidence; original4.16 unchanged",
+      "replacement": "project/src/tools/package_workbench_v33.py"
+    },
+    {
+      "path": "project/src/tests/browser_controller_fixes_release_v1.js",
+      "sha256": "280aa32f0e64dfb5c8429aac68fc1b2b591bb84055a0d0f924af75aad94775a9",
+      "bytes": 2588,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM033 software fix evidence; original4.16 unchanged",
+      "replacement": null
+    },
+    {
+      "path": "project/src/platform_core/api_controller_v1.py",
+      "sha256": "5d67c955b19f9a23cc37fa928e004607d957e938b2794346e02c04ebc53dfdc1",
+      "bytes": 6839,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/platform_core/api_comparison_v1.py",
+      "sha256": "69bf23941d3cf1dcc6a9ccf874c3414c63f3d0d271bca4cb9c4c4b422648c30d",
+      "bytes": 11956,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/platform_core/controller_hub_v2.py",
+      "sha256": "35bc515cfad706a186016211412095f37f9f75840bc7978b1245bbec5e272d28",
+      "bytes": 4337,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/platform_core/scene_workspace_v3.py",
+      "sha256": "4b9a0ea51feddd10530a82d9a048c387e5ef193076b4a1d1ffebcc21a802f2b2",
+      "bytes": 1092,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/platform_core/service_v16.py",
+      "sha256": "41c14b134a3b8c3db4c690959b890d261a34edb759a4f5aea517e88c3efb7c82",
+      "bytes": 1771,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/platform_core/controller_cli_v4.py",
+      "sha256": "f6fcf20480347af51747a81d949dbd4c4111d004775ba00987398f5e5369d85a",
+      "bytes": 1480,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v26.py",
+      "sha256": "0ab93369bec1b6419604a2cb42d7155c8cdbdab4d13ca998a2eec93d574e17fd",
+      "bytes": 41544,
+      "status": "execution_bound_reference",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/webapp/controller_console_v3.js",
+      "sha256": "81515ddfc87d5f135fb4a13784cf1a37c2d3c8cc943409f85eee13d88e34c786",
+      "bytes": 25624,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/webapp/controller_api_panel_v1.html",
+      "sha256": "19e489d6d802202afeec168f806c769be5a68a4a031e992533362c69f9d3c6fc",
+      "bytes": 2330,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/tests/test_api_controller_v1.py",
+      "sha256": "1722e1fcefa26187266d239309341f8b270c23541b9a50931c1c50ce0d26e489",
+      "bytes": 8542,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/tests/browser_api_controller_v1.js",
+      "sha256": "a8e9759a7f7b7a1eea516c6870a90e5192d204ed3ebe368d52355ad847c4a3e7",
+      "bytes": 7652,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/tools/release_api_controller_v1.py",
+      "sha256": "50748b2d9d56a1ae06bb296284a5b34baa62e9265cda75220b049079187a6929",
+      "bytes": 6501,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/tools/audit_api_controller_v1.py",
+      "sha256": "c077ff9a1f8025a36bb18bde3c1056d81ce37fc5384d23d61596a135b6e1ca53",
+      "bytes": 5541,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/tools/package_workbench_v32.py",
+      "sha256": "0d19888d2c8c6637104d93bc2474b4ca005f70de26a249ed5a69832eba3491aa",
+      "bytes": 16425,
+      "status": "execution_bound_reference",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/tools/audit_api_pairing_v1.py",
+      "sha256": "79362e494fa819b84bdc5d926f37c7bd15323a0e1d8cad4760ac12834d439ab4",
+      "bytes": 3864,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/tests/browser_api_results_v1.js",
+      "sha256": "72d54427b1f0ffd07db60098498d147443e510e4e48853309ff75021d6e31570",
+      "bytes": 3122,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/tools/package_workbench_v33.py",
+      "sha256": "e44b1083233e6e9c95cb391bfca9906b34e905b6b5cca3800fa6887fc96c1c72",
+      "bytes": 16858,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/webapp/workbench_server_v27.py",
+      "sha256": "9f7b84ef97e7c1a5575e2d452f1cb0c15c0ebb07714e274c72a054af9e433819",
+      "bytes": 42095,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/webapp/controller_api_layout_v1.css",
+      "sha256": "a36c3d78a69a6d94accf19475b7c387de62a4129815245c519b027a147f5fa3e",
+      "bytes": 134,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/tools/api_publication_v1.py",
+      "sha256": "5bbd17e9b33c24b578e58c2648da42e39ff9baa6e6616154eb2b65a0ce372396",
+      "bytes": 2689,
+      "status": "current_runtime_or_release_bound",
+      "retention": "PLATFORM034 execution binding or publication QA; current official remains4.17",
+      "replacement": null
+    },
+    {
+      "path": "project/src/tests/browser_api_release_readonly_v1.js",
+      "sha256": "e82e2f8ee3e9bb124e4c23462b498b25c25b8f41b763d1abbbcebe80822a1b09",
+      "bytes": 2979,
+      "status": "current_release_QA_bound",
+      "retention": "PLATFORM034 formal read-only validation; preserve",
+      "replacement": null
     }
   ],
   "experiments": [
@@ -3477,9 +4110,10 @@
     },
     {
       "path": "中期报告相关/中期报告_基于主动探索的视觉地理定位方法设计与实现.docx",
-      "status": "user_official_document",
-      "reading_role": "2026-10-02教师格式历史定稿；当前事实快照见DOC-007",
-      "physical_action": "不重生成，不覆盖，保留人员信息与教师格式"
+      "status": "historical_teacher_report_preserved",
+      "reading_role": "2026-10-02 historical; personnel/template reference",
+      "physical_action": "不重生成，不覆盖，保留人员信息与教师格式",
+      "replacement": "中期报告相关/中期成果更新_20261025/交付/中期报告.docx"
     },
     {
       "path": "DATA/processed_data/Masa/评测结果/共同学习基线对照_v1/同题对照报告_v2.md",
@@ -3724,6 +4358,18 @@
       "replacement": "项目导航/GOMAA工程推理验证_v1/README.md",
       "sha256": "789a93907453f86c41595a5db410103493ad06fc1dfedc678047b11d73e49d00",
       "retention": "准备seal/工程审计已绑定；原址保字节，不移动"
+    },
+    {
+      "path": "中期报告相关/中期成果冻结版_v1/中期报告_基于主动探索的视觉地理定位方法设计与实现_冻结版_v2.docx",
+      "status": "historical_bound_superseded_midterm",
+      "replacement": "中期报告相关/中期成果更新_20261025/交付/中期报告.docx",
+      "physical_action": "原字节原址保留；不作为当前提交和展示稿"
+    },
+    {
+      "path": "中期报告相关/答辩材料/中期汇报_基于主动探索的视觉地理定位方法设计与实现.pptx",
+      "status": "historical_bound_superseded_midterm",
+      "replacement": "中期报告相关/中期成果更新_20261025/交付/中期成果汇报.pptx",
+      "physical_action": "原字节原址保留；不作为当前提交和展示稿"
     }
   ],
   "maintenance_only": true,
@@ -6295,15 +6941,14 @@
     }
   ],
   "active_service": {
-    "version": "4.13.1",
-    "module": "project.src.webapp.workbench_server_v21",
-    "pid": 34000,
+    "version": "4.18",
     "port": 8769,
-    "url": "http://127.0.0.1:8769/",
-    "verified_at": "2026-10-25",
-    "pid_is_snapshot": true,
-    "model_forward_on_deployment": 0,
-    "evidence": "平台/实验工作台_v4/发布修复与存储收束_v1/核验/正式服务复核.json"
+    "pid_snapshot": 101904,
+    "server": "project.src.webapp.workbench_server_v27",
+    "store": "DATA/processed_data/平台实验/工作台_v1",
+    "current_url": "http://127.0.0.1:8769/controllers",
+    "switch_user_authorized": true,
+    "record": "平台/实验工作台_v4/单模型API统一接入与同题对照_v1/正式只读GUI.json"
   },
   "candidate_platform_delivery": {
     "id": "PLATFORM-006",
@@ -6515,7 +7160,7 @@
   "document_deliveries": [
     {
       "id": "DOC-007",
-      "status": "current_midterm_freeze",
+      "status": "historical_bound_midterm_freeze",
       "date": "2026-10-15",
       "path": "中期报告相关/中期成果冻结版_v1",
       "current_docx": "中期报告相关/中期成果冻结版_v1/中期报告_基于主动探索的视觉地理定位方法设计与实现_冻结版_v2.docx",
@@ -6544,8 +7189,9 @@
       "old_report_preserved": true,
       "scientific_default_upgraded": false,
       "experiment_started": false,
-      "replacement_scope": "current midterm reading entry only; historical Word/PDF/PPT and scientific figures retained",
-      "rollback": "Use 2026-10-02 teacher-template report or DOC-007 v1 draft; do not overwrite current v2"
+      "replacement_scope": "current reading and showcase only; original bound files unchanged",
+      "rollback": "Use 2026-10-02 teacher-template report or DOC-007 v1 draft; do not overwrite current v2",
+      "superseded_by": "DOC-009"
     },
     {
       "id": "FINAL-002",
@@ -6580,6 +7226,51 @@
       "sealed_bytes": 34873870,
       "archive_mapping": "总结报告相关/总结报告_v1/核验/初稿_v1/修订_v2/终校_v4/被替代稿迁移映射.json",
       "subsequent_priority_change": "User authorized ground-goal cross-view mainline on 2026-10-16; document bytes preserved"
+    },
+    {
+      "id": "DOC-009",
+      "date": "2026-10-25",
+      "status": "current_midterm_report_and_showcase",
+      "path": "中期报告相关/中期成果更新_20261025",
+      "current_docx": "中期报告相关/中期成果更新_20261025/交付/中期报告.docx",
+      "current_pdf": "中期报告相关/中期成果更新_20261025/交付/中期报告.pdf",
+      "showcase": "中期报告相关/中期成果更新_20261025/交付/中期成果汇报.pptx",
+      "showcase_pdf": "中期报告相关/中期成果更新_20261025/交付/中期成果汇报.pdf",
+      "demo_card": "中期报告相关/中期成果更新_20261025/交付/演示操作卡.html",
+      "pages": 9,
+      "slides": 12,
+      "source_binding": "中期报告相关/中期成果更新_20261025/核验/交付与源码绑定.json",
+      "final_audit": "中期报告相关/中期成果更新_20261025/核验/最终数字与交付复核.json",
+      "replaces": [
+        "DOC-007 current midterm reading",
+        "2026-10-02 teacher report and deck current roles"
+      ],
+      "old_artifacts_preserved": 33,
+      "scientific_default_upgraded": false,
+      "model_calls": 0,
+      "new_navigation": 0,
+      "video_directory_excluded": true,
+      "rollback": "Read historical originals in place and current midterm README; never rerun sealed generators in existing output paths"
+    },
+    {
+      "id": "DOC-010",
+      "date": "2026-10-29",
+      "status": "current_midterm_submission_and_demo_brief",
+      "path": "中期报告相关/中期汇报准备.md",
+      "sha256": "4781d95ce72fed65c56c7c2952eefdd467d5dbce29ecf283b57ba014a5bd8190",
+      "role": "群发送文案、文件清单、现场操作和4.18增量；不替代DOC-009教师报告/PPT",
+      "report_and_slides_snapshot": "2026-10-25",
+      "platform_release": "4.18",
+      "replacement_scope": "当前中期准备入口；原DOC-009稿件及seal原字节保持",
+      "protected_binding_files_checked": 11,
+      "report_pdf_pages": 9,
+      "showcase_pdf_pages": 12,
+      "new_directories": 0,
+      "model_calls": 0,
+      "new_navigation": 0,
+      "video_directory_excluded": true,
+      "service_observation": "2026-10-29 loopback connection refused; no start/stop in DOC-010",
+      "rollback": "原报告/PPT与旧操作卡原址只读可用；当前准备入口见中期README，不重跑冻结生成器"
     }
   ],
   "runtime_model_assets": [
@@ -7916,10 +8607,21 @@
       "old_user_files_preserved": true,
       "model_forward_on_deployment": 0,
       "candidate_shutdown_requested": 35088
+    },
+    {
+      "version": "4.13.1",
+      "module": "project.src.webapp.workbench_server_v21",
+      "pid": 34000,
+      "port": 8769,
+      "url": "http://127.0.0.1:8769/",
+      "verified_at": "2026-10-25",
+      "pid_is_snapshot": true,
+      "model_forward_on_deployment": 0,
+      "evidence": "平台/实验工作台_v4/发布修复与存储收束_v1/核验/正式服务复核.json"
     }
   ],
   "platform029_release_maintenance": {
-    "status": "current",
+    "status": "historical_bound_base_retained_dependency",
     "version": "4.13.1",
     "report": "平台/实验工作台_v4/发布修复与存储收束_v1/README.md",
     "replaces": [
@@ -7931,7 +8633,8 @@
     "GUI_checks": 8,
     "model_calls": 0,
     "navigation": 0,
-    "recovery": "平台/实验工作台_v4/发布修复与存储收束_v1/使用与恢复.md"
+    "recovery": "平台/实验工作台_v4/发布修复与存储收束_v1/使用与恢复.md",
+    "superseded_by": "PLATFORM-030 current delivery"
   },
   "git005_publication": {
     "status": "published",
@@ -7944,5 +8647,488 @@
     "public_tree_MiB": 70.84,
     "remote_verified": true,
     "ordinary_push": true
+  },
+  "capturepoint_data_preparation": {
+    "id": "CV-042",
+    "date": "2026-10-25",
+    "status": "first_development_pool_ready_final_sufficiency_not_claimed",
+    "path": "DATA/processed_data/OpenCVL/拍摄点开发任务队列_v1",
+    "revision": 2,
+    "pairs": 9,
+    "navigation_sources": 8,
+    "outside_reference_sources": 1,
+    "fit_preparation_pairs": 6,
+    "development_pairs": 3,
+    "navigation_tasks": 192,
+    "perception_samples": 225,
+    "formal_confirmation": 0,
+    "old_candidates_reopened": false,
+    "preserved_failed_revision": "首获取冻结绑定.json + 核验/首轮停止封存.json",
+    "model_calls": 0,
+    "navigation": 0,
+    "rollback": "Prior CV037/038/041 evidence in place; platform/default unchanged; v1 remains stopped",
+    "gui_integration": "PLATFORM-030 manual only; no research acceptance changed"
+  },
+  "capturepoint_intake": {
+    "id": "CV-043",
+    "date": "2026-10-25",
+    "status": "local read-only intake validated; full assets unavailable",
+    "guide": "docs/维护/拍摄点资料接收.md",
+    "sources": [
+      "project/src/data/capturepoint_intake_v1.py",
+      "project/src/tools/inspect_capturepoint_intake_v1.py",
+      "project/src/tests/test_capturepoint_intake_v1.py",
+      "project/src/eval/audit_capturepoint_intake_v1.py"
+    ],
+    "current_entry": "调研/25_接收预检_当前入口_v1.json",
+    "replaces": "none; adds standalone intake, keeps CV042 queue and all defaults",
+    "actual_replayed_sources": 9,
+    "new_data_sources": 0,
+    "new_confirmation_sources": 0,
+    "model_calls": 0,
+    "navigation": 0,
+    "gui_integrated": false,
+    "rollback": "Do not use the new CLI; prior data pool remains readable and unchanged. No platform runtime/launchers changed."
+  },
+  "platform030_capturepoint_tasks": {
+    "id": "PLATFORM-030",
+    "date": "2026-10-25",
+    "status": "historical_bound_manual_base_retained_dependency",
+    "version": "4.14",
+    "path": "平台/实验工作台_v4/拍摄点任务查阅与创建_v1",
+    "server": "project/src/webapp/workbench_server_v22.py",
+    "kernel": "project/src/platform_core/service_v12.py",
+    "transfer_builder": "project/src/tools/package_workbench_v27.py",
+    "navigation_task_catalog": 192,
+    "navigation_sources": 8,
+    "known_cities": 3,
+    "manual_control": true,
+    "model_actions": false,
+    "model_calls": 0,
+    "real_acceptance_tasks": 2,
+    "human_actions": 4,
+    "formal_confirmation_sources": 0,
+    "images_single_copy": true,
+    "old_user_files_preserved": 28,
+    "scope": "manual development only; not autonomous ground-goal navigation or new SR",
+    "rollback": "Entry snapshots and old server21 sources retained; protect active store before reverting",
+    "video_excluded": true,
+    "final_audit": "平台/实验工作台_v4/拍摄点任务查阅与创建_v1/最终交付复核.json",
+    "seal": "平台/实验工作台_v4/拍摄点任务查阅与创建_v1/阶段封存.json"
+  },
+  "service_history": [
+    {
+      "version": "4.14",
+      "module": "project.src.webapp.workbench_server_v22",
+      "pid": 26968,
+      "port": 8769,
+      "url": "http://127.0.0.1:8769/",
+      "verified_at": "2026-10-25",
+      "pid_is_snapshot": true,
+      "model_forward_on_deployment": 0,
+      "evidence": "平台/实验工作台_v4/拍摄点任务查阅与创建_v1/正式服务复核.json",
+      "status": "previous_process_no_longer_present_on_resume"
+    },
+    {
+      "version": "4.14",
+      "module": "project.src.webapp.workbench_server_v22",
+      "pid": 30232,
+      "port": 8769,
+      "url": "http://127.0.0.1:8769/",
+      "verified_at": "2026-10-26",
+      "pid_is_snapshot": true,
+      "model_forward_on_deployment": 0,
+      "evidence": "平台/实验工作台_v4/拍摄点任务查阅与创建_v1/恢复后进程与临时清理核验.json",
+      "status": "prior_snapshot;8769was_not_listening_at_this_start"
+    }
+  ],
+  "confirmation_source_review_cv044": {
+    "date": "2026-10-26",
+    "status": "metadata_review_complete_candidates_not_admitted",
+    "public_candidates": 6,
+    "georeferenced_candidates": 3,
+    "admitted_confirmation_sources": 0,
+    "primary_next": "SE三候选mast3rpnp标签/像素/足迹工程预检，尚未执行",
+    "old_opensfm_data_relabelled": false,
+    "platform_changed": false
+  },
+  "confirmation_candidates_cv045": {
+    "date": "2026-10-26",
+    "status": "data_engineering_passed_reserved_candidates_not_model_confirmed",
+    "path": "DATA/processed_data/OpenCVL/公开瑞典三候选校正标签预检_v1",
+    "prepared_candidate_sources": 3,
+    "model_confirmation_evaluations": 0,
+    "source_role": "confirmation_candidate_reserved_no_model_selection",
+    "pose_variant": "mast3rpnp",
+    "input_profile": "image_only",
+    "known_ledger_sources": 59,
+    "spatial_checks": 180,
+    "minimum_declared_gap_m": 669.7463442758715,
+    "goal_indices": [
+      12,
+      12,
+      17
+    ],
+    "position_bias_baseline_required": true,
+    "old_intake_v1_auto_reads_registry": false,
+    "old_nine_relabelled": false,
+    "model_calls": 0,
+    "platform_version_unchanged": "4.14",
+    "seal": "DATA/processed_data/OpenCVL/公开瑞典三候选校正标签预检_v1/阶段封存.json",
+    "seal_sha256": "5962e71cf74c074fa3da23beb32afa006d53aad8c6ab38fd943098002a2a487a",
+    "sources": [
+      {
+        "path": "project/src/data/capturepoint_corrected_v1.py",
+        "sha256": "725d03ea33504fe1d1f52c847130ecfefd42ec45d55fb2b34e931cd6e8108d66",
+        "bytes": 6339
+      },
+      {
+        "path": "project/src/tools/precheck_capturepoint_holdout_v1.py",
+        "sha256": "b038d4e2b89520e2eacfbe9c4bf7c1bb7d2f53713fac8131b752dfad4eee6e35",
+        "bytes": 17315
+      },
+      {
+        "path": "project/src/tests/test_capturepoint_corrected_v1.py",
+        "sha256": "e9ba61070463946e93a4c4d81250d5176ebd20280cf11eed20128f3edab7faad",
+        "bytes": 6931
+      },
+      {
+        "path": "project/src/eval/audit_capturepoint_holdout_v1.py",
+        "sha256": "ca9cb2b97cfcdfe44f45273727f84bcbc74c90276e74719e9bcd7d29efd0a893",
+        "bytes": 6790
+      }
+    ],
+    "replaces": null,
+    "relationship": "supplements CV044 metadata shortlist; distinct from CV042 OpenSfM development pool",
+    "rollback": "No runtime/default switch; retain source reservation and restore exact files from seal if needed",
+    "retained_bytes": 5667301
+  },
+  "confirmation_protocol_cv046": {
+    "date": "2026-10-27",
+    "status": "design_frozen_native_queue_not_admitted",
+    "protocol": "调研/27_三源确认协议_v1.json",
+    "audit": "调研/27_几何准入另实现复核_v1.json",
+    "reason": "goal_blind_center_cross_cover_bound9_le_budget10",
+    "prepared_candidate_sources": 3,
+    "real_navigation_episodes": 0,
+    "model_calls": 0,
+    "reference_pixels_read": 0,
+    "checkpoint_bound": false,
+    "training_mean_bound": false,
+    "proposed_single_factor": "larger real context and shifted100m search-window origin, fixed20m/cell",
+    "replaces": null,
+    "scope": "does not supersede CV045 data engineering or aerial defaults",
+    "final_receipt": "调研/27_最终交付与封存_v1.json",
+    "final_receipt_sha256": "17072ce2d2ecf084654a65c10a264a08f2e3e1b50b21cce23c806dce27733a70",
+    "sources": [
+      {
+        "path": "project/src/eval/capturepoint_confirmation_protocol_v1.py",
+        "sha256": "2bc906976d743b186065ffbeefe9b439cc84793d828f0078f558dafe57fa3e5c",
+        "bytes": 10363
+      },
+      {
+        "path": "project/src/eval/audit_capturepoint_protocol_v1.py",
+        "sha256": "58f7772fab9cc6b34a2488cd6fcf56b446d121e48929710fcc200e7e124f9227",
+        "bytes": 7350
+      },
+      {
+        "path": "project/src/tests/test_capturepoint_protocol_v1.py",
+        "sha256": "7493ea5def0c9ff1ff53f22fcf669db1f322e2f078c8631976134bc3ed9fa0b3",
+        "bytes": 5117
+      }
+    ],
+    "retained_bytes": 31206
+  },
+  "translated_window_preparation_cv047": {
+    "date": "2026-10-27",
+    "status": "interface_and_plan_phase_completed_real_context_not_obtained",
+    "source_count": 3,
+    "metadata_sources_found": 3,
+    "raster_anonymous_head_statuses": [
+      401,
+      401,
+      401
+    ],
+    "real_context_images": 0,
+    "synthetic_tests": 18,
+    "synthetic_window_checks": 675,
+    "retained_reference_m": 100,
+    "cell_size_m": 20,
+    "action_budget": 10,
+    "model_calls": 0,
+    "real_navigation": 0,
+    "requires": [
+      "existing authorized raster access or lawful local files",
+      "verified raster I/O/georeference/old-new registration"
+    ],
+    "replaces": null,
+    "platform_unchanged": "4.14",
+    "user_decision": "暂无权限，先完成接口与方案",
+    "stage_seal": "调研/28_输入源码与阶段封存_v1.json",
+    "stage_seal_sha256": "49e23284e4e32f7275cff88a40562b8eea2f4fa9d78b51c936239cc7a32e526a",
+    "phase_decision": "调研/28_用户答复与阶段收束_v1.json",
+    "phase_decision_sha256": "4ee9c5ab4467e47c8a95d922cc19b5983d713ffb3116b08458ab34c619c314ca",
+    "sources": [
+      {
+        "path": "project/src/data/capturepoint_window_v1.py",
+        "sha256": "54c919672e2e3e5e264b5e5084fc1fa18727cf9293a8655f9ccf35d0cd87066a",
+        "bytes": 8871
+      },
+      {
+        "path": "project/src/tools/probe_swedish_context_v1.py",
+        "sha256": "6cbfb672d069edf1618d71a812f98a4a27b207178a89c128a38041397f9250bf",
+        "bytes": 6973
+      },
+      {
+        "path": "project/src/tests/test_capturepoint_window_v1.py",
+        "sha256": "b7b2c31d7c67ddb19b2b54786b9f1876a426f19abcc1e8d73e0da8512c798cfb",
+        "bytes": 7665
+      },
+      {
+        "path": "project/src/eval/audit_capturepoint_window_v1.py",
+        "sha256": "ae8002a63cc7688212456777ffbc6e0a475cb73ff0f1e24eb88ba8081beb8a82",
+        "bytes": 5321
+      }
+    ],
+    "retained_bytes": 75479
+  },
+  "platform031_unified_controller": {
+    "id": "PLATFORM-031",
+    "date": "2026-10-27",
+    "version": "4.15",
+    "status": "superseded_presentation_service_preserve_originals",
+    "path": "平台/实验工作台_v4/统一控制器与规则对照_v1",
+    "server": "project/src/webapp/workbench_server_v23.py",
+    "kernel": "project/src/platform_core/service_v13.py",
+    "transfer_builder": "project/src/tools/package_workbench_v28.py",
+    "replaces": "4.14 current camera-task page/launcher, not historical originals",
+    "retained_dependencies": [
+      "capturepoint_workspace_v1 saved legacy reader/base",
+      "capturepoint_catalog_v1 pinned development data",
+      "capturepoint_tasks_v1.css current base style"
+    ],
+    "controllers": [
+      "manual",
+      "frontier"
+    ],
+    "controller_classes": [
+      "human",
+      "rule",
+      "mixed"
+    ],
+    "real_acceptance_tasks": 2,
+    "sessions": 4,
+    "actions": 14,
+    "model_calls": 0,
+    "visual_goal_navigation_validated": false,
+    "formal_evaluation": false,
+    "old_user_json_preserved": 28,
+    "source_images_single_copy": true,
+    "rollback": "Protected4.15 sources and entry snapshots; protect active store before rollback",
+    "video_excluded": true,
+    "seal": "平台/实验工作台_v4/统一控制器与规则对照_v1/阶段封存.json",
+    "final_addendum": "平台/实验工作台_v4/统一控制器与规则对照_v1/发布收尾补充.json",
+    "final_addendum_sha256": "3b517679e5d847956fc59cba753647367ba751a390f26d374cdebcf19884dafd",
+    "current_asset_manifest": "平台/实验工作台_v4/统一控制器与规则对照_v1/搬迁发布清单_最终.json",
+    "historical_first_asset_manifest": "平台/实验工作台_v4/统一控制器与规则对照_v1/搬迁发布清单.json",
+    "retained_bytes": 2371348,
+    "first_launcher_format_snapshot_preserved": true,
+    "replacement": "PLATFORM-032"
+  },
+  "platform031_previous_active_service": {
+    "version": "4.15",
+    "module": "project.src.webapp.workbench_server_v23",
+    "pid": 79632,
+    "created": 1793083093.2460675,
+    "port": 8769,
+    "url": "http://127.0.0.1:8769/",
+    "verified_at": "2026-10-27",
+    "pid_is_snapshot": true,
+    "evidence": "平台/实验工作台_v4/统一控制器与规则对照_v1/正式服务复核.json"
+  },
+  "platform032_unified_aerial_controller": {
+    "id": "PLATFORM-032",
+    "date": "2026-10-27",
+    "version": "4.16",
+    "status": "superseded_software_entry_preserve_frozen_results",
+    "path": "平台/实验工作台_v4/航拍统一接入与小队列_v1",
+    "server": "project/src/webapp/workbench_server_v24.py",
+    "kernel": "project/src/platform_core/service_v14.py",
+    "transfer_builder": "project/src/tools/package_workbench_v30.py",
+    "replaces": "4.15 current controller page/service; not weights or historical research defaults",
+    "retained_dependencies": [
+      "SceneWorkspace v2",
+      "MasaRuntime/frozen original M0",
+      "capturepoint_sessions_v1",
+      "capturepoint_tasks_v1.css",
+      "legacy guide references"
+    ],
+    "old_actor_sources_preserved": true,
+    "model_parameters_changed": false,
+    "tests": 27,
+    "synthetic_persistence_trajectories": 20,
+    "GUI_preflight": 12,
+    "GUI_business": 11,
+    "GUI_formal_readonly": 12,
+    "primary_tasks": 10,
+    "consumed_source_maps": 4,
+    "seeds": [
+      0
+    ],
+    "primary_trajectories": 20,
+    "primary_actions": 172,
+    "total_trajectories": 22,
+    "total_actions": 184,
+    "model_act_calls": 94,
+    "encoder_calls": 0,
+    "training": 0,
+    "cloud": 0,
+    "main_SR": {
+      "M0": 0.8,
+      "Frontier": 0.4
+    },
+    "main_SG_cells": {
+      "M0": 0.5,
+      "Frontier": 2.7
+    },
+    "historical_M0_matches": 10,
+    "max_numeric_difference": 1.1920928955078125e-06,
+    "old_user_json_preserved": 28,
+    "formal_evaluation": false,
+    "ground_navigation": false,
+    "candidate_package29": "Unreleased closure failure, original bound source retained; replaced by30",
+    "source_images_single_copy": true,
+    "current_asset_manifest": "平台/实验工作台_v4/航拍统一接入与小队列_v1/搬迁发布清单_最终.json",
+    "rollback": "平台/实验工作台_v4/航拍统一接入与小队列_v1/入口快照",
+    "video_excluded": true,
+    "seal": "平台/实验工作台_v4/航拍统一接入与小队列_v1/阶段封存.json",
+    "seal_sha256": "dc66606d070eb361acee04e274808a38e10acf4358270c040588c2cc4b133991",
+    "retained_bytes": 6688225,
+    "asset_manifest_files": 988,
+    "trusted_evidence_files": 273,
+    "temporary_files_remaining": 0,
+    "owned_candidates_stopped": true,
+    "formal_service_preserved": true,
+    "replacement": "PLATFORM-033"
+  },
+  "platform032_previous_active_service": {
+    "version": "4.16",
+    "port": 8769,
+    "pid_snapshot": 110072,
+    "server": "project.src.webapp.workbench_server_v24",
+    "store": "DATA/processed_data/平台实验/工作台_v1",
+    "current_url": "http://127.0.0.1:8769/controllers",
+    "user_switch_authorized": true,
+    "record": "平台/实验工作台_v4/航拍统一接入与小队列_v1/正式服务只读GUI.json"
+  },
+  "platform033_controller_fixes": {
+    "id": "PLATFORM-033",
+    "date": "2026-10-28",
+    "version": "4.17",
+    "status": "superseded_entry_fixes_retained_runtime",
+    "path": "平台/实验工作台_v4/队列恢复与证据修复_v1",
+    "replaces": "4.16 software entry, not policies/research acceptance",
+    "retained_dependencies": [
+      "controller_batch_v1",
+      "service_v14",
+      "controller_hub_v1",
+      "controller_console_v1 HTML/CSS"
+    ],
+    "fixes": [
+      "lease expiry",
+      "invalid JSON isolation",
+      "committed trace evidence",
+      "available/empty dataset selection"
+    ],
+    "tests": 39,
+    "new_tests": 12,
+    "candidate_GUI": 17,
+    "formal_GUI": 11,
+    "old_completed_rows_read": 20,
+    "new_model_forward": 0,
+    "new_training": 0,
+    "new_navigation": 0,
+    "cloud": 0,
+    "new_confirmation": 0,
+    "protected_files": 137,
+    "user_json_preserved": 28,
+    "current_asset_manifest": "平台/实验工作台_v4/队列恢复与证据修复_v1/搬迁发布清单_最终.json",
+    "rollback": "平台/实验工作台_v4/队列恢复与证据修复_v1/入口快照",
+    "seal": "平台/实验工作台_v4/队列恢复与证据修复_v1/阶段封存.json",
+    "seal_sha256": "94711ffa91219c60c0619cbb8492e16748e00912dbd62cc41ec80f48edfd77a2",
+    "retained_bytes": 3529882,
+    "asset_manifest_files": 1001,
+    "trusted_evidence_files": 273,
+    "temporary_files_remaining": 0,
+    "owned_candidate_stopped": true,
+    "formal_service_preserved": true,
+    "replacement": "PLATFORM-034"
+  },
+  "platform034_single_API": {
+    "id": "PLATFORM-034",
+    "version": "4.18",
+    "status": "current",
+    "path": "平台/实验工作台_v4/单模型API统一接入与同题对照_v1",
+    "publication_server": "project/src/webapp/workbench_server_v27.py",
+    "execution_server": "project/src/webapp/workbench_server_v26.py",
+    "kernel": "project/src/platform_core/service_v16.py",
+    "transfer_builder_candidate": "project/src/tools/package_workbench_v33.py",
+    "bound_unpublished_builder": "project/src/tools/package_workbench_v32.py",
+    "policy_default_unchanged": true,
+    "tests": 52,
+    "offline_GUI": 10,
+    "saved_results_GUI": 10,
+    "requests": 96,
+    "request_results": 96,
+    "API_successes": 1,
+    "planned": 10,
+    "API_SG_cells": 3.2,
+    "baseline_M0_reused_SR": 0.8,
+    "baseline_Frontier_reused_SR": 0.4,
+    "fallbacks": 0,
+    "retries": 0,
+    "pending": 0,
+    "total_tokens": 71005,
+    "API_latency_seconds": 390.8339233,
+    "whole_run_seconds": 538.69,
+    "peak_RSS_GiB": 0.438,
+    "formal_evaluation": false,
+    "training": 0,
+    "encoder_calls": 0,
+    "new_confirmation": 0,
+    "publication_only_layout_fix": true,
+    "rollback": "平台/实验工作台_v4/单模型API统一接入与同题对照_v1/入口快照",
+    "current_url": "http://127.0.0.1:8769/controllers",
+    "transfer_builder": "project/src/tools/package_workbench_v33.py",
+    "switch_user_authorized": true,
+    "formal_GUI": 13,
+    "M0_default_unchanged": true,
+    "new_API_requests_during_publication": 0,
+    "previous_candidate": {
+      "url": "http://127.0.0.1:14633/controllers",
+      "PID_snapshot": 9524,
+      "status": "stopped_owned_QA_only"
+    },
+    "seal": "平台/实验工作台_v4/单模型API统一接入与同题对照_v1/阶段封存.json",
+    "seal_sha256": "fc51e6a5bdc005ee208166ec7daecb72a2acaee7983d31ab487ff55d20ee2554",
+    "retained_bytes": 4640671,
+    "asset_manifest_files": 1034,
+    "trusted_evidence_files": 273,
+    "local_M0_backup_invocations": 96,
+    "old_user_json_preserved": 28,
+    "temporary_files_remaining": 0,
+    "owned_candidates_stopped": true,
+    "formal_service_preserved": true,
+    "formal_PID_snapshot": 101904
+  },
+  "platform033_previous_active_service": {
+    "version": "4.17",
+    "port": 8769,
+    "pid_snapshot": 53504,
+    "server": "project.src.webapp.workbench_server_v25",
+    "store": "DATA/processed_data/平台实验/工作台_v1",
+    "current_url": "http://127.0.0.1:8769/controllers",
+    "prior_port_proven_free": true,
+    "record": "平台/实验工作台_v4/队列恢复与证据修复_v1/正式只读GUI.json"
   }
 }
