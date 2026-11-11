@@ -1,10 +1,23 @@
 {
-  "updated": "2026-10-29",
+  "updated": "2026-11-10",
   "policy": "登记替代关系，不按最大版本号或无静态引用判删除",
   "current": {
-    "platform": "平台/实验工作台_v4/README.md",
+    "platform": "平台/README.md",
+    "platform_lite": "平台/极简演示平台/README.md",
+    "platform_lite_server": "project/src/webapp/lite_server.py",
+    "platform_lite_html": "project/src/webapp/geonav_lite.html",
+    "platform_lite_css": "project/src/webapp/geonav_lite.css",
+    "platform_lite_js": "project/src/webapp/geonav_lite.js",
+    "platform_lite_launcher": "平台/启动极简演示平台.cmd",
+    "demo_lite_dir": "demo/小型演示demo/",
+    "demo_lite_zip": "demo/小型演示demo.zip",
+    "platform_v5_plan": "平台/平台V5_一体化重构与功能全景规划.md",
     "launcher": "平台/启动平台.ps1",
-    "server": "project/src/webapp/workbench_server_v27.py",
+    "server": "project/src/webapp/workbench_server_v28.py",
+    "server_legacy_fallback": "project/src/webapp/workbench_server_v27.py",
+    "v5_spa_html": "project/src/webapp/geonav_v5.html",
+    "v5_spa_css": "project/src/webapp/geonav_v5.css",
+    "v5_spa_js": "project/src/webapp/geonav_v5.js",
     "static": "project/src/webapp/static_v10/",
     "report": "中期报告相关/中期成果更新_20261025/交付/中期报告.docx",
     "report_pdf": "中期报告相关/中期成果更新_20261025/交付/中期报告.pdf",
@@ -32,7 +45,8 @@
     "benchmark_original_asset_intake": "项目导航/原训练资料接收_v1/README.md",
     "platform_release": "平台/实验工作台_v4/单模型API统一接入与同题对照_v1/README.md",
     "platform_validation": "平台/实验工作台_v4/方案与模型_v1/README.md",
-    "kernel": "project/src/platform_core/service_v16.py",
+    "kernel": "project/src/platform_core/service_v17.py",
+    "kernel_legacy_fallback": "project/src/platform_core/service_v16.py",
     "launcher_cmd": "平台/启动平台.cmd",
     "platform_maintenance": "平台/实验工作台_v4/单模型API统一接入与同题对照_v1/README.md",
     "storage_retention": "项目导航/归档永久清理_20261012_v1/README.md",
@@ -192,7 +206,13 @@
     "controller_cli": "project/src/platform_core/controller_cli_v3.py",
     "controller_hub": "project/src/platform_core/controller_hub_v2.py",
     "API_CLI": "project/src/platform_core/controller_cli_v4.py",
-    "midterm_brief": "中期报告相关/中期汇报准备.md"
+    "midterm_brief": "中期报告相关/中期汇报准备.md",
+    "midterm_ppt": "中期报告相关/中期成果更新_20261025/交付/中期成果汇报.pptx",
+    "midterm_speech": "中期报告相关/中期成果更新_20261025/交付/汇报讲稿.md",
+    "midterm_demo_dir": "demo/中期demo/",
+    "midterm_demo_zip": "demo/中期demo.zip",
+    "fig05_v5_architecture": "绘图/架构与方法图/05_GeoNav418前后端分离工作台与云API熔断架构图.png",
+    "report_archive_20261109": "归档/中期报告相关/中期成果更新_20261025/交付_20261109_418原稿备份/"
   },
   "auxiliary": {
     "replay": "平台/主动探索演示_v1/README.md"
@@ -234,11 +254,12 @@
     {
       "path": "平台/实验工作台_v4",
       "status": "current",
-      "release": "4.15",
+      "release": "5.0",
       "replacement": null,
-      "application_version": "4.18",
-      "current_release": "平台/实验工作台_v4/单模型API统一接入与同题对照_v1/README.md",
-      "server": "project/src/webapp/workbench_server_v27.py"
+      "application_version": "5.0",
+      "current_release": "平台/平台V5_一体化重构与功能全景规划.md",
+      "server": "project/src/webapp/workbench_server_v28.py",
+      "server_legacy_fallback": "project/src/webapp/workbench_server_v27.py"
     }
   ],
   "sources": [

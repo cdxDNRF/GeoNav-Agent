@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GeoNav Lite · 视觉地理定位极简演示平台</title>
+  <link rel="stylesheet" href="/geonav_lite.css">
+</head>
+<body>
+  <div id="toast-container" class="toast-container"></div>
+
+  <div class="app-container">
+    <!-- 顶部导航条 -->
+    <header class="top-nav">
+      <div class="brand">
+        <div class="brand-emblem" aria-hidden="true">
+          <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+            <rect width="32" height="32" rx="8" fill="url(#geonav-brand-grad)"/>
+            <path d="M9 11.5H23M9 16H23M9 20.5H23M13.5 8V24M18.5 8V24" stroke="white" stroke-opacity="0.28" stroke-width="1.2"/>
+            <path d="M16 7.5L21.5 21.5L16 18.5L10.5 21.5L16 7.5Z" fill="white"/>
+            <defs>
+              <linearGradient id="geonav-brand-grad" x1="0" y1="0" x2="32" y2="32" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#2563EB"/>
+                <stop offset="1" stop-color="#0EA5E9"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="brand-text">
+          <h1>GeoNav Lite <span class="tag">精简演示版</span></h1>
+          <p>主动探索视觉地理定位 · 实时单屏交互与决策透视</p>
+        </div>
+      </div>
+
+      <div class="nav-actions">
+        <button id="btn-open-upload" class="btn btn-secondary">
+          <svg class="ui-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="17 8 12 3 7 8"/>
+            <line x1="12" y1="3" x2="12" y2="15"/>
+          </svg>
+          <span>自定义切片</span>
+        </button>
+
+        <button id="btn-open-api" class="btn btn-secondary">
+          <span id="api-status-dot" class="status-dot" title="云端 API 状态"></span>
+          <svg class="ui-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+          </svg>
+          <span>云端 API</span>
+        </button>
+
+        <button id="btn-theme-toggle" class="btn btn-icon" title="切换深色 / 浅色外观">
+          <svg id="icon-moon" class="ui-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg id="icon-sun" class="ui-svg hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+        </button>
+      </div>
+    </header>
+
+    <!-- 顶部控制条：样本、起点/目标、策略与开始 -->
+    <section class="control-strip">
+      <div class="control-group task-group">
+        <div class="label-row">
+          <label for="task-select">测试样本库</label>
+          <div class="inline-actions">
+            <button id="btn-random-aerial" class="btn-inline-link" title="随机切换一张不同的卫星/航拍底图">随机换图</button>
+            <button id="btn-delete-upload" class="btn-inline-clear hidden" title="移除当前临时上传场景">移除此临时图</button>
+          </div>
+        </div>
+        <select id="task-select" class="form-control">
+          <option value="">正在加载全部测试样本...</option>
+        </select>
+      </div>
+
+      <div class="control-group coord-group">
+        <label for="start-select"><span class="lbl-dot dot-start"></span>起点位置</label>
+        <select id="start-select" class="form-control sm-select"></select>
+      </div>
+
+      <div class="control-group coord-group">
+        <label for="goal-select"><span class="lbl-dot dot-goal"></span>目标位置</label>
+        <select id="goal-select" class="form-control sm-select"></select>
+      </div>
+
+      <div class="control-group policy-group">
+        <label for="policy-select">导航策略</label>
+        <select id="policy-select" class="form-control">
+          <option value="M0">本地 M0 视觉智能体（线索门控 + 前瞻）</option>
+          <option value="manual">人工遥控模式（W/A/S/D / 方向键）</option>
+          <option value="Cloud">云端多模态 API（OpenAI 兼容）</option>
+          <option value="frontier">Frontier 边界探索基线</option>
+        </select>
+      </div>
+
+      <div class="control-actions">
+        <button id="btn-start-task" class="btn btn-primary">
+          开始任务
+        </button>
+        <button id="btn-reset" class="btn btn-secondary">
+          重置
+        </button>
+      </div>
+    </section>
+
+    <!-- 主展示舞台：左侧地图，右侧感知与决策 -->
+    <main class="stage">
+      <!-- 左栏：动态 n×n 网格地图与操作面板 -->
+      <section class="map-stage">
+        <div class="stage-header">
+          <div class="title-with-badge">
+            <h2 id="map-title">探索地图 <span id="map-grid-label" class="grid-dim-pill">5×5</span></h2>
+            <span id="badge-map-mode" class="badge">点击格子设置起点 / 目标</span>
+          </div>
+
+          <div class="header-right-tools">
+            <div class="map-legend">
+              <span class="legend-item"><span class="dot dot-start"></span>起点</span>
+              <span class="legend-item"><span class="dot dot-goal"></span>目标</span>
+              <span class="legend-item"><span class="dot dot-curr"></span>当前</span>
+              <span class="legend-item"><span class="dot dot-visited"></span>已探索</span>
+            </div>
+
+            <!-- 小眼睛：人类观察者全图预览开关（底层导航完全盲视） -->
+            <button id="btn-toggle-eye" class="btn-eye" title="切换整图预览（仅人类观察可见，底层导航保持未知）">
+              <svg id="eye-icon-open" class="ui-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                <circle cx="12" cy="12" r="3"/>
+              </svg>
+              <svg id="eye-icon-closed" class="ui-svg hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/>
+                <path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/>
+                <path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/>
+                <line x1="2" y1="2" x2="22" y2="22"/>
+              </svg>
+              <span id="eye-btn-text">预览全图</span>
+            </button>
+          </div>
+        </div>
+
+        <div class="grid-wrapper">
+          <div id="grid-map" class="grid-board" style="--grid-n: 5;">
+            <!-- 动态生成 k*k 方格 -->
+          </div>
+        </div>
+
+        <!-- 推演操作条 -->
+        <div class="playback-bar">
+          <div class="playback-buttons">
+            <button id="btn-step" class="btn btn-action" disabled>
+              <svg class="ui-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="5 4 15 12 5 20 5 4"/>
+                <line x1="19" y1="5" x2="19" y2="19"/>
+              </svg>
+              <span>单步推演</span>
+            </button>
+            <button id="btn-auto" class="btn btn-action btn-highlight" disabled>
+              <svg class="ui-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="6 3 20 12 6 21 6 3"/>
+              </svg>
+              <span>自动运行</span>
+            </button>
+            <button id="btn-pause" class="btn btn-action" disabled>
+              <svg class="ui-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="6" y="4" width="4" height="16"/>
+                <rect x="14" y="4" width="4" height="16"/>
+              </svg>
+              <span>暂停</span>
+            </button>
+          </div>
+
+          <div class="teleop-pad">
+            <span class="pad-label">人工方向</span>
+            <button class="pad-btn" data-act="up" title="向上 (W / ↑)">↑</button>
+            <button class="pad-btn" data-act="down" title="向下 (S / ↓)">↓</button>
+            <button class="pad-btn" data-act="left" title="向左 (A / ←)">←</button>
+            <button class="pad-btn" data-act="right" title="向右 (D / →)">→</button>
+          </div>
+
+          <div class="speed-selector">
+            <span>速度</span>
+            <button class="speed-chip" data-speed="1400">慢</button>
+            <button class="speed-chip active" data-speed="750">中</button>
+            <button class="speed-chip" data-speed="280">快</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- 右栏：双图并排对比与 AI 决策透视 -->
+      <section class="vision-stage">
+        <!-- 双图对比视窗 -->
+        <div class="vision-dual-card">
+          <div class="view-panel">
+            <div class="view-header">
+              <span class="view-label">给定目标图</span>
+              <span class="view-subtag">Target</span>
+            </div>
+            <div class="img-box">
+              <div id="placeholder-target" class="img-empty-tip">等待任务开始</div>
+              <img id="img-target" class="hidden" alt="目标航拍/地面照片">
+              <span id="target-coords" class="img-coords">目标格子: --</span>
+            </div>
+          </div>
+          <div class="view-panel">
+            <div class="view-header">
+              <span class="view-label">当前实时视野</span>
+              <span class="view-subtag">Current</span>
+            </div>
+            <div class="img-box">
+              <div id="placeholder-current" class="img-empty-tip">等待任务开始</div>
+              <img id="img-current" class="hidden" alt="当前位置视野">
+              <span id="current-coords" class="img-coords">当前格子: --</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- 实时推演指标 -->
+        <div class="metrics-card">
+          <div class="metric-item">
+            <span class="label">任务状态</span>
+            <span id="status-badge" class="val-badge badge-idle">待开始</span>
+          </div>
+          <div class="metric-item">
+            <span class="label">步数 / 预算</span>
+            <span id="metric-step" class="val-bold">0 / 10 步</span>
+          </div>
+          <div class="metric-item">
+            <span class="label">距离目标</span>
+            <span id="metric-dist" class="val-bold">-- 格</span>
+          </div>
+          <div class="metric-item">
+            <span class="label">到达判定</span>
+            <span id="metric-success" class="val-bold">等待执行</span>
+          </div>
+        </div>
+
+        <!-- AI 决策透视卡片 -->
+        <div class="decision-card">
+          <div class="decision-head">
+            <div class="decision-title-box">
+              <h3>决策与推理透视</h3>
+              <span id="decision-branch-badge" class="branch-badge">智能网络推演</span>
+            </div>
+            <span id="decision-action-badge" class="action-badge">等待推演</span>
+          </div>
+
+          <div class="decision-body">
+            <div class="reason-box">
+              <div id="decision-headline" class="reason-headline">等待任务启动</div>
+              <p id="decision-reason" class="reason-detail">点击【开始任务】后，可使用单步或自动推演查看模型决策依据。</p>
+            </div>
+
+            <div class="prob-section-title">
+              <span>四方向决策倾向度 / 模型置信度</span>
+            </div>
+
+            <div class="prob-bars">
+              <div class="prob-row" id="row-up">
+                <span class="dir-name">向上 ↑</span>
+                <div class="bar-track"><div id="bar-up" class="bar-fill" style="width: 25%"></div></div>
+                <span id="val-up" class="prob-num">25.0%</span>
+                <span id="star-up" class="star-badge"></span>
+              </div>
+              <div class="prob-row" id="row-right">
+                <span class="dir-name">向右 →</span>
+                <div class="bar-track"><div id="bar-right" class="bar-fill" style="width: 25%"></div></div>
+                <span id="val-right" class="prob-num">25.0%</span>
+                <span id="star-right" class="star-badge"></span>
+              </div>
+              <div class="prob-row" id="row-down">
+                <span class="dir-name">向下 ↓</span>
+                <div class="bar-track"><div id="bar-down" class="bar-fill" style="width: 25%"></div></div>
+                <span id="val-down" class="prob-num">25.0%</span>
+                <span id="star-down" class="star-badge"></span>
+              </div>
+              <div class="prob-row" id="row-left">
+                <span class="dir-name">向左 ←</span>
+                <div class="bar-track"><div id="bar-left" class="bar-fill" style="width: 25%"></div></div>
+                <span id="val-left" class="prob-num">25.0%</span>
+                <span id="star-left" class="star-badge"></span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- 底部状态注脚 -->
+    <footer class="lite-footer">
+      <span>GeoNav Lite · 主动探索视觉地理定位演示平台</span>
+      <span id="footer-catalog-stats">正在加载航拍与地面测试样本统计... · 自定义图纯内存运行不污染样本库</span>
+    </footer>
+  </div>
+
+  <!-- 弹窗 1：自定义上传图片与多规格 n*n 切片 -->
+  <div id="modal-upload" class="modal-backdrop hidden">
+    <div class="modal-card modal-upload-card">
+      <div class="modal-header">
+        <h3>自定义上传图片与多尺度网格切片</h3>
+        <button class="btn-close" data-close="modal-upload" aria-label="关闭">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="temp-notice-box">
+          临时运行产物说明：自定义上传图片与切片仅缓存在本次服务内存中，关闭或重启后端即自动销毁，不会写入或污染原有测试样本库。
+        </div>
+
+        <div class="form-group">
+          <label for="upload-name">场景名称</label>
+          <input type="text" id="upload-name" class="form-control" value="临时演示场景" placeholder="输入临时场景标识">
+        </div>
+
+        <div class="form-group">
+          <label>网格切片规格（M0 支持并适配以下 n×n 维度）</label>
+          <div id="upload-grid-selector" class="grid-size-pills">
+            <button type="button" class="grid-pill" data-grid="3">3×3</button>
+            <button type="button" class="grid-pill" data-grid="4">4×4</button>
+            <button type="button" class="grid-pill active" data-grid="5">5×5 推荐</button>
+            <button type="button" class="grid-pill" data-grid="6">6×6</button>
+            <button type="button" class="grid-pill" data-grid="7">7×7</button>
+            <button type="button" class="grid-pill" data-grid="10">10×10</button>
+          </div>
+          <small id="upload-grid-hint" class="grid-spec-hint">5×5 共 25 个图块 · 步数预算 10 步（M0 原生最佳协议）</small>
+        </div>
+
+        <div class="upload-dropzone" id="dropzone">
+          <input type="file" id="file-input" accept="image/png,image/jpeg,image/webp" style="display:none">
+          <div id="drop-prompt" class="drop-prompt">
+            <svg class="drop-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="18" height="18" rx="2" ry="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <span>点击或拖拽图片至此处 (PNG / JPEG / WEBP)</span>
+            <small>系统将自动居中裁剪为正方形并实时预览切分网格</small>
+          </div>
+          <div id="upload-preview-wrap" class="upload-preview-wrap hidden">
+            <img id="upload-preview" class="upload-preview" alt="上传预览">
+            <div id="upload-grid-overlay" class="upload-grid-overlay"></div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button class="btn btn-secondary" data-close="modal-upload">取消</button>
+        <button id="btn-submit-upload" class="btn btn-primary" disabled>切片并加载至临时列表</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- 弹窗 2：云端大模型 API 设置 -->
+  <div id="modal-api" class="modal-backdrop hidden">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h3>云端多模态 API 配置</h3>
+        <button class="btn-close" data-close="modal-api" aria-label="关闭">✕</button>
+      </div>
+      <div class="modal-body">
+        <p class="modal-desc">支持 OpenAI 兼容协议的视觉大模型接口。密钥与配置仅缓存在服务内存中。</p>
+        <div class="form-group">
+          <label for="api-base-url">Base URL 接口地址</label>
+          <input type="text" id="api-base-url" class="form-control" placeholder="https://api.openai.com/v1 或中继地址">
+        </div>
+        <div class="form-group">
+          <label for="api-model">Model 模型名称</label>
+          <input type="text" id="api-model" class="form-control" placeholder="例如 deepseek-flash, deepseek-v4-pro, gpt-4o">
+        </div>
+        <div class="form-group">
+          <label for="api-key">API Key（密钥）</label>
+          <input type="password" id="api-key" class="form-control" placeholder="sk-...">
+        </div>
+        <div class="form-group">
+          <label for="api-timeout">请求超时（秒）</label>
+          <input type="number" id="api-timeout" class="form-control" value="30" min="5" max="60">
+        </div>
+        <label class="form-check-row" for="api-disable-thinking">
+          <input type="checkbox" id="api-disable-thinking" checked>
+          <span>关闭长思考输出（极速直出 JSON，推荐 DeepSeek 等推理模型避免截断）</span>
+        </label>
+        <div id="api-test-status" class="api-test-status hidden"></div>
+      </div>
+      <div class="modal-footer">
+        <button id="btn-test-api" class="btn btn-secondary" type="button">测试连通性</button>
+        <div class="modal-footer-spacer"></div>
+        <button class="btn btn-secondary" data-close="modal-api">关闭</button>
+        <button id="btn-save-api" class="btn btn-primary">保存配置</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/geonav_lite.js"></script>
+</body>
+</html>

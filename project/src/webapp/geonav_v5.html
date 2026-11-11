@@ -1,0 +1,1567 @@
+<!doctype html>
+<html lang="zh-CN" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>GeoNav V5.0 · 主动探索视觉地理定位一体化工作台</title>
+  <link rel="stylesheet" href="/v5/style.css">
+</head>
+<body>
+  <div id="v5-toast-container" class="v5-toast-container"></div>
+
+  <!-- 统一旁侧点击说明气泡 Popover -->
+  <div id="v5-popover" class="v5-popover hidden" role="dialog" aria-live="polite">
+    <div class="v5-popover-head">
+      <strong id="v5-popover-title">说明</strong>
+      <button type="button" id="v5-popover-close" class="v5-popover-close" aria-label="关闭说明">✕</button>
+    </div>
+    <div class="v5-popover-body" id="v5-popover-body"></div>
+  </div>
+
+  <div class="v5-app">
+    <!-- ==================== 顶部全局栏 ==================== -->
+    <header class="v5-topbar">
+      <div class="v5-brand">
+        <div class="v5-brand-emblem" aria-hidden="true">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="18" height="18" rx="3" stroke-opacity="0.45"/>
+            <path d="M12 6l4.5 11-4.5-2.5L7.5 17 12 6z" fill="white" stroke="none"/>
+          </svg>
+        </div>
+        <div>
+          <div class="v5-brand-title">
+            GeoNav V5.0
+            <span class="v5-brand-tag">一体化工作台</span>
+          </div>
+          <div class="v5-brand-sub">主动探索视觉地理定位 · M0 双分支显式解耦与跨视角科研平台</div>
+        </div>
+      </div>
+
+      <div class="v5-topbar-pills">
+        <span class="v5-pill" id="global-pill-kernel">内核: geonav-core-v17</span>
+        <span class="v5-pill v5-pill-status" id="global-pill-session">当前状态: 空闲待命</span>
+        <span class="v5-pill" id="global-pill-api">云API: 检测中</span>
+      </div>
+
+      <div class="v5-topbar-actions">
+        <button type="button" class="v5-btn v5-btn-ghost" id="btn-open-upload" title="上传本地图片并在线切分为多尺度网格">
+          <svg class="v5-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+            <polyline points="17 8 12 3 7 8"/>
+            <line x1="12" y1="3" x2="12" y2="15"/>
+          </svg>
+          <span>自定义切片</span>
+        </button>
+
+        <button type="button" class="v5-btn v5-btn-ghost" id="btn-open-api" title="在线配置多模态云端大模型 API 与测试连通性">
+          <span class="v5-status-dot" id="v5-api-dot"></span>
+          <svg class="v5-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M17.5 19H9a7 7 0 1 1 6.71-9h1.79a4.5 4.5 0 1 1 0 9Z"/>
+          </svg>
+          <span>云端 API</span>
+        </button>
+
+        <button type="button" class="v5-btn v5-btn-accent" id="btn-start-wizard" title="启动 5 步交互式演示向导">
+          <svg class="v5-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="5 3 19 12 5 21 5 3"/>
+          </svg>
+          <span>3分钟向导</span>
+        </button>
+
+        <button type="button" class="v5-btn v5-btn-ghost" id="btn-global-refresh" title="刷新全平台数据">
+          <svg class="v5-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="23 4 23 10 17 10"/>
+            <path d="M20.49 15a9 9 0 1 1-2.12-9.36L23 10"/>
+          </svg>
+          <span>刷新</span>
+        </button>
+
+        <button type="button" class="v5-btn v5-btn-ghost" id="btn-theme-toggle" title="切换学术浅色 / 深空暗色主题">
+          <svg id="v5-icon-moon" class="v5-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/>
+          </svg>
+          <svg id="v5-icon-sun" class="v5-svg hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4"/>
+            <path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/>
+          </svg>
+          <span id="v5-theme-label">暗色</span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ==================== 5 步交互式向导条 ==================== -->
+    <section class="v5-wizard-bar" id="wizard-bar" hidden aria-label="交互式演示向导">
+      <div class="v5-wizard-left">
+        <span class="v5-wizard-badge" id="wizard-step-badge">向导 1 / 5</span>
+        <div>
+          <strong class="v5-wizard-title" id="wizard-step-title">平台全景与核心成果导览</strong>
+          <p class="v5-wizard-desc" id="wizard-step-desc">浏览六大核心评测基准与 192 张独立航拍底图题库。</p>
+        </div>
+      </div>
+      <div class="v5-wizard-actions">
+        <button type="button" class="v5-btn v5-btn-ghost" id="wizard-prev">← 上一步</button>
+        <button type="button" class="v5-btn v5-btn-primary" id="wizard-run-demo">演示本步</button>
+        <button type="button" class="v5-btn v5-btn-ghost" id="wizard-next">下一步 →</button>
+        <button type="button" class="v5-btn v5-btn-quiet" id="wizard-close">✕ 关闭</button>
+      </div>
+    </section>
+
+    <!-- 仅错误时显现的紧凑状态条 -->
+    <div class="v5-notice-bar" id="global-notice" role="status" aria-live="polite"></div>
+
+    <!-- ==================== 主体（左侧栏 + 工作台区） ==================== -->
+    <div class="v5-body">
+      <aside class="v5-rail" aria-label="一体化工作台切换栏">
+        <div class="v5-rail-section-label">
+          <span>核心工作台</span>
+          <button type="button" class="v5-tip-btn" data-tip-title="SPA 单页一体化架构" data-tip="所有工作台均在同一单页内切换，运行会话、模型缓存与云 API 配置在同一次后端生命周期内全局共享，无需页面跳转。">!</button>
+        </div>
+
+        <button type="button" class="v5-rail-item active" data-workspace="overview">
+          <span class="v5-rail-icon">
+            <svg class="v5-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="3" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="3" width="7" height="7" rx="1"/>
+              <rect x="14" y="14" width="7" height="7" rx="1"/>
+              <rect x="3" y="14" width="7" height="7" rx="1"/>
+            </svg>
+          </span>
+          <span class="v5-rail-text">
+            <strong>平台总览与向导</strong>
+            <small>Presets · 指标 · 资产</small>
+          </span>
+        </button>
+
+        <button type="button" class="v5-rail-item" data-workspace="navigator">
+          <span class="v5-rail-icon">
+            <svg class="v5-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="3 11 22 2 13 21 11 13 3 11"/>
+            </svg>
+          </span>
+          <span class="v5-rail-text">
+            <strong>统一探索控制台</strong>
+            <small>192图交互 · 封存审计</small>
+          </span>
+          <span class="v5-rail-dot" id="dot-navigator" hidden></span>
+        </button>
+
+        <button type="button" class="v5-rail-item" data-workspace="sandbox">
+          <span class="v5-rail-icon">
+            <svg class="v5-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="1 6 1 22 8 18 16 22 23 18 23 2 16 6 8 2 1 6"/>
+              <line x1="8" y1="2" x2="8" y2="18"/>
+              <line x1="16" y1="6" x2="16" y2="22"/>
+            </svg>
+          </span>
+          <span class="v5-rail-text">
+            <strong>自由场景与接管沙箱</strong>
+            <small>5×5 / 10×10 · 人机接管</small>
+          </span>
+          <span class="v5-rail-dot" id="dot-sandbox" hidden></span>
+        </button>
+
+        <button type="button" class="v5-rail-item" data-workspace="arena">
+          <span class="v5-rail-icon">
+            <svg class="v5-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="18" y1="20" x2="18" y2="10"/>
+              <line x1="12" y1="20" x2="12" y2="4"/>
+              <line x1="6" y1="20" x2="6" y2="14"/>
+            </svg>
+          </span>
+          <span class="v5-rail-text">
+            <strong>队列批测与API打擂</strong>
+            <small>十题对照 · 小队列竞速</small>
+          </span>
+          <span class="v5-rail-dot" id="dot-arena" hidden></span>
+        </button>
+
+        <button type="button" class="v5-rail-item" data-workspace="ground">
+          <span class="v5-rail-icon">
+            <svg class="v5-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+              <circle cx="12" cy="13" r="4"/>
+            </svg>
+          </span>
+          <span class="v5-rail-text">
+            <strong>地面连续探索与编码</strong>
+            <small>地面漫游 · 512维编码</small>
+          </span>
+          <span class="v5-rail-dot" id="dot-ground" hidden></span>
+        </button>
+
+        <button type="button" class="v5-rail-item" data-workspace="evidence">
+          <span class="v5-rail-icon">
+            <svg class="v5-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"/>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+            </svg>
+          </span>
+          <span class="v5-rail-text">
+            <strong>空间感知与证据显微镜</strong>
+            <small>CV031 · CV041 热力图</small>
+          </span>
+        </button>
+
+        <div class="v5-rail-footer">
+          <div class="v5-rail-compact-guard">
+            <span>科研盲测隔离契约</span>
+            <button type="button" class="v5-tip-btn" data-tip-title="POMDP 科研输入隔离契约" data-tip="执行策略（M0 / Frontier / Cloud）在推演过程中仅接收当前观测图、给定目标图、公开相对坐标与剩余预算；真实目标坐标、全图与未访图块特征均由后端评测器隔离保管。“预览全图”小眼睛仅渲染给人类观察者，策略网络严格盲视。">!</button>
+          </div>
+        </div>
+      </aside>
+
+      <!-- ==================== 工作台主容器 ==================== -->
+      <main class="v5-main">
+
+        <!-- =================================================================== -->
+        <!-- WORKSPACE 1: 平台总览 (紧致一屏到底，详细信息收纳至 ! 气泡)           -->
+        <!-- =================================================================== -->
+        <section class="v5-workspace active" id="ws-overview">
+          <div class="v5-ov-strip">
+            <div class="v5-ov-title-wrap">
+              <div class="v5-ov-title-row">
+                <span class="v5-badge v5-badge-blue">GeoNav Workbench V5.0</span>
+                <h1>基于主动探索的视觉地理定位方法设计与实现</h1>
+                <button type="button" class="v5-tip-btn" data-tip-title="GeoNav V5.0 一体化科研中台介绍" data-tip="V5.0 将原有分散工具收束至 6 大单页工作台，并新注入 192 张独立航拍底图（960 精选格题）+ 192 地面题、多尺度 3×3~10×10 纯内存图片切片、人类小眼睛盲视全图预览、四方向推理倾向度透视，以及支持 DeepSeek 关闭长思考的云端 API 自检配置。">!</button>
+              </div>
+              <p class="v5-ov-subtitle">全功能科研中台 · 支持 192 航拍底图交互推演、自由沙箱接管、固定十题云 API 打擂与空间感知显微镜</p>
+            </div>
+            <div class="v5-ov-metrics" id="overview-stat-grid">
+              <div class="v5-stat-chip">
+                <span class="v5-stat-val" id="ov-stat-tasks">1,152</span>
+                <span class="v5-stat-lbl">交互题库 (192图+192地)</span>
+              </div>
+              <div class="v5-stat-chip">
+                <span class="v5-stat-val">0.93M</span>
+                <span class="v5-stat-lbl">M0 可训练参数</span>
+              </div>
+              <div class="v5-stat-chip">
+                <span class="v5-stat-val">86.80%</span>
+                <span class="v5-stat-lbl">Masa S3 独立源 SR</span>
+              </div>
+              <div class="v5-stat-chip">
+                <span class="v5-stat-val">68.04%</span>
+                <span class="v5-stat-lbl">9km² 径向保护 SR</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="v5-section-header">
+            <h2>
+              一键场景直达预设
+              <button type="button" class="v5-tip-btn" data-tip-title="快速演示预设使用说明" data-tip="任选下方一张典型实验卡片，系统会自动切换至对应工作台、加载标准数据并完成初始化，适合导师审阅、答辩展示与快速复现体验。">!</button>
+            </h2>
+            <span>点击即进入对应工作台并就绪演示</span>
+          </div>
+
+          <div class="v5-preset-grid">
+            <article class="v5-preset-card">
+              <div class="v5-preset-top">
+                <span class="v5-badge v5-badge-blue">预设 1 · 航拍推演</span>
+                <button type="button" class="v5-tip-btn" data-tip-title="航拍 M0 双分支自主寻路演示" data-tip="切换至统一探索控制台的多源精选模式，自动载入 Masa S2 标准 5×5 航拍任务与冻结 M0（Small256 探索器 + 20 维 Edge 拼缝线索头），执行首步展示网格探索轨迹与四方向决策置信度。">!</button>
+              </div>
+              <h3>航拍 M0 双分支寻路</h3>
+              <p class="v5-preset-summary">192底图自由点选 · 四向概率透视</p>
+              <div class="v5-preset-actions">
+                <button type="button" class="v5-btn v5-btn-primary" data-preset="aerial-m0">载入并演示</button>
+                <button type="button" class="v5-btn v5-btn-ghost" data-goto="navigator">打开控制台</button>
+              </div>
+            </article>
+
+            <article class="v5-preset-card">
+              <div class="v5-preset-top">
+                <span class="v5-badge v5-badge-green">预设 2 · 自由接管</span>
+                <button type="button" class="v5-tip-btn" data-tip-title="自由航拍场景与人机协同接管" data-tip="在 Masa S3 或 10×10 连续大区域自由设定起点、目标与步数预算，先用方向键人工探索 1~2 步，随后一键切换为 M0 / Coverage3Radial 策略同步合法历史并自动接管。">!</button>
+              </div>
+              <h3>自由沙箱人机接管</h3>
+              <p class="v5-preset-summary">自定义起终点 · 历史同步接管</p>
+              <div class="v5-preset-actions">
+                <button type="button" class="v5-btn v5-btn-primary" data-preset="sandbox-takeover">创建并体验</button>
+                <button type="button" class="v5-btn v5-btn-ghost" data-goto="sandbox">打开沙箱</button>
+              </div>
+            </article>
+
+            <article class="v5-preset-card">
+              <div class="v5-preset-top">
+                <span class="v5-badge v5-badge-amber">预设 3 · 多方打擂</span>
+                <button type="button" class="v5-tip-btn" data-tip-title="本地 M0 vs Frontier vs 云端大模型" data-tip="同屏查阅已封存的 Masa S2 固定十题上本地 M0（80%）、Frontier（40%）与云端大模型（10%）配对恢复/损伤账本，或新建自定义小队列实时竞速。">!</button>
+              </div>
+              <h3>十题 API 与小队列打擂</h3>
+              <p class="v5-preset-summary">M0(80%) vs 云API(10%) 对照账本</p>
+              <div class="v5-preset-actions">
+                <button type="button" class="v5-btn v5-btn-primary" data-preset="arena-compare">查看十题账本</button>
+                <button type="button" class="v5-btn v5-btn-ghost" data-goto="arena">进入竞技场</button>
+              </div>
+            </article>
+
+            <article class="v5-preset-card">
+              <div class="v5-preset-top">
+                <span class="v5-badge v5-badge-purple">预设 4 · 地面与证据</span>
+                <button type="button" class="v5-tip-btn" data-tip-title="跨视角地面任务与空间显微镜" data-tip="体验 OpenCVL 192 道三城市地面拍摄点探索与 512 维特征编码，或进入 CV031 (CCVPE 20 例) 与 CV041 (三城 150 例空间小头) 查看预测叠合与 7×7 热力图。">!</button>
+              </div>
+              <h3>地面探索与证据显微镜</h3>
+              <p class="v5-preset-summary">192地面题 · CV031/041热力诊断</p>
+              <div class="v5-preset-actions">
+                <button type="button" class="v5-btn v5-btn-primary" data-preset="capturepoint-demo">地面探索</button>
+                <button type="button" class="v5-btn v5-btn-ghost" data-preset="evidence-demo">显微镜</button>
+              </div>
+            </article>
+          </div>
+
+          <div class="v5-two-col">
+            <div class="v5-card">
+              <div class="v5-card-header">
+                <h3>
+                  六大核心评测协议与四条件消融总览
+                  <button type="button" class="v5-tip-btn" data-tip-title="核心评测协议汇总说明" data-tip="展示项目全部冻结协议实测结果。点击每行右侧的 ! 按钮可查看该协议的数据来源、网格尺度与科学边界说明；不同数据集或预算协议的 SR 不可跨表直接相减。">!</button>
+                </h3>
+                <span class="v5-badge v5-badge-blue">累计 16,200+ 航拍轨迹 + 192 地面</span>
+              </div>
+              <div class="v5-table-wrap">
+                <table class="v5-table" id="overview-benchmark-table">
+                  <thead>
+                    <tr>
+                      <th>评测协议</th>
+                      <th>网格 / 预算</th>
+                      <th>M0 (真实目标)</th>
+                      <th>禁用对照</th>
+                      <th>均值 / 错误</th>
+                      <th>Frontier</th>
+                      <th>详情</th>
+                    </tr>
+                  </thead>
+                  <tbody></tbody>
+                </table>
+              </div>
+            </div>
+
+            <div class="v5-card">
+              <div class="v5-card-header">
+                <h3>平台引擎与本地资产实时状态</h3>
+                <span class="v5-badge v5-badge-green" id="ov-asset-badge">实时就绪</span>
+              </div>
+              <ul class="v5-status-list" id="overview-asset-list">
+                <li>正在读取各模块目录与封存状态...</li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================== -->
+        <!-- WORKSPACE 2: 统一探索控制台（交互探索 + 封存审计双子视图）           -->
+        <!-- =================================================================== -->
+        <section class="v5-workspace" id="ws-navigator">
+          <div class="v5-subtabs">
+            <button type="button" class="v5-subtab active" data-nav-tab="interactive">多源精选交互推演 (192独立航拍图·960题 + 192地面题)</button>
+            <button type="button" class="v5-subtab" data-nav-tab="sealed">标准封存审计与同题 A/B 配对回放 (Masa S2 100题 + 192地面题)</button>
+          </div>
+
+          <!-- 子视图 A：Lite 级丝滑单屏交互引擎 -->
+          <div class="v5-subview active" id="nav-view-interactive">
+            <div class="v5-ix-toolbar">
+              <div class="v5-field task-field">
+                <div class="v5-field-row" style="justify-content:space-between;">
+                  <span>多源测试样本库</span>
+                  <span>
+                    <button type="button" class="v5-link-btn" id="ix-btn-random" title="随机切换一张不同的航拍底图">随机换图</button>
+                    <button type="button" class="v5-link-btn v5-link-danger hidden" id="ix-btn-delete-upload" title="移除当前临时上传场景">移除临时图</button>
+                  </span>
+                </div>
+                <select id="ix-task-select"><option value="">正在加载 192 航拍底图与 192 地面样本...</option></select>
+              </div>
+
+              <label class="v5-field coord-field">
+                <span><span class="v5-dot dot-s"></span>起点位置</span>
+                <select id="ix-start-select"></select>
+              </label>
+
+              <label class="v5-field coord-field">
+                <span><span class="v5-dot dot-g"></span>目标位置</span>
+                <select id="ix-goal-select"></select>
+              </label>
+
+              <label class="v5-field policy-field">
+                <span>导航策略</span>
+                <select id="ix-policy-select">
+                  <option value="M0">本地 M0 视觉智能体（线索门控 + 前瞻）</option>
+                  <option value="manual">人工遥控模式（W/A/S/D / 方向键）</option>
+                  <option value="Cloud">云端多模态 API（OpenAI / DeepSeek）</option>
+                  <option value="frontier">Frontier 边界探索基线</option>
+                </select>
+              </label>
+
+              <div class="v5-btn-group">
+                <button type="button" class="v5-btn v5-btn-primary" id="ix-btn-start">开始任务</button>
+                <button type="button" class="v5-btn" id="ix-btn-reset">重置</button>
+              </div>
+            </div>
+
+            <div class="v5-ix-layout">
+              <!-- 左栏：动态 k×k 交互棋盘 + 小眼睛全图预览 + 推演操控 -->
+              <div class="v5-card">
+                <div class="v5-card-header">
+                  <div class="v5-btn-group">
+                    <h3>探索地图</h3>
+                    <span class="v5-badge v5-badge-blue" id="ix-grid-label">5×5</span>
+                    <span class="v5-badge" id="ix-mode-badge">点击格子设置起点 / 目标</span>
+                  </div>
+                  <div class="v5-btn-group">
+                    <div class="v5-legend-inline">
+                      <span><i class="v5-dot dot-s"></i>起</span>
+                      <span><i class="v5-dot dot-g"></i>终</span>
+                      <span><i class="v5-dot dot-c"></i>当前</span>
+                      <span><i class="v5-dot dot-v"></i>已探</span>
+                    </div>
+                    <button type="button" class="v5-btn" id="ix-btn-eye" title="切换整图预览（仅人类观察可见）">
+                      <svg id="ix-eye-open" class="v5-svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/>
+                        <circle cx="12" cy="12" r="3"/>
+                      </svg>
+                      <svg id="ix-eye-closed" class="v5-svg hidden" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9.88 9.88a3 3 0 1 0 4.24 4.24"/>
+                        <path d="M10.73 5.08A10.43 10.43 0 0 1 12 5c7 0 10 7 10 7a13.16 13.16 0 0 1-1.67 2.68"/>
+                        <path d="M6.61 6.61A13.526 13.526 0 0 0 2 12s3 7 10 7a9.74 9.74 0 0 0 5.39-1.61"/>
+                        <line x1="2" y1="2" x2="22" y2="22"/>
+                      </svg>
+                      <span id="ix-eye-text">预览全图</span>
+                    </button>
+                    <button type="button" class="v5-tip-btn" data-tip-title="小眼睛观察者隔离机制" data-tip="开启“预览全图”后，前端向后端发送带 observer=1 的静态预览请求展示完整切片全景，供人类演示者挑选起终点或观察位置关系；底层智能体决策状态与 visited 历史完全隔离，保持严格盲视。">!</button>
+                  </div>
+                </div>
+
+                <div class="v5-ix-grid-wrap">
+                  <div class="v5-ix-board" id="ix-board" style="--grid-n:5" aria-label="交互式探索网格"></div>
+                </div>
+
+                <div class="v5-cockpit-bar">
+                  <div class="v5-btn-group">
+                    <button type="button" class="v5-btn v5-btn-primary" id="ix-btn-step" disabled>单步推演</button>
+                    <button type="button" class="v5-btn v5-btn-accent" id="ix-btn-auto" disabled>自动运行</button>
+                    <button type="button" class="v5-btn" id="ix-btn-pause" disabled>暂停</button>
+                  </div>
+                  <div class="v5-dpad" aria-label="人工方向控制">
+                    <button type="button" class="v5-btn" data-ix-act="up" title="向上 (W / ↑)">↑</button>
+                    <button type="button" class="v5-btn" data-ix-act="down" title="向下 (S / ↓)">↓</button>
+                    <button type="button" class="v5-btn" data-ix-act="left" title="向左 (A / ←)">←</button>
+                    <button type="button" class="v5-btn" data-ix-act="right" title="向右 (D / →)">→</button>
+                  </div>
+                  <div class="v5-btn-group">
+                    <button type="button" class="v5-btn ix-speed" data-speed="1200">慢</button>
+                    <button type="button" class="v5-btn ix-speed active" data-speed="650">中</button>
+                    <button type="button" class="v5-btn ix-speed" data-speed="250">快</button>
+                  </div>
+                </div>
+                <div class="v5-context-note" id="ix-footer-stats">正在统计多源精选样本库... · 自定义图片仅缓存在服务内存中，不污染标准样本库</div>
+              </div>
+
+              <!-- 右栏：双图对比 + 实时 KPI + 四向推理倾向度 -->
+              <div class="v5-col">
+                <div class="v5-card">
+                  <div class="v5-card-header">
+                    <h3>给定目标图 (Target) vs 当前实时视野 (Current)</h3>
+                    <button type="button" class="v5-tip-btn" data-tip-title="双视野主动定位任务" data-tip="左侧为智能体在整局开始时获得的给定目标图片（I*），右侧为当前所在网格拍摄到的实时视野观测（It）；M0 需在只见局部、未知全局坐标的条件下主动探索并到达目标所在格。">!</button>
+                  </div>
+                  <div class="v5-dual-image">
+                    <figure class="v5-img-box">
+                      <figcaption><span>给定目标图</span><small id="ix-target-coord">目标格子: --</small></figcaption>
+                      <div id="ix-target-empty" class="v5-img-empty">等待任务开始</div>
+                      <img id="ix-target-img" class="hidden" alt="给定目标图">
+                    </figure>
+                    <figure class="v5-img-box">
+                      <figcaption><span>当前实时视野</span><small id="ix-current-coord">当前格子: --</small></figcaption>
+                      <div id="ix-current-empty" class="v5-img-empty">等待任务开始</div>
+                      <img id="ix-current-img" class="hidden" alt="当前实时视野">
+                    </figure>
+                  </div>
+                </div>
+
+                <div class="v5-card">
+                  <div class="v5-kpi-row">
+                    <div class="v5-kpi"><span>任务状态</span><strong id="ix-kpi-status">待开始</strong></div>
+                    <div class="v5-kpi"><span>步数 / 预算</span><strong id="ix-kpi-step">0 / 10 步</strong></div>
+                    <div class="v5-kpi"><span>距离目标</span><strong id="ix-kpi-dist">-- 格</strong></div>
+                    <div class="v5-kpi"><span>到达判定</span><strong id="ix-kpi-result">等待执行</strong></div>
+                  </div>
+                </div>
+
+                <div class="v5-card">
+                  <div class="v5-card-header">
+                    <div class="v5-btn-group">
+                      <h3>决策与推理透视</h3>
+                      <span class="v5-badge v5-badge-blue" id="ix-branch-badge">智能网络推演</span>
+                      <button type="button" class="v5-tip-btn" data-tip-title="M0 双分支显式门控决策机制" data-tip="阶段 1（Edge Cue Gate）：20 维拼缝边缘+语义线索头检测目标与当前邻接边的连续性，若置信度达阈值（0.50）则触发视觉线索直接锁定并一击到达；阶段 2（Explorer Network）：未触发门控时由 Small256 GRU 探索器结合全局覆盖规划引导前往未知区域。">!</button>
+                    </div>
+                    <span class="v5-badge v5-badge-green" id="ix-action-badge">等待推演</span>
+                  </div>
+
+                  <div class="v5-decision-box">
+                    <div class="v5-decision-headline" id="ix-dec-headline">等待任务启动</div>
+                    <div class="v5-decision-detail" id="ix-dec-detail">选定起终点后点击【开始任务】，可使用【单步推演】或【自动运行】查看每步决策依据。</div>
+                  </div>
+
+                  <div class="v5-prob-bars">
+                    <div class="v5-prob-row" id="ix-row-up">
+                      <span>向上 ↑</span>
+                      <div class="v5-prob-track"><div class="v5-prob-fill" id="ix-bar-up" style="width:25%"></div></div>
+                      <span class="v5-prob-val" id="ix-val-up">25.0%</span>
+                      <span class="v5-prob-win" id="ix-win-up"></span>
+                    </div>
+                    <div class="v5-prob-row" id="ix-row-right">
+                      <span>向右 →</span>
+                      <div class="v5-prob-track"><div class="v5-prob-fill" id="ix-bar-right" style="width:25%"></div></div>
+                      <span class="v5-prob-val" id="ix-val-right">25.0%</span>
+                      <span class="v5-prob-win" id="ix-win-right"></span>
+                    </div>
+                    <div class="v5-prob-row" id="ix-row-down">
+                      <span>向下 ↓</span>
+                      <div class="v5-prob-track"><div class="v5-prob-fill" id="ix-bar-down" style="width:25%"></div></div>
+                      <span class="v5-prob-val" id="ix-val-down">25.0%</span>
+                      <span class="v5-prob-win" id="ix-win-down"></span>
+                    </div>
+                    <div class="v5-prob-row" id="ix-row-left">
+                      <span>向左 ←</span>
+                      <div class="v5-prob-track"><div class="v5-prob-fill" id="ix-bar-left" style="width:25%"></div></div>
+                      <span class="v5-prob-val" id="ix-val-left">25.0%</span>
+                      <span class="v5-prob-win" id="ix-win-left"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- 子视图 B：标准封存审计与同题 A/B 配对回放 (100% 兼容原有接口) -->
+          <div class="v5-subview" id="nav-view-sealed">
+            <div class="v5-ws-grid-3">
+              <div class="v5-col">
+                <div class="v5-card">
+                  <div class="v5-card-header">
+                    <h3>
+                      1. 标准审计任务筛选
+                      <button type="button" class="v5-tip-btn" data-tip-title="封存科研审计模式" data-tip="对接 /api/controllers/* 持久化工作台，严格运行 Masa S2 100 题与 OpenCVL 192 题封存目录，支持保存终局快照、只读轨迹回放、同题换策略另跑、配对恢复/损伤检验及批量加入打擂队列。">!</button>
+                    </h3>
+                    <span class="v5-badge v5-badge-blue" id="nav-filtered-count">0 / 0</span>
+                  </div>
+                  <div class="v5-form-grid">
+                    <label class="v5-field">
+                      <span>数据集协议</span>
+                      <select id="nav-dataset"></select>
+                    </label>
+                    <div class="v5-field-row">
+                      <label class="v5-field">
+                        <span>区域 / 城市</span>
+                        <select id="nav-city"></select>
+                      </label>
+                      <label class="v5-field">
+                        <span>任务分层</span>
+                        <select id="nav-role">
+                          <option value="">全部</option>
+                          <option value="sealed_confirmation">封存确认</option>
+                          <option value="development">开发队列</option>
+                          <option value="preparation">准备队列</option>
+                        </select>
+                      </label>
+                    </div>
+                    <label class="v5-field">
+                      <span>关键词搜索</span>
+                      <input type="search" id="nav-search" placeholder="任务ID / 区域 / 起点格...">
+                    </label>
+                  </div>
+                  <div class="v5-task-list" id="nav-task-list" role="list"></div>
+                </div>
+
+                <details class="v5-card">
+                  <summary class="v5-card-header" style="cursor:pointer;margin-bottom:0;border-bottom:none;padding-bottom:0;">
+                    <h3>2. 已存记录与同题 A/B 对比</h3>
+                    <span class="v5-text-muted">零重跑复核</span>
+                  </summary>
+                  <div class="v5-form-grid" style="margin-top:8px;">
+                    <div class="v5-field-row">
+                      <select id="nav-saved-runs" aria-label="选择已保存终局"></select>
+                      <button type="button" class="v5-btn" id="nav-open-run">只读打开</button>
+                    </div>
+                    <div class="v5-field-row">
+                      <select id="nav-saved-tasks" aria-label="选择已保存任务配置"></select>
+                      <button type="button" class="v5-btn" id="nav-reopen-task">同题重开</button>
+                    </div>
+                    <hr class="v5-divider">
+                    <div class="v5-field-label">同题 A / B 终局配对对比：</div>
+                    <div class="v5-field-row">
+                      <select id="nav-compare-a"></select>
+                      <select id="nav-compare-b"></select>
+                    </div>
+                    <button type="button" class="v5-btn v5-w-full" id="nav-btn-compare">执行同题配对对比</button>
+                    <pre class="v5-pre-box" id="nav-comparison-output">选择同题两条已存终局，核验恢复/损伤与 SG 差值。</pre>
+                  </div>
+                </details>
+              </div>
+
+              <div class="v5-col">
+                <div class="v5-card">
+                  <div class="v5-card-header">
+                    <div>
+                      <h3>3. 审计网格执行视窗 (5×5)</h3>
+                      <small class="v5-text-muted" id="nav-selected-info">请选择左侧题目</small>
+                    </div>
+                    <div class="v5-btn-group">
+                      <button type="button" class="v5-btn" id="nav-btn-new">释放/新建</button>
+                      <button type="button" class="v5-btn" id="nav-btn-queue-add">+ 加入批测队列</button>
+                    </div>
+                  </div>
+
+                  <div class="v5-control-strip">
+                    <label class="v5-field">
+                      <span>会话名称</span>
+                      <input type="text" id="nav-run-name" value="V5审计会话">
+                    </label>
+                    <label class="v5-field">
+                      <span>初始控制器</span>
+                      <select id="nav-initial-controller"></select>
+                    </label>
+                    <label class="v5-field">
+                      <span>权重种子</span>
+                      <select id="nav-seed"></select>
+                    </label>
+                    <button type="button" class="v5-btn v5-btn-primary" id="nav-btn-create">创建并开始</button>
+                  </div>
+
+                  <div class="v5-api-consent-row" id="nav-api-consent-wrap">
+                    <label class="v5-checkbox">
+                      <input type="checkbox" id="nav-api-consent">
+                      <span>选定“单API＋M0回退”时授权发送局部观测至云端接口</span>
+                    </label>
+                  </div>
+
+                  <div class="v5-kpi-row">
+                    <div class="v5-kpi"><span>执行状态</span><strong id="nav-kpi-status">待创建</strong></div>
+                    <div class="v5-kpi"><span>已走步数</span><strong id="nav-kpi-steps">— / 10</strong></div>
+                    <div class="v5-kpi"><span>已访图格</span><strong id="nav-kpi-visited">— / 25</strong></div>
+                    <div class="v5-kpi"><span>模型/API调用</span><strong id="nav-kpi-calls">0</strong></div>
+                  </div>
+
+                  <div class="v5-board-wrap">
+                    <div class="v5-board-5x5" id="nav-board" aria-label="5×5标准审计网格"></div>
+                  </div>
+
+                  <div class="v5-cockpit-bar">
+                    <div class="v5-cockpit-left">
+                      <label class="v5-field-inline">
+                        <span>盘中切换:</span>
+                        <select id="nav-active-controller"></select>
+                      </label>
+                      <div class="v5-dpad">
+                        <button type="button" class="v5-btn" data-nav-action="up">↑</button>
+                        <button type="button" class="v5-btn" data-nav-action="right">→</button>
+                        <button type="button" class="v5-btn" data-nav-action="down">↓</button>
+                        <button type="button" class="v5-btn" data-nav-action="left">←</button>
+                      </div>
+                    </div>
+                    <div class="v5-cockpit-right">
+                      <button type="button" class="v5-btn v5-btn-primary" id="nav-btn-step">策略单步</button>
+                      <button type="button" class="v5-btn v5-btn-accent" id="nav-btn-auto">自动走完</button>
+                      <button type="button" class="v5-btn" id="nav-btn-pause">暂停</button>
+                      <select id="nav-speed" style="width:auto;">
+                        <option value="220">快</option>
+                        <option value="450" selected>标准</option>
+                        <option value="850">慢</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="v5-session-footer">
+                    <div class="v5-btn-group">
+                      <button type="button" class="v5-btn" id="nav-btn-finish">提前结束</button>
+                      <button type="button" class="v5-btn" id="nav-btn-save-task">保存任务</button>
+                      <button type="button" class="v5-btn" id="nav-btn-save-run">保存终局</button>
+                      <button type="button" class="v5-btn" id="nav-btn-fork">同题另跑</button>
+                      <button type="button" class="v5-btn" id="nav-btn-export">导出 JSON</button>
+                    </div>
+                    <div class="v5-replay-row">
+                      <label class="v5-checkbox">
+                        <input type="checkbox" id="nav-reveal">
+                        <span>观察者全图预览</span>
+                      </label>
+                      <div class="v5-replay-slider">
+                        <span id="nav-replay-label">只读回放滑块</span>
+                        <input type="range" id="nav-replay" min="0" max="0" value="0" disabled>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="v5-col">
+                <div class="v5-card">
+                  <div class="v5-card-header">
+                    <h3>4. 给定目标图 vs 当前观测图</h3>
+                    <span class="v5-badge v5-badge-green" id="nav-current-label">尚未开始</span>
+                  </div>
+                  <div class="v5-dual-image">
+                    <figure class="v5-img-box">
+                      <figcaption>给定目标图 (Target)</figcaption>
+                      <img id="nav-target-image" alt="给定目标图像">
+                    </figure>
+                    <figure class="v5-img-box">
+                      <figcaption>当前观测图 (Current)</figcaption>
+                      <img id="nav-current-image" alt="当前位置观测图像">
+                    </figure>
+                  </div>
+                  <div class="v5-context-note" id="nav-task-context">请选择题目</div>
+                </div>
+
+                <div class="v5-card">
+                  <div class="v5-card-header">
+                    <h3>5. 轨迹与终局指标账本</h3>
+                    <small class="v5-text-muted" id="nav-save-state">默认临时过程</small>
+                  </div>
+                  <div class="v5-result-banner" id="nav-result-banner">目标真值与 SG 仅终局显示；运行期策略严格盲测。</div>
+                  <div class="v5-context-note" id="nav-api-single-info" hidden></div>
+                  <ol class="v5-trace-list" id="nav-history"></ol>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================== -->
+        <!-- WORKSPACE 3: 自由场景与接管沙箱                                       -->
+        <!-- =================================================================== -->
+        <section class="v5-workspace" id="ws-sandbox">
+          <div class="v5-ws-grid-3">
+            <div class="v5-col">
+              <div class="v5-card">
+                <div class="v5-card-header">
+                  <h3>
+                    1. 自由场景配置
+                    <button type="button" class="v5-tip-btn" data-tip-title="人机平滑接管与 SVG 轨迹沙箱" data-tip="支持在 Masa S3（5×5）与连续大区域（10×10）上自由设定起点、目标与预算；可点击地图或填编号选点。人工模式下每步零模型调用，切换 Agent 接管时系统自动重放同步合法历史状态。">!</button>
+                  </h3>
+                  <span class="v5-badge v5-badge-green" id="sb-scale-badge">5×5 / 10×10</span>
+                </div>
+                <form id="sb-form" class="v5-form-grid">
+                  <label class="v5-field">
+                    <span>场景名称</span>
+                    <input type="text" id="sb-name" value="V5自定义航拍探索场景" required>
+                  </label>
+                  <label class="v5-field">
+                    <span>底图数据集</span>
+                    <select id="sb-dataset"></select>
+                  </label>
+                  <label class="v5-field">
+                    <span>基准源区域</span>
+                    <select id="sb-base"></select>
+                  </label>
+                  <div class="v5-field-row">
+                    <label class="v5-field">
+                      <span>起点格</span>
+                      <input type="number" id="sb-start" min="0" max="99" value="0" required>
+                    </label>
+                    <label class="v5-field">
+                      <span>目标格</span>
+                      <input type="number" id="sb-goal" min="0" max="99" value="24" required>
+                    </label>
+                  </div>
+                  <div class="v5-field-row">
+                    <label class="v5-field">
+                      <span>步数预算</span>
+                      <input type="number" id="sb-budget" min="1" max="20" value="10" required>
+                    </label>
+                    <label class="v5-field">
+                      <span>随机种子</span>
+                      <input type="number" id="sb-seed" min="0" max="999" value="0" required>
+                    </label>
+                  </div>
+                  <label class="v5-field">
+                    <span>接管 Agent 策略</span>
+                    <select id="sb-policy"></select>
+                  </label>
+                  <div class="v5-btn-group">
+                    <button type="submit" class="v5-btn v5-btn-primary">创建并启动</button>
+                    <button type="button" class="v5-btn" id="sb-btn-save-scene" disabled>保存场景</button>
+                    <button type="button" class="v5-btn" id="sb-btn-restart" disabled>重新开局</button>
+                  </div>
+                </form>
+              </div>
+
+              <details class="v5-card">
+                <summary class="v5-card-header" style="cursor:pointer;margin-bottom:0;border-bottom:none;padding-bottom:0;">
+                  <h3>2. 已存场景与同场景对比</h3>
+                  <button type="button" class="v5-btn v5-btn-quiet" id="sb-btn-refresh">刷新</button>
+                </summary>
+                <div class="v5-form-grid" style="margin-top:8px;">
+                  <label class="v5-field">
+                    <span>打开已创建场景</span>
+                    <select id="sb-saved-scenes"></select>
+                  </label>
+                  <label class="v5-field">
+                    <span>只读回看运行记录</span>
+                    <select id="sb-saved-runs"></select>
+                  </label>
+                  <hr class="v5-divider">
+                  <div class="v5-field-row">
+                    <select id="sb-compare-left"></select>
+                    <select id="sb-compare-right"></select>
+                  </div>
+                  <button type="button" class="v5-btn v5-w-full" id="sb-btn-compare">比较两条场景运行</button>
+                  <div class="v5-pre-box" id="sb-compare-result">可对比“纯人工”、“人机接管”与“纯 Agent”同场景结果。</div>
+                </div>
+              </details>
+            </div>
+
+            <div class="v5-col">
+              <div class="v5-card">
+                <div class="v5-card-header">
+                  <div>
+                    <h3 id="sb-map-title">自由场景网格与轨迹画布</h3>
+                    <small class="v5-text-muted" id="sb-run-status">点击“创建并启动”，亦可在推演中点击相邻格手动走步</small>
+                  </div>
+                  <label class="v5-checkbox">
+                    <input type="checkbox" id="sb-reveal-all">
+                    <span>预览全图底片</span>
+                  </label>
+                </div>
+
+                <div class="v5-kpi-row">
+                  <div class="v5-kpi"><span>控制模式</span><strong id="sb-stat-mode">未开始</strong></div>
+                  <div class="v5-kpi"><span>步数进度</span><strong id="sb-stat-steps">0 / 10</strong></div>
+                  <div class="v5-kpi"><span>已探格数</span><strong id="sb-stat-seen">0 / 25</strong></div>
+                  <div class="v5-kpi"><span>终局 SG</span><strong id="sb-stat-sg">未终止</strong></div>
+                </div>
+
+                <div class="v5-sb-stage">
+                  <div class="v5-sb-map" id="sb-map"></div>
+                  <svg class="v5-sb-svg" id="sb-path" viewBox="0 0 500 500" preserveAspectRatio="none"></svg>
+                </div>
+
+                <div class="v5-cockpit-bar">
+                  <div class="v5-btn-group">
+                    <button type="button" class="v5-btn" id="sb-human-mode" disabled>人工模式</button>
+                    <button type="button" class="v5-btn" id="sb-agent-mode" disabled>Agent 接管</button>
+                  </div>
+                  <div class="v5-dpad">
+                    <button type="button" class="v5-btn" data-sb-action="up" disabled>↑</button>
+                    <button type="button" class="v5-btn" data-sb-action="right" disabled>→</button>
+                    <button type="button" class="v5-btn" data-sb-action="down" disabled>↓</button>
+                    <button type="button" class="v5-btn" data-sb-action="left" disabled>←</button>
+                  </div>
+                  <div class="v5-btn-group">
+                    <button type="button" class="v5-btn v5-btn-primary" id="sb-agent-step" disabled>Agent 单步</button>
+                    <button type="button" class="v5-btn v5-btn-accent" id="sb-agent-auto" disabled>自动接管</button>
+                    <button type="button" class="v5-btn" id="sb-agent-pause" disabled>暂停</button>
+                    <select id="sb-speed" style="width:auto;">
+                      <option value="250">快</option>
+                      <option value="500" selected>标准</option>
+                      <option value="900">慢</option>
+                    </select>
+                  </div>
+                </div>
+
+                <div class="v5-session-footer">
+                  <div class="v5-btn-group" style="justify-content:space-between;">
+                    <span class="v5-text-muted" id="sb-controller-note">人工模式零模型调用；Agent 接管自动同步合法历史。</span>
+                    <div class="v5-btn-group">
+                      <button type="button" class="v5-btn" id="sb-cancel-scene" disabled>结束运行</button>
+                      <button type="button" class="v5-btn" id="sb-save-run" disabled>保存运行</button>
+                      <button type="button" class="v5-btn" id="sb-export-scene" disabled>导出 JSON</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="v5-col">
+              <div class="v5-card">
+                <div class="v5-card-header">
+                  <h3>3. 目标格 vs 当前格</h3>
+                </div>
+                <div class="v5-dual-image">
+                  <figure class="v5-img-box">
+                    <figcaption>自定义目标格</figcaption>
+                    <img id="sb-goal-image" alt="自定义目标格图像">
+                  </figure>
+                  <figure class="v5-img-box">
+                    <figcaption>当前所在格</figcaption>
+                    <img id="sb-current-image" alt="当前所在格图像">
+                  </figure>
+                </div>
+              </div>
+
+              <div class="v5-card">
+                <div class="v5-card-header">
+                  <h3>4. 人机协同事件流</h3>
+                </div>
+                <div class="v5-trace-list" id="sb-events">暂无动作</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================== -->
+        <!-- WORKSPACE 4: 队列批测与云 API 打擂                                    -->
+        <!-- =================================================================== -->
+        <section class="v5-workspace" id="ws-arena">
+          <div class="v5-subtabs">
+            <button type="button" class="v5-subtab active" data-arena-tab="api10">固定十题三方打擂 (M0 vs Frontier vs 云端 API)</button>
+            <button type="button" class="v5-subtab" data-arena-tab="batch">自定义小队列同题批测 (M0 vs Frontier)</button>
+          </div>
+
+          <div class="v5-subview active" id="arena-view-api10">
+            <div class="v5-two-col">
+              <div class="v5-card">
+                <div class="v5-card-header">
+                  <div>
+                    <h3>
+                      固定十题三方同题对照
+                      <button type="button" class="v5-tip-btn" data-tip-title="独立请求审计与连续3错硬熔断" data-tip="每道题上复用本地 M0 与 Frontier 原封存基准结果（不重跑），仅对单模型云端 API 执行受控对照（全批硬上限 ≤100 请求、0 自动重试）；每条请求前预写审计账本，若连续 3 次接口报错立即硬熔断止损。支持通过顶部【云端 API】弹窗在线切换 DeepSeek 等兼容接口。">!</button>
+                    </h3>
+                    <small class="v5-text-muted" id="ar-api-config-info">正在读取云端 API 配置状态...</small>
+                  </div>
+                  <div class="v5-btn-group">
+                    <span class="v5-badge v5-badge-amber">连续3错硬熔断</span>
+                    <button type="button" class="v5-btn" id="ar-btn-open-api-cfg">修改云API</button>
+                  </div>
+                </div>
+
+                <div class="v5-control-strip">
+                  <select id="ar-api-saved" aria-label="选择已保存十题API对照"></select>
+                  <button type="button" class="v5-btn v5-btn-primary" id="ar-api-open">打开已存对照</button>
+                  <button type="button" class="v5-btn" id="ar-api-create">新建十题对照</button>
+                  <button type="button" class="v5-btn" id="ar-api-step">单步</button>
+                  <button type="button" class="v5-btn" id="ar-api-current">跑完当前题</button>
+                  <button type="button" class="v5-btn v5-btn-accent" id="ar-api-all">自动十题</button>
+                  <button type="button" class="v5-btn" id="ar-api-pause">暂停</button>
+                </div>
+
+                <div class="v5-api-consent-row">
+                  <label class="v5-checkbox" id="ar-api-restart-label" hidden>
+                    <input type="checkbox" id="ar-api-restart">
+                    <span>重跑未完成题目（已完成题目保持封存）</span>
+                  </label>
+                  <div class="v5-btn-group">
+                    <button type="button" class="v5-btn" id="ar-api-export" disabled>导出 JSON</button>
+                    <button type="button" class="v5-btn" id="ar-api-csv" disabled>导出 CSV</button>
+                  </div>
+                </div>
+
+                <pre class="v5-pre-box" id="ar-api-summary">点击“打开已存对照”可零开销查阅已封存的固定十题三方对比结果（M0 80% / Frontier 40% / 云API 10%）。</pre>
+              </div>
+
+              <div class="v5-card">
+                <div class="v5-card-header">
+                  <h3>固定十题逐题配对明细表</h3>
+                  <span class="v5-badge v5-badge-blue">Masa S2 固定 10 题</span>
+                </div>
+                <div class="v5-table-wrap">
+                  <table class="v5-table" id="ar-api-table">
+                    <thead>
+                      <tr>
+                        <th>题目 Key</th>
+                        <th>冻结 M0</th>
+                        <th>Frontier</th>
+                        <th>单API状态</th>
+                        <th>结果 / SG(格)</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="v5-subview" id="arena-view-batch">
+            <div class="v5-two-col">
+              <div class="v5-card">
+                <div class="v5-card-header">
+                  <div>
+                    <h3>
+                      Masa S2 小队列同题批测
+                      <button type="button" class="v5-tip-btn" data-tip-title="同题配对恢复/损伤统计" data-tip="在“统一探索控制台 -> 标准封存审计”标签下勾选题目并点击“+ 加入批测队列”即可组队；批测会同题成对执行本地 M0 与 Frontier，严格统计配对净恢复题数与终局 SG 差值。">!</button>
+                    </h3>
+                    <small class="v5-text-muted" id="ar-batch-status">从下拉框打开已存队列，或在封存审计台加入新题目</small>
+                  </div>
+                </div>
+
+                <div class="v5-control-strip">
+                  <select id="ar-saved-batches"></select>
+                  <button type="button" class="v5-btn v5-btn-primary" id="ar-queue-open">打开队列</button>
+                  <button type="button" class="v5-btn" id="ar-batch-step">队列单步</button>
+                  <button type="button" class="v5-btn" id="ar-batch-current">当前轨迹</button>
+                  <button type="button" class="v5-btn v5-btn-accent" id="ar-batch-all">跑完全队列</button>
+                  <button type="button" class="v5-btn" id="ar-batch-pause">暂停</button>
+                  <button type="button" class="v5-btn" id="ar-batch-cancel">取消</button>
+                </div>
+
+                <div class="v5-api-consent-row">
+                  <label class="v5-checkbox" id="ar-restart-label" hidden>
+                    <input type="checkbox" id="ar-restart-incomplete">
+                    <span>重跑中断的未完成轨迹</span>
+                  </label>
+                  <div class="v5-btn-group">
+                    <button type="button" class="v5-btn" id="ar-batch-json" disabled>导出 JSON</button>
+                    <button type="button" class="v5-btn" id="ar-batch-csv" disabled>导出 CSV</button>
+                  </div>
+                </div>
+
+                <div class="v5-field-label">待新建队列题目清单：</div>
+                <pre class="v5-pre-box" id="ar-queue-selection">尚未选择题目</pre>
+                <div class="v5-btn-group">
+                  <button type="button" class="v5-btn v5-btn-primary" id="ar-queue-create" disabled>创建 M0+Frontier 队列</button>
+                  <button type="button" class="v5-btn" id="ar-queue-clear" disabled>清空所选</button>
+                </div>
+
+                <hr class="v5-divider">
+                <div class="v5-field-label">队列汇总与配对恢复/损伤统计：</div>
+                <pre class="v5-pre-box" id="ar-batch-summary">打开队列后显示 M0 与 Frontier 的 SR、SG 及配对净增。</pre>
+              </div>
+
+              <div class="v5-card">
+                <div class="v5-card-header">
+                  <h3>队列轨迹明细（点击已完成行在探索台回放）</h3>
+                </div>
+                <div class="v5-table-wrap">
+                  <table class="v5-table" id="ar-batch-table">
+                    <thead>
+                      <tr>
+                        <th>题目 / 控制器</th>
+                        <th>状态</th>
+                        <th>步数</th>
+                        <th>是否到达</th>
+                        <th>SG (格)</th>
+                      </tr>
+                    </thead>
+                    <tbody></tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================== -->
+        <!-- WORKSPACE 5: 地面连续探索与 512 维实时编码诊断                          -->
+        <!-- =================================================================== -->
+        <section class="v5-workspace" id="ws-ground">
+          <div class="v5-subtabs">
+            <button type="button" class="v5-subtab active" data-ground-tab="walk">固定地面目标人工连续观察 (Ground Walk)</button>
+            <button type="button" class="v5-subtab" data-ground-tab="live">单对地面-航拍实时特征编码诊断 (Ground Live Encoding)</button>
+          </div>
+
+          <div class="v5-subview active" id="ground-view-walk">
+            <div class="v5-ws-grid-3">
+              <div class="v5-col">
+                <div class="v5-card">
+                  <div class="v5-card-header">
+                    <h3>1. 地面配对连续探索控制</h3>
+                  </div>
+                  <p class="v5-text-muted" id="gw-scene-info">正在读取地面配对场景...</p>
+                  <div class="v5-form-grid" style="margin-top:6px;">
+                    <label class="v5-field">
+                      <span>过程名称</span>
+                      <input type="text" id="gw-name" value="V5地面连续观察">
+                    </label>
+                    <label class="v5-field">
+                      <span>步数预算 (1~15)</span>
+                      <input type="number" id="gw-budget" min="1" max="15" value="10">
+                    </label>
+                    <div class="v5-btn-group">
+                      <button type="button" class="v5-btn v5-btn-primary" id="gw-start">开始探索</button>
+                      <button type="button" class="v5-btn" id="gw-new">释放/新建</button>
+                      <button type="button" class="v5-btn" id="gw-refresh">刷新</button>
+                    </div>
+                    <hr class="v5-divider">
+                    <div class="v5-field-row">
+                      <select id="gw-saved"></select>
+                      <button type="button" class="v5-btn" id="gw-open">重放</button>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="v5-card">
+                  <div class="v5-card-header">
+                    <h3>2. 逐步余弦相似度账本</h3>
+                  </div>
+                  <div class="v5-result-banner" id="gw-result">目标真值与距离不传给编码器，仅实时计算特征余弦得分。</div>
+                  <ol class="v5-trace-list" id="gw-history"></ol>
+                </div>
+              </div>
+
+              <div class="v5-col">
+                <div class="v5-card">
+                  <div class="v5-card-header">
+                    <h3>3. 5×5 航拍网格与人工移动</h3>
+                    <span class="v5-badge v5-badge-blue" id="gw-cell-label">尚未开始</span>
+                  </div>
+                  <div class="v5-kpi-row">
+                    <div class="v5-kpi"><span>状态</span><strong id="gw-status">等待开始</strong></div>
+                    <div class="v5-kpi"><span>步数</span><strong id="gw-steps">—</strong></div>
+                    <div class="v5-kpi"><span>编码调用</span><strong id="gw-calls">0</strong></div>
+                    <div class="v5-kpi"><span>已访格</span><strong id="gw-seen">0 / 25</strong></div>
+                  </div>
+                  <div class="v5-board-wrap">
+                    <div class="v5-board-5x5" id="gw-map"></div>
+                  </div>
+                  <div class="v5-cockpit-bar">
+                    <div class="v5-dpad">
+                      <button type="button" class="v5-btn" data-gw-action="up" disabled>↑</button>
+                      <button type="button" class="v5-btn" data-gw-action="right" disabled>→</button>
+                      <button type="button" class="v5-btn" data-gw-action="down" disabled>↓</button>
+                      <button type="button" class="v5-btn" data-gw-action="left" disabled>←</button>
+                    </div>
+                    <div class="v5-btn-group">
+                      <button type="button" class="v5-btn" id="gw-finish" disabled>结束</button>
+                      <button type="button" class="v5-btn" id="gw-cancel" disabled>取消</button>
+                      <button type="button" class="v5-btn" id="gw-save" disabled>保存</button>
+                      <button type="button" class="v5-btn" id="gw-export" disabled>导出</button>
+                    </div>
+                  </div>
+                  <div class="v5-session-footer">
+                    <div class="v5-replay-row">
+                      <label class="v5-checkbox">
+                        <input type="checkbox" id="gw-reveal">
+                        <span>展开全部航拍图格</span>
+                      </label>
+                      <small class="v5-text-muted" id="gw-save-info">默认临时</small>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="v5-col">
+                <div class="v5-card">
+                  <div class="v5-card-header">
+                    <h3>4. 地面目标照片 vs 当前格航拍</h3>
+                  </div>
+                  <div class="v5-kpi-row" style="grid-template-columns:1fr 1fr;">
+                    <div class="v5-kpi"><span>当前余弦相似度</span><strong id="gw-score">—</strong></div>
+                    <div class="v5-kpi"><span>特征缓存状态</span><strong id="gw-cache">等待观测</strong></div>
+                  </div>
+                  <div class="v5-dual-image">
+                    <figure class="v5-img-box">
+                      <figcaption>地面目标照片</figcaption>
+                      <img id="gw-goal-img" alt="地面目标照片">
+                    </figure>
+                    <figure class="v5-img-box">
+                      <figcaption>当前格航拍图</figcaption>
+                      <img id="gw-current-img" alt="当前格航拍图">
+                    </figure>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="v5-subview" id="ground-view-live">
+            <div class="v5-two-col">
+              <div class="v5-card">
+                <div class="v5-card-header">
+                  <h3>1. 单对地面-航拍图像实时编码</h3>
+                  <span class="v5-badge v5-badge-green" id="gl-job-status">等待图像</span>
+                </div>
+                <div class="v5-form-grid">
+                  <label class="v5-field">
+                    <span>编码记录名称</span>
+                    <input type="text" id="gl-job-name" value="V5单对跨视角特征编码">
+                  </label>
+                  <div class="v5-field-row">
+                    <label class="v5-field">
+                      <span>上传地面目标图 (≤10MiB)</span>
+                      <input type="file" id="gl-target-file" accept="image/*">
+                    </label>
+                    <label class="v5-field">
+                      <span>上传当前航拍图 (≤10MiB)</span>
+                      <input type="file" id="gl-current-file" accept="image/*">
+                    </label>
+                  </div>
+                  <div class="v5-btn-group">
+                    <button type="button" class="v5-btn" id="gl-load-sample">载入内置示例对</button>
+                    <button type="button" class="v5-btn v5-btn-primary" id="gl-encode" disabled>开始实时编码</button>
+                    <button type="button" class="v5-btn" id="gl-new-job">重置</button>
+                    <button type="button" class="v5-btn" id="gl-cancel" disabled>取消</button>
+                  </div>
+                  <hr class="v5-divider">
+                  <div class="v5-field-row">
+                    <select id="gl-saved"></select>
+                    <button type="button" class="v5-btn" id="gl-open-saved">只读重开</button>
+                    <button type="button" class="v5-btn" id="gl-save" disabled>保存</button>
+                    <button type="button" class="v5-btn" id="gl-export" disabled>导出 JSON</button>
+                    <button type="button" class="v5-btn v5-btn-quiet" id="gl-refresh">刷新</button>
+                  </div>
+                </div>
+
+                <div class="v5-dual-image" style="margin-top:8px;">
+                  <figure class="v5-img-box">
+                    <figcaption>地面目标输入 (224×224)</figcaption>
+                    <img id="gl-target-image" alt="地面目标输入">
+                  </figure>
+                  <figure class="v5-img-box">
+                    <figcaption>当前航拍输入 (224×224)</figcaption>
+                    <img id="gl-current-image" alt="当前航拍输入">
+                  </figure>
+                </div>
+                <small class="v5-text-muted" id="gl-image-note">预览 · 尚未编码</small>
+              </div>
+
+              <div class="v5-card">
+                <div class="v5-card-header">
+                  <h3>
+                    2. 512 维特征相似度与冻结参数核验
+                    <button type="button" class="v5-tip-btn" data-tip-title="冻结编码器零参数更新核验" data-tip="每次前向调用后对冻结张量签名进行逐张量一致性校验，严格保证运行期 0 参数更新与特征维度忠实复现。">!</button>
+                  </h3>
+                  <span class="v5-badge v5-badge-blue" id="gl-save-status">临时</span>
+                </div>
+                <div class="v5-kpi-row">
+                  <div class="v5-kpi"><span>余弦相似度</span><strong id="gl-similarity">—</strong></div>
+                  <div class="v5-kpi"><span>Forward 次数</span><strong id="gl-call-count">0 / 2</strong></div>
+                  <div class="v5-kpi"><span>特征维度</span><strong id="gl-feature-size">尚未生成</strong></div>
+                  <div class="v5-kpi"><span>冻结张量核验</span><strong id="gl-frozen-state">等待运行</strong></div>
+                </div>
+                <div class="v5-context-note">资源开销：<span id="gl-resources">—</span> | <span id="gl-record-note">保存与导出不重跑模型</span></div>
+                <div class="v5-field-label">编码执行时间线：</div>
+                <ol class="v5-trace-list" id="gl-timeline"></ol>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- =================================================================== -->
+        <!-- WORKSPACE 6: 空间感知与证据显微镜 (CV031 & CV041)                      -->
+        <!-- =================================================================== -->
+        <section class="v5-workspace" id="ws-evidence">
+          <div class="v5-subtabs">
+            <button type="button" class="v5-subtab active" data-ev-tab="cv031">CV031: CCVPE 局部空间感知与拒绝筛查 (20案例)</button>
+            <button type="button" class="v5-subtab" data-ev-tab="cv041">CV041: 三城普通 RGB 空间小头多方法对照 (150案例)</button>
+          </div>
+
+          <div class="v5-subview active" id="ev-view-cv031">
+            <div class="v5-ws-grid-3">
+              <div class="v5-col">
+                <div class="v5-card">
+                  <div class="v5-card-header">
+                    <h3>
+                      1. CV031 筛选与四条件
+                      <button type="button" class="v5-tip-btn" data-tip-title="CV031 CCVPE 局部筛查只读证据" data-tip="读取封存的 CCVPE 模型在 20 个固定地面-航拍案例上的预测热力图与拒绝门槛诊断：通过四条件对照（真实/禁用/均值/错误目标）披露负例误接受边界，本页严格只读不重跑模型。">!</button>
+                    </h3>
+                    <span class="v5-badge v5-badge-blue" id="p31-case-count">20 案例</span>
+                  </div>
+                  <div class="v5-form-grid">
+                    <div class="v5-field-row">
+                      <label class="v5-field">
+                        <span>数据来源</span>
+                        <select id="p31-source">
+                          <option value="all">全部来源</option>
+                          <option value="0">来源 0</option>
+                          <option value="1">来源 1</option>
+                          <option value="2">来源 2</option>
+                          <option value="3">来源 3</option>
+                        </select>
+                      </label>
+                      <label class="v5-field">
+                        <span>真值关系</span>
+                        <select id="p31-relation">
+                          <option value="all">全部关系</option>
+                          <option value="inside">拍摄点在格内</option>
+                          <option value="outside">同源格外</option>
+                          <option value="unrelated">异源目标</option>
+                        </select>
+                      </label>
+                    </div>
+                    <label class="v5-field">
+                      <span>选择案例</span>
+                      <select id="p31-case"></select>
+                    </label>
+                    <div class="v5-field-label">四条件目标控制：</div>
+                    <div class="v5-btn-group" id="p31-arms">
+                      <button type="button" class="v5-btn selected" data-p31-arm="Full">真实目标</button>
+                      <button type="button" class="v5-btn" data-p31-arm="Disabled">禁用目标</button>
+                      <button type="button" class="v5-btn" data-p31-arm="Mean">均值目标</button>
+                      <button type="button" class="v5-btn" data-p31-arm="Wrong">错误目标</button>
+                    </div>
+                    <small class="v5-text-muted" id="p31-arm-help">使用给定地面目标照片</small>
+                    <button type="button" class="v5-btn" id="p31-download" disabled>导出本案例证据 JSON</button>
+                  </div>
+                </div>
+
+                <div class="v5-card">
+                  <div class="v5-card-header">
+                    <h3>2. 四条件汇总表</h3>
+                  </div>
+                  <table class="v5-table">
+                    <thead>
+                      <tr><th>条件</th><th>正例≤5m</th><th>MAE</th><th>宏平衡率</th></tr>
+                    </thead>
+                    <tbody id="p31-comparison"></tbody>
+                  </table>
+                  <ul class="v5-gate-list" id="p31-gates"></ul>
+                </div>
+              </div>
+
+              <div class="v5-col">
+                <div class="v5-card">
+                  <div class="v5-card-header">
+                    <h3 id="p31-case-title">3. 地面目标与航拍预测叠合</h3>
+                    <span class="v5-badge v5-badge-amber" id="p31-cell">—</span>
+                  </div>
+                  <div class="v5-kpi-row">
+                    <div class="v5-kpi"><span>判定</span><strong id="p31-decision">—</strong></div>
+                    <div class="v5-kpi"><span>置信得分</span><strong id="p31-score">—</strong></div>
+                    <div class="v5-kpi"><span>阈值 τ</span><strong id="p31-tau">—</strong></div>
+                    <div class="v5-kpi"><span>误差</span><strong id="p31-error">—</strong></div>
+                  </div>
+                  <div class="v5-dual-image">
+                    <figure class="v5-img-box">
+                      <figcaption><span id="p31-target-title">给定地面目标</span> <small id="p31-target-note"></small></figcaption>
+                      <img id="p31-target-image" alt="CV031地面目标">
+                    </figure>
+                    <figure class="v5-img-box">
+                      <figcaption>航拍图格 (<span style="color:#f59e0b">真值</span> / <span style="color:#06b6d4">预测</span>)</figcaption>
+                      <div class="v5-overlay-box">
+                        <img id="p31-current-image" alt="CV031航拍图格">
+                        <svg id="p31-overlay" viewBox="0 0 200 200"></svg>
+                      </div>
+                    </figure>
+                  </div>
+                  <div class="v5-result-banner" id="p31-reason">—</div>
+                  <div class="v5-context-note" id="p31-interpretation">—</div>
+                </div>
+              </div>
+
+              <div class="v5-col">
+                <div class="v5-card">
+                  <div class="v5-card-header">
+                    <h3>4. 响应热力图与 SHA256 绑定</h3>
+                  </div>
+                  <div class="v5-heat-wrap">
+                    <canvas id="p31-heat" width="220" height="220"></canvas>
+                    <small class="v5-text-muted" id="p31-heat-range">—</small>
+                  </div>
+                  <div class="v5-field-label">冻结证据溯源账本：</div>
+                  <pre class="v5-pre-box" id="p31-binding">—</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="v5-subview" id="ev-view-cv041">
+            <div class="v5-ws-grid-3">
+              <div class="v5-col">
+                <div class="v5-card">
+                  <div class="v5-card-header">
+                    <h3>
+                      1. CV041 三城与方法选择
+                      <button type="button" class="v5-tip-btn" data-tip-title="CV041 7×7 空间小头多方法只读对照" data-tip="展示 3 城市 150 例普通 RGB 街景上 Spatial (65.5K 空间小头)、TrainedMean 与 RawCos 基线的预测分布与 7×7 Logit 热力图，完整记录跨视角几何鸿沟失败证据，仅作科研只读溯源。">!</button>
+                    </h3>
+                    <span class="v5-badge v5-badge-blue" id="s41-case-count">150 案例</span>
+                  </div>
+                  <div class="v5-form-grid">
+                    <div class="v5-field-row">
+                      <label class="v5-field">
+                        <span>留出城市</span>
+                        <select id="s41-city"></select>
+                      </label>
+                      <label class="v5-field">
+                        <span>真值关系</span>
+                        <select id="s41-relation">
+                          <option value="all">全部关系</option>
+                          <option value="inside">拍摄点在格内</option>
+                          <option value="outside">同源格外</option>
+                          <option value="unrelated">异源目标</option>
+                        </select>
+                      </label>
+                    </div>
+                    <label class="v5-field">
+                      <span>案例选择</span>
+                      <div class="v5-field-row">
+                        <button type="button" class="v5-btn" id="s41-prev" title="上一例">←</button>
+                        <select id="s41-case"></select>
+                        <button type="button" class="v5-btn" id="s41-next" title="下一例">→</button>
+                      </div>
+                    </label>
+                    <div class="v5-field-row">
+                      <label class="v5-field">
+                        <span>对比方法</span>
+                        <select id="s41-method">
+                          <option value="Spatial">Spatial · 空间小头 (65.5K)</option>
+                          <option value="TrainedMean">TrainedMean · 无目标基线</option>
+                          <option value="RawCos">RawCos · 冻结余弦</option>
+                        </select>
+                      </label>
+                      <label class="v5-field">
+                        <span>种子</span>
+                        <select id="s41-seed"></select>
+                      </label>
+                    </div>
+                    <div class="v5-btn-group" id="s41-arms"></div>
+                    <small class="v5-text-muted" id="s41-arm-help">—</small>
+                    <button type="button" class="v5-btn" id="s41-download" disabled>导出案例证据 JSON</button>
+                  </div>
+                </div>
+
+                <div class="v5-card">
+                  <div class="v5-card-header">
+                    <h3>2. 多方法汇总对照表</h3>
+                  </div>
+                  <table class="v5-table">
+                    <thead>
+                      <tr><th>方法 / 条件</th><th>正例≤5m</th><th>宏联合率</th><th>均差</th></tr>
+                    </thead>
+                    <tbody id="s41-comparison"></tbody>
+                  </table>
+                  <ul class="v5-gate-list" id="s41-gates"></ul>
+                </div>
+              </div>
+
+              <div class="v5-col">
+                <div class="v5-card">
+                  <div class="v5-card-header">
+                    <h3 id="s41-case-title">3. 街景照片与预测点叠合</h3>
+                    <span class="v5-badge v5-badge-amber" id="s41-cell-note">—</span>
+                  </div>
+                  <div class="v5-kpi-row">
+                    <div class="v5-kpi"><span>判定</span><strong id="s41-decision">—</strong></div>
+                    <div class="v5-kpi"><span>得分</span><strong id="s41-score">—</strong></div>
+                    <div class="v5-kpi"><span>阈值 τ</span><strong id="s41-tau">—</strong></div>
+                    <div class="v5-kpi"><span>误差</span><strong id="s41-error">—</strong></div>
+                  </div>
+                  <div class="v5-dual-image">
+                    <figure class="v5-img-box">
+                      <figcaption><span id="s41-target-title">地面目标照片</span> <small id="s41-target-note"></small></figcaption>
+                      <img id="s41-target-image" alt="CV041地面目标">
+                    </figure>
+                    <figure class="v5-img-box">
+                      <figcaption>航拍图格 (<span style="color:#f59e0b">真值</span> / <span style="color:#06b6d4">预测</span>)</figcaption>
+                      <div class="v5-overlay-box">
+                        <img id="s41-current-image" alt="CV041航拍图格">
+                        <svg id="s41-overlay" viewBox="0 0 200 200"></svg>
+                      </div>
+                    </figure>
+                  </div>
+                  <figure class="v5-img-box" id="s41-original-wrap" hidden>
+                    <figcaption>原任务真实目标照片</figcaption>
+                    <img id="s41-original-image" alt="原任务真实目标照片">
+                  </figure>
+                  <div class="v5-result-banner" id="s41-reason">—</div>
+                  <div class="v5-context-note" id="s41-relation-help">—</div>
+                </div>
+              </div>
+
+              <div class="v5-col">
+                <div class="v5-card">
+                  <div class="v5-card-header">
+                    <h3>4. 7×7 Logit 热力图与绑定</h3>
+                  </div>
+                  <div class="v5-heat-wrap">
+                    <canvas id="s41-heat" width="196" height="196"></canvas>
+                    <small class="v5-text-muted" id="s41-heat-range">—</small>
+                  </div>
+                  <div class="v5-field-label">案例溯源与哈希绑定：</div>
+                  <pre class="v5-pre-box" id="s41-binding">—</pre>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+      </main>
+    </div>
+  </div>
+
+  <!-- ==================== 弹窗 1：纯内存自定义图片多尺度切片 ==================== -->
+  <div id="modal-upload" class="v5-modal-backdrop hidden">
+    <div class="v5-modal-card">
+      <div class="v5-modal-header">
+        <h3>
+          自定义上传图片与多尺度网格切片
+          <button type="button" class="v5-tip-btn" data-tip-title="纯内存临时切片隔离机制" data-tip="上传图片经居中裁剪切片后仅保留于当前 Python 进程内存中，关闭或重启服务即自动销毁，绝不写入磁盘或污染标准评测与演示样本库。若存在 Sat2Cap 编码器权重将实时抽取特征驱动 M0 寻路。">!</button>
+        </h3>
+        <button type="button" class="v5-popover-close" data-v5-close="modal-upload" aria-label="关闭">✕</button>
+      </div>
+      <div class="v5-modal-body">
+        <div class="v5-api-status-box">
+          纯内存临时产物：关闭服务即自动清除，零落盘不污染原有测试样本库。
+        </div>
+        <label class="v5-field">
+          <span>场景名称</span>
+          <input type="text" id="v5-upload-name" value="V5自定义临时场景" placeholder="输入临时场景名称">
+        </label>
+        <div class="v5-field">
+          <span>网格切片规格 (M0 原生支持与前瞻适配维度)</span>
+          <div class="v5-grid-pills" id="v5-upload-grid-selector">
+            <button type="button" class="v5-btn" data-grid="3">3×3</button>
+            <button type="button" class="v5-btn" data-grid="4">4×4</button>
+            <button type="button" class="v5-btn active" data-grid="5">5×5 推荐</button>
+            <button type="button" class="v5-btn" data-grid="6">6×6</button>
+            <button type="button" class="v5-btn" data-grid="7">7×7</button>
+            <button type="button" class="v5-btn" data-grid="10">10×10</button>
+          </div>
+          <small class="v5-text-muted" id="v5-upload-grid-hint">5×5 共 25 个图块 · 步数预算 10 步（M0 原生最佳协议）</small>
+        </div>
+
+        <div class="v5-dropzone" id="v5-dropzone">
+          <input type="file" id="v5-file-input" accept="image/png,image/jpeg,image/webp" style="display:none">
+          <div id="v5-drop-prompt">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" style="margin-bottom:4px;opacity:0.75;">
+              <rect x="3" y="3" width="18" height="18" rx="2"/>
+              <circle cx="8.5" cy="8.5" r="1.5"/>
+              <polyline points="21 15 16 10 5 21"/>
+            </svg>
+            <div>点击或拖拽图片至此处 (PNG / JPEG / WEBP)</div>
+            <small class="v5-text-muted">系统将自动居中裁剪为正方形并预览网格虚线</small>
+          </div>
+          <div id="v5-upload-preview-wrap" class="v5-upload-preview-wrap hidden">
+            <img id="v5-upload-preview" alt="上传预览">
+            <div id="v5-upload-grid-overlay" class="v5-upload-grid-overlay"></div>
+          </div>
+        </div>
+      </div>
+      <div class="v5-modal-footer">
+        <button type="button" class="v5-btn" data-v5-close="modal-upload">取消</button>
+        <button type="button" class="v5-btn v5-btn-primary" id="v5-btn-submit-upload" disabled>切片并加载至控制台</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== 弹窗 2：云端多模态 API 配置与连通性自检 ==================== -->
+  <div id="modal-api" class="v5-modal-backdrop hidden">
+    <div class="v5-modal-card">
+      <div class="v5-modal-header">
+        <h3>
+          云端多模态 API 配置与诊断
+          <button type="button" class="v5-tip-btn" data-tip-title="云端接口安全与推理模型防截断说明" data-tip="密钥仅缓存在服务内存中不落盘。针对 DeepSeek-V4.1-Flash 等默认开启高强度推理的模型，建议勾选“关闭长思考输出”自动下发 thinking={'type':'disabled'} 并动态扩容 max_tokens，彻底消除 reasoning_tokens 耗尽导致的 JSON 截断。">!</button>
+        </h3>
+        <button type="button" class="v5-popover-close" data-v5-close="modal-api" aria-label="关闭">✕</button>
+      </div>
+      <div class="v5-modal-body">
+        <label class="v5-field">
+          <span>Base URL 接口地址</span>
+          <input type="text" id="v5-api-base-url" placeholder="https://api.deepseek.com/v1 或 OpenAI 兼容地址">
+        </label>
+        <label class="v5-field">
+          <span>Model 模型名称</span>
+          <input type="text" id="v5-api-model" placeholder="例如 deepseek-flash, deepseek-v4-pro, gpt-4o">
+        </label>
+        <label class="v5-field">
+          <span>API Key（密钥）</span>
+          <input type="password" id="v5-api-key" placeholder="sk-...">
+        </label>
+        <label class="v5-field">
+          <span>请求超时（秒）</span>
+          <input type="number" id="v5-api-timeout" value="30" min="5" max="60">
+        </label>
+        <label class="v5-checkbox">
+          <input type="checkbox" id="v5-api-disable-thinking" checked>
+          <span>关闭长思考输出（极速直出 JSON，适配 DeepSeek-Flash 等防截断）</span>
+        </label>
+        <div id="v5-api-test-status" class="v5-api-status-box hidden"></div>
+      </div>
+      <div class="v5-modal-footer">
+        <button type="button" class="v5-btn" id="v5-btn-test-api">测试连通性</button>
+        <div style="flex:1"></div>
+        <button type="button" class="v5-btn" data-v5-close="modal-api">关闭</button>
+        <button type="button" class="v5-btn v5-btn-primary" id="v5-btn-save-api">保存配置</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="/v5/app.js"></script>
+</body>
+</html>
