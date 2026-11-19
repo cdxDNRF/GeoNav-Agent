@@ -1,0 +1,61 @@
+{
+  "schema": "cv049-source-input-binding/v1",
+  "task": "CV-049",
+  "tar_sha256_file": {
+    "path": "DATA/raw_data/OpenCVL/OpenCVL_mapillary_in_the_wild_test.tar.sha256",
+    "sha256": "f6f2bde9b8f1188761e18dce17da44eee7a4bf7a84278c08c056cbbeae5d7fe5",
+    "text": "32436583d11667d789fb71f31bbb0214504f0e833b0dc5a615310f545d636f91  OpenCVL_mapillary_in_the_wild_test.tar"
+  },
+  "protected_upstream_sha256": {
+    "project/src/data/capturepoint_intake_v1.py": "43caa27f79abf9b7f4f1d45befb429fb495e485ecb0c838c35bdea17ef9d893f",
+    "project/src/data/capturepoint_corrected_v1.py": "725d03ea33504fe1d1f52c847130ecfefd42ec45d55fb2b34e931cd6e8108d66",
+    "project/src/tools/inspect_capturepoint_intake_v1.py": "4a5e173fd0c3ac8bae9490bfa3dd35f78be1533e538f8eebb4151e8330667729",
+    "DATA/processed_data/OpenCVL/公开瑞典三候选校正标签预检_v1/首获取冻结绑定.json": "3a5e92fdc69ce0f72f327bebead8e627ca0bab421eb04771eb7e85434010e00e"
+  },
+  "generator_sources": [
+    {
+      "path": "project/src/data/opencvl_wild_intake_v1.py",
+      "sha256": "5db0a7f5c4869c827b547d4fee9ca4bd2223c444cb78f4670ed762dafdbcf838",
+      "bytes": 11668
+    },
+    {
+      "path": "project/src/tools/freeze_opencvl_wild_v1.py",
+      "sha256": "0503b27d99283dcf93fb96e8df99b70061ef7416dd20b199c3db53e4fb27fc59",
+      "bytes": 14209
+    },
+    {
+      "path": "project/src/eval/audit_opencvl_wild_intake_v1.py",
+      "sha256": "1747a61f8bdceba3554a2ad0cff83aac3d5379335aa93e2a93d2f03fdc5d306d",
+      "bytes": 9349
+    },
+    {
+      "path": "project/src/tests/test_opencvl_wild_intake_v1.py",
+      "sha256": "3c3230f173977be7aa274d23cfd1477281917e9e9b50bcdbea2e4dddef9aa782",
+      "bytes": 5476
+    }
+  ],
+  "generated_artifacts": [
+    {
+      "path": "DATA/processed_data/OpenCVL/野测洁净簇冻结清单_v1/协议冻结_v1.json",
+      "sha256": "75d0ebcee98083e464dd8466149cb4121b02aecee4a41ca61e159a3626aeb0e7",
+      "bytes": 5817
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/野测洁净簇冻结清单_v1/公开洁净划分清单_v1.json",
+      "sha256": "eef252acfe2952202ff7486e77ad5b438f23892ceca5ed2163bef4a4d823b59f",
+      "bytes": 425450
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/野测洁净簇冻结清单_v1/核验/评估器专用冻结台账_禁止入模.json",
+      "sha256": "e7208930708233dc040aac1d6ff61e3dae80ce73f0b93ba650cdcea217367282",
+      "bytes": 2257216
+    }
+  ],
+  "execution_accounting": {
+    "pixels_decoded": 0,
+    "total_png_headers_checked": 2722,
+    "model_calls": 0,
+    "training": 0,
+    "confirmation_consumed": 0
+  }
+}

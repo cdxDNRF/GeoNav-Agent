@@ -1,0 +1,37 @@
+{
+  "schema": "final-report-build-receipt/v5",
+  "date": "2026-11-14",
+  "builder": "project/src/documents/build_final_report_v5.js",
+  "inputs": {
+    "content_json": {
+      "path": "project/src/documents/final_report_content_v5.json",
+      "sha256": "ad9bb1f25daf00e3598a17af0cedb1b803a4da12c1c77564f0c617876a549588"
+    },
+    "claim_v1_json": {
+      "path": "总结报告相关/总结报告_v1/准备/论断与证据.json",
+      "sha256": "64fba1534a56b992a9f7693772dc79a96395109170d4917302ceb885f1910f87"
+    },
+    "claim_v2_json": {
+      "path": "总结报告相关/总结报告_v1/准备/增量证据绑定_v2.json",
+      "sha256": "7c83fe111c74e22f0d2328b4cd9d5ab02427de7cfae0677fe926d8300843b25b"
+    }
+  },
+  "outputs": {
+    "docx": {
+      "path": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_终稿_v5.docx",
+      "bytes": 6460320,
+      "sha256": "8d6f3da38c2371f5ac780f583ee5b3a3f37a27c31627b49bdcc2d069dfc95de1"
+    },
+    "markdown": {
+      "path": "总结报告相关/总结报告_v1/稿件/正文文字稿_v5.md",
+      "bytes": 81046,
+      "sha256": "6f141a1e8f55ef325a38e5481c0d4d4d10e05701b0164c5a4be55a9848e9506e"
+    }
+  },
+  "counts": {
+    "tables": 7,
+    "body_figures": 8,
+    "total_png_media_including_cover_logo": 9,
+    "references": 13
+  }
+}

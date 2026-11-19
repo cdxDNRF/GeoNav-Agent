@@ -1,0 +1,144 @@
+{
+  "schema": "cv051-source-input-binding/v1",
+  "task": "CV-051",
+  "upstream_cv050_binding_schema": "cv050-source-input-binding/v1",
+  "upstream_frozen_sha256": {
+    "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/单步视觉实验冻结协议_v1.json": "a8db37bc4b0eb61a476b9ff3a9de7246818710b8b13a8fe170842d318630d003",
+    "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/单步定位统计基线对照_v1.json": "f68ccda34619e91d3adfc3176bc03ddf480c4a2c4c54754a32ec1e699eb3778c",
+    "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/核验/源码与输入绑定_v1.json": "f8d0cda52b75becd095134fbacae4b136c34fc6f7689b505d613f8eff1a39946",
+    "DATA/processed_data/OpenCVL/野测洁净簇冻结清单_v1/核验/评估器专用冻结台账_禁止入模.json": "e7208930708233dc040aac1d6ff61e3dae80ce73f0b93ba650cdcea217367282"
+  },
+  "encoder_asset_sha256": [
+    {
+      "path": "models/clip_vit_b32_public_v1/config.json",
+      "sha256": "b575ef3c36f2a057fa19e221650105052d61cc9c1a972ec15019c6261ec98770",
+      "bytes": 4186
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/preprocessor_config.json",
+      "sha256": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd",
+      "bytes": 316
+    },
+    {
+      "path": "models/clip_vit_b32_public_v1/pytorch_model.bin",
+      "sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+      "bytes": 605247071
+    },
+    {
+      "path": "models/Sat2Cap/config.json",
+      "sha256": "0a9cffa477a4bfc9682da841841b7e4227ad0cd06ad81d3eb1a831d5557976c5",
+      "bytes": 559
+    },
+    {
+      "path": "models/Sat2Cap/model.safetensors",
+      "sha256": "fec6802fbf27664ddd556fc445ff7d8e7ab0f05fea160c2e16680642dcebf3e0",
+      "bytes": 351420784
+    }
+  ],
+  "generator_sources": [
+    {
+      "path": "project/src/agents/opencvl_single_step_visual_v1.py",
+      "sha256": "702c1c08664b638f35bbec28dfb194edf9d1f12da2a7bf462e408aaefd9bc128",
+      "bytes": 46233
+    },
+    {
+      "path": "project/src/tools/run_opencvl_single_step_visual_v1.py",
+      "sha256": "34e3640e31fd3e4717a982ece456242dd1f1e4d61540b23e9e5a530961d33aee",
+      "bytes": 16155
+    },
+    {
+      "path": "project/src/eval/audit_opencvl_single_step_visual_v1.py",
+      "sha256": "2d57ab02b894e24e0d1b7b9bcdc25abe6b6f47102f89b71b6d6f5777378e5df6",
+      "bytes": 18038
+    },
+    {
+      "path": "project/src/tests/test_opencvl_single_step_visual_v1.py",
+      "sha256": "317ef90f70b72f1951fc4679d5af2ff14ee85b520e16ecd5c5e101335349efa4",
+      "bytes": 9884
+    }
+  ],
+  "generated_artifacts": [
+    {
+      "path": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/README.md",
+      "sha256": "a4d68260db44d395a526136ee6afd5e493ed01d0311803776a0d1921dabd314a",
+      "bytes": 2130
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/开发集冻结双塔特征缓存_v1.npz",
+      "sha256": "3b3fc69bd733cbf7a55da5f3815c07650d22e828a3a6fa58fa6e45c94ce2ba84",
+      "bytes": 41896026
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/单步视觉定位模型与消融结果_v1.json",
+      "sha256": "332195249cef26da113792f804f58378b0c37183bd593d54daae24f8dfe3f521",
+      "bytes": 6075615
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/四阶段科研路线与阶段二判定_v1.json",
+      "sha256": "82f86b2e2cf56a48f9c588cae85f11d1f4c3ea060d7c4ffbbe7ce0d4551640bb",
+      "bytes": 16751
+    }
+  ],
+  "alternate_audit_artifact": {
+    "path": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/核验/另实现复核_v1.json",
+    "sha256": "6904ec19dfa66404d317d35fd056ce239e34718a6af9b2c12433c4eb3c6af612",
+    "bytes": 1125
+  },
+  "extraction_accounting": {
+    "pair_count": 551,
+    "fit_train_pairs": 435,
+    "dev_val_pairs": 116,
+    "ground_forwards": 551,
+    "aerial_full_forwards": 551,
+    "aerial_center9_forwards": 551,
+    "total_forwards": 1653,
+    "max_live_encoders": 1,
+    "training_during_extraction": 0,
+    "blind_decodes": 0,
+    "verified_assets": [
+      {
+        "path": "models/clip_vit_b32_public_v1/config.json",
+        "sha256": "b575ef3c36f2a057fa19e221650105052d61cc9c1a972ec15019c6261ec98770",
+        "bytes": 4186
+      },
+      {
+        "path": "models/clip_vit_b32_public_v1/preprocessor_config.json",
+        "sha256": "910e70b3956ac9879ebc90b22fb3bc8a75b6a0677814500101a4c072bd7857bd",
+        "bytes": 316
+      },
+      {
+        "path": "models/clip_vit_b32_public_v1/pytorch_model.bin",
+        "sha256": "a63082132ba4f97a80bea76823f544493bffa8082296d62d71581a4feff1576f",
+        "bytes": 605247071
+      },
+      {
+        "path": "models/Sat2Cap/config.json",
+        "sha256": "0a9cffa477a4bfc9682da841841b7e4227ad0cd06ad81d3eb1a831d5557976c5",
+        "bytes": 559
+      },
+      {
+        "path": "models/Sat2Cap/model.safetensors",
+        "sha256": "fec6802fbf27664ddd556fc445ff7d8e7ab0f05fea160c2e16680642dcebf3e0",
+        "bytes": 351420784
+      }
+    ],
+    "frozen_tensor_checks": [
+      {
+        "kind": "ground",
+        "before_tensor_sha256": "3c3635af58b60b6d6a1832459be180f8c10314c3c5680836c51aa92f39023c24",
+        "after_tensor_sha256": "3c3635af58b60b6d6a1832459be180f8c10314c3c5680836c51aa92f39023c24",
+        "unchanged": true
+      },
+      {
+        "kind": "aerial",
+        "before_tensor_sha256": "a83f15403728bed8c971ec591a7d088120ccc820e6d0fe248b4773b3d1206556",
+        "after_tensor_sha256": "a83f15403728bed8c971ec591a7d088120ccc820e6d0fe248b4773b3d1206556",
+        "unchanged": true
+      }
+    ],
+    "cache_reused": true,
+    "extraction_wall_sec": 0.25
+  },
+  "blind_set_evaluated": false,
+  "blind_decodes": 0
+}

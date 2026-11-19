@@ -1,0 +1,201 @@
+{
+  "schema": "cv049-opencvl-wild-protocol/v1",
+  "task_id": "CV-049",
+  "frozen_date": "2026-11-14",
+  "revisions_adopted": [
+    "R1: Abandon naive 100m shifted-crop on native 100m x 100m tiles (avoids zero-padding and CV-046 <=9-step B10 saturation); freeze Stage-1 as Single-Step Cross-View Target Localization against FixedCell12 & CenterCross priors.",
+    "R2: Partition clean SE (591 pairs, 43 500m-clusters, 18 15km-macros) at macro-region level with blind confirmation gate and <=24 fit_train-only bounded QA quota.",
+    "R3: Hold PL (419 pairs, aerial_latlon=null) in a separate non-isolated reference account until future visual-hash/feature deduplication against Krakow."
+  ],
+  "primary_pose_namespace": "mast3rpnp",
+  "consensus_stratification": "Report all_pairs AND opensfm_cell_agree subset separately",
+  "native_geometry": {
+    "se": {
+      "aerial_px": [
+        625,
+        625
+      ],
+      "m_per_px": 0.16,
+      "footprint_m": [
+        100.0,
+        100.0
+      ]
+    },
+    "pl": {
+      "aerial_px": [
+        1000,
+        1000
+      ],
+      "m_per_px": 0.1,
+      "footprint_m": [
+        100.0,
+        100.0
+      ]
+    },
+    "grid": "5x5 half-open pixel bins; 20m x 20m per cell",
+    "formula": "x=W/2+dx_mast3rpnp; y=H/2-dy_mast3rpnp",
+    "zero_padding_permitted": false
+  },
+  "stage1_evaluation": {
+    "task": "Single-Step Cross-View Target Localization (ground RGB + full 100m 5x5 reference -> 25-cell distribution)",
+    "primary_metrics": [
+      "top1_25cell_acc",
+      "top3_25cell_acc",
+      "top5_25cell_acc",
+      "center9_conditional_acc",
+      "cross_entropy_nats",
+      "expected_planar_error_m"
+    ],
+    "mandatory_baselines": [
+      "AlwaysCell12Prior",
+      "UniformCenter9Prior",
+      "CenterCross_9step_reference_disclosure"
+    ],
+    "promotion_rule": "Must beat AlwaysCell12Prior strictly on development_validation AND post-freeze one-shot isolated_confirmation_blind (both all_pairs and opensfm_agree subsets)."
+  },
+  "data_governance": {
+    "declared_known_and_cv045_sources": 62,
+    "se_clean_500m_clusters": 43,
+    "se_clean_15km_macros": 18,
+    "fit_train_visual_qa_max_pairs": 24,
+    "dev_val_pixel_inspection_allowed": false,
+    "blind_confirmation_single_shot_only": true,
+    "pl_geographic_isolation_admitted": false
+  },
+  "role_summary": {
+    "blocked_known_overlap": {
+      "count": 351,
+      "unique_creators": 15,
+      "in_center9_count": 351,
+      "always_cell12_count": 102,
+      "always_cell12_rate": 0.290598,
+      "opensfm_agree_count": 273,
+      "opensfm_agree_rate": 0.777778,
+      "mast3rpnp_cell_histogram": {
+        "6": 22,
+        "7": 53,
+        "8": 23,
+        "11": 41,
+        "12": 102,
+        "13": 35,
+        "16": 20,
+        "17": 38,
+        "18": 17
+      }
+    },
+    "development_fit_train": {
+      "count": 435,
+      "unique_creators": 42,
+      "in_center9_count": 435,
+      "always_cell12_count": 141,
+      "always_cell12_rate": 0.324138,
+      "opensfm_agree_count": 326,
+      "opensfm_agree_rate": 0.749425,
+      "mast3rpnp_cell_histogram": {
+        "6": 12,
+        "7": 65,
+        "8": 22,
+        "11": 43,
+        "12": 141,
+        "13": 38,
+        "16": 38,
+        "17": 48,
+        "18": 28
+      }
+    },
+    "development_validation": {
+      "count": 116,
+      "unique_creators": 5,
+      "in_center9_count": 116,
+      "always_cell12_count": 49,
+      "always_cell12_rate": 0.422414,
+      "opensfm_agree_count": 66,
+      "opensfm_agree_rate": 0.568966,
+      "mast3rpnp_cell_histogram": {
+        "6": 4,
+        "7": 17,
+        "8": 4,
+        "11": 14,
+        "12": 49,
+        "13": 12,
+        "16": 1,
+        "17": 12,
+        "18": 3
+      }
+    },
+    "isolated_confirmation_blind": {
+      "count": 28,
+      "unique_creators": 11,
+      "in_center9_count": 28,
+      "always_cell12_count": 11,
+      "always_cell12_rate": 0.392857,
+      "opensfm_agree_count": 20,
+      "opensfm_agree_rate": 0.714286,
+      "mast3rpnp_cell_histogram": {
+        "6": 2,
+        "7": 4,
+        "8": 1,
+        "12": 11,
+        "13": 3,
+        "16": 2,
+        "17": 3,
+        "18": 2
+      }
+    },
+    "pl_pending_visual_dedup": {
+      "count": 419,
+      "unique_creators": 36,
+      "in_center9_count": 419,
+      "always_cell12_count": 125,
+      "always_cell12_rate": 0.298329,
+      "opensfm_agree_count": 286,
+      "opensfm_agree_rate": 0.682578,
+      "mast3rpnp_cell_histogram": {
+        "6": 15,
+        "7": 44,
+        "8": 20,
+        "11": 66,
+        "12": 125,
+        "13": 44,
+        "16": 21,
+        "17": 56,
+        "18": 28
+      }
+    },
+    "quarantined_cv045_vicinity": {
+      "count": 12,
+      "unique_creators": 7,
+      "in_center9_count": 12,
+      "always_cell12_count": 4,
+      "always_cell12_rate": 0.333333,
+      "opensfm_agree_count": 4,
+      "opensfm_agree_rate": 0.333333,
+      "mast3rpnp_cell_histogram": {
+        "6": 2,
+        "7": 2,
+        "11": 2,
+        "12": 4,
+        "17": 1,
+        "18": 1
+      }
+    }
+  },
+  "cross_role_clearance_km": {
+    "blind_vs_known_min_gap_km": 62.135,
+    "blind_vs_fit_train_min_center_km": 84.807,
+    "blind_vs_dev_val_min_center_km": 109.465,
+    "blind_vs_quarantine_min_center_km": 81.528,
+    "dev_val_vs_fit_train_min_center_km": 95.203,
+    "dev_val_vs_known_min_gap_km": 97.014
+  },
+  "execution_state": {
+    "pixels_decoded": 0,
+    "image_header_crc_only": true,
+    "training_runs": 0,
+    "model_forward_calls": 0,
+    "navigation_runs": 0,
+    "confirmation_consumed": 0,
+    "cv045_touched": false,
+    "mmgag_6groups_touched": false
+  }
+}

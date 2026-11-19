@@ -1,0 +1,32 @@
+{
+  "schema": "cv051-alternate-audit/v1",
+  "task": "CV-051",
+  "passed": true,
+  "checks": {
+    "zero_torch_import": true,
+    "upstream_cv049_cv050_hashes_match": true,
+    "encoder_asset_hashes_match": true,
+    "cv051_artifact_and_cache_hashes_match": true,
+    "max_live_encoders_eq_1_and_tensors_unchanged": true,
+    "cache_551_dev_only_and_unit_norms": true,
+    "overlap_matrices_within_1e12": true,
+    "six_stratum_metrics_within_1e9": true,
+    "gates_g1_to_g4_match": true,
+    "blind_confirmation_sealed_and_unleaked": true
+  },
+  "verified_counts": {
+    "fit_train_pairs": 435,
+    "dev_val_pairs": 116,
+    "cached_pairs": 551,
+    "blind_pairs_sealed": 28,
+    "total_encoder_forwards": 1653
+  },
+  "max_overlap_diff": 3.3306690738754696e-16,
+  "max_feature_norm_err": 2.524701714357036e-08,
+  "max_metric_diff": 8.881784197001252e-16,
+  "auditor_image_decodes": 0,
+  "blind_decodes": 0,
+  "blind_set_evaluated": false,
+  "independent_personnel_review": false,
+  "notes": "same Antigravity session, independent interval-edge overlap & 6-stratum G1-G4 audit without torch"
+}

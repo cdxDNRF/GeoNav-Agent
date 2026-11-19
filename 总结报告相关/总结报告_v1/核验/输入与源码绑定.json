@@ -1,0 +1,311 @@
+{
+  "task": "FINAL-001",
+  "date": "2026-10-16",
+  "inputs": {
+    "template": {
+      "path": "课程相关报告模版/综合工程设计-3-总结报告.docx",
+      "sha256": "669eae2df76c4442aea5e1c809413fad3b2e24253e63843bf80a386c810a2891",
+      "bytes": 78671,
+      "mutable_reference": false
+    },
+    "proposal": {
+      "path": "选题报告相关/最新版选题报告/18-基于主动探索的视觉地理定位方法设计与实现-陈德昕-李世显-陈龙辉.docx",
+      "sha256": "26ca1b139e68c86924a0b63a6bef00cfe70661708b45caf4121549eb27cef8ef",
+      "bytes": 385334,
+      "mutable_reference": false
+    },
+    "metadata": {
+      "path": "DATA/processed_data/Masa/metadata.csv",
+      "sha256": "564491fd8be5120274b4999e73a676096a361ede51de12ef05642eaa5610b5a9",
+      "bytes": 4551,
+      "mutable_reference": false
+    },
+    "m0": {
+      "path": "project/local_policy_default.json",
+      "sha256": "bb944dc9acf5ec0760d64e83a7599d9a61c1e4a8c736d3d9cfabbe4afcde874b",
+      "bytes": 4143,
+      "mutable_reference": false
+    },
+    "radial": {
+      "path": "project/defaults/masa_roads_grid10_radial_v1.json",
+      "sha256": "7d7563cad6b09214eddb74c7a0e4555ef940e023606654b3308f6a59676380ae",
+      "bytes": 4604,
+      "mutable_reference": false
+    },
+    "policy_training": {
+      "path": "DATA/processed_data/Masa/训练结果/PBRS完整导航与局部匹配对照_v1/预登记.json",
+      "sha256": "43176d0d41cf0d544d2336a11c10d17abd00f244e76c5de8e8b2ebc2a2c2fd07",
+      "bytes": 20091,
+      "mutable_reference": false
+    },
+    "head_training": {
+      "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/预登记.json",
+      "sha256": "b534d8a27cf7c795fc7fe5d2d947952c3e93b26a7e3950845b64bf5a4d7540ca",
+      "bytes": 25653,
+      "mutable_reference": false
+    },
+    "head_split": {
+      "path": "DATA/processed_data/Masa/训练结果/边缘连续性可信线索对照_v1/源图划分.json",
+      "sha256": "15eb5b79da10a006efaee65037027b944d1b1e7d9f7adb6b919b1b59632bce04",
+      "bytes": 32323,
+      "mutable_reference": false
+    },
+    "s2": {
+      "path": "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/对照汇总.json",
+      "sha256": "85d043ff63f838e18700037427518c643de3c7c06d0eeb0d50ba48db8e03a2a7",
+      "bytes": 13342,
+      "mutable_reference": false
+    },
+    "s2_verdict": {
+      "path": "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/验收结论.json",
+      "sha256": "96694ff74c206e1b062eed8a2ca6a1aa54891ec499a540ea79db6b39fc7e9500",
+      "bytes": 600,
+      "mutable_reference": false
+    },
+    "s2_audit": {
+      "path": "DATA/processed_data/Masa/评测结果/边缘线索S2正式复验_v1/独立复核.json",
+      "sha256": "1b99142ff02a1cdc9a24aa0cdae8d9f43d951736e1ea8890321a50c69b08fd35",
+      "bytes": 17685,
+      "mutable_reference": false
+    },
+    "s3": {
+      "path": "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/对照汇总.json",
+      "sha256": "6cb563c30efec47d41a986901283f2dfc35de144e077b7d9c17cafd4d3a1b3d1",
+      "bytes": 27801,
+      "mutable_reference": false
+    },
+    "s3_verdict": {
+      "path": "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/验收结论.json",
+      "sha256": "da4d5b62b71205edebfa4b78d5171ebfd053b84197eb10826b4ced0ebba3a958",
+      "bytes": 964,
+      "mutable_reference": false
+    },
+    "s3_audit": {
+      "path": "DATA/processed_data/Masa/评测结果/边缘线索S3独立源图确认_v1/独立复核.json",
+      "sha256": "d33c2ded9847bfcb7f93b0a7252c5f2da1aefe37e073bc72b04f969c5f3157a7",
+      "bytes": 18259,
+      "mutable_reference": false
+    },
+    "s4": {
+      "path": "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/对照汇总.json",
+      "sha256": "4361a8de2169db926d48afd7dea457596ac0f3c7ae264a50cea59c1e5843f9b4",
+      "bytes": 49867,
+      "mutable_reference": false
+    },
+    "s4_verdict": {
+      "path": "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/验收结论.json",
+      "sha256": "2c80528498810091bf844c869ef35d6a074fff4750dbc2a988e0f0723c60840c",
+      "bytes": 719,
+      "mutable_reference": false
+    },
+    "s4_audit": {
+      "path": "DATA/processed_data/Masa/评测结果/S4十乘十正式扩展_v1/独立复核.json",
+      "sha256": "d6f5987436ec262cd0b2a5238b48bb3f0719b459d55a70fd87b750dd8d72756f",
+      "bytes": 20179,
+      "mutable_reference": false
+    },
+    "swiss": {
+      "path": "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/对照汇总.json",
+      "sha256": "e314d81fe09425e9d37c8538efa067ad2035671435f939c395943561c8809c10",
+      "bytes": 43078,
+      "mutable_reference": false
+    },
+    "swiss_verdict": {
+      "path": "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/验收结论.json",
+      "sha256": "f08a6f91d11acd14389c5f21f52f503a964cb6e95e9cc82a668df37449327895",
+      "bytes": 994,
+      "mutable_reference": false
+    },
+    "swiss_audit": {
+      "path": "DATA/processed_data/SwissView/评测结果/五乘五正式迁移_v1/独立复核.json",
+      "sha256": "1584909598a51a541d49d946492d1dc8176a427369edfa85a0015d85cf8687e0",
+      "bytes": 19547,
+      "mutable_reference": false
+    },
+    "roads": {
+      "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/主对照/对照汇总.json",
+      "sha256": "8604190f266df130869a2b25e5c81f9a8dadd2736b4206f816b87e97d08fd3db",
+      "bytes": 49197,
+      "mutable_reference": false
+    },
+    "roads_verdict": {
+      "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/验收结论.json",
+      "sha256": "6a0c03af26fd3a4d07de29d9013e56b4efbcfc59fef79cc66e4c8f8885458e9d",
+      "bytes": 1283,
+      "mutable_reference": false
+    },
+    "roads_main_audit": {
+      "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/主对照/独立复核.json",
+      "sha256": "00181742dcd7333d32b30e4709d530a02fece8016c36fed24949a30541bf81fd",
+      "bytes": 2954,
+      "mutable_reference": false
+    },
+    "roads_target_audit": {
+      "path": "DATA/processed_data/MasaRoads/评测结果/径向保护独立新区域导航确认_v1/目标对照/独立复核.json",
+      "sha256": "592f882910b2ea67ac534d3470f3c970f73085b5ad91084832f63267842025aa",
+      "bytes": 4368,
+      "mutable_reference": false
+    },
+    "massgis": {
+      "path": "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/主对照/汇总.json",
+      "sha256": "278e167b36eb3e903f7bbfd394d73d34b86201f48652a46ce305ceb65f6bc772",
+      "bytes": 37976,
+      "mutable_reference": false
+    },
+    "massgis_verdict": {
+      "path": "DATA/processed_data/MassGIS/评测结果/正式十乘十十五乘十五确认_v1/验收结论.json",
+      "sha256": "8e9c98870d9b8e75595f1a048b76fa8336d392843c3a89f8f72317072b30779e",
+      "bytes": 16103,
+      "mutable_reference": false
+    },
+    "common": {
+      "path": "DATA/processed_data/Masa/评测结果/共同学习基线对照_v1/核验/正式独立复核_v1.json",
+      "sha256": "c3745b719b1429ca94ea95002001722c23b1a93a4e04d5bb671c9e0a40f9a216",
+      "bytes": 135120,
+      "mutable_reference": false
+    },
+    "geo": {
+      "path": "DATA/processed_data/Masa/训练结果/GeoExplorer分布一致性成对开发_v1/开发评测/开发汇总.json",
+      "sha256": "a32b518d10bbdc28f9a8f3d140bd28b07b6866ad0d6a24892c8761211e6ff9b3",
+      "bytes": 13998,
+      "mutable_reference": false
+    },
+    "geo_audit": {
+      "path": "DATA/processed_data/Masa/训练结果/GeoExplorer分布一致性成对开发_v1/核验/开发另实现复核.json",
+      "sha256": "e5eeba636abc9533dec8265226d7b1e5a8d840bb3fe84da3e6bf96272558a4b1",
+      "bytes": 307,
+      "mutable_reference": false
+    },
+    "drift": {
+      "path": "DATA/processed_data/MassGIS/评测结果/十五乘十五到达能力漂移诊断_v6/EVAL-004诊断与复核补充说明_v1.md",
+      "sha256": "8417ef8b966b6e86d55f4555bb70f4c2b80c109ac17f23fd97df63563fdba45a",
+      "bytes": 7817,
+      "mutable_reference": false
+    },
+    "platform10": {
+      "path": "平台/实验工作台_v4/便携闭环_v1/核验/最终交付复核_v1.json",
+      "sha256": "c8963c12b5a346611a52ea17005a5d43682a77604dfc2bc5d384bf15e994c721",
+      "bytes": 549,
+      "mutable_reference": false
+    },
+    "platform11": {
+      "path": "平台/实验工作台_v4/干净环境最小复跑_v1/核验/最终交付复核.json",
+      "sha256": "8d71da2d9fcf4b9be3ce7c05a208d7c7e9717ad1a7fb960be28a09e6a8f730da",
+      "bytes": 1092,
+      "mutable_reference": false
+    },
+    "platform12": {
+      "path": "平台/实验工作台_v4/发布彩排_v1/核验/最终交付复核.json",
+      "sha256": "9b27f3d39cf94f9e64641ad4a6a46614922f32ce7688597a5b857b45c933ec7e",
+      "bytes": 1499,
+      "mutable_reference": false
+    },
+    "retention": {
+      "path": "项目导航/归档永久清理_20261012_v1/README.md",
+      "sha256": "f8e470547231bb6dcb3ab95089aedb5be310b2e824aecfffff68f09e263d6cb8",
+      "bytes": 1855,
+      "mutable_reference": true
+    },
+    "navigator": {
+      "path": "project/src/agents/frozen_edge_navigator.py",
+      "sha256": "5c1e23bc34f2c907bcab1697ceeba8fadd370273fee2bfbaf54303cee3e38202",
+      "bytes": 5856,
+      "mutable_reference": false
+    },
+    "head": {
+      "path": "project/src/agents/edge_cue.py",
+      "sha256": "3e4fc82dc123b3f397c2f50f9e475909cd0a3642a8ae2765af0fdb45b2b4ba0c",
+      "bytes": 3597,
+      "mutable_reference": false
+    },
+    "cue": {
+      "path": "project/src/agents/target_cue.py",
+      "sha256": "09e8aa69114a0c7a5efc8c56743987febccd619849c77d8a53d7a257bdca2693",
+      "bytes": 2637,
+      "mutable_reference": false
+    },
+    "decoupled": {
+      "path": "project/src/agents/decoupled_cue.py",
+      "sha256": "b646a95c1018e3971c20d92620d3e6edd1e5885a307b7597b1d8d317ac504403",
+      "bytes": 1895,
+      "mutable_reference": false
+    },
+    "coverage": {
+      "path": "project/src/agents/parameterized_coverage.py",
+      "sha256": "086fb81e057738e14dfe786c2387d3e980f2e01a63191eb05cacba848610b556",
+      "bytes": 4546,
+      "mutable_reference": false
+    },
+    "training_code": {
+      "path": "project/src/train/dyncur_tiny.py",
+      "sha256": "5dc0d7ecef17ef0f067504215ecf6b379ddb0df32005c1f2590dba03e996a5e1",
+      "bytes": 17468,
+      "mutable_reference": false
+    },
+    "environment": {
+      "path": "project/src/env/environment.py",
+      "sha256": "ad19a173945f86ed04b18c0f5365e543217688d124271f51bc05f2747af92b5b",
+      "bytes": 5646,
+      "mutable_reference": false
+    },
+    "episode": {
+      "path": "project/src/env/episode.py",
+      "sha256": "3c85105ae7bf8efb90f1726e695c8db90e03544de342c874c08eb166e8019502",
+      "bytes": 4706,
+      "mutable_reference": false
+    },
+    "core": {
+      "path": "project/src/platform_core/engine_v2.py",
+      "sha256": "320cfafe0b5dffea7202b16d9faf0945a649d2833e17d458ba4af000a651d831",
+      "bytes": 32054,
+      "mutable_reference": false
+    },
+    "service": {
+      "path": "project/src/platform_core/service_v3.py",
+      "sha256": "6ab2d47b63ecf1031b3b413a65c302f9d7ba51b7c93868bbac7941021613b1b0",
+      "bytes": 1420,
+      "mutable_reference": false
+    },
+    "method_catalog": {
+      "path": "project/src/platform_core/method_catalog_v1.py",
+      "sha256": "f56abe9c6897756681af237004a5c7e8c3025ac71012428e4c8aa307da7b7093",
+      "bytes": 10847,
+      "mutable_reference": false
+    },
+    "server": {
+      "path": "project/src/webapp/workbench_server_v7.py",
+      "sha256": "a0cef0377596e968c9a4f0be53c5d3b3111132486af34d01b341c87fbb57e892",
+      "bytes": 3297,
+      "mutable_reference": false
+    },
+    "launcher": {
+      "path": "平台/启动平台.ps1",
+      "sha256": "92de86c540c40e49314a1cc6d1b990e48a2c3960e6f3befafe73c633f1e3bf83",
+      "bytes": 2474,
+      "mutable_reference": false
+    },
+    "gomaa_pdf": {
+      "path": "论文/GOMAA-Geo.pdf",
+      "sha256": "c3066cbb11f0e53d36e4a7e414a77a1a959b9053ea5467e1a6eeaeaf33a0287e",
+      "bytes": 14051742,
+      "mutable_reference": false
+    },
+    "geo_pdf": {
+      "path": "论文/GeoExplorer.pdf",
+      "sha256": "391d6e67618689522fc4aa19097abe1b24dbfbc74732babdc247cbe32e1de09f",
+      "bytes": 36935614,
+      "mutable_reference": false
+    },
+    "dyncur_pdf": {
+      "path": "论文/DynCur-Geo.pdf",
+      "sha256": "abbf401ac45daa1b27e4d90aef5a084357623bd1834f8ef402591835c9650301",
+      "bytes": 18817179,
+      "mutable_reference": false
+    }
+  },
+  "source": {
+    "path": "project/src/documents/build_final_outline_evidence_v1.py",
+    "sha256": "41a39918b1b8ce6f8f413fa5d91fcb6c54b869203248b6ce4c1cdc7a44dcdd42"
+  },
+  "scope": "read-only document preparation; no project-model import/forward/training/navigation/API"
+}

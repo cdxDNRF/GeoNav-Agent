@@ -1,5 +1,5 @@
 {
-  "updated": "2026-11-10",
+  "updated": "2026-11-14",
   "policy": "登记替代关系，不按最大版本号或无静态引用判删除",
   "current": {
     "platform": "平台/README.md",
@@ -66,16 +66,19 @@
     "demonstration_card": "中期报告相关/中期成果更新_20261025/交付/演示操作卡.html",
     "midterm_entry": "中期报告相关/README.md",
     "final_report_preparation": "总结报告相关/总结准备_v1/README.md",
-    "final_report_plan": "总结报告相关/总结准备_v1/总结阶段计划_v1.md",
+    "final_report_plan": "总结报告相关/总结准备_v1/总结阶段计划_v2.md",
+    "final_report_plan_v1_frozen": "总结报告相关/总结准备_v1/总结阶段计划_v1.md",
     "final_report_template": "课程相关报告模版/综合工程设计-3-总结报告.docx",
     "final_report_workspace": "总结报告相关/总结报告_v1/README.md",
     "final_report_outline": "总结报告相关/总结报告_v1/准备/详细大纲_v1.md",
     "final_claim_evidence": "总结报告相关/总结报告_v1/准备/论断与证据表.md",
-    "final_report": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.docx",
-    "final_report_pdf": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.pdf",
+    "final_report": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_终稿_v5.docx",
+    "final_report_pdf": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_终稿_v5.pdf",
+    "final_report_markdown": "总结报告相关/总结报告_v1/稿件/正文文字稿_v5.md",
     "final_report_entry": "总结报告相关/总结报告_v1/README.md",
-    "final_report_content": "project/src/documents/final_report_content_v3.json",
-    "final_report_audit": "总结报告相关/总结报告_v1/核验/初稿_v1/修订_v2/终校_v4/最终交付复核.json",
+    "final_claim_evidence_v2": "总结报告相关/总结报告_v1/准备/增量证据绑定_v2.json",
+    "final_report_content": "project/src/documents/final_report_content_v5.json",
+    "final_report_audit": "总结报告相关/总结报告_v1/核验/终稿_v5/最终正文与原件核验_v5.json",
     "crossview_entry": "DATA/processed_data/MM-GAG/跨视角公开资产准入_v1/README.md",
     "crossview_inventory": "DATA/processed_data/MM-GAG/数据核验与跨视角准入_v1/数据准入汇总.json",
     "crossview_next_plan": "DATA/processed_data/MM-GAG/跨视角公开资产准入_v1/下一项权重获取与工程条件.md",
@@ -202,6 +205,26 @@
     "confirmation_protocol_machine": "调研/27_三源确认协议_v1.json",
     "translated_window_preparation": "调研/28_真实上下文与同尺度取窗准备_v1.md",
     "translated_window_phase_decision": "调研/28_用户答复与阶段收束_v1.json",
+    "opencvl_wild_intake_module": "project/src/data/opencvl_wild_intake_v1.py",
+    "opencvl_wild_freeze_driver": "project/src/tools/freeze_opencvl_wild_v1.py",
+    "opencvl_wild_audit": "project/src/eval/audit_opencvl_wild_intake_v1.py",
+    "opencvl_wild_protocol_doc": "调研/29_OpenCVL野测簇冻结与单步目标协议_v1.md",
+    "opencvl_wild_protocol_machine": "DATA/processed_data/OpenCVL/野测洁净簇冻结清单_v1/协议冻结_v1.json",
+    "opencvl_wild_public_split_manifest": "DATA/processed_data/OpenCVL/野测洁净簇冻结清单_v1/公开洁净划分清单_v1.json",
+    "opencvl_wild_evaluator_ledger": "DATA/processed_data/OpenCVL/野测洁净簇冻结清单_v1/核验/评估器专用冻结台账_禁止入模.json",
+    "opencvl_wild_qa_module": "project/src/data/opencvl_wild_qa_v1.py",
+    "opencvl_wild_qa_driver": "project/src/tools/run_opencvl_wild_qa_v1.py",
+    "opencvl_wild_qa_audit": "project/src/eval/audit_opencvl_wild_qa_v1.py",
+    "opencvl_wild_qa_protocol_doc": "调研/30_OpenCVL开发集分歧抽检与单步基线协议_v1.md",
+    "opencvl_wild_qa_report": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/抽检24对画质与分歧核验_v1.json",
+    "opencvl_wild_statistical_baselines": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/单步定位统计基线对照_v1.json",
+    "opencvl_wild_cv051_protocol": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/单步视觉实验冻结协议_v1.json",
+    "opencvl_stage2_visual_module": "project/src/agents/opencvl_single_step_visual_v1.py",
+    "opencvl_stage2_visual_driver": "project/src/tools/run_opencvl_single_step_visual_v1.py",
+    "opencvl_stage2_visual_audit": "project/src/eval/audit_opencvl_single_step_visual_v1.py",
+    "opencvl_stage2_visual_report": "调研/31_OpenCVL阶段二单步视觉定位实验与消融报告_v1.md",
+    "opencvl_stage2_visual_results": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/单步视觉定位模型与消融结果_v1.json",
+    "opencvl_four_stage_roadmap": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/四阶段科研路线与阶段二判定_v1.json",
     "controller_contract": "project/src/platform_core/navigation_controller_v1.py",
     "controller_cli": "project/src/platform_core/controller_cli_v3.py",
     "controller_hub": "project/src/platform_core/controller_hub_v2.py",
@@ -7151,6 +7174,30 @@
     "next_task": "FINAL-001 outline and claim-evidence mapping; planned, unclaimed",
     "recover": "Read DOC-008 plan and source manifest; do not regenerate old Word/PPT or rerun sealed experiments"
   },
+  "final_report_plan_v2_doc012": {
+    "id": "DOC-012",
+    "date": "2026-11-14",
+    "status": "current_final_plan_aligned_to_stage4_closure",
+    "path": "总结报告相关/总结准备_v1/总结阶段计划_v2.md",
+    "sha256": "a96f8e3e4914312962c6fb7b819fe7f2fd9755307dbb94b4cbb3ffba70b73ac1",
+    "bytes": 14051,
+    "supersedes_current_plan": "总结报告相关/总结准备_v1/总结阶段计划_v1.md",
+    "preserved_v1_sha256": "ecd16abaf4ffb8a46df768f66136ac0f1ce5f5e0de1dc9f7ec0cf183d498d487",
+    "aligned_completed_milestones": [
+      "FINAL-001/002 (初稿_v4, 29页, 11089字)",
+      "PLATFORM-034~042 (GeoNav V5.0 + Lite + 双demo包)",
+      "DOC-011 / FIG-001 (22页中期报告 + 25页学术PPT + 13幅图)",
+      "CV-001~051 (MM-GAG + OpenCVL Stage 1-2 诚实负向收束)"
+    ],
+    "completed_followups": [
+      "FINAL-003 (增量证据绑定 v2, 5 claims C24-C28 / 95 facts)",
+      "FINAL-004 (总结终稿_v5.docx/.pdf, 40页, 17717中文字, 图8)"
+    ],
+    "next_steps": [
+      "FINAL-005 (结题答辩PPT)",
+      "FINAL-006 (最终提交包封存)"
+    ]
+  },
   "final_report_outline_delivery": {
     "id": "FINAL-001",
     "date": "2026-10-16",
@@ -7217,7 +7264,14 @@
     {
       "id": "FINAL-002",
       "date": "2026-10-16",
-      "status": "stage_snapshot_pending_crossview_extension",
+      "status": "superseded_by_final_v5_and_byte_archived",
+      "superseded_by": "FINAL-003/FINAL-004",
+      "archive_map_v5": "总结报告相关/总结报告_v1/核验/终稿_v5/被替代稿迁移映射_v5.json",
+      "archived_paths": [
+        "归档/总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.docx",
+        "归档/总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.pdf",
+        "归档/总结报告相关/总结报告_v1/稿件/正文文字稿_v3.md"
+      ],
       "path": "总结报告相关/总结报告_v1",
       "current_docx": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.docx",
       "current_pdf": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_初稿_v4.pdf",
@@ -7292,6 +7346,92 @@
       "video_directory_excluded": true,
       "service_observation": "2026-10-29 loopback connection refused; no start/stop in DOC-010",
       "rollback": "原报告/PPT与旧操作卡原址只读可用；当前准备入口见中期README，不重跑冻结生成器"
+    },
+    {
+      "id": "FINAL-003/FINAL-004",
+      "date": "2026-11-14",
+      "status": "current_final_technical_report_v5_verified",
+      "path": "总结报告相关/总结报告_v1",
+      "plan": "总结报告相关/总结准备_v1/总结阶段计划_v2.md",
+      "current_docx": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_终稿_v5.docx",
+      "current_docx_bytes": 1848394,
+      "current_docx_sha256": "288cf54de5ea12b84eb404853525862aeca50b1c8336fa35b62aa0e0e785c362",
+      "current_pdf": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_终稿_v5.pdf",
+      "current_pdf_bytes": 5477278,
+      "current_pdf_sha256": "221a8d30bf3ef5857b5028288a050faedce3a5af256021dce84b0765bf86214a",
+      "current_markdown": "总结报告相关/总结报告_v1/稿件/正文文字稿_v5.md",
+      "current_markdown_bytes": 81046,
+      "current_markdown_sha256": "6f141a1e8f55ef325a38e5481c0d4d4d10e05701b0164c5a4be55a9848e9506e",
+      "incremental_binding": "总结报告相关/总结报告_v1/准备/增量证据绑定_v2.json",
+      "incremental_binding_sha256": "7c83fe111c74e22f0d2328b4cd9d5ab02427de7cfae0677fe926d8300843b25b",
+      "figure_8": "绘图/数据结果图/08_OpenCVL阶段二单步视觉定位与消融实证对比.png",
+      "content_source": "project/src/documents/final_report_content_v5.json",
+      "builder": "project/src/documents/build_final_report_v5.js",
+      "auditor": "project/src/documents/audit_final_report_v5.py",
+      "final_audit": "总结报告相关/总结报告_v1/核验/终稿_v5/最终正文与原件核验_v5.json",
+      "final_audit_sha256": "fc8ed876ddd5ab9b6617a00698fa79359e75a8c1dbac569f763cc4e05a674c",
+      "delivery_manifest": "总结报告相关/总结报告_v1/核验/终稿_v5/交付文件哈希_v5.json",
+      "archive_mapping": "总结报告相关/总结报告_v1/核验/终稿_v5/被替代稿迁移映射_v5.json",
+      "pages": 40,
+      "main_body_cjk": 17717,
+      "tables": 7,
+      "figures": 8,
+      "equations": 4,
+      "references": 13,
+      "claims_v1": 23,
+      "facts_v1": 83,
+      "claims_v2": 5,
+      "facts_v2": 95,
+      "opencvl_blind_28_untouched": true,
+      "new_experiments": 0,
+      "model_calls": 0,
+      "superseded_drafts_archived": 3,
+      "replaces": "FINAL-002 初稿_v4 (byte-archived under 归档/总结报告相关/总结报告_v1/稿件/)",
+      "rollback": "Restore byte-identical 初稿_v4 from 归档/总结报告相关/总结报告_v1/稿件/ per 被替代稿迁移映射_v5.json; read-only audit via audit_final_report_v5.py audit"
+    },
+    {
+      "id": "FINAL-005/FINAL-006",
+      "date": "2026-11-14",
+      "status": "current_final_defense_ppt_and_sealed_closure",
+      "path": "总结报告相关/总结报告_v1",
+      "plan": "总结报告相关/总结准备_v1/总结阶段计划_v2.md",
+      "defense_pptx": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_结题答辩PPT.pptx",
+      "defense_pptx_bytes": 13496563,
+      "defense_pptx_sha256": "7fe77b7a1bada3a5b33072084fefb8812dc613e0abaa40d4838ac78e4148184b",
+      "defense_pdf": "总结报告相关/总结报告_v1/稿件/总结报告_基于主动探索的视觉地理定位方法设计与实现_结题答辩PPT.pdf",
+      "defense_pdf_bytes": 10564666,
+      "defense_pdf_sha256": "8fbf3c8fbc818c312e9d0559a031f60023acad615aa57572c466e67d87637cb1",
+      "speaker_script": "总结报告相关/总结报告_v1/稿件/结题答辩讲稿与现场操作卡.md",
+      "speaker_script_bytes": 14523,
+      "speaker_script_sha256": "037aa6e4bf91032d704746b3be5d6ca3ff6e38734794ee8c07a28b1d05d5017e",
+      "ppt_builder": "project/src/documents/build_final_ppt_v1.py",
+      "delivery_auditor": "project/src/documents/audit_final_delivery_v1.py",
+      "rehearsal_receipt": "总结报告相关/总结报告_v1/核验/答辩PPT_v1/平台实机预演回执_v1.json",
+      "rehearsal_receipt_sha256": "a3ffcbaec085d6177b1bcf3b0afcc01b5fca5ec2cba3a4e7410ac242b87c3655",
+      "ppt_audit": "总结报告相关/总结报告_v1/核验/答辩PPT_v1/PPT构建与结构核验_v1.json",
+      "ppt_audit_sha256": "6f9dade7d31f703d61ae0158eff53c66e84331bfc3351c02f3f2500ee5f410ed",
+      "seal_manifest": "总结报告相关/总结报告_v1/核验/提交封存_v1/最终提交物清单与封存_v1.json",
+      "seal_manifest_sha256": "ce42ee51745ca3d0fe751ba68a245384f6577c05013cf65c0b4ea405d7ffe9c6",
+      "unified_summary": "总结报告相关/总结报告_v1/核验/提交封存_v1/最终一键验收汇总_v1.json",
+      "ppt_slides": 22,
+      "review_images_verified": 29,
+      "sealed_deliverables": 17,
+      "suites_passed": {
+        "test_workbench_v5": "6/6",
+        "test_lite_workbench": "6/6",
+        "audit_opencvl_single_step_visual_v1": "10/10",
+        "audit_final_report_v5": "passed (40p, 17717 CJK, 55.04 MiB)"
+      },
+      "demo_v5_zip_bytes": 378384760,
+      "demo_v5_zip_sha256": "e47677337a46b81b1b681f6af9812a8b041856258b52b6c5c7cf34ab941bc59a",
+      "demo_lite_zip_bytes": 306198057,
+      "demo_lite_zip_sha256": "7cf34ed84f5c4ea797dcd24d98e455c2a5186dc137491fab4c63dd5ce029b749",
+      "opencvl_blind_28_untouched": true,
+      "new_experiments": 0,
+      "model_calls": 0,
+      "midterm_pptx_preserved": true,
+      "final_v5_report_preserved": true,
+      "rollback": "All 17 deliverables verified byte-identical in 最终提交物清单与封存_v1.json; read-only verification via python -X utf8 -B -m project.src.documents.audit_final_delivery_v1 --verify-only"
     }
   ],
   "runtime_model_assets": [
@@ -8912,6 +9052,233 @@
       }
     ],
     "retained_bytes": 75479
+  },
+  "opencvl_wild_protocol_cv049": {
+    "id": "CV-049",
+    "date": "2026-11-14",
+    "status": "protocol_and_clean_cluster_split_frozen_zero_training_zero_confirmation",
+    "upstream_raw": "DATA/raw_data/OpenCVL/OpenCVL/mapillary/in_the_wild_test/",
+    "se_role_counts": {
+      "blocked_known_overlap": 351,
+      "quarantined_cv045_vicinity": 12,
+      "development_fit_train": 435,
+      "development_validation": 116,
+      "isolated_confirmation_blind": 28
+    },
+    "pl_count_pending_dedup": 419,
+    "pixels_decoded": 0,
+    "png_headers_crc_checked": 2722,
+    "model_calls": 0,
+    "training": 0,
+    "formal_confirmation_consumed": 0,
+    "unit_tests": 23,
+    "replaces": null,
+    "preserves_upstream": [
+      "project/src/data/capturepoint_intake_v1.py",
+      "project/src/data/capturepoint_corrected_v1.py",
+      "project/src/tools/inspect_capturepoint_intake_v1.py",
+      "DATA/processed_data/OpenCVL/公开瑞典三候选校正标签预检_v1/首获取冻结绑定.json"
+    ],
+    "alternate_audit": "DATA/processed_data/OpenCVL/野测洁净簇冻结清单_v1/核验/另实现复核_v1.json",
+    "alternate_audit_sha256": "f4b5ad0918dc38d8183fd10558d5624326c356d9c18a19dbb749434765465111",
+    "source_binding": "DATA/processed_data/OpenCVL/野测洁净簇冻结清单_v1/核验/源码与输入绑定_v1.json",
+    "source_binding_sha256": "ff084f54de84072ccc82ec3afbbd77f0f13ffff0f57c46ef8bb94500bd9a39d4",
+    "sources": [
+      {
+        "path": "project/src/data/opencvl_wild_intake_v1.py",
+        "sha256": "5db0a7f5c4869c827b547d4fee9ca4bd2223c444cb78f4670ed762dafdbcf838",
+        "bytes": 11668
+      },
+      {
+        "path": "project/src/tools/freeze_opencvl_wild_v1.py",
+        "sha256": "0503b27d99283dcf93fb96e8df99b70061ef7416dd20b199c3db53e4fb27fc59",
+        "bytes": 14209
+      },
+      {
+        "path": "project/src/eval/audit_opencvl_wild_intake_v1.py",
+        "sha256": "1747a61f8bdceba3554a2ad0cff83aac3d5379335aa93e2a93d2f03fdc5d306d",
+        "bytes": 9349
+      },
+      {
+        "path": "project/src/tests/test_opencvl_wild_intake_v1.py",
+        "sha256": "3c3230f173977be7aa274d23cfd1477281917e9e9b50bcdbea2e4dddef9aa782",
+        "bytes": 5476
+      }
+    ],
+    "retained_bytes": 2692013
+  },
+  "opencvl_wild_qa_and_single_step_baseline_cv050": {
+    "id": "CV-050",
+    "date": "2026-11-14",
+    "status": "fit_train_qa_and_stage1_statistical_baselines_frozen",
+    "replaces": null,
+    "depends_on": "CV-049",
+    "output_dir": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1",
+    "protocol_doc": "调研/30_OpenCVL开发集分歧抽检与单步基线协议_v1.md",
+    "binding": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/核验/源码与输入绑定_v1.json",
+    "binding_sha256": "f8d0cda52b75becd095134fbacae4b136c34fc6f7689b505d613f8eff1a39946",
+    "alternate_audit": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/核验/另实现复核_v1.json",
+    "alternate_audit_sha256": "a70324690dd5551ae1b7091966f89d37466cc4232b5f4bf19ba7d401f45e811e",
+    "sampled_pairs": 24,
+    "image_decodes": 48,
+    "non_fit_train_decodes": 0,
+    "fit_train_pairs": 435,
+    "dev_val_pairs": 116,
+    "blind_pairs_sealed": 28,
+    "unit_tests_total_passed": 29,
+    "cv050_unit_tests": 6,
+    "model_calls": 0,
+    "training": 0,
+    "formal_confirmation_consumed": 0,
+    "artifacts": [
+      {
+        "path": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/README.md",
+        "sha256": "696c1ef193e82b105bd4db071bc12e83565285e89235ab85f85f04105a75ab55",
+        "bytes": 3298
+      },
+      {
+        "path": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/抽检24对画质与分歧核验_v1.json",
+        "sha256": "1f252a7661ece3c0d3d2b457a39ccade13759d46ab29172fa710f544faba45e8",
+        "bytes": 94823
+      },
+      {
+        "path": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/单步定位统计基线对照_v1.json",
+        "sha256": "f68ccda34619e91d3adfc3176bc03ddf480c4a2c4c54754a32ec1e699eb3778c",
+        "bytes": 38104
+      },
+      {
+        "path": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/单步视觉实验冻结协议_v1.json",
+        "sha256": "a8db37bc4b0eb61a476b9ff3a9de7246818710b8b13a8fe170842d318630d003",
+        "bytes": 4309
+      },
+      {
+        "path": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/核验/另实现复核_v1.json",
+        "sha256": "a70324690dd5551ae1b7091966f89d37466cc4232b5f4bf19ba7d401f45e811e",
+        "bytes": 1214
+      },
+      {
+        "path": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/核验/源码与输入绑定_v1.json",
+        "sha256": "f8d0cda52b75becd095134fbacae4b136c34fc6f7689b505d613f8eff1a39946",
+        "bytes": 3116
+      }
+    ],
+    "sources": [
+      {
+        "path": "project/src/data/opencvl_wild_qa_v1.py",
+        "sha256": "f4d04bbf4974031f2a7bf82ec975ac0fc3c6bfddf403455ea4765a5d9f2d56b0",
+        "bytes": 25365
+      },
+      {
+        "path": "project/src/tools/run_opencvl_wild_qa_v1.py",
+        "sha256": "686dec6e1e1782a295b053bdc5da01d0d5e4bdb3082864b35537b257c7d59153",
+        "bytes": 25490
+      },
+      {
+        "path": "project/src/eval/audit_opencvl_wild_qa_v1.py",
+        "sha256": "dd2d288e905dedd1b5f4da630c12432dc37dccaf0e6ecc2eefae1ff94a5f2273",
+        "bytes": 18200
+      },
+      {
+        "path": "project/src/tests/test_opencvl_wild_qa_v1.py",
+        "sha256": "ee69303dc657802e3992362fa76f4e4d11afb4105826d494b805882ee1cf510d",
+        "bytes": 8492
+      }
+    ],
+    "retained_bytes": 144864
+  },
+  "opencvl_stage2_single_step_visual_cv051": {
+    "id": "CV-051",
+    "date": "2026-11-14",
+    "status": "stage2_negative_stop_verified_no_blind_consumption",
+    "decision": "STOP_AT_STAGE2_NEGATIVE_AND_PROCEED_TO_STAGE4_CLOSURE",
+    "replaces": null,
+    "depends_on": "CV-050",
+    "output_dir": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1",
+    "report_doc": "调研/31_OpenCVL阶段二单步视觉定位实验与消融报告_v1.md",
+    "report_doc_sha256": "a1f0dc30112f4275e33705a4fa8c6b16170d6bda0202483d9e18fd4851330b65",
+    "report_doc_bytes": 16746,
+    "binding": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/核验/源码与输入绑定_v1.json",
+    "alternate_audit": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/核验/另实现复核_v1.json",
+    "alternate_audit_sha256": "6904ec19dfa66404d317d35fd056ce239e34718a6af9b2c12433c4eb3c6af612",
+    "fit_train_pairs": 435,
+    "dev_val_pairs": 116,
+    "cached_pairs": 551,
+    "total_encoder_forwards": 1653,
+    "max_live_encoders": 1,
+    "blind_pairs_sealed": 28,
+    "blind_decodes": 0,
+    "blind_set_evaluated": false,
+    "stage3_triggered": false,
+    "unit_tests_total_passed": 35,
+    "cv051_unit_tests": 6,
+    "declared_storage_cap_mib": 48,
+    "retention_classification": {
+      "regenerable_local_cache_gitignored": [
+        "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/开发集冻结双塔特征缓存_v1.npz"
+      ],
+      "audit_evidence_originals": [
+        "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/README.md",
+        "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/单步视觉定位模型与消融结果_v1.json",
+        "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/四阶段科研路线与阶段二判定_v1.json",
+        "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/核验/源码与输入绑定_v1.json",
+        "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/核验/另实现复核_v1.json"
+      ]
+    },
+    "artifacts": [
+      {
+        "path": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/README.md",
+        "sha256": "a4d68260db44d395a526136ee6afd5e493ed01d0311803776a0d1921dabd314a",
+        "bytes": 2130
+      },
+      {
+        "path": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/开发集冻结双塔特征缓存_v1.npz",
+        "sha256": "3b3fc69bd733cbf7a55da5f3815c07650d22e828a3a6fa58fa6e45c94ce2ba84",
+        "bytes": 41896026
+      },
+      {
+        "path": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/单步视觉定位模型与消融结果_v1.json",
+        "sha256": "332195249cef26da113792f804f58378b0c37183bd593d54daae24f8dfe3f521",
+        "bytes": 6075615
+      },
+      {
+        "path": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/四阶段科研路线与阶段二判定_v1.json",
+        "sha256": "82f86b2e2cf56a48f9c588cae85f11d1f4c3ea060d7c4ffbbe7ce0d4551640bb",
+        "bytes": 16751
+      },
+      {
+        "path": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/核验/另实现复核_v1.json",
+        "sha256": "6904ec19dfa66404d317d35fd056ce239e34718a6af9b2c12433c4eb3c6af612",
+        "bytes": 1125
+      },
+      {
+        "path": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/核验/源码与输入绑定_v1.json",
+        "sha256": "self_referential_binding_json",
+        "bytes": 5950
+      }
+    ],
+    "sources": [
+      {
+        "path": "project/src/agents/opencvl_single_step_visual_v1.py",
+        "sha256": "702c1c08664b638f35bbec28dfb194edf9d1f12da2a7bf462e408aaefd9bc128",
+        "bytes": 46233
+      },
+      {
+        "path": "project/src/tools/run_opencvl_single_step_visual_v1.py",
+        "sha256": "34e3640e31fd3e4717a982ece456242dd1f1e4d61540b23e9e5a530961d33aee",
+        "bytes": 16155
+      },
+      {
+        "path": "project/src/eval/audit_opencvl_single_step_visual_v1.py",
+        "sha256": "2d57ab02b894e24e0d1b7b9bcdc25abe6b6f47102f89b71b6d6f5777378e5df6",
+        "bytes": 18038
+      },
+      {
+        "path": "project/src/tests/test_opencvl_single_step_visual_v1.py",
+        "sha256": "317ef90f70b72f1951fc4679d5af2ff14ee85b520e16ecd5c5e101335349efa4",
+        "bytes": 9884
+      }
+    ],
+    "retained_bytes": 47997597
   },
   "platform031_unified_controller": {
     "id": "PLATFORM-031",

@@ -1,0 +1,100 @@
+{
+  "schema": "final-delivery-unified-summary/v1",
+  "date": "2026-11-14",
+  "task": "FINAL-005/FINAL-006",
+  "passed": true,
+  "ppt_audit_passed": true,
+  "invariants_passed": true,
+  "suites_passed": true,
+  "suites": [
+    {
+      "suite": "test_workbench_v5",
+      "cmd": "D:\\PYTHON\\python.exe -X utf8 -B project/src/tests/test_workbench_v5.py",
+      "returncode": 0,
+      "elapsed_sec": 132.448,
+      "passed": true,
+      "stdout_tail": [],
+      "stderr_tail": [
+        "Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]",
+        "Loading weights: 100%|██████████| 200/200 [00:00<00:00, 4587.35it/s]",
+        "......",
+        "----------------------------------------------------------------------",
+        "Ran 6 tests in 81.232s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "suite": "test_lite_workbench",
+      "cmd": "D:\\PYTHON\\python.exe -X utf8 -B project/src/tests/test_lite_workbench.py",
+      "returncode": 0,
+      "elapsed_sec": 142.73,
+      "passed": true,
+      "stdout_tail": [],
+      "stderr_tail": [
+        "Loading weights:   0%|          | 0/200 [00:00<?, ?it/s]",
+        "Loading weights: 100%|██████████| 200/200 [00:00<00:00, 4271.25it/s]",
+        "......",
+        "----------------------------------------------------------------------",
+        "Ran 6 tests in 82.558s",
+        "",
+        "OK"
+      ]
+    },
+    {
+      "suite": "audit_opencvl_stage2",
+      "cmd": "D:\\PYTHON\\python.exe -X utf8 -B project/src/eval/audit_opencvl_single_step_visual_v1.py",
+      "returncode": 0,
+      "elapsed_sec": 1.9,
+      "passed": true,
+      "stdout_tail": [
+        "{\"schema\": \"cv051-alternate-audit/v1\", \"task\": \"CV-051\", \"passed\": true, \"checks\": {\"zero_torch_import\": true, \"upstream_cv049_cv050_hashes_match\": true, \"encoder_asset_hashes_match\": true, \"cv051_artifact_and_cache_hashes_match\": true, \"max_live_encoders_eq_1_and_tensors_unchanged\": true, \"cache_551_dev_only_and_unit_norms\": true, \"overlap_matrices_within_1e12\": true, \"six_stratum_metrics_within_1e9\": true, \"gates_g1_to_g4_match\": true, \"blind_confirmation_sealed_and_unleaked\": true}, \"verified_counts\": {\"fit_train_pairs\": 435, \"dev_val_pairs\": 116, \"cached_pairs\": 551, \"blind_pairs_sealed\": 28, \"total_encoder_forwards\": 1653}, \"max_overlap_diff\": 3.3306690738754696e-16, \"max_feature_norm_err\": 2.524701714357036e-08, \"max_metric_diff\": 8.881784197001252e-16, \"auditor_image_decodes\": 0, \"blind_decodes\": 0, \"blind_set_evaluated\": false, \"independent_personnel_review\": false, \"notes\": \"same Antigravity session, independent interval-edge overlap & 6-stratum G1-G4 audit without torch\"}"
+      ],
+      "stderr_tail": []
+    },
+    {
+      "suite": "audit_final_report_v5",
+      "cmd": "D:\\PYTHON\\python.exe -X utf8 -B -m project.src.documents.audit_final_report_v5 audit",
+      "returncode": 0,
+      "elapsed_sec": 2.219,
+      "passed": true,
+      "stdout_tail": [
+        "{\"passed\": true, \"pages\": 40, \"cjk\": 17717, \"mib\": 55.04, \"failures\": []}"
+      ],
+      "stderr_tail": []
+    }
+  ],
+  "invariants": {
+    "passed": true,
+    "failures": [],
+    "opencvl_blind_28_untouched": true,
+    "final004_v5_intact": true,
+    "demo_zips": [
+      {
+        "path": "demo/中期demo.zip",
+        "bytes": 378384760,
+        "mib": 360.86,
+        "sha256": "e47677337a46b81b1b681f6af9812a8b041856258b52b6c5c7cf34ab941bc59a",
+        "entry_count": 5923,
+        "forbidden_hits": [],
+        "passed": true
+      },
+      {
+        "path": "demo/小型演示demo.zip",
+        "bytes": 306198057,
+        "mib": 292.01,
+        "sha256": "7cf34ed84f5c4ea797dcd24d98e455c2a5186dc137491fab4c63dd5ce029b749",
+        "entry_count": 4993,
+        "forbidden_hits": [],
+        "passed": true
+      }
+    ],
+    "leftover_rehearsal_scripts": [],
+    "report_v1_total_bytes": 57709614,
+    "report_v1_total_mib": 55.04,
+    "lifecycle_json_valid": true
+  },
+  "sealed_file_count": 17,
+  "seal_manifest_path": "总结报告相关/总结报告_v1/核验/提交封存_v1/最终提交物清单与封存_v1.json",
+  "seal_manifest_sha256": "ce42ee51745ca3d0fe751ba68a245384f6577c05013cf65c0b4ea405d7ffe9c6"
+}

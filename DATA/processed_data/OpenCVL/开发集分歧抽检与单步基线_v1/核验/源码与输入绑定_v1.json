@@ -1,0 +1,70 @@
+{
+  "schema": "cv050-source-input-binding/v1",
+  "task": "CV-050",
+  "upstream_cv049_binding_schema": "cv049-source-input-binding/v1",
+  "upstream_frozen_sha256": {
+    "DATA/processed_data/OpenCVL/野测洁净簇冻结清单_v1/协议冻结_v1.json": "75d0ebcee98083e464dd8466149cb4121b02aecee4a41ca61e159a3626aeb0e7",
+    "DATA/processed_data/OpenCVL/野测洁净簇冻结清单_v1/公开洁净划分清单_v1.json": "eef252acfe2952202ff7486e77ad5b438f23892ceca5ed2163bef4a4d823b59f",
+    "DATA/processed_data/OpenCVL/野测洁净簇冻结清单_v1/核验/评估器专用冻结台账_禁止入模.json": "e7208930708233dc040aac1d6ff61e3dae80ce73f0b93ba650cdcea217367282",
+    "DATA/processed_data/OpenCVL/野测洁净簇冻结清单_v1/核验/源码与输入绑定_v1.json": "ff084f54de84072ccc82ec3afbbd77f0f13ffff0f57c46ef8bb94500bd9a39d4"
+  },
+  "generator_sources": [
+    {
+      "path": "project/src/data/opencvl_wild_qa_v1.py",
+      "sha256": "f4d04bbf4974031f2a7bf82ec975ac0fc3c6bfddf403455ea4765a5d9f2d56b0",
+      "bytes": 25365
+    },
+    {
+      "path": "project/src/tools/run_opencvl_wild_qa_v1.py",
+      "sha256": "686dec6e1e1782a295b053bdc5da01d0d5e4bdb3082864b35537b257c7d59153",
+      "bytes": 25490
+    },
+    {
+      "path": "project/src/eval/audit_opencvl_wild_qa_v1.py",
+      "sha256": "dd2d288e905dedd1b5f4da630c12432dc37dccaf0e6ecc2eefae1ff94a5f2273",
+      "bytes": 18200
+    },
+    {
+      "path": "project/src/tests/test_opencvl_wild_qa_v1.py",
+      "sha256": "ee69303dc657802e3992362fa76f4e4d11afb4105826d494b805882ee1cf510d",
+      "bytes": 8492
+    }
+  ],
+  "generated_artifacts": [
+    {
+      "path": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/README.md",
+      "sha256": "696c1ef193e82b105bd4db071bc12e83565285e89235ab85f85f04105a75ab55",
+      "bytes": 3298
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/抽检24对画质与分歧核验_v1.json",
+      "sha256": "1f252a7661ece3c0d3d2b457a39ccade13759d46ab29172fa710f544faba45e8",
+      "bytes": 94823
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/单步定位统计基线对照_v1.json",
+      "sha256": "f68ccda34619e91d3adfc3176bc03ddf480c4a2c4c54754a32ec1e699eb3778c",
+      "bytes": 38104
+    },
+    {
+      "path": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/单步视觉实验冻结协议_v1.json",
+      "sha256": "a8db37bc4b0eb61a476b9ff3a9de7246818710b8b13a8fe170842d318630d003",
+      "bytes": 4309
+    }
+  ],
+  "alternate_audit_artifact": {
+    "path": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/核验/另实现复核_v1.json",
+    "sha256": "a70324690dd5551ae1b7091966f89d37466cc4232b5f4bf19ba7d401f45e811e",
+    "bytes": 1214
+  },
+  "execution_accounting": {
+    "sampled_pairs": 24,
+    "image_decodes": 48,
+    "fit_train_decodes": 48,
+    "dev_val_decodes": 0,
+    "blind_decodes": 0,
+    "model_calls": 0,
+    "training": 0,
+    "confirmation_consumed": 0
+  }
+}

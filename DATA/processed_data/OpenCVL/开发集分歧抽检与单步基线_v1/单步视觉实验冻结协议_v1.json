@@ -1,0 +1,77 @@
+{
+  "schema": "cv051-single-step-visual-protocol/v1",
+  "frozen_by_task": "CV-050",
+  "target_task": "CV-051",
+  "task_definition": "Single-Step Cross-View 25-Cell Target Localization: (ground RGB, 625x625 aerial RGB) -> 25-cell probability distribution.",
+  "ground_aspect_ratio_shift_disclosure": {
+    "fit_train_sizes": {
+      "952x532": 176,
+      "952x714": 259
+    },
+    "dev_val_sizes": {
+      "952x532": 102,
+      "952x714": 14
+    },
+    "preprocessing_mandate": "All visual encoders must apply an aspect-neutral geometric normalization (either centered square crop to min(W,H) followed by bicubic resize to 224x224, or zero-pad letterbox evaluated identically across fit_train and dev_val), and must report validation metrics stratified by native ground size (952x714 vs 952x532). Raw pixel width/height metadata is strictly forbidden as model input.",
+    "aerial_native_tile": "625x625 PNG untouched center-preserved (zero padding and shifted crops forbidden)."
+  },
+  "label_and_loss_specification": {
+    "primary_pose_namespace": "mast3rpnp",
+    "gaussian_soft_target_sigma_m": 5.0,
+    "primary_training_loss": "KL(q_sigma5m || p_pred) or soft cross-entropy over 25 cell centers",
+    "discrepancy_rationale": {
+      "fit_train_disagree_chebyshev_le_1": 0.9908256880733946,
+      "fit_train_disagree_median_margin_m": 1.2,
+      "dev_val_disagree_chebyshev_le_1": 0.98
+    }
+  },
+  "admitted_local_backbones_for_cv051": {
+    "zero_shot_and_frozen_pair": {
+      "ground_encoder": "models/clip_vit_b32_public_v1",
+      "aerial_encoder": "models/Sat2Cap",
+      "adapter_module": "project/src/agents/frozen_crossview_encoder_v2.py",
+      "execution_constraint": "CPU single live slot (max_live_encoders=1), frozen SHA-checked weights"
+    },
+    "probe_models": [
+      "Frozen Zero-Shot CLIP(ground CLS) x Sat2Cap(5x5 cell-pooled aerial tokens) cosine baseline",
+      "Lightweight trainable 25-cell spatial readout head trained strictly on development_fit_train (435 pairs)"
+    ]
+  },
+  "evaluation_strata": [
+    "all_pairs",
+    "opensfm_cell_agree",
+    "interior_margin_ge_2m",
+    "large_discrepancy_gt_10m",
+    "ground_size_952x714",
+    "ground_size_952x532"
+  ],
+  "dev_val_statistical_floors_to_beat": {
+    "AlwaysCell12Prior": {
+      "all_pairs_top1": 0.4224137931034483,
+      "all_pairs_top3": 0.6896551724137931,
+      "all_pairs_expected_planar_error_m": 12.509116579438627,
+      "agree_top1": 0.4090909090909091,
+      "interior_top1": 0.4
+    },
+    "TrainEmpiricalPrior": {
+      "all_pairs_top1": 0.4224137931034483,
+      "all_pairs_top3": 0.6724137931034483,
+      "all_pairs_expected_planar_error_m": 21.42043391472691,
+      "all_pairs_soft_target_kl_nats": 1.4200426865187057,
+      "agree_top1": 0.4090909090909091,
+      "interior_top1": 0.4
+    }
+  },
+  "promotion_and_stopping_criteria": [
+    "Gate G1 (Spatial Signal over Chance/Fixed Prior on Top-1): beat AlwaysCell12Prior Top-1 strictly on development_validation all_pairs (> 42.24%) AND opensfm_cell_agree AND interior_margin_ge_2m.",
+    "Gate G2 (Distributional Advantage over TrainEmpiricalPrior): strictly improve BOTH soft_target_kl_nats (< TrainEmpiricalPrior KL) AND expected_planar_error_m (< TrainEmpiricalPrior error_m) AND top3_acc (> TrainEmpiricalPrior top3_acc) on development_validation.",
+    "Gate G3 (Aspect-Ratio Invariance): no catastrophic collapse on either 952x532 or 952x714 aspect slices.",
+    "Gate G4 (Image-Ablation Control): paired visual model must strictly beat ground-disabled / shuffled-aerial / mean-aerial controls by >= +3 percentage points or lower expected planar error on dev_val before requesting blind confirmation.",
+    "Stopping Rule: if frozen + lightweight spatial head variants fail G1..G4 on dev_val, record honest negative result and DO NOT touch isolated_confirmation_blind (28 pairs)."
+  ],
+  "strict_prohibitions": [
+    "Do not inspect, tune thresholds on, or decode isolated_confirmation_blind (28 pairs) during CV-051 development.",
+    "Do not admit blocked_known_overlap (351), quarantined_cv045_vicinity (12), or PL (419) into training or validation.",
+    "Do not tune soft-target sigma or grid boundaries after viewing development_validation scores."
+  ]
+}

@@ -1,0 +1,881 @@
+{
+  "task": "FINAL-003",
+  "date": "2026-11-14",
+  "extends": "总结报告相关/总结报告_v1/准备/论断与证据.json",
+  "inputs": {
+    "v418_api_result": {
+      "path": "平台/实验工作台_v4/单模型API统一接入与同题对照_v1/真实API执行结果.json",
+      "sha256": "2aa587ecaa0fc7fb00e7b7e8e89d9c9d86a8558aac81e765eaf8fb6ecea41373",
+      "bytes": 1461
+    },
+    "v418_api_audit": {
+      "path": "平台/实验工作台_v4/单模型API统一接入与同题对照_v1/另实现请求与指标复核.json",
+      "sha256": "6380481d1c9fa5c4e27d73820a39ffb27bc4670f8e85bcad5e83d690623be1d5",
+      "bytes": 1634
+    },
+    "lite_curated": {
+      "path": "project/src/webapp/lite_curated_tasks.json",
+      "sha256": "9f48bc5fcdfe79f9e82a13a704a2a3b719ea568e4789dc216792d8f804760629",
+      "bytes": 307043
+    },
+    "multidim_1108": {
+      "path": "中期报告相关/中期成果更新_20261025/核验/补充多维测试检验汇总_20261108.json",
+      "sha256": "ab3ea8608ecacfafd8d7cf336f09486dde5182b88765d225727d79ff9eb45f83",
+      "bytes": 9830
+    },
+    "cv024_loop": {
+      "path": "DATA/processed_data/MM-GAG/目标语义与局部闭环工程_v1/结果汇总.json",
+      "sha256": "79867145418ca68bd9fa58fa890e6dd043a275090b8c481e1f8a10fb0edb7f36",
+      "bytes": 8143
+    },
+    "cv019_cov12_verdict": {
+      "path": "DATA/processed_data/MM-GAG/配对覆盖同预算执行_v1/核验/最终门槛判定.json",
+      "sha256": "beb363589f8004755efe5068e09223621c8156ea67bce4a796e7ae0cc8a7e20d",
+      "bytes": 841
+    },
+    "cv031_ccvpe": {
+      "path": "DATA/processed_data/OpenCVL/CCVPE局部感知开发筛查_v1/开发筛查汇总.json",
+      "sha256": "0544940aa1739e26e0b60958c325ed651304134c50be5b1a496fa5ec982e0715",
+      "bytes": 41383
+    },
+    "cv034_dual": {
+      "path": "DATA/processed_data/OpenCVL/双画布同预算真实开发对照_v1/开发对照汇总.json",
+      "sha256": "b20aa43ab04170725b6cf60178afc3891d71530228c73fd3abc523a17776b265",
+      "bytes": 19712
+    },
+    "cv034_verdict": {
+      "path": "DATA/processed_data/OpenCVL/双画布同预算真实开发对照_v1/最终准入判定.json",
+      "sha256": "56d3275058262f364e785156abf5bbde3e9288ec2ed873d9b1e8510d07f65576",
+      "bytes": 272
+    },
+    "cv041_rgb": {
+      "path": "DATA/processed_data/OpenCVL/普通RGB空间小头固定开发对照_v1/主对照汇总.json",
+      "sha256": "83434d75c6cc3cac240a2f366ffc40686d3a1115e7d68e1c09559f591ee3b78d",
+      "bytes": 208094
+    },
+    "cv041_verdict": {
+      "path": "DATA/processed_data/OpenCVL/普通RGB空间小头固定开发对照_v1/最终判定.json",
+      "sha256": "beece04987b783fbb87615eec06fbe577b8727b3713fca5a760eaf82f0f8cf22",
+      "bytes": 789
+    },
+    "cv049_proto": {
+      "path": "DATA/processed_data/OpenCVL/野测洁净簇冻结清单_v1/协议冻结_v1.json",
+      "sha256": "75d0ebcee98083e464dd8466149cb4121b02aecee4a41ca61e159a3626aeb0e7",
+      "bytes": 5817
+    },
+    "cv050_qa": {
+      "path": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/抽检24对画质与分歧核验_v1.json",
+      "sha256": "1f252a7661ece3c0d3d2b457a39ccade13759d46ab29172fa710f544faba45e8",
+      "bytes": 94823
+    },
+    "cv050_baselines": {
+      "path": "DATA/processed_data/OpenCVL/开发集分歧抽检与单步基线_v1/单步定位统计基线对照_v1.json",
+      "sha256": "f68ccda34619e91d3adfc3176bc03ddf480c4a2c4c54754a32ec1e699eb3778c",
+      "bytes": 38104
+    },
+    "cv051_verdict": {
+      "path": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/四阶段科研路线与阶段二判定_v1.json",
+      "sha256": "82f86b2e2cf56a48f9c588cae85f11d1f4c3ea060d7c4ffbbe7ce0d4551640bb",
+      "bytes": 16751
+    },
+    "cv051_detail": {
+      "path": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/单步视觉定位模型与消融结果_v1.json",
+      "sha256": "332195249cef26da113792f804f58378b0c37183bd593d54daae24f8dfe3f521",
+      "bytes": 6075615
+    },
+    "cv051_audit": {
+      "path": "DATA/processed_data/OpenCVL/单步视觉定位基线与消融_v1/核验/另实现复核_v1.json",
+      "sha256": "6904ec19dfa66404d317d35fd056ce239e34718a6af9b2c12433c4eb3c6af612",
+      "bytes": 1125
+    }
+  },
+  "code_and_binary_assets": {
+    "平台/启动平台.ps1": {
+      "path": "平台/启动平台.ps1",
+      "sha256": "8660b4b842e2fc439f9cfe379eb90eef5e656d52be9a292250d37c1e5ea71a5b",
+      "bytes": 4182
+    },
+    "平台/启动平台.cmd": {
+      "path": "平台/启动平台.cmd",
+      "sha256": "29058dd7a1c396bbe9134d370341ba4c09d4ba77f61c845bbc75d21a542fcce3",
+      "bytes": 135
+    },
+    "平台/启动极简演示平台.cmd": {
+      "path": "平台/启动极简演示平台.cmd",
+      "sha256": "2e9cd30a60a505c52ceccdd2d7c1f9b7f2eb15fb7b1f0895ff64dc6c5ab06539",
+      "bytes": 147
+    },
+    "project/src/platform_core/service_v17.py": {
+      "path": "project/src/platform_core/service_v17.py",
+      "sha256": "11f1c31aea09c89d364f4ecbeedf32e12e3cc6768b6ba330f08b81849047581f",
+      "bytes": 13458
+    },
+    "project/src/webapp/workbench_server_v28.py": {
+      "path": "project/src/webapp/workbench_server_v28.py",
+      "sha256": "127caf3df68df784fbfe84c01c7975938f568b19283ce0869ff965c08f125bac",
+      "bytes": 59715
+    },
+    "project/src/webapp/geonav_v5.html": {
+      "path": "project/src/webapp/geonav_v5.html",
+      "sha256": "705e3f228b3ef92bc2dd5cb563f7657042c016e972d55bc17e2c57acc1bcfdcf",
+      "bytes": 89878
+    },
+    "project/src/webapp/geonav_v5.js": {
+      "path": "project/src/webapp/geonav_v5.js",
+      "sha256": "caebb18d3bfb807fba929d3b8d5487c4dfc769212377541a86f692dbdf237e25",
+      "bytes": 102319
+    },
+    "project/src/webapp/lite_server.py": {
+      "path": "project/src/webapp/lite_server.py",
+      "sha256": "da7b14dd3a738f2a56dec700706ad04fe38846901de9ca30b93d927ab33e367f",
+      "bytes": 81463
+    },
+    "project/src/webapp/geonav_lite.html": {
+      "path": "project/src/webapp/geonav_lite.html",
+      "sha256": "c3155149e27845efc94a0bfc61ce53586bd6d834d6d17d8ec5e01479b148370c",
+      "bytes": 19571
+    },
+    "project/src/webapp/geonav_lite.js": {
+      "path": "project/src/webapp/geonav_lite.js",
+      "sha256": "f9a354c52026b76598ff6be39264afea2a6bbf264f9cf899f4558d111452fc04",
+      "bytes": 33852
+    },
+    "project/src/data/opencvl_wild_intake_v1.py": {
+      "path": "project/src/data/opencvl_wild_intake_v1.py",
+      "sha256": "5db0a7f5c4869c827b547d4fee9ca4bd2223c444cb78f4670ed762dafdbcf838",
+      "bytes": 11668
+    },
+    "project/src/data/opencvl_wild_qa_v1.py": {
+      "path": "project/src/data/opencvl_wild_qa_v1.py",
+      "sha256": "f4d04bbf4974031f2a7bf82ec975ac0fc3c6bfddf403455ea4765a5d9f2d56b0",
+      "bytes": 25365
+    },
+    "project/src/agents/opencvl_single_step_visual_v1.py": {
+      "path": "project/src/agents/opencvl_single_step_visual_v1.py",
+      "sha256": "702c1c08664b638f35bbec28dfb194edf9d1f12da2a7bf462e408aaefd9bc128",
+      "bytes": 46233
+    },
+    "project/src/tools/run_opencvl_single_step_visual_v1.py": {
+      "path": "project/src/tools/run_opencvl_single_step_visual_v1.py",
+      "sha256": "34e3640e31fd3e4717a982ece456242dd1f1e4d61540b23e9e5a530961d33aee",
+      "bytes": 16155
+    },
+    "project/src/eval/audit_opencvl_single_step_visual_v1.py": {
+      "path": "project/src/eval/audit_opencvl_single_step_visual_v1.py",
+      "sha256": "2d57ab02b894e24e0d1b7b9bcdc25abe6b6f47102f89b71b6d6f5777378e5df6",
+      "bytes": 18038
+    },
+    "demo/中期demo.zip": {
+      "path": "demo/中期demo.zip",
+      "sha256": "e47677337a46b81b1b681f6af9812a8b041856258b52b6c5c7cf34ab941bc59a",
+      "bytes": 378384760
+    },
+    "demo/小型演示demo.zip": {
+      "path": "demo/小型演示demo.zip",
+      "sha256": "7cf34ed84f5c4ea797dcd24d98e455c2a5186dc137491fab4c63dd5ce029b749",
+      "bytes": 306198057
+    }
+  },
+  "figures_v5": [
+    {
+      "id": "F01",
+      "number": "图3-1",
+      "title": "M0探索与识别显式解耦架构与局部观测隔离约束",
+      "path": "绘图/架构与方法图/01_M0探索与识别解耦架构图.png",
+      "sha256": "cf4bf5b81ee6fb535e7eed8339390be9e6071466c4a78bf2603c7f2b4641c1e8",
+      "bytes": 1447560,
+      "width": 3687,
+      "height": 1712,
+      "caption_boundary": "同一训练过的单导航Agent；编码器冻结，小网络0.93M参数不含编码器。"
+    },
+    {
+      "id": "F02",
+      "number": "图3-2",
+      "title": "三步前瞻覆盖规划与公开起点径向保护决策机制",
+      "path": "绘图/架构与方法图/03_9平方公里连续区域三步覆盖规划与径向保护原理图.png",
+      "sha256": "5513cb82d2bdad3b5ab372ea9b2f622407cda2f6d26fb464c56c38d45747f35c",
+      "bytes": 1145810,
+      "width": 5286,
+      "height": 2468,
+      "caption_boundary": "仅利用公开坐标与已访问历史，严禁读取真实目标坐标。"
+    },
+    {
+      "id": "F03",
+      "number": "图3-3",
+      "title": "GeoNav V5.0前后端分离架构、双模态工作台与云端API熔断网关",
+      "path": "绘图/架构与方法图/05_GeoNav418前后端分离工作台与云API熔断架构图.png",
+      "sha256": "a7cce029e550fc56204161c35877dffb2ad9893aaf714e907d852da57d7ef7f9",
+      "bytes": 1205002,
+      "width": 5511,
+      "height": 2433,
+      "caption_boundary": "涵盖V5.0(8769)与Lite(8768)双形态能力及连续3次失败熔断回退M0机制。"
+    },
+    {
+      "id": "F04",
+      "number": "图4-1",
+      "title": "四大航拍协议四条件目标控制消融对比",
+      "path": "绘图/数据结果图/01_四大航拍协议四条件目标控制消融对比.png",
+      "sha256": "fd394f00d7594f19c060e883d726413aada5229acf7462f984d84f81b23a54da",
+      "bytes": 280124,
+      "width": 4050,
+      "height": 1351,
+      "caption_boundary": "不同协议单独分账并列展示，不连成累计提升曲线。"
+    },
+    {
+      "id": "F05",
+      "number": "图4-2",
+      "title": "Masa S3同题目标对照、GeoExplorer有限复现与MassGIS新域边界全景",
+      "path": "绘图/数据结果图/03_MasaS3独立源确认与学习基线及泛化边界全景对比.png",
+      "sha256": "602cc03dbbcc3973ef852b286944082f30ff3e9ce6e779384ef954a016d5c0c0",
+      "bytes": 364580,
+      "width": 4017,
+      "height": 1280,
+      "caption_boundary": "GeoExplorer为本地有限预算实现；MassGIS双网格未过门槛，不构成SOTA排名。"
+    },
+    {
+      "id": "F06",
+      "number": "图4-3",
+      "title": "固定十题同题对照中本地M0、Frontier与云端大模型多维诊断",
+      "path": "绘图/数据结果图/06_GeoNav418固定十题云端API与本地M0同题多维诊断.png",
+      "sha256": "0d9e7361000e0fd480030784b1f9750c79d732ce489ab341721d1d54300e15a0",
+      "bytes": 298221,
+      "width": 4050,
+      "height": 1295,
+      "caption_boundary": "仅在10道已消费开发题评测：Gemma-4-31B 96请求1/10 vs M0 8/10。"
+    },
+    {
+      "id": "F07",
+      "number": "图4-4",
+      "title": "地面水平视角与俯视航拍几何鸿沟及跨视角分层演进机制",
+      "path": "绘图/架构与方法图/04_跨视角地面照片与俯视航拍几何鸿沟诊断图.png",
+      "sha256": "98c492c9fdb4470e1f0d7403084daed3360e578846932bfd3f9cb1bcd2adafa6",
+      "bytes": 1456528,
+      "width": 3413,
+      "height": 1471,
+      "caption_boundary": "汇总CV-001~047地面目标检索/回归瓶颈及192题Frontier 71.88%规则对比。"
+    },
+    {
+      "id": "F08",
+      "number": "图4-5",
+      "title": "OpenCVL阶段二单步跨视角视觉定位与特征消融实证对比",
+      "path": "绘图/数据结果图/08_OpenCVL阶段二单步视觉定位与消融实证对比.png",
+      "sha256": "f6d801eda0110870255ca630494c488461abbe79f6b90199858118ce2cde0df6",
+      "bytes": 427205,
+      "width": 4026,
+      "height": 1326,
+      "caption_boundary": "仅使用435 fit_train与116 dev_val（>=95.203 km）；28对盲测集0解码、0评测。"
+    }
+  ],
+  "claims": [
+    {
+      "id": "C24",
+      "section": "3.5/4.7",
+      "statement": "V4.18单模型API固定十题同题对照：本地M0为8/10（SG 0.50格），Frontier为4/10（2.70格），云端API臂96请求0回退下为1/10（3.20格，71005 tokens）。",
+      "scope": "仅覆盖10道已消费验证题；单次API稳定性受请求配额与延迟制约，接口连通不等于零样本空间导航有效。",
+      "facts": [
+        {
+          "source": "v418_api_result",
+          "pointer": "/planned",
+          "value": 10,
+          "unit": "题数"
+        },
+        {
+          "source": "v418_api_result",
+          "pointer": "/arms/M0/successes",
+          "value": 8,
+          "unit": "成功题数"
+        },
+        {
+          "source": "v418_api_result",
+          "pointer": "/arms/M0/SR",
+          "value": 0.8,
+          "unit": "SR"
+        },
+        {
+          "source": "v418_api_result",
+          "pointer": "/arms/M0/SG_cells",
+          "value": 0.5,
+          "unit": "SG_格"
+        },
+        {
+          "source": "v418_api_result",
+          "pointer": "/arms/frontier/successes",
+          "value": 4,
+          "unit": "成功题数"
+        },
+        {
+          "source": "v418_api_result",
+          "pointer": "/arms/frontier/SR",
+          "value": 0.4,
+          "unit": "SR"
+        },
+        {
+          "source": "v418_api_result",
+          "pointer": "/arms/frontier/SG_cells",
+          "value": 2.7,
+          "unit": "SG_格"
+        },
+        {
+          "source": "v418_api_result",
+          "pointer": "/arms/api_m0_fallback/successes",
+          "value": 1,
+          "unit": "成功题数"
+        },
+        {
+          "source": "v418_api_result",
+          "pointer": "/arms/api_m0_fallback/SR",
+          "value": 0.1,
+          "unit": "SR"
+        },
+        {
+          "source": "v418_api_result",
+          "pointer": "/arms/api_m0_fallback/SG_cells",
+          "value": 3.2,
+          "unit": "SG_格"
+        },
+        {
+          "source": "v418_api_result",
+          "pointer": "/usage/requests",
+          "value": 96,
+          "unit": "API请求数"
+        },
+        {
+          "source": "v418_api_result",
+          "pointer": "/usage/fallbacks",
+          "value": 0,
+          "unit": "回退次数"
+        },
+        {
+          "source": "v418_api_result",
+          "pointer": "/usage/usage/total_tokens",
+          "value": 71005,
+          "unit": "总Token"
+        },
+        {
+          "source": "v418_api_result",
+          "pointer": "/paired/M0/recovered",
+          "value": 0,
+          "unit": "相对M0恢复"
+        },
+        {
+          "source": "v418_api_result",
+          "pointer": "/paired/M0/damaged",
+          "value": 7,
+          "unit": "相对M0损伤"
+        }
+      ]
+    },
+    {
+      "id": "C25",
+      "section": "3.5/3.6/4.7",
+      "statement": "平台演进至GeoNav V5.0全功能工作台（8769）与GeoNav Lite极简演示台（8768），集成192张航拍960题与192道地面拍摄点题，形成中期demo（360.86 MiB）与小型演示demo（292.01 MiB）双便携包。",
+      "scope": "192题地面规则基线（Frontier 71.88%）与精选交互题库属于开发/演示资产，不能外推为真实自主地面导航确认结论。",
+      "facts": [
+        {
+          "source": "multidim_1108",
+          "pointer": "/live_s2_workbench_verified_episodes",
+          "value": 10,
+          "unit": "实机对照轨迹"
+        },
+        {
+          "source": "multidim_1108",
+          "pointer": "/capturepoint_192_rule_verification/0/episodes",
+          "value": 192,
+          "unit": "地面规则题数"
+        },
+        {
+          "source": "multidim_1108",
+          "pointer": "/capturepoint_192_rule_verification/0/sr",
+          "value": 0.71875,
+          "unit": "Frontier_SR"
+        },
+        {
+          "source": "multidim_1108",
+          "pointer": "/capturepoint_192_rule_verification/0/sg_mean",
+          "value": 1.0989583333333333,
+          "unit": "Frontier_SG"
+        },
+        {
+          "source": "multidim_1108",
+          "pointer": "/capturepoint_192_rule_verification/1/sr",
+          "value": 0.65625,
+          "unit": "CenterCross_SR"
+        },
+        {
+          "source": "multidim_1108",
+          "pointer": "/capturepoint_192_rule_verification/2/sr",
+          "value": 0.5260416666666666,
+          "unit": "Lawnmower_SR"
+        },
+        {
+          "source": "multidim_1108",
+          "pointer": "/capturepoint_192_rule_verification/3/sr",
+          "value": 0.22916666666666666,
+          "unit": "RandomWalk_SR"
+        }
+      ]
+    },
+    {
+      "id": "C26",
+      "section": "4.1/4.8",
+      "statement": "早期MM-GAG/CCVPE/RGB跨视角局部探索与定位均未通过效果门槛：CV-024目标闭环Full 4/20不及Disabled 6/20与Wrong 9/20；CV-019 12对覆盖排序Top1 0/125；CV-031 CCVPE与CV-034双画布正例accept+5m内为0；CV-041三城RGB小头0/9。",
+      "scope": "负结果按预登记停止条件如实收束，证明直接将通用/KITTI权重或简单RGB小头迁移到城市场景跨视角网格定位不成立。",
+      "facts": [
+        {
+          "source": "cv024_loop",
+          "pointer": "/arms/Full/planned",
+          "value": 20,
+          "unit": "题数"
+        },
+        {
+          "source": "cv024_loop",
+          "pointer": "/arms/Full/success",
+          "value": 4,
+          "unit": "Full成功"
+        },
+        {
+          "source": "cv024_loop",
+          "pointer": "/arms/Disabled/success",
+          "value": 6,
+          "unit": "Disabled成功"
+        },
+        {
+          "source": "cv024_loop",
+          "pointer": "/arms/Mean/success",
+          "value": 8,
+          "unit": "Mean成功"
+        },
+        {
+          "source": "cv024_loop",
+          "pointer": "/arms/Wrong/success",
+          "value": 9,
+          "unit": "Wrong成功"
+        },
+        {
+          "source": "cv019_cov12_verdict",
+          "pointer": "/planned_windows",
+          "value": 125,
+          "unit": "计划窗"
+        },
+        {
+          "source": "cv019_cov12_verdict",
+          "pointer": "/Full_top1",
+          "value": 0,
+          "unit": "Full_Top1"
+        },
+        {
+          "source": "cv019_cov12_verdict",
+          "pointer": "/passed",
+          "value": false,
+          "unit": "是否通过"
+        },
+        {
+          "source": "cv031_ccvpe",
+          "pointer": "/metrics/Full/positive_accepted_and_within5m",
+          "value": 0,
+          "unit": "CCVPE正例5m内"
+        },
+        {
+          "source": "cv031_ccvpe",
+          "pointer": "/metrics/Full/source_macro_balanced_accuracy",
+          "value": 0.6749999999999999,
+          "unit": "CCVPE宏BA"
+        },
+        {
+          "source": "cv034_dual",
+          "pointer": "/metrics/Single~1Full/macro_BA",
+          "value": 0.6849747474747474,
+          "unit": "单格Full宏BA"
+        },
+        {
+          "source": "cv034_dual",
+          "pointer": "/metrics/Cumulative~1Full/macro_BA",
+          "value": 0.5921717171717171,
+          "unit": "累计画布宏BA"
+        },
+        {
+          "source": "cv034_verdict",
+          "pointer": "/actual_completed",
+          "value": 448,
+          "unit": "实测对数"
+        },
+        {
+          "source": "cv034_verdict",
+          "pointer": "/effect_gates_passed",
+          "value": false,
+          "unit": "是否通过"
+        },
+        {
+          "source": "cv041_rgb",
+          "pointer": "/planned_nontraining_predictions",
+          "value": 6750,
+          "unit": "非训练预测总数"
+        },
+        {
+          "source": "cv041_rgb",
+          "pointer": "/development_predictions",
+          "value": 2850,
+          "unit": "开发预测数"
+        },
+        {
+          "source": "cv041_rgb",
+          "pointer": "/development_means/Spatial~1Full/positive_joint",
+          "value": 0,
+          "unit": "三城正例联合通过"
+        },
+        {
+          "source": "cv041_rgb",
+          "pointer": "/development_means/Spatial~1Full/positive_n",
+          "value": 9,
+          "unit": "三城正例总数"
+        },
+        {
+          "source": "cv041_verdict",
+          "pointer": "/candidate_passed",
+          "value": false,
+          "unit": "是否通过"
+        }
+      ]
+    },
+    {
+      "id": "C27",
+      "section": "4.1/4.8",
+      "statement": "OpenCVL野测官方发布包经SE宏簇地理隔离冻为435 fit_train / 116 dev_val（>=95.203 km）/ 28 isolated_confirmation_blind（>=109.465 km）；stage 1核实4:3→16:9画幅偏移与AlwaysCell12Prior（dev_val 42.24%）统计地板。",
+      "scope": "28对盲测集全程0解码、0模型评测；419对PL样本因缺少经纬度单独列为非隔离参考池。",
+      "facts": [
+        {
+          "source": "cv049_proto",
+          "pointer": "/role_summary/blocked_known_overlap/count",
+          "value": 351,
+          "unit": "禁用重叠对"
+        },
+        {
+          "source": "cv049_proto",
+          "pointer": "/role_summary/quarantined_cv045_vicinity/count",
+          "value": 12,
+          "unit": "同城隔离对"
+        },
+        {
+          "source": "cv049_proto",
+          "pointer": "/role_summary/development_fit_train/count",
+          "value": 435,
+          "unit": "拟合对数"
+        },
+        {
+          "source": "cv049_proto",
+          "pointer": "/role_summary/development_fit_train/always_cell12_rate",
+          "value": 0.324138,
+          "unit": "拟合中心格比例"
+        },
+        {
+          "source": "cv049_proto",
+          "pointer": "/role_summary/development_validation/count",
+          "value": 116,
+          "unit": "验证对数"
+        },
+        {
+          "source": "cv049_proto",
+          "pointer": "/role_summary/development_validation/always_cell12_rate",
+          "value": 0.422414,
+          "unit": "验证中心格比例"
+        },
+        {
+          "source": "cv049_proto",
+          "pointer": "/role_summary/isolated_confirmation_blind/count",
+          "value": 28,
+          "unit": "盲测对数"
+        },
+        {
+          "source": "cv049_proto",
+          "pointer": "/role_summary/isolated_confirmation_blind/always_cell12_rate",
+          "value": 0.392857,
+          "unit": "盲测中心格比例"
+        },
+        {
+          "source": "cv049_proto",
+          "pointer": "/role_summary/pl_pending_visual_dedup/count",
+          "value": 419,
+          "unit": "PL待去重对数"
+        },
+        {
+          "source": "cv049_proto",
+          "pointer": "/cross_role_clearance_km/dev_val_vs_fit_train_min_center_km",
+          "value": 95.203,
+          "unit": "验证距拟合km"
+        },
+        {
+          "source": "cv049_proto",
+          "pointer": "/cross_role_clearance_km/blind_vs_dev_val_min_center_km",
+          "value": 109.465,
+          "unit": "盲测距验证km"
+        },
+        {
+          "source": "cv050_qa",
+          "pointer": "/sampled_pairs",
+          "value": 24,
+          "unit": "抽检对数"
+        },
+        {
+          "source": "cv050_qa",
+          "pointer": "/image_decodes",
+          "value": 48,
+          "unit": "解码图像数"
+        },
+        {
+          "source": "cv050_qa",
+          "pointer": "/decode_accounting/development_validation_decodes",
+          "value": 0,
+          "unit": "验证集人工抽检"
+        },
+        {
+          "source": "cv050_qa",
+          "pointer": "/decode_accounting/isolated_confirmation_blind_decodes",
+          "value": 0,
+          "unit": "盲测集人工抽检"
+        },
+        {
+          "source": "cv050_qa",
+          "pointer": "/discrepancy_summary/development_fit_train/ground_size_histogram/952x714",
+          "value": 259,
+          "unit": "fit_4_3张数"
+        },
+        {
+          "source": "cv050_qa",
+          "pointer": "/discrepancy_summary/development_validation/ground_size_histogram/952x532",
+          "value": 102,
+          "unit": "val_16_9张数"
+        }
+      ]
+    },
+    {
+      "id": "C28",
+      "section": "2.4/4.8/5.2",
+      "statement": "OpenCVL阶段二在冻结CLIP+Sat2Cap（1653次前向）下评测M1/M1b/M2a/M2b/M2c与3项消融：M2c城内68.74%，跨城dev_val仅24.14%/22.18m/KL 1.730（其中952x714为42.86%、952x532为21.57%），不及AlwaysCell12（42.24%/12.51m）且被Control_MeanVisual（42.24%）反超；G1-G4全否，终止阶段三并保护28对盲测0触碰。",
+      "scope": "证伪对象为冻结通用对比表征配轻量CCA/岭回归头跨城泛化，不否定端到端专有跨视角几何对齐微调的未来研究价值。",
+      "facts": [
+        {
+          "source": "cv051_verdict",
+          "pointer": "/blind_set_evaluated",
+          "value": false,
+          "unit": "盲测已评测"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/blind_pairs_sealed",
+          "value": 28,
+          "unit": "盲测封存对数"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/extraction_accounting/pair_count",
+          "value": 551,
+          "unit": "特征提取对数"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/extraction_accounting/total_forwards",
+          "value": 1653,
+          "unit": "前向次数"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/extraction_accounting/max_live_encoders",
+          "value": 1,
+          "unit": "同时在内存编码器上限"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/extraction_accounting/blind_decodes",
+          "value": 0,
+          "unit": "盲测解码次数"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/cv_selected_reference_model",
+          "value": "M2c_MultiScale_PriorCalibrated_CV051b",
+          "unit": "CV选定主模型"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/primary_stage2_gate/stage2_passed",
+          "value": false,
+          "unit": "阶段二是否通过"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/primary_stage2_gate/decision",
+          "value": "STOP_AT_STAGE2_NEGATIVE_AND_PROCEED_TO_STAGE4_CLOSURE",
+          "unit": "阶段二判定"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_fit_train/M2c_MultiScale_PriorCalibrated_CV051b/top1_acc",
+          "value": 0.6873563218390805,
+          "unit": "fit_M2c_Top1"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_fit_train/M2c_MultiScale_PriorCalibrated_CV051b/expected_planar_error_m",
+          "value": 16.072120690838187,
+          "unit": "fit_M2c_误差m"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/AlwaysCell12Prior/top1_acc",
+          "value": 0.4224137931034483,
+          "unit": "val_Always12_Top1"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/AlwaysCell12Prior/expected_planar_error_m",
+          "value": 12.509116579438627,
+          "unit": "val_Always12_误差m"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/TrainEmpiricalPrior/expected_planar_error_m",
+          "value": 21.42043391472691,
+          "unit": "val_Empirical_误差m"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/TrainEmpiricalPrior/soft_target_kl_nats",
+          "value": 1.4200426865187057,
+          "unit": "val_Empirical_KL"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/M1_ZeroShot_FullTile_Cosine/top1_acc",
+          "value": 0.02586206896551724,
+          "unit": "val_M1_Top1"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/M1_ZeroShot_FullTile_Cosine/expected_planar_error_m",
+          "value": 40.520535782677584,
+          "unit": "val_M1_误差m"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/M1b_ZeroShot_Center9Crop_Cosine/top1_acc",
+          "value": 0.05172413793103448,
+          "unit": "val_M1b_Top1"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/M1b_ZeroShot_Center9Crop_Cosine/expected_planar_error_m",
+          "value": 25.562763224631336,
+          "unit": "val_M1b_误差m"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/M2a_SpatialHead_PureVisual_NoPrior/top1_acc",
+          "value": 0.04310344827586207,
+          "unit": "val_M2a_Top1"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/M2a_SpatialHead_PureVisual_NoPrior/expected_planar_error_m",
+          "value": 37.44798157997962,
+          "unit": "val_M2a_误差m"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/M2b_SpatialHead_PriorCalibrated_Full/top1_acc",
+          "value": 0.2413793103448276,
+          "unit": "val_M2b_Top1"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/M2b_SpatialHead_PriorCalibrated_Full/expected_planar_error_m",
+          "value": 22.273470382747707,
+          "unit": "val_M2b_误差m"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/M2b_SpatialHead_PriorCalibrated_Full/soft_target_kl_nats",
+          "value": 1.704511693397897,
+          "unit": "val_M2b_KL"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/M2c_MultiScale_PriorCalibrated_CV051b/top1_acc",
+          "value": 0.2413793103448276,
+          "unit": "val_M2c_Top1"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/M2c_MultiScale_PriorCalibrated_CV051b/top3_acc",
+          "value": 0.5172413793103449,
+          "unit": "val_M2c_Top3"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/M2c_MultiScale_PriorCalibrated_CV051b/top5_acc",
+          "value": 0.7327586206896551,
+          "unit": "val_M2c_Top5"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/M2c_MultiScale_PriorCalibrated_CV051b/chebyshev1_acc",
+          "value": 0.896551724137931,
+          "unit": "val_M2c_Cheb1"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/M2c_MultiScale_PriorCalibrated_CV051b/expected_planar_error_m",
+          "value": 22.181193597069527,
+          "unit": "val_M2c_误差m"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/M2c_MultiScale_PriorCalibrated_CV051b/soft_target_kl_nats",
+          "value": 1.729796526782867,
+          "unit": "val_M2c_KL"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/Control_GroundZeroed/top1_acc",
+          "value": 0.14655172413793102,
+          "unit": "val_GroundZeroed_Top1"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/Control_AerialShuffled/top1_acc",
+          "value": 0.22413793103448276,
+          "unit": "val_AerialShuffled_Top1"
+        },
+        {
+          "source": "cv051_verdict",
+          "pointer": "/summary_comparison_all_pairs/development_validation/Control_MeanVisual/top1_acc",
+          "value": 0.4224137931034483,
+          "unit": "val_MeanVisual_Top1"
+        },
+        {
+          "source": "cv051_detail",
+          "pointer": "/evaluations/development_validation/M2c_MultiScale_PriorCalibrated_CV051b/ground_size_952x714/top1_acc",
+          "value": 0.42857142857142855,
+          "unit": "val_M2c_952x714_Top1"
+        },
+        {
+          "source": "cv051_detail",
+          "pointer": "/evaluations/development_validation/M2c_MultiScale_PriorCalibrated_CV051b/ground_size_952x532/top1_acc",
+          "value": 0.21568627450980393,
+          "unit": "val_M2c_952x532_Top1"
+        },
+        {
+          "source": "cv051_audit",
+          "pointer": "/passed",
+          "value": true,
+          "unit": "另实现复核通过"
+        },
+        {
+          "source": "cv051_audit",
+          "pointer": "/max_metric_diff",
+          "value": 8.881784197001252e-16,
+          "unit": "最大指标数值差"
+        }
+      ]
+    }
+  ]
+}
